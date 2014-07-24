@@ -1,0 +1,28 @@
+/* Styles for IE7 and older */
+
+/* I can hasLayout */
+#masthead,
+#site-info,
+#content,
+#content-main,
+#content-sub,
+.entry-header, 
+.entry-title,
+.entry-posted, 
+#nav-primary,
+.nav-paging, 
+#comment-list.av .comment,
+.featured-posts {
+  zoom: 1;
+}
+
+/* A few position adjustments */
+.single-post .entry-title, 
+.page .entry-title { 
+  margin-top: 0; 
+}
+
+/* Just for IE6 */
+* html legend { 
+  margin-left: -8px; 
+}

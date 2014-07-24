@@ -1,0 +1,157 @@
+.page .entry-header .share {
+  clear: both;
+  margin: 1em 0 .5em;
+}
+.entry-meta .share {
+  margin: 0 0 1.5em;
+  font-size: 1.166em;
+}
+
+/* Colors */
+.socialshare > div > a {
+  color: #333;
+}
+.share-active-state,
+.socialshare.open > div > a,
+.socialshare > div > a:hover,
+.socialshare > div > a:focus {
+  color: #2983c8;
+}
+.share-active-state span,
+.socialshare > div > a:hover span,
+.socialshare > div > a:focus span,
+.socialshare.open > div > a span {
+  border-color: #20679e;
+}
+.socialshare > div > a:focus span {
+  outline-color: #2983c8;
+}
+
+.share-active-state {
+  outline: none;
+  background-position: 0 -17px;
+}
+.socialshare {
+  font-family: 'Open Sans', sans-serif;
+}
+.socialshare > div > a {
+  position: relative;
+  background: url('../img/icn-share.png') 0 6px no-repeat transparent;
+  text-decoration: none;
+  margin: 0;
+  letter-spacing: -0.25px;
+  padding: 0 28px 0 16px;
+}
+.socialshare > div > a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: url('../img/icn-share.png') 4px -45px no-repeat rgba(255, 255, 255, 0.95);
+  width: 19px;
+  height: 19px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 0.25px rgba(0, 0, 0, 0.3), inset 0 -2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0.25px rgba(0, 0, 0, 0.3), inset 0 -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.25px rgba(0, 0, 0, 0.3), inset 0 -2px rgba(0, 0, 0, 0.1);
+}
+.socialshare > div > a:hover:after,
+.socialshare > div > a:focus:after {
+  background-position: 4px -70px;
+  -webkit-box-shadow: 0 0 0.25px rgba(0, 0, 0, 0.3), inset 0 -2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0.25px rgba(0, 0, 0, 0.3), inset 0 -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.25px rgba(0, 0, 0, 0.3), inset 0 -2px rgba(0, 0, 0, 0.1);
+}
+.socialshare > div > a:hover,
+.socialshare > div > a:focus {
+  outline: none;
+  background-position: 0 -19px;
+}
+.socialshare > div > a span {
+  padding-bottom: 1px;
+  border-bottom: 1px dotted rgba(72, 72, 72, 0.4);
+}
+.socialshare > div > a:focus span {
+  outline: 1px dotted;
+}
+.socialshare #share-options {
+  display: none;
+  position: absolute;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+  list-style: none;
+  z-index: 9001;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.socialshare #share-options ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.socialshare #share-options ul li {
+  margin: 0;
+  padding: 0;
+}
+.socialshare > div > a {
+  color: #484848;
+}
+.socialshare.open > div > a {
+  outline: none;
+  background-position: 0 -19px;
+}
+.socialshare.open > div > a:after {
+  width: 21px;
+  height: 21px;
+  border: 0;
+  right: 1px;
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.6), inset 0 2px 0.5px 0 rgba(0, 0, 0, 0.35), inset 0 0 5px 0 rgba(170, 170, 170, 0.2);
+  -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.6), inset 0 2px 0.5px 0 rgba(0, 0, 0, 0.35), inset 0 0 5px 0 rgba(170, 170, 170, 0.2);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.6), inset 0 2px 0.5px 0 rgba(0, 0, 0, 0.35), inset 0 0 5px 0 rgba(170, 170, 170, 0.2);
+  background-color: rgba(74, 74, 74, 0.1);
+  background-position: 5px -68px;
+}
+.socialshare.open #share-options {
+  display: block;
+  margin-top: 12px;
+}
+.socialshare.open[data-type="bubbles"] #share-options {
+  width: 178px;
+  height: 68px;
+  padding: 12px 12px 6.5px 12px;
+  margin-left: 7px;
+}
+.socialshare.open[data-type="bubbles"] #share-options ul li {
+  float: left;
+}
+.socialshare.open[data-type="bubbles"] #share-options ul li:nth-child(1) {
+  width: 48px;
+}
+.socialshare.open[data-type="bubbles"] #share-options ul li:nth-child(2) {
+  margin-top: 2px;
+}
+.socialshare.open[data-type="bubbles"] #share-options ul li:nth-child(-n+2) {
+  padding-right: 12px;
+}
+.socialshare.open[data-type="small-bubbles"] #share-options {
+  padding: 12px 6px 6.5px 12px;
+  height: 92px;
+  width: 80px;
+  margin-left: 54px;
+}
+.socialshare.open[data-type="small-bubbles"] #share-options ul li:nth-child(1) {
+  margin-top: -4px;
+}
+.socialshare.open[data-type="small-bubbles"] #share-options ul li:nth-child(2) {
+  height: 24px;
+}
+.socialshare.open[data-type="small-bubbles"] #share-options ul li:nth-child(-n+2) {
+  padding-bottom: 12px;
+}
+.FB_UI_Hidden {
+  display: none;
+}
