@@ -1,4 +1,4 @@
-/* @override http://localhost/mozilla/wp-content/themes/OneMozilla-PolicyFellows/style.css */
+/* @override ../../themes/OneMozilla-PolicyFellows/style.css */
 
 /*
 Theme Name: One Mozilla - Policy Fellows
@@ -445,7 +445,7 @@ body.home #wide aside {
   border-top: 1px dotted rgba(0,0,0,0.2);
   padding-left: 20px;
 }
-.widget_nav_menu a, 
+.widget_nav_menu a,
 .widget_categories a {
   display: inline-block;
   padding: 8px 0;
@@ -1255,7 +1255,7 @@ input:-moz-placeholder {
 /* red #c13731 */
 
 #cta {
-	/*background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/fcc.jpg') right no-repeat #fff;
+	/*background: url('../../uploads/2014/07/fcc.jpg') right no-repeat #fff;
 	background-size: 48.93617%;*/
 	padding-top: 25px;
 	margin-bottom: 35px;
@@ -1516,10 +1516,10 @@ input:-moz-placeholder {
   font-size: .857em;
   width: 96%;
 }
-#comment-form #cmt-ackbar { 
-  position: absolute; 
+#comment-form #cmt-ackbar {
+  position: absolute;
   left: -999em;
-  height: 0; 
+  height: 0;
 }
 
 /* @Footer *********/
@@ -1623,11 +1623,11 @@ input:-moz-placeholder {
 		margin-right: 3%;
 		height: 85px;
 	}
-	
+
 	#twocol .ss-form-question:nth-child(2n+1) {
 		margin-right: 0%;
 	}
-	
+
 	#twocol .ss-q-short {
 		width: 94%;
 		display: inline;
@@ -1638,23 +1638,23 @@ input:-moz-placeholder {
 
 
 	.home #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla3-1280.jpg') no-repeat;
+		background: url('../../uploads/2014/07/sfmozilla3-1280.jpg') no-repeat;
 		background-size: cover;
 		padding-bottom: 20px;
 	}
-	
+
 	.page-open-web-fellows #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stopwatching-1280.jpg') no-repeat;
-		background-size: 100%;
-	}	
-	
-	.page-benefits #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla5-1280.jpg') no-repeat;
+		background: url('../../uploads/2014/07/stopwatching-1280.jpg') no-repeat;
 		background-size: 100%;
 	}
-	
+
+	.page-benefits #page {
+		background: url('../../uploads/2014/07/sfmozilla5-1280.jpg') no-repeat;
+		background-size: 100%;
+	}
+
 	.page-faq #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stickies-1280.jpg') no-repeat;
+		background: url('../../uploads/2014/07/stickies-1280.jpg') no-repeat;
 		background-size: 100%;
 	}
 
@@ -1664,23 +1664,23 @@ input:-moz-placeholder {
 
 
 	.home #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla3-1024.jpg') no-repeat;
+		background: url('../../uploads/2014/07/sfmozilla3-1024.jpg') no-repeat;
 		background-size: cover;
 		padding-bottom: 20px;
 	}
-	
+
 	.page-open-web-fellows #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stopwatching-1024.jpg') no-repeat;
-		background-size: 100%;
-	}	
-	
-	.page-benefits #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla5-1024.jpg') no-repeat;
+		background: url('../../uploads/2014/07/stopwatching-1024.jpg') no-repeat;
 		background-size: 100%;
 	}
-	
+
+	.page-benefits #page {
+		background: url('../../uploads/2014/07/sfmozilla5-1024.jpg') no-repeat;
+		background-size: 100%;
+	}
+
 	.page-faq #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stickies-1024.jpg') no-repeat;
+		background: url('../../uploads/2014/07/stickies-1024.jpg') no-repeat;
 		background-size: 100%;
 	}
 
@@ -1700,7 +1700,7 @@ input:-moz-placeholder {
     width: 160px;
     margin: 0 10px;
   }
- 
+
 
   #site-title {
     font-size: 3em;
@@ -1711,20 +1711,20 @@ input:-moz-placeholder {
     font-size: 1.5em;
     letter-spacing: -.5px;
   }
-  
+
   body.home #wide {
   	width: 700px;
   }
-  
+
   body.home #wide div {
   	width: 460px;
   }
-  
+
   body.home #wide aside {
   	width: 220px;
   	padding-top: 10px;
   }
-  
+
   #wide aside .large {
   	font-size: 1.125em;
   	width: 170px;
@@ -1742,12 +1742,12 @@ input:-moz-placeholder {
   .wp-caption {
     max-width: 95%;
   }
-  
+
   #twocol .ss-q-short {
   	width: 92%;
   	display: inline;
   }
-  
+
   input[type=email],
   input[type=text],
   select,
@@ -1755,7 +1755,7 @@ input:-moz-placeholder {
   button {
     width: 500px;
    }
-  
+
   #widget-footer .footer-widget {
   	width: 160px;
   }
@@ -1802,42 +1802,42 @@ input:-moz-placeholder {
 
 
 	.home #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla3-320@2x.jpg') no-repeat;
+		background: url('../../uploads/2014/07/sfmozilla3-320@2x.jpg') no-repeat;
 		background-size: cover;
 		padding-bottom: 20px;
 	}
-	
+
 	.page-open-web-fellows #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stopwatching-320@2x.jpg') no-repeat;
+		background: url('../../uploads/2014/07/stopwatching-320@2x.jpg') no-repeat;
 		background-size: 100%;
-	}	
-	
+	}
+
 	.page-benefits #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla5-320@2x.jpg') no-repeat;
+		background: url('../../uploads/2014/07/sfmozilla5-320@2x.jpg') no-repeat;
 		background-size: 100%;
 	}
-	
+
 	.page-faq #page {
-		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stickies-320@2x.jpg') no-repeat;
+		background: url('../../uploads/2014/07/stickies-320@2x.jpg') no-repeat;
 		background-size: 100%;
 	}
-	
+
 	h1 img {
 		width: 100%;
 	}
-	
+
   #page {
     padding-bottom: 10px;
   }
-  
+
   article {
   	padding: 0 !important;
   }
-  
+
   .home #page {
   	background-size: contain;
   }
-  
+
   .wrap {
     width: 280px;
     margin: 0 auto;
@@ -1852,55 +1852,55 @@ input:-moz-placeholder {
     width: auto;
     margin: 0 0 1em;
   }
-  
+
   .home #page {
   	padding-bottom: 0;
   	border-bottom: 1px solid #ccc;
   }
-  
+
   #cta h2 {
   	font-size: 1.75em;
   	text-shadow: none;
   	color: #444;
   }
-  
+
   #cta p .button {
   	width: 230px;
   	font-size: 1.25em;
   }
-  
+
   #cta p a:last-child {
   	background: none;
   	padding: 0;
   	margin-top: 5px;
   	display: block;
   }
-  
+
   body.home #wide {
   	background: #fff;
   	width: 100%;
   	margin: 0 auto;
   	padding: 35px 0 15px;
   }
-  
+
   body.home #wide h3 {
   	font-size: 1.35em;
   	line-height: 140%;
   }
-  
+
   body.home #wide div {
   	width: 280px;
   	float: none;
   	margin: 0 auto;
   }
-  
+
   body.home #wide aside {
   	width: 280px;
   	float: none;
   	padding-top: 10px;
   	margin: 0 auto;
   }
-  
+
   #wide aside .large {
   	font-size: 1.25em;
   	font-weight: bold;
@@ -1909,7 +1909,7 @@ input:-moz-placeholder {
   	line-height: 40px;
   	display: block;
   }
-  
+
   input[type=email],
   input[type=text],
   select,
@@ -1917,17 +1917,17 @@ input:-moz-placeholder {
   button {
     width: 255px;
    }
-   
+
   #ss-submit {
   	font-weight: bold;
   }
-  
+
   .page-policy-contributors #orgs img {
   	margin-right: 0 !important;
   	width: 250px !important;
   	max-width: 100%;
   }
-  
+
   .page-policy-contributors #orgs p {
   	border-bottom: 1px solid #ccc;
   	background: #fff;
@@ -2021,7 +2021,7 @@ input:-moz-placeholder {
   .entry-header .avatar {
     display: none;
   }
-  
+
   .entry-content .wp-post-image,
   .entry-summary .wp-post-image {
     width: 60px;
@@ -2095,11 +2095,11 @@ input:-moz-placeholder {
     display: block;
     border: 0;
   }
-  
+
   .home #widget-footer {
   	margin-top: 25px;
   }
-  
+
   #widget-footer .footer-widget {
   	width: 280px;
   }
@@ -2169,7 +2169,7 @@ input:-moz-placeholder {
   .sub .featured-posts .feature .feature-img {
     margin: 0 20px 12px 0;
   }
-  
+
   #orgs span {
   	clear: both;
   	margin: 0 !important;
