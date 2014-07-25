@@ -1,0 +1,480 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: One Mozilla 1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-17 08:52-0800\n"
+"PO-Revision-Date: 2013-05-17 08:55-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:7
+msgid "Well, this is embarrassing…"
+msgstr ""
+
+#: ../404.php:10
+msgid "We hate to say it, but we couldn’t find the page or file you’re looking for."
+msgstr ""
+
+#: ../404.php:11
+msgid "If you typed in the address, try double-checking the spelling."
+msgstr ""
+
+#: ../404.php:12
+msgid "If you followed a link from somewhere, please let us know at <em>webmaster at mozilla dot com</em>. Be sure to tell us where you came from and what you were looking for, and we’ll do our best to fix it."
+msgstr ""
+
+#: ../archive.php:14
+#, php-format
+msgid "Posts in “%s”"
+msgstr ""
+
+#: ../archive.php:15
+#, php-format
+msgid "Posts tagged with “%s”"
+msgstr ""
+
+#: ../archive.php:16
+#: ../archive.php:17
+#: ../archive.php:18
+#: ../header.php:50
+#: ../header.php:51
+#: ../header.php:52
+#, php-format
+msgid "Posts from %s"
+msgstr ""
+
+#: ../archive.php:19
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: ../archive.php:21
+msgid "Archives"
+msgstr ""
+
+#: ../archive.php:28
+#: ../archive.php:44
+#: ../index.php:49
+#: ../search.php:18
+#: ../search.php:34
+msgid "Older posts"
+msgstr ""
+
+#: ../archive.php:29
+#: ../archive.php:45
+#: ../index.php:50
+#: ../search.php:19
+#: ../search.php:35
+msgid "Newer posts"
+msgstr ""
+
+#: ../archive.php:54
+#: ../index.php:59
+#: ../search.php:42
+msgid "Nothing Found"
+msgstr ""
+
+#: ../archive.php:58
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr ""
+
+#: ../comments.php:17
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: ../comments.php:29
+#: ../content-single.php:11
+#: ../content-summary.php:21
+#: ../content.php:21
+msgid "No responses yet"
+msgstr ""
+
+#: ../comments.php:30
+msgid "Post a comment"
+msgstr ""
+
+#: ../comments.php:39
+msgid "More comments:"
+msgstr ""
+
+#: ../comments.php:48
+#, php-format
+msgid "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post\">trackbacks</a> are open."
+msgstr ""
+
+#: ../comments.php:57
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: ../comments.php:62
+msgid "Post Your Comment"
+msgstr ""
+
+#: ../comments.php:62
+#, php-format
+msgid "Reply to %s"
+msgstr ""
+
+#: ../comments.php:66
+#, php-format
+msgid "You are logged in as <a href=\"%1$s\">%2$s</a>. <a class=\"logout\" href=\"%3$s\">Log out?</a>"
+msgstr ""
+
+#: ../comments.php:69
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:69
+msgid "(required)"
+msgstr ""
+
+#: ../comments.php:73
+msgid "E-mail"
+msgstr ""
+
+#: ../comments.php:73
+msgid "(required, will not be published)"
+msgstr ""
+
+#: ../comments.php:77
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:81
+msgid "Spam robots, please fill in this field. Humans should leave it blank."
+msgstr ""
+
+#: ../comments.php:85
+msgid "Your comment"
+msgstr ""
+
+#: ../comments.php:86
+msgid "Submit Comment"
+msgstr ""
+
+#: ../comments.php:98
+msgid "You must provide a name and e-mail (your e-mail address won’t be published)."
+msgstr ""
+
+#: ../comments.php:99
+msgid "You must provide a name."
+msgstr ""
+
+#: ../comments.php:100
+msgid "You must provide an e-mail address (it won’t be published)."
+msgstr ""
+
+#: ../comments.php:101
+msgid "The e-mail address you entered doesn’t look like a complete e-mail address. It should look like “yourname@example.com”."
+msgstr ""
+
+#: ../comments.php:102
+msgid "You must enter a comment."
+msgstr ""
+
+#: ../content-page.php:9
+msgid "Edit Page"
+msgstr ""
+
+#: ../content-page.php:14
+#: ../content-single.php:35
+#: ../content.php:29
+#: ../image.php:41
+msgid "Pages:"
+msgstr ""
+
+#: ../content-single.php:17
+#: ../content-single.php:19
+#: ../content-summary.php:8
+#: ../content-summary.php:10
+#: ../content.php:8
+#: ../content.php:10
+#, php-format
+msgid "See all posts from %s"
+msgstr ""
+
+#: ../content-single.php:29
+#: ../content.php:32
+msgid "Edit Post"
+msgstr ""
+
+#: ../content-single.php:41
+#: ../content-summary.php:33
+#: ../content.php:37
+msgid "Tags"
+msgstr ""
+
+#: ../content-single.php:43
+#: ../content-summary.php:35
+#: ../content.php:39
+msgid "Categories"
+msgstr ""
+
+#: ../content.php:28
+msgid "Continue reading &hellip;"
+msgstr ""
+
+#: ../footer.php:9
+msgid "Return to top"
+msgstr ""
+
+#: ../footer.php:14
+#, php-format
+msgid "Except where otherwise <a href=\"%1s\" rel=\"external\">noted</a>, content on this site is licensed under the <a href=\"%2s\" rel=\"external license\">Creative Commons Attribution Share-Alike License v3.0</a> or any later version."
+msgstr "Sauf <a href=\"%1s\" rel=\"external\">mentions</a> contraires, le contenu présent sur ce site dispose d'une licence <a href=\"%2s\" rel=\"external license\">Share-Alike License V3.0 (ou versions plus récentes) de la Creative Commons Attribution</a>."
+
+#: ../footer.php:19
+msgid "Contact Us"
+msgstr "Contact"
+
+#: ../footer.php:20
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
+
+#: ../footer.php:21
+msgid "Legal Notices"
+msgstr "Notes légales"
+
+#: ../footer.php:22
+msgid "Report Trademark Abuse"
+msgstr "Signaler les abus de marque déposée"
+
+#: ../footer.php:23
+msgid "Theme Code "
+msgstr ""
+
+#: ../functions.php:35
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:68
+msgid "Firefox Logo"
+msgstr ""
+
+#: ../functions.php:108
+msgid "Social sharing"
+msgstr ""
+
+#: ../functions.php:120
+#: ../functions.php:152
+msgid "Hide post authors"
+msgstr ""
+
+#: ../functions.php:136
+msgid "Add social sharing buttons to posts and pages"
+msgstr ""
+
+#: ../functions.php:138
+msgid "Adds buttons for Facebook, Twitter, and Google+."
+msgstr ""
+
+#: ../functions.php:154
+msgid "This removes the author byline and author bio from individual posts."
+msgstr ""
+
+#: ../functions.php:278
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:335
+msgid "Sorry, you appear to be a spamming robot because you filled in the hidden spam trap field. To show you are not a spammer, submit your comment again and leave the field blank."
+msgstr ""
+
+#: ../functions.php:361
+msgid "This post is password protected. To view it, please enter the password."
+msgstr ""
+
+#: ../functions.php:362
+msgid "Password"
+msgstr ""
+
+#: ../functions.php:429
+msgid "Make this a featured post?"
+msgstr ""
+
+#: ../functions.php:434
+msgid "Featured Post"
+msgstr ""
+
+#: ../functions.php:475
+msgid "Continue reading"
+msgstr ""
+
+#: ../functions.php:522
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:623
+msgid "Trackback from "
+msgstr ""
+
+#: ../functions.php:625
+#: ../functions.php:634
+msgid "on"
+msgstr ""
+
+#: ../functions.php:626
+#: ../functions.php:635
+#: ../functions.php:650
+#: ../functions.php:660
+msgid "Permanent link to this comment by "
+msgstr ""
+
+# Comment headings read "<Name> wrote on <Date> at <Time>"
+#: ../functions.php:629
+#: ../functions.php:638
+#: ../functions.php:653
+#: ../functions.php:663
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php:632
+msgid "Pingback from "
+msgstr ""
+
+#: ../functions.php:649
+#: ../functions.php:659
+msgid "wrote on"
+msgstr ""
+
+#: ../functions.php:669
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../functions.php:677
+msgid "Edit Comment"
+msgstr ""
+
+#: ../functions.php:694
+msgid "This widget shows the three most recent featured posts."
+msgstr ""
+
+#: ../functions.php:706
+msgid "Title:"
+msgstr ""
+
+#: ../header.php:49
+#, php-format
+msgid "Search results for “%s”"
+msgstr ""
+
+#: ../header.php:53
+msgid "Not Found"
+msgstr ""
+
+#: ../header.php:76
+msgid "Skip to main content"
+msgstr ""
+
+#: ../header.php:77
+msgid "Skip to sidebar"
+msgstr ""
+
+#: ../header.php:79
+msgid "Skip to blog search"
+msgstr ""
+
+#: ../image.php:13
+#, php-format
+msgid "Published <time class=\"published\" title=\"%1$s\" datetime=\"%1$s\">%2$s</time> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a>"
+msgstr ""
+
+#: ../image.php:22
+msgid "Edit Attachment"
+msgstr ""
+
+#: ../index.php:16
+msgid "Featured"
+msgstr ""
+
+#: ../index.php:63
+msgid "Sorry, we couldn&#8217;t find any results for the requested archive. Perhaps try searching?"
+msgstr ""
+
+#: ../masthead.php:6
+msgid "Go to the front page"
+msgstr ""
+
+#: ../search.php:45
+#, php-format
+msgid "Sorry, we didn't find anything for “%s.” Try another search."
+msgstr ""
+
+#: ../sidebar.php:9
+#: ../sidebar.php:55
+msgid "About"
+msgstr ""
+
+#: ../sidebar.php:35
+#: ../sidebar.php:81
+#, php-format
+msgid "More from %s"
+msgstr ""
+
+#: ../inc/theme-options.php:45
+msgid "Color Scheme"
+msgstr ""
+
+#: ../inc/theme-options.php:79
+#: ../inc/theme-options.php:80
+msgid "Theme Options"
+msgstr ""
+
+#: ../inc/theme-options.php:95
+msgid "Some themes provide customization options that are grouped together on a Theme Options screen. If you change themes, options may change or disappear, as they are theme-specific. Your current theme, One Mozilla, provides the following Theme Options:"
+msgstr ""
+
+#: ../inc/theme-options.php:97
+msgid "<strong>Color Scheme</strong>: You can choose from a few different color schemes: “Sand” (orange-tan background) is suitable for most Mozilla blogs. “Sky” (light blue/gray background) suitable for Firefox-related blogs. “Obsidian” is a light-on-dark scheme. “Stone” is the default scheme, a light, neutral gray."
+msgstr ""
+
+#: ../inc/theme-options.php:99
+msgid "Remember to click “Save Changes” to save any changes you have made to the theme options."
+msgstr ""
+
+#: ../inc/theme-options.php:101
+msgid "For more information:"
+msgstr ""
+
+#: ../inc/theme-options.php:102
+msgid "<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" target=\"_blank\">Documentation on Theme Options</a>"
+msgstr ""
+
+#: ../inc/theme-options.php:103
+msgid "<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support Forums</a>"
+msgstr ""
+
+#: ../inc/theme-options.php:110
+msgid "Overview"
+msgstr ""
+
+#: ../inc/theme-options.php:140
+msgid "Stone"
+msgstr ""
+
+#: ../inc/theme-options.php:145
+msgid "Sand"
+msgstr ""
+
+#: ../inc/theme-options.php:150
+msgid "Sky"
+msgstr ""
+
+#: ../inc/theme-options.php:155
+msgid "Obsidian"
+msgstr ""
+
+#: ../inc/theme-options.php:198
+#, php-format
+msgid "%s Theme Options"
+msgstr ""
+

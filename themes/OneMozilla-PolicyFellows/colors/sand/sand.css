@@ -1,0 +1,39 @@
+/*
+"Sand" - a warm color scheme for the One Mozilla theme
+
+@@Colors -
+Tan           #f2f0e9
+Link          #0096dd
+Hover         #0073aa
+*/
+
+#page {
+  background-color: #f2f0e9;
+  background-image: url("bg-gradient-sand.png"), url("bg-sand.png");
+  background-repeat: repeat-x, repeat;
+}
+#site-description {
+  color: #484848;
+}
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+  color: #0073aa;
+}
+
+/* @Links */
+a:link,
+a:visited {
+  color: #0096dd;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #0073aa;
+  text-decoration: underline;
+}
+
+.entry-comments a {
+  background-image: url("icn-comment.png");
+}

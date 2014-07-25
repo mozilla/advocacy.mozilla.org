@@ -1,0 +1,55 @@
+/*
+"Sky" - a light blue color scheme for the One Mozilla theme
+
+@@Colors -
+Gray          #eee
+Link          #67a7d0
+Hover         #4090c4
+*/
+
+html {
+  background: #eee;
+}
+#page {
+  background-color: #eee;
+  background-image: url("bg-sky.png");
+}
+#site-description {
+  color: #707477;
+}
+
+/* @Links */
+a:link,
+a:visited {
+  color: #67a7d0;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #4090c4;
+}
+
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+  color: #4090c4;
+}
+
+::-moz-selection {
+  background: #f60;
+  color: #fff;
+}
+::selection {
+  background: #f60;
+  color: #fff;
+}
+img::-moz-selection {
+  background: transparent;
+}
+img::selection {
+  background: transparent;
+}
+
+.entry-comments a {
+  background-image: url("icn-comment.png");
+}
