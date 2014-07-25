@@ -1213,7 +1213,7 @@ input:-moz-placeholder {
 	font-size: 1.35em;
 }
 
-.page-open-web-fellows img {
+.page-open-web-fellows .entry-content img {
 	border: 0;
 	box-shadow: none;
 	width: 30%;
