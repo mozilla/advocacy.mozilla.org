@@ -1,0 +1,83 @@
+/**
+ * Columns
+ */
+ 
+.omsc-one-half,
+.omsc-one-third,
+.omsc-two-third,
+.omsc-one-fourth,
+.omsc-three-fourth,
+.omsc-one-fifth,
+.omsc-two-fifth,
+.omsc-three-fifth,
+.omsc-four-fifth,
+.omsc-one-sixth,
+.omsc-five-sixth {
+  float: none;
+  margin:1em 0;
+  width:auto;
+}
+
+/**
+ * Tabs
+ */
+ 
+.omsc-tabs-control,
+.omsc-tabs-control li {
+	display:block;
+}
+
+.omsc-tabs-control li {
+	border-top-width:0;
+}
+
+.omsc-tabs-control li:first-child {
+	border-top-width:1px;
+}
+
+/**
+ * Biginfobox
+ */
+ 
+.omsc-biginfobox .omsc-inner,
+.omsc-biginfobox .omsc-text-block,
+.omsc-biginfobox .omsc-button-block {
+	display:block;
+	text-align:center;
+}
+
+.omsc-biginfobox .omsc-button-block {
+	padding-top:0;
+}
+
+/**
+ * Visibility
+ */
+
+.omsc-visibility-desktop,
+.omsc-visibility-tablet {
+	display:none;
+}
+
+.omsc-visibility-mobile {
+	display:block;
+}
+
+span.omsc-visibility-mobile {
+	display:inline;
+}
+
+/**
+ * Pricing table
+ */
+ 
+.omsc-pricing-table,
+.omsc-pricing-column {
+	display:block;
+}
+
+.omsc-pricing-column.omsc-pricing-column-featured {
+	-webkit-transform:none;
+	-moz-transform:none;
+	transform:none;
+}

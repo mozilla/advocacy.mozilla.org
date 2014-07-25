@@ -1,0 +1,682 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Olevmedia Shortcodes\n"
+"POT-Creation-Date: 2013-09-23 16:08+0400\n"
+"PO-Revision-Date: 2013-09-23 16:11+0400\n"
+"Last-Translator: Aleksey <as@olevmedia.com>\n"
+"Language-Team: Olevmedia <support@olevmedia.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/button.php:17
+msgid "Accordion / Toggle / Tabs"
+msgstr ""
+
+#: functions/button.php:21
+msgid "Accordion"
+msgstr ""
+
+#: functions/button.php:25
+msgid "Toggle Content"
+msgstr ""
+
+#: functions/button.php:29
+msgid "Tabbed Content"
+msgstr ""
+
+#: functions/button.php:41
+msgid "Blockquote"
+msgstr ""
+
+#: functions/button.php:45
+msgid "Border"
+msgstr ""
+
+#: functions/button.php:50
+msgid "Buttons"
+msgstr ""
+
+#: functions/button.php:61
+msgid "Columns"
+msgstr ""
+
+#: functions/button.php:73
+msgid "Dropcaps"
+msgstr ""
+
+#: functions/button.php:77
+msgid "Icons"
+msgstr ""
+
+#: functions/button.php:82 functions/button.php:86
+msgid "Infobox"
+msgstr ""
+
+#: functions/button.php:90
+msgid "Big Infobox with Button"
+msgstr ""
+
+#: functions/button.php:97
+msgid "Lists"
+msgstr ""
+
+#: functions/button.php:101
+msgid "Custom List Bullets"
+msgstr ""
+
+#: functions/button.php:105
+msgid "Custom Bullets per List Item"
+msgstr ""
+
+#: functions/button.php:112
+msgid "Logos"
+msgstr ""
+
+#: functions/button.php:118
+msgid "Map"
+msgstr ""
+
+#: functions/button.php:123
+msgid "Marker"
+msgstr ""
+
+#: functions/button.php:127
+msgid "Recent Posts"
+msgstr ""
+
+#: functions/button.php:139 functions/button.php:147
+msgid "Table"
+msgstr ""
+
+#: functions/button.php:143
+msgid "Pricing Table"
+msgstr ""
+
+#: functions/button.php:151
+msgid "Custom table styling"
+msgstr ""
+
+#: functions/button.php:168
+msgid "Utilities"
+msgstr ""
+
+#: functions/button.php:172
+msgid "Divider"
+msgstr ""
+
+#: functions/button.php:178
+msgid "Float clearing"
+msgstr ""
+
+#: functions/button.php:184
+msgid "Vertical Space"
+msgstr ""
+
+#: functions/button.php:188
+msgid "Visibility"
+msgstr ""
+
+#: functions/button.php:195
+msgid "Video Responsive Box"
+msgstr ""
+
+#: functions/interface-options.php:7
+msgid "Columns Size"
+msgstr ""
+
+#: functions/interface-options.php:8
+msgid "Markup for column will be inserted into the editor"
+msgstr ""
+
+#: functions/interface-options.php:12
+msgid "One Half"
+msgstr ""
+
+#: functions/interface-options.php:13
+msgid "One Third"
+msgstr ""
+
+#: functions/interface-options.php:14
+msgid "Two Third"
+msgstr ""
+
+#: functions/interface-options.php:15
+msgid "One Fourth"
+msgstr ""
+
+#: functions/interface-options.php:16
+msgid "Three Fourth"
+msgstr ""
+
+#: functions/interface-options.php:17
+msgid "One Fifth"
+msgstr ""
+
+#: functions/interface-options.php:18
+msgid "Two Fifth"
+msgstr ""
+
+#: functions/interface-options.php:19
+msgid "Three Fifth"
+msgstr ""
+
+#: functions/interface-options.php:20
+msgid "Four Fifth"
+msgstr ""
+
+#: functions/interface-options.php:21
+msgid "One Sixth"
+msgstr ""
+
+#: functions/interface-options.php:22
+msgid "Five Sixth"
+msgstr ""
+
+#: functions/interface-options.php:26
+msgid "Last Column"
+msgstr ""
+
+#: functions/interface-options.php:27
+msgid "Check if it's the last column in the row"
+msgstr ""
+
+#: functions/interface-options.php:37 functions/interface-options.php:359
+msgid "Button Title"
+msgstr ""
+
+#: functions/interface-options.php:42 functions/interface-options.php:364
+msgid "Button Link URL"
+msgstr ""
+
+#: functions/interface-options.php:47
+msgid "Button target"
+msgstr ""
+
+#: functions/interface-options.php:52 functions/interface-options.php:885
+msgid "Button Color"
+msgstr ""
+
+#: functions/interface-options.php:56 functions/interface-options.php:146
+#: functions/interface-options.php:258 functions/interface-options.php:298
+#: functions/interface-options.php:323 functions/interface-options.php:403
+#: functions/interface-options.php:464 functions/interface-options.php:500
+msgid "Theme Color"
+msgstr ""
+
+#: functions/interface-options.php:57 functions/interface-options.php:259
+#: functions/interface-options.php:324
+msgid "Custom Color"
+msgstr ""
+
+#: functions/interface-options.php:61
+msgid "Button Custom Color"
+msgstr ""
+
+#: functions/interface-options.php:66
+msgid "Button Hover Color"
+msgstr ""
+
+#: functions/interface-options.php:71 functions/interface-options.php:268
+msgid "Text Color"
+msgstr ""
+
+#: functions/interface-options.php:76
+msgid "Button Size"
+msgstr ""
+
+#: functions/interface-options.php:80
+msgid "Mini"
+msgstr ""
+
+#: functions/interface-options.php:81
+msgid "Small"
+msgstr ""
+
+#: functions/interface-options.php:82
+msgid "Medium"
+msgstr ""
+
+#: functions/interface-options.php:83 functions/interface-options.php:390
+msgid "Large"
+msgstr ""
+
+#: functions/interface-options.php:84
+msgid "XLarge with extra description"
+msgstr ""
+
+#: functions/interface-options.php:88
+msgid "Button Width"
+msgstr ""
+
+#: functions/interface-options.php:91
+msgid ""
+"Leave this field blank for auto width or specify width, for instance: 200px "
+"or 100%"
+msgstr ""
+
+#: functions/interface-options.php:94 functions/interface-options.php:273
+#: functions/interface-options.php:379 functions/interface-options.php:453
+#: functions/interface-options.php:488
+msgid "Icon"
+msgstr ""
+
+#: functions/interface-options.php:99 functions/interface-options.php:398
+#: functions/interface-options.php:459 functions/interface-options.php:495
+msgid "Icon color"
+msgstr ""
+
+#: functions/interface-options.php:103 functions/interface-options.php:402
+#: functions/interface-options.php:463 functions/interface-options.php:499
+#: functions/interface.php:124
+msgid "Default"
+msgstr ""
+
+#: functions/interface-options.php:104 functions/interface-options.php:147
+#: functions/interface-options.php:299 functions/interface-options.php:404
+#: functions/interface-options.php:465 functions/interface-options.php:501
+msgid "Custom"
+msgstr ""
+
+#: functions/interface-options.php:109 functions/interface-options.php:470
+#: functions/interface-options.php:506
+msgid "Icon custom color"
+msgstr ""
+
+#: functions/interface-options.php:114
+msgid "Extra description for XLarge button"
+msgstr ""
+
+#: functions/interface-options.php:120
+msgid "Tooltip for button"
+msgstr ""
+
+#: functions/interface-options.php:130
+msgid "Letter"
+msgstr ""
+
+#: functions/interface-options.php:135
+msgid "Size"
+msgstr ""
+
+#: functions/interface-options.php:136
+msgid "(size in pixels or in percent: 36 or 36px or 180% or 240%)"
+msgstr ""
+
+#: functions/interface-options.php:141 functions/interface-options.php:254
+#: functions/interface-options.php:889 functions/interface-options.php:893
+#: functions/interface-options.php:901 functions/interface-options.php:907
+msgid "Background Color"
+msgstr ""
+
+#: functions/interface-options.php:145
+msgid "No background"
+msgstr ""
+
+#: functions/interface-options.php:151 functions/interface-options.php:263
+#: functions/interface-options.php:328 functions/interface-options.php:425
+msgid "Custom Background Color"
+msgstr ""
+
+#: functions/interface-options.php:156
+msgid "Background Shape"
+msgstr ""
+
+#: functions/interface-options.php:160
+msgid "Square"
+msgstr ""
+
+#: functions/interface-options.php:161
+msgid "Cirle"
+msgstr ""
+
+#: functions/interface-options.php:165 functions/interface-options.php:333
+#: functions/interface-options.php:431
+msgid "Text color"
+msgstr ""
+
+#: functions/interface-options.php:175
+msgid "Toggle Title"
+msgstr ""
+
+#: functions/interface-options.php:180
+msgid "Toggle text"
+msgstr ""
+
+#: functions/interface-options.php:185
+msgid "Toggle initial state"
+msgstr ""
+
+#: functions/interface-options.php:189
+msgid "Closed"
+msgstr ""
+
+#: functions/interface-options.php:190
+msgid "Opened"
+msgstr ""
+
+#: functions/interface-options.php:199 functions/interface-options.php:446
+#: functions/interface-options.php:481
+msgid "Number of items"
+msgstr ""
+
+#: functions/interface-options.php:200
+msgid "Markup for accordion will be inserted into the editor"
+msgstr ""
+
+#: functions/interface-options.php:205
+msgid "Allow multiple Toggles open at a time"
+msgstr ""
+
+#: functions/interface-options.php:215
+msgid "Number of tabs"
+msgstr ""
+
+#: functions/interface-options.php:216
+msgid "Markup for tabs will be inserted into the editor"
+msgstr ""
+
+#: functions/interface-options.php:278 functions/interface-options.php:343
+#: functions/interface-options.php:420
+msgid "Text"
+msgstr ""
+
+#: functions/interface-options.php:288
+msgid "Border width"
+msgstr ""
+
+#: functions/interface-options.php:289
+msgid "in pixels"
+msgstr ""
+
+#: functions/interface-options.php:294 functions/interface-options.php:897
+msgid "Border Color"
+msgstr ""
+
+#: functions/interface-options.php:303
+msgid "Border Custom Color"
+msgstr ""
+
+#: functions/interface-options.php:308 functions/interface-options.php:680
+msgid "Content"
+msgstr ""
+
+#: functions/interface-options.php:309
+msgid "you can modify it later in the editor"
+msgstr ""
+
+#: functions/interface-options.php:319
+msgid "Background color"
+msgstr ""
+
+#: functions/interface-options.php:338
+msgid "Title"
+msgstr ""
+
+#: functions/interface-options.php:348
+msgid "Box layout"
+msgstr ""
+
+#: functions/interface-options.php:353
+msgid "Horisontal"
+msgstr ""
+
+#: functions/interface-options.php:354
+msgid "Vertical"
+msgstr ""
+
+#: functions/interface-options.php:358
+msgid "Leave empty to hide button"
+msgstr ""
+
+#: functions/interface-options.php:369
+msgid "Button Link Target"
+msgstr ""
+
+#: functions/interface-options.php:385
+msgid "Icon size"
+msgstr ""
+
+#: functions/interface-options.php:389
+msgid "default"
+msgstr ""
+
+#: functions/interface-options.php:391
+msgid "2x"
+msgstr ""
+
+#: functions/interface-options.php:392
+msgid "3x"
+msgstr ""
+
+#: functions/interface-options.php:393
+msgid "4x"
+msgstr ""
+
+#: functions/interface-options.php:409
+msgid "Icon Custom Color"
+msgstr ""
+
+#: functions/interface-options.php:426
+msgid "Default - Theme color"
+msgstr ""
+
+#: functions/interface-options.php:436
+msgid "Tooltip"
+msgstr ""
+
+#: functions/interface-options.php:447 functions/interface-options.php:482
+msgid "Markup for list will be inserted into the editor"
+msgstr ""
+
+#: functions/interface-options.php:489
+msgid ""
+"Default icon, you will be able to change icon for every item in the inserted "
+"code"
+msgstr ""
+
+#: functions/interface-options.php:516
+msgid "Vertical Space Size in Pixels"
+msgstr ""
+
+#: functions/interface-options.php:554
+msgid "Markup for table will be inserted into the editor"
+msgstr ""
+
+#: functions/interface-options.php:558 functions/interface-options.php:762
+msgid "Enter number of columns"
+msgstr ""
+
+#: functions/interface-options.php:563
+msgid "Enter number of rows"
+msgstr ""
+
+#: functions/interface-options.php:568
+msgid "First row is a heading"
+msgstr ""
+
+#: functions/interface-options.php:586
+msgid ""
+"Note for inserted code: <b>[tr]</b> tag is a row tag, <b>[th]</b> tag - is a "
+"heading cell in a row, <b>[td]</b> tag - is a cell in a row"
+msgstr ""
+
+#: functions/interface-options.php:595
+msgid ""
+"Get the embed video code from YouTube, Vimeo or any other service and paste "
+"it below"
+msgstr ""
+
+#: functions/interface-options.php:599
+msgid "Video Embed Code"
+msgstr ""
+
+#: functions/interface-options.php:604
+msgid "Maximum video width (in pixels)"
+msgstr ""
+
+#: functions/interface-options.php:605
+msgid ""
+"Video will be resized and fitted to site width, but you can specify maximum "
+"width"
+msgstr ""
+
+#: functions/interface-options.php:615
+msgid "Type the address to show on the Google Map"
+msgstr ""
+
+#: functions/interface-options.php:619
+msgid "Address"
+msgstr ""
+
+#: functions/interface-options.php:624
+msgid "Or grab the HTML embed code of the map from Google and insert here"
+msgstr ""
+
+#: functions/interface-options.php:628
+msgid "Map Embed Code"
+msgstr ""
+
+#: functions/interface-options.php:633
+msgid "Maximum map width (in pixels)"
+msgstr ""
+
+#: functions/interface-options.php:634
+msgid ""
+"Map will be resized and fitted to site width, but you can specify maximum "
+"width"
+msgstr ""
+
+#: functions/interface-options.php:644
+msgid "Quote"
+msgstr ""
+
+#: functions/interface-options.php:649
+msgid "Author"
+msgstr ""
+
+#: functions/interface-options.php:675
+msgid ""
+"Use this shortcode to show the content only for desktop / tablet / mobile "
+"devices"
+msgstr ""
+
+#: functions/interface-options.php:681
+msgid ""
+"you can modify it later in the editor, also you can use shortcodes inside"
+msgstr ""
+
+#: functions/interface-options.php:686
+msgid "Show on desktop"
+msgstr ""
+
+#: functions/interface-options.php:691
+msgid "Show on tablet"
+msgstr ""
+
+#: functions/interface-options.php:696
+msgid "Show on mobile"
+msgstr ""
+
+#: functions/interface-options.php:758
+msgid "Markup for pricing table will be inserted into the editor"
+msgstr ""
+
+#: functions/interface-options.php:763
+msgid "Number of tariffs"
+msgstr ""
+
+#: functions/interface-options.php:768
+msgid "Enter number of rows (parameters to compare)"
+msgstr ""
+
+#: functions/interface-options.php:769
+msgid "Number of parameters to compare"
+msgstr ""
+
+#: functions/interface-options.php:775
+msgid ""
+"Note for inserted code:<br /><br /><b>[pricing_column featured=\"yes\"]...[/"
+"pricing_column]</b> - tariff description inside (column wrapper), use "
+"attribute \"featured\" to feature the column<br /><br /><b>"
+"[pricing_column_name comment=\"...\"]...[/pricing_column_name]</b> - name of "
+"the tariff, you can use use attribute \"comment\"<br /><br /><b>[price "
+"comment=\"...\"]...[/price]</b> - the price, you can use use attribute "
+"\"comment\"<br /><br /><b>[line]...[/line]</b> - line in the column. Number "
+"of lines should be equal for each column<br /><br /><b>[button href=\"URL"
+"\"]...[/button]</b> - button for tariff"
+msgstr ""
+
+#: functions/interface-options.php:784
+msgid "Enter number of posts to display"
+msgstr ""
+
+#: functions/interface-options.php:790
+msgid "Show post date"
+msgstr ""
+
+#: functions/interface-options.php:796
+msgid "Show thumbnails"
+msgstr ""
+
+#: functions/interface-options.php:802
+msgid "Show excerpt"
+msgstr ""
+
+#: functions/interface-options.php:808
+msgid "Posts category"
+msgstr ""
+
+#: functions/interface-options.php:814
+msgid "Custom post IDs"
+msgstr ""
+
+#: functions/interface-options.php:815
+msgid ""
+"You can specify post's IDs separated by comma, to display custom set of "
+"posts."
+msgstr ""
+
+#: functions/interface.php:27
+msgid "Insert shortcode: "
+msgstr ""
+
+#: functions/interface.php:30 functions/interface.php:36
+msgid "Insert Shortcode"
+msgstr ""
+
+#: functions/interface.php:86
+msgid "No icon"
+msgstr ""
+
+#: functions/interface.php:92
+msgid "Icons Preview"
+msgstr ""
+
+#: functions/interface.php:125
+msgid "_blank"
+msgstr ""
+
+#: functions/interface.php:126
+msgid "_parent"
+msgstr ""
+
+#: functions/interface.php:127
+msgid "_top"
+msgstr ""
+
+#: functions/interface.php:168
+msgid "All Categories"
+msgstr ""
+
+#: functions/interface.php:169
+msgid "No Categories"
+msgstr ""
+
+#: functions/js-strings-translation.php:5
+msgid "Close"
+msgstr ""

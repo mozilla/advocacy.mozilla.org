@@ -1,0 +1,16 @@
+/**
+ * Visibility
+ */
+ 
+.omsc-visibility-desktop,
+.omsc-visibility-mobile {
+	display:none;
+}
+
+.omsc-visibility-tablet {
+	display:block;
+}
+
+span.omsc-visibility-tablet {
+	display:inline;
+}
