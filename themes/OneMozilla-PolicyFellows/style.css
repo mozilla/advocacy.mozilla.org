@@ -1915,7 +1915,7 @@ input:-moz-placeholder {
   select,
   textarea,
   button {
-    width: 255px;
+    width: 90%;
    }
    
   #ss-submit {
