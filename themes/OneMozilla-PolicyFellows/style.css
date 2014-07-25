@@ -1206,26 +1206,49 @@ input:-moz-placeholder {
 	width: 25px;
 }
 
-.page-policy-contributors #orgs {
+
+.page-open-web-fellows h4 {
+	font-weight: bold;
+	margin: 35px 0 27px;
+	font-size: 1.35em;
+}
+
+.page-open-web-fellows img {
+	border: 0;
+	box-shadow: none;
+	width: 30%;
+	min-width: 130px;
+	float: left;
+	margin: 0 3% 20px 0;
+}
+
+.page-open-web-fellows small {
+	display: block;
+	clear: both;
+	padding-top: 15px;
+}
+
+.page-host-organizations #orgs {
 	margin-top: 30px;
 }
 
-.page-policy-contributors #orgs img {
+.page-host-organizations #orgs img {
 	border: 0;
 	box-shadow: 0 0;
 	margin-right: 20px;
 }
 
-.page-policy-contributors #orgs p {
+.page-host-organizations #orgs p {
 	border-bottom: 1px solid #ccc;
 	background: #fff;
 	padding: 15px;
 }
 
-.page-policy-contributors #orgs span {
+.page-host-organizations #orgs span {
 	display: block;
 	margin-left: 270px;
 }
+
 
 /*** @Home */
 
@@ -1648,7 +1671,7 @@ input:-moz-placeholder {
 		background-size: 100%;
 	}	
 	
-	.page-benefits #page {
+	/*.page-benefits #page {
 		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla5-1280.jpg') no-repeat;
 		background-size: 100%;
 	}
@@ -1656,7 +1679,7 @@ input:-moz-placeholder {
 	.page-faq #page {
 		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stickies-1280.jpg') no-repeat;
 		background-size: 100%;
-	}
+	}*/
 
 }
 
@@ -1674,7 +1697,7 @@ input:-moz-placeholder {
 		background-size: 100%;
 	}	
 	
-	.page-benefits #page {
+	/*.page-benefits #page {
 		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla5-1024.jpg') no-repeat;
 		background-size: 100%;
 	}
@@ -1682,7 +1705,7 @@ input:-moz-placeholder {
 	.page-faq #page {
 		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stickies-1024.jpg') no-repeat;
 		background-size: 100%;
-	}
+	}*/
 
 }
 
@@ -1812,7 +1835,7 @@ input:-moz-placeholder {
 		background-size: 100%;
 	}	
 	
-	.page-benefits #page {
+	/* .page-benefits #page {
 		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/sfmozilla5-320@2x.jpg') no-repeat;
 		background-size: 100%;
 	}
@@ -1820,7 +1843,7 @@ input:-moz-placeholder {
 	.page-faq #page {
 		background: url('http://localhost/mozilla/wp-content/uploads/sites/5/2014/07/stickies-320@2x.jpg') no-repeat;
 		background-size: 100%;
-	}
+	} */
 	
 	h1 img {
 		width: 100%;
@@ -1922,13 +1945,13 @@ input:-moz-placeholder {
   	font-weight: bold;
   }
   
-  .page-policy-contributors #orgs img {
+  .page-host-organizations #orgs img {
   	margin-right: 0 !important;
   	width: 250px !important;
   	max-width: 100%;
   }
   
-  .page-policy-contributors #orgs p {
+  .page-host-organizations #orgs p {
   	border-bottom: 1px solid #ccc;
   	background: #fff;
   	padding: 15px;
