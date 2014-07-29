@@ -13,23 +13,29 @@ get_header(); ?>
     <?php /* Start the Loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
     
-	    <section id="cta">
-	  		<?php the_field('call_to_action'); ?>
-	  		<!-- <div id="button"><a href="<?php the_field('application_url'); ?>" class="button"><?php the_field('apply_now'); ?></a></div> -->
+	    <section id="intro">
+	    	<?php the_content(); ?>
 	  	</section>
 	  	
   </div><!-- #content-main -->
   
     </main><!-- #content -->
-</div></div><!-- /.wrap /#page -->
+</div>
 
 	  	<section id="wide">
 
-		  	<div><?php the_content(); ?></div>
-		      <aside>
-		      	<?php the_field('aside'); ?>
-		      </aside>
-      
+		  	<div><?php the_field('call_to_action'); ?></div>      
+	  	</section>
+	  	
+	  	<section id="action">
+	  		<div id="inner">
+		  		<div class="col">
+		  			<?php the_field('take_action'); ?>
+		  		</div>
+		  		<div class="col">
+		  			<img src="<?php echo get_template_directory_uri(); ?>/img/haveaheart.jpg" />	  			
+		  		</div>
+	  		</div>
 	  	</section>
 
     <?php endwhile; ?>
@@ -37,6 +43,6 @@ get_header(); ?>
 
     <?php endif; ?>
 
-
+</div><!-- /#page -->
 
 <?php get_footer(); ?>
