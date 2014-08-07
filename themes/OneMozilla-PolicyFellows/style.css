@@ -137,8 +137,10 @@ h1 {
 }
 
 h1 img {
-    width: 30%;
+    /*width: 30%;*/
+    width: 60%;
     max-width: 280px;
+    margin-top: 20px;
 }
 
 .entry-title,
@@ -260,8 +262,13 @@ footer a:active {
   background-repeat: no-repeat;
   margin: 0 30px 0 0;
   min-height: 60px;
-  padding: 45px 0 10px 0px;
+  /*padding: 45px 0 10px 0px;*/
+  padding: 0px 0 10px 0px;
   position: relative;
+}
+#masthead hgroup {
+  display: inline-block;
+  float: left;
 }
 #masthead.image hgroup {
   padding-right: 340px;
@@ -458,14 +465,16 @@ body.home .main {
 
 /* @Primary @navigation *********/
 #nav-primary {
-  background-color: #fff;
+  /*background-color: #fff;*/
   font-family: "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
-  margin: 0 0 48px;
-  -ms-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  /*margin: 0 0 48px;*/
+  float: right;
+  margin-right: 140px;
+/*  -ms-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   -o-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   padding: 0 20px;
-  text-align: center;
+  text-align: center;*/
 }
 
 body.home #nav-primary {
@@ -478,13 +487,51 @@ body.home #nav-primary {
 }
 #nav-primary li {
   display: inline-block;
-  padding: 12px 0;
+  /*padding: 12px 0;*/
+  padding: 5px 0;
 }
-#nav-primary a {
-  border-left: 1px dotted #ccc;
+
+#nav-primary.nav-full li ul {
+  display: none;
+}
+
+#nav-primary-sub {
+  background-color: #FFF;
+  font-family: "Open Sans Light","Lucida Sans","Lucida Grande","Lucida Sans Unicode",Calibri,sans-serif;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 0px 20px;
+  /*text-align: center;*/
+}
+
+#nav-primary-sub ul {
+  list-style: none outside none;
+  margin: 0px;
+}
+
+#nav-primary-sub ul li {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#nav-primary-sub ul li a {
   display: inline-block;
   padding: 6px 15px;
-    color: #d42e32;
+  color: #D42E32;
+}
+
+#nav-primary-sub ul li:not(:first-of-type) a {
+  border-left: 1px dotted #CCC;
+}
+
+#nav-primary a {
+  /*border-left: 1px dotted #ccc;*/
+  display: inline-block;
+  padding: 6px 15px;
+    /*color: #d42e32;*/
+  color: #fff;
 }
 #nav-primary .current-menu-item a {
   color: #444;
@@ -1927,6 +1974,14 @@ input:-moz-placeholder {
         display: none;
     }
 
+    #nav-primary {
+      float: none;
+    }
+
+    #nav-primary-sub {
+        display: none;
+    }
+
     #mobile-nav-container {
         display: inline-block;
         position: relative;
@@ -1949,6 +2004,10 @@ input:-moz-placeholder {
 
     #mobilenav nav {
         margin-top: 25px;
+    }
+
+    #mobilenav nav ul ul {
+      margin-left: 20px;
     }
 
 #content {
