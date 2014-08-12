@@ -12,28 +12,28 @@ get_header(); ?>
 
     <?php /* Start the Loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
-    
+
 	    <section id="intro">
 	    	<?php the_content(); ?>
 	  	</section>
-	  	
+
   </div><!-- #content-main -->
-  
+
     </main><!-- #content -->
 </div>
 
 	  	<section id="wide">
 
-		  	<div><?php the_field('call_to_action'); ?></div>      
+		  	<div><?php the_field('call_to_action'); ?></div>
 	  	</section>
-	  	
+
 	  	<section id="action">
 	  		<div id="inner">
 		  		<div class="col">
 		  			<?php the_field('take_action'); ?>
 		  		</div>
 		  		<div class="col">
-		  			<img src="<?php echo get_template_directory_uri(); ?>/img/haveaheart.jpg" />	  			
+		  			<img src="<?php echo get_template_directory_uri(); ?>/img/haveaheart.jpg" />
 		  		</div>
 	  		</div>
 	  	</section>

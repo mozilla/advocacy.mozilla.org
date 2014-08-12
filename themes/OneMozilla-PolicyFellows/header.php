@@ -83,12 +83,6 @@ $(document).ready(function(){
   <?php get_template_part( 'masthead' ); ?>
 
   <div id="nav-primary-sub">
-    <ul class="sub-menu">
-  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="http://localhost:8888/benefits/">Benefits</a></li>
-  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://localhost:8888/application/">Application</a></li>
-  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="http://localhost:8888/faq/">FAQ</a></li>
-  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://localhost:8888/host-organizations/">Host Organizations</a></li>
-</ul>
   </div>
 
   <div id="mobile-nav-container">

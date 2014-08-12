@@ -2,8 +2,8 @@
 
 /*
 Theme Name: One Mozilla - Policy Fellows
-Author: Erika Rathje
-Description: Custom theme for Open Web Policy Fellows Program.
+Author: Mozilla
+Description: Custom theme for Mozilla Advocacy Website.
 Version: 1.0
 
 @@Font sizes -
@@ -141,6 +141,7 @@ h1 img {
     width: 60%;
     max-width: 280px;
     margin-top: 20px;
+    margin-left: 5px;
 }
 
 .entry-title,
@@ -265,6 +266,7 @@ footer a:active {
   /*padding: 45px 0 10px 0px;*/
   padding: 0px 0 10px 0px;
   position: relative;
+  overflow: auto;
 }
 #masthead hgroup {
   display: inline-block;
@@ -477,8 +479,8 @@ body.home .main {
   text-align: center;*/
 }
 
-body.home #nav-primary {
-    margin-bottom: 0;
+#nav-primary {
+  margin-bottom: 0;
 }
 
 #nav-primary ul {
@@ -495,6 +497,18 @@ body.home #nav-primary {
   display: none;
 }
 
+#nav-primary > ul li {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+#nav-primary > ul li.current-menu-item,
+#nav-primary > ul li.current-menu-ancestor {
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  background-image: url("img/menu-current.png");
+}
+
 #nav-primary-sub {
   background-color: #FFF;
   font-family: "Open Sans Light","Lucida Sans","Lucida Grande","Lucida Sans Unicode",Calibri,sans-serif;
@@ -508,6 +522,7 @@ body.home #nav-primary {
 #nav-primary-sub ul {
   list-style: none outside none;
   margin: 0px;
+  text-align: center;
 }
 
 #nav-primary-sub ul li {
@@ -532,9 +547,6 @@ body.home #nav-primary {
   padding: 6px 15px;
     /*color: #d42e32;*/
   color: #fff;
-}
-#nav-primary .current-menu-item a {
-  color: #444;
 }
 
 #nav-primary li:first-child a {
@@ -1978,8 +1990,31 @@ input:-moz-placeholder {
       float: none;
     }
 
+    #nav-primary.menu-main-nav-container {
+      background-color: #fff;
+    }
+
     #nav-primary-sub {
         display: none;
+    }
+
+    #nav-primary > ul li {
+      padding-top: 0px;
+    }
+
+    #nav-primary > ul li a {
+      color: #D42E32;
+    }
+
+    #nav-primary > ul li.current-menu-item,
+    #nav-primary > ul li.current-menu-ancestor {
+      background-image: none;
+      background-color: #fff;
+    }
+
+    #nav-primary > ul li.current-menu-item,
+    #nav-primary > ul li.current-menu-ancestor {
+      background-image: none;
     }
 
     #mobile-nav-container {
