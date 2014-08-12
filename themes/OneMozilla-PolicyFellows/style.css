@@ -191,6 +191,10 @@ footer a:active {
   text-decoration: underline;
 }
 
+.entry-content h5 {
+  font-weight: bold;
+}
+
 .entry-content p {
     margin-bottom: 15px;
 }
