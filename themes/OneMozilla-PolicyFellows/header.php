@@ -31,6 +31,7 @@
   <link rel="copyright" href="#colophon">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="shortcut icon" type="image/ico" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
+  <?php wp_head(); ?>
   <?php if ( get_option('onemozilla_share_posts') == 1 ) : ?>
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/socialshare.css">
   <?php endif; ?>
@@ -40,7 +41,7 @@
   <link rel="stylesheet" type="text/css" media="print" href="<?php echo get_template_directory_uri(); ?>/css/print.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/css/ie7.css"><![endif]-->
-<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -58,7 +59,6 @@
   ?></title>
 
   <?php if ( is_singular() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); } ?>
-  <?php wp_head(); ?>
   <script>
 $(document).ready(function(){
   $("#navtoggle").click(function(){
@@ -82,8 +82,9 @@ $(document).ready(function(){
 
   <?php get_template_part( 'masthead' ); ?>
 
-  <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'container_class' => 'nav-full', 'fallback_cb' => 'false', ) ); ?>
-  
+  <div id="nav-primary-sub">
+  </div>
+
   <div id="mobile-nav-container">
   	<a href="#" id="navtoggle"><i class="fa fa-bars"></i></a>
 	  <div id="mobilenav"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
