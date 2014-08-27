@@ -27,7 +27,8 @@
         <li><a href="https://www.mozilla.org/en-US/privacy/" rel="external"><?php _e('Privacy Policy', 'onemozilla'); ?></a></li>
         <li><a href="https://www.mozilla.org/en-US/about/legal.html" rel="external"><?php _e('Legal Notices', 'onemozilla'); ?></a></li>
         <li><a href="https://www.mozilla.org/en-US/legal/fraud-report/index.html" rel="external"><?php _e('Report Trademark Abuse', 'onemozilla'); ?></a></li>
-        <li><a href="https://github.com/mozilla/One-Mozilla-blog/" rel="external"><?php _e('Theme Code ', 'onemozilla'); ?></a></li>
+        <li><a href="https://github.com/mozilla/advocacy.mozilla.org" rel="external"><?php _e('Theme Code ', 'onemozilla'); ?></a></li>
+        <li><a href="" rel="external" class="red">Donate [FIXME,need link]</a></li>
       </ul>
     </nav>
   </div>

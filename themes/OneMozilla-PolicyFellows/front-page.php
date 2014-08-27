@@ -29,11 +29,12 @@ get_header(); ?>
 
 	  	<section id="action">
 	  		<div id="inner">
+          <?php the_field('take_action_header'); ?>
 		  		<div class="col">
-		  			<?php the_field('take_action'); ?>
+		  			<?php the_field('take_action_col_1'); ?>
 		  		</div>
 		  		<div class="col">
-		  			<img src="<?php echo get_template_directory_uri(); ?>/img/haveaheart.jpg" />
+            <?php the_field('take_action_col_2'); ?>
 		  		</div>
 	  		</div>
 	  	</section>
