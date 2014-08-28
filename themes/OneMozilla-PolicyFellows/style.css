@@ -1333,6 +1333,7 @@ input:-moz-placeholder {
 .page-get-involved .entry-content ul {
   list-style-type: none;
   margin-left: 0;
+  margin-bottom: 40px;
 }
 
 .page-get-involved .entry-content ul h3 {
