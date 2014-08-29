@@ -45,6 +45,7 @@
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.validate.min.js"></script>
 
   <title><?php
     if ( is_single() ) { single_post_title(); echo ' | '; bloginfo('name'); }

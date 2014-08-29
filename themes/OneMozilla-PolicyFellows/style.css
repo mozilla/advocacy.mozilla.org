@@ -135,8 +135,8 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 1px 0 rgba(255,255,255,0.75);
 }
 h1 {
+  font-family: 'Fira Sans', 'Open Sans', sans-serif;
   font-size: 3.92em;
-  letter-spacing: -2px;
   font-weight: 700;
   line-height: 130%;
 }
@@ -1252,7 +1252,8 @@ input:-moz-placeholder {
 /*** @Pages */
 
 .page-open-web-fellows article,
-.page-get-involved article {
+.page-get-involved article,
+.page-thank-you article {
     background: #fff;
     padding: 15px 25px;
 }
@@ -1471,6 +1472,13 @@ input:-moz-placeholder {
   text-align: center;
   color: #C6252F;
   font-size: 7em;
+}
+
+#action .col:first-of-type .icon-container img {
+    height: 110px;
+    width: auto;
+    position: relative;
+    top: 20px;
 }
 
 #action .button {
