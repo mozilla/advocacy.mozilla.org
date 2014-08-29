@@ -1526,6 +1526,28 @@ input:-moz-placeholder {
   outline: 0;
 }
 
+/* @Thank You Page *********/
+#thank-you-action #inner {
+  overflow: hidden;
+}
+#thank-you-action .col {
+  width: 49%;
+  float: left;
+}
+#thank-you-action ul {
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+#thank-you-action ul i {
+  margin: 0 0 0 -35px;
+  vertical-align: middle;
+  color: #C6252F;
+  font-size: 20px;
+  width: 25px;
+}
+
+
 /* @Comments *********/
 .comments-head {
   clear: both;
@@ -2034,7 +2056,8 @@ input:-moz-placeholder {
 @media only screen and (max-width: 767px) {
 
     .page-open-web-fellows article,
-    .page-get-involved article {
+    .page-get-involved article,
+    .page-thank-you article {
         background: none;
     }
 
@@ -2217,11 +2240,13 @@ input:-moz-placeholder {
       padding-bottom: 15px;
   }
 
-  #action #inner {
+  #action #inner,
+  #thank-you-action #inner {
       width: 280px;
   }
 
-  #action .col {
+  #action .col,
+  #thank-you-action .col {
       width: 100%;
       float: none;
   }
