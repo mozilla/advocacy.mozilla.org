@@ -1,0 +1,51 @@
+/*
+"Stone" - the default neutral gray color scheme for the One Mozilla theme
+
+@@Colors -
+Light Gray    #f9f9f9
+Link          #2983c8
+Hover         #20679e
+*/
+
+html {
+  background: #f9f9f9;
+}
+
+#page {
+  background-color: #f9f9f9;
+  background-image: url("bg-stone.png");
+}
+
+#site-description {
+  color: #777;
+}
+
+/* @Links */
+a:link,
+a:visited {
+  color: #2983c8;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #20679e;
+}
+
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+  color: #20679e;
+}
+
+::-moz-selection {
+  background: #666;
+  color: #fff;
+}
+::selection {
+  background: #666;
+  color: #fff;
+}
+
+.entry-comments a {
+  background-image: url("icn-comment.png");
+}

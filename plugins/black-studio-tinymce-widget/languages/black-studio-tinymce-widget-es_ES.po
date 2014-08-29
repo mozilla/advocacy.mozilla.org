@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Black Studio TinyMCE Widget\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-31 10:19+0100\n"
+"PO-Revision-Date: 2012-07-31 10:22+0100\n"
+"Last-Translator: Marco <marco@blackstudio.it>\n"
+"Language-Team: Black Studio <info@blackstudio.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Italian\n"
+"X-Poedit-Country: ITALY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ black-studio-tinymce-widget
+#: black-studio-tinymce-widget.php:19
+msgid "Arbitrary text or HTML with visual editor"
+msgstr "Texto arbitrario o HTML con un editor visual"
+
+# @ black-studio-tinymce-widget
+#: black-studio-tinymce-widget.php:21
+msgid "Black Studio TinyMCE"
+msgstr "Black Studio TinyMCE"
+
+# @ default
+#: black-studio-tinymce-widget.php:67
+msgid "Title:"
+msgstr "Título:"
+
+# @ default
+#: black-studio-tinymce-widget.php:70
+msgid "HTML"
+msgstr "HTML"
+
+# @ default
+#: black-studio-tinymce-widget.php:71
+msgid "Visual"
+msgstr "Visual"
+
+#: black-studio-tinymce-widget.php:79
+msgid "Donate"
+msgstr "Donación"
+
+#: black-studio-tinymce-widget.php:79
+msgid "Support"
+msgstr "Soporte"
+
+#: black-studio-tinymce-widget.php:79
+msgid "Follow"
+msgstr "Seguir"
+

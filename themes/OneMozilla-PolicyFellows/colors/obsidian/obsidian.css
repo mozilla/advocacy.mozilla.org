@@ -1,0 +1,302 @@
+/*
+"Obsidian" - a dark color scheme for the One Mozilla theme
+
+@@Colors -
+Dark blue     #3c5466
+Darker blue   #2e475a
+Pale gray     #c5ccd2
+Gold          #fede3f
+Light blue    #4090c4
+
+Link          #fede3f
+Hover         #ffe400
+*/
+
+body {
+  color: #c5ccd2;
+}
+#page {
+  background-color: #3c5466;
+  background-image: url("bg-obsidian.png");
+}
+
+/* @Content *********/
+h1, h2, h3, h4, h5, h6 {
+  color: #d1d9df;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+}
+#tabzilla-panel * {
+  text-shadow: none;
+}
+.entry-content table {
+  border-color: #2e404e;
+}
+.entry-content th,
+.entry-content td {
+  border-bottom-color: #2e404e;
+}
+.wp-caption {
+  background-color: #2e475a;
+}
+.entry-content img,
+.entry-summary img {
+  background-color: #2e475a;
+  border-color: #2e475a;
+}
+
+.entry-meta {
+  border-bottom: 1px solid rgba(197,204,201,.1);
+}
+::-moz-selection {
+  background: #d1d9df;
+  color: #2a4956;
+}
+::selection {
+  background: #d1d9df;
+  color: #2a4956;
+}
+
+#site-title,
+#site-title a:link,
+#site-title a:visited {
+  color: #c5ccd2;
+}
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+  color: #ffe400;
+}
+#site-description {
+  color: #93a0aa;
+}
+.featured-posts {
+  background-color: #2e475a;
+  -webkit-box-shadow: inset rgba(0,0,0, 0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  -o-box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+}
+.featured-posts .wp-post-image {
+  background-color: #57758c;
+  border-color: #57758c;
+}
+
+legend {
+  color: #c5ccd2; /* For IE */
+}
+
+/* @Links *********/
+a:link,
+a:visited {
+  color: #fed325;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #ffe400;
+}
+
+/* @Accessible @Skip links *********/
+#nav-access a:focus,
+#nav-access a:active {
+  background: rgba(0,0,0,.2);
+  border-color: #fed325;
+}
+#foot-logo .top:focus,
+#foot-logo .top:active {
+  background: rgba(0,0,0,.2);
+  border-color: #4090c4;
+}
+
+/* @Forms *********/
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=text],
+textarea {
+  border-color: #2e404e;
+  color: #c5ccd2;
+  background-color: rgba(0,0,0,.1);
+}
+input[type=email]:hover,
+input[type=url]:hover,
+input[type=password]:hover,
+input[type=text]:hover,
+textarea:hover {
+  border-color: #516e83;
+}
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+textarea:focus {
+  background-color: #516e83;
+  color: #c5ccd2;
+  border-color: #62869f;
+  -moz-box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  -webkit-box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  -o-box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  box-shadow: inset rgba(0,0,0,0.3) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+}
+label .note {
+  color: #afb6bb;
+}
+
+/*** Date posted */
+.entry-posted {
+  opacity: .9;
+}
+.entry-posted,
+.entry-posted a:link,
+.entry-posted a:visited,
+.entry-posted a:hover,
+.entry-posted a:focus,
+.entry-posted a:active {
+  color: #333;
+}
+
+/*** Post Author */
+.entry-header .vcard {
+  border-color: #4c667a;
+  background: #4c667a;
+  background: -webkit-linear-gradient(left, rgba(87,117,140,0.75) 0%, rgba(87,117,140,0.75) 10%, rgba(87,117,140,0.1) 50%, rgba(87,117,140,.75) 90%, rgba(87,117,140,0.75) 100%);
+  background: -moz-linear-gradient(left, rgba(87,117,140,0.75) 0%, rgba(87,117,140,0.75) 10%, rgba(87,117,140,0.1) 50%, rgba(87,117,140,.75) 90%, rgba(87,117,140,0.75) 100%);
+  background: -ms-linear-gradient(left, rgba(87,117,140,0.75) 0%, rgba(87,117,140,0.75) 10%, rgba(87,117,140,0.1) 50%, rgba(87,117,140,.75) 90%, rgba(87,117,140,0.75) 100%);
+  background: -o-linear-gradient(left, rgba(87,117,140,0.75) 0%, rgba(87,117,140,0.75) 10%, rgba(87,117,140,0.1) 50%, rgba(87,117,140,.75) 90%, rgba(87,117,140,0.75) 100%);
+  background: linear-gradient(left, rgba(87,117,140,0.75) 0%, rgba(87,117,140,0.75) 10%, rgba(87,117,140,0.1) 50%, rgba(87,117,140,.75) 90%, rgba(87,117,140,0.75) 100%);
+}
+.entry-header .vcard img {
+  border-color: #57758c;
+}
+
+/*** Comment Count */
+.entry-comments {
+  background-color: #57758c;
+}
+.entry-comments a {
+  background-image: url("icn-comment.png");
+  border-color: #57758c;
+}
+
+/*** Link buttons */
+.edit a,
+#cancel-comment-reply a {
+  border-color: #2e404e;
+  background: #4d6c83;
+  background: -moz-linear-gradient(top, #4d6c83 0, #3f596c 100%);
+  background: -webkit-linear-gradient(top, #4d6c83 0, #3f596c 100%);
+  background: linear-gradient(top, #4d6c83 0, #3f596c 100%);
+}
+.edit a:hover,
+.edit a:focus,
+.edit a:active,
+#cancel-comment-reply a:hover,
+#cancel-comment-reply a:focus,
+#cancel-comment-reply a:active {
+  border-color: #333;
+}
+
+/* @Social @Sharing *********/
+.obsidian .socialshare > div > a,
+.obsidian .socialshare > div > a:after {
+  background-image: url("icn-share.png");
+}
+.obsidian .socialshare > div > a {
+  color: #c5ccd2;
+}
+.obsidian .socialshare > div > a:after {
+  background-color: #2e475a;
+}
+.obsidian .share-active-state,
+.obsidian .socialshare.open > div > a,
+.obsidian .socialshare > div > a:hover,
+.obsidian .socialshare > div > a:focus {
+  color: #fede3f;
+}
+.obsidian .share-active-state span,
+.obsidian .socialshare > div > a:hover span,
+.obsidian .socialshare > div > a:focus span,
+.obsidian .socialshare.open > div > a span {
+  border-color: #fede3f;
+}
+.obsidian .socialshare > div > a:focus span {
+  outline-color: #fede3f;
+}
+.obsidian .socialshare > div > a span {
+  border-bottom-color: #c5ccd2;
+}
+
+/* @Comments *********/
+#comment-list .comment,
+#comment-list .pingback,
+#comment-list .trackback {
+  background: transparent;
+  border-color: #2e475a;
+  -o-box-shadow: inset rgba(0,0,0,0.048) 0 0 48px, rgba(0,0,0,0.1) 0 1px 0;
+  -ms-box-shadow: inset rgba(0,0,0,0.048) 0 0 48px, rgba(0,0,0,0.1) 0 1px 0;
+  box-shadow: inset rgba(0,0,0,0.048) 0 0 48px, rgba(0,0,0,0.1) 0 1px 0;
+}
+#comment-list .alt {
+  background: transparent;
+}
+#comment-list .byuser {
+  border-color: #507189;
+  -moz-box-shadow: inset #476379 0 0 48px, rgba(0,0,0,0.1) 0 1px 0;
+  -webkit-box-shadow: inset #476379 0 0 48px, rgba(0,0,0,0.1) 0 1px 0;
+  -o-box-shadow: inset #476379 0 0 48px, rgba(0,0,0,0.1) 0 1px 0;
+  box-shadow: inset #476379 0 0 48px, rgba(0,0,0,0.1) 0 1px 0;
+}
+
+#comment-list .avatar {
+  border-color: #5d83a0;
+}
+
+/* @Navigation ***/
+#nav-primary,
+.nav-paging {
+  background-color: #2e475a;
+  -webkit-box-shadow: inset rgba(0,0,0, 0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  -o-box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+  box-shadow: inset rgba(0,0,0,0.1) 0 0 4px, rgba(255,255,255, 0.1) 0 1px 0;
+}
+#nav-primary .current-menu-item a:link,
+#nav-primary .current-menu-item a:visited,
+.widget_nav_menu .current-menu-item a:link,
+.widget_nav_menu .current-menu-item a:visited {
+  color: #fff;
+}
+
+
+/* @Footer ***/
+#site-info {
+  background-color: #2e475a;
+  color: #727f8a;
+}
+#site-info a:link,
+#site-info a:visited {
+  color: #4090c4;
+}
+#site-info a:hover,
+#site-info a:focus,
+#site-info a:active {
+  color: #67a7d0;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .entry-posted,
+  .entry-posted a:link,
+  .entry-posted a:visited,
+  .entry-posted a:hover,
+  .entry-posted a:focus,
+  .entry-posted a:active {
+    color: #c5ccd2;
+  }
+  #nav-access a:link,
+  #nav-access a:visited,
+  #nav-access a:hover,
+  #nav-access a:focus,
+  #nav-access a:active {
+    color: #2e475a;
+  }
+
+}

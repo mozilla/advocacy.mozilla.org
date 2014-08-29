@@ -1,0 +1,39 @@
+# Translation of Black Studio TinyMCE Widget in German
+# This file is distributed under the same license as the Black Studio TinyMCE Widget package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2012-10-03 09:58:45+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Black Studio TinyMCE Widget\n"
+
+#: black-studio-tinymce-widget.php:70
+msgid "HTML"
+msgstr "HTML"
+
+#: black-studio-tinymce-widget.php:71
+msgid "Visual"
+msgstr "Visual"
+
+#: black-studio-tinymce-widget.php:79
+msgid "Donate"
+msgstr "Spende"
+
+#: black-studio-tinymce-widget.php:79
+msgid "Support"
+msgstr "Support"
+
+#: black-studio-tinymce-widget.php:79
+msgid "Follow"
+msgstr "Folgen"
+
+#: black-studio-tinymce-widget.php:19
+msgid "Arbitrary text or HTML with visual editor"
+msgstr "Normaler Text oder HTML mit Editor"
+
+#: black-studio-tinymce-widget.php:21
+msgid "Black Studio TinyMCE"
+msgstr "Black Studio TinyMCE"
