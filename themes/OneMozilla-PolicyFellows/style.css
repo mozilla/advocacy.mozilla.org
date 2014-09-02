@@ -1130,6 +1130,15 @@ textarea {
     font-size: 16px;
 }
 
+#ss-form input.error,
+#ss-form textarea.error {
+  border: 1px solid #C6252F;
+}
+
+#ss-form label.error {
+  color: #C6252F;
+}
+
 input[type=email],
 input[type=url],
 input[type=search],
