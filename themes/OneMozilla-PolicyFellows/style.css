@@ -1304,6 +1304,19 @@ input:-moz-placeholder {
     margin-bottom: 20px;
 }
 
+.page-open-web-fellows .entry-content img.no-border {
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+.page-open-web-fellows .entry-content .photo-credit small {
+  text-align: right;
+  position: relative;
+  top: -15px;
+  padding-top: 0;
+}
+
 .page-open-web-fellows #org-grid {
     overflow: hidden;
 }
