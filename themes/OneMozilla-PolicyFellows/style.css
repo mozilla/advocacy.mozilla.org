@@ -174,6 +174,16 @@ h6 {
   font-size: 1em;
 }
 
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  h2 {
+    font-size: 2.2em;
+  }
+}
+
+
 /* @Links ***/
 a:link,
 a:visited,
@@ -1107,7 +1117,7 @@ select,
 textarea,
 button {
   width: 600px;
-  height: 27px;
+  /*height: 27px;*/
   margin-bottom: 15px;
 }
 
@@ -1259,6 +1269,14 @@ input:-moz-placeholder {
 }
 
 /*** @Pages */
+
+.page-open-web-fellows #page,
+.page-get-involved #page {
+    background-color: #f2f0e9;
+    background-image: url("../../uploads/2014/08/stopwatching-1280_fademore.png"), url("colors/sand/bg-sand.png");
+    background-repeat: no-repeat, repeat-x, repeat;
+    background-size: 100%, 0, 0;
+}
 
 .page-open-web-fellows article,
 .page-get-involved article,
@@ -1874,20 +1892,10 @@ input:-moz-placeholder {
 
 @media only screen and (min-width: 1025px) {
 
-
     .home #page {
         background: url('../../uploads/2014/07/sfmozilla5-1280.jpg') no-repeat;
         background-size: cover;
     }
-
-    .page-open-web-fellows #page,
-    .page-get-involved #page {
-        background-color: #f2f0e9;
-        background-image: url("../../uploads/2014/08/stopwatching-1280_fademore.png"), url("colors/sand/bg-sand.png");
-        background-repeat: no-repeat, repeat-x, repeat;
-        background-size: 100%, 0, 0;
-    }
-
 
     .footer-widget:nth-child(3) {
         width: 400px !important;
@@ -1907,11 +1915,6 @@ input:-moz-placeholder {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .page-open-web-fellows #page,
-    .page-get-involved #page {
-        background: url("../../uploads/2014/08/stopwatching-1280_fademore.png") no-repeat;
-        background-size: 100%;
-    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
