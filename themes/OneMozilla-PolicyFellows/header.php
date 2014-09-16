@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
   <meta property="og:determiner" content="" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="<?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
+  <meta property="og:title" content="Mozilla's Policy & Advocacy Program - <?php if (is_singular()) : single_post_title(); else : bloginfo('name'); endif; ?>">
   <meta property="og:url" content="<?php if (is_singular()) : the_permalink(); else : bloginfo('url'); endif; ?>">
   <meta property="description" content="We are building a global movement to protect the free and open Web." />
   <meta property="og:description" content="We are building a global movement to protect the free and open Web.">
