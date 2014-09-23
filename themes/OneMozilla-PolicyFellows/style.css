@@ -1386,17 +1386,22 @@ input:-moz-placeholder {
   color: #C6252F;
 }
 
-.page-coming-soon .main {
+.home.page-coming-soon #page {
+  background-color: #F2F0E9;
+  background-image: url('bg-gradient-sand.png'), url('bg-sand.png');
+}
+
+.page-coming-soon .main.coming-soon {
   padding: 50px 0;
   text-align: center;
 }
 
-.page-coming-soon .main img {
+.page-coming-soon .main.coming-soon img {
   max-width: 400px;
   margin-bottom: 30px;
 }
 
-.page-coming-soon .white-container {
+.page-coming-soon .coming-soon .white-container {
   padding: 50px;
   margin-bottom: 30px;
   background: #fff;
@@ -2112,11 +2117,11 @@ input:-moz-placeholder {
         background-size: 100%;
     } */
 
-    .page-coming-soon .main img {
+    .page-coming-soon .main.coming-soon img {
       max-width: 250px;
     }
 
-    .page-coming-soon .white-container {
+    .page-coming-soon .coming-soon .white-container {
       margin-bottom: 0;
       padding: 30px;
     }
