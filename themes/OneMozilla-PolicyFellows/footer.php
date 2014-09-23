@@ -1,14 +1,14 @@
 <?php $theme_options = onemozilla_get_theme_options(); ?>
 
 
-<?php if ( !is_page("thank-you") ) : ?>
-<footer id="widget-footer">
-	<div class="wrap">
-	<?php if ( is_active_sidebar( 'footer' ) and !is_page("thank-you") ) : ?>
-			<?php dynamic_sidebar( 'footer' ); ?>
-	<?php endif; ?>
-	</div>
-</footer>
+<?php if ( is_active_sidebar( 'footer' ) ) : ?>
+  <?php if ( !is_page("thank-you") and !is_page("coming-soon") ) : ?>
+    <footer id="widget-footer">
+    	<div class="wrap">
+          <?php dynamic_sidebar( 'footer' ); ?>
+    	</div>
+    </footer>
+  <?php endif; ?>
 <?php endif; ?>
 
 <footer id="site-info" role="contentinfo">

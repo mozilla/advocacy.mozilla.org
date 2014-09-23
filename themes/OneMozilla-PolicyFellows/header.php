@@ -90,25 +90,26 @@ $(document).ready(function(){
 
 <body <?php body_class($theme_options[color_scheme]); ?>>
 <div id="page"><div class="wrap">
-  <nav id="nav-access">
-    <ul role="navigation">
-      <li><a href="#content-main" tabindex="1"><?php _e( 'Skip to main content', 'onemozilla' ); ?></a></li>
-      <li><a href="#content-sub" tabindex="2"><?php _e( 'Skip to sidebar', 'onemozilla' ); ?></a></li>
-    <?php if ( is_active_widget( false, false, 'search', true ) || ( !is_active_sidebar('sidebar') ) ) : ?>
-      <li><a href="#search" tabindex="3"><?php _e( 'Skip to blog search', 'onemozilla' ); ?></a></li>
-    <?php endif; ?>
-    </ul>
-  </nav>
+  <?php if ( !is_page("coming-soon") ) : ?>
+    <nav id="nav-access">
+      <ul role="navigation">
+        <li><a href="#content-main" tabindex="1"><?php _e( 'Skip to main content', 'onemozilla' ); ?></a></li>
+        <li><a href="#content-sub" tabindex="2"><?php _e( 'Skip to sidebar', 'onemozilla' ); ?></a></li>
+      <?php if ( is_active_widget( false, false, 'search', true ) || ( !is_active_sidebar('sidebar') ) ) : ?>
+        <li><a href="#search" tabindex="3"><?php _e( 'Skip to blog search', 'onemozilla' ); ?></a></li>
+      <?php endif; ?>
+      </ul>
+    </nav>
 
-  <?php get_template_part( 'masthead' ); ?>
+    <?php get_template_part( 'masthead' ); ?>
 
-  <div id="nav-primary-sub">
-  </div>
+    <div id="nav-primary-sub">
+    </div>
 
-  <div id="mobile-nav-container">
-  	<a href="#" id="navtoggle"><i class="fa fa-bars"></i></a>
-	  <div id="mobilenav"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
-	  </div>
-  </div>
-
+    <div id="mobile-nav-container">
+    	<a href="#" id="navtoggle"><i class="fa fa-bars"></i></a>
+  	  <div id="mobilenav"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_id' => 'nav-primary', 'fallback_cb' => 'false', ) ); ?>
+  	  </div>
+    </div>
+  <?php endif; ?>
   <main id="content">

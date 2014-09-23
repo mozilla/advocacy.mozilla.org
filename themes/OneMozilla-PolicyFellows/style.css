@@ -1386,6 +1386,22 @@ input:-moz-placeholder {
   color: #C6252F;
 }
 
+.page-coming-soon .main {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.page-coming-soon .main img {
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.page-coming-soon .white-container {
+  padding: 50px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
 /*** @Home */
 
 #intro p a:last-child {
@@ -2095,6 +2111,15 @@ input:-moz-placeholder {
         background: url('../../uploads/2014/07/stickies-320@2x.jpg') no-repeat;
         background-size: 100%;
     } */
+
+    .page-coming-soon .main img {
+      max-width: 250px;
+    }
+
+    .page-coming-soon .white-container {
+      margin-bottom: 0;
+      padding: 30px;
+    }
 
     header {
         padding-bottom: 0 !important;
