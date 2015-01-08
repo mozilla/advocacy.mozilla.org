@@ -1,0 +1,311 @@
+# Translation of Twenty Fifteen in English (Canada)
+# This file is distributed under the same license as the Twenty Fifteen package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-12-17 23:45:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Twenty Fifteen\n"
+
+#: single.php:37
+msgid "Previous post:"
+msgstr "Previous post:"
+
+#: single.php:34
+msgid "Next post:"
+msgstr "Next post:"
+
+#: inc/customizer.php:52 inc/customizer.php:68 inc/customizer.php:73
+msgid "Applied to the header on small screens and the sidebar on wide screens."
+msgstr "Applied to the header on small screens and the sidebar on wide screens."
+
+#: single.php:36
+msgid "Previous"
+msgstr "Previous"
+
+#: single.php:33
+msgid "Next"
+msgstr "Next"
+
+#: inc/template-tags.php:91 inc/template-tags.php:99
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: image.php:24
+msgid "Previous Image"
+msgstr "Previous Image"
+
+#: image.php:24
+msgid "Next Image"
+msgstr "Next Image"
+
+#: inc/template-tags.php:23
+msgid "Comment navigation"
+msgstr "Comment navigation"
+
+#: inc/template-tags.php:122
+msgid "Leave a comment"
+msgstr "Leave a comment"
+
+#: inc/template-tags.php:122
+msgid "1 Comment"
+msgstr "1 Comment"
+
+#: inc/template-tags.php:122
+msgid "% Comments"
+msgstr "% Comments"
+
+#: search.php:18
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#. Author of the plugin/theme
+msgid "the WordPress team"
+msgstr "the WordPress team"
+
+#. Description of the plugin/theme
+msgid "Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer."
+msgstr "Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer."
+
+#. Theme URI of the plugin/theme
+msgid "https://wordpress.org/themes/twentyfifteen"
+msgstr "https://wordpress.org/themes/twentyfifteen"
+
+#. Theme Name of the plugin/theme
+msgid "Twenty Fifteen"
+msgstr "Twenty Fifteen"
+
+#: inc/template-tags.php:113
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr "Full size"
+
+#: inc/template-tags.php:102
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr "Tags"
+
+#: inc/template-tags.php:94
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr "Categories"
+
+#: inc/template-tags.php:85
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr "Author"
+
+#: inc/template-tags.php:76
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr "Posted on"
+
+#: inc/template-tags.php:55
+msgctxt "Used before post format."
+msgid "Format"
+msgstr "Format"
+
+#: inc/template-tags.php:26
+msgid "Older Comments"
+msgstr "Older Comments"
+
+#: inc/template-tags.php:30
+msgid "Newer Comments"
+msgstr "Newer Comments"
+
+#: inc/template-tags.php:49
+msgid "Featured"
+msgstr "Featured"
+
+#: inc/customizer.php:152
+msgid "Blue"
+msgstr "Blue"
+
+#: inc/customizer.php:141
+msgid "Purple"
+msgstr "Purple"
+
+#: inc/customizer.php:130
+msgid "Pink"
+msgstr "Pink"
+
+#: inc/customizer.php:108
+msgid "Dark"
+msgstr "Dark"
+
+#: inc/customizer.php:119
+msgid "Yellow"
+msgstr "Yellow"
+
+#: inc/customizer.php:97
+msgid "Default"
+msgstr "Default"
+
+#: inc/customizer.php:67
+msgid "Header and Sidebar Background Color"
+msgstr "Header and Sidebar Background Colour"
+
+#: inc/customizer.php:36
+msgid "Base Color Scheme"
+msgstr "Base Colour Scheme"
+
+#: inc/customizer.php:51
+msgid "Header and Sidebar Text Color"
+msgstr "Header and Sidebar Text Colour"
+
+#: inc/back-compat.php:37 inc/back-compat.php:47 inc/back-compat.php:60
+msgid "Twenty Fifteen requires at least WordPress version 4.1. You are running version %s. Please upgrade and try again."
+msgstr "Twenty Fifteen requires at least WordPress version 4.1. You are running version %s. Please upgrade and try again."
+
+#: image.php:84
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
+msgstr "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
+
+#: header.php:44
+msgid "Menu and widgets"
+msgstr "Menu and widgets"
+
+#: comments.php:53
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: content-link.php:36 content-page.php:25 content.php:38 image.php:59
+msgid "Pages:"
+msgstr "Pages:"
+
+#: content-link.php:56 content-page.php:35 content-search.php:28
+#: content-search.php:33 content.php:57 image.php:71
+msgid "Edit"
+msgstr "Edit"
+
+#: footer.php:25
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#: functions.php:85
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: header.php:27
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#: content-none.php:22
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#: content-none.php:26
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+
+#: content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+
+#: functions.php:231
+msgid "expand child menu"
+msgstr "expand child menu"
+
+#: functions.php:232
+msgid "collapse child menu"
+msgstr "collapse child menu"
+
+#. translators: To add an additional character subset specific to your
+#. language, translate this to 'greek', 'cyrillic', 'devanagari' or
+#. 'vietnamese'. Do not translate into your own language.
+#: functions.php:173
+msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
+msgid "no-subset"
+msgstr "no-subset"
+
+#. translators: If there are characters in your language that are not supported
+#. by Inconsolata, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:168
+msgctxt "Inconsolata font: on or off"
+msgid "on"
+msgstr "on"
+
+#. translators: If there are characters in your language that are not supported
+#. by Noto Sans, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:158
+msgctxt "Noto Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#. translators: If there are characters in your language that are not supported
+#. by Noto Serif, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:163
+msgctxt "Noto Serif font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:135
+msgid "Add widgets here to appear in your sidebar."
+msgstr "Add widgets here to appear in your sidebar."
+
+#: functions.php:133
+msgid "Widget Area"
+msgstr "Widget Area"
+
+#: functions.php:86
+msgid "Social Links Menu"
+msgstr "Social Links Menu"
+
+#. #-#-#-#-#  twentyfifteen.pot (Twenty Fifteen 1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+#: footer.php:25
+msgid "https://wordpress.org/"
+msgstr "https://en-ca.wordpress.org/"
+
+#. translators: %s: Name of current post
+#: content-link.php:31 content.php:33 inc/template-tags.php:237
+msgid "Continue reading %s"
+msgstr "Continue reading %s"
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "One thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "It looks like nothing was found at this location. Maybe try a search?"
+
+#: author-bio.php:34
+msgid "View all posts by %s"
+msgstr "View all posts by %s"
+
+#: author-bio.php:12
+msgid "Published by"
+msgstr "Published by"
+
+#: archive.php:51 content-link.php:40 content-page.php:29 content.php:42
+#: image.php:63 index.php:48 search.php:40
+msgid "Page"
+msgstr "Page"
+
+#: archive.php:50 index.php:47 search.php:39
+msgid "Next page"
+msgstr "Next page"
+
+#: archive.php:49 index.php:46 search.php:38
+msgid "Previous page"
+msgstr "Previous page"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! That page can&rsquo;t be found."
