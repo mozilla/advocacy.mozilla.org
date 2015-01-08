@@ -13,31 +13,31 @@ get_header(); ?>
     <?php /* Start the Loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
-	    <section id="intro">
-	    	<?php the_content(); ?>
-	  	</section>
+      <section id="intro">
+        <?php the_content(); ?>
+      </section>
 
   </div><!-- #content-main -->
 
     </main><!-- #content -->
 </div>
 
-	  	<section id="wide">
+      <section id="wide">
 
-		  	<div><?php the_field('call_to_action'); ?></div>
-	  	</section>
+        <div><?php the_field('call_to_action'); ?></div>
+      </section>
 
-	  	<section id="action">
-	  		<div id="inner">
+      <section id="action">
+        <div id="inner">
           <?php the_field('take_action_header'); ?>
-		  		<div class="col">
-		  			<?php the_field('take_action_col_1'); ?>
-		  		</div>
-		  		<div class="col">
+          <div class="col">
+            <?php the_field('take_action_col_1'); ?>
+          </div>
+          <div class="col">
             <?php the_field('take_action_col_2'); ?>
-		  		</div>
-	  		</div>
-	  	</section>
+          </div>
+        </div>
+      </section>
 
     <?php endwhile; ?>
 

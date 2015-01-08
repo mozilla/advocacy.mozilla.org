@@ -174,6 +174,16 @@ h6 {
   font-size: 1em;
 }
 
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  h2 {
+    font-size: 2.2em;
+  }
+}
+
+
 /* @Links ***/
 a:link,
 a:visited,
@@ -1107,7 +1117,7 @@ select,
 textarea,
 button {
   width: 600px;
-  height: 27px;
+  /*height: 27px;*/
   margin-bottom: 15px;
 }
 
@@ -1128,6 +1138,15 @@ textarea {
 
 #ss-submit {
     font-size: 16px;
+}
+
+#ss-form input.error,
+#ss-form textarea.error {
+  border: 1px solid #C6252F;
+}
+
+#ss-form label.error {
+  color: #C6252F;
 }
 
 input[type=email],
@@ -1251,6 +1270,14 @@ input:-moz-placeholder {
 
 /*** @Pages */
 
+.page-open-web-fellows #page,
+.page-get-involved #page {
+    background-color: #f2f0e9;
+    background-image: url("../../uploads/2014/08/stopwatching-1280_fademore.png"), url("colors/sand/bg-sand.png");
+    background-repeat: no-repeat, repeat-x, repeat;
+    background-size: 100%, 0, 0;
+}
+
 .page-open-web-fellows article,
 .page-get-involved article,
 .page-thank-you article {
@@ -1275,6 +1302,19 @@ input:-moz-placeholder {
 .page-open-web-fellows h3 {
     margin-top: 40px;
     margin-bottom: 20px;
+}
+
+.page-open-web-fellows .entry-content img.no-border {
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+.page-open-web-fellows .entry-content .photo-credit small {
+  text-align: right;
+  position: relative;
+  top: -15px;
+  padding-top: 0;
 }
 
 .page-open-web-fellows #org-grid {
@@ -1346,6 +1386,27 @@ input:-moz-placeholder {
   color: #C6252F;
 }
 
+.home.page-coming-soon #page {
+  background-color: #F2F0E9;
+  background-image: url('bg-gradient-sand.png'), url('bg-sand.png');
+}
+
+.page-coming-soon .main.coming-soon {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.page-coming-soon .main.coming-soon img {
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.page-coming-soon .coming-soon .white-container {
+  padding: 50px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
 /*** @Home */
 
 #intro p a:last-child {
@@ -1409,8 +1470,6 @@ input:-moz-placeholder {
     font-family: 'Fira Sans', 'Open Sans', sans-serif;
     font-weight: 300;
     margin-bottom: 9px;
-    width: 700px;
-    float: left;
     margin-right: 20px;
     font-size: 1.75em;
 }
@@ -1525,6 +1584,28 @@ input:-moz-placeholder {
   border-color: #3c3c3c;
   outline: 0;
 }
+
+/* @Thank You Page *********/
+#thank-you-action #inner {
+  overflow: hidden;
+}
+#thank-you-action .col {
+  width: 49%;
+  float: left;
+}
+#thank-you-action ul {
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+#thank-you-action ul i {
+  margin: 0 0 0 -35px;
+  vertical-align: middle;
+  color: #C6252F;
+  font-size: 20px;
+  width: 25px;
+}
+
 
 /* @Comments *********/
 .comments-head {
@@ -1843,20 +1924,10 @@ input:-moz-placeholder {
 
 @media only screen and (min-width: 1025px) {
 
-
     .home #page {
         background: url('../../uploads/2014/07/sfmozilla5-1280.jpg') no-repeat;
         background-size: cover;
     }
-
-    .page-open-web-fellows #page,
-    .page-get-involved #page {
-        background-color: #f2f0e9;
-        background-image: url("../../uploads/2014/08/stopwatching-1280_fademore.png"), url("colors/sand/bg-sand.png");
-        background-repeat: no-repeat, repeat-x, repeat;
-        background-size: 100%, 0, 0;
-    }
-
 
     .footer-widget:nth-child(3) {
         width: 400px !important;
@@ -1876,11 +1947,6 @@ input:-moz-placeholder {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .page-open-web-fellows #page,
-    .page-get-involved #page {
-        background: url("../../uploads/2014/08/stopwatching-1280_fademore.png") no-repeat;
-        background-size: 100%;
-    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -2034,7 +2100,8 @@ input:-moz-placeholder {
 @media only screen and (max-width: 767px) {
 
     .page-open-web-fellows article,
-    .page-get-involved article {
+    .page-get-involved article,
+    .page-thank-you article {
         background: none;
     }
 
@@ -2047,6 +2114,15 @@ input:-moz-placeholder {
         background: url('../../uploads/2014/07/stickies-320@2x.jpg') no-repeat;
         background-size: 100%;
     } */
+
+    .page-coming-soon .main.coming-soon img {
+      max-width: 250px;
+    }
+
+    .page-coming-soon .coming-soon .white-container {
+      margin-bottom: 0;
+      padding: 30px;
+    }
 
     header {
         padding-bottom: 0 !important;
@@ -2217,11 +2293,13 @@ input:-moz-placeholder {
       padding-bottom: 15px;
   }
 
-  #action #inner {
+  #action #inner,
+  #thank-you-action #inner {
       width: 280px;
   }
 
-  #action .col {
+  #action .col,
+  #thank-you-action .col {
       width: 100%;
       float: none;
   }

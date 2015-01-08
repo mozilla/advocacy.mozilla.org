@@ -577,64 +577,52 @@ class acf_field_group
 			
 			case "page":
 				
-				$post_types = get_post_types( array('capability_type'  => 'page') );
-				unset( $post_types['attachment'], $post_types['revision'] , $post_types['nav_menu_item'], $post_types['acf']  );
+				$post_type = 'page';
+				$posts = get_posts(array(
+					'posts_per_page'			=>	-1,
+					'post_type'					=> $post_type,
+					'orderby'					=> 'menu_order title',
+					'order'						=> 'ASC',
+					'post_status'				=> 'any',
+					'suppress_filters'			=> false,
+					'update_post_meta_cache'	=> false,
+				));
 				
-				if( $post_types )
+				if( $posts )
 				{
-					foreach( $post_types as $post_type )
+					// sort into hierachial order!
+					if( is_post_type_hierarchical( $post_type ) )
 					{
-						$posts = get_posts(array(
-							'posts_per_page'			=>	-1,
-							'post_type'					=> $post_type,
-							'orderby'					=> 'menu_order title',
-							'order'						=> 'ASC',
-							'post_status'				=> 'any',
-							'suppress_filters'			=> false,
-							'update_post_meta_cache'	=> false,
-						));
-						
-						if( $posts )
-						{
-							// sort into hierachial order!
-							if( is_post_type_hierarchical( $post_type ) )
-							{
-								$posts = get_page_children( 0, $posts );
-							}
-							
-							$choices[ $post_type ] = array();
-							
-							foreach( $posts as $page )
-							{
-								$title = '';
-								$ancestors = get_ancestors($page->ID, 'page');
-								if($ancestors)
-								{
-									foreach($ancestors as $a)
-									{
-										$title .= '- ';
-									}
-								}
-								
-								$title .= apply_filters( 'the_title', $page->post_title, $page->ID );
-								
-								
-								// status
-								if($page->post_status != "publish")
-								{
-									$title .= " ($page->post_status)";
-								}
-								
-								$choices[$post_type][$page->ID] = $title;
-								
-							}
-							// foreach($pages as $page)
-						}
-						// if( $pages )
+						$posts = get_page_children( 0, $posts );
 					}
-					// foreach( $post_types as $post_type )
+					
+					foreach( $posts as $page )
+					{
+						$title = '';
+						$ancestors = get_ancestors($page->ID, 'page');
+						if($ancestors)
+						{
+							foreach($ancestors as $a)
+							{
+								$title .= '- ';
+							}
+						}
+						
+						$title .= apply_filters( 'the_title', $page->post_title, $page->ID );
+						
+						
+						// status
+						if($page->post_status != "publish")
+						{
+							$title .= " ($page->post_status)";
+						}
+						
+						$choices[ $page->ID ] = $title;
+						
+					}
+					// foreach($pages as $page)
+				
 				}
-				// if( $post_types )
 				
 				break;
 			
@@ -667,8 +655,9 @@ class acf_field_group
 			
 			case "post" :
 				
-				$post_types = get_post_types( array('capability_type'  => 'post') );
-				unset( $post_types['attachment'], $post_types['revision'] , $post_types['nav_menu_item'], $post_types['acf']  );
+				$post_types = get_post_types();
+				
+				unset( $post_types['page'], $post_types['attachment'], $post_types['revision'] , $post_types['nav_menu_item'], $post_types['acf']  );
 				
 				if( $post_types )
 				{
@@ -712,12 +701,16 @@ class acf_field_group
 			
 			case "post_category" :
 				
-				$category_ids = get_all_category_ids();
-		
-				foreach($category_ids as $cat_id) 
-				{
-				  $cat_name = get_cat_name($cat_id);
-				  $choices[$cat_id] = $cat_name;
+				$terms = get_terms( 'category', array( 'hide_empty' => false ) );
+				
+				if( !empty($terms) ) {
+					
+					foreach( $terms as $term ) {
+						
+						$choices[ $term->term_id ] = $term->name;
+						
+					}
+					
 				}
 				
 				break;
