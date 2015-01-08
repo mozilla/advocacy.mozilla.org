@@ -1470,8 +1470,6 @@ input:-moz-placeholder {
     font-family: 'Fira Sans', 'Open Sans', sans-serif;
     font-weight: 300;
     margin-bottom: 9px;
-    width: 700px;
-    float: left;
     margin-right: 20px;
     font-size: 1.75em;
 }
