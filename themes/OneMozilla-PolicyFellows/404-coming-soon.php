@@ -68,7 +68,7 @@
   <link rel="alternate" type="application/rss+xml" title="Mozilla Advocacy RSS Feed" href="http://localhost:8888/feed/">
   <link rel="pingback" href="http://localhost:8888/xmlrpc.php">
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="http://localhost:8888/wp-content/themes/OneMozilla-PolicyFellows/js/jquery.validate.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.validate.min.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
