@@ -2262,6 +2262,24 @@ input:-moz-placeholder {
       text-align: center;
   }
 
+  #wide-container {
+    width: 100%;
+  }
+
+  #wide-content {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #wide .icon-container {
+    width: 100%;
+  }
+
+  #wide .icon-container img {
+    margin: 0 auto;
+  }
+
   #wide p {
       width: 100%;
       margin-bottom: 20px;
@@ -2269,6 +2287,10 @@ input:-moz-placeholder {
       line-height: 140%;
       margin-right: 0 !important;
       text-align: left;
+  }
+
+  #wide .btn-container {
+    width: 100%;
   }
 
   #wide .button {
@@ -2605,8 +2627,7 @@ input:-moz-placeholder {
     width: 205px;
   }
 
-  #wide div,
-   #action #inner {
+  #action #inner {
       width: 436px !important;
   }
 
