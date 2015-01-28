@@ -24,7 +24,7 @@ get_header(); ?>
 
       <section id="wide">
 
-        <div><?php the_field('call_to_action'); ?></div>
+        <div id="wide-container"><?php the_field('call_to_action'); ?></div>
       </section>
 
       <section id="action">
