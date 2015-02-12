@@ -64,7 +64,7 @@
   <link rel="stylesheet" type="text/css" media="print" href="http://localhost:8888/wp-content/themes/OneMozilla-PolicyFellows/css/print.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="http://localhost:8888/wp-content/themes/OneMozilla-PolicyFellows/css/ie7.css"><![endif]-->
-  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
   <link rel="alternate" type="application/rss+xml" title="Mozilla Advocacy RSS Feed" href="http://localhost:8888/feed/">
   <link rel="pingback" href="http://localhost:8888/xmlrpc.php">
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
