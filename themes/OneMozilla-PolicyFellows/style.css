@@ -1471,7 +1471,7 @@ input:-moz-placeholder {
     background: #fff;
     width: 100%;
     margin: 0 auto;
-    padding: 42px 0 65px;
+    padding: 42px 0 42px 0;
 }
 
 #wide-container {
@@ -1493,7 +1493,7 @@ input:-moz-placeholder {
 }
 
 #wide .icon-container {
-  width: 15%;
+  width: 24%;
   text-align: center;
 }
 
@@ -1504,12 +1504,13 @@ input:-moz-placeholder {
 
 #wide-content {
   margin-left: 3%;
-  width: 82%;
+  width: 73%;
 }
 
 #wide .copy {
   float: left;
-  width: 70%;
+  width: 85%;
+  padding-top: 10px;
 }
 
 #wide p {
@@ -1519,6 +1520,11 @@ input:-moz-placeholder {
     margin-bottom: 9px;
     margin-right: 2%;
     font-size: 1em;
+}
+
+#wide p a {
+    text-decoration: underline;
+    color: inherit;
 }
 
 #wide .btn-container {
@@ -1535,13 +1541,10 @@ input:-moz-placeholder {
     text-align: center;
 }
 
-#action p {
-  text-align: left;
-}
-
 #action h2,
 .page-home #wide h2 {
   color: #4D4E53;
+  font-weight: normal;
 }
 
 #action #inner {
@@ -1963,6 +1966,7 @@ input:-moz-placeholder {
         width: 94%;
         display: inline;
     }
+
 }
 
 @media only screen and (min-width: 1025px) {
@@ -1976,6 +1980,11 @@ input:-moz-placeholder {
         width: 400px !important;
     }
 
+    #action .col p {
+        min-height: 70px;
+    }
+
+
     /*.page-benefits #page {
         background: url('../../uploads/2014/07/sfmozilla5-1280.jpg') no-repeat;
         background-size: 100%;
@@ -1988,8 +1997,10 @@ input:-moz-placeholder {
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-
+@media only screen and (min-width: 992px) {
+    #action .col p {
+        min-height: 70px;
+    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -2329,7 +2340,6 @@ input:-moz-placeholder {
       font-size: 1.25em !important;
       line-height: 140%;
       margin-right: 0 !important;
-      text-align: left;
   }
 
   #wide .btn-container {
