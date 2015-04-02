@@ -18,9 +18,11 @@ jQuery( function ( $ ) {
 		var thisId = $(this).attr('commentid');
 		$(this).insertAfter('#comment-' + thisId + ' .author strong:first').show();
 	});
-	$('#the-comment-list').find('tr.comment, tr[id ^= "comment-"]').find('.column-author a[title ^= "http://"]').each(function () {
+	$('#the-comment-list').find('tr.comment, tr[id ^= "comment-"]').find('.column-author a[title]').each(function () {
+		// Comment author URLs are the only URL with a title attribute in the author column.
 		var thisTitle = $(this).attr('title');
-			thisCommentId = $(this).parents('tr:first').attr('id').split("-");
+
+		var thisCommentId = $(this).parents('tr:first').attr('id').split("-");
 
 		$(this).attr("id", "author_comment_url_"+ thisCommentId[1]);
 
@@ -72,7 +74,7 @@ jQuery( function ( $ ) {
 	});
 	$('.akismet_undo_link_removal').live('click', function () {
 		var thisId = $(this).attr('cid');
-		var thisUrl = $(this).attr('href').replace("http://www.", "").replace("http://", "");
+		var thisUrl = $(this).attr('href');
 		var data = {
 			action: 'comment_author_reurl',
 			_wpnonce: WPAkismet.comment_author_url_nonce,
@@ -91,8 +93,8 @@ jQuery( function ( $ ) {
 				if (response) {
 					// Add "x" link
 					$("a[commentid='"+ thisId +"']").show();
-					// Show link
-					$("#author_comment_url_"+ thisId).removeClass('akismet_undo_link_removal').html(thisUrl);
+					// Show link. Core strips leading http://, so let's do that too.
+					$("#author_comment_url_"+ thisId).removeClass('akismet_undo_link_removal').text( thisUrl.replace( /^http:\/\/(www\.)?/ig, '' ) );
 				}
 			}
 		});
@@ -125,7 +127,7 @@ jQuery( function ( $ ) {
 	});
 	$('.checkforspam:not(.button-disabled)').click( function(e) {
 		$('.checkforspam:not(.button-disabled)').addClass('button-disabled');
-		$('.checkforspam-spinner').show();
+		$('.checkforspam-spinner').addClass( 'spinner' );
 		akismet_check_for_spam(0, 100);
 		e.preventDefault();
 	});
