@@ -1,21 +1,20 @@
-# Copyright (C) 2015 Black Studio
+# Copyright (C) 2014 Black Studio
 # This file is distributed under the GPLv3.
 # Translators:
-# genethic <lauramoreno1436@gmail.com>, 2014
 # marcochiesi <marco@blackstudio.it>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Black Studio TinyMCE Widget\n"
 "Report-Msgid-Bugs-To: https://github.com/black-studio/black-studio-tinymce-widget/issues\n"
-"POT-Creation-Date: 2015-02-17 09:20:25+00:00\n"
-"PO-Revision-Date: 2015-01-29 13:27+0000\n"
+"POT-Creation-Date: 2014-12-24 09:59:17+00:00\n"
+"PO-Revision-Date: 2014-12-22 20:06+0000\n"
 "Last-Translator: marcochiesi <marco@blackstudio.it>\n"
-"Language-Team: Spanish (Spain) (http://www.transifex.com/projects/p/black-studio-tinymce-widget/language/es_ES/)\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/black-studio-tinymce-widget/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: grunt-wp-i18n 0.4.8\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-Bookmarks: \n"
@@ -46,37 +45,37 @@ msgstr ""
 msgid ""
 "ERROR: Duplicate widget ID detected. To avoid content loss, please create a "
 "new widget with the same content and then delete this one."
-msgstr "Error: Detectado ID de widget duplicado. Para evitar la pérdida de contenido, por favor cree un nuevo widget con el mismo contenido y borre este."
+msgstr ""
 
 #. translators: text used for plugin home link
 #: includes/class-admin.php:335
 msgid "Home"
-msgstr "INICIO"
+msgstr "Головна"
 
 #. translators: text used for support faq link
 #: includes/class-admin.php:337
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "ЧаПи"
 
 #. translators: text used for support forum link
 #: includes/class-admin.php:339
 msgid "Support"
-msgstr "Soporte"
+msgstr "Підтримка"
 
 #. translators: text used for reviews link
 #: includes/class-admin.php:341
 msgid "Rate"
-msgstr "Puntuar"
+msgstr "Рейтинг"
 
 #. translators: text used for follow on twitter link
 #: includes/class-admin.php:343
 msgid "Follow"
-msgstr "Seguir"
+msgstr "Слідувати"
 
 #. translators: text used for donation link
 #: includes/class-admin.php:345
 msgid "Donate"
-msgstr "Donación"
+msgstr "Жертвувати"
 
 #. translators: text used for the icon that shows the plugin links
 #: includes/class-admin.php:365
@@ -86,12 +85,12 @@ msgstr ""
 #. translators: title of the widget
 #: includes/class-widget.php:28
 msgid "Visual Editor"
-msgstr "Editor visual"
+msgstr "Візуальний редактор"
 
 #. translators: description of the widget, shown in available widgets
 #: includes/class-widget.php:30
 msgid "Arbitrary text or HTML with visual editor"
-msgstr "Texto arbitrario o HTML con un editor visual"
+msgstr "Довільний текст або HTML з візуальним редактором"
 
 #. Description of the plugin/theme
 msgid ""
