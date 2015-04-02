@@ -1483,6 +1483,113 @@ function acf_convert_field_names_to_keys( $value, $field )
 }
 
 
+/*
+*  acf_force_type_array
+*
+*  This function will force a variable to become an array
+*
+*  @type	function
+*  @date	4/02/2014
+*  @since	5.0.0
+*
+*  @param	$var (mixed)
+*  @return	(array)
+*/
+
+function acf_force_type_array( $var ) {
+	
+	// is array?
+	if( is_array($var) ) {
+	
+		return $var;
+	
+	}
+	
+	
+	// bail early if empty
+	if( empty($var) && !is_numeric($var) ) {
+		
+		return array();
+		
+	}
+	
+	
+	// string 
+	if( is_string($var) ) {
+		
+		return explode(',', $var);
+		
+	}
+	
+	
+	// place in array
+	return array( $var );
+} 
+
+
+/*
+*  acf_get_valid_terms
+*
+*  This function will replace old terms with new split term ids
+*
+*  @type	function
+*  @date	27/02/2015
+*  @since	5.1.5
+*
+*  @param	$terms (int|array)
+*  @param	$taxonomy (string)
+*  @return	$terms
+*/
+
+function acf_get_valid_terms( $terms = false, $taxonomy = 'category' ) {
+	
+	// bail early if function does not yet exist or
+	if( !function_exists('wp_get_split_term') || empty($terms) ) {
+		
+		return $terms;
+		
+	}
+	
+	
+	// vars
+	$is_array = is_array($terms);
+	
+	
+	// force into array
+	$terms = acf_force_type_array( $terms );
+	
+	
+	// force ints
+	$terms = array_map('intval', $terms);
+	
+	
+	// attempt to find new terms
+	foreach( $terms as $i => $term_id ) {
+		
+		$new_term_id = wp_get_split_term($term_id, $taxonomy);
+		
+		if( $new_term_id ) {
+			
+			$terms[ $i ] = $new_term_id;
+			
+		}
+		
+	}
+	
+	
+	// revert array if needed
+	if( !$is_array ) {
+		
+		$terms = $terms[0];
+		
+	}
+	
+	
+	// return
+	return $terms;
+	
+}
+
 
 /*
 *  Depreceated Functions

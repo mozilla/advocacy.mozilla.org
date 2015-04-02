@@ -75,8 +75,8 @@ h2.ak-header {
     display: inline-block !important;
 }
 .checkforspam-spinner {
-    display: none;
-    margin-top: 10px;
+    display: inline-block;
+    margin-top: 7px;
 }
 
 .config-wrap {
@@ -340,9 +340,14 @@ h2.ak-header {
 	text-align: center;
 }
 
-.akismet-settings th.strictness {
+.akismet-settings th:first-child {
 	vertical-align: top;
 	padding-top: 15px;
+}
+
+.akismet-settings th.akismet-api-key {
+	vertical-align: middle;
+	padding-top: 0;
 }
 
 .akismet-settings input[type=text] {

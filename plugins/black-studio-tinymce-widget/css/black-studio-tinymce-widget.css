@@ -1,0 +1,141 @@
+/* Black Studio TinyMCE Widget - CSS */
+
+/* Plugin links */
+
+.bstw-links {
+	font-size: 11px;
+	margin-top: -3px;
+	text-align: right;
+	position: absolute;
+	right: 18px;
+}
+
+.rtl .bstw-links {
+	text-align: left;
+	right: auto;
+	left: 18px;
+}
+
+.bstw-links .icon16:before {
+	padding: 0;
+}
+
+.bstw-links .icon16 {
+	float: right;
+	padding: 3px 6px;
+	margin: -6px -8px 0 -2px;
+}
+
+.rtl .bstw-links .icon16 {
+	float: left;
+	margin: -6px -2px 0 -8px;
+}
+
+.bstw-links .bstw-links-list {
+	display: none;
+}
+
+.bstw-links a {
+	text-decoration: none;
+}
+
+
+/* Loading overlay */
+
+.bstw-loading {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom:0;
+	background-color:white;
+	background-image: url(../../../../wp-admin/images/loading.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 100000;
+	display: none;
+	opacity: 0.5;
+}
+
+
+/* Hidden editor instance */
+
+#wp-black-studio-tinymce-widget-wrap {
+	display: none;
+}
+
+
+/* Spacing below the editor */
+
+div[id*="black-studio-tinymce"] .wp-editor-wrap {
+	margin-bottom: 1em;
+}
+
+
+/* Icon for Theme customizer */
+
+#available-widgets [class*="black-studio-tinymce"] .widget-title:before {
+	content: "\f116"; 
+}
+
+
+/* Put TinyMCE floating panel foreground */
+
+.wp-customizer .mce-floatpanel.mce-popover {
+	z-index: 500000 !important;
+}
+
+
+/* Hide DFW fullscreen button */
+
+div[id*="black-studio-tinymce"] .mce-wp-fullscreen {
+	display: none;
+}
+
+
+/* Fix z-index when in fullscreen and using Page Builder */
+
+.ui-dialog.panels-admin-dialog {
+	z-index: 100002 !important;
+}
+
+
+/* Fix z-index for thickbox dialog windows (used for media on old WP versions but also used by some plugins) */
+
+#TB_overlay, #TB_window {
+	z-index: 999999 !important;
+}
+
+
+/* Fix z-index for media dialog windows (used on recent WP versions) */
+
+.media-modal {
+	z-index: 1000100 !important;
+}
+
+
+/* Change mouse cursor when waiting */
+
+body.wait, body.wait * {
+	cursor: wait !important;   
+}
+
+
+/* Fix Zedity z-index issue */
+
+#zedity_content_overlay {
+	z-index: 100000 !important;
+}
+
+
+/* Fix for RTL editor color text button */
+
+.mce-rtl .mce-colorbutton button {
+	padding-right: 3px !important;
+	padding-left: 3px !important;
+}
+
+.mce-rtl .mce-colorbutton .mce-preview {
+	margin: 0 !important;
+	padding: 0 !important;
+}
