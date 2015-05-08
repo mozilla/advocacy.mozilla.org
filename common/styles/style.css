@@ -532,7 +532,7 @@ body.home .main {
 #nav-primary > ul li.current-menu-ancestor {
   background-position: 50% 0px;
   background-repeat: no-repeat;
-  background-image: url("/common/assets/menu-current.png");
+  background-image: url("../assets/menu-current.png");
 }
 
 #nav-primary-sub {
@@ -777,7 +777,7 @@ body.home .main {
   width: 100px;
 }
 .entry-comments a {
-  background: transparent url("/common/assets/icn-comment.png") 24px 17px no-repeat;
+  background: transparent url("../assets/icn-comment.png") 24px 17px no-repeat;
   border: 1px solid #fff;
   display: block;
   padding: 15px 5px 15px 47px;
@@ -824,7 +824,7 @@ body.home .main {
 
 /*** @Posted date */
 .entry-posted {
-  background: url("/common/assets/bg-date-lt.png") center top no-repeat;
+  background: url("../assets/bg-date-lt.png") center top no-repeat;
   font: 10px/1 "Open Sans Light", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
   left: 0;
   padding: 6px 10px 16px;
@@ -1286,7 +1286,7 @@ input:-moz-placeholder {
 .page-open-web-fellows #page,
 .page-get-involved #page {
     background-color: #f2f0e9;
-    background-image: url("/common/assets/stopwatching-1280_fademore.png"), url("colors/sand/bg-sand.png");
+    background-image: url("../assets/stopwatching-1280_fademore.png"), url("colors/sand/bg-sand.png");
     background-repeat: no-repeat, repeat-x, repeat;
     background-size: 100%, 0, 0;
 }
@@ -1600,7 +1600,7 @@ input:-moz-placeholder {
 }
 .fm-search #s {
   background: #fafafa;
-  background: rgba(255,255,255,.8) url("/common/assets/icn-search.png") 96% 50% no-repeat;
+  background: rgba(255,255,255,.8) url("../assets/icn-search.png") 96% 50% no-repeat;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0 0 0 3px rgba(0,0,0,.02) inset;
@@ -1914,7 +1914,7 @@ input:-moz-placeholder {
   width: 252px;
 }
 #foot-logo .logo {
-  background: url("/common/assets/logo-mozilla-lt.png") 0 0 no-repeat;
+  background: url("../assets/logo-mozilla-lt.png") 0 0 no-repeat;
   border: 0;
   display: block;
   float: left;
@@ -1972,7 +1972,7 @@ input:-moz-placeholder {
 @media only screen and (min-width: 1025px) {
 
     .home #page {
-        background: url('/common/assets/sfmozilla5-1280.jpg') no-repeat;
+        background: url('../assets/sfmozilla5-1280.jpg') no-repeat;
         background-size: cover;
     }
 
@@ -1994,7 +1994,7 @@ input:-moz-placeholder {
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     .home #page {
-        background: url('/common/assets/sfmozilla5-1024.jpg') no-repeat;
+        background: url('../assets/sfmozilla5-1024.jpg') no-repeat;
         background-size: cover;
         background-color: #1585db;
     }
@@ -2114,7 +2114,7 @@ input:-moz-placeholder {
 
 @media only screen and (max-width: 600px) {
     .home #page {
-        background: url('/common/assets/sfmozilla5-320@2x.jpg') no-repeat;
+        background: url('../assets/sfmozilla5-320@2x.jpg') no-repeat;
         background-color: #1585db;
         background-size: cover;
     }
