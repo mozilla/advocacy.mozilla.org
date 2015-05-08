@@ -36,13 +36,6 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" type="image/ico" href="/common/assets/favicon.ico">
     <link rel='stylesheet' id='fontawesome-css' href='/common/styles/font-awesome.min.css?ver=4.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='omsc-shortcodes-css' href='/common/styles/shortcodes.css?ver=4.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='omsc-shortcodes-tablet-css' href='/common/styles/shortcodes-tablet.css?ver=4.0' type='text/css' media='screen and (min-width: 768px) and (max-width: 959px)' />
-    <link rel='stylesheet' id='omsc-shortcodes-mobile-css' href='/common/styles/shortcodes-mobile.css?ver=4.0' type='text/css' media='screen and (max-width: 767px)' />
-    <link rel='stylesheet' id='sand-css' href='/common/styles/sand.css' type='text/css' media='all' />
-    <script type='text/javascript' src='/common/scripts/jquery.js?ver=1.11.1'></script>
-    <script type='text/javascript' src='/common/scripts/jquery-migrate.min.js?ver=1.2.1'></script>
-    <script type='text/javascript' src='/common/scripts/fc-checkcomment.js?ver=4.0'></script>
     <link rel='canonical' href='http://advocacy.mozilla.org/' />
     <link rel='shortlink' href='http://advocacy.mozilla.org/' />
     <link rel="stylesheet" type="text/css" media="screen,projection" href="/common/styles/style.css">
@@ -619,7 +612,6 @@
                     var date = monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getYear();
                     $("ul#rss-feed").append('<li><a class="rsswidget" href="' + item['link'] + '">'+item['title']+'</a> <span class="rss-date">'+ date +'</span></li>');
                   });
-                  console.dir(data.feed.entries);
               });
             </script>
                 <h3 class="widget-title">Blog Posts</h3>
@@ -660,15 +652,6 @@
     </footer>
 
     <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
-    <script src="/common/scripts/ui.js"></script>
-
-    <script type="text/javascript">
-        jQuery(function() {
-            omShortcodes.init(["buttons", "tooltips", "toggle", "tabs", "responsivebox", "counter"]);
-        });
-    </script>
-    <script type='text/javascript' src='/common/scripts/shortcodes.js?ver=4.0'></script>
-
 </body>
 
 </html>
