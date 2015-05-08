@@ -1,0 +1,268 @@
+.front {
+    width: 100%;
+    height: 100%;
+}
+.take-action-button,
+.take-action-button:link,
+.take-action-button:visited {
+    background: #B15144;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 60px;
+    margin: 10px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s linear 0s;
+}
+.take-action-button:hover,
+.take-action-button:active,
+.take-action-button:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #803b32;
+}
+.privacy-eye {
+    height: 100%;
+    width: 100%;
+}
+.eye-container {
+    height: 115px;
+    width: 115px;
+    box-shadow: 0 2px 2px #555;
+    border-radius: 50%;
+    margin: 15px auto;
+}
+.icon-container * {
+    box-sizing: border-box;
+}
+.eyelid {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.eyelid::before,
+.eyelid::after {
+    background: #E7E7E7;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    -webkit-animation: real-eyelids 7s infinite;
+    -o-animation: real-eyelids 7s infinite;
+    -moz-animation: real-eyelids 7s infinite;
+    animation: real-eyelids 7s infinite;
+}
+.eyelid::before {
+    top: 0;
+    z-index: 100;
+}
+.eyelid::after {
+    bottom: 0;
+}
+.sclera {
+    background: #ffffff;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.iris {
+    background: #443F27;
+    border-radius: 50%;
+    height: 65%;
+    width: 65%;
+    padding: 15%;
+    position: relative;
+    top: 17.5%;
+    left: 17.5%;
+}
+.privacy-eye.wander .iris {
+    -webkit-animation: searching-eye 7s infinite;
+    -o-animation: searching-eye 7s infinite;
+    -moz-animation: searching-eye 7s infinite;
+    animation: searching-eye 7s infinite;
+}
+.privacy-eye.focus .iris {
+    padding: 26%;
+}
+.privacy-eye.smooth .iris {
+    transition: padding .3s, transform .2s;
+}
+.privacy-eye .iris {
+    transition: padding .3s;
+}
+.pupil {
+    background: #000000;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.shine {
+    display: block;
+    background: #ffffff;
+    border-radius: 50%;
+    height: 26%;
+    width: 26%;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+@-webkit-keyframes real-eyelids {
+    0%, 90%, 100% {
+        height: 0;
+    }
+    95% {
+        height: 60%;
+    }
+}
+@-o-keyframes real-eyelids {
+    0%, 90%, 100% {
+        height: 0;
+    }
+    95% {
+        height: 60%;
+    }
+}
+@-moz-keyframes real-eyelids {
+    0%, 90%, 100% {
+        height: 0;
+    }
+    95% {
+        height: 60%;
+    }
+}
+@keyframes real-eyelids {
+    0%, 90%, 100% {
+        height: 0;
+    }
+    95% {
+        height: 60%;
+    }
+}
+@-webkit-keyframes searching-eye {
+    0%, 85.714285716%, 100% {
+        top: 17.5%;
+        left: 17.5%;
+    }
+    14.285714286% {
+        top: 17.5%;
+        left: 8%;
+    }
+    28.571428572% {
+        top: 30%;
+        left: 8%;
+    }
+    42.857142858% {
+        top: 30%;
+        left: 30%;
+    }
+    57.142857144% {
+        top: 8%;
+        left: 30%;
+    }
+    71.42857143% {
+        top: 8%;
+        left: 8%;
+    }
+    85.7142857% {
+        top: 0;
+        left: 17.5%;
+    }
+}
+@-o-keyframes searching-eye {
+    0%, 85.714285716%, 100% {
+        top: 17.5%;
+        left: 17.5%;
+    }
+    14.285714286% {
+        top: 17.5%;
+        left: 8%;
+    }
+    28.571428572% {
+        top: 30%;
+        left: 8%;
+    }
+    42.857142858% {
+        top: 30%;
+        left: 30%;
+    }
+    57.142857144% {
+        top: 8%;
+        left: 30%;
+    }
+    71.42857143% {
+        top: 8%;
+        left: 8%;
+    }
+    85.7142857% {
+        top: 0;
+        left: 17.5%;
+    }
+}
+@-moz-keyframes searching-eye {
+    0%, 85.714285716%, 100% {
+        top: 17.5%;
+        left: 17.5%;
+    }
+    14.285714286% {
+        top: 17.5%;
+        left: 8%;
+    }
+    28.571428572% {
+        top: 30%;
+        left: 8%;
+    }
+    42.857142858% {
+        top: 30%;
+        left: 30%;
+    }
+    57.142857144% {
+        top: 8%;
+        left: 30%;
+    }
+    71.42857143% {
+        top: 8%;
+        left: 8%;
+    }
+    85.7142857% {
+        top: 0;
+        left: 17.5%;
+    }
+}
+@keyframes searching-eye {
+    0%, 85.714285716%, 100% {
+        top: 17.5%;
+        left: 17.5%;
+    }
+    14.285714286% {
+        top: 17.5%;
+        left: 8%;
+    }
+    28.571428572% {
+        top: 30%;
+        left: 8%;
+    }
+    42.857142858% {
+        top: 30%;
+        left: 30%;
+    }
+    57.142857144% {
+        top: 8%;
+        left: 30%;
+    }
+    71.42857143% {
+        top: 8%;
+        left: 8%;
+    }
+    85.7142857% {
+        top: 0;
+        left: 17.5%;
+    }
+}

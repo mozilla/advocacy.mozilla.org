@@ -1286,7 +1286,7 @@ input:-moz-placeholder {
 .page-open-web-fellows #page,
 .page-get-involved #page {
     background-color: #f2f0e9;
-    background-image: url("../assets/stopwatching-1280_fademore.png"), url("colors/sand/bg-sand.png");
+    background-image: url("../assets/stopwatching-1280_fademore.png"), url("../assets/bg-sand.png");
     background-repeat: no-repeat, repeat-x, repeat;
     background-size: 100%, 0, 0;
 }
