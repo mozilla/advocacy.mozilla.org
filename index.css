@@ -266,3 +266,41 @@
         left: 17.5%;
     }
 }
+/*** uncss> filename: http://localhost:8080/common/styles/font-awesome.min.css?ver=4.0 ***/
+
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('common/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('common/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),url('common/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),url('common/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),url('common/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-eye:before {
+  content: "\f06e";
+}
+
+.fa-users:before {
+  content: "\f0c0";
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+
