@@ -35,7 +35,6 @@
     <link rel="copyright" href="#colophon">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" type="image/ico" href="common/assets/favicon.ico">
-    <link rel='stylesheet' id='fontawesome-css' href='common/styles/font-awesome.min.css?ver=4.0' type='text/css' media='all' />
     <link rel='canonical' href='http://advocacy.mozilla.org/' />
     <link rel='shortlink' href='http://advocacy.mozilla.org/' />
     <link rel="stylesheet" type="text/css" media="screen,projection" href="common/styles/style.css">
@@ -43,7 +42,6 @@
     <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
     <link rel="stylesheet" type="text/css" media="all" href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css">
     <link rel="stylesheet" type="text/css" media="print" href="common/styles/print.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="common/styles/ie7.css"><![endif]-->
     <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -235,20 +233,8 @@
             <div class="footer-widget">
             <script type="text/javascript" src="https://www.google.com/jsapi"></script>
             <script type="text/javascript">google.load("feeds", "1");</script>
-            <script>
-              var monthNames = ["January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"
-              ];
-              var feed = new google.feeds.Feed('https://blog.mozilla.org/netpolicy/feed/');
-              feed.load(function (data) {
-                  // Parse data depending on the specified response format, default is JSON.
-                  $.each(data.feed.entries, function(index, item) {
-                    var d = new Date(item['publishedDate']);
-                    var date = monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getYear();
-                    $("ul#rss-feed").append('<li><a class="rsswidget" href="' + item['link'] + '">'+item['title']+'</a> <span class="rss-date">'+ date +'</span></li>');
-                  });
-              });
-            </script>
+            <script type="text/javascript" src="common/scripts/feed.js"></script>
+
                 <h3 class="widget-title">Blog Posts</h3>
                 <ul id="rss-feed">
                   <!-- we should see list of blog posts here -->

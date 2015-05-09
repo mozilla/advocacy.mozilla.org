@@ -9,7 +9,7 @@ Hover         #0073aa
 
 #page {
   background-color: #f2f0e9;
-  background-image: url("bg-gradient-sand.png"), url("bg-sand.png");
+  background-image: url("../assets/bg-gradient-sand.png"), url("../assets/bg-sand.png");
   background-repeat: repeat-x, repeat;
 }
 #site-description {
@@ -32,8 +32,4 @@ a:focus,
 a:active {
   color: #0073aa;
   text-decoration: underline;
-}
-
-.entry-comments a {
-  background-image: url("icn-comment.png");
 }

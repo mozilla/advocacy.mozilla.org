@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../common/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../common/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),url('../common/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),url('../common/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),url('../common/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+
+.omsc-toggle {
+  margin: 1em 0;
+  border: 1px solid #e1e1e1;
+  border-color: rgba(0,0,0,0.10);
+  padding: 0;
+  overflow: hidden;
+}
+
+.omsc-toggle-title {
+  position: relative;
+  cursor: pointer;
+  padding: 0.6em 1em 0.6em 2.4em;
+  border-bottom: 1px solid #e1e1e1;
+  border-color: rgba(0,0,0,0.10);
+  margin-bottom: -1px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.omsc-toggle-title:after {
+  content: '\f0fe';
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 0.6em;
+  left: 0.8em;
+  font-weight: normal;
+}
+
+.omsc-toggle-title:hover,
+.omsc-toggle.omsc-expanded .omsc-toggle-title {
+  background: rgba(0,0,0,0.03);
+}
+
+.omsc-toggle.omsc-expanded .omsc-toggle-title:after {
+  content: '\f146';
+}
+
+.omsc-toggle-inner {
+  display: none;
+  padding: 1em 1em 0.6em 2.4em;
+}
+
+/**
+ * Accordion
+ */
+
+.omsc-accordion {
+  margin: 1em 0;
+}
+
+.omsc-accordion > * {
+  display: none;
+}
+
+.omsc-accordion .omsc-toggle {
+  display: block;
+  margin: 0;
+  border-top-width: 0;
+}
+
+.omsc-accordion {
+  border-top: 1px solid #e1e1e1;
+  border-top-color: rgba(0,0,0,0.10);
+}
+
+#page {
+  background-color: #f2f0e9;
+  background-image: url("../common/assets/bg-gradient-sand.png"), url("../common/assets/bg-sand.png");
+  background-repeat: repeat-x, repeat;
+}
+
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+  color: #0073aa;
+}
+
+/* @Links */
+
+a:link,
+a:visited {
+  color: #0096dd;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #0073aa;
+  text-decoration: underline;
+}
