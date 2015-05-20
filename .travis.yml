@@ -10,3 +10,4 @@ deploy:
 branches:
   only:
     - gh-pages
+script: if [[ $TRAVIS_PULL_REQUEST == 'false' ]]; then your-command; fi
