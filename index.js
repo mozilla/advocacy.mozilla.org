@@ -12,8 +12,7 @@ function measureThings() {
 }
 
 function doMaths(x, y, radius) {
-    var
-        pythagoras = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)),
+    var pythagoras = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)),
         coordinates = {
             x: x,
             y: y
