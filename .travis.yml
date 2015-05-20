@@ -7,3 +7,6 @@ deploy:
   on:
     repo: mozilla/advocacy.mozilla.org
     branch: gh-pages
+branches:
+  only:
+    - gh-pages
