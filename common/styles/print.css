@@ -35,18 +35,18 @@ header, hgroup, nav, section, article, aside, footer { display: block; }
 
 
 /* Hidden elements */
-#header, 
-#content-sub, 
-#respond, 
-#breadcrumbs, 
-#nav-access, 
-.spread, 
-#sub-footer, 
-#footer-logo, 
-#footer-menu, 
-.comment-util, 
-.cmt-post { 
-  display: none; 
+#header,
+#content-sub,
+#respond,
+#breadcrumbs,
+#nav-access,
+.spread,
+#sub-footer,
+#footer-logo,
+#footer-menu,
+.comment-util,
+.cmt-post {
+  display: none;
 }
 
 #page { width: 90%; margin: 0 auto; background: #fff none !important; }
@@ -65,7 +65,6 @@ h6 { font-size: 1em; }
 #tabzilla { position: absolute; top: 0; right: 0; }
 #site-title { font-size: 2em; letter-spacing: -1px; margin: 0 0 .15em -5px; }
 #site-title a { text-decoration: none; color: #333; }
-#site-description { font-size: 1em; color: #666; margin: .15em 0 .25em; }
 
 .post { position: relative; border-bottom: 1px solid #666; margin-bottom: 2em; padding-bottom: 2em; }
 .post .entry-title { font-size: 140%; padding-right: 120px; }
@@ -90,11 +89,6 @@ a .alignleft { margin: -2px 20px .5em -2px; }
 .alignright { float: right; margin: 0 0 15px 1em; }
 a .alignright { margin: -2px -2px 15px 1em; }
 .aligncenter { display: block; margin: 0 auto 1.4em; }
-
-.wp-caption.aligncenter { width: auto !important; height: auto !important; padding: 0; border: 0; }
-.wp-caption img { display: block; margin: 0; max-width: 100%; }
-.wp-caption.aligncenter img { margin: 0 auto; }
-.wp-caption-text { margin: .3em 5px; font-size: .923em; font-style: italic; text-align: center; }
 
 #comment-list { font-size: .857em; list-style: none; margin: 0 0 1.5em; padding: 0; }
 #comment-list li.hentry { border: 1px solid #666; padding: 24px; margin: 0 0 1em; }
