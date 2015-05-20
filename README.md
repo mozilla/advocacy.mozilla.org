@@ -1,6 +1,6 @@
 # advocacy.mozilla.org
 
-To start local development install and run the following commands:
+To start local development, install and run the following commands:
 
 ``` bash
 $ npm install

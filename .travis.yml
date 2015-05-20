@@ -1,0 +1,9 @@
+deploy:
+  provider: s3
+  access_key_id: AKIAIS7T5R6AEAW2JFSA
+  secret_access_key:
+    secure: Urd/WGxPZ9k/BTQK863z+DPYAT4J3IglUqYtH2VupW5WWzw0sHjNBR9vvbsGwBFB/DlJFiG/ucQXDFXMwGbOIAzBq8PH8fPjxPk/s4gkgFdci6MTWhcKsxaGK3xrL0kfFdDDVdmUHGZYTBmXvV9RsQm5yE5nooFm2jy0Xe1ZLZ0=
+  bucket: advocacy-mozilla-org-s3bucket-1q006bfcakzf1
+  on:
+    repo: mozilla/advocacy.mozilla.org
+    branch: gh-pages
