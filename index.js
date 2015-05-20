@@ -1,5 +1,4 @@
-var
-    rectangle,
+var rectangle,
     radius = 18,
     iris = document.querySelector('.iris'),
     center;
