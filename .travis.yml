@@ -1,6 +1,6 @@
-language: python
-python:
-    - "2.7"
+language: node_js
+node_js:
+  - "0.12"
 deploy:
   provider: s3
   access_key_id: AKIAIS7T5R6AEAW2JFSA
