@@ -6,22 +6,23 @@
 #content,
 #content-main,
 #content-sub,
-.entry-header,
+.entry-header, 
 .entry-title,
-.entry-posted,
+.entry-posted, 
 #nav-primary,
-.nav-paging,
-#comment-list.av .comment {
+.nav-paging, 
+#comment-list.av .comment,
+.featured-posts {
   zoom: 1;
 }
 
 /* A few position adjustments */
-.single-post .entry-title,
-.page .entry-title {
-  margin-top: 0;
+.single-post .entry-title, 
+.page .entry-title { 
+  margin-top: 0; 
 }
 
 /* Just for IE6 */
-* html legend {
-  margin-left: -8px;
+* html legend { 
+  margin-left: -8px; 
 }
