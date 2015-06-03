@@ -5,15 +5,14 @@
 .take-action-button,
 .take-action-button:link,
 .take-action-button:visited {
-    background: #DC302C;
+    background: #B15144;
     color: white;
-    letter-spacing: 1px;
-    font-weight: 300;
     border-radius: 5px;
     padding: 10px 60px;
     margin: 10px 0;
     display: inline-block;
     text-transform: uppercase;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.25s linear 0s;
 }
@@ -294,12 +293,6 @@
 
 .fa-eye:before {
   content: "\f06e";
-}
-
-.fa-angle-double-right:before {
-    font-size: 55px;
-  content: "\f101";
-  color: #AAE4F0;
 }
 
 .fa-users:before {
