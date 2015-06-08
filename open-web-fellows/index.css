@@ -100,8 +100,11 @@
   background: #FFF;
   align-items: center;
   display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-shrink: 0;
   justify-content: center;
+  -webkit-justify-content: center; /* Safari 6.1+ */
 }
 
 .fellow-white-content {
@@ -145,6 +148,10 @@
   display: flex;
   flex-shrink: 0;
   justify-content: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center; /* Safari 6.1+ */
   padding-bottom: 50px;
 }
 

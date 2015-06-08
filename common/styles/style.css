@@ -353,10 +353,13 @@ footer a.red:visited {
 .home-fellow {
   align-items: center;
   background: #54CBE1;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-shrink: 0;
   height: 325px;
   justify-content: center;
+  -webkit-justify-content: center; /* Safari 6.1+ */
 }
 
 .fellow-circle {
