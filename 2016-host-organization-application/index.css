@@ -1,0 +1,349 @@
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../common/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../common/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),url('../common/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),url('../common/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),url('../common/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+.hero:after {
+  border-top: none;
+}
+
+.fellows-body {
+  padding-bottom: 0;
+}
+
+#page {
+  padding: 0;
+  overflow: hidden;
+}
+
+#navtoggle {
+  color: #FFF;
+}
+
+.home-fellow {
+  height: auto;
+}
+
+.home-fellow-content {
+  text-align: left;
+  position: relative;
+  max-width: 100%;
+}
+
+.home-fellow-intro {
+  padding-bottom: 35px;
+  max-width: none;
+}
+
+.home-fellow-sub {
+  color: #FFF;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.home-fellow-sub a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.home-fellow-intro p,
+.home-fellow-sub p {
+  padding: 0 15px;
+}
+
+.home-fellow {
+  position: relative;
+}
+.home-fellow-content:after {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid #54CBE1;
+  bottom: -50px;
+  content: "";
+  height: 0px;
+  left: 0px;
+  margin: 0px auto;
+  position: absolute;
+  right: 0px;
+  width: 0px;
+}
+
+.home-fellow-left-nodes {
+  display: none;
+}
+.home-fellow-right-nodes {
+  display: none;
+}
+
+
+.fellow-white-section {
+  background: #FFF;
+  align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  -webkit-justify-content: center; /* Safari 6.1+ */
+}
+
+.fellow-white-content {
+  position: relative;
+  padding: 60px 0;
+}
+
+.fellow-white-content:after {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid #FFF;
+  bottom: -50px;
+  content: "";
+  height: 0px;
+  left: 0px;
+  margin: 0px auto;
+  position: absolute;
+  right: 0px;
+  width: 0px;
+}
+
+.fellow-white-copy {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 200;
+  text-align: center;
+}
+
+.fellow-white-copy p {
+  padding: 0 15px;
+  text-align: left;
+}
+
+
+/* fellows bio */
+
+.fellows-bio-section {
+  background: #E8F6F8;
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center; /* Safari 6.1+ */
+  padding-bottom: 50px;
+}
+
+.fellows-bio-content {
+  padding: 80px 15px 45px;
+}
+
+.fellow-bio-left {
+  display: block;
+  text-align: left;
+}
+
+.fellow-bio-left img {
+  text-align: left;
+}
+
+.fellow-img {
+  text-align: left;
+  width: 135px;
+}
+
+.fellow-name {
+  font-size: 32px;
+  font-weight: 300;
+  color: #3470AD;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.fellow-title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 200;
+  text-align: left;
+}
+
+.fellow-quote {
+  font-size: 22px;
+  line-height: 31px;
+  font-weight: 300;
+  font-style: italic;
+  color: #3470AD;
+  padding-top: 25px;
+}
+
+.fellow-bio a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.fellow-social {
+  position: relative;
+  padding: 10px 30px;
+  background: url('../common/assets/twitter.png') no-repeat scroll left center / 25px auto;
+  font-size: 18px;
+  font-weight: 300;
+  color: #3470AD;
+  display: block;
+}
+.fellow-bio {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 26px;
+  color: #333;
+  padding-top: 25px;
+}
+.home-fellow-content .home-fellow-intro {
+  max-width: none;
+}
+.home-fellow-content .home-fellow-intro p, .home-fellow-content div p {
+  padding: 0 15px;
+}
+
+.logo-farm img {
+  width: 125px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 1026px) {
+  .home-fellow-right-nodes {
+    display: block;
+    position: absolute;
+    width: 750px;
+    right: -750px;
+    top: 295px;
+  }
+  .home-fellow-left-nodes {
+    left: -715px;
+    width: 750px;
+    position: absolute;
+    display: block;
+    top: 75px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo-farm img {
+    width: 170px;
+  }
+  .home-fellow-content .home-fellow-intro p, .home-fellow-content div p {
+    padding: 0;
+  }
+  .home-fellow-content:after {
+    margin: 0 0 0 90px;
+    left: auto;
+    right: auto;
+  }
+  .home-fellow-intro p,
+  .home-fellow-sub p {
+    padding: 0;
+  }
+  .home-fellow-content .home-fellow-intro, .home-fellow-sub {
+    margin: auto;
+    max-width: none;
+    padding: 0 50px 25px 85px;
+  }
+  .home-fellow-sub {
+    line-height: 26px;
+  }
+
+  .fellow-white-content {
+    position: relative;
+    max-width: 768px;
+    padding: 0;
+  }
+
+  .fellow-white-content:after {
+    margin: 0 0 0 90px;
+    left: auto;
+    right: auto;
+  }
+  .fellow-white-copy {
+    padding: 85px 50px 65px 85px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+  }
+  .fellow-white-copy p {
+    padding: 0;
+  }
+  .fellows-bio-content {
+    padding: 85px 0 30px 0;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+  }
+  .fellow-bio-left {
+    text-align: left;
+    padding-right: 40px;
+    min-width: 135px;
+  }
+  .fellow-quote {
+    width: 90%;
+  }
+  .fellow-content-top {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: 70px;
+  }
+  .arrow-down {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #C5E6E7;
+    bottom: -50px;
+    content: "";
+    height: 0px;
+    margin: 0px auto;
+    width: 0px;
+  }
+  .fellow-bio-left img {
+    padding-bottom: 15px;
+  }
+  .fellow-bio {
+    padding-left: 85px;
+  }
+  .fellow-wrapper {
+    position: relative;
+    max-width: 768px;
+    padding: 0px;
+  }
+  #widget-footer {
+    display: block;
+  }
+  #widget-footer .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 135px;
+    padding-top: 20px;
+  }
+  #widget-footer {
+    padding: 0;
+  }
+}
