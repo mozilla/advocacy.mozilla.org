@@ -39,6 +39,62 @@
   color: #FFF;
 }
 
+.fellow-content-bottom {
+  text-align: left;
+  margin: auto;
+  max-width: none;
+  padding: 0px 50px 25px 85px;
+}
+
+.blue-background {
+  background: #E8F6F8;
+}
+
+.fellow-content-bottom p {
+  font-size: 18px;
+  color: #333;
+  font-weight: 200;
+}
+
+.fellow-content-bottom h4 {
+  color: #2F6EAC;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.center-btn {
+  text-align: center;
+}
+
+p.button-sub-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+.take-action-button,
+.take-action-button:link,
+.take-action-button:visited {
+    background: #2886CF;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+    border-radius: 5px;
+    padding: 10px 60px;
+    margin: 10px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s linear 0s;
+}
+.take-action-button:hover,
+.take-action-button:active,
+.take-action-button:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #1D4F73;
+}
+
 .home-fellow {
   height: auto;
 }
