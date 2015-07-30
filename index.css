@@ -310,4 +310,33 @@
   content: "\f0c9";
 }
 
+.home-fellow-left-nodes {
+  display: none;
+}
+.home-fellow-right-nodes {
+  display: none;
+}
+
+
+@media only screen and (min-width: 1026px) {
+  .home-fellow-right-nodes {
+    display: block;
+    position: absolute;
+    width: 750px;
+    right: -750px;
+    top: 146px;
+  }
+  .home-fellow-left-nodes {
+    left: -715px;
+    width: 750px;
+    position: absolute;
+    display: block;
+    top: -73px;
+  }
+}
+
+.home-fellow-content .home-fellow-intro p {
+    font-size: 32px;
+}
+
 
