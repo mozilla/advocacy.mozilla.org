@@ -292,14 +292,14 @@ p.button-sub-text {
     position: absolute;
     width: 750px;
     right: -750px;
-    top: 295px;
+    top: 269px;
   }
   .home-fellow-left-nodes {
     left: -715px;
     width: 750px;
     position: absolute;
     display: block;
-    top: 75px;
+    top: 50px;
   }
 }
 
