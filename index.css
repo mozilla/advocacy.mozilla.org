@@ -324,14 +324,14 @@
     position: absolute;
     width: 750px;
     right: -750px;
-    top: 146px;
+    top: 198px;
   }
   .home-fellow-left-nodes {
     left: -715px;
     width: 750px;
     position: absolute;
     display: block;
-    top: -73px;
+    top: -21px;
   }
 }
 
