@@ -1,0 +1,44 @@
+.footer {
+  width: 100%;
+  color: #9F9F9F;
+  text-align: center;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  .horizontal-rule {
+    background-color: #6E6E6E;
+    border-top: 1px solid #454545;
+    height: 1px;
+    width: 64px;
+    margin: 12px auto 0;
+  }
+  .icon-container {
+    margin: 18px 0;
+    .icon {
+      cursor: pointer;
+      display: inline-block;
+      .icon-circle {
+
+      }
+      a {
+        color: #9F9F9F;
+        text-decoration: none;
+      }
+      &:hover {
+        a {
+          color: #bababa;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 480px) {
+    .icon-container {
+      display: inline;
+      .icon {
+        .icon-circle {
+          margin: 0 4px 0 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
