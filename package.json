@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "advocacy.mozilla.org",
   "scripts": {
+    "dev": "webpack-dev-server --progress --profile --colors --hot",
     "start": "npm-run-all --parallel server watch:js watch:css",
     "build:production": "npm-run-all --parallel minify:js minify:css",
     "build:dev": "npm-run-all --parallel build:js build:css",
@@ -12,8 +13,7 @@
     "minify:css": "npm run watch:css -- --no-watch",
     "watch:js": "npm run build:js -- --watch",
     "watch:css": "autoless --autoprefix '> 1%, last 2 versions' less public",
-    "postinstall": "mkdirp last && mkdirp public/pages && node build.js",
-    "server": "node app.js"
+    "postinstall": "mkdirp last && mkdirp public/pages && node build.js"
   },
   "repository": {
     "type": "git",
@@ -29,27 +29,26 @@
   "homepage": "https://github.com/mozilla/advocacy.mozilla.org",
   "dependencies": {
     "autoless": "0.1.7",
-    "body-parser": "1.12.4",
-    "compression": "1.4.4",
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "cross-spawn": "0.2.9",
     "css-loader": "0.14.2",
-    "express": "3.4.5",
-    "express-rate-limit": "1.0.2",
+    "eslint-plugin-react": "3.14.0",
     "extract-text-webpack-plugin": "0.8.0",
     "file-loader": "0.8.4",
-    "habitat": "0.4.1",
+    "habitat": "3.1.2",
     "json-loader": "0.5.1",
     "jsx-loader": "0.13.2",
-    "mapbox.js": "2.1.5",
-    "node-libs-browser": "0.5.2",
     "npm-run-all": "1.2.4",
-    "react": "0.13.2",
-    "react-fa": "3.2.0",
-    "react-router": "0.13.3",
-    "request": "2.55.0",
-    "style-loader": "0.12.3",
+    "react": "0.14.6",
+    "react-dom": "0.14.6",
+    "react-hot-loader": "1.2.7",
+    "react-router": "2.0.0-rc5",
+    "style-loader": "0.13.0",
     "url-loader": "0.5.6",
-    "webpack": "1.9.9",
-    "whatwg-fetch": "0.9.0"
+    "webpack": "1.12.12",
+    "webpack-dev-server": "1.14.1"
   }
 }
