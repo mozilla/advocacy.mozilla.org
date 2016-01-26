@@ -8,13 +8,13 @@ module.exports = React.createClass({
       <div className="fellows-header">
         <div className="nav-items">
           <div className="nav-link-container">
-            <Link to="open-web-fellows-overview">Overview</Link>
+            <Link to="/open-web-fellows/">Overview</Link>
           </div>
           <div className="nav-link-container">
-            <Link to="open-web-fellows-info">Info</Link>
+            <Link to="/open-web-fellows/info">Info</Link>
           </div>
           <div className="nav-link-container">
-            <Link to="open-web-fellows-fellows">Fellows</Link>
+            <Link to="/open-web-fellows/fellows">Fellows</Link>
           </div>
         </div>
       </div>

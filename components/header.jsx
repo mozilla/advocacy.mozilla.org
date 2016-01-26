@@ -10,17 +10,17 @@ module.exports = React.createClass({
       <div className="header">
         <div className="header-content">
           <div className="nav-home">
-            <Link to="home">
+            <Link to="/">
               <ImageTag src1x={logoImage}
                 alt="advocacy logo"/>
             </Link>
           </div>
           <div className="nav-items">
             <div className="nav-link-container">
-              <Link to="home">Home</Link>
+              <Link to="/">Home</Link>
             </div>
             <div className="nav-link-container">
-              <Link to="open-web-fellows-overview">Open Web Fellows</Link>
+              <Link to="/open-web-fellows/">Open Web Fellows</Link>
             </div>
             <div className="nav-link-container">
               <a href="">Blog</a>
