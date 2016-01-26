@@ -2,7 +2,12 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: "./client.jsx",
+  entry: [
+    'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
+    'webpack/hot/only-dev-server',
+    './client.jsx' // Your appʼs entry point
+  ],
+  devtool: 'source-map',
 
   output: {
     filename: '[name].js',
@@ -10,10 +15,16 @@ module.exports = {
     path: path.join('public', 'build'),
     publicPath: '/build/'
   },
-
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [
-      { test: /\.jsx$/, loaders: ['jsx-loader'] },
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loaders: ['react-hot', 'babel-loader']
+      },
       { test: /\.json$/, loaders: ['json-loader'] },
       {
         test: /\.css$/,
@@ -25,8 +36,14 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    contentBase: "./public",
+    noInfo: true, //  --no-info option
+    hot: true,
+    inline: true,
+    historyApiFallback: true
+  },
   plugins: [
     new ExtractTextPlugin('bundle.css')
   ]
 };
-
