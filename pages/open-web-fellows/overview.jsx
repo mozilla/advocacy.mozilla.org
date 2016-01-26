@@ -2,6 +2,7 @@ var React = require('react');
 var Footer = require('../../components/footer.jsx');
 var Header = require('../../components/header.jsx');
 var HeroUnit = require('../../components/hero-unit.jsx');
+var Apply = require('../../components/apply.jsx');
 var FellowsHeader = require('../../components/fellows-header.jsx');
 
 var IconContainer = React.createClass({
@@ -45,7 +46,7 @@ module.exports = React.createClass({
     return (
       <div>
         <Header/>
-        <HeroUnit></HeroUnit>
+        <HeroUnit image="/assets/overview.jpg"></HeroUnit>
         <FellowsHeader/>
         <div className="content-container">
           <p>A collaboration between <a href="#">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
@@ -120,7 +121,7 @@ module.exports = React.createClass({
             linkLoation=""
           />
         </div>
-        <HeroUnit></HeroUnit>
+        <Apply/>
         <Footer/>
       </div>
     );

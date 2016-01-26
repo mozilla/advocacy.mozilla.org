@@ -7,11 +7,11 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div>
-        <Header></Header>
-        <HeroUnit></HeroUnit>
-        <FellowsHeader></FellowsHeader>
+        <Header/>
+        <HeroUnit image="/assets/fellows.jpg"></HeroUnit>
+        <FellowsHeader/>
         fellows
-        <Footer></Footer>
+        <Footer/>
       </div>
     );
   }
