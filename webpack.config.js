@@ -5,6 +5,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
+    './less/index.less',
     './client.jsx' // Your appʼs entry point
   ],
   devtool: 'source-map',
@@ -25,14 +26,17 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loaders: ['react-hot', 'babel-loader']
       },
-      { test: /\.json$/, loaders: ['json-loader'] },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-      },
+        test: /\.json$/,
+        loaders: ['json-loader'] },
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
         loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract('css?sourceMap!less?sourceMap'),
+        exclude: ['node_modules']
       }
     ]
   },
@@ -44,6 +48,6 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [
-    new ExtractTextPlugin('bundle.css')
+    new ExtractTextPlugin('index.css')
   ]
 };
