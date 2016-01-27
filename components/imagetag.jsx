@@ -1,9 +1,8 @@
 var React = require('react');
 
 var ImageTag = React.createClass({
-  calculateDensity: function () {
-  var ratio;
-
+  calculateDensity: function() {
+    var ratio;
     if (typeof window !== 'undefined' && window.devicePixelRatio > 1.5) {
       ratio = 2;
     } else {
@@ -13,23 +12,23 @@ var ImageTag = React.createClass({
     return ratio;
   },
 
-  getInitialState: function () {
-   return {
-     pixelDensity: this.calculateDensity()
+  getInitialState: function() {
+    return {
+      pixelDensity: this.calculateDensity()
     };
   },
 
-  handleMediaChange: function () {
+  handleMediaChange: function() {
     this.setState({
       pixelDensity: this.calculateDensity()
     });
   },
 
-  componentDidMount: function () {
+  componentDidMount: function() {
     window.addEventListener('resize', this.handleMediaChange);
   },
 
-  componentWillUnmount: function () {
+  componentWillUnmount: function() {
     window.removeEventListener('resize', this.handleMediaChange);
   },
 
@@ -42,7 +41,7 @@ var ImageTag = React.createClass({
     className: React.PropTypes.string
   },
 
-  render: function () {
+  render: function() {
     return (
         <img src={this.props['src' + this.state.pixelDensity + 'x'] || this.props.src1x} alt={this.props.alt}
             width={this.props.width} height={this.props.height} className={this.props.className}
