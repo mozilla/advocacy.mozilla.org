@@ -5,6 +5,7 @@ html {
 
 body {
   margin: 0;
+  color: #383838;
 }
 
 a {
@@ -15,6 +16,11 @@ a {
   &:active {
     color: inherit;
   }
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
 }
 
 .page {
@@ -37,9 +43,35 @@ h3 {
   font-size: 32px;
 }
 
-p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 25px;
-  color: #383838;
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.row {
+  overflow: auto;
+  .half {
+    float: left;
+    box-sizing: padding-box;
+    width: 50%;
+    &:first-child {
+      padding-right: 15px;
+    }
+    &:last-child {
+      padding-left: 15px;
+    }
+  }
+}
+
+.intro {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.center-align {
+  text-align: center;
 }
