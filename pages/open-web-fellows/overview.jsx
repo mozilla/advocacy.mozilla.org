@@ -6,10 +6,10 @@ var Apply = require('../../components/apply.jsx');
 var FellowsHeader = require('../../components/fellows-header.jsx');
 var ContentContainer = require('../../components/content-container.jsx');
 
-var IconContainer = React.createClass({
+var IconsContainer = React.createClass({
   render: function() {
     return (
-      <div className="icon-container">
+      <div className="icons-container">
         {this.props.children}
       </div>
     );
@@ -45,33 +45,35 @@ var Organization = React.createClass({
 module.exports = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="overview-page">
         <Header/>
         <HeroUnit image="/assets/overview.jpg"></HeroUnit>
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
-            <p>A collaboration between <a href="#">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
-            <IconContainer>
+            <p className="intro">A collaboration between <a href="#">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
+            <IconsContainer>
               <Icon imgSrc="">
                 Increase public awareness and understanding of Internet policy issues.
               </Icon>
               <Icon imgSrc="">
-                Support career paths in the Internet policy and advocacy sector
+                Support career paths in the Internet policy and advocacy sector.
               </Icon>
               <Icon imgSrc="">
-                Celebrate and support the vibrant network of Internet advocacy organizations
+                Celebrate and support the vibrant network of Internet advocacy organizations.
               </Icon>
-            </IconContainer>
+            </IconsContainer>
           </ContentContainer>
-          <ContentContainer className="grey">
+          <ContentContainer className="grey slant flat-top">
             <h2>Who can become a Fellow?</h2>
-            <div className="half">
-              <p>It could be you! Broadly speaking, we are looking for makers – those who see a problem in the world and can solve it through technology or media. The right candidate may bring specialities in design, development, storytelling, research and policy analysis, and should be comfortable performing as a technologist, a tinkerer, and a curious contributor to the fellowship program. <b>You do not need to have previous experience with Internet advocacy, policy or activism.</b> A lot of campaign design, community organizing, education, and</p>
-            </div>
-            <div className="half">
-              <p>coalition building happen through teamwork and skills like data visualization and participatory learning. You can be at any stage in your career, provided you are open to learning.</p>
-              <p>We are an international program with host organizations around the world; fellows will be placed in Canada, Chile, Kenya, the European Union, and the United States. We assist fellows with visa applications for working and traveling during the fellowship.</p>
+            <div className="row">
+              <div className="half">
+                <p>It could be you! Broadly speaking, we are looking for makers – those who see a problem in the world and can solve it through technology or media. The right candidate may bring specialities in design, development, storytelling, research and policy analysis, and should be comfortable performing as a technologist, a tinkerer, and a curious contributor to the fellowship program. <b>You do not need to have previous experience with Internet advocacy, policy or activism.</b> A lot of campaign design, community organizing, education, and</p>
+              </div>
+              <div className="half">
+                <p>coalition building happen through teamwork and skills like data visualization and participatory learning. You can be at any stage in your career, provided you are open to learning.</p>
+                <p>We are an international program with host organizations around the world; fellows will be placed in Canada, Chile, Kenya, the European Union, and the United States. We assist fellows with visa applications for working and traveling during the fellowship.</p>
+              </div>
             </div>
             <PlanetContent/>
           </ContentContainer>

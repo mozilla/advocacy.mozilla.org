@@ -98,7 +98,7 @@ module.exports = React.createClass({
               Paola is a self-taught systems programmer who, since 1998, has worked and played with all things “open” in governments, NGOs, and the private sector. She recently worked with the government of Mexico City on several civic innovation projects to build real, effective tools that defend democracy. She has also worked at Xamarin Inc. Her passion for open government and data, civic tech, and civil rights has fomented a curiosity to explore how and where technology, openness, and code can strengthen human rights. Paola will be working with the ACLU of Massachusetts on various projects, including collaboration with graduate students at the Massachusetts Institute of Technology on mobile applications that expose surveillance techniques employed by others.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer className="grey slant bottom">
+          <ContentContainer className="grey slant flat-bottom">
             <FellowBlock
               name="Paola Villarreal"
               image="/assets/fellows/1-Paola.png"
