@@ -1,7 +1,7 @@
 var React = require('react');
 
 module.exports = React.createClass({
-  calculateDensity: function () {
+  calculateDensity: function() {
     var
         ratio;
 
@@ -14,7 +14,7 @@ module.exports = React.createClass({
     return ratio;
   },
 
-  getInitialState: function () {
+  getInitialState: function() {
     var image = this.props.image;
     if (this.calculateDensity() === 2) {
       image = this.props.image2x || this.props.image;
