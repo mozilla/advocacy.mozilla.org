@@ -24947,14 +24947,14 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'organization' },
-	      React.createElement('img', { width: '155', height: '80', src: this.props.imgSrc }),
 	      React.createElement(
-	        'div',
-	        null,
+	        'a',
+	        { href: this.props.linkLocation },
+	        React.createElement('img', { className: 'organization-image', width: '155', height: '80', src: this.props.imgSrc }),
 	        React.createElement(
-	          'a',
-	          { href: this.props.linkLocation },
-	          React.createElement('span', { className: 'location-icon' }),
+	          'div',
+	          { className: 'organization-label' },
+	          React.createElement('i', { className: 'fa fa-map-marker' }),
 	          this.props.linkTitle
 	        )
 	      )
@@ -25094,22 +25094,22 @@
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-cipit.svg',
 	              linkTitle: 'Nairobi, Kenya',
-	              linkLocation: ''
+	              linkLocation: 'https://www.cipit.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-citizenlab.svg',
 	              linkTitle: 'Toronto, Canada',
-	              linkLocation: ''
+	              linkLocation: 'https://citizenlab.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-colorofchange.svg',
 	              linkTitle: 'New York, NY',
-	              linkLocation: ''
+	              linkLocation: 'http://colorofchange.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-datasociety.svg',
 	              linkTitle: 'New York, NY',
-	              linkLocation: ''
+	              linkLocation: 'http://www.datasociety.net/'
 	            })
 	          ),
 	          React.createElement(
@@ -25118,22 +25118,22 @@
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-derechos.svg',
 	              linkTitle: 'Santiago, Chile',
-	              linkLocation: ''
+	              linkLocation: 'https://www.derechosdigitales.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-edri.svg',
 	              linkTitle: 'Brussels, Belgium',
-	              linkLocation: ''
+	              linkLocation: 'https://edri.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-freedomofthepress.svg',
 	              linkTitle: 'San Francisco, CA',
-	              linkLocation: ''
+	              linkLocation: 'https://freedom.press/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-privacyinternational.svg',
 	              linkTitle: 'London, UK',
-	              linkLocation: ''
+	              linkLocation: 'https://www.privacyinternational.org/'
 	            })
 	          )
 	        )
@@ -25582,7 +25582,7 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'iconlist-container' },
 	      this.props.children
 	    );
 	  }
@@ -25594,7 +25594,12 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'iconlist-item' },
+	      React.createElement(
+	        'span',
+	        { className: 'icon-list-item-label' },
+	        this.props.label
+	      ),
 	      this.props.children
 	    );
 	  }
@@ -25714,9 +25719,21 @@
 	          React.createElement(
 	            IconListContainer,
 	            null,
-	            React.createElement(IconListItem, null),
-	            React.createElement(IconListItem, null),
-	            React.createElement(IconListItem, null)
+	            React.createElement(
+	              IconListItem,
+	              { label: 'Work on projects defined by your host organization.' },
+	              'These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.'
+	            ),
+	            React.createElement(
+	              IconListItem,
+	              { label: 'Invest in your future as an open Web advocate.' },
+	              'By sharing your work in the open, participating in professional development activities, attending and presenting talks, or writing and publishing, you will spend time developing your own path while contributing to a global movement.'
+	            ),
+	            React.createElement(
+	              IconListItem,
+	              { label: 'Contribute to a global advocacy community.' },
+	              'In collaboration with the 2016 cohort of host organizations and Mozilla, you will work on “network projects” that benefit the existing network of organizations that defend the public Internet. These projects could take the form of shared policy positions, coalition campaigns, or open source tools that solve shared needs.'
+	            )
 	          )
 	        ),
 	        React.createElement(
@@ -26002,9 +26019,48 @@
 	          React.createElement(
 	            IconListContainer,
 	            null,
-	            React.createElement(IconListItem, null),
-	            React.createElement(IconListItem, null),
-	            React.createElement(IconListItem, null)
+	            React.createElement(
+	              IconListItem,
+	              null,
+	              React.createElement(
+	                'h4',
+	                null,
+	                'Research & Equipment'
+	              ),
+	              React.createElement(
+	                'p',
+	                null,
+	                'Up to $3,500 over the course of the fellowship will be given towards the purchase of laptop computers, digital cameras, recorders, fees for continuing studies or other courses related to the fellowship, software, hosting, research fees, and travel expenses for conferences related to the fellow’s research or study. '
+	              )
+	            ),
+	            React.createElement(
+	              IconListItem,
+	              null,
+	              React.createElement(
+	                'h4',
+	                null,
+	                'Travel Allowance'
+	              ),
+	              React.createElement(
+	                'p',
+	                null,
+	                'All approved fellowship trips – domestic and international – are covered. Additional travel required by the host organizations will be covered by the host organization.'
+	              )
+	            ),
+	            React.createElement(
+	              IconListItem,
+	              null,
+	              React.createElement(
+	                'h4',
+	                null,
+	                'Visa Assistance'
+	              ),
+	              React.createElement(
+	                'p',
+	                null,
+	                'Mozilla will work directly with fellows and fellowship partners to try to secure necessary visas if required.  Eligibility for visas will depend on requirements of the country where the fellow will be hosted, and the fellow’s nationality.'
+	              )
+	            )
 	          )
 	        )
 	      ),

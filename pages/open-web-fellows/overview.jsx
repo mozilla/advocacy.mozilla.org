@@ -38,8 +38,10 @@ var Organization = React.createClass({
   render: function() {
     return (
       <div className="organization">
-        <img width="155" height="80" src={this.props.imgSrc}/>
-        <div><a href={this.props.linkLocation}><span className="location-icon"></span>{this.props.linkTitle}</a></div>
+        <a href={this.props.linkLocation}>
+          <img className="organization-image" width="155" height="80" src={this.props.imgSrc}/>
+          <div className="organization-label"><i className="fa fa-map-marker"></i>{this.props.linkTitle}</div>
+        </a>
       </div>
     );
   }
@@ -92,44 +94,44 @@ module.exports = React.createClass({
               <Organization
                 imgSrc="/assets/logo-cipit.svg"
                 linkTitle="Nairobi, Kenya"
-                linkLocation=""
+                linkLocation="https://www.cipit.org/"
               />
               <Organization
                 imgSrc="/assets/logo-citizenlab.svg"
                 linkTitle="Toronto, Canada"
-                linkLocation=""
+                linkLocation="https://citizenlab.org/"
               />
               <Organization
                 imgSrc="/assets/logo-colorofchange.svg"
                 linkTitle="New York, NY"
-                linkLocation=""
+                linkLocation="http://colorofchange.org/"
               />
               <Organization
                 imgSrc="/assets/logo-datasociety.svg"
                 linkTitle="New York, NY"
-                linkLocation=""
+                linkLocation="http://www.datasociety.net/"
               />
             </div>
             <div className="organization-row">
               <Organization
                 imgSrc="/assets/logo-derechos.svg"
                 linkTitle="Santiago, Chile"
-                linkLocation=""
+                linkLocation="https://www.derechosdigitales.org/"
               />
               <Organization
                 imgSrc="/assets/logo-edri.svg"
                 linkTitle="Brussels, Belgium"
-                linkLocation=""
+                linkLocation="https://edri.org/"
               />
               <Organization
                 imgSrc="/assets/logo-freedomofthepress.svg"
                 linkTitle="San Francisco, CA"
-                linkLocation=""
+                linkLocation="https://freedom.press/"
               />
               <Organization
                 imgSrc="/assets/logo-privacyinternational.svg"
                 linkTitle="London, UK"
-                linkLocation=""
+                linkLocation="https://www.privacyinternational.org/"
               />
             </div>
           </ContentContainer>
