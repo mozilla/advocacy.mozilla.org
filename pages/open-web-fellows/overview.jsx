@@ -37,7 +37,10 @@ var PlanetContent = React.createClass({
 var Organization = React.createClass({
   render: function() {
     return (
-      <div>Organization</div>
+      <div className="organization">
+        <img width="155" height="80" src={this.props.imgSrc}/>
+        <div><a href={this.props.linkLocation}><span className="location-icon"></span>{this.props.linkTitle}</a></div>
+      </div>
     );
   }
 });
@@ -79,49 +82,49 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <h2>Host Organizations</h2>
-            <p>Each year, fellows spend 10 months embedded at leading policy & advocacy organizations dedicated to safeguarding the open Internet as a global public resource. Fellows are based in the town of their host organization unless special circumstances dictate otherwise. Read the <a href="#">blog post</a> to find out what host organizations are looking for. The 2016 host organizations are:</p>
+            <p className="center-align">Each year, fellows spend 10 months embedded at leading policy & advocacy organizations dedicated to safeguarding the open Internet as a global public resource. Fellows are based in the town of their host organization unless special circumstances dictate otherwise. Read the <a href="#">blog post</a> to find out what host organizations are looking for. The 2016 host organizations are:</p>
             <div className="organization-row">
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-cipit.svg"
                 linkTitle="Nairobi, Kenya"
-                linkLoation=""
+                linkLocation=""
               />
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-citizenlab.svg"
                 linkTitle="Toronto, Canada"
-                linkLoation=""
+                linkLocation=""
               />
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-colorofchange.svg"
                 linkTitle="New York, NY"
-                linkLoation=""
+                linkLocation=""
               />
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-datasociety.svg"
                 linkTitle="New York, NY"
-                linkLoation=""
+                linkLocation=""
               />
             </div>
             <div className="organization-row">
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-derechos.svg"
                 linkTitle="Santiago, Chile"
-                linkLoation=""
+                linkLocation=""
               />
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-edri.svg"
                 linkTitle="Brussels, Belgium"
-                linkLoation=""
+                linkLocation=""
               />
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-freedomofthepress.svg"
                 linkTitle="San Francisco, CA"
-                linkLoation=""
+                linkLocation=""
               />
               <Organization
-                imgSrc=""
+                imgSrc="/assets/logo-privacyinternational.svg"
                 linkTitle="London, UK"
-                linkLoation=""
+                linkLocation=""
               />
             </div>
           </ContentContainer>

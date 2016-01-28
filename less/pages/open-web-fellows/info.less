@@ -21,6 +21,51 @@
     font-weight: 300;
     margin: 65px 0 0 0;
   }
+  .timeline {
+    width: 810px;
+    margin: 60px auto 0;
+    .timeline-item-container {
+      display: flex;
+      flex-shrink: 0;
+      .timeline-month {
+        height: 60px;
+        width: 190px;
+        border: solid 2px #80B6B1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        color: #667FB5;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 500;
+      }
+      .vertical-line {
+        width: 0;
+        margin: 0 auto;
+        border-left: solid 1px #80B6B1;
+        border-right: solid 1px #80B6B1;
+        height: ~"calc(100% - 60px)";
+      }
+      .timeline-item {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        line-height: 30px;
+        margin: 0 0 60px 50px;
+        h4 {
+          margin: 0;
+        }
+      }
+      &:last-child {
+        .timeline-item {
+          margin: 0 0 0 50px;
+        }
+      }
+    }
+  }
   .financial-terms-unit {
     .hero-unit {
       text-transform: none;
