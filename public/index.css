@@ -334,7 +334,10 @@
 .info-page h3 {
   color: #804A80;
   font-weight: 300;
-  margin: 65px 0 0 0;
+  margin: 0;
+}
+.info-page .row {
+  margin: 65px 0;
 }
 .info-page .timeline {
   width: 810px;
@@ -418,6 +421,9 @@
     height: 424px;
   }
 }
+.info-page .iconlist-container {
+  margin-top: 40px;
+}
 .info-page .fine-print {
   line-height: 34px;
   color: #A2A2A2;
@@ -463,9 +469,20 @@
   margin: 60px 0;
 }
 .overview-page .organization-row .organization {
+  opacity: .7;
   text-align: center;
   width: 25%;
   display: inline-block;
+}
+.overview-page .organization-row .organization .organization-label {
+  margin-top: 4px;
+  font-style: italic;
+}
+.overview-page .organization-row .organization .organization-label .fa.fa-map-marker {
+  margin-right: 5px;
+}
+.overview-page .organization-row .organization:hover {
+  opacity: 1;
 }
 .fellows-page .fellows-hero-unit .hero-unit {
   background-position: center 20%;
@@ -517,6 +534,7 @@ a:active {
 p {
   font-size: 16px;
   line-height: 25px;
+  font-weight: 300;
 }
 .page {
   background-color: #FFFFFF;

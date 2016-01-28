@@ -9,7 +9,7 @@ var ContentContainer = require('../../components/content-container.jsx');
 var IconListContainer = React.createClass({
   render: function() {
     return (
-      <div>{this.props.children}</div>
+      <div className="iconlist-container">{this.props.children}</div>
     );
   }
 });
@@ -17,7 +17,10 @@ var IconListContainer = React.createClass({
 var IconListItem = React.createClass({
   render: function() {
     return (
-      <div>{this.props.children}</div>
+      <div className="iconlist-item">
+        <span className="icon-list-item-label">{this.props.label}</span>
+        {this.props.children}
+      </div>
     );
   }
 });
@@ -79,9 +82,15 @@ module.exports = React.createClass({
             <h2 className="center-align">Structure of the Fellowship</h2>
             <p className="intro">As a fellow, you will pursue the following activities over your fellowship year.</p>
             <IconListContainer>
-              <IconListItem></IconListItem>
-              <IconListItem></IconListItem>
-              <IconListItem></IconListItem>
+              <IconListItem label="Work on projects defined by your host organization.">
+                These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.
+              </IconListItem>
+              <IconListItem label="Invest in your future as an open Web advocate.">
+                By sharing your work in the open, participating in professional development activities, attending and presenting talks, or writing and publishing, you will spend time developing your own path while contributing to a global movement.
+              </IconListItem>
+              <IconListItem label="Contribute to a global advocacy community.">
+                In collaboration with the 2016 cohort of host organizations and Mozilla, you will work on “network projects” that benefit the existing network of organizations that defend the public Internet. These projects could take the form of shared policy positions, coalition campaigns, or open source tools that solve shared needs. 
+              </IconListItem>
             </IconListContainer>
           </ContentContainer>
           <ContentContainer className="grey slant flat-top responsibilities">
@@ -233,9 +242,18 @@ module.exports = React.createClass({
               </div>
             </div>
             <IconListContainer>
-              <IconListItem></IconListItem>
-              <IconListItem></IconListItem>
-              <IconListItem></IconListItem>
+              <IconListItem>
+                <h4>Research & Equipment</h4>
+                <p>Up to $3,500 over the course of the fellowship will be given towards the purchase of laptop computers, digital cameras, recorders, fees for continuing studies or other courses related to the fellowship, software, hosting, research fees, and travel expenses for conferences related to the fellow’s research or study. </p>
+              </IconListItem>
+              <IconListItem>
+                <h4>Travel Allowance</h4>
+                <p>All approved fellowship trips – domestic and international – are covered. Additional travel required by the host organizations will be covered by the host organization.</p>
+              </IconListItem>
+              <IconListItem>
+                <h4>Visa Assistance</h4>
+                <p>Mozilla will work directly with fellows and fellowship partners to try to secure necessary visas if required.  Eligibility for visas will depend on requirements of the country where the fellow will be hosted, and the fellow’s nationality.</p>
+              </IconListItem>
             </IconListContainer>
           </ContentContainer>
         </div>
