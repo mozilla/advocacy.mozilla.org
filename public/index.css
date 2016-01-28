@@ -301,7 +301,6 @@
   position: absolute;
   background-color: #EFEFEF;
   -webkit-transform: skewY(-5deg);
-      -ms-transform: skewY(-5deg);
           transform: skewY(-5deg);
   width: 100%;
   height: 100%;
