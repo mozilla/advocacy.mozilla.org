@@ -22,6 +22,35 @@ var IconListItem = React.createClass({
   }
 });
 
+var TimeLineItemContainer = React.createClass({
+  render: function() {
+    return (
+      <div className="timeline-item-container">
+        <span>
+          <div className="timeline-month">
+            {this.props.month}
+          </div>
+          <div className="vertical-line"></div>
+        </span>
+        <span>{this.props.children}</span>
+      </div>
+    );
+  }
+});
+
+var TimeLineItem = React.createClass({
+  render: function() {
+    return (
+      <div className="timeline-item">
+        <div>
+          <h4>{this.props.label}</h4>
+          {this.props.children}
+        </div>
+      </div>
+    );
+  }
+});
+
 var FinancialItem = React.createClass({
   render: function() {
     return (
@@ -63,6 +92,40 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <h2 className="center-align">Fellowship Timeline</h2>
+            <div className="timeline">
+              <TimeLineItemContainer month="march">
+                <TimeLineItem label="Application Deadline">
+                  11:59pm Pacific Time, March 20, 2016
+                </TimeLineItem>
+              </TimeLineItemContainer>
+              <TimeLineItemContainer month="april">
+                <TimeLineItem label="Semifinalists are Selected">
+                  All candidates will be informed of their application status.
+                </TimeLineItem>
+                <TimeLineItem label="Semifinalist Interviews">
+                  Mozilla interviews semifinalists.
+                </TimeLineItem>
+              </TimeLineItemContainer>
+              <TimeLineItemContainer month="may">
+                <TimeLineItem label="Finalists are Selected">
+                  All semifinalist candidates are informed of their application status.
+                </TimeLineItem>
+                <TimeLineItem label="Finalist Interviews">
+                  Mozilla and host organizations conduct interviews.
+                </TimeLineItem>
+                <TimeLineItem label="Fellows are Selected">
+                  All finalist candidates are informed of their application status.
+                </TimeLineItem>
+              </TimeLineItemContainer>
+              <TimeLineItemContainer month="june">
+                <TimeLineItem label="Fellows Announced"></TimeLineItem>
+              </TimeLineItemContainer>
+              <TimeLineItemContainer month="sept">
+                <TimeLineItem label="Fellowship Starts">
+                  Starts September 2016 and completes July 2017.
+                </TimeLineItem>
+              </TimeLineItemContainer>
+            </div>
           </ContentContainer>
           <div className="financial-terms-unit">
             <HeroUnit image="/assets/info-benefits.jpg">
