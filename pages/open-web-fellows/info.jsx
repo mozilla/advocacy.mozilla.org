@@ -25,7 +25,10 @@ var IconListItem = React.createClass({
 var FinancialItem = React.createClass({
   render: function() {
     return (
-      <div>{this.props.children}</div>
+      <div className="financial-item">
+        <span className="label">{this.props.label}</span>
+        <span className="amount">{this.props.amount}</span>
+      </div>
     );
   }
 });
@@ -62,83 +65,103 @@ module.exports = React.createClass({
             <h2 className="center-align">Fellowship Timeline</h2>
           </ContentContainer>
           <div className="financial-terms-unit">
-            <HeroUnit image="/assets/info-benefits.jpg"></HeroUnit>
+            <HeroUnit image="/assets/info-benefits.jpg">
+              <h2>Financial Terms</h2>
+              <h4>To help offset cost of living, the fellowship provides a stipend and supplements.</h4>
+            </HeroUnit>
           </div>
           <ContentContainer>
             <h4>The fellowship offers a grant of USD$60,000 paid in 10 monthly installments. Fellows are not employees of Mozilla or host organizations, and are responsible for remitting all applicable taxes and other government payments required.</h4>
             <p>Supplements for child care, health insurance, housing, and research/equipment are listed below. If you relocate for a fellowship, we will supplement your moving expenses. The fellowship also covers the costs of required travel for fellowship activities.</p>
             <div className="row">
               <div className="half">
-                <h3></h3>
+                <h3>Housing Supplement</h3>
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Single, married or partnered fellow"
+                  amount="$5,000"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with 1 child"
+                  amount="$7,000"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with 2 children"
+                  amount="$8,500"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
-                />
-                <h3></h3>
-                <FinancialItem
-                  label=""
-                  amount=""
-                />
-                <FinancialItem
-                  label=""
-                  amount=""
-                />
-                <FinancialItem
-                  label=""
-                  amount=""
-                />
-                <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with 3 children or more"
+                  amount="$10,000"
                 />
               </div>
               <div className="half">
-                <h3></h3>
+                <h3>Relocation Supplement</h3>
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow moving cities in the same country"
+                  amount="$2,000"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow moving countries"
+                  amount="$4,000"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with children"
+                  amount="Additional $2,000"
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="half">
+                <h3>Health Insurance Supplement</h3>
+                <FinancialItem
+                  label="Single fellow"
+                  amount="$3,500"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
-                />
-                <h3></h3>
-                <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with partner    "
+                  amount="$5,000"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with 1 child"
+                  amount="$5,500"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with partner and 1 child"
+                  amount="$6,000"
                 />
                 <FinancialItem
-                  label=""
-                  amount=""
+                  label="Fellow with 2+ children"
+                  amount="$6,500"
                 />
+                <FinancialItem
+                  label="Fellow with partner and 2+ children"
+                  amount="$7,000"
+                />
+              </div>
+              <div className="half">
+                <h3>Childcare Supplement*</h3>
+                <div>
+                  <FinancialItem
+                    label="1 child age 12 or younger"
+                    amount="$5,600"
+                  />
+                  <FinancialItem
+                    label="2 children ages 12 or younger"
+                    amount="$6,000"
+                  />
+                  <FinancialItem
+                    label="3 children ages 12 or younger"
+                    amount="$6,400"
+                  />
+                  <FinancialItem
+                    label="4 or more children ages 12 or younger"
+                    amount="$7,200"
+                  />
+                  <FinancialItem
+                    label="Additional allowance for child 3 yrs or younger"
+                    amount="$6,400"
+                  />
+                </div>
+                <div className="last-note">*Age defined on September 1 of fellowship year</div>
               </div>
             </div>
             <IconListContainer>
