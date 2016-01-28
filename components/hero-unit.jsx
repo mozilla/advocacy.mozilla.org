@@ -29,8 +29,12 @@ module.exports = React.createClass({
   },
 
   render: function() {
+    var className = "hero-unit-container";
+    if (this.props.className) {
+      className += " " + this.props.className;
+    }
     return (
-      <div className="hero-unit-container">
+      <div className={className}>
         <div className="hero-unit" style={{
           backgroundImage: 'url(' + this.state.image + ')'
         }}>
