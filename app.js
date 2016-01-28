@@ -15,7 +15,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.get('*', function (request, response) {
-  response.sendfile(path.join(__dirname, '/public/index.html'));
+  response.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(env.get('PORT'), function () {

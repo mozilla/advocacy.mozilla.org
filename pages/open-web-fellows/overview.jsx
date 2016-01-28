@@ -50,7 +50,12 @@ module.exports = React.createClass({
     return (
       <div className="overview-page">
         <Header/>
-        <HeroUnit image="/assets/overview.jpg"></HeroUnit>
+        <HeroUnit image="/assets/overview.jpg">
+          <h1>Open Web Fellows Program</h1>
+          <div>
+            <a href="" className="button">apply now</a>
+          </div>
+        </HeroUnit>
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
