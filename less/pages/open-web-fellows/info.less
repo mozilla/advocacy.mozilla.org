@@ -16,11 +16,43 @@
     margin: 10px 0;
     font-style: italic;
   }
+  h3 {
+    color: #804A80;
+    font-weight: 300;
+    margin: 65px 0 0 0;
+  }
   .financial-terms-unit {
     .hero-unit {
+      text-transform: none;
+      letter-spacing: 0;
+      h2 {
+        color: #FFFFFF;
+      }
+      h4 {
+        font-weight: 400;
+        color: #FFFFFF;
+      }
       @media screen and (min-width: 768px) {
         height: 424px;
       }
+    }
+  }
+  .last-note {
+    line-height: 34px;
+    color: #A2A2A2;
+  }
+  .financial-item {
+    overflow: auto;
+    border-top: 1px solid #D6D6D6;
+    line-height: 34px;
+    &:last-child {
+      border-bottom: 1px solid #D6D6D6;
+    }
+    .label {
+      float: left;
+    }
+    .amount {
+      float: right;
     }
   }
 }
