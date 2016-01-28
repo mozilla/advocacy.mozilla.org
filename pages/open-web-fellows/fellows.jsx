@@ -28,7 +28,7 @@ var FellowBlock = React.createClass({
 module.exports = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="fellows-page">
         <Header/>
         <HeroUnit image="/assets/fellows.jpg"></HeroUnit>
         <FellowsHeader/>
