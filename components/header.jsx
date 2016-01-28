@@ -16,13 +16,13 @@ module.exports = React.createClass({
             </Link>
           </div>
           <div className="nav-items">
-            <div className="nav-link-container">
+            <div className="nav-link-container home-link">
               <Link to="/">Home</Link>
             </div>
-            <div className="nav-link-container">
+            <div className="nav-link-container fellows-link">
               <Link to="/open-web-fellows/">Open Web Fellows</Link>
             </div>
-            <div className="nav-link-container">
+            <div className="nav-link-container blog-link">
               <a href="">Blog</a>
             </div>
           </div>
