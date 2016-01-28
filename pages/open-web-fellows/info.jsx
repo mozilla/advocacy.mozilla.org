@@ -67,7 +67,7 @@ module.exports = React.createClass({
     return (
       <div className="info-page">
         <Header/>
-        <HeroUnit image="/assets/info.jpg"></HeroUnit>
+        <HeroUnit className="info-hero-unit" image="/assets/info.jpg"></HeroUnit>
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
@@ -224,7 +224,7 @@ module.exports = React.createClass({
                     amount="$6,400"
                   />
                 </div>
-                <div className="last-note">*Age defined on September 1 of fellowship year</div>
+                <div className="fine-print">*Age defined on September 1 of fellowship year</div>
               </div>
             </div>
             <IconListContainer>

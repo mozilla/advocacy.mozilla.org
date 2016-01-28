@@ -1,5 +1,44 @@
-.apply .hero-unit {
-  @media screen and (min-width: 768px) {
-    height: 424px;
+.apply {
+  .apply-hero-unit {
+    .hero-unit {
+      background-position: center 0;
+      text-transform: none;
+      h2, h4 {
+        color: #FFFFFF;
+        max-width: 900px;
+        width: 100%;
+        margin: 10px auto;
+      }
+      h4 {
+        font-style: italic;
+        margin: 22px auto;
+      }
+      .fine-print {
+        font-size: 16px;
+        font-weight: 300;
+        font-style: italic;
+        color: #FFFFFF;
+      }
+      .horizontal-rule {
+        background-color: #FFFFFF;
+        width: 82px;
+        height: 1px;
+        margin: 0 auto;
+      }
+      .button {
+        border: 1px solid #FFFFFF;
+        text-transform: uppercase;
+        height: 60px;
+        padding: 0 22px;
+        display: inline-block;
+        line-height: 3.5;
+        font-size: 18px;
+        box-sizing: border-box;
+        margin: 0 0 20px 0;
+      }
+      @media screen and (min-width: 768px) {
+        height: 424px;
+      }
+    }
   }
 }
