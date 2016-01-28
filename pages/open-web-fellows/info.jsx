@@ -67,7 +67,12 @@ module.exports = React.createClass({
     return (
       <div className="info-page">
         <Header/>
-        <HeroUnit className="info-hero-unit" image="/assets/info.jpg"></HeroUnit>
+        <HeroUnit className="info-hero-unit" image="/assets/info.jpg">
+          <h1>Program & Financial Details</h1>
+          <div>
+            <a href="" className="button">apply now</a>
+          </div>
+        </HeroUnit>
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>

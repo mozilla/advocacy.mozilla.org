@@ -167,17 +167,6 @@
   height: 1px;
   margin: 0 auto;
 }
-.apply .apply-hero-unit .hero-unit .button {
-  border: 1px solid #FFFFFF;
-  text-transform: uppercase;
-  height: 60px;
-  padding: 0 22px;
-  display: inline-block;
-  line-height: 3.5;
-  font-size: 18px;
-  box-sizing: border-box;
-  margin: 0 0 20px 0;
-}
 @media screen and (min-width: 768px) {
   .apply .apply-hero-unit .hero-unit {
     height: 424px;
@@ -538,6 +527,7 @@ p {
 }
 h1 {
   font-size: 64px;
+  color: #80B6B1;
 }
 h2 {
   font-size: 50px;
@@ -573,4 +563,14 @@ h4 {
 }
 .center-align {
   text-align: center;
+}
+.button {
+  border: 1px solid #FFFFFF;
+  text-transform: uppercase;
+  height: 50px;
+  padding: 15px 22px;
+  display: inline-block;
+  font-size: 18px;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
 }
