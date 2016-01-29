@@ -25601,11 +25601,6 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'iconlist-item' },
-	      React.createElement(
-	        'span',
-	        { className: 'icon-list-item-label' },
-	        this.props.label
-	      ),
 	      this.props.children
 	    );
 	  }
@@ -25727,18 +25722,45 @@
 	            null,
 	            React.createElement(
 	              IconListItem,
-	              { label: 'Work on projects defined by your host organization.' },
-	              'These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.'
+	              null,
+	              React.createElement(
+	                'p',
+	                null,
+	                React.createElement(
+	                  'span',
+	                  { className: 'highlight' },
+	                  'Work on projects defined by your host organization.'
+	                ),
+	                ' These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.'
+	              )
 	            ),
 	            React.createElement(
 	              IconListItem,
-	              { label: 'Invest in your future as an open Web advocate.' },
-	              'By sharing your work in the open, participating in professional development activities, attending and presenting talks, or writing and publishing, you will spend time developing your own path while contributing to a global movement.'
+	              null,
+	              React.createElement(
+	                'p',
+	                null,
+	                React.createElement(
+	                  'span',
+	                  { className: 'highlight' },
+	                  'Invest in your future as an open Web advocate.'
+	                ),
+	                ' By sharing your work in the open, participating in professional development activities, attending and presenting talks, or writing and publishing, you will spend time developing your own path while contributing to a global movement.'
+	              )
 	            ),
 	            React.createElement(
 	              IconListItem,
-	              { label: 'Contribute to a global advocacy community.' },
-	              'In collaboration with the 2016 cohort of host organizations and Mozilla, you will work on “network projects” that benefit the existing network of organizations that defend the public Internet. These projects could take the form of shared policy positions, coalition campaigns, or open source tools that solve shared needs.'
+	              null,
+	              React.createElement(
+	                'p',
+	                null,
+	                React.createElement(
+	                  'span',
+	                  { className: 'highlight' },
+	                  'Contribute to a global advocacy community.'
+	                ),
+	                ' In collaboration with the 2016 cohort of host organizations and Mozilla, you will work on “network projects” that benefit the existing network of organizations that defend the public Internet. These projects could take the form of shared policy positions, coalition campaigns, or open source tools that solve shared needs.'
+	              )
 	            )
 	          )
 	        ),
@@ -25795,6 +25817,100 @@
 	            'p',
 	            null,
 	            'The Fellowship program provides various opportunities for travel to Mozilla events and other conferences around the world. Fellows are requested to participate in these events not only as attendees, but also as presenters and representatives of your respective host organizations. These include:'
+	          ),
+	          React.createElement(
+	            'div',
+	            { className: 'row' },
+	            React.createElement(
+	              'div',
+	              { className: 'half' },
+	              React.createElement(
+	                IconListContainer,
+	                null,
+	                React.createElement(
+	                  IconListItem,
+	                  null,
+	                  React.createElement(
+	                    'h4',
+	                    null,
+	                    'Onboarding'
+	                  ),
+	                  React.createElement(
+	                    'p',
+	                    null,
+	                    '1 week at the beginning of the Fellowship to meet in person with other fellows, host organizations, and Mozilla staff, and to design the Fellowship year and cohort expectations together.'
+	                  )
+	                ),
+	                React.createElement(
+	                  IconListItem,
+	                  null,
+	                  React.createElement(
+	                    'h4',
+	                    null,
+	                    'Fellows Retreat'
+	                  ),
+	                  React.createElement(
+	                    'p',
+	                    null,
+	                    'A halfway point check-in and time for cross collaboration in the cohort.'
+	                  )
+	                ),
+	                React.createElement(
+	                  IconListItem,
+	                  null,
+	                  React.createElement(
+	                    'h4',
+	                    null,
+	                    'Additional'
+	                  ),
+	                  React.createElement(
+	                    'p',
+	                    null,
+	                    'Conferences, hackathons and global networking opportunities may arise due to events in the Internet advocacy space.'
+	                  )
+	                )
+	              )
+	            ),
+	            React.createElement(
+	              'div',
+	              { className: 'half' },
+	              React.createElement(
+	                IconListContainer,
+	                null,
+	                React.createElement(
+	                  IconListItem,
+	                  null,
+	                  React.createElement(
+	                    'h4',
+	                    null,
+	                    React.createElement(
+	                      'a',
+	                      { href: 'https://2015.mozillafestival.org/' },
+	                      'MozFest'
+	                    )
+	                  ),
+	                  React.createElement(
+	                    'p',
+	                    null,
+	                    '1 week with the rest of the Mozilla Foundation and community to share knowledge, learn, and meet other makers (location: London, UK).'
+	                  )
+	                ),
+	                React.createElement(
+	                  IconListItem,
+	                  null,
+	                  React.createElement(
+	                    'h4',
+	                    null,
+	                    'Capstone'
+	                  ),
+	                  React.createElement(
+	                    'p',
+	                    null,
+	                    'An event at the end of the Fellowship year to showcase each fellow’s work, share experiences with others.'
+	                  )
+	                )
+	              )
+	            )
 	          )
 	        ),
 	        React.createElement(
@@ -25899,7 +26015,7 @@
 	          ),
 	          React.createElement(
 	            'div',
-	            { className: 'row' },
+	            { className: 'row row-list' },
 	            React.createElement(
 	              'div',
 	              { className: 'half' },
@@ -25949,7 +26065,7 @@
 	          ),
 	          React.createElement(
 	            'div',
-	            { className: 'row' },
+	            { className: 'row row-list' },
 	            React.createElement(
 	              'div',
 	              { className: 'half' },
@@ -26036,7 +26152,7 @@
 	              React.createElement(
 	                'p',
 	                null,
-	                'Up to $3,500 over the course of the fellowship will be given towards the purchase of laptop computers, digital cameras, recorders, fees for continuing studies or other courses related to the fellowship, software, hosting, research fees, and travel expenses for conferences related to the fellow’s research or study. '
+	                'Up to $3,500 over the course of the fellowship will be given towards the purchase of laptop computers, digital cameras, recorders, fees for continuing studies or other courses related to the fellowship, software, hosting, research fees, and travel expenses for conferences related to the fellow’s research or study.'
 	              )
 	            ),
 	            React.createElement(
