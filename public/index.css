@@ -69,8 +69,9 @@
 }
 .fellows-header.sticky .fellow-header-overlay {
   opacity: 1;
-  -webkit-transition: opacity 0s;
-          transition: opacity 0s;
+  -webkit-transition: opacity 0.1s, background-color 0.1s;
+          transition: opacity 0.1s, background-color 0.1s;
+  background-color: #009DAA;
 }
 .fellows-header .fellow-header-overlay {
   position: absolute;
@@ -79,8 +80,8 @@
   content: '';
   height: 100%;
   width: 100%;
-  -webkit-transition: opacity .6s;
-          transition: opacity .6s;
+  -webkit-transition: opacity 0.6s, background-color 0.6s;
+          transition: opacity 0.6s, background-color 0.6s;
 }
 .fellows-header .nav-items {
   position: relative;
@@ -152,6 +153,9 @@
     font-size: 44px;
   }
 }
+.hero-unit .button:hover {
+  color: #009DAA;
+}
 .apply .apply-hero-unit .hero-unit {
   background-position: center 0;
   text-transform: none;
@@ -183,6 +187,9 @@
   .apply .apply-hero-unit .hero-unit {
     height: 424px;
   }
+}
+.apply .apply-hero-unit .button:hover {
+  color: #667FB5;
 }
 .footer {
   width: 100%;
@@ -626,5 +633,5 @@ h4 {
 }
 .button:hover {
   background-color: #FFFFFF;
-  color: #677FB5;
+  color: #000000;
 }
