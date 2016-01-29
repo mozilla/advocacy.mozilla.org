@@ -4,6 +4,7 @@ var Link = Router.Link;
 
 module.exports = React.createClass({
   getInitialState: function() {
+    window.scrollTo(0, 0);
     return {
       sticky: false
     };
