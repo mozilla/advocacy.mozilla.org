@@ -18,7 +18,6 @@ var IconListItem = React.createClass({
   render: function() {
     return (
       <div className="iconlist-item">
-        <span className="icon-list-item-label">{this.props.label}</span>
         {this.props.children}
       </div>
     );
@@ -82,14 +81,14 @@ module.exports = React.createClass({
             <h2 className="center-align">Structure of the Fellowship</h2>
             <p className="intro">As a fellow, you will pursue the following activities over your fellowship year.</p>
             <IconListContainer>
-              <IconListItem label="Work on projects defined by your host organization.">
-                These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.
+              <IconListItem>
+                <p><span className="highlight">Work on projects defined by your host organization.</span> These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.</p>
               </IconListItem>
-              <IconListItem label="Invest in your future as an open Web advocate.">
-                By sharing your work in the open, participating in professional development activities, attending and presenting talks, or writing and publishing, you will spend time developing your own path while contributing to a global movement.
+              <IconListItem>
+                <p><span className="highlight">Invest in your future as an open Web advocate.</span> By sharing your work in the open, participating in professional development activities, attending and presenting talks, or writing and publishing, you will spend time developing your own path while contributing to a global movement.</p>
               </IconListItem>
-              <IconListItem label="Contribute to a global advocacy community.">
-                In collaboration with the 2016 cohort of host organizations and Mozilla, you will work on “network projects” that benefit the existing network of organizations that defend the public Internet. These projects could take the form of shared policy positions, coalition campaigns, or open source tools that solve shared needs. 
+              <IconListItem>
+                <p><span className="highlight">Contribute to a global advocacy community.</span> In collaboration with the 2016 cohort of host organizations and Mozilla, you will work on “network projects” that benefit the existing network of organizations that defend the public Internet. These projects could take the form of shared policy positions, coalition campaigns, or open source tools that solve shared needs.</p>
               </IconListItem>
             </IconListContainer>
           </ContentContainer>
@@ -103,6 +102,36 @@ module.exports = React.createClass({
             <p>Since the Fellowship cohort will be geographically diverse, weekly and monthly calls are an important time for the fellows to communicate with each other and with the larger Internet advocacy network. Fellows are expected to participate and contribute to these calls.</p>
             <h4>Travel and Events</h4>
             <p>The Fellowship program provides various opportunities for travel to Mozilla events and other conferences around the world. Fellows are requested to participate in these events not only as attendees, but also as presenters and representatives of your respective host organizations. These include:</p>
+            <div className="row">
+              <div className="half">
+                <IconListContainer>
+                  <IconListItem>
+                    <h4>Onboarding</h4>
+                    <p>1 week at the beginning of the Fellowship to meet in person with other fellows, host organizations, and Mozilla staff, and to design the Fellowship year and cohort expectations together.</p>
+                  </IconListItem>
+                  <IconListItem>
+                    <h4>Fellows Retreat</h4>
+                    <p>A halfway point check-in and time for cross collaboration in the cohort.</p>
+                  </IconListItem>
+                  <IconListItem>
+                    <h4>Additional</h4>
+                    <p>Conferences, hackathons and global networking opportunities may arise due to events in the Internet advocacy space.</p>
+                  </IconListItem>
+                </IconListContainer>
+              </div>
+              <div className="half">
+                <IconListContainer>
+                  <IconListItem>
+                    <h4><a href="https://2015.mozillafestival.org/">MozFest</a></h4>
+                    <p>1 week with the rest of the Mozilla Foundation and community to share knowledge, learn, and meet other makers (location: London, UK).</p>
+                  </IconListItem>
+                  <IconListItem>
+                    <h4>Capstone</h4>
+                    <p>An event at the end of the Fellowship year to showcase each fellow’s work, share experiences with others.</p>
+                  </IconListItem>
+                </IconListContainer>
+              </div>
+            </div>
           </ContentContainer>
           <ContentContainer>
             <h2 className="center-align">Fellowship Timeline</h2>
@@ -150,7 +179,7 @@ module.exports = React.createClass({
           <ContentContainer>
             <h4>The fellowship offers a grant of USD$60,000 paid in 10 monthly installments. Fellows are not employees of Mozilla or host organizations, and are responsible for remitting all applicable taxes and other government payments required.</h4>
             <p>Supplements for child care, health insurance, housing, and research/equipment are listed below. If you relocate for a fellowship, we will supplement your moving expenses. The fellowship also covers the costs of required travel for fellowship activities.</p>
-            <div className="row">
+            <div className="row row-list">
               <div className="half">
                 <h3>Housing Supplement</h3>
                 <FinancialItem
@@ -186,7 +215,7 @@ module.exports = React.createClass({
                 />
               </div>
             </div>
-            <div className="row">
+            <div className="row row-list">
               <div className="half">
                 <h3>Health Insurance Supplement</h3>
                 <FinancialItem
@@ -244,7 +273,7 @@ module.exports = React.createClass({
             <IconListContainer>
               <IconListItem>
                 <h4>Research & Equipment</h4>
-                <p>Up to $3,500 over the course of the fellowship will be given towards the purchase of laptop computers, digital cameras, recorders, fees for continuing studies or other courses related to the fellowship, software, hosting, research fees, and travel expenses for conferences related to the fellow’s research or study. </p>
+                <p>Up to $3,500 over the course of the fellowship will be given towards the purchase of laptop computers, digital cameras, recorders, fees for continuing studies or other courses related to the fellowship, software, hosting, research fees, and travel expenses for conferences related to the fellow’s research or study.</p>
               </IconListItem>
               <IconListItem>
                 <h4>Travel Allowance</h4>
