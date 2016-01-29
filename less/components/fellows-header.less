@@ -1,6 +1,15 @@
 .fellows-header {
   width: 100%;
   position: relative;
+  &.sticky {
+    position: fixed;
+    top: 52px;
+    z-index: 2;
+    .fellow-header-overlay {
+      opacity: 1;
+    transition: opacity 0s;
+    }
+  }
   .fellow-header-overlay {
     position: absolute;
     background-color: #003E60;
@@ -8,6 +17,7 @@
     content: '';
     height: 100%;
     width: 100%;
+    transition: opacity .6s;
   }
   height: 52px;
   margin-top: -52px;

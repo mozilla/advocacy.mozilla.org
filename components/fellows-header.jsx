@@ -3,9 +3,36 @@ var Router = require('react-router');
 var Link = Router.Link;
 
 module.exports = React.createClass({
+  getInitialState: function() {
+    var sticky = window.pageYOffset >= 448;
+    return {
+      sticky: sticky
+    };
+  },
+  onScroll: function(e) {
+    this.checkScroll(e.pageY);
+  },
+  checkScroll: function(scroll) {
+    var sticky = scroll >= 448;
+    if (sticky !== this.state.sticky) {
+      this.setState({
+        sticky: sticky
+      });
+    }
+  },
+  componentDidMount: function() {
+    document.addEventListener("scroll", this.onScroll);
+  },
+  componentWillUnmount: function() {
+    document.removeEventListener("scroll", this.onScroll);
+  },
   render: function() {
+    var className = "fellows-header";
+    if (this.state.sticky) {
+      className += " sticky";
+    }
     return (
-      <div className="fellows-header">
+      <div className={className}>
         <div className="fellow-header-overlay"></div>
         <div className="nav-items">
           <div className="nav-link-container overview-link">
