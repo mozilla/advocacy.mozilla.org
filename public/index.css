@@ -408,6 +408,9 @@
 .info-page .responsibilities h4 {
   margin-bottom: 0;
 }
+.info-page .responsibilities .iconlist-container .iconlist-item img {
+  margin-right: 34px;
+}
 .info-page h4 {
   color: #804A80;
   margin: 10px 0;
@@ -506,6 +509,25 @@
 .info-page .iconlist-container {
   margin-top: 40px;
 }
+.info-page .iconlist-container .iconlist-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  margin: 45px 0;
+}
+.info-page .iconlist-container .iconlist-item p {
+  margin: 0;
+}
+.info-page .iconlist-container .iconlist-item h4 {
+  margin-top: 0;
+}
+.info-page .iconlist-container .iconlist-item img {
+  margin-right: 54px;
+}
 .info-page .fine-print {
   line-height: 34px;
   color: #A2A2A2;
@@ -533,6 +555,7 @@
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
+  margin-top: 20px;
 }
 .overview-page .icons-container .icon {
   width: 33%;
@@ -541,6 +564,10 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 25px;
+}
+.overview-page .icons-container .icon img {
+  margin: 15px auto;
+  display: block;
 }
 .overview-page .globe-image-container {
   text-align: center;

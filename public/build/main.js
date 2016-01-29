@@ -25128,6 +25128,7 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'icon' },
+	      React.createElement(ImageTag, { height: 101, width: 101, alt: this.props.alt, src1x: this.props.src1x, src2x: this.props.src2x }),
 	      this.props.children
 	    );
 	  }
@@ -25140,7 +25141,7 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'globe-image-container' },
-	      React.createElement(ImageTag, { className: 'globe-image', alt: 'globe', width: 763, height: 441, src1x: '/assets/globe.png', src2x: '/assets/globe@2x.png' })
+	      React.createElement(ImageTag, { className: 'globe-image', alt: 'globe', width: 763, height: 441, src1x: '/assets/icon-globe.png', src2x: '/assets/icon-globe@2x.png' })
 	    );
 	  }
 	});
@@ -25216,17 +25217,17 @@
 	            null,
 	            React.createElement(
 	              Icon,
-	              { imgSrc: '' },
+	              { src1x: '/assets/icons/icon-policy.png', src2x: '/assets/icons/icon-policy@2x.png' },
 	              'Increase public awareness and understanding of Internet policy issues.'
 	            ),
 	            React.createElement(
 	              Icon,
-	              { imgSrc: '' },
+	              { src1x: '/assets/icons/icon-paths.png', src2x: '/assets/icons/icon-paths@2x.png' },
 	              'Support career paths in the Internet policy and advocacy sector.'
 	            ),
 	            React.createElement(
 	              Icon,
-	              { imgSrc: '' },
+	              { src1x: '/assets/icons/icon-support.png', src2x: '/assets/icons/icon-support@2x.png' },
 	              'Celebrate and support the vibrant network of Internet advocacy organizations.'
 	            )
 	          )
@@ -25719,6 +25720,7 @@
 	var Apply = __webpack_require__(224);
 	var FellowsHeader = __webpack_require__(225);
 	var ContentContainer = __webpack_require__(222);
+	var ImageTag = __webpack_require__(220);
 
 	var IconListContainer = React.createClass({
 	  displayName: 'IconListContainer',
@@ -25739,7 +25741,12 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'iconlist-item' },
-	      this.props.children
+	      React.createElement(ImageTag, { height: this.props.height, width: this.props.width, alt: this.props.alt, src1x: this.props.src1x, src2x: this.props.src2x }),
+	      React.createElement(
+	        'div',
+	        null,
+	        this.props.children
+	      )
 	    );
 	  }
 	});
@@ -25860,7 +25867,7 @@
 	            null,
 	            React.createElement(
 	              IconListItem,
-	              null,
+	              { alt: 'pie chart icon', height: 71, width: 71, src1x: '/assets/icons/icon-third1.svg' },
 	              React.createElement(
 	                'p',
 	                null,
@@ -25874,7 +25881,7 @@
 	            ),
 	            React.createElement(
 	              IconListItem,
-	              null,
+	              { alt: 'pie chart icon', height: 71, width: 71, src1x: '/assets/icons/icon-third2.svg' },
 	              React.createElement(
 	                'p',
 	                null,
@@ -25888,7 +25895,7 @@
 	            ),
 	            React.createElement(
 	              IconListItem,
-	              null,
+	              { alt: 'pie chart icon', height: 71, width: 71, src1x: '/assets/icons/icon-third3.svg' },
 	              React.createElement(
 	                'p',
 	                null,
@@ -25967,7 +25974,7 @@
 	                null,
 	                React.createElement(
 	                  IconListItem,
-	                  null,
+	                  { alt: 'onboarding icon', height: 37, width: 37, src1x: '/assets/icons/icon-onboarding.png', src1x: '/assets/icons/icon-onboarding@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,
@@ -25981,7 +25988,7 @@
 	                ),
 	                React.createElement(
 	                  IconListItem,
-	                  null,
+	                  { alt: 'retreat icon', height: 37, width: 37, src1x: '/assets/icons/icon-retreat.png', src1x: '/assets/icons/icon-retreat@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,
@@ -25995,7 +26002,7 @@
 	                ),
 	                React.createElement(
 	                  IconListItem,
-	                  null,
+	                  { alt: 'additional icon', height: 37, width: 37, src1x: '/assets/icons/icon-additional.png', src1x: '/assets/icons/icon-additional@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,
@@ -26017,7 +26024,7 @@
 	                null,
 	                React.createElement(
 	                  IconListItem,
-	                  null,
+	                  { alt: 'mozfest icon', height: 37, width: 37, src1x: '/assets/icons/icon-mozfest.png', src1x: '/assets/icons/icon-mozfest@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,
@@ -26035,7 +26042,7 @@
 	                ),
 	                React.createElement(
 	                  IconListItem,
-	                  null,
+	                  { alt: 'capstone icon', height: 37, width: 37, src1x: '/assets/icons/icon-capstone.png', src1x: '/assets/icons/icon-capstone@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,
@@ -26281,7 +26288,7 @@
 	            null,
 	            React.createElement(
 	              IconListItem,
-	              null,
+	              { alt: 'research icon', height: 91, width: 91, src1x: '/assets/icons/icon-research.png', src1x: '/assets/icons/icon-research@2x.png' },
 	              React.createElement(
 	                'h4',
 	                null,
@@ -26295,7 +26302,7 @@
 	            ),
 	            React.createElement(
 	              IconListItem,
-	              null,
+	              { alt: 'travel icon', height: 91, width: 91, src1x: '/assets/icons/icon-travel.png', src1x: '/assets/icons/icon-travel@2x.png' },
 	              React.createElement(
 	                'h4',
 	                null,
@@ -26309,7 +26316,7 @@
 	            ),
 	            React.createElement(
 	              IconListItem,
-	              null,
+	              { alt: 'visa icon', height: 91, width: 91, src1x: '/assets/icons/icon-visa.png', src1x: '/assets/icons/icon-visa@2x.png' },
 	              React.createElement(
 	                'h4',
 	                null,

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,0 L140,0 L140,140 L0,140 L0,0 Z"></path>
+        <path id="path-3" d="M0,0 L140,0 L140,140 L0,140"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSLayerGroup">
+            <path d="M140,69.8133 C140,108.3703 108.704,139.6263 70.098,139.6263 C31.492,139.6263 0.196,108.3703 0.196,69.8133 C0.196,31.2563 31.492,0.0003 70.098,0.0003 C108.704,0.0003 140,31.2563 140,69.8133" id="Fill-1" fill="#809F9B" sketch:type="MSShapeGroup"></path>
+            <g id="Group-5">
+                <mask id="mask-2" sketch:name="Clip 4" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <path d="M69.9222,70.181 L9.3782,105.085 C-9.9278,71.696 1.5292,29.003 34.9672,9.726 C46.1012,3.307 57.0652,0.373 69.9222,0.373 L69.9222,70.181 Z" id="Fill-3" fill="#7FB0AB" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+            </g>
+            <g id="Group-8">
+                <mask id="mask-4" sketch:name="Clip 7" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-7"></g>
+                <path d="M69.9221,0.3734 L69.9221,70.1814 L9.3781,105.0844 C15.8071,116.2034 23.8321,124.2164 34.9671,130.6364 C68.4041,149.9124 111.1611,138.4734 130.4661,105.0844 C136.8951,93.9664 139.8321,83.0194 139.8321,70.1814 C139.8321,31.6264 108.5331,0.3734 69.9221,0.3734" id="Fill-6" fill="#667EAF" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
