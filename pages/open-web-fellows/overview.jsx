@@ -4,6 +4,7 @@ var Header = require('../../components/header.jsx');
 var HeroUnit = require('../../components/hero-unit.jsx');
 var Apply = require('../../components/apply.jsx');
 var FellowsHeader = require('../../components/fellows-header.jsx');
+var ImageTag = require('../../components/imagetag.jsx');
 var ContentContainer = require('../../components/content-container.jsx');
 
 var IconsContainer = React.createClass({
@@ -29,7 +30,9 @@ var Icon = React.createClass({
 var PlanetContent = React.createClass({
   render: function() {
     return (
-      <div>Planet Image</div>
+      <div className="globe-image-container">
+        <ImageTag className="globe-image" alt="globe" width={763} height={441} src1x="/assets/globe.png" src2x="/assets/globe@2x.png"/>
+      </div>
     );
   }
 });
@@ -61,7 +64,7 @@ module.exports = React.createClass({
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
-            <p className="intro">A collaboration between <a href="#">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
+            <p className="intro">A collaboration between <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
             <IconsContainer>
               <Icon imgSrc="">
                 Increase public awareness and understanding of Internet policy issues.
@@ -74,11 +77,11 @@ module.exports = React.createClass({
               </Icon>
             </IconsContainer>
           </ContentContainer>
-          <ContentContainer className="grey slant flat-top">
+          <ContentContainer className="globe-offset grey slant flat-top">
             <h2>Who can become a Fellow?</h2>
             <div className="row">
               <div className="half">
-                <p>It could be you! Broadly speaking, we are looking for makers – those who see a problem in the world and can solve it through technology or media. The right candidate may bring specialities in design, development, storytelling, research and policy analysis, and should be comfortable performing as a technologist, a tinkerer, and a curious contributor to the fellowship program. <b>You do not need to have previous experience with Internet advocacy, policy or activism.</b> A lot of campaign design, community organizing, education, and</p>
+                <p><span className="highlight">It could be you!</span> Broadly speaking, we are looking for makers – those who see a problem in the world and can solve it through technology or media. The right candidate may bring specialities in design, development, storytelling, research and policy analysis, and should be comfortable performing as a technologist, a tinkerer, and a curious contributor to the fellowship program. <b>You do not need to have previous experience with Internet advocacy, policy or activism.</b> A lot of campaign design, community organizing, education, and</p>
               </div>
               <div className="half">
                 <p>coalition building happen through teamwork and skills like data visualization and participatory learning. You can be at any stage in your career, provided you are open to learning.</p>
