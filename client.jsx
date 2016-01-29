@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 render((
-  <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+  <Router history={browserHistory}>
     <Route path="/">
       <IndexRoute component={require('./pages/home.jsx')}/>
       <Route path="/open-web-fellows" component={require('./pages/open-web-fellows/overview.jsx')}/>
