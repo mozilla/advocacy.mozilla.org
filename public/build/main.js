@@ -25464,7 +25464,7 @@
 	              name: 'Paola Villarreal',
 	              image: '/assets/fellows/1-Paola.png',
 	              company: 'American Civil Liberties Union',
-	              companyHref: '#',
+	              companyHref: 'https://aclum.org/',
 	              quote: 'I am who I am because of the openness of the Web.',
 	              handle: 'paw',
 	              handleHref: 'https://twitter.com/paw'
@@ -25481,7 +25481,7 @@
 	              name: 'Tim Sammut',
 	              image: '/assets/fellows/2-Tim.png',
 	              company: 'Amnesty International',
-	              companyHref: '#',
+	              companyHref: 'https://www.amnesty.org/en/',
 	              quote: 'The Internet is critical to free expression and access to information. It is paramount that it be open to everyone without limits.',
 	              handle: 't1msammut',
 	              handleHref: 'https://twitter.com/t1msammut'
@@ -25498,7 +25498,7 @@
 	              name: 'Andrea Del Rio',
 	              image: '/assets/fellows/3-Andrea.png',
 	              company: 'Association for Progressive Communications',
-	              companyHref: '#',
+	              companyHref: 'https://www.apc.org/',
 	              quote: 'On the Web, we are all the same. Once we have access to it, the possibilities are endless.',
 	              handle: 'andredelrio',
 	              handleHref: 'https://twitter.com/andredelrio'
@@ -25515,7 +25515,7 @@
 	              name: 'Drew Wilson',
 	              image: '/assets/fellows/4-Drew.png',
 	              company: 'Free Press',
-	              companyHref: '#',
+	              companyHref: 'https://www.freepress.net/',
 	              quote: 'Without the freedom to organize, communicate, and campaign, all social movements suffer.',
 	              handle: 'DrewSaysGoVeg',
 	              handleHref: 'https://twitter.com/DrewSaysGoVeg'
@@ -25532,7 +25532,7 @@
 	              name: 'Gem Barrett',
 	              image: '/assets/fellows/5-Gem.png',
 	              company: 'Open Technology Institute',
-	              companyHref: '#',
+	              companyHref: 'https://www.newamerica.org/oti/',
 	              quote: 'The Internet has given people a voice like no medium has before, and the ability for people to freely express themselves without fear of surveillance or censorship must be defended.',
 	              handle: 'gembarrett',
 	              handleHref: 'https://twitter.com/gembarrett'
@@ -25549,7 +25549,7 @@
 	              name: 'Tennyson Holloway',
 	              image: '/assets/fellows/6-Tennyson.png',
 	              company: 'Public Knowledge',
-	              companyHref: '#',
+	              companyHref: 'https://www.publicknowledge.org/',
 	              quote: 'I see computer science as a unique field; it is exceptionally accessible and the capacity for meaningful impact is remarkably high.',
 	              handle: 'BaronTennyson',
 	              handleHref: 'https://twitter.com/BaronTennyson'
