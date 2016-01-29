@@ -21,6 +21,7 @@ var Icon = React.createClass({
   render: function() {
     return (
       <div className="icon">
+        <ImageTag height={101} width={101} alt={this.props.alt} src1x={this.props.src1x} src2x={this.props.src2x}/>
         {this.props.children}
       </div>
     );
@@ -31,7 +32,7 @@ var PlanetContent = React.createClass({
   render: function() {
     return (
       <div className="globe-image-container">
-        <ImageTag className="globe-image" alt="globe" width={763} height={441} src1x="/assets/globe.png" src2x="/assets/globe@2x.png"/>
+        <ImageTag className="globe-image" alt="globe" width={763} height={441} src1x="/assets/icon-globe.png" src2x="/assets/icon-globe@2x.png"/>
       </div>
     );
   }
@@ -67,13 +68,13 @@ module.exports = React.createClass({
           <ContentContainer>
             <p className="intro">A collaboration between <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
             <IconsContainer>
-              <Icon imgSrc="">
+              <Icon src1x="/assets/icons/icon-policy.png" src2x="/assets/icons/icon-policy@2x.png">
                 Increase public awareness and understanding of Internet policy issues.
               </Icon>
-              <Icon imgSrc="">
+              <Icon src1x="/assets/icons/icon-paths.png" src2x="/assets/icons/icon-paths@2x.png">
                 Support career paths in the Internet policy and advocacy sector.
               </Icon>
-              <Icon imgSrc="">
+              <Icon src1x="/assets/icons/icon-support.png" src2x="/assets/icons/icon-support@2x.png">
                 Celebrate and support the vibrant network of Internet advocacy organizations.
               </Icon>
             </IconsContainer>
