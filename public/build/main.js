@@ -24707,22 +24707,22 @@
 	      { className: "footer" },
 	      React.createElement(
 	        Icon,
-	        { href: "", src: "/assets/footer-icon-help.svg", title: "" },
+	        { href: "https://www.mozilla.org/contact/", src: "/assets/footer-icon-help.svg", title: "" },
 	        "Contact Us"
 	      ),
 	      React.createElement(
 	        Icon,
-	        { href: "", src: "/assets/footer-icon-twitter.svg", title: "" },
+	        { href: "https://twitter.com/MozillaAdvocacy", src: "/assets/footer-icon-twitter.svg", title: "" },
 	        "Connext on Twitter"
 	      ),
 	      React.createElement(
 	        Icon,
-	        { href: "", src: "/assets/footer-icon-terms.svg", title: "" },
+	        { href: "https://www.mozilla.org/en-US/about/legal.html", src: "/assets/footer-icon-terms.svg", title: "" },
 	        "Legal"
 	      ),
 	      React.createElement(
 	        Icon,
-	        { href: "", src: "/assets/footer-icon-privacy.svg", title: "" },
+	        { href: "https://www.mozilla.org/en-US/privacy/", src: "/assets/footer-icon-privacy.svg", title: "" },
 	        "Privacy Policy"
 	      ),
 	      React.createElement(
@@ -24902,6 +24902,7 @@
 	var HeroUnit = __webpack_require__(222);
 	var Apply = __webpack_require__(223);
 	var FellowsHeader = __webpack_require__(224);
+	var ImageTag = __webpack_require__(220);
 	var ContentContainer = __webpack_require__(225);
 
 	var IconsContainer = React.createClass({
@@ -24934,8 +24935,8 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
-	      'Planet Image'
+	      { className: 'globe-image-container' },
+	      React.createElement(ImageTag, { className: 'globe-image', alt: 'globe', width: 763, height: 441, src1x: '/assets/globe.png', src2x: '/assets/globe@2x.png' })
 	    );
 	  }
 	});
@@ -25001,7 +25002,7 @@
 	            'A collaboration between ',
 	            React.createElement(
 	              'a',
-	              { href: '#' },
+	              { href: 'http://www.fordfoundation.org/' },
 	              'Ford Foundation'
 	            ),
 	            ' and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:'
@@ -25028,7 +25029,7 @@
 	        ),
 	        React.createElement(
 	          ContentContainer,
-	          { className: 'grey slant flat-top' },
+	          { className: 'globe-offset grey slant flat-top' },
 	          React.createElement(
 	            'h2',
 	            null,
@@ -25043,7 +25044,12 @@
 	              React.createElement(
 	                'p',
 	                null,
-	                'It could be you! Broadly speaking, we are looking for makers – those who see a problem in the world and can solve it through technology or media. The right candidate may bring specialities in design, development, storytelling, research and policy analysis, and should be comfortable performing as a technologist, a tinkerer, and a curious contributor to the fellowship program. ',
+	                React.createElement(
+	                  'span',
+	                  { className: 'highlight' },
+	                  'It could be you!'
+	                ),
+	                ' Broadly speaking, we are looking for makers – those who see a problem in the world and can solve it through technology or media. The right candidate may bring specialities in design, development, storytelling, research and policy analysis, and should be comfortable performing as a technologist, a tinkerer, and a curious contributor to the fellowship program. ',
 	                React.createElement(
 	                  'b',
 	                  null,

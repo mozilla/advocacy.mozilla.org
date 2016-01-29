@@ -460,6 +460,19 @@
   font-size: 16px;
   line-height: 25px;
 }
+.overview-page .globe-image-container {
+  text-align: center;
+  margin-top: 70px;
+}
+.overview-page .page .globe-offset.content-container.slant.flat-top .content {
+  padding: 85px 0 0 0;
+}
+.overview-page .page .globe-offset.content-container.slant.flat-top:before {
+  height: calc(100% - 205px);
+}
+.overview-page .page .globe-offset.content-container.slant.flat-top:after {
+  height: calc(100% - 205px);
+}
 .overview-page h2 {
   color: #804A80;
   margin: 10px 0;
@@ -542,6 +555,11 @@ p {
 }
 .page a {
   color: #009DAA;
+}
+.highlight {
+  color: #804A80;
+  font-style: italic;
+  font-weight: 400;
 }
 h1 {
   font-size: 64px;
