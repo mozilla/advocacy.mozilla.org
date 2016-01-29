@@ -47,6 +47,9 @@
   margin: 0 18px;
   font-weight: 400;
 }
+.header .header-content .nav-items .nav-link-container a {
+  padding: 16px 0;
+}
 .header .header-content .nav-items .nav-link-container:hover {
   opacity: 1;
 }
@@ -113,6 +116,9 @@
   opacity: .6;
   margin: 0 18px;
   font-weight: 400;
+}
+.fellows-header .nav-items .nav-link-container a {
+  padding: 16px 0;
 }
 .fellows-header .nav-items .nav-link-container:hover {
   opacity: 1;
