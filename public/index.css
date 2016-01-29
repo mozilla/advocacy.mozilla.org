@@ -55,6 +55,9 @@
 .info-page .header .header-content .nav-items .nav-link-container.fellows-link {
   opacity: 1;
 }
+.home-page .header .header-content .nav-items .nav-link-container.home-link {
+  opacity: 1;
+}
 .fellows-header {
   width: 100%;
   position: relative;
