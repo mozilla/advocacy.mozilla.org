@@ -60,7 +60,9 @@
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
-	  { history: _reactRouter.browserHistory },
+	  { onUpdate: function onUpdate() {
+	      return window.scrollTo(0, 0);
+	    }, history: _reactRouter.browserHistory },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/' },
@@ -25281,9 +25283,8 @@
 	  displayName: 'exports',
 
 	  getInitialState: function getInitialState() {
-	    var sticky = window.pageYOffset >= 448;
 	    return {
-	      sticky: sticky
+	      sticky: false
 	    };
 	  },
 	  onScroll: function onScroll(e) {

@@ -4,9 +4,8 @@ var Link = Router.Link;
 
 module.exports = React.createClass({
   getInitialState: function() {
-    var sticky = window.pageYOffset >= 448;
     return {
-      sticky: sticky
+      sticky: false
     };
   },
   onScroll: function(e) {
