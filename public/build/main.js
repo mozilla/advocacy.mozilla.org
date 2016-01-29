@@ -25280,10 +25280,37 @@
 	module.exports = React.createClass({
 	  displayName: 'exports',
 
+	  getInitialState: function getInitialState() {
+	    var sticky = window.pageYOffset >= 448;
+	    return {
+	      sticky: sticky
+	    };
+	  },
+	  onScroll: function onScroll(e) {
+	    this.checkScroll(e.pageY);
+	  },
+	  checkScroll: function checkScroll(scroll) {
+	    var sticky = scroll >= 448;
+	    if (sticky !== this.state.sticky) {
+	      this.setState({
+	        sticky: sticky
+	      });
+	    }
+	  },
+	  componentDidMount: function componentDidMount() {
+	    document.addEventListener("scroll", this.onScroll);
+	  },
+	  componentWillUnmount: function componentWillUnmount() {
+	    document.removeEventListener("scroll", this.onScroll);
+	  },
 	  render: function render() {
+	    var className = "fellows-header";
+	    if (this.state.sticky) {
+	      className += " sticky";
+	    }
 	    return React.createElement(
 	      'div',
-	      { className: 'fellows-header' },
+	      { className: className },
 	      React.createElement('div', { className: 'fellow-header-overlay' }),
 	      React.createElement(
 	        'div',
