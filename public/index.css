@@ -444,6 +444,7 @@
           flex-shrink: 0;
 }
 .info-page .timeline .timeline-item-container .timeline-month {
+  padding-top: 2px;
   height: 60px;
   width: 190px;
   border: solid 2px #80B6B1;
@@ -719,9 +720,24 @@ h4 {
   border: 1px solid #FFFFFF;
   text-transform: uppercase;
   height: 50px;
-  padding: 15px 22px;
-  display: inline-block;
-  font-size: 18px;
+  padding: 4px 22px 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  font-size: 19px;
+  line-height: 2.5;
   box-sizing: border-box;
   margin: 0 0 20px 0;
   -webkit-transition: background-color 0.15s, color 0.15s;
