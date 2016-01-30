@@ -19,8 +19,10 @@ var IconListItem = React.createClass({
   render: function() {
     return (
       <div className="iconlist-item">
-        <ImageTag height={this.props.height} width={this.props.width} alt={this.props.alt} src1x={this.props.src1x} src2x={this.props.src2x}/>
         <div>
+          <ImageTag height={this.props.height} width={this.props.width} alt={this.props.alt} src1x={this.props.src1x} src2x={this.props.src2x}/>
+        </div>
+        <div className="content-container">
           {this.props.children}
         </div>
       </div>

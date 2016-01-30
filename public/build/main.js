@@ -25738,10 +25738,14 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'iconlist-item' },
-	      React.createElement(ImageTag, { height: this.props.height, width: this.props.width, alt: this.props.alt, src1x: this.props.src1x, src2x: this.props.src2x }),
 	      React.createElement(
 	        'div',
 	        null,
+	        React.createElement(ImageTag, { height: this.props.height, width: this.props.width, alt: this.props.alt, src1x: this.props.src1x, src2x: this.props.src2x })
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'content-container' },
 	        this.props.children
 	      )
 	    );
