@@ -34,13 +34,13 @@ var TimeLineItemContainer = React.createClass({
   render: function() {
     return (
       <div className="timeline-item-container">
-        <span className="timeline-month-container">
+        <div className="timeline-month-container">
           <div className="timeline-month">
             {this.props.month}
           </div>
           <div className="vertical-line"></div>
-        </span>
-        <span>{this.props.children}</span>
+        </div>
+        <div className="timeline-item-container-content">{this.props.children}</div>
       </div>
     );
   }

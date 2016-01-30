@@ -25785,7 +25785,7 @@
 	      'div',
 	      { className: 'timeline-item-container' },
 	      React.createElement(
-	        'span',
+	        'div',
 	        { className: 'timeline-month-container' },
 	        React.createElement(
 	          'div',
@@ -25795,8 +25795,8 @@
 	        React.createElement('div', { className: 'vertical-line' })
 	      ),
 	      React.createElement(
-	        'span',
-	        null,
+	        'div',
+	        { className: 'timeline-item-container-content' },
 	        this.props.children
 	      )
 	    );
