@@ -46,8 +46,18 @@
       }
     }
   }
-  @media screen and (min-width: 480px) {
-
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    margin-top: 0;
+    top: 260px;
+    .fellow-header-overlay {
+      opacity: 1;
+    }
+    &.sticky {
+      position: absolute;
+      top: 260px;
+      z-index: 1;
+    }
   }
 }
 
