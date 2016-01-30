@@ -25993,7 +25993,7 @@
 	                null,
 	                React.createElement(
 	                  IconListItem,
-	                  { alt: 'onboarding icon', height: 37, width: 37, src1x: '/assets/icons/icon-onboarding.png', src1x: '/assets/icons/icon-onboarding@2x.png' },
+	                  { alt: 'onboarding icon', height: 50, width: 37, src1x: '/assets/icons/icon-onboarding.png', src1x: '/assets/icons/icon-onboarding@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,
@@ -26021,7 +26021,7 @@
 	                ),
 	                React.createElement(
 	                  IconListItem,
-	                  { alt: 'additional icon', height: 37, width: 37, src1x: '/assets/icons/icon-additional.png', src1x: '/assets/icons/icon-additional@2x.png' },
+	                  { alt: 'additional icon', height: 47, width: 37, src1x: '/assets/icons/icon-additional.png', src1x: '/assets/icons/icon-additional@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,
@@ -26061,7 +26061,7 @@
 	                ),
 	                React.createElement(
 	                  IconListItem,
-	                  { alt: 'capstone icon', height: 37, width: 37, src1x: '/assets/icons/icon-capstone.png', src1x: '/assets/icons/icon-capstone@2x.png' },
+	                  { alt: 'capstone icon', height: 54, width: 37, src1x: '/assets/icons/icon-capstone.png', src1x: '/assets/icons/icon-capstone@2x.png' },
 	                  React.createElement(
 	                    'h4',
 	                    null,

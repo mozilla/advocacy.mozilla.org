@@ -112,7 +112,7 @@ module.exports = React.createClass({
             <div className="row">
               <div className="half">
                 <IconListContainer>
-                  <IconListItem alt="onboarding icon" height={37} width={37} src1x="/assets/icons/icon-onboarding.png" src1x="/assets/icons/icon-onboarding@2x.png">
+                  <IconListItem alt="onboarding icon" height={50} width={37} src1x="/assets/icons/icon-onboarding.png" src1x="/assets/icons/icon-onboarding@2x.png">
                     <h4>Onboarding</h4>
                     <p>1 week at the beginning of the Fellowship to meet in person with other fellows, host organizations, and Mozilla staff, and to design the Fellowship year and cohort expectations together.</p>
                   </IconListItem>
@@ -120,7 +120,7 @@ module.exports = React.createClass({
                     <h4>Fellows Retreat</h4>
                     <p>A halfway point check-in and time for cross collaboration in the cohort.</p>
                   </IconListItem>
-                  <IconListItem alt="additional icon" height={37} width={37} src1x="/assets/icons/icon-additional.png" src1x="/assets/icons/icon-additional@2x.png">
+                  <IconListItem alt="additional icon" height={47} width={37} src1x="/assets/icons/icon-additional.png" src1x="/assets/icons/icon-additional@2x.png">
                     <h4>Additional</h4>
                     <p>Conferences, hackathons and global networking opportunities may arise due to events in the Internet advocacy space.</p>
                   </IconListItem>
@@ -132,7 +132,7 @@ module.exports = React.createClass({
                     <h4><a href="https://2015.mozillafestival.org/">MozFest</a></h4>
                     <p>1 week with the rest of the Mozilla Foundation and community to share knowledge, learn, and meet other makers (location: London, UK).</p>
                   </IconListItem>
-                  <IconListItem alt="capstone icon" height={37} width={37} src1x="/assets/icons/icon-capstone.png" src1x="/assets/icons/icon-capstone@2x.png">
+                  <IconListItem alt="capstone icon" height={54} width={37} src1x="/assets/icons/icon-capstone.png" src1x="/assets/icons/icon-capstone@2x.png">
                     <h4>Capstone</h4>
                     <p>An event at the end of the Fellowship year to showcase each fellow’s work, share experiences with others.</p>
                   </IconListItem>
