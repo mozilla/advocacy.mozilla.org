@@ -1,14 +1,20 @@
 .fellows-header {
   width: 100%;
   position: relative;
-  &.sticky {
-    position: fixed;
-    top: 52px;
-    z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    &.sticky {
+      position: fixed;
+      top: 52px;
+      z-index: 2;
+      .fellow-header-overlay {
+        opacity: 1;
+        transition: opacity .1s, background-color .1s;
+        background-color: #009DAA;
+      }
+    }
     .fellow-header-overlay {
-      opacity: 1;
-      transition: opacity .1s, background-color .1s;
-      background-color: #009DAA;
+      transition: opacity .6s, background-color .6s;
     }
   }
   .fellow-header-overlay {
@@ -18,7 +24,6 @@
     content: '';
     height: 100%;
     width: 100%;
-    transition: opacity .6s, background-color .6s;
   }
   height: 52px;
   margin-top: -52px;
@@ -52,11 +57,6 @@
     top: 260px;
     .fellow-header-overlay {
       opacity: 1;
-    }
-    &.sticky {
-      position: absolute;
-      top: 260px;
-      z-index: 1;
     }
   }
 }
