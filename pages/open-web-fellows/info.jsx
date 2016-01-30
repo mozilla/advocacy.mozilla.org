@@ -32,7 +32,7 @@ var TimeLineItemContainer = React.createClass({
   render: function() {
     return (
       <div className="timeline-item-container">
-        <span>
+        <span className="timeline-month-container">
           <div className="timeline-month">
             {this.props.month}
           </div>

@@ -25760,7 +25760,7 @@
 	      { className: 'timeline-item-container' },
 	      React.createElement(
 	        'span',
-	        null,
+	        { className: 'timeline-month-container' },
 	        React.createElement(
 	          'div',
 	          { className: 'timeline-month' },
