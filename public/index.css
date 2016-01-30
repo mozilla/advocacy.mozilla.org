@@ -303,7 +303,7 @@
   overflow: auto;
   z-index: 1;
   padding: 85px 0 70px 0;
-  max-width: 1000px;
+  max-width: 960px;
   width: 100%;
   margin: 0 auto;
 }
@@ -444,7 +444,7 @@
           flex-shrink: 0;
 }
 .info-page .timeline .timeline-item-container .timeline-month {
-  padding-top: 2px;
+  padding-top: 4px;
   height: 60px;
   width: 190px;
   border: solid 2px #80B6B1;
@@ -467,7 +467,7 @@
   color: #667FB5;
   text-transform: uppercase;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
 }
 .info-page .timeline .timeline-item-container .timeline-month-container {
   position: relative;
@@ -497,6 +497,7 @@
           flex-shrink: 0;
   line-height: 30px;
   margin: 0 0 60px 50px;
+  font-weight: 300;
 }
 .info-page .timeline .timeline-item-container .timeline-item h4 {
   margin: 0;
@@ -545,14 +546,15 @@
   margin-right: 54px;
 }
 .info-page .fine-print {
-  line-height: 34px;
+  line-height: 42px;
   color: #A2A2A2;
   font-style: italic;
 }
 .info-page .financial-item {
   overflow: auto;
   border-top: 1px solid #D6D6D6;
-  line-height: 34px;
+  line-height: 42px;
+  font-weight: 300;
 }
 .info-page .financial-item:last-child {
   border-bottom: 1px solid #D6D6D6;
@@ -640,7 +642,7 @@
 }
 .fellows-page .fellow-block .fellow-info-container h2 {
   color: #804A80;
-  margin: 10px 0;
+  margin: 0;
 }
 .fellows-page .fellow-block .fellow-info-container .fellow-info {
   width: calc(100% - 235px);
@@ -650,7 +652,10 @@
   font-size: 22px;
   line-height: 32px;
   font-weight: 300;
-  margin: 10px 0;
+  margin: 0;
+}
+.fellows-page .fellow-block .fellow-info-container p:last-child {
+  margin: 6px 0 0 0;
 }
 .fellows-page .fellow-block .fellow-info-container .fellow-image-container img {
   margin-right: 35px;
@@ -676,6 +681,7 @@ p {
   font-size: 16px;
   line-height: 25px;
   font-weight: 300;
+  margin: 25px 0;
 }
 .page {
   background-color: #FFFFFF;
@@ -690,11 +696,14 @@ p {
   font-weight: 400;
 }
 h1 {
+  height: 77px;
   font-size: 64px;
   color: #80B6B1;
+  margin: 16px;
 }
 h2 {
   font-size: 50px;
+  font-weight: 700;
 }
 h3 {
   font-size: 32px;
