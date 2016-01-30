@@ -24824,7 +24824,7 @@
 	      React.createElement(
 	        Icon,
 	        { href: "https://twitter.com/MozillaAdvocacy", src: "/assets/footer-icon-twitter.svg", title: "" },
-	        "Connext on Twitter"
+	        "Connect on Twitter"
 	      ),
 	      React.createElement(
 	        Icon,
@@ -25156,7 +25156,7 @@
 	      React.createElement(
 	        'a',
 	        { href: this.props.linkLocation },
-	        React.createElement('img', { className: 'organization-image', width: '155', height: '80', src: this.props.imgSrc }),
+	        React.createElement('img', { className: 'organization-image', width: this.props.width, height: this.props.height, src: this.props.imgSrc }),
 	        React.createElement(
 	          'div',
 	          { className: 'organization-label' },
@@ -25217,17 +25217,17 @@
 	            null,
 	            React.createElement(
 	              Icon,
-	              { src1x: '/assets/icons/icon-policy.png', src2x: '/assets/icons/icon-policy@2x.png' },
+	              { alt: 'policy icon', src1x: '/assets/icons/icon-policy.png', src2x: '/assets/icons/icon-policy@2x.png' },
 	              'Increase public awareness and understanding of Internet policy issues.'
 	            ),
 	            React.createElement(
 	              Icon,
-	              { src1x: '/assets/icons/icon-paths.png', src2x: '/assets/icons/icon-paths@2x.png' },
+	              { alt: 'paths icon', src1x: '/assets/icons/icon-paths.png', src2x: '/assets/icons/icon-paths@2x.png' },
 	              'Support career paths in the Internet policy and advocacy sector.'
 	            ),
 	            React.createElement(
 	              Icon,
-	              { src1x: '/assets/icons/icon-support.png', src2x: '/assets/icons/icon-support@2x.png' },
+	              { alt: 'support icon', src1x: '/assets/icons/icon-support.png', src2x: '/assets/icons/icon-support@2x.png' },
 	              'Celebrate and support the vibrant network of Internet advocacy organizations.'
 	            )
 	          )
@@ -25305,21 +25305,25 @@
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-cipit.svg',
 	              linkTitle: 'Nairobi, Kenya',
+	              width: '155', height: '80',
 	              linkLocation: 'https://www.cipit.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-citizenlab.svg',
 	              linkTitle: 'Toronto, Canada',
+	              width: '180', height: '80',
 	              linkLocation: 'https://citizenlab.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-colorofchange.svg',
 	              linkTitle: 'New York, NY',
+	              width: '200', height: '80',
 	              linkLocation: 'http://colorofchange.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-datasociety.svg',
 	              linkTitle: 'New York, NY',
+	              width: '180', height: '80',
 	              linkLocation: 'http://www.datasociety.net/'
 	            })
 	          ),
@@ -25329,21 +25333,25 @@
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-derechos.svg',
 	              linkTitle: 'Santiago, Chile',
+	              width: '155', height: '80',
 	              linkLocation: 'https://www.derechosdigitales.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-edri.svg',
 	              linkTitle: 'Brussels, Belgium',
+	              width: '155', height: '80',
 	              linkLocation: 'https://edri.org/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-freedomofthepress.svg',
 	              linkTitle: 'San Francisco, CA',
+	              width: '155', height: '80',
 	              linkLocation: 'https://freedom.press/'
 	            }),
 	            React.createElement(Organization, {
 	              imgSrc: '/assets/logo-privacyinternational.svg',
 	              linkTitle: 'London, UK',
+	              width: '155', height: '80',
 	              linkLocation: 'https://www.privacyinternational.org/'
 	            })
 	          )
