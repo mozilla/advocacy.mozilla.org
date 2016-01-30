@@ -25,14 +25,32 @@
         height: 1px;
         margin: 0 auto;
       }
-      @media screen and (min-width: 768px) {
-        height: 424px;
-      }
+      height: 424px;
     }
 
     .button {
       &:hover {
         color: #667FB5;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .hero-unit {
+        height: auto;
+      }
+      .hero-unit-desktop {
+        display: block;
+        padding: 52px 0;
+      }
+      .hero-unit-mobile {
+        display: none;
+      }
+      .button {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        &:hover {
+          background-color: #FFFFFF;
+          color: #667FB5;
+        }
       }
     }
   }

@@ -21,6 +21,7 @@ module.exports = React.createClass({
               </div>
             </Link>
           </div>
+          <div className="header-overlay"></div>
           <div className="nav-items">
             <div className="nav-link-container home-link">
               <Link to="/">Home</Link>

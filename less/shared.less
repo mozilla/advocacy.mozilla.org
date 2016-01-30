@@ -40,15 +40,24 @@ p {
 }
 
 h1 {
-  height: 77px;
+  line-height: 77px;
   font-size: 64px;
   color: #80B6B1;
   margin: 16px;
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    font-size: 34px;
+    line-height: 40px;
+  }
 }
 
 h2 {
   font-size: 50px;
   font-weight: 700;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+    font-weight: 400;
+  }
 }
 
 h3 {
@@ -62,15 +71,29 @@ h4 {
 
 .row {
   overflow: auto;
-  .half {
-    float: left;
-    box-sizing: border-box;
-    width: 50%;
-    &:first-child {
-      padding-right: 15px;
+  @media screen and (max-width: 767px) {
+    .half {
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
-    &:last-child {
-      padding-left: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    .half {
+      float: left;
+      box-sizing: border-box;
+      width: 50%;
+      &:first-child {
+        padding-right: 15px;
+      }
+      &:last-child {
+        padding-left: 15px;
+      }
     }
   }
 }
@@ -82,6 +105,10 @@ h4 {
   line-height: 32px;
   text-align: center;
   margin: 0;
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .center-align {

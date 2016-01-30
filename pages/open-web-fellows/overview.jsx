@@ -32,7 +32,8 @@ var PlanetContent = React.createClass({
   render: function() {
     return (
       <div className="globe-image-container">
-        <ImageTag className="globe-image" alt="globe" width={763} height={441} src1x="/assets/icon-globe.png" src2x="/assets/icon-globe@2x.png"/>
+        <ImageTag className="globe-image desktop" alt="globe" width={763} height={441} src1x="/assets/icon-globe.png" src2x="/assets/icon-globe@2x.png"/>
+        <ImageTag className="globe-image mobile" alt="globe" width={271} height={271} src1x="/assets/icon-globe-mobile.png" src2x="/assets/icon-globe-mobile@2x.png"/>
       </div>
     );
   }
@@ -120,8 +121,6 @@ module.exports = React.createClass({
                 width="180" height="80"
                 linkLocation="http://www.datasociety.net/"
               />
-            </div>
-            <div className="organization-row">
               <Organization
                 imgSrc="/assets/logo-derechos.svg"
                 linkTitle="Santiago, Chile"

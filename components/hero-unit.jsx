@@ -38,6 +38,11 @@ module.exports = React.createClass({
         <div className="hero-unit" style={{
           backgroundImage: 'url(' + this.state.image + ')'
         }}>
+          <div className="hero-unit-desktop">
+            {this.props.children}
+          </div>
+        </div>
+        <div className="hero-unit-mobile center-align">
           {this.props.children}
         </div>
       </div>
