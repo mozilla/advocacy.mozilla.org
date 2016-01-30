@@ -469,12 +469,18 @@
   font-size: 30px;
   font-weight: 500;
 }
-.info-page .timeline .timeline-item-container .vertical-line {
+.info-page .timeline .timeline-item-container .timeline-month-container {
+  position: relative;
+}
+.info-page .timeline .timeline-item-container .timeline-month-container .vertical-line {
   width: 0;
   margin: 0 auto;
   border-left: solid 1px #80B6B1;
   border-right: solid 1px #80B6B1;
-  height: calc(100% - 60px);
+  position: absolute;
+  bottom: 0;
+  top: 60px;
+  left: 50%;
 }
 .info-page .timeline .timeline-item-container .timeline-item {
   height: 60px;
@@ -696,7 +702,7 @@ h4 {
 }
 .row .half {
   float: left;
-  box-sizing: padding-box;
+  box-sizing: border-box;
   width: 50%;
 }
 .row .half:first-child {
@@ -737,7 +743,6 @@ h4 {
       -ms-flex-negative: 0;
           flex-shrink: 0;
   font-size: 19px;
-  line-height: 2.5;
   box-sizing: border-box;
   margin: 0 0 20px 0;
   -webkit-transition: background-color 0.15s, color 0.15s;

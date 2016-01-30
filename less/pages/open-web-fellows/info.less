@@ -52,12 +52,18 @@
         font-size: 30px;
         font-weight: 500;
       }
-      .vertical-line {
-        width: 0;
-        margin: 0 auto;
-        border-left: solid 1px #80B6B1;
-        border-right: solid 1px #80B6B1;
-        height: ~"calc(100% - 60px)";
+      .timeline-month-container {
+        position: relative;
+        .vertical-line {
+          width: 0;
+          margin: 0 auto;
+          border-left: solid 1px #80B6B1;
+          border-right: solid 1px #80B6B1;
+          position: absolute;
+          bottom: 0;
+          top: 60px;
+          left: 50%;
+        }
       }
       .timeline-item {
         height: 60px;
