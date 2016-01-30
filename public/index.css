@@ -214,7 +214,7 @@
   cursor: pointer;
   display: inline-block;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
 }
 .footer .icon-container .icon .footer-icon {
   opacity: .5;
@@ -234,6 +234,7 @@
   margin: 0 auto;
 }
 .footer .footer-content p {
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
 }
 .footer .footer-content p a {
@@ -241,10 +242,9 @@
 }
 .footer .footer-content .horizontal-rule {
   background-color: #6E6E6E;
-  border-top: 1px solid #454545;
   height: 1px;
   width: 64px;
-  margin: 12px auto 0;
+  margin: 22px auto 0;
 }
 @media screen and (min-width: 480px) {
   .footer .footer-content {
@@ -259,19 +259,22 @@
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footer .footer-content img {
-    margin-left: 16px;
+    margin-left: 6px;
   }
   .footer .footer-content p {
     text-align: left;
+    width: calc(100% - 166px);
   }
   .footer .footer-content .horizontal-rule {
-    border-top: 0 solid #454545;
-    border-left: 1px solid #454545;
     height: 64px;
     width: 1px;
-    margin: 0 12px;
+    margin: 0 22px;
   }
   .footer .icon-container {
     display: inline-block;
@@ -342,7 +345,7 @@
 }
 .content-container.grey.slant.flat-top.slant:after {
   top: 0px;
-  height: calc(100% - 70px);
+  height: calc(100% - 100px);
 }
 .home-page .home-page-hero-unit .hero-unit {
   background-color: #003E60;

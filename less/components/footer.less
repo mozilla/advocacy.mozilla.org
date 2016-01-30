@@ -10,7 +10,7 @@
       cursor: pointer;
       display: inline-block;
       font-weight: 300;
-      font-size: 14px;
+      font-size: 16px;
       .footer-icon {
         opacity: .5;
       }
@@ -32,6 +32,7 @@
     width: 100%;
     margin: 0 auto;
     p {
+      font-size: 14px;
       color: rgba(255, 255, 255, 0.5);
       a {
         color: rgba(255, 255, 255, 1);
@@ -39,10 +40,9 @@
     }
     .horizontal-rule {
       background-color: #6E6E6E;
-      border-top: 1px solid #454545;
       height: 1px;
       width: 64px;
-      margin: 12px auto 0;
+      margin: 22px auto 0;
     }
   }
   @media screen and (min-width: 480px) {
@@ -50,18 +50,18 @@
       display: flex;
       align-items: center;
       flex-shrink: 0;
+      justify-content: center;
       img {
-        margin-left: 16px;
+        margin-left: 6px;
       }
       p {
         text-align: left;
+        width: ~"calc(100% - 166px)";
       }
       .horizontal-rule {
-        border-top: 0 solid #454545;
-        border-left: 1px solid #454545;
         height: 64px;
         width: 1px;
-        margin: 0 12px;
+        margin: 0 22px;
       }
     }
     .icon-container {
