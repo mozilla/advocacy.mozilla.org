@@ -25431,11 +25431,8 @@
 	      sticky: false
 	    };
 	  },
-	  onScroll: function onScroll(e) {
-	    this.checkScroll(e.pageY);
-	  },
-	  checkScroll: function checkScroll(scroll) {
-	    var sticky = scroll >= 448;
+	  onScroll: function onScroll() {
+	    var sticky = window.scrollY >= 448;
 	    if (sticky !== this.state.sticky) {
 	      this.setState({
 	        sticky: sticky
