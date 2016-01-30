@@ -532,6 +532,9 @@
           flex-shrink: 0;
   margin: 45px 0;
 }
+.info-page .iconlist-container .iconlist-item .content-container {
+  width: 100%;
+}
 .info-page .iconlist-container .iconlist-item p {
   margin: 0;
 }
@@ -639,6 +642,9 @@
   color: #804A80;
   margin: 10px 0;
 }
+.fellows-page .fellow-block .fellow-info-container .fellow-info {
+  width: calc(100% - 235px);
+}
 .fellows-page .fellow-block .fellow-info-container p {
   font-style: italic;
   font-size: 22px;
@@ -646,7 +652,7 @@
   font-weight: 300;
   margin: 10px 0;
 }
-.fellows-page .fellow-block .fellow-info-container .fellow-image-container {
+.fellows-page .fellow-block .fellow-info-container .fellow-image-container img {
   margin-right: 35px;
 }
 html {
