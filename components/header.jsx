@@ -11,8 +11,14 @@ module.exports = React.createClass({
         <div className="header-content">
           <div className="nav-home">
             <Link to="/">
-              <ImageTag src1x={logoImage}
-                alt="advocacy logo"/>
+              <div className="logo-fade">
+                <ImageTag src1x="/assets/logo-mozilla.svg"
+                  alt="advocacy logo"/>
+              </div>
+              <div>
+                <ImageTag src1x={logoImage}
+                  alt="advocacy logo"/>
+              </div>
             </Link>
           </div>
           <div className="nav-items">

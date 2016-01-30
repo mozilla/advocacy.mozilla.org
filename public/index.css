@@ -25,6 +25,10 @@
   padding-top: 0;
   width: auto;
 }
+.header .header-content .nav-home .logo-fade {
+  opacity: .4;
+  margin-bottom: 2px;
+}
 .header .header-content .nav-items {
   height: 100%;
   display: -webkit-box;
@@ -348,7 +352,7 @@
   height: calc(100% - 100px);
 }
 .home-page .home-page-hero-unit .hero-unit {
-  background-color: #003E60;
+  background-color: #009DAA;
 }
 .home-page .home-page-hero-unit .hero-unit h2 {
   color: #FFFFFF;
@@ -359,12 +363,13 @@
 .home-page .home-page-hero-unit .intro {
   width: 100%;
   max-width: 800px;
-  margin: 20px auto;
+  margin: 10px auto;
   font-weight: 400;
 }
 .home-page .row {
   max-width: 940px;
   width: 100%;
+  margin: 0 auto;
 }
 .home-page .row .half:first-child {
   padding-right: 10px;
@@ -379,7 +384,7 @@
   display: block;
 }
 .home-page .home-page-item-container .home-page-item {
-  padding: 40px 30px;
+  padding: 30px;
 }
 .home-page .home-page-item-container .home-page-item h3 {
   color: #804A80;

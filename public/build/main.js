@@ -24727,7 +24727,7 @@
 	                  src1x: '/assets/home-neutrality.jpg',
 	                  src2x: '/assets/home-neutrality@2x.jpg',
 	                  label: 'Net Neutrality',
-	                  buttonHref: '',
+	                  buttonHref: 'https://www.youtube.com/watch?v=I-UPyuW5j9o&feature=youtu.be',
 	                  buttonLabel: 'watch video'
 	                },
 	                'In 2015, we fought to keep the Internet free of fast lanes, slow lanes and corporate control. Our community petitioned Congress and made a difference.'
@@ -24738,7 +24738,7 @@
 	                  src1x: '/assets/home-fellows.jpg',
 	                  src2x: '/assets/home-fellows@2x.jpg',
 	                  label: 'Open Web Fellows',
-	                  buttonHref: '',
+	                  buttonHref: 'https://advocacy.mozilla.org/open-web-fellows/',
 	                  buttonLabel: 'learn more'
 	                },
 	                'The Open Web Fellows program places the best emerging technology talent at civil society organizations around the globe. As threats to digital freedom proliferate, it\'s critical to have capable leaders.'
@@ -24753,7 +24753,7 @@
 	                  src1x: '/assets/home-freedom.jpg',
 	                  src2x: '/assets/home-freedom@2x.jpg',
 	                  label: 'USA FREEDOM Act',
-	                  buttonHref: '',
+	                  buttonHref: 'https://blog.mozilla.org/netpolicy/2015/06/02/mozilla-applauds-u-s-senates-passage-of-the-usa-freedom-act/',
 	                  buttonLabel: 'read post'
 	                },
 	                'Mass Surveillance is a threat to privacy and trust online. Our community fought for the successful passage of the USA FREEDOM Act, a first step toward reforming mass surveillance.'
@@ -24764,7 +24764,7 @@
 	                  src1x: '/assets/home-policy.jpg',
 	                  src2x: '/assets/home-policy@2x.jpg',
 	                  label: 'Net Policy Blog',
-	                  buttonHref: '',
+	                  buttonHref: 'https://blog.mozilla.org/netpolicy/?s=USA+Freedom',
 	                  buttonLabel: 'read post'
 	                },
 	                'Mozilla\'s team of policy experts and engineers are fighting for a free and open Internet. Read the latest developments and news on Our Net Policy blog.'
@@ -24892,8 +24892,18 @@
 	          React.createElement(
 	            Link,
 	            { to: '/' },
-	            React.createElement(ImageTag, { src1x: logoImage,
-	              alt: 'advocacy logo' })
+	            React.createElement(
+	              'div',
+	              { className: 'logo-fade' },
+	              React.createElement(ImageTag, { src1x: '/assets/logo-mozilla.svg',
+	                alt: 'advocacy logo' })
+	            ),
+	            React.createElement(
+	              'div',
+	              null,
+	              React.createElement(ImageTag, { src1x: logoImage,
+	                alt: 'advocacy logo' })
+	            )
 	          )
 	        ),
 	        React.createElement(
