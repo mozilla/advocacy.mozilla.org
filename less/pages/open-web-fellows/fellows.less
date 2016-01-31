@@ -6,15 +6,17 @@
   }
   .fellow-block {
     .fellow-info-container {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
+      @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        .fellow-info {
+          width: ~"calc(100% - 235px)";
+        }
+      }
       h2 {
         color: #804A80;
         margin: 0;
-      }
-      .fellow-info {
-        width: ~"calc(100% - 235px)";
       }
       p {
         font-style: italic;
@@ -28,7 +30,11 @@
       }
       .fellow-image-container {
         img {
-          margin-right: 35px;
+          margin-bottom: 15px;
+          @media screen and (min-width: 768px) {
+            margin-right: 25px;
+            margin-bottom: 0;
+          }
         }
       }
     }
