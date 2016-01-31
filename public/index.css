@@ -336,6 +336,9 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .footer .footer-content p a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.footer .footer-content p a:hover {
   color: #ffffff;
 }
 .footer .footer-content .horizontal-rule {
@@ -344,7 +347,19 @@
   width: 64px;
   margin: 22px auto 0;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
+  .footer .icon-container:first-child {
+    margin-top: 0;
+  }
+  .footer .icon-container:last-child {
+    margin-bottom: 45px;
+  }
+  .footer .icon-container img {
+    display: block;
+    margin: 6px auto 6px;
+  }
+}
+@media screen and (min-width: 768px) {
   .footer .footer-content {
     display: -webkit-box;
     display: -webkit-flex;
