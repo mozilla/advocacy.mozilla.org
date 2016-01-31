@@ -861,6 +861,20 @@
 .fellows-page .fellow-block .fellow-info-container .fellow-image-container img {
   margin-right: 35px;
 }
+.encrypt .hero-unit {
+  background-color: #5D5D5D;
+}
+.encrypt .encryptText {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.encrypt .content-container .content {
+  padding-top: 0;
+}
+.encrypt .videoSection {
+  text-align: center;
+  background-color: #000;
+}
 html {
   background-color: #1E1E1E;
   font-family: 'Fira Sans', Arial, "Lucida Grande", sans-serif;
