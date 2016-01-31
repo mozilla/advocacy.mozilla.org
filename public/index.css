@@ -22,7 +22,7 @@
       -ms-flex-negative: 0;
           flex-shrink: 0;
   float: left;
-  padding-top: 0;
+  padding: 0 20px;
   width: auto;
 }
 .header .header-content .nav-home .logo-fade {
@@ -120,13 +120,11 @@
   }
   .fellows-header.sticky .fellow-header-overlay {
     opacity: 1;
-    -webkit-transition: opacity 0.1s, background-color 0.1s;
-            transition: opacity 0.1s, background-color 0.1s;
     background-color: #009DAA;
   }
   .fellows-header .fellow-header-overlay {
-    -webkit-transition: opacity 0.6s, background-color 0.6s;
-            transition: opacity 0.6s, background-color 0.6s;
+    -webkit-transition: opacity 0.1s, background-color 0.1s;
+            transition: opacity 0.1s, background-color 0.1s;
   }
 }
 .fellows-header .fellow-header-overlay {
@@ -455,7 +453,8 @@
     height: calc(100% - 100px);
   }
 }
-.home-page .home-page-hero-unit .hero-unit-mobile {
+.home-page .home-page-hero-unit .hero-unit-mobile,
+.home-page .home-page-hero-unit .hero-unit-desktop {
   padding: 25px;
 }
 .home-page .home-page-hero-unit .hero-unit {
@@ -463,8 +462,11 @@
 }
 .home-page .home-page-hero-unit h2 {
   margin: 10px auto;
+}
+.home-page .home-page-hero-unit h2,
+.home-page .home-page-hero-unit p {
   width: 100%;
-  max-width: 940px;
+  max-width: 960px;
 }
 @media screen and (max-width: 767px) {
   .home-page .home-page-hero-unit h2,
@@ -473,8 +475,6 @@
   }
 }
 .home-page .home-page-hero-unit .intro {
-  width: 100%;
-  max-width: 800px;
   margin: 10px auto;
   font-weight: 400;
 }
@@ -682,6 +682,9 @@
     height: 424px;
   }
 }
+.info-page .fellowship-structure-container .content {
+  max-width: 780px;
+}
 .info-page .iconlist-container {
   margin-top: 40px;
 }
@@ -829,6 +832,9 @@
 .overview-page .organization-row .organization:hover {
   opacity: 1;
 }
+.overview-page .organization-row .organization:hover a:hover {
+  color: #009DAA;
+}
 @media screen and (min-width: 768px) {
   .overview-page .organization-row {
     overflow: hidden;
@@ -837,6 +843,10 @@
 }
 .fellows-page .fellows-hero-unit .hero-unit {
   background-position: center 20%;
+}
+.fellows-page .fellow-block {
+  max-width: 780px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .fellows-page .fellow-block .fellow-info-container {
@@ -922,6 +932,9 @@ p {
 }
 .page a {
   color: #009DAA;
+}
+.page a:hover {
+  color: #003E60;
 }
 .highlight {
   color: #804A80;

@@ -67,7 +67,7 @@ module.exports = React.createClass({
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
-            <p className="intro">A collaboration between <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
+            <p className="intro">The Open Web Fellows program -- a collaboration between <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:</p>
             <IconsContainer>
               <Icon alt="policy icon" src1x="/assets/icons/icon-policy.png" src2x="/assets/icons/icon-policy@2x.png">
                 Increase public awareness and understanding of Internet policy issues.

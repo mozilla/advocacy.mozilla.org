@@ -84,7 +84,7 @@ module.exports = React.createClass({
         </HeroUnit>
         <FellowsHeader/>
         <div className="page">
-          <ContentContainer>
+          <ContentContainer className="fellowship-structure-container">
             <h2 className="center-align">Structure of the Fellowship</h2>
             <p className="intro">As a fellow, you will pursue the following activities over your fellowship year.</p>
             <IconListContainer>
