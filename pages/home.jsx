@@ -66,7 +66,7 @@ module.exports = React.createClass({
               src1x="/assets/home-policy.jpg"
               src2x="/assets/home-policy@2x.jpg"
               label="Net Policy Blog"
-              buttonHref="https://blog.mozilla.org/netpolicy/?s=USA+Freedom"
+              buttonHref="https://blog.mozilla.org/netpolicy/"
               buttonLabel="read post"
             >
               Mozilla's team of policy experts and engineers are fighting for a free and open Internet. Read the latest developments and news on Our Net Policy blog.
