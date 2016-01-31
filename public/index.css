@@ -478,16 +478,10 @@
   margin: 10px auto;
   font-weight: 400;
 }
-.home-page .row {
-  max-width: 940px;
-  width: 100%;
-  margin: 0 auto;
-}
-.home-page .row .half:first-child {
-  padding-right: 10px;
-}
-.home-page .row .half:last-child {
-  padding-left: 10px;
+@media screen and (max-width: 767px) {
+  .home-page .content {
+    padding: 0;
+  }
 }
 .home-page .home-page-item-container {
   max-width: 460px;

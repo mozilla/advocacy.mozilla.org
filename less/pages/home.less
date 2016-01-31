@@ -23,17 +23,9 @@
       font-weight: 400;
     }
   }
-  .row {
-    max-width: 940px;
-    width: 100%;
-    margin: 0 auto;
-    .half {
-      &:first-child {
-        padding-right: 10px;
-      }
-      &:last-child {
-        padding-left: 10px;
-      }
+  @media screen and (max-width: 767px) {
+    .content {
+      padding: 0;
     }
   }
   .home-page-item-container {
