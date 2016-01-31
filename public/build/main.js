@@ -25212,7 +25212,7 @@
 	          React.createElement(
 	            'p',
 	            { className: 'intro' },
-	            'A collaboration between ',
+	            'The Open Web Fellows program -- a collaboration between ',
 	            React.createElement(
 	              'a',
 	              { href: 'http://www.fordfoundation.org/' },
@@ -25864,7 +25864,7 @@
 	        { className: 'page' },
 	        React.createElement(
 	          ContentContainer,
-	          null,
+	          { className: 'fellowship-structure-container' },
 	          React.createElement(
 	            'h2',
 	            { className: 'center-align' },

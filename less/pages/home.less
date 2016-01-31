@@ -1,6 +1,7 @@
 .home-page {
   .home-page-hero-unit {
-    .hero-unit-mobile {
+    .hero-unit-mobile,
+    .hero-unit-desktop {
       padding: 25px;
     }
     .hero-unit {
@@ -8,8 +9,10 @@
     }
     h2 {
       margin: 10px auto;
+    }
+    h2, p {
       width: 100%;
-      max-width: 940px;
+      max-width: 960px;
     }
     @media screen and (max-width: 767px) {
       h2, p {
@@ -17,8 +20,6 @@
       }
     }
     .intro {
-      width: 100%;
-      max-width: 800px;
       margin: 10px auto;
       font-weight: 400;
     }
