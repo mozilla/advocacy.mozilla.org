@@ -89,7 +89,7 @@ module.exports = React.createClass({
             <p className="intro">As a fellow, you will pursue the following activities over your fellowship year.</p>
             <IconListContainer>
               <IconListItem alt="pie chart icon" height={71} width={71} src1x="/assets/icons/icon-third1.svg">
-                <p><span className="highlight">Work on projects defined by your host organization.</span> These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.</p>
+                <p><span className="highlight">Work on projects defined by your host organization.</span> These can be campaigns, research or technology focused. For some examples, <a href="https://wiki.mozilla.org/Netpolicy/advocacy/openwebfellows">browse what the 2015 cohort worked on</a>.</p>
               </IconListItem>
               <IconListItem alt="pie chart icon" height={71} width={71} src1x="/assets/icons/icon-third2.svg">
                 <p><span className="highlight">Invest in your future as an open Web advocate.</span> By sharing your work in the open, participating in professional development activities, attending and presenting talks, or writing and publishing, you will spend time developing your own path while contributing to a global movement.</p>
@@ -102,7 +102,7 @@ module.exports = React.createClass({
           <ContentContainer className="grey slant flat-top responsibilities">
             <h2>Fellow Responsibilities</h2>
             <h4>A commitment to teamwork and working in the open.</h4>
-            <p>he fellowship team includes the host organizations, Mozilla, and the fellows. We expect you to join the working teams of your host organization and contribute to the mission, organizational culture and work products of your host organization. Successful fellows will enjoy both teaching and learning; mentorship is core to this fellowship. We expect you to follow the interaction styles and inclusion principles in the <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/">Mozilla Community Participation Guidelines</a>.</p>
+            <p>The fellowship team includes the host organizations, Mozilla, and the fellows. We expect you to join the working teams of your host organization and contribute to the mission, organizational culture and work products of your host organization. Successful fellows will enjoy both teaching and learning; mentorship is core to this fellowship. We expect you to follow the interaction styles and inclusion principles in the <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/">Mozilla Community Participation Guidelines</a>.</p>
             <h4>Documentation</h4>
             <p>The Fellowship is an opportunity for you to reach new audiences – both in the general public, and professionally within the Internet policy and advocacy space. Mozilla and host organizations expect fellows to document their year publicly via blogs, code sharing, and events.</p>
             <h4>Calls</h4>
@@ -185,7 +185,7 @@ module.exports = React.createClass({
           </div>
           <ContentContainer>
             <h4>The fellowship offers a grant of USD$60,000 paid in 10 monthly installments. Fellows are not employees of Mozilla or host organizations, and are responsible for remitting all applicable taxes and other government payments required.</h4>
-            <p>Supplements for child care, health insurance, housing, and research/equipment are listed below. If you relocate for a fellowship, we will supplement your moving expenses. The fellowship also covers the costs of required travel for fellowship activities.</p>
+            <p>Supplements for child care, health insurance, housing, and research/equipment are listed below. If you relocate for a fellowship, we will supplement your moving expenses. The fellowship also covers the costs of required travel for fellowship activities. Supplements listed below are yearly maximums in USD.</p>
             <div className="row row-list">
               <div className="half">
                 <h3>Housing Supplement</h3>

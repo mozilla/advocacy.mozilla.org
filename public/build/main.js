@@ -24754,7 +24754,7 @@
 	              src1x: '/assets/home-policy.jpg',
 	              src2x: '/assets/home-policy@2x.jpg',
 	              label: 'Net Policy Blog',
-	              buttonHref: 'https://blog.mozilla.org/netpolicy/?s=USA+Freedom',
+	              buttonHref: 'https://blog.mozilla.org/netpolicy/',
 	              buttonLabel: 'read post'
 	            },
 	            'Mozilla\'s team of policy experts and engineers are fighting for a free and open Internet. Read the latest developments and news on Our Net Policy blog.'
@@ -25222,7 +25222,13 @@
 	              { href: 'http://www.fordfoundation.org/' },
 	              'Ford Foundation'
 	            ),
-	            ' and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web, the goals of the Open Web Fellows programs are to:'
+	            ' and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web. ',
+	            React.createElement(
+	              'b',
+	              null,
+	              'Specifically'
+	            ),
+	            ', the goals of the Open Web Fellows programs are to:'
 	          ),
 	          React.createElement(
 	            IconsContainer,
@@ -25893,7 +25899,13 @@
 	                  { className: 'highlight' },
 	                  'Work on projects defined by your host organization.'
 	                ),
-	                ' These can be campaigns, research or technology focused. For some examples, browse what the 2015 cohort worked on.'
+	                ' These can be campaigns, research or technology focused. For some examples, ',
+	                React.createElement(
+	                  'a',
+	                  { href: 'https://wiki.mozilla.org/Netpolicy/advocacy/openwebfellows' },
+	                  'browse what the 2015 cohort worked on'
+	                ),
+	                '.'
 	              )
 	            ),
 	            React.createElement(
@@ -25942,7 +25954,7 @@
 	          React.createElement(
 	            'p',
 	            null,
-	            'he fellowship team includes the host organizations, Mozilla, and the fellows. We expect you to join the working teams of your host organization and contribute to the mission, organizational culture and work products of your host organization. Successful fellows will enjoy both teaching and learning; mentorship is core to this fellowship. We expect you to follow the interaction styles and inclusion principles in the ',
+	            'The fellowship team includes the host organizations, Mozilla, and the fellows. We expect you to join the working teams of your host organization and contribute to the mission, organizational culture and work products of your host organization. Successful fellows will enjoy both teaching and learning; mentorship is core to this fellowship. We expect you to follow the interaction styles and inclusion principles in the ',
 	            React.createElement(
 	              'a',
 	              { href: 'https://www.mozilla.org/en-US/about/governance/policies/participation/' },
@@ -26173,7 +26185,7 @@
 	          React.createElement(
 	            'p',
 	            null,
-	            'Supplements for child care, health insurance, housing, and research/equipment are listed below. If you relocate for a fellowship, we will supplement your moving expenses. The fellowship also covers the costs of required travel for fellowship activities.'
+	            'Supplements for child care, health insurance, housing, and research/equipment are listed below. If you relocate for a fellowship, we will supplement your moving expenses. The fellowship also covers the costs of required travel for fellowship activities. Supplements listed below are yearly maximums in USD.'
 	          ),
 	          React.createElement(
 	            'div',
