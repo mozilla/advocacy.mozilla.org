@@ -35,7 +35,10 @@
       font-size: 14px;
       color: rgba(255, 255, 255, 0.5);
       a {
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255, 255, 255, 0.8);
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
       }
     }
     .horizontal-rule {
@@ -45,7 +48,21 @@
       margin: 22px auto 0;
     }
   }
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
+    .icon-container {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 45px;;
+      }
+      img {
+        display: block;
+        margin: 6px auto 6px;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
     .footer-content {
       display: flex;
       align-items: center;

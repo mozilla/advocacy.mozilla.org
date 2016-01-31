@@ -24805,24 +24805,28 @@
 	      "div",
 	      { className: "footer" },
 	      React.createElement(
-	        Icon,
-	        { href: "https://www.mozilla.org/contact/", src: "/assets/footer-icon-help.svg", title: "" },
-	        "Contact Us"
-	      ),
-	      React.createElement(
-	        Icon,
-	        { href: "https://twitter.com/MozillaAdvocacy", src: "/assets/footer-icon-twitter.svg", title: "" },
-	        "Connect on Twitter"
-	      ),
-	      React.createElement(
-	        Icon,
-	        { href: "https://www.mozilla.org/en-US/about/legal.html", src: "/assets/footer-icon-terms.svg", title: "" },
-	        "Legal"
-	      ),
-	      React.createElement(
-	        Icon,
-	        { href: "https://www.mozilla.org/en-US/privacy/", src: "/assets/footer-icon-privacy.svg", title: "" },
-	        "Privacy Policy"
+	        "div",
+	        null,
+	        React.createElement(
+	          Icon,
+	          { href: "https://www.mozilla.org/contact/", src: "/assets/footer-icon-help.svg", title: "" },
+	          "Contact Us"
+	        ),
+	        React.createElement(
+	          Icon,
+	          { href: "https://twitter.com/MozillaAdvocacy", src: "/assets/footer-icon-twitter.svg", title: "" },
+	          "Connect on Twitter"
+	        ),
+	        React.createElement(
+	          Icon,
+	          { href: "https://www.mozilla.org/en-US/about/legal.html", src: "/assets/footer-icon-terms.svg", title: "" },
+	          "Legal"
+	        ),
+	        React.createElement(
+	          Icon,
+	          { href: "https://www.mozilla.org/en-US/privacy/", src: "/assets/footer-icon-privacy.svg", title: "" },
+	          "Privacy Policy"
+	        )
 	      ),
 	      React.createElement(
 	        "div",
