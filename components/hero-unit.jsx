@@ -25,7 +25,7 @@ module.exports = React.createClass({
   },
 
   propTypes: {
-    'image': React.PropTypes.string.isRequired
+    'image': React.PropTypes.string
   },
 
   render: function() {
@@ -33,11 +33,15 @@ module.exports = React.createClass({
     if (this.props.className) {
       className += " " + this.props.className;
     }
+    var style = {};
+    if (this.props.image) {
+      style = {
+        backgroundImage: 'url(' + this.state.image + ')'
+      };
+    }
     return (
       <div className={className}>
-        <div className="hero-unit" style={{
-          backgroundImage: 'url(' + this.state.image + ')'
-        }}>
+        <div className="hero-unit" style={style}>
           <div className="hero-unit-desktop">
             {this.props.children}
           </div>
