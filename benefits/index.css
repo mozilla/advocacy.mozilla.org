@@ -1,0 +1,67 @@
+
+/****************************
+* Table
+****************************/
+
+.omsc-custom-table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin: 1em 0;
+}
+
+.omsc-custom-table td {
+  margin: 0;
+  padding: 0.5em 0.5em;
+  border: 1px solid #ddd;
+}
+
+.omsc-custom-table.omsc-style-1 {
+  border: 1px solid #ccc;
+  border-color: rgba(0,0,0,0.15);
+  border-collapse: separate;
+  border-spacing: 0px;
+  margin: 1em 0;
+}
+
+.omsc-custom-table.omsc-style-1 td {
+  border: 0;
+  margin: 0;
+  padding: 0.5em 0.5em;
+}
+
+.omsc-custom-table.omsc-style-1 td {
+  background: #fafafa;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.omsc-custom-table.omsc-style-1 tr:nth-child(even) td {
+  background: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+#page {
+  background-color: #f2f0e9;
+  background-image: url("../common/assets/bg-gradient-sand.png"), url("../common/assets/bg-sand.png");
+  background-repeat: repeat-x, repeat;
+}
+
+#site-title a:hover,
+#site-title a:focus,
+#site-title a:active {
+  color: #0073aa;
+}
+
+/* @Links */
+
+a:link,
+a:visited {
+  color: #0096dd;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #0073aa;
+  text-decoration: underline;
+}

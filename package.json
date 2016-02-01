@@ -1,0 +1,23 @@
+{
+  "name": "advocacy.mozilla.org",
+  "version": "1.0.0",
+  "description": "advocacy.mozilla.org",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozilla/advocacy.mozilla.org"
+  },
+  "keywords": [
+    "advocacy"
+  ],
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mozilla/advocacy.mozilla.org/issues"
+  },
+  "homepage": "https://github.com/mozilla/advocacy.mozilla.org",
+  "dependencies": {
+    "live-server": "^0.7.1"
+  }
+}
