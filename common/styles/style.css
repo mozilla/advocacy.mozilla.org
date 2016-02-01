@@ -318,6 +318,7 @@ footer a.red:visited {
   background-repeat: repeat-x;
   padding: 0px;
   position: relative;
+  overflow: hidden;
 }
 
 .hero {
