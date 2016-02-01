@@ -32,3 +32,10 @@
 .fa-bars:before {
   content: "\f0c9";
 }
+.wrap #content {
+  padding: 0 20px;
+}
+
+.wrap #mobile-nav-container {
+  padding-left: 20px;
+}
