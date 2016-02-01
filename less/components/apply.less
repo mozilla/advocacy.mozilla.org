@@ -1,0 +1,57 @@
+.apply {
+  .apply-hero-unit {
+    .hero-unit {
+      background-position: center 0;
+      text-transform: none;
+      h2, h4 {
+        color: #FFFFFF;
+        max-width: 900px;
+        width: 100%;
+        margin: 10px auto;
+      }
+      h4 {
+        font-style: italic;
+        margin: 22px auto;
+      }
+      .fine-print {
+        font-size: 16px;
+        font-weight: 300;
+        font-style: italic;
+        color: #FFFFFF;
+      }
+      .horizontal-rule {
+        background-color: #FFFFFF;
+        width: 82px;
+        height: 1px;
+        margin: 0 auto;
+      }
+      height: 424px;
+    }
+
+    .button {
+      &:hover {
+        color: #667FB5;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .hero-unit {
+        height: auto;
+      }
+      .hero-unit-desktop {
+        display: block;
+        padding: 52px 0;
+      }
+      .hero-unit-mobile {
+        display: none;
+      }
+      .button {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+        &:hover {
+          background-color: #FFFFFF;
+          color: #667FB5;
+        }
+      }
+    }
+  }
+}

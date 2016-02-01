@@ -1,0 +1,79 @@
+.fellows-header {
+  width: 100%;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    &.sticky {
+      position: fixed;
+      top: 52px;
+      z-index: 2;
+      .fellow-header-overlay {
+        opacity: 1;
+        background-color: #009DAA;
+      }
+    }
+    .fellow-header-overlay {
+      transition: opacity .1s, background-color .1s;
+    }
+  }
+  .fellow-header-overlay {
+    position: absolute;
+    background-color: #003E60;
+    opacity: 0.5;
+    content: '';
+    height: 100%;
+    width: 100%;
+  }
+  height: 52px;
+  margin-top: -52px;
+  color: #FFFFFF;
+  .nav-items {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 100%;
+    margin: 0 auto;
+    .nav-link-container {
+      font-size: 20px;
+      color: #FFFFFF;
+      opacity: .6;
+      margin: 0 18px;
+      font-weight: 400;
+      a {
+        padding: 16px 0;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    margin-top: 0;
+    top: 260px;
+    .fellow-header-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.fellows-page .fellows-header .nav-items {
+  .nav-link-container.current-fellows-link {
+    opacity: 1;
+  }
+}
+
+.info-page .fellows-header .nav-items {
+  .nav-link-container.info-link {
+    opacity: 1;
+  }
+}
+
+.overview-page .fellows-header .nav-items {
+  .nav-link-container.overview-link {
+    opacity: 1;
+  }
+}

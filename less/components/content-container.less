@@ -1,0 +1,67 @@
+.content-container {
+  position: relative;
+  .content {
+    position: relative;
+    overflow: auto;
+    z-index: 1;
+    padding: 85px 0 70px 0;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 767px) {
+    .content {
+      padding: 25px;
+      box-sizing: border-box;
+    }
+  }
+  &.grey {
+    background-color: #EFEFEF;
+    @media screen and (min-width: 768px) {
+      &.slant {
+        background-color: #FFFFFF;
+        &:before {
+          content: '';
+          position: absolute;
+          background-color: #EFEFEF;
+          transform: skewY(-5deg);
+          width: 100%;
+          height: 100%;
+        }
+        &.flat-bottom,
+        &.flat-top {
+          &.slant {
+            &:before {
+              height: ~"calc(100% - 85px)";
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              background-color: #EFEFEF;
+              width: 100%;
+            }
+          }
+        }
+        &.flat-bottom {
+          &.slant {
+            &:after {
+              bottom: 0px;
+              height: ~"calc(100% - 85px)";
+            }
+          }
+        }
+        &.flat-top {
+          &.slant {
+            &:before {
+              top: 85px;
+            }
+            &:after {
+              top: 0px;
+              height: ~"calc(100% - 100px)";
+            }
+          }
+        }
+      }
+    }
+  }
+}

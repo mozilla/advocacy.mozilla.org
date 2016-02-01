@@ -1,0 +1,47 @@
+.hero-unit-container {
+  overflow: hidden;
+  .hero-unit {
+    background-color: #00A2AF;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    justify-content: center;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    @media screen and (min-width: 768px) {
+      height: 500px;
+      font-size: 44px;
+    }
+  }
+  .hero-unit-mobile {
+    display: none;
+  }
+  .button {
+    &:hover {
+      color: #009DAA;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    background-color: #FFFFFF;
+    .hero-unit-desktop {
+      display: none;
+    }
+    .hero-unit-mobile {
+      display: block;
+      padding-top: 52px;
+    }
+    .button {
+      border-color: #009DAA;
+      color: #009DAA;
+      &:hover {
+        background-color: #009DAA;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
