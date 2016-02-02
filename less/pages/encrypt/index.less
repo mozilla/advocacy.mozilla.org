@@ -1,6 +1,21 @@
+// color sets based on https://cloud.githubusercontent.com/assets/12228435/12741443/381d0424-c931-11e5-8b61-02fe6b30c3c3.png
+@primary_lightblue: #5381B9;
+@primary_darkblue: #005189;
+@primary_red: #F46060;
+@contrast_lightblue: #1C325E;
+@contrast_darkblue: #283344;
+@contrast_red: #FF8F98;
+
+@blue_ui_typography: #6DADE2;
+
+
 .encrypt {
+
+  ///
+  /// default stuff
+  ///
   .hero-unit {
-    background-color:  #5D5D5D;
+    background-color: @primary_darkblue;
   }
   .encryptText {
     max-width: 1200px;
@@ -14,5 +29,128 @@
   .videoSection {
     text-align: center;
     background-color: #000;
+  }
+
+  ////
+  //// v2 stuff
+  ////
+  .videoSection-v2 {
+    text-align: center;
+    background-color: @contrast_lightblue;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    .left-section {
+      display: inline-block;
+      width: 550px;
+      overflow: hidden;
+      video {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+    .right-section {
+      display: inline-block;
+      padding-left: 55px;
+      width: 385px;
+      vertical-align: top;
+      box-sizing: border-box;
+      overflow: hidden;
+      margin: 0;
+    }
+
+  }
+  .encrypt-meta-v2 {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    .videoTitle {
+      font-size: 45px;
+      color: @primary_red;
+    }
+    .videoMeta {
+      .white-text {
+        color: #FFF;
+      }
+      .purple-text {
+        color: #8B3283;
+      }
+      p {
+        font-size: 18px;
+        color: #FFF;
+      }
+    }
+  }
+  .v2-cta-header {
+    color: #F46060;
+    margin: auto 0;
+    font-weight: lighter;
+    font-size: 38px;
+    text-align: left;
+  }
+  .v2-cta-hr {
+    display: none;
+  }
+  .v2-cta-text {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+    text-align: left;
+  }
+
+  ///
+  /// common stuff
+  ///
+  .logo {
+    height: 100%;
+    padding: 0 20px;
+  }
+  .input {
+    height: 50px;
+    width: 100%;
+    margin-top: 25px;
+  }
+  .input:first-of-type {
+    margin: 0;
+  }
+  .checkboxDiv {
+    margin-top: 35px;
+    input[type="checkbox"] {
+      float: left;
+      margin-top: 5px;
+    }
+    .label {
+      color: #FFF;
+      font-style: italic;
+      font-weight: lighter;
+      font-size: 18px;
+      text-align: left;
+      margin-left: 25px;
+    }
+  }
+  .horizontal-rule {
+    background-color: #6E6E6E;
+    height: 1px;
+    width: 64px;
+    margin: 22px auto 0;
+  }
+
+  ///
+  /// media queries
+  ///
+  @media (max-width: 320px) {
+    .videoSection-v2 {
+      .right-section {
+        width: 300px;
+        padding: 0px;
+      }
+      .left-section {
+        width: 300px;
+        video {
+          max-width: 300px;
+          width: 100%;
+        }
+      }
+    }
   }
 }

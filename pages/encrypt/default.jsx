@@ -11,7 +11,7 @@ module.exports = React.createClass({
       <div className="encrypt">
         <div className="header">
           <div className="header-content">
-            <ImageTag height="30" width="105" src1x="/assets/logo-mozilla.svg" alt="Mozilla logo"/>
+            <ImageTag className="logo" height={30} width={105} src1x="/assets/logo-mozilla.svg" alt="Mozilla logo"/>
           </div>
           </div>
         <HeroUnit>
@@ -21,7 +21,7 @@ module.exports = React.createClass({
           </div>
         </HeroUnit>
         <div className="page">
-          <Video/>
+          <Video className="videoSection"/>
           <ContentContainer className="encryptMeta">
             <h2>
               Why does encryption matter?
