@@ -1,4 +1,5 @@
 var React = require('react');
+var Button = require('./button.jsx');
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -18,6 +19,7 @@ module.exports = React.createClass({
             I'm okay with you handling this info as you explain in your privacy policy.
           </div>
         </div>
+        <Button text="Sign up" link="http://google.com"/>
       </div>
     );
   }

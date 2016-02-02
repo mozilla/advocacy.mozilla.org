@@ -31,6 +31,26 @@
     background-color: #000;
   }
 
+  .footer {
+    background-color: @contrast_darkblue;
+  }
+
+  .button {
+    text-transform: none;
+    background-color: @primary_red;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 300;
+    border-color: @primary_red;
+    height: 55px;
+    width: 180px;
+    &:hover {
+      border-color: @contrast_red;
+      background-color: @contrast_red;
+      color: #FFF;
+    }
+  }
+
   ////
   //// v2 stuff
   ////
@@ -103,6 +123,45 @@
   ///
   /// common stuff
   ///
+
+  .share-this-now {
+    font-weight: 300;
+    font-size: 18px;
+    height: 110px;
+    color: #FFF;
+    background-color: @primary_red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+      justify-content: center;
+      .social {
+        display: inline;
+        .circle {
+          display: inline-block;
+          border-radius: 50%;
+          height: 35px;
+          width: 35px;
+          background-color: #FF8F98;
+          text-align: center;
+          vertical-align: middle;
+          margin-right: 5px;
+          i {
+            padding: 7px;
+            font-size: 20px;
+          }
+        }
+      }
+      .title {
+        font-weight: 300;
+        font-size: 27px;
+        padding-right: 12px;
+      }
+      .text {
+        font-style: italic;
+      }
+    }
+  }
   .logo {
     height: 100%;
     padding: 0 20px;
@@ -117,6 +176,7 @@
   }
   .checkboxDiv {
     margin-top: 35px;
+    padding-bottom: 40px;
     input[type="checkbox"] {
       float: left;
       margin-top: 5px;
