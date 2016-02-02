@@ -30,7 +30,7 @@ module.exports = React.createClass({
               <Link to="/open-web-fellows/">Open Web Fellows</Link>
             </div>
             <div className="nav-link-container blog-link">
-              <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/">Blog</a>
+              <a href="https://blog.mozilla.org/netpolicy/">Blog</a>
             </div>
           </div>
         </div>

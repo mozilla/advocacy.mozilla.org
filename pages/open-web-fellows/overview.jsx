@@ -95,7 +95,7 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <h2>Host Organizations</h2>
-            <p className="center-align">Each year, fellows spend 10 months embedded at leading policy & advocacy organizations dedicated to safeguarding the open Internet as a global public resource. Fellows are based in the town of their host organization unless special circumstances dictate otherwise. Read the <a href="#">blog post</a> to find out what host organizations are looking for. The 2016 host organizations are:</p>
+            <p className="center-align">Each year, fellows spend 10 months embedded at leading policy & advocacy organizations dedicated to safeguarding the open Internet as a global public resource. Fellows are based in the town of their host organization unless special circumstances dictate otherwise. Read the <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/">blog post</a> to find out what host organizations are looking for. The 2016 host organizations are:</p>
             <div className="organization-row">
               <Organization
                 imgSrc="/assets/logo-cipit.svg"
