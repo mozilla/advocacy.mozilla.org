@@ -5,6 +5,20 @@ var Video = require('../../components/video.jsx');
 var ImageTag = require('../../components/imagetag.jsx');
 var Signup = require('../../components/signup.jsx');
 var CTA = require('../../components/cta.jsx');
+var Icon = require('../../components/footer-icon.jsx');
+
+var ShareThisNow = React.createClass({
+  render: function() {
+    return (
+      <div className="share-this-now">
+        <div>
+          <span className="title">Share This Now</span> <div className="social"> <div className="circle"><i className="fa fa-envelope"></i></div> <div className="circle"><i className="fa fa-facebook"></i></div> <div className="circle"><i className="fa fa-twitter"></i></div></div><span className="text">We need your help to spread the word about how encryption protects our privacy.</span>
+        </div>
+      </div>
+    );
+  }
+
+});
 
 module.exports = React.createClass({
   render: function() {
@@ -41,8 +55,11 @@ module.exports = React.createClass({
               />
             </Signup>
           </div>
+          <ShareThisNow/>
         </div>
-        <Footer/>
+        <Footer>
+          <Icon href="https://twitter.com/MozillaAdvocacy" src="/assets/footer-icon-twitter.svg" title="">FIXME</Icon>
+        </Footer>
       </div>
     );
   }
