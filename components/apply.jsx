@@ -13,7 +13,7 @@ module.exports = React.createClass({
             <a href="https://mozilla-foundation-2.forms.fm/2016-ford-mozilla-open-web-fellows-application
 " className="button">apply to become a fellow</a>
           </div>
-          <div className="fine-print">Deadline 11:59pm PST March 20, 2016</div>
+          <div className="fine-print">Deadline 11:59pm PDT March 20, 2016</div>
         </HeroUnit>
       </div>
     );
