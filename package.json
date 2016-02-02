@@ -13,7 +13,7 @@
     "watch:js": "npm run build:js -- --watch",
     "watch:css": "autoless --autoprefix '> 1%, last 2 versions' less public",
     "server": "node app.js",
-    "postinstall": "mkdirp last && mkdirp public/pages && node build.js"
+    "postinstall": "node build.js"
   },
   "repository": {
     "type": "git",

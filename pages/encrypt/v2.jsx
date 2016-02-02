@@ -25,9 +25,9 @@ module.exports = React.createClass({
             <Video className="left-section" poster="/assets/home-freedom.jpg">
               <div className="encrypt-meta-v2">
                 <span className="videoMeta"><span className="white-text">EPISODE 1</span> &nbsp;  <span className="purple-text">FEBUARY 08, 2016 &nbsp; 0:53</span></span>
-                <h2 className="videoTitle">
+                <span className="videoTitle">
                   Privacy Lets You Be You
-                </h2>
+                </span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
             </Video>
