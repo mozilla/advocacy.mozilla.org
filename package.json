@@ -7,11 +7,9 @@
     "build:production": "npm-run-all --parallel minify:js minify:css",
     "build:dev": "npm-run-all --parallel build:js build:css",
     "build:js": "webpack --progress --profile --colors",
-    "build:css": "npm run watch:css -- --no-watch",
     "minify:js": "npm run build:js -- --optimize-minimize --optimize-dedupe",
     "minify:css": "npm run watch:css -- --no-watch",
     "watch:js": "npm run build:js -- --watch",
-    "watch:css": "autoless --autoprefix '> 1%, last 2 versions' less public",
     "server": "node app.js",
     "postinstall": "node build.js"
   },
@@ -28,7 +26,6 @@
   },
   "homepage": "https://github.com/mozilla/advocacy.mozilla.org",
   "dependencies": {
-    "autoless": "0.1.7",
     "babel-core": "6.4.5",
     "babel-loader": "6.2.1",
     "babel-preset-es2015": "6.3.13",
@@ -36,7 +33,6 @@
     "compression": "1.6.1",
     "cross-spawn": "0.2.9",
     "css-loader": "0.14.2",
-    "eslint-plugin-react": "3.14.0",
     "express": "4.13.4",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.4",
