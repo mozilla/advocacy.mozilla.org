@@ -2,8 +2,11 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './client.jsx',
+  entry: {
+    advocacy: ['./advocacy-main.jsx', './less/advocacy.less'],
+    encrypt: ['./encrypt-main.jsx', './less/encrypt.less']
 
+  },
   output: {
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
@@ -35,6 +38,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('index.css')
+    new ExtractTextPlugin('[name].css')
   ]
 };

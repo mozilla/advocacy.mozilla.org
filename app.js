@@ -1,8 +1,8 @@
 var express = require('express'),
-    Habitat = require('habitat'),
-    path = require('path'),
-    compression = require('compression'),
-    helmet = require('helmet');
+  helmet = require('helmet'),
+  Habitat = require('habitat'),
+  path = require('path'),
+  compression = require('compression');
 
 Habitat.load();
 
@@ -36,6 +36,10 @@ app.use(function(req, resp, next){
 app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
 app.use(function(err, req, res, next) {
   res.send(err);
+});
+
+app.get('/encrypt/*', function (request, response) {
+  response.sendFile(path.join(__dirname, '/public/encrypt/index.html'));
 });
 
 app.get('*', function (request, response) {
