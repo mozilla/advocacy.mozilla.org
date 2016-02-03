@@ -1,6 +1,5 @@
 var React = require('react');
 var Footer = require('../../components/footer.jsx');
-var HeroUnit = require('../../components/hero-unit.jsx');
 var Video = require('../../components/video.jsx');
 var ImageTag = require('../../components/imagetag.jsx');
 var Signup = require('../../components/signup.jsx');
@@ -17,11 +16,9 @@ module.exports = React.createClass({
             <ImageTag className="logo" height={30} width={105} src1x="/assets/logo-mozilla.svg" alt="Mozilla logo"/>
           </div>
         </header>
-        <HeroUnit>
-          <div className="encryptText">
-            <img src="http://dummyimage.com/960x200/5381b9/f46060.png&text=Encrypt"/>
-          </div>
-        </HeroUnit>
+        <div className="encryptText">
+          <img src="http://dummyimage.com/960x200/5381b9/f46060.png&text=Encrypt"/>
+        </div>
         <div className="page">
           <div className="videoSection-v2">
             <Video className="left-section" poster="/assets/home-freedom.jpg">
