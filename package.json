@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "advocacy.mozilla.org",
   "scripts": {
-    "start": "npm-run-all --parallel server watch:js watch:css",
-    "build:production": "npm-run-all --parallel minify:js minify:css",
-    "build:dev": "npm-run-all --parallel build:js build:css",
+    "start": "npm-run-all --parallel watch:js server",
+    "build:production": "npm-run-all --parallel minify:js",
+    "build:dev": "npm-run-all --parallel build:js",
     "build:js": "webpack --progress --profile --colors",
     "minify:js": "npm run build:js -- --optimize-minimize --optimize-dedupe",
-    "minify:css": "npm run watch:css -- --no-watch",
     "watch:js": "npm run build:js -- --watch",
     "server": "node app.js",
     "postinstall": "node build.js"
@@ -41,6 +40,7 @@
     "jsx-loader": "0.13.2",
     "less": "2.5.3",
     "less-loader": "2.2.2",
+    "node-jsx": "^0.13.3",
     "npm-run-all": "1.2.4",
     "react": "0.14.6",
     "react-dom": "0.14.6",
