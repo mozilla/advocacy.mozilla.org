@@ -4,7 +4,7 @@ var Icon = require('./footer-icon.jsx');
 module.exports = React.createClass({
   render: function() {
     return (
-      <div className="footer">
+      <footer className="footer">
         <div>
           <Icon href="https://www.mozilla.org/contact/" src="/assets/footer-icon-help.svg" title="">Contact Us</Icon>
           <Icon href="https://twitter.com/MozillaAdvocacy" src="/assets/footer-icon-twitter.svg" title="">Connect on Twitter</Icon>
@@ -21,7 +21,7 @@ module.exports = React.createClass({
             Mozilla is a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href="//mozilla.org">mozilla.org</a>
           </p>
         </div>
-      </div>
+      </footer>
     );
   }
 });
