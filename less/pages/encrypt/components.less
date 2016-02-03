@@ -19,8 +19,10 @@
     background-color: @primary_darkblue;
   }
   .encryptText {
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0px auto;
+    z-index: 2;
+    position: relative;
   }
   .content-container {
     .content {
@@ -30,6 +32,8 @@
   .videoSection {
     text-align: center;
     background-color: #000;
+    z-index: 1;
+    display: flex;
   }
 
   .footer {
@@ -55,7 +59,14 @@
     ///
   /// common stuff
   ///
-
+  .signup-wrapper{
+    background-color: @primary_darkblue;
+    width: 50%;
+  }
+  .share-wrapper{
+    width: 50%;
+    background-color: @primary_red;
+  }
   .share-this-now {
     font-weight: 300;
     font-size: 18px;
