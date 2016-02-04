@@ -18,12 +18,25 @@
   .share-this-now, .join-mozilla{
     max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    h2{
+      margin-bottom: 0;
+    }
+    .horizontal-rule{
+      display: block;
+    }
+    .social{
+      order: 2;
+    }
   }
 
 }
 
 .dual-cta-wrapper{
-  @media(min-width: 600px){
+  @media(min-width: 767px){
     display: flex;
   }
 }
