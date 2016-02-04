@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "advocacy.mozilla.org",
   "scripts": {
-    "start": "npm-run-all --parallel watch:js server",
-    "build:production": "npm-run-all --parallel minify:js",
-    "build:dev": "npm-run-all --parallel build:js",
-    "build:js": "webpack --progress --profile --colors",
-    "minify:js": "npm run build:js -- --optimize-minimize --optimize-dedupe",
-    "watch:js": "npm run build:js -- --watch",
+    "start": "node scripts/build.js",
+    "start:prod": "npm-run-all build:*",
+    "start:dev": "npm-run-all --parallel build:l10njson watch:js server",
+    "build:js": "webpack --optimize-minimize --optimize-dedupe",
+    "build:l10njson": "node scripts/properties2json",
+    "watch:js": "webpack --progress --profile --colors --watch",
     "server": "node app.js",
-    "postinstall": "node build.js"
+    "postinstall": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "express": "4.13.4",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.4",
+    "fs-writefile-promise": "^1.0.3",
     "habitat": "3.1.2",
     "json-loader": "0.5.1",
     "jsx-loader": "0.13.2",
@@ -43,6 +44,8 @@
     "less-loader": "2.2.2",
     "node-jsx": "^0.13.3",
     "npm-run-all": "1.2.4",
+    "properties-parser": "^0.3.1",
+    "q-io": "^1.13.2",
     "react": "0.14.6",
     "react-dom": "0.14.6",
     "react-hot-loader": "1.2.7",
