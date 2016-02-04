@@ -1,0 +1,98 @@
+//Elements
+*, *:before, *:after{
+	box-sizing: border-box;
+}
+
+html {
+  background-color: #1E1E1E;
+  font-family: 'Fira Sans',Arial,"Lucida Grande",sans-serif;
+}
+body{
+	margin: 0;
+	background-color: #1c325e;
+}
+
+img, video{
+max-width: 100%;
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 300;
+  margin: 25px 0;
+}
+
+video{
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: #009DAA;
+	&:hover {
+		color: #003E60;
+  }
+  &:link,
+  &:visited,
+  &:active{
+  	color: inherit;
+  }
+}
+
+h1 {
+  line-height: 77px;
+  font-size: 64px;
+  color: #80B6B1;
+  margin: 16px;
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  @media screen and (max-width: 767px) {
+    font-size: 32px;
+    font-weight: 400;
+  }
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+
+
+.button {
+  font-family: 'Fira Sans',Arial,"Lucida Grande",sans-serif;
+  border: 1px solid #FFFFFF;
+  text-transform: uppercase;
+  height: 50px;
+  padding: 4px 22px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 19px;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+  transition: background-color .15s, color .15s;
+  &:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+}
+
+.button-groove {
+  border: groove 1px;
+  border-radius: 2em;
+}

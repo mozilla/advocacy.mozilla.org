@@ -1,1 +1,54 @@
-@import "home";
+// color sets based on https://cloud.githubusercontent.com/assets/12228435/12741443/381d0424-c931-11e5-8b61-02fe6b30c3c3.png
+@primary_lightblue: #5381B9;
+@primary_darkblue: #005189;
+@primary_red: #F46060;
+@contrast_lightblue: #1C325E;
+@contrast_darkblue: #283344;
+@contrast_red: #FF8F98;
+
+@blue_ui_typography: #6DADE2;
+
+@import "base";
+@import "components";
+@import "layout";
+
+
+.encrypt {
+  background: @primary_darkblue;
+  .videoSection{
+
+  }
+}
+
+
+//TODO: Is this still necessary?
+.encrypt.v3{
+
+  ////
+  //// v3 stuff
+  ////
+  .videoSection{
+    background-color: @contrast_lightblue;
+    padding-bottom: 50px;
+    padding-top: 30px;
+
+  }
+
+  .cta-header {
+    color: #F46060;
+    margin: auto 0;
+    font-weight: lighter;
+    font-size: 38px;
+    text-align: left;
+  }
+  .cta-hr {
+    display: none;
+  }
+  .cta-text {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+    text-align: left;
+  }
+
+}

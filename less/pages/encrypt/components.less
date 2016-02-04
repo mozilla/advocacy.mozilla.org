@@ -1,22 +1,17 @@
 @import "../../components/footer";
 
-.encrypt{
-  ///
-  /// default stuff
-  ///
-  img{
-    max-width: 100%;
-  }
+//EncryptHeader
+
   header{
     background-color: @primary_darkblue;
     overflow-y: visible;
   }
   .header-content{
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
   }
-  .hero-unit {
-    background-color: @primary_darkblue;
+  .logo {
+    margin: 30px 0 20px;
   }
   .encryptText {
     max-width: 960px;
@@ -24,6 +19,106 @@
     z-index: 2;
     position: relative;
   }
+
+//EncryptVideo
+
+.video-wrapper{
+  position: relative;
+  background: black;
+}
+video{
+  margin: 0 auto;
+}
+.encrypt-meta-wrapper{
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+}
+.encrypt-meta{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    .videoTitle {
+      font-size: 45px;
+      color: @primary_red;
+      display: block;
+    }
+    .videoMeta {
+      .white-text {
+        color: #FFF;
+      }
+      .purple-text {
+        color: #8B3283;
+      }
+    }
+    p {
+      font-size: 18px;
+      color: #FFF;
+      margin: 0;
+    }
+  }
+
+.join-mozilla{
+  color: #FFF;
+  text-align: center;
+}
+//ShareThisNow
+.share-this-now {
+  font-weight: 300;
+  font-size: 18px;
+  height: 110px;
+  color: #FFF;
+  background-color: @primary_red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
+    justify-content: center;
+    .social {
+      display: inline;
+      .circle {
+        display: inline-block;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        background-color: #FF8F98;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 5px;
+        i {
+          padding: 7px;
+          font-size: 20px;
+        }
+      }
+    }
+    .title {
+      font-weight: 300;
+      font-size: 27px;
+      padding-right: 12px;
+    }
+    .text {
+      font-style: italic;
+    }
+  }
+}
+
+
+//Footer
+
+.footer {
+  background-color: @contrast_darkblue;
+}
+
+
+
+
+
+.encrypt{
+  ///
+  /// default stuff
+  ///
+
   .content-container {
     .content {
       padding-top: 0;
@@ -34,10 +129,6 @@
     background-color: #000;
     z-index: 1;
     display: flex;
-  }
-
-  .footer {
-    background-color: @contrast_darkblue;
   }
 
   .button {
@@ -56,58 +147,14 @@
     }
   }
 
+
+
     ///
   /// common stuff
   ///
-  .signup-wrapper{
-    background-color: @primary_darkblue;
-    width: 50%;
-  }
-  .share-wrapper{
-    width: 50%;
-    background-color: @primary_red;
-  }
-  .share-this-now {
-    font-weight: 300;
-    font-size: 18px;
-    height: 110px;
-    color: #FFF;
-    background-color: @primary_red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    div {
-      justify-content: center;
-      .social {
-        display: inline;
-        .circle {
-          display: inline-block;
-          border-radius: 50%;
-          height: 35px;
-          width: 35px;
-          background-color: #FF8F98;
-          text-align: center;
-          vertical-align: middle;
-          margin-right: 5px;
-          i {
-            padding: 7px;
-            font-size: 20px;
-          }
-        }
-      }
-      .title {
-        font-weight: 300;
-        font-size: 27px;
-        padding-right: 12px;
-      }
-      .text {
-        font-style: italic;
-      }
-    }
-  }
-  .logo {
-    padding: 30px 120px;
-  }
+
+
+
   .input {
     height: 50px;
     width: 100%;

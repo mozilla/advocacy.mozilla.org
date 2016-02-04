@@ -1,47 +1,52 @@
+//V1 Stuff
+
 .encrypt.v1{
   header{
     max-height: 200px;
   }
+  .video-description{
+    display: none;
+  }
 }
+
+//V2 Stuff
 
 .encrypt.v2{
   header{
     max-height: 235px;
   }
-  .share-this-now, .signup{
+  .share-this-now, .join-mozilla{
     max-width: 600px;
+    margin: 0 auto;
+  }
+
+}
+
+.dual-cta-wrapper{
+  @media(min-width: 600px){
+    display: flex;
   }
 }
+
+.join-mozilla-wrapper{
+  background-color: @primary_darkblue;
+  flex:1;
+}
+.share-wrapper{
+  flex: 1;
+  background-color: @primary_red;
+}
+
+//V3 Stuff
 
 .encrypt.v3{
   .encryptText{
     margin-bottom: 20px;
   }
-}
-
-
-.dual-cta-wrapper{
-  display: flex;
-}
-
-.encrypt {
-  ///
-  /// media queries
-  ///
-  @media (max-width: 320px) {
-    .videoSection-v3 {
-      .right-section {
-        width: 300px;
-        padding: 0px;
-      }
-      .left-section {
-        width: 300px;
-        video {
-          max-width: 300px;
-          width: 100%;
-        }
-      }
-    }
+  .video-wrapper{
+    background: transparent;
   }
-
+  .encrypt-meta-wrapper{
+    position: static;
+  }
 }
