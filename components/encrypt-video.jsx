@@ -1,7 +1,9 @@
 var React = require('react');
 
 module.exports = React.createClass({
-
+  componentDidMount: function() {
+    alert('hehe');
+  },
   render: function() {
     return (
       <div className="video-wrapper">
