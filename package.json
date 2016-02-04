@@ -10,6 +10,7 @@
     "build:l10njson": "node scripts/properties2json",
     "watch:js": "webpack --progress --profile --colors --watch",
     "server": "node app.js",
+    "lint": "eslint --config ./node_modules/mofo-style/.eslintrc.yaml --ext .js,.jsx .",
     "postinstall": "node scripts/build.js"
   },
   "repository": {
@@ -53,5 +54,9 @@
     "style-loader": "0.13.0",
     "url-loader": "0.5.6",
     "webpack": "1.12.12"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "mofo-style": "^2.2.0"
   }
 }
