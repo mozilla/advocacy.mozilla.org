@@ -15,6 +15,13 @@ body{
 img, video{
 max-width: 100%;
 }
+video{
+	width: 100%;
+}
+
+main{
+	background-color: black;
+}
 
 p {
   font-size: 16px;
@@ -32,11 +39,6 @@ a {
 	color: #009DAA;
 	&:hover {
 		color: #003E60;
-  }
-  &:link,
-  &:visited,
-  &:active{
-  	color: inherit;
   }
 }
 
@@ -72,27 +74,20 @@ h4 {
 
 
 
-.button {
-  font-family: 'Fira Sans',Arial,"Lucida Grande",sans-serif;
-  border: 1px solid #FFFFFF;
-  text-transform: uppercase;
-  height: 50px;
-  padding: 4px 22px 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 19px;
-  box-sizing: border-box;
-  margin: 0 0 20px 0;
-  transition: background-color .15s, color .15s;
-  &:hover {
-    background-color: #FFFFFF;
-    color: #000000;
-  }
-}
-
-.button-groove {
-  border: groove 1px;
-  border-radius: 2em;
+.button{
+	font-family: "Fira Sans", sans-serif;
+	font-size: 18px;
+	background-color: #f46060;
+	border: none;
+	color: white;
+	padding: 12px 37px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 25px;
+	transition: all 0.5s ease-in-out 0s;
+	cursor: pointer;
+	&:hover{
+		background-color: white;
+		color: #f46060;
+	}
 }
