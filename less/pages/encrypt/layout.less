@@ -22,8 +22,10 @@
     flex-direction: column;
     align-items: center;
     padding: 1em;
+    text-align: center;
     h2{
       margin-bottom: 0;
+      font-size: 38px;
     }
     .horizontal-rule{
       display: block;
@@ -53,11 +55,30 @@
 //V3 Stuff
 
 .encrypt.v3{
+  main{
+    background-color: @contrast_lightblue;
+  }
   .encryptText{
     margin-bottom: 20px;
   }
+  .videoSection{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+    @media(min-width: 600px){
+      display: flex;
+    }
+  }
   .video-wrapper{
     background: transparent;
+    flex: 2;
+    @media(min-width: 600px){
+      margin-right: 2em;
+    }
+  }
+  .encrypt-signup{
+    flex: 1;
+    text-align: center;
   }
   .encrypt-meta-wrapper{
     position: static;

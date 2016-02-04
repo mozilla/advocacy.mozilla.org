@@ -25,7 +25,7 @@ module.exports = React.createClass({
                <p>
                  For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla.
                </p>
-               <button className="button button-groove">Sign up</button>
+	       <button className="button">Sign up</button>
              </div>
             </div>
             <div className="share-wrapper">
