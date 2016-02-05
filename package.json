@@ -41,6 +41,7 @@
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.4",
     "habitat": "3.1.2",
+    "helmet": "^1.1.0",
     "json-loader": "0.5.1",
     "jsx-loader": "0.13.2",
     "less": "2.5.3",
