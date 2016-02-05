@@ -1,20 +1,10 @@
-var Path = require('path');
+import React from 'react';
+import { Router, Route, browserHistory } from 'react-router';
 
-const home = {
-  path: '/encrypt',
-  pathToFile: Path.join(__dirname, './pages/encrypt/default.jsx')
-};
-
-const v2 = {
-  path: '/encrypt/v2',
-  pathToFile: Path.join(__dirname, './pages/encrypt/v2.jsx')
-};
-const v3 = {
-  path: '/encrypt/v3',
-  pathToFile: Path.join(__dirname, './pages/encrypt/v3.jsx')
-};
-
-module.exports = {
-  routes: [ home, v2, v3 ],
-  notFoundRedirect: '/'
-};
+export default (
+  (<Router history={browserHistory}>
+    <Route path="/encrypt" component={require('./pages/encrypt/default.jsx')}/>
+    <Route path="/encrypt/v2" component={require('./pages/encrypt/v2.jsx')}/>
+    <Route path="/encrypt/v3" component={require('./pages/encrypt/v3.jsx')}/>
+  </Router>)
+);

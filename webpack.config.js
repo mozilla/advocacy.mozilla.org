@@ -1,10 +1,13 @@
+require('babel-core/register');
+
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var SimpleHtmlPrecompiler = require('./scripts/simple-html-plugin.js');
 
 module.exports = {
   entry: {
     advocacy: ['./advocacy-main.jsx', './less/advocacy.less'],
-    encrypt: ['./encrypt-main.jsx', './less/encrypt.less']
+    encrypt: ['./encrypt-app.jsx', './less/encrypt.less']
 
   },
   output: {
@@ -38,6 +41,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
+    new SimpleHtmlPrecompiler(['/encrypt', '/encrypt/v2', '/encrypt/v3'])
   ]
 };

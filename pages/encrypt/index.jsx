@@ -28,6 +28,7 @@ module.exports = React.createClass({
         </head>
         <body>
           <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
+          <script src="/build/encrypt.js"></script>
         </body>
       </html>
     );

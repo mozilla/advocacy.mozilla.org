@@ -2,8 +2,7 @@ var express = require('express'),
   helmet = require('helmet'),
   Habitat = require('habitat'),
   path = require('path'),
-  compression = require('compression'),
-  ReactRouting = require('./lib/react-server-route.js');
+  compression = require('compression');
 
 Habitat.load();
 
@@ -37,10 +36,6 @@ app.use(function(req, resp, next){
 app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
 app.use(function(err, req, res, next) {
   res.send(err);
-});
-
-app.get('/encrypt*', function(request, response) {
-  ReactRouting(request, response);
 });
 
 app.get('*', function(request, response) {
