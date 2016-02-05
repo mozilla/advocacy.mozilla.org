@@ -9,6 +9,8 @@ Habitat.load();
 var app = express(),
   env = new Habitat();
 
+app.set('trust proxy', true);
+
 app.use(compression());
 app.use(helmet());
 app.use(helmet.hsts({
