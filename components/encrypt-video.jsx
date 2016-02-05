@@ -7,7 +7,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="video-wrapper">
-        <video poster="/assets/Encrypt_static_image.png" autoBuffer controls width={this.props.width} height={this.props.height}>
+	<video poster="/assets/Encrypt_static_image.png" autoBuffer width={this.props.width} height={this.props.height}>
           <source id="mp4" src="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4" type="video/mp4"/>
         </video>
         <div className="encrypt-meta-wrapper">

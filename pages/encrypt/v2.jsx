@@ -17,7 +17,7 @@ module.exports = React.createClass({
           <EncryptVideo className="video-wrapper" />
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
-             <div className="join-mozilla">
+	     <div className="join-mozilla cta">
                 <h2>
                  Join Mozilla
                </h2>
@@ -28,9 +28,7 @@ module.exports = React.createClass({
 	       <button className="button">Sign up</button>
              </div>
             </div>
-            <div className="share-wrapper">
-              <ShareThisNow/>
-            </div>
+	    <ShareThisNow/>
           </div>
         </main>
         <Footer>
