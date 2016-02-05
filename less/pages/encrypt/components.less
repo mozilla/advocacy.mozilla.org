@@ -104,7 +104,7 @@ video{
       }
   }
   .horizontal-rule{ display: none; }
-  p{
+  p {
     font-style: italic;
   }
   .social {
@@ -120,8 +120,8 @@ video{
       vertical-align: middle;
       margin-right: 5px;
       i {
-	padding: 7px;
-	font-size: 20px;
+	      padding: 7px;
+	      font-size: 20px;
       }
     }
   }
@@ -151,7 +151,27 @@ video{
   /// common stuff
   ///
 
-
+  select {
+    line-height: 36px;
+    background-color: #FFFFFF;
+    border: 1px solid #C6CCD1;
+    border-radius: 2px;
+    height: 36px;
+    font-size: 14px;
+    padding: 0 10px;
+    box-shadow: none;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus {
+      border-color: #06AAEA;
+    }
+    option[value=""], &:invalid {
+      color: #8F9394;
+    }
+  }
+  select option[value] {
+    color: #3C3C3C;
+  }
 
   .input {
     height: 50px;
