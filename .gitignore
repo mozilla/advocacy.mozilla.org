@@ -3,5 +3,6 @@ node_modules
 npm-debug.log*
 .env
 public/build/*
+public/encrypt/*
 public/index.css
 *~
