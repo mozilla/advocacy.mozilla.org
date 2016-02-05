@@ -1,12 +1,12 @@
-var React = require('react');
-var Footer = require('../../components/footer.jsx');
-var EncryptVideo = require('../../components/encrypt-video.jsx');
-var ImageTag = require('../../components/imagetag.jsx');
-var Signup = require('../../components/signup.jsx');
-var CTA = require('../../components/cta.jsx');
-var Icon = require('../../components/footer-icon.jsx');
-var ShareThisNow = require('../../components/encrypt-share-this-now');
-var EncryptHeader = require('../../components/encrypt-header');
+var React = require(`react`);
+var Footer = require(`../../components/footer.jsx`);
+var EncryptVideo = require(`../../components/encrypt-video.jsx`);
+var ImageTag = require(`../../components/imagetag.jsx`);
+var Signup = require(`../../components/signup.jsx`);
+var CTA = require(`../../components/cta.jsx`);
+var Icon = require(`../../components/footer-icon.jsx`);
+var ShareThisNow = require(`../../components/encrypt-share-this-now`);
+var EncryptHeader = require(`../../components/encrypt-header`);
 
 module.exports = React.createClass({
   render: function() {
@@ -17,7 +17,7 @@ module.exports = React.createClass({
           <EncryptVideo className="video-wrapper" />
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
-	     <div className="join-mozilla cta">
+	         <div className="join-mozilla cta">
                 <h2>
                  Join Mozilla
                </h2>
@@ -25,10 +25,10 @@ module.exports = React.createClass({
                <p>
                  For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla.
                </p>
-	       <button className="button">Sign up</button>
+	           <button className="button">Sign up</button>
              </div>
             </div>
-	    <ShareThisNow/>
+	        <ShareThisNow/>
           </div>
         </main>
         <Footer>

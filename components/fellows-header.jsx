@@ -1,5 +1,5 @@
-var React = require('react');
-var Router = require('react-router');
+var React = require(`react`);
+var Router = require(`react-router`);
 var Link = Router.Link;
 
 module.exports = React.createClass({
@@ -18,15 +18,16 @@ module.exports = React.createClass({
     }
   },
   componentDidMount: function() {
-    document.addEventListener("scroll", this.onScroll);
+    document.addEventListener(`scroll`, this.onScroll);
   },
   componentWillUnmount: function() {
-    document.removeEventListener("scroll", this.onScroll);
+    document.removeEventListener(`scroll`, this.onScroll);
   },
   render: function() {
-    var className = "fellows-header";
+    var className = `fellows-header`;
+
     if (this.state.sticky) {
-      className += " sticky";
+      className += ` sticky`;
     }
     return (
       <div className={className}>

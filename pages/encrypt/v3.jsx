@@ -1,13 +1,13 @@
-var React = require('react');
-var Footer = require('../../components/footer.jsx');
-var Video = require('../../components/video.jsx');
-var ImageTag = require('../../components/imagetag.jsx');
-var Signup = require('../../components/signup.jsx');
-var CTA = require('../../components/cta.jsx');
-var Icon = require('../../components/footer-icon.jsx');
-var ShareThisNow = require('../../components/encrypt-share-this-now');
-var EncryptHeader = require('../../components/encrypt-header');
-var EncryptVideo = require('../../components/encrypt-video.jsx');
+var React = require(`react`);
+var Footer = require(`../../components/footer.jsx`);
+var Video = require(`../../components/video.jsx`);
+var ImageTag = require(`../../components/imagetag.jsx`);
+var Signup = require(`../../components/signup.jsx`);
+var CTA = require(`../../components/cta.jsx`);
+var Icon = require(`../../components/footer-icon.jsx`);
+var ShareThisNow = require(`../../components/encrypt-share-this-now`);
+var EncryptHeader = require(`../../components/encrypt-header`);
+var EncryptVideo = require(`../../components/encrypt-video.jsx`);
 
 
 

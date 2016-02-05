@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require(`react`);
 
 module.exports = React.createClass({
   render: function() {
@@ -9,7 +9,7 @@ module.exports = React.createClass({
         </video>
         <div className="encrypt-meta-wrapper">
           <div className="encrypt-meta">
-            <span className="videoMeta"><span className="white-text">EPISODE 1</span> &nbsp;  <span className="purple-text">FEBUARY 08, 2016 &nbsp; 0:53</span></span>
+            <span className="videoMeta"><span className="white-text">EPISODE 1</span> &nbsp;      <span className="purple-text">FEBUARY 08, 2016 &nbsp; 0:53</span></span>
             <span className="videoTitle">
               Privacy Lets You Be You
             </span>

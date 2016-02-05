@@ -1,10 +1,10 @@
-var React = require('react');
-var Footer = require('../../components/footer.jsx');
-var Header = require('../../components/header.jsx');
-var HeroUnit = require('../../components/hero-unit.jsx');
-var Apply = require('../../components/apply.jsx');
-var FellowsHeader = require('../../components/fellows-header.jsx');
-var ContentContainer = require('../../components/content-container.jsx');
+var React = require(`react`);
+var Footer = require(`../../components/footer.jsx`);
+var Header = require(`../../components/header.jsx`);
+var HeroUnit = require(`../../components/hero-unit.jsx`);
+var Apply = require(`../../components/apply.jsx`);
+var FellowsHeader = require(`../../components/fellows-header.jsx`);
+var ContentContainer = require(`../../components/content-container.jsx`);
 
 var FellowBlock = React.createClass({
   render: function() {
@@ -17,7 +17,7 @@ var FellowBlock = React.createClass({
           <div className="fellow-info">
             <h2>{this.props.name}</h2>
             <p><a href={this.props.companyHref}>{this.props.company}</a></p>
-            <p>{"\"" + this.props.quote + "\""} <a href={this.props.handleHref}>{"@" + this.props.handle}</a></p>
+            <p>{`"` + this.props.quote + `"`} <a href={this.props.handleHref}>{`@` + this.props.handle}</a></p>
           </div>
         </div>
         <p>{this.props.children}</p>

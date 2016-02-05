@@ -1,13 +1,13 @@
-var React = require('react');
-var Button = require('./button.jsx');
+var React = require(`react`);
+var Button = require(`./button.jsx`);
 
 var CountrySelect = React.createClass({
-    render: function() {
+  render: function() {
     return (
       <div className="row">
         <select className="country-input" required="required">
           <option value="" defaultValue="selected">
-            Country
+            Select your Country
           </option>
           <option value="US">
             United States
@@ -717,38 +717,42 @@ var CountrySelect = React.createClass({
 module.exports = React.createClass({
   sendEmailToBasket: function() {
     var request = new XMLHttpRequest();
-    var lang = 'en';
-    var url = "{{ basketHost|default('https://basket.mozilla.org', true) }}" + "/news/subscribe/";
-    var newsletters = '{{ newsletters }}';
-    var source_url = 'https://snippets.mozilla.com/{{ snippet_id }}';
+    var lang = `en`;
+    var url = `{{ basketHost|default('https://basket.mozilla.org', true) }}` + `/news/subscribe/`;
+    var newsletters = `{{ newsletters }}`;
+    var source_url = `https://snippets.mozilla.com/{{ snippet_id }}`;
     source_url = encodeURIComponent(source_url);
     // var email = this..value;
     var country = countryInput.value;
     var firstName = firstNameInput.value;
-    var params = 'newsletters=' + newsletters + '&source_url=' + source_url + '&lang=' + lang + '&email=' + email + '&trigger_welcome=N';
+    var params = `newsletters=` + newsletters + `&source_url=` + source_url + `&lang=` + lang + `&email=` + email + `&trigger_welcome=N`;
     if (country) {
-      params += "&country=" + country;
+      params += `&country=` + country;
     }
     if (firstName) {
-      params += "&first_name=" + firstName;
+      params += `&first_name=` + firstName;
     }
     request.onreadystatechange = function() {
       if (request.readyState === 4) {
         // TODO: do something when submitted
       }
     };
-    request.open('POST', url);
+    request.open(`POST`, url);
     request.send(params);
   },
   getInitialState: function() {
-    return {email: ''};
+    return {
+      email: ``,
+      country: ``,
+      name: ``
+    };
   },
   render: function() {
-        return (
+    return (
       <div className={this.props.className}>
         {this.props.children}
-        <input type="text" ref="inputElement" className="input" name="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email Address"/>
-        <input type="email" ref="inputElement" className="input"  name="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email Address"/>
+        <input type="text" ref="inputElement" className="input" name="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Name"/>
+        <input type="email" ref="inputElement" className="input" name="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email Address"/>
         <CountrySelect/>
         <div className="checkboxDiv">
           <input type="checkbox"/>
