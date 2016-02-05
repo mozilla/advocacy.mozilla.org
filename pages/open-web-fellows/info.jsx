@@ -1,11 +1,11 @@
-var React = require('react');
-var Footer = require('../../components/footer.jsx');
-var Header = require('../../components/header.jsx');
-var HeroUnit = require('../../components/hero-unit.jsx');
-var Apply = require('../../components/apply.jsx');
-var FellowsHeader = require('../../components/fellows-header.jsx');
-var ContentContainer = require('../../components/content-container.jsx');
-var ImageTag = require('../../components/imagetag.jsx');
+var React = require(`react`);
+var Footer = require(`../../components/footer.jsx`);
+var Header = require(`../../components/header.jsx`);
+var HeroUnit = require(`../../components/hero-unit.jsx`);
+var Apply = require(`../../components/apply.jsx`);
+var FellowsHeader = require(`../../components/fellows-header.jsx`);
+var ContentContainer = require(`../../components/content-container.jsx`);
+var ImageTag = require(`../../components/imagetag.jsx`);
 
 var IconListContainer = React.createClass({
   render: function() {

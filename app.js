@@ -1,8 +1,9 @@
+
 var express = require('express'),
-  helmet = require('helmet'),
-  Habitat = require('habitat'),
-  path = require('path'),
-  compression = require('compression');
+    Habitat = require('habitat'),
+    path = require('path'),
+    compression = require('compression'),
+    helmet = require('helmet');
 
 Habitat.load();
 
@@ -38,10 +39,10 @@ app.use(function(err, req, res, next) {
   res.send(err);
 });
 
-app.get('*', function(request, response) {
+app.get('*', function (request, response) {
   response.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
-app.listen(env.get('PORT'), function() {
+app.listen(env.get('PORT'), function () {
   console.log('Server listening ( http://localhost:%d )', env.get('PORT'));
 });
