@@ -1,5 +1,3 @@
-@import "../../components/footer";
-
 //EncryptHeader
 
   header{
@@ -9,6 +7,9 @@
   .header-content{
     max-width: 960px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .logo {
     margin: 30px 0 20px;
@@ -18,6 +19,12 @@
     margin: 0px auto;
     z-index: 2;
     position: relative;
+    width: 100%;
+  }
+  .header-cta{
+    display: none;
+    font-size: 1.4375rem;
+    color: rgba(255,255,255,.5);
   }
 
 //EncryptVideo
@@ -36,27 +43,29 @@ video{
   width: 100%;
 }
 .encrypt-meta{
-    max-width: 960px;
+    max-width: 40em;
     width: 100%;
-    margin: 0 auto;
     text-align: left;
+    color: #fff;
+    &>*+*{
+      margin-top: .5rem;
+    }
     .videoTitle {
       font-size: 45px;
       color: @primary_red;
       display: block;
     }
     .videoMeta {
-      .white-text {
-        color: #FFF;
-      }
-      .purple-text {
-        color: #8B3283;
+      color: #fff;
+      *+*{
+	margin-left: 1rem;
       }
     }
-    p {
-      font-size: 18px;
-      color: #FFF;
-      margin: 0;
+    .episodeNumber{
+      font-weight: bold;
+    }
+    .video-date{
+      color: #9499a2;
     }
   }
 
@@ -108,7 +117,6 @@ video{
     font-style: italic;
   }
   .social {
-    // flex-shrink: 0;
     display: flex;
     .circle {
       display: inline-block;
@@ -140,62 +148,31 @@ video{
 .footer {
   background-color: @contrast_darkblue;
 }
+//Form
 
 
 
 
-
-.encrypt{
-
-    ///
-  /// common stuff
-  ///
-
-  select {
-    line-height: 36px;
-    background-color: #FFFFFF;
-    border: 1px solid #C6CCD1;
-    border-radius: 2px;
-    height: 36px;
-    font-size: 14px;
-    padding: 0 10px;
-    box-shadow: none;
-    width: 100%;
-    box-sizing: border-box;
-    &:focus {
-      border-color: #06AAEA;
-    }
-    option[value=""], &:invalid {
-      color: #8F9394;
-    }
-  }
-  select option[value] {
-    color: #3C3C3C;
-  }
-
-  .input {
-    height: 50px;
-    width: 100%;
+.input {
+  width: 100%;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  & + input{
     margin-top: 25px;
   }
-  .input:first-of-type {
-    margin: 0;
+}
+.checkboxDiv {
+  margin-top: 35px;
+  padding-bottom: 40px;
+  input[type="checkbox"] {
+    float: left;
+    margin-top: 5px;
   }
-  .checkboxDiv {
-    margin-top: 35px;
-    padding-bottom: 40px;
-    input[type="checkbox"] {
-      float: left;
-      margin-top: 5px;
-    }
-    .label {
-      color: #FFF;
-      font-style: italic;
-      font-weight: lighter;
-      font-size: 18px;
-      text-align: left;
-      margin-left: 25px;
-    }
+  .label {
+    color: #FFF;
+    font-style: italic;
+    font-weight: lighter;
+    text-align: left;
+    margin-left: 25px;
   }
-
 }
