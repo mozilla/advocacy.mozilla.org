@@ -3,20 +3,21 @@
   header{
     background-color: @primary_darkblue;
     overflow-y: visible;
+    padding: 10px;
+    @media(min-width:500px){
+      padding: 30px 20px 0;
+    }
   }
   .header-content{
-    max-width: 960px;
+    max-width: 980px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .logo {
-    margin: 30px 0 20px;
-  }
   .encryptText {
-    max-width: 960px;
-    margin: 0px auto;
+    max-width: 980px;
+    margin: 1rem auto 0;
     z-index: 2;
     position: relative;
     width: 100%;
@@ -37,28 +38,34 @@
 video{
   margin: 0 auto;
 }
+@media(min-width: 500px){
 .encrypt-meta-wrapper{
   position: absolute;
   bottom: 1em;
   width: 100%;
+}
 }
 .encrypt-meta{
     max-width: 40em;
     width: 100%;
     text-align: left;
     color: #fff;
+    margin-top: 1rem;
     &>*+*{
       margin-top: .5rem;
     }
     .videoTitle {
-      font-size: 45px;
+      font-size: 9vw;
       color: @primary_red;
       display: block;
+      @media(min-width: 470px){
+        font-size: 45px;
+      }
     }
     .videoMeta {
       color: #fff;
       *+*{
-	margin-left: 1rem;
+      	margin-left: 1rem;
       }
     }
     .episodeNumber{
@@ -153,11 +160,11 @@ video{
 
 
 
-.input {
+.input, select {
   width: 100%;
   font-size: 1.125rem;
   line-height: 2rem;
-  & + input{
+  & + *{
     margin-top: 25px;
   }
 }
