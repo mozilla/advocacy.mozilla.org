@@ -12,6 +12,19 @@ var EncryptVideo = require(`../../components/encrypt-video.jsx`);
 
 
 module.exports = React.createClass({
+  getInitialState: function() {
+    return {
+      isSubmitted: false
+    };
+  },
+  onSubmit: function(e) {
+    this.refs.signup.sendEmailToBasket(e, (submitted) => {
+      this.setState({
+        isSubmitted: submitted
+      });
+      console.log(submitted);
+    });
+  },
   render: function() {
     return (
       <div className="encrypt v3">
@@ -19,7 +32,7 @@ module.exports = React.createClass({
         <main className="page">
           <div className="videoSection">
             <EncryptVideo />
-            <Signup className="encrypt-signup">
+            {!this.state.isSubmitted ? <Signup onSubmit={this.onSubmit} ref="signup" className="encrypt-signup">
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
@@ -27,7 +40,7 @@ module.exports = React.createClass({
                 header="Join Mozilla"
                 text="For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla."
               />
-            </Signup>
+            </Signup> : 'Thank you'}
           </div>
           <ShareThisNow/>
         </main>

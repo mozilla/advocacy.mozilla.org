@@ -2,7 +2,7 @@ var React = require(`react`);
 
 module.exports = React.createClass({
   mixins: [require(`react-addons-linked-state-mixin`)],
-  sendEmailToBasket: function(e) {
+  sendEmailToBasket: function(e, callback) {
     e.preventDefault();
     if (this.state.isSubmitting) {
       return;
@@ -29,7 +29,7 @@ module.exports = React.createClass({
       if (request.readyState === 4) {
         // TODO: do something when submitted
         console.log(`submitted`);
-        this.setState({submitted: true});
+        callback(true);
       }
     };
     request.open(`POST`, url);
@@ -40,7 +40,6 @@ module.exports = React.createClass({
       email: ``,
       country: ``,
       name: ``,
-      submitted: false,
       isSubmitting: false
     };
   },
@@ -48,7 +47,7 @@ module.exports = React.createClass({
     return (
       <div className={this.props.className}>
         {this.props.children}
-        <form id="form" onSubmit={this.sendEmailToBasket}></form>
+        <form id="form" onSubmit={this.props.onSubmit}></form>
         <input form="form" type="text" className="input" name="name" valueLink={this.linkState(`name`)} placeholder="Name"/>
         <input required="required" form="form" type="email" className="input" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address"/>
         <select className="country-input" valueLink={this.linkState(`country`)} required="required">
