@@ -1,11 +1,57 @@
 var React = require(`react`);
-var Button = require(`./button.jsx`);
 
-var CountrySelect = React.createClass({
+module.exports = React.createClass({
+  mixins: [require(`react-addons-linked-state-mixin`)],
+  sendEmailToBasket: function(e) {
+    e.preventDefault();
+    if (this.state.isSubmitting) {
+      return;
+    }
+    this.setState({
+      isSubmitting: true
+    });
+    var request = new XMLHttpRequest();
+    var lang = `en`;
+    var url = `https://basket.mozilla.org` + `/news/subscribe/`;
+    var newsletters = `{{ newsletters }}`; // TODO: get the baseket
+    var source_url = encodeURIComponent(`https://advocacy.mozilla.org/encrypt`);
+    var email = this.state.email;
+    var country = this.state.country;
+    var firstName = this.state.name;
+    var params = `newsletters=` + newsletters + `&source_url=` + source_url + `&lang=` + lang + `&email=` + email + `&trigger_welcome=N`;
+    if (country) {
+      params += `&country=` + country;
+    }
+    if (firstName) {
+      params += `&first_name=` + firstName;
+    }
+    request.onreadystatechange = () => {
+      if (request.readyState === 4) {
+        // TODO: do something when submitted
+        console.log(`submitted`);
+        this.setState({submitted: true});
+      }
+    };
+    request.open(`POST`, url);
+    request.send(params);
+  },
+  getInitialState: function() {
+    return {
+      email: ``,
+      country: ``,
+      name: ``,
+      submitted: false,
+      isSubmitting: false
+    };
+  },
   render: function() {
     return (
-      <div className="row">
-        <select className="country-input" required="required">
+      <div className={this.props.className}>
+        {this.props.children}
+        <form id="form" onSubmit={this.sendEmailToBasket}></form>
+        <input form="form" type="text" className="input" name="name" valueLink={this.linkState(`name`)} placeholder="Name"/>
+        <input required="required" form="form" type="email" className="input" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address"/>
+        <select className="country-input" valueLink={this.linkState(`country`)} required="required">
           <option value="" defaultValue="selected">
             Select your Country
           </option>
@@ -709,58 +755,13 @@ var CountrySelect = React.createClass({
             Zimbabwe
           </option>
         </select>
-      </div>
-    );
-  }
-});
-
-module.exports = React.createClass({
-  sendEmailToBasket: function() {
-    var request = new XMLHttpRequest();
-    var lang = `en`;
-    var url = `{{ basketHost|default('https://basket.mozilla.org', true) }}` + `/news/subscribe/`;
-    var newsletters = `{{ newsletters }}`;
-    var source_url = `https://snippets.mozilla.com/{{ snippet_id }}`;
-    source_url = encodeURIComponent(source_url);
-    // var email = this..value;
-    var country = countryInput.value;
-    var firstName = firstNameInput.value;
-    var params = `newsletters=` + newsletters + `&source_url=` + source_url + `&lang=` + lang + `&email=` + email + `&trigger_welcome=N`;
-    if (country) {
-      params += `&country=` + country;
-    }
-    if (firstName) {
-      params += `&first_name=` + firstName;
-    }
-    request.onreadystatechange = function() {
-      if (request.readyState === 4) {
-        // TODO: do something when submitted
-      }
-    };
-    request.open(`POST`, url);
-    request.send(params);
-  },
-  getInitialState: function() {
-    return {
-      email: ``,
-      country: ``,
-      name: ``
-    };
-  },
-  render: function() {
-    return (
-      <div className={this.props.className}>
-        {this.props.children}
-        <input type="text" ref="inputElement" className="input" name="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Name"/>
-        <input type="email" ref="inputElement" className="input" name="email" value={this.state.email} onChange={this.onEmailChange} placeholder="Email Address"/>
-        <CountrySelect/>
         <div className="checkboxDiv">
-          <input type="checkbox"/>
+          <input form="form" type="checkbox" required="required"/>
           <div className="label">
             I'm okay with you handling this info as you explain in your privacy policy.
           </div>
         </div>
-        <Button onClick={this.sendEmailToBasket} text="Sign up" link="http://google.com"/>
+        <button type="submit" form="form" className="button button-groove">Sign up</button>
       </div>
     );
   }
