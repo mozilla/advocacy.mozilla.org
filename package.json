@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/mozilla/advocacy.mozilla.org",
   "dependencies": {
+    "async": "^1.5.2",
     "babel-core": "6.4.5",
     "babel-loader": "6.2.1",
     "babel-preset-es2015": "6.3.13",
@@ -49,7 +50,7 @@
     "properties-parser": "0.3.1",
     "q-io": "1.13.2",
     "react": "0.14.6",
-    "react-addons-linked-state-mixin": "0.14.7",
+    "react-addons-linked-state-mixin": "0.14.6",
     "react-dom": "0.14.6",
     "react-hot-loader": "1.2.7",
     "react-router": "2.0.0-rc5",
