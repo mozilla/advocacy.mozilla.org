@@ -15,16 +15,20 @@
   header{
     max-height: 235px;
   }
+  .header-cta{
+    display: block;
+  }
   .cta{
     max-width: 600px;
     margin: 0 auto;
     flex-direction: column;
     text-align: center;
+    padding: 2em;
     & > *+*{
       margin-top: 1em;
     }
     h2{
-      margin-bottom: 0;
+      margin: 0;
       font-size: 38px;
     }
     .horizontal-rule{
@@ -40,6 +44,9 @@
 .dual-cta-wrapper{
   @media(min-width: 767px){
     display: flex;
+    .cta{
+      height: 100%;
+    }
   }
 }
 
@@ -65,22 +72,27 @@
     max-width: 980px;
     margin: 0 auto;
     padding: 0 10px;
-    @media(min-width: 600px){
+    @media(min-width: 660px){
       display: flex;
     }
   }
   .video-wrapper{
     background: transparent;
     flex: 2;
-    @media(min-width: 600px){
+    @media(min-width: 660px){
       margin-right: 2em;
     }
   }
   .encrypt-signup{
-    flex: 1;
+    flex-shrink: 0;
     text-align: center;
+    flex-basis: 300px;
   }
   .encrypt-meta-wrapper{
     position: static;
+    margin-top: 2rem;
+  }
+  .videoTitle{
+    font-size: 2.375rem;
   }
 }
