@@ -22,11 +22,17 @@
         background-color: #FFFFFF;
         &:before {
           content: '';
+          left: 0;
           position: absolute;
           background-color: #EFEFEF;
           transform: skewY(-5deg);
           width: 100%;
           height: 100%;
+        }
+        &.reverse {
+          &:before {
+            transform: skewY(5deg);
+          }
         }
         &.flat-bottom,
         &.flat-top {
@@ -39,6 +45,7 @@
               position: absolute;
               background-color: #EFEFEF;
               width: 100%;
+              left: 0;
             }
           }
         }

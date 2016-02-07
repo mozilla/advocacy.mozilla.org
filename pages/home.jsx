@@ -29,12 +29,19 @@ module.exports = React.createClass({
     return (
       <div className="home-page">
         <Header/>
-        <HeroUnit className="home-page-hero-unit" >
-           <h2>We Are Building a Global Movement to Protect the Free and Open Web</h2>
-            <p className="intro">We believe the Internet is at its best as a global public resource, open and accessible to all. We also believe a healthy Internet requires an active, global community. mozilla Advocacy brings together individuals from around the world to educate on and fight for privacy, inclusion and literacy online.</p>
+        <HeroUnit className="home-page-hero-unit">
+          <ImageTag alt="encrypt banner image" width={790} src1x="/assets/encrypt/encrypt.svg"/>
+          <p className="intro">Your online privacy depends on encryption. Learn more about how encryption works, why it's essential to a strong Web, and why it's worth protecting.</p>
+          <div>
+            <a href="/encrypt/" className="button">learn more</a>
+          </div>
         </HeroUnit>
         <div className="page">
-          <ContentContainer className="grey center-align">
+          <ContentContainer className="home-page-title center-align">
+            <h2>We Are Building a Global Movement to Protect the Free and Open Web</h2>
+            <p className="intro">We believe the Internet is at its best as a global public resource, open and accessible to all. We also believe a healthy Internet requires an active, global community. mozilla Advocacy brings together individuals from around the world to educate on and fight for privacy, inclusion and literacy online.</p>
+          </ContentContainer>
+          <ContentContainer className="home-page-content grey center-align slant reverse flat-bottom">
             <HomePageItem
               alt="net neutrality image"
               src1x="/assets/home-neutrality.jpg"
