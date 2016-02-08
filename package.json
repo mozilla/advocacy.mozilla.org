@@ -52,6 +52,7 @@
     "react": "0.14.6",
     "react-addons-linked-state-mixin": "0.14.6",
     "react-dom": "0.14.6",
+    "react-ga": "^1.2.0",
     "react-hot-loader": "1.2.7",
     "react-router": "2.0.0-rc5",
     "style-loader": "0.13.0",
