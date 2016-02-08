@@ -1,4 +1,6 @@
 import React from 'react';
+import Optimizely from '../../components/optimizely.jsx';
+import OptimizelySubdomain from '../../components/optimizelysubdomain.jsx';
 
 module.exports = React.createClass({
   render: function() {
@@ -26,13 +28,16 @@ module.exports = React.createClass({
           <meta property="og:url" content="http://advocacy.mozilla.org/"/>
           <meta property="description" content="We are building a global movement to protect the free and open Web." />
           <meta property="og:description" content="We are building a global movement to protect the free and open Web."/>
-
-          <meta name="title" content="Home | Mozilla Advocacy"/>
           <meta name="description" content="We Are Building a Global Movement to Protect the Free and Open Web Mozilla supports the heroes of the Web — the developers, advocates and ..."/>
+          <meta name="title" content="Home | Mozilla Advocacy"/>
+          <link rel="preconnect" href="https://www.google-analytics.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/encrypt.css"/>
           <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fira+Sans:300,400,600"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
           <title>Mozilla Advocacy</title>
+          <OptimizelySubdomain/>
+          <Optimizely/>
           <script dangerouslySetInnerHTML={{__html: ga}}></script>
         </head>
         <body>

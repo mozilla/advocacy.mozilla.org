@@ -5,7 +5,6 @@ var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var Icon = require(`../../components/footer-icon.jsx`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 
-
 module.exports = React.createClass({
   render: function() {
     return (
