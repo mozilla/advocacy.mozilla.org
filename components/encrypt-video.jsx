@@ -17,7 +17,7 @@ module.exports = React.createClass({
 	    <div id="videoTitle" className="videoTitle">
 	      Privacy Lets You Be You
 	    </div>
-	    <p id="videoDescription" className="video-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+	    <p id="videoDescription" className="video-description">Privacy depends on encryption. Learn more about how it works, why it's essential, and why it's worth protecting.</p>
           </div>
         </div>
       </div>
