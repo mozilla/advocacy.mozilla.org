@@ -14,11 +14,12 @@ module.exports = React.createClass({
     var lang = `en`;
     var url = `https://basket.mozilla.org` + `/news/subscribe/`;
     var newsletters = `{{ newsletters }}`; // TODO: get the baseket
-    var source_url = encodeURIComponent(`https://advocacy.mozilla.org/encrypt`);
+    var sourceURL = encodeURIComponent(`https://advocacy.mozilla.org/encrypt`);
     var email = this.state.email;
     var country = this.state.country;
     var firstName = this.state.name;
-    var params = `newsletters=` + newsletters + `&source_url=` + source_url + `&lang=` + lang + `&email=` + email + `&trigger_welcome=N`;
+    var params = `newsletters=` + newsletters + `&source_url=` + sourceURL + `&lang=` + lang + `&email=` + email + `&trigger_welcome=N`;
+
     if (country) {
       params += `&country=` + country;
     }

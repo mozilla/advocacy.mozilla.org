@@ -1,7 +1,5 @@
 var React = require(`react`);
 var Footer = require(`../../components/footer.jsx`);
-var Video = require(`../../components/video.jsx`);
-var ImageTag = require(`../../components/imagetag.jsx`);
 var Signup = require(`../../components/encrypt-signup.jsx`);
 var CTA = require(`../../components/cta.jsx`);
 var Icon = require(`../../components/footer-icon.jsx`);
@@ -40,7 +38,7 @@ module.exports = React.createClass({
                 header="Join Mozilla"
                 text="For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla."
               />
-            </Signup> : 'Thank you'}
+            </Signup> : `Thank you`}
           </div>
           <ShareThisNow/>
         </main>

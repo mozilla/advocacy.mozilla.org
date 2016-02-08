@@ -5,17 +5,19 @@ var FS = require(`q-io/fs`);
 var src = `locales`;
 
 function getListLocales() {
-  return new Promise(function(resolve, reject) {
-    FS.listDirectoryTree(path.join(process.cwd(), src)).then(function(dirTree) {
+  return new Promise((resolve, reject) => {
+    FS.listDirectoryTree(path.join(process.cwd(), src)).then((dirTree) => {
       var list = [];
-      dirTree.forEach(function(i) {
+
+      dirTree.forEach((i) => {
         var that = i.split(src + `/`);
+
         if (that[1]) {
           list.push(that[1]);
         }
       });
       return resolve(list);
-    }).catch(function(e) {
+    }).catch((e) => {
       console.log(e);
       reject(e);
     });
@@ -23,23 +25,23 @@ function getListLocales() {
 }
 
 function writeFile(entries) {
-  entries.reduce(function(prevEntry, entry) {
+  entries.reduce((prevEntry, entry) => {
     write(path.join(process.cwd(), src, entry.locale + `.json`), JSON.stringify(entry.content, null, 2), `utf-8`)
-    .then(function(filename) {
+    .then((filename) => {
       console.log(`Done writing: ` + filename);
-    }).catch(function(e) {
+    }).catch((e) => {
       console.log(e);
     });
   }, {});
 }
 
 function getContentMessages(locale) {
-  return new Promise(function(resolve, reject) {
-    properties.read(path.join(process.cwd(), src, locale, `messages.properties`), function(message_error, message_properties) {
-      if (message_error && message_error.code !== `ENOENT`) {
-        return reject(message_error);
+  return new Promise((resolve, reject) => {
+    properties.read(path.join(process.cwd(), src, locale, `messages.properties`), (messageError, messageProperties) => {
+      if (messageError && messageError.code !== `ENOENT`) {
+        return reject(messageError);
       }
-      resolve({content: message_properties || {}, locale: locale});
+      resolve({content: messageProperties || {}, locale: locale});
     });
   });
 }
@@ -49,6 +51,6 @@ function processMessageFiles(locales) {
 }
 
 getListLocales().then(processMessageFiles)
-.then(writeFile).catch(function(err) {
+.then(writeFile).catch((err) => {
   console.error(err);
 });

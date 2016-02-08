@@ -37,8 +37,8 @@ module.exports = React.createClass({
                <p>
                  For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla.
                </p>
-              {!this.state.didSignup ? <button onClick={this.showModal} className="button">Sign up</button> : ''}
-              {this.state.formIsVisible ? <Signup/> : '' }
+              {!this.state.didSignup ? <button onClick={this.showModal} className="button">Sign up</button> : ``}
+              {this.state.formIsVisible ? <Signup/> : `` }
              </div>
             </div>
             <ShareThisNow/>

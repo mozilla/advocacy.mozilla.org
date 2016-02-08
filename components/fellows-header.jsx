@@ -11,6 +11,7 @@ module.exports = React.createClass({
   },
   onScroll: function() {
     var sticky = window.scrollY >= 448;
+
     if (sticky !== this.state.sticky) {
       this.setState({
         sticky: sticky

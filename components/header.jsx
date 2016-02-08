@@ -6,6 +6,7 @@ var ImageTag = require(`./imagetag.jsx`);
 module.exports = React.createClass({
   render: function() {
     var logoImage = this.props.logoImage || `/assets/logo-advocacy.svg`;
+
     return (
       <div className="header">
         <div className="header-content">

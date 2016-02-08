@@ -3,6 +3,7 @@ var React = require(`react`);
 var ImageTag = React.createClass({
   calculateDensity: function() {
     var ratio;
+
     if (typeof window !== `undefined` && window.devicePixelRatio > 1.5) {
       ratio = 2;
     } else {
