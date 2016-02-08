@@ -3,6 +3,7 @@ var React = require(`react`);
 module.exports = React.createClass({
   render: function() {
     var className = `content-container`;
+
     if (this.props.className) {
       className += ` ` + this.props.className;
     }

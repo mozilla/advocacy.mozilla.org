@@ -4,6 +4,7 @@ module.exports = React.createClass({
 
   render: function() {
     var HRClassName = this.props.HrClassName || ``;
+
     return (
       <div>
         <h2 className={this.props.headerClassName}>

@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
+/* eslint-disable no-unused-vars */
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
