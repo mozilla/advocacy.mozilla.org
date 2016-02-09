@@ -7,21 +7,23 @@ var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptVideo = require(`../../components/encrypt-video.jsx`);
 
-
-
 module.exports = React.createClass({
   getInitialState: function() {
     return {
-      isSubmitted: false
+      didSignup: false
     };
   },
-  onSubmit: function(e) {
-    this.refs.signup.sendEmailToBasket(e, (submitted) => {
-      this.setState({
-        isSubmitted: submitted
-      });
-      console.log(submitted);
+  hideForm: function() {
+    this.setState({
+      formIsVisible: false
     });
+  },
+  userDidSignup: function() {
+    this.setState({
+      didSignup: true
+    });
+    this.hideForm();
+    console.log('userDidSignup');
   },
   render: function() {
     return (
@@ -30,7 +32,7 @@ module.exports = React.createClass({
         <main className="page">
           <div className="videoSection">
             <EncryptVideo />
-            {!this.state.isSubmitted ? <Signup onSubmit={this.onSubmit} ref="signup" className="encrypt-signup">
+            {!this.state.didSignup ? <Signup onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup">
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
@@ -38,7 +40,7 @@ module.exports = React.createClass({
                 header="Join Mozilla"
                 text="For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla."
               />
-	            </Signup> : `Thank you`}
+            </Signup> : `Thank you`}
           </div>
           <ShareThisNow/>
         </main>
