@@ -38,12 +38,12 @@ module.exports = React.createClass({
                 header="Join Mozilla"
                 text="For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla."
               />
-            </Signup> : `Thank you`}
+	            </Signup> : `Thank you`}
           </div>
           <ShareThisNow/>
         </main>
         <Footer>
-          <Icon href="https://twitter.com/MozillaAdvocacy" src="/assets/footer-icon-twitter.svg" title="">FIXME</Icon>
+          <Icon><div className="social-circle"><i className="fa fa-medium"></i></div>Join the Conversation</Icon>
         </Footer>
       </div>
     );
