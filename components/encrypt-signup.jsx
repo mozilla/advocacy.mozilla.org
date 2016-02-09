@@ -2,6 +2,9 @@ var React = require(`react`);
 
 module.exports = React.createClass({
   mixins: [require(`react-addons-linked-state-mixin`)],
+  componentDidMount: function() {
+    this.refs.name.focus();
+  },
   sendEmailToBasket: function(e, callback) {
     e.preventDefault();
     if (this.state.isSubmitting) {
@@ -31,6 +34,9 @@ module.exports = React.createClass({
         // TODO: do something when submitted
         console.log(`submitted`);
         callback(true);
+        if(this.props.onSubmission){
+          this.props.onSubmission();
+        }
       }
     };
     request.open(`POST`, url);
@@ -46,11 +52,11 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <div className={this.props.className}>
+      <div className="encrypt-signup">
         {this.props.children}
-        <form id="form" onSubmit={this.props.onSubmit}></form>
-        <input form="form" type="text" className="input" name="name" valueLink={this.linkState(`name`)} placeholder="Name"/>
-        <input required="required" form="form" type="email" className="input" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address"/>
+        <form id="form" onSubmit={this.sendEmailToBasket}></form>
+        <input form="form" type="text" className="input" name="name" ref="name" valueLink={this.linkState(`name`)} placeholder="Name"/>
+        <input required="required" form="form" type="email" className="input" ref="email" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address"/>
         <select className="country-input" valueLink={this.linkState(`country`)} required="required">
           <option value="" defaultValue="selected">
             Select your Country

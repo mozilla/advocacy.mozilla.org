@@ -4,8 +4,8 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="video-wrapper">
-        <video aria-describedby="videoDescription" aria-labeledby="videoTitle" poster="/assets/encrypt-poster-dark-1920x1080.jpg" autoBuffer width={this.props.width} height={this.props.height}>
-          <source id="mp4" src="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4" type="video/mp4"/>
+      	<video aria-describedby="videoDescription" controls aria-labeledby="videoTitle" poster="/assets/encrypt-poster-dark-1920x1080.jpg" autoBuffer width={this.props.width} height={this.props.height}>
+          <source id="mp4" src="https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/moz.final.1.native.mp4" type="video/mp4"/>
         </video>
         <div className="encrypt-meta-wrapper">
           <div className="encrypt-meta">

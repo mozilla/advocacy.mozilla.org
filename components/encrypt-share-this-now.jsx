@@ -8,13 +8,13 @@ module.exports = React.createClass({
           <h2>Share This Now</h2>
           <div className="horizontal-rule"></div>
           <div className="social">
-            <div className="circle">
+            <div className="social-circle">
               <i className="fa fa-envelope"></i>
             </div>
-            <div className="circle">
+            <div className="social-circle">
               <i className="fa fa-facebook"></i>
             </div>
-            <div className="circle">
+            <div className="social-circle">
               <i className="fa fa-twitter"></i>
             </div>
           </div>

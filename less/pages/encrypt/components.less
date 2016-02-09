@@ -9,14 +9,14 @@
     }
   }
   .header-content{
-    max-width: 980px;
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   .encryptText {
-    max-width: 980px;
+    max-width: 960px;
     margin: 1rem auto 0;
     z-index: 2;
     position: relative;
@@ -38,10 +38,13 @@
 video{
   margin: 0 auto;
 }
-@media(min-width: 500px){
+.encrypt-meta-wrapper{
+  padding: 0 1rem;
+}
+@media(min-width: 650px){
 .encrypt-meta-wrapper{
   position: absolute;
-  bottom: 1em;
+  bottom: 2.5em;
   width: 100%;
 }
 }
@@ -90,7 +93,7 @@ video{
   align-items: center;
   padding: 10px;
   text-align: center;
-  max-width: 980px;
+  max-width: 960px;
   margin: 0 auto;
   text-align: center;
   align-items: center;
@@ -125,23 +128,34 @@ video{
   }
   .social {
     display: flex;
-    .circle {
-      display: inline-block;
-      border-radius: 50%;
-      height: 35px;
-      width: 35px;
-      background-color: #FF8F98;
-      text-align: center;
-      vertical-align: middle;
-      margin-right: 5px;
-      i {
-	      padding: 7px;
-	      font-size: 20px;
-      }
+  }
+  .social-circle{
+    background-color: #FF8F98;
+    height: 35px;
+    width: 35px;
+    i{
+      color: inherit;
+      font-size: 20px;
+      padding: 7px;
     }
   }
 }
 
+.social-circle{
+  display: inline-block;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 5px;
+  background-color: white;
+  i {
+    color: @contrast_darkblue;
+    padding: 4px;
+    font-size: 12px;
+  }
+}
   .horizontal-rule {
     background-color: rgba(255,255,255,.5);
     height: 1px;
@@ -149,6 +163,12 @@ video{
     margin: 1em auto 0;
   }
 
+
+//Signup
+
+.encrypt-signup{
+  // min-width: 300px;
+}
 
 //Footer
 
@@ -186,4 +206,88 @@ select{
     text-align: left;
     margin-left: 25px;
   }
+}
+
+//Modal
+
+.postVideo .modal{
+  background-image: url('../../../public/assets/graphic-bars.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: @contrast_lightblue;
+  max-width: 95%;
+  p{
+    font-weight: bold;
+    color: #97cbef;
+    text-align: center;
+  }
+  @media(min-width: 54rem){
+    padding: 4rem;
+    max-width: 980px;
+    p{
+      font-size: 3rem;
+    }
+  }
+}
+
+.signup-cta .modal{
+  @media(min-width: 54rem){
+    display: flex;
+    p{
+      width: 7em;
+    }
+    .encrypt-signup:before{
+      content:'';
+      background: url('../../../public/assets/arrow.svg') no-repeat;
+      width: 3rem;
+      height: 3rem;
+      display: block;
+      position: relative;
+      top: .5em;
+    }
+  }
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .encrypt-signup{
+    flex-basis: 22rem;
+    text-align: center;
+  }
+  .checkboxDiv{
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+.social-cta .modal{
+  font-size: 7vw;
+}
+
+
+.signup-cta{
+  display: none;
+}
+
+.modal-overlay{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 100;
+}
+.modal-close{
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  color: white;
+  cursor: pointer;
+}
+.modal{
+  background-color: @primary_lightblue;
+  z-index:101;
+  padding: 1rem;
+  margin: 1rem auto;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0,0,0,.5);
 }

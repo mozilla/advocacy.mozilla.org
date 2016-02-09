@@ -2,7 +2,7 @@
 
 .encrypt.v1{
   header{
-    max-height: 200px;
+    max-height: 190px;
   }
   .video-description{
     display: none;
@@ -13,11 +13,14 @@
 
 .encrypt.v2{
   header{
-    max-height: 235px;
+    max-height: 210px;
   }
   .header-cta{
     @media(min-width: 625px){
       display: block;
+      position: relative;
+      //A little magic, but aligning with baseline of images is hard
+      top: -3px;
     }
     button{
       margin-left: .5rem;
