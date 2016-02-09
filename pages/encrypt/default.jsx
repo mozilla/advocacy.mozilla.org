@@ -27,11 +27,6 @@ module.exports = React.createClass({
           modal1: false,
           modal2: true
         });
-      } else {
-        this.setState({
-          modal1: false,
-          modal2: false
-        });
       }
     });
   },
