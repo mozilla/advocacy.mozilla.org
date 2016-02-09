@@ -20,7 +20,7 @@ module.exports = React.createClass({
       if (e.keyCode ===49) {
         this.setState({
           modal1: true,
-          modal2:false
+          modal2: false
         });
       } else if (e.keyCode === 50) {
         this.setState({
@@ -30,9 +30,15 @@ module.exports = React.createClass({
       } else {
         this.setState({
           modal1: false,
-          modal2:false
+          modal2: false
         });
       }
+    });
+  },
+  hideModal() {
+    this.setState({
+      modal1: false,
+      modal2: false
     });
   },
   render: function() {
@@ -46,11 +52,11 @@ module.exports = React.createClass({
         <Footer>
           <Icon><div className="social-circle"><i className="fa fa-medium"></i></div>Join the Conversation</Icon>
         </Footer>
-        {this.state.modal1 ? <Modal className="postVideo signup-cta">
+        {this.state.modal1 ? <Modal hideModal={this.hideModal} className="postVideo signup-cta">
           <p>Stand with us for privacy and a free and open Internet.<br/>Sign on.</p>
           <Signup />
         </Modal> : ''}
-        {this.state.modal2 ? <Modal className="postVideo social-cta">
+        {this.state.modal2 ? <Modal hideModal={this.hideModal} className="postVideo social-cta">
           <p>Will you spread the word about why privacy is important?</p>
           <div className="social">
             <div className="social-circle">
