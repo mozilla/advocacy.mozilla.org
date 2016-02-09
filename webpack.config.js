@@ -1,6 +1,7 @@
 require(`babel-core/register`);
 
 var path = require(`path`);
+var webpack = require('webpack');
 var ExtractTextPlugin = require(`extract-text-webpack-plugin`);
 var SimpleHtmlPrecompiler = require(`./scripts/simple-html-plugin.js`);
 
@@ -42,6 +43,11 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin(`[name].css`),
-    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/v2`, `/encrypt/v3`]) // FIXME: Make this dynamic somehow
+    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/v2`, `/encrypt/v3`]), // FIXME: Make this dynamic somehow
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify({
+        BASKET_URL: process.env.BASKET_URL
+      })
+    })
   ]
 };
