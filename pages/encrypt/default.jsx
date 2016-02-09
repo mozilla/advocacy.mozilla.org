@@ -2,27 +2,36 @@ var React = require('react');
 var Footer = require('../../components/footer.jsx');
 var EncryptVideo = require('../../components/encrypt-video.jsx');
 var ShareThisNow = require('../../components/encrypt-share-this-now');
-var ImageTag = require('../../components/imagetag.jsx');
 var Icon = require('../../components/footer-icon.jsx');
 var EncryptHeader = require('../../components/encrypt-header');
 var Modal = require(`../../components/encrypt-modal.jsx`);
 var Signup = require(`../../components/encrypt-signup.jsx`);
 
-
-
 module.exports = React.createClass({
   getInitialState() {
-    return {modal1: false, modal2:false};
+    return {
+      modal1: false,
+      modal2: false
+    };
   },
   componentDidMount() {
     document.addEventListener("keydown", (e)=>{
       console.log(e);
-      if(e.keyCode == 49){
-        this.setState({modal1: true, modal2:false});
-      } else if(e.keyCode == 50){
-        this.setState({modal1: false, modal2:true});
+      if (e.keyCode ===49) {
+        this.setState({
+          modal1: true,
+          modal2:false
+        });
+      } else if (e.keyCode === 50) {
+        this.setState({
+          modal1: false,
+          modal2: true
+        });
       } else {
-        this.setState({modal1:false, modal2:false});
+        this.setState({
+          modal1: false,
+          modal2:false
+        });
       }
     });
   },
