@@ -8,15 +8,15 @@ module.exports = React.createClass({
           <h2>Share This Now</h2>
           <div className="horizontal-rule"></div>
           <div className="social">
-            <div className="social-circle">
+            <a className="social-circle">
               <i className="fa fa-envelope"></i>
-            </div>
-            <div className="social-circle">
+            </a>
+            <a className="social-circle">
               <i className="fa fa-facebook"></i>
-            </div>
-            <div className="social-circle">
+            </a>
+            <a className="social-circle">
               <i className="fa fa-twitter"></i>
-            </div>
+            </a>
           </div>
           <p className="plea">We need your help to spread the word about how encryption protects our privacy.</p>
         </div>

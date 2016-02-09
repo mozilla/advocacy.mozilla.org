@@ -5,6 +5,11 @@ module.exports = React.createClass({
   componentDidMount: function() {
     this.refs.name.focus();
   },
+  getDefaultProps() {
+    return {
+      submitButtonText: "Sign Up"
+    };
+  },
   sendEmailToBasket: function(e, callback) {
     e.preventDefault();
     if (this.state.isSubmitting) {
@@ -762,12 +767,12 @@ module.exports = React.createClass({
           </option>
         </select>
         <div className="checkboxDiv">
-          <input form="form" type="checkbox" required="required"/>
-          <div className="label">
+          <input id="privacyPolicy" form="form" type="checkbox" required="required"/>
+          <label htmlFor="privacyPolicy" className="label">
             I'm okay with you handling this info as you explain in your privacy policy.
-          </div>
+          </label>
         </div>
-        <button type="submit" form="form" className="button button-groove">Sign up</button>
+        <button type="submit" form="form" className="button button-groove">{this.props.submitButtonText}</button>
       </div>
     );
   }

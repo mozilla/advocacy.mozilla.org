@@ -35,7 +35,7 @@
     flex-direction: column;
     text-align: center;
     padding: 2em;
-    & > *+*{
+    & > *:not(form)+*:not(.horizontal-rule){
       margin-top: 1em;
     }
     h2{
@@ -49,12 +49,13 @@
       order: 2;
     }
   }
+  .join-modal .cta{
+    @media(max-width: 600px){padding: .5em;}
+    button{margin-top: 1em;}
+  }
   .dual-cta-wrapper{
     @media(min-width: 767px){
       display: flex;
-      .cta{
-        height: 100%;
-      }
       .join-mozilla{
         margin: 0 0 0 auto;
       }
@@ -73,6 +74,7 @@
 .share-wrapper{
   flex: 1;
   background-color: @primary_red;
+  display: flex;
 }
 
 //V3 Stuff
@@ -109,6 +111,7 @@
   .encrypt-meta-wrapper{
     position: static;
     margin-top: 2rem;
+    padding: 0;
   }
   .videoTitle{
     @media(min-width: 450px){
