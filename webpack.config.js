@@ -42,6 +42,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin(`[name].css`),
-    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/v2`, `/encrypt/v3`])
+    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/v2`, `/encrypt/v3`]) // FIXME: Make this dynamic somehow
   ]
 };
