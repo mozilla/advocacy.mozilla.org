@@ -35,6 +35,7 @@
 
 .video-btn-wrapper{
   position: relative;
+  z-index: 2;
 }
 .video-wrapper{
   position: relative;
@@ -42,6 +43,23 @@
   margin: 0 auto;
   z-index: 1;
 }
+.video-theatre{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  z-index: 2;
+  display: none;
+  opacity: 0;
+  transition: opacity .5s;
+  &.visible{
+    display: block;
+    opacity: 1;
+  }
+}
+
 video{
   margin: 0 auto;
 }
@@ -49,6 +67,7 @@ video{
   opacity: 1;
   transition: opacity .5s;
   padding: 0 1rem;
+  z-index: 2;
 }
 @media(min-width: 650px){
 .encrypt-meta-wrapper{
@@ -59,7 +78,7 @@ video{
 }
 @media(min-width: 700px){
   .encrypt-meta-wrapper{
-    bottom: 2.5em;
+    bottom: 1.5em;
   }
 }
 
@@ -92,7 +111,7 @@ video{
     margin-top: .5rem;
   }
   .videoTitle {
-    font-size: 9vw;
+    font-size: 8vw;
     color: @primary_red;
     display: block;
     @media(min-width: 470px){

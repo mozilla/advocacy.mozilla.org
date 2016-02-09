@@ -6,24 +6,29 @@ var Icon = require(`../../components/footer-icon.jsx`);
 var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptVideo = require(`../../components/encrypt-video.jsx`);
+var Modal = require(`../../components/encrypt-modal.jsx`);
 
 module.exports = React.createClass({
   getInitialState: function() {
     return {
-      didSignup: false
+      didSignup: false,
+      videoDidStart: false,
+      videoDidEnd: false
     };
-  },
-  hideForm: function() {
-    this.setState({
-      formIsVisible: false
-    });
   },
   userDidSignup: function() {
     this.setState({
       didSignup: true
     });
-    this.hideForm();
-    console.log('userDidSignup');
+  },
+  setPageState(state){
+    this.setState(state);
+  },
+  hideModal: function() {
+    this.setState({
+      videoDidEnd: false,
+      videoDidStart: false
+    });
   },
   render: function() {
     return (
@@ -31,8 +36,8 @@ module.exports = React.createClass({
         <EncryptHeader />
         <main className="page">
           <div className="videoSection">
-            <EncryptVideo />
-            {!this.state.didSignup ? <Signup onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup">
+	    <EncryptVideo version="3" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
+	    <Signup onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
@@ -40,13 +45,16 @@ module.exports = React.createClass({
                 header="Join Mozilla"
                 text="For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla."
               />
-            </Signup> : `Thank you`}
+	    </Signup>
           </div>
           <ShareThisNow/>
         </main>
         <Footer>
-          <Icon><div className="social-circle"><i className="fa fa-medium"></i></div>Join the Conversation</Icon>
         </Footer>
+	{this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo signup-cta">
+	  <p>Stand with us for privacy and a free and open Internet.<br/>Sign on.</p>
+	  <Signup />
+	</Modal> : ''}
       </div>
     );
   }
