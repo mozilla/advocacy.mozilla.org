@@ -11,8 +11,13 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       formIsVisible: false,
-      didSignUp: false
+      didSignUp: false,
+      videoDidStart: false,
+      videoDidEnd: false
     };
+  },
+  setPageState(state){
+    this.setState(state);
   },
   showModal: function(e) {
     e.preventDefault();
@@ -35,9 +40,9 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="encrypt v2">
-        <EncryptHeader showModal={this.showModal} />
+      <EncryptHeader videoDidStart={this.state.videoDidStart} showModal={this.showModal}/>
         <main>
-          <EncryptVideo className="video-wrapper" />
+	  <EncryptVideo className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">

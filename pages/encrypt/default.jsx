@@ -6,13 +6,21 @@ var Icon = require('../../components/footer-icon.jsx');
 var EncryptHeader = require('../../components/encrypt-header');
 var Modal = require(`../../components/encrypt-modal.jsx`);
 var Signup = require(`../../components/encrypt-signup.jsx`);
+var classNames = require('classnames');
+
+
 
 module.exports = React.createClass({
   getInitialState() {
     return {
       modal1: false,
-      modal2: false
+      modal2: false,
+      videoDidStart: false,
+      videoDidEnd: false
     };
+  },
+  setPageState(state){
+    this.setState(state);
   },
   componentDidMount() {
     document.addEventListener("keydown", (e)=>{
@@ -39,9 +47,9 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="encrypt v1">
-        <EncryptHeader />
+	<EncryptHeader videoDidStart={this.state.videoDidStart}/>
         <main>
-          <EncryptVideo/>
+	  <EncryptVideo setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
           <ShareThisNow/>
         </main>
         <Footer>
