@@ -48,36 +48,37 @@ video{
   width: 100%;
 }
 }
+
 .encrypt-meta{
-    max-width: 40em;
-    width: 100%;
-    text-align: left;
-    color: #fff;
-    margin-top: 1rem;
-    &>*+*{
-      margin-top: .5rem;
-    }
-    .videoTitle {
-      font-size: 9vw;
-      color: @primary_red;
-      display: block;
-      @media(min-width: 470px){
-        font-size: 45px;
-      }
-    }
-    .videoMeta {
-      color: #fff;
-      *+*{
-      	margin-left: 1rem;
-      }
-    }
-    .episodeNumber{
-      font-weight: bold;
-    }
-    .video-date{
-      color: #9499a2;
+  max-width: 40em;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  margin-top: 1rem;
+  &>*+*{
+    margin-top: .5rem;
+  }
+  .videoTitle {
+    font-size: 9vw;
+    color: @primary_red;
+    display: block;
+    @media(min-width: 470px){
+      font-size: 45px;
     }
   }
+  .videoMeta {
+    color: #fff;
+    *+*{
+      margin-left: 1rem;
+    }
+  }
+  .episodeNumber{
+    font-weight: bold;
+  }
+  .video-date{
+    color: #9499a2;
+  }
+}
 
 .join-mozilla{
   color: #FFF;
@@ -90,7 +91,6 @@ video{
   color: #FFF;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 10px;
   text-align: center;
   max-width: 960px;
@@ -112,14 +112,14 @@ video{
       flex-direction: row;
       text-align: left;
       h2{
-	margin: 0;
+        margin: 0;
       }
       p{
-	margin: auto;
+        margin: auto;
       }
       & > *+*{
-	margin-top: 0;
-	margin-left: 10px;
+        margin-top: 0;
+        margin-left: 10px;
       }
   }
   .horizontal-rule{ display: none; }
@@ -131,12 +131,10 @@ video{
   }
   .social-circle{
     background-color: #FF8F98;
-    height: 35px;
-    width: 35px;
+    font-size: 1.1875rem;
+    color: white;
     i{
-      color: inherit;
-      font-size: 20px;
-      padding: 7px;
+      padding: .35em;
     }
   }
 }
@@ -144,16 +142,16 @@ video{
 .social-circle{
   display: inline-block;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  font-size: .7rem;
   text-align: center;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: .41em;
+  height: 1.66666em;
+  width: 1.66666em;
   background-color: white;
+  color: @contrast_darkblue;
   i {
-    color: @contrast_darkblue;
-    padding: 4px;
-    font-size: 12px;
+    padding: .33333em;
   }
 }
   .horizontal-rule {
@@ -175,6 +173,9 @@ video{
 .footer {
   background-color: @contrast_darkblue;
 }
+.footer .icon-container .icon{
+  align-items: initial;
+}
 //Form
 
 
@@ -188,13 +189,16 @@ video{
     margin-top: 25px;
   }
 }
+
+.checkboxDiv + button{
+  margin-top: 25px;
+}
+
 select{
   border: 1px solid #aaa;
   height: 2.375rem;
 }
 .checkboxDiv {
-  margin-top: 35px;
-  padding-bottom: 40px;
   input[type="checkbox"] {
     float: left;
     margin-top: 5px;
@@ -205,10 +209,36 @@ select{
     font-weight: lighter;
     text-align: left;
     margin-left: 25px;
+    display: block;
   }
 }
 
 //Modal
+
+.modal-overlay{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 100;
+}
+.modal-close{
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  color: white;
+  cursor: pointer;
+}
+.modal{
+  background-color: @primary_lightblue;
+  z-index:101;
+  padding: 1rem;
+  margin: 1rem auto;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0,0,0,.5);
+}
 
 .postVideo .modal{
   background-image: url('../../../public/assets/graphic-bars.svg');
@@ -230,7 +260,7 @@ select{
   }
 }
 
-.signup-cta .modal{
+.signup-cta .modal, .social-cta .modal{
   @media(min-width: 54rem){
     display: flex;
     p{
@@ -259,35 +289,33 @@ select{
 }
 
 .social-cta .modal{
-  font-size: 7vw;
+  text-align: center;
+  p{
+    width: 100%;
+  }
+  .social-circle{
+    background-color: @primary_red;
+    font-size: 2em;
+    color: white;
+    margin-right: 0;
+    & + .social-circle{
+      margin-left: .5em;
+    }
+  }
 }
 
+.join-modal .modal{
+  max-width: 95%;
+  .cta{
+    padding: 1em;
+  }
+  @media(min-width: 600px){
+    max-width: 500px;
+    padding: inherit;
+  }
+}
 
-.signup-cta{
+.signup-cta, .social-cta{
   display: none;
 }
 
-.modal-overlay{
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,.5);
-  z-index: 100;
-}
-.modal-close{
-  position: absolute;
-  right: .5rem;
-  top: .5rem;
-  color: white;
-  cursor: pointer;
-}
-.modal{
-  background-color: @primary_lightblue;
-  z-index:101;
-  padding: 1rem;
-  margin: 1rem auto;
-  position: relative;
-  box-shadow: 0 0 8px rgba(0,0,0,.5);
-}

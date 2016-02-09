@@ -58,11 +58,11 @@ module.exports = React.createClass({
           <Icon><div className="social-circle"><i className="fa fa-medium"></i></div>Join the Conversation</Icon>
         </Footer>
         { this.state.formIsVisible ?
-          <Modal hideModal={this.hideModal}>
+          <Modal className="join-modal" hideModal={this.hideModal}>
             <div className="cta">
               <h2 aria-role="label">Join the list</h2>
               <div className="horizontal-rule"></div>
-              <Signup onSubmission={this.userDidSignup}/>
+              <Signup submitButtonText="Subscribe" onSubmission={this.userDidSignup}/>
             </div>
           </Modal>
           : '' }
