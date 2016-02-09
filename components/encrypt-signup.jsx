@@ -20,7 +20,7 @@ module.exports = React.createClass({
     });
     var request = new XMLHttpRequest();
     var lang = `en`;
-    var url = `https://basket.mozilla.org` + `/news/subscribe/`;
+    var url = process.env.BASKET_URL;
     var newsletters = `mozilla-foundation`;
     var sourceURL = encodeURIComponent(`https://advocacy.mozilla.org/encrypt`);
     var email = this.state.email;
