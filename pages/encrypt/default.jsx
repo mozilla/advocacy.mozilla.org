@@ -11,6 +11,21 @@ var Signup = require(`../../components/encrypt-signup.jsx`);
 
 
 module.exports = React.createClass({
+  getInitialState() {
+    return {modal1: false, modal2:false};
+  },
+  componentDidMount() {
+    document.addEventListener("keydown", (e)=>{
+      console.log(e);
+      if(e.keyCode == 49){
+        this.setState({modal1: true, modal2:false});
+      } else if(e.keyCode == 50){
+        this.setState({modal1: false, modal2:true});
+      } else {
+        this.setState({modal1:false, modal2:false});
+      }
+    });
+  },
   render: function() {
     return (
       <div className="encrypt v1">
@@ -22,11 +37,11 @@ module.exports = React.createClass({
         <Footer>
           <Icon><div className="social-circle"><i className="fa fa-medium"></i></div>Join the Conversation</Icon>
         </Footer>
-        <Modal className="postVideo signup-cta">
+        {this.state.modal1 ? <Modal className="postVideo signup-cta">
           <p>Stand with us for privacy and a free and open Internet.<br/>Sign on.</p>
           <Signup />
-        </Modal>
-        <Modal className="postVideo social-cta">
+        </Modal> : ''}
+        {this.state.modal2 ? <Modal className="postVideo social-cta">
           <p>Will you spread the word about why privacy is important?</p>
           <div className="social">
             <div className="social-circle">
@@ -39,8 +54,7 @@ module.exports = React.createClass({
               <i className="fa fa-twitter"></i>
             </div>
           </div>
-        </Modal>
-
+        </Modal> : ''}
       </div>
     );
   }
