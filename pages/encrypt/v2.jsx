@@ -27,7 +27,9 @@ module.exports = React.createClass({
   },
   hideModal: function() {
     this.setState({
-      formIsVisible: false
+      formIsVisible: false,
+      videoDidEnd: false,
+      videoDidStart: false
     });
   },
   userDidSignup: function() {
@@ -35,14 +37,13 @@ module.exports = React.createClass({
       didSignup: true
     });
     this.hideModal();
-    console.log('userDidSignup');
   },
   render: function() {
     return (
       <div className="encrypt v2">
       <EncryptHeader videoDidStart={this.state.videoDidStart} showModal={this.showModal}/>
         <main>
-	  <EncryptVideo className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
+	  <EncryptVideo version="2" className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">
@@ -60,7 +61,6 @@ module.exports = React.createClass({
           </div>
         </main>
         <Footer>
-          <Icon><div className="social-circle"><i className="fa fa-medium"></i></div>Join the Conversation</Icon>
         </Footer>
         { this.state.formIsVisible ?
           <Modal className="join-modal" hideModal={this.hideModal}>
@@ -71,6 +71,10 @@ module.exports = React.createClass({
             </div>
           </Modal>
           : '' }
+	{this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo signup-cta">
+	  <p>Stand with us for privacy and a free and open Internet.<br/>Sign on.</p>
+	  <Signup />
+	</Modal> : ''}
       </div>
     );
   }
