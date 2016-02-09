@@ -10,7 +10,7 @@ module.exports = React.createClass({
       submitButtonText: "Sign Up"
     };
   },
-  sendEmailToBasket: function(e, callback) {
+  sendEmailToBasket: function(e) {
     e.preventDefault();
     if (this.state.isSubmitting) {
       return;
@@ -38,8 +38,7 @@ module.exports = React.createClass({
       if (request.readyState === 4) {
         // TODO: do something when submitted
         console.log(`submitted`);
-        callback(true);
-        if(this.props.onSubmission){
+        if (this.props.onSubmission) {
           this.props.onSubmission();
         }
       }

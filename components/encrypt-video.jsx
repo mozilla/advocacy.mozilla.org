@@ -4,7 +4,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="video-wrapper">
-      	<video aria-describedby="videoDescription" controls aria-labeledby="videoTitle" poster="/assets/encrypt-poster-dark-1920x1080.jpg" autoBuffer width={this.props.width} height={this.props.height}>
+        <video id="video" aria-describedby="videoDescription" controls aria-labeledby="videoTitle" poster="/assets/encrypt-poster-dark-1920x1080.jpg" autoBuffer width={this.props.width} height={this.props.height}>
           <source id="mp4" src="https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/moz.final.1.native.mp4" type="video/mp4"/>
         </video>
         <div className="encrypt-meta-wrapper">
@@ -12,7 +12,7 @@ module.exports = React.createClass({
             <span className="videoMeta">
             <span className="episodeNumber">EPISODE 1</span>
             <time className="video-date" dateTime="2016-02-08">FEBUARY 08, 2016</time>
-            <span className="duration">0:53</span>
+            <span className="duration">1:00</span>
             </span>
             <div id="videoTitle" className="videoTitle">
               Privacy Lets You Be You
