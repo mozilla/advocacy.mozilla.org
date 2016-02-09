@@ -31,7 +31,7 @@ module.exports = React.createClass({
         <Header/>
         <HeroUnit className="home-page-hero-unit" >
            <h2>We Are Building a Global Movement to Protect the Free and Open Web</h2>
-            <p className="intro">We believe the Internet is at its best as a global public resource, open and accessible to all. We also believe a healthy Internet requires an active, global community. mozilla Advocacy brings together individuals from around the world to educate on and fight for privacy, inclusion and literacy online.</p>
+            <p className="intro">We believe the Internet is at its best as a global public resource, open and accessible to all. We also believe a healthy Internet requires an active, global community. Mozilla Advocacy brings together individuals from around the world to educate on and fight for privacy, inclusion and literacy online.</p>
         </HeroUnit>
         <div className="page">
           <ContentContainer className="grey center-align">
