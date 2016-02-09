@@ -14,6 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
   }
   .encryptText {
     max-width: 960px;
@@ -21,6 +22,8 @@
     z-index: 2;
     position: relative;
     width: 100%;
+    opacity: 1;
+    transition: opacity .5s;
   }
   .header-cta{
     display: none;
@@ -30,23 +33,53 @@
 
 //EncryptVideo
 
+.video-btn-wrapper{
+  position: relative;
+}
 .video-wrapper{
   position: relative;
   max-width: 960px;
   margin: 0 auto;
+  z-index: 1;
 }
 video{
   margin: 0 auto;
 }
 .encrypt-meta-wrapper{
+  opacity: 1;
+  transition: opacity .5s;
   padding: 0 1rem;
 }
 @media(min-width: 650px){
 .encrypt-meta-wrapper{
   position: absolute;
-  bottom: 2.5em;
+  bottom: 0;
   width: 100%;
 }
+}
+@media(min-width: 700px){
+  .encrypt-meta-wrapper{
+    bottom: 2.5em;
+  }
+}
+
+.playButton{
+  background: transparent;
+  position: absolute;
+  border: none;
+  left: 50%;
+  top: 50%;
+  width: 10em;
+  height: 10em;
+  margin-left: -5em;
+  margin-top: -5em;
+  transition: all .5s ease;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 1;
+  &:hover{
+    transform: scale(1.2);
+  }
 }
 
 .encrypt-meta{
@@ -161,12 +194,6 @@ video{
     margin: 1em auto 0;
   }
 
-
-//Signup
-
-.encrypt-signup{
-  // min-width: 300px;
-}
 
 //Footer
 
