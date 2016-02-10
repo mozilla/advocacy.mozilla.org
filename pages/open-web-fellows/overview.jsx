@@ -147,6 +147,17 @@ module.exports = React.createClass({
               />
             </div>
           </ContentContainer>
+          <ContentContainer className="grey">
+            <div className="ford-logo">
+              <div>
+                <ImageTag height={50} width={198} alt="ford logo" src1x="/assets/logo-ford.svg"/>
+              </div>
+              <div className="ford-logo-container">
+                <div className="supported-by">SUPPORTED BY</div>
+                <p>The Ford Foundation works around the world on the frontlines of social change to fight inequality, strengthen democratic values, reduce poverty and injustice, and advance human achievement. Learn more at <a href="https://www.fordfoundation.org/">FordFoundation.org</a></p>
+              </div>
+            </div>
+          </ContentContainer>
         </div>
         <Apply/>
         <Footer/>
