@@ -6,6 +6,7 @@ var Icon = require(`../../components/footer-icon.jsx`);
 var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var Modal = require(`../../components/encrypt-modal.jsx`);
+var classNames = require('classnames');
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -37,14 +38,17 @@ module.exports = React.createClass({
     this.setState({
       didSignup: true
     });
-    this.hideModal();
+    setTimeout(this.hideModal, 2000);
   },
   render: function() {
+    var modalClass = classNames({
+      'join-modal': true
+    });
     return (
       <div className="encrypt v2">
       <EncryptHeader videoDidStart={this.state.videoDidStart} showModal={this.showModal}/>
         <main>
-	  <EncryptVideo version="2" className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart} videoIsPaused={this.state.videoIsPaused}/>
+          <EncryptVideo version="2" className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart} videoIsPaused={this.state.videoIsPaused}/>
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">
@@ -53,7 +57,7 @@ module.exports = React.createClass({
                 </h2>
                 <div className="horizontal-rule"></div>
                 <p>
-                  For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla.
+                  For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla.
                 </p>
                 {!this.state.didSignup ? <button onClick={this.showModal} className="button">Sign up</button> : 'Thank you!'}
               </div>
