@@ -16,26 +16,21 @@ module.exports = React.createClass({
       <html>
         <head>
           <meta charSet="UTF-8"/>
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="/assets/Encryption-social-05-07.png" />
-          <meta property="og:image:width" content="1400" />
-          <meta property="og:image:height" content="1400" />
-          <meta property="og:site_name" content="Mozilla Advocacy - Encryption"/>
-          <meta property="og:determiner" content="" />
-          <meta property="og:locale" content="en_US" />
           <meta property="og:title" content="Check out this awesome video"/>
-          <meta property="og:url" content="http://advocacy.mozilla.org/encrypt/"/>
-          <meta property="description" content="Join the movement for online privacy." />
+          <meta property="og:site_name" content="Mozilla Advocacy - Encryption"/>
+          <meta property="og:url" content="https://advocacy.mozilla.org/encrypt/"/>
           <meta property="og:description" content="Join the movement for online privacy."/>
+          <meta property="og:image" content="/assets/Encryption-social-05-07.png" />
+
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@mozilla" />
           <meta name="twitter:title" content="Privacy Lets You Be You" />
           <meta name="twitter:description" content="I just watched a great video about online privacy and how it let's #youbeyou. Check it out at mzl.la/encrypt" />
           <meta name="twitter:image" content="/assets/Encryption-social-05-07.png" />
 
-          <meta name="description" content="I just watched a great video about online privacy and how it let's #youbeyou. Check it out at mzl.la/encrypt"/>
-          <meta name="title" content="Encryption | Mozilla Advocacy"/>
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/encrypt.css"/>
