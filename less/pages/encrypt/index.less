@@ -1,18 +1,59 @@
+// color sets based on https://cloud.githubusercontent.com/assets/12228435/12741443/381d0424-c931-11e5-8b61-02fe6b30c3c3.png
+@primary_lightblue: #5381B9;
+@primary_darkblue: #005189;
+@primary_red: #F46060;
+@contrast_lightblue: #1C325E;
+@contrast_darkblue: #283344;
+@contrast_red: #FF8F98;
+
+@blue_ui_typography: #6DADE2;
+
+@import "../../components/footer";
+
+@import "base";
+@import "components";
+@import "layout";
+
+
+
 .encrypt {
-  .hero-unit {
-    background-color:  #5D5D5D;
+  background: @primary_darkblue;
+  .videoSection{
+
   }
-  .encryptText {
-    max-width: 1200px;
-    margin: 0px auto;
+}
+
+
+//TODO: Is this still necessary?
+.encrypt.v3{
+
+  ////
+  //// v3 stuff
+  ////
+  .videoSection{
+    background-color: @contrast_lightblue;
+    padding-bottom: 50px;
+    padding-top: 30px;
+
   }
-  .content-container {
-    .content {
-      padding-top: 0;
-    }
+
+  .cta-header {
+    color: #F46060;
+    margin: auto 0;
+    font-weight: lighter;
+    font-size: 38px;
+    text-align: left;
   }
-  .videoSection {
-    text-align: center;
-    background-color: #000;
+  .cta-hr {
+    display: none;
   }
+  .cta-text {
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: left;
+
+  }
+
 }

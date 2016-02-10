@@ -1,0 +1,121 @@
+//V1 Stuff
+
+.encrypt.v1{
+  header{
+    max-height: 190px;
+  }
+  .video-description{
+    display: none;
+  }
+}
+
+//V2 Stuff
+
+.encrypt.v2{
+  header{
+    max-height: 210px;
+  }
+  .header-cta{
+    @media(min-width: 625px){
+      display: block;
+      position: relative;
+      //A little magic, but aligning with baseline of images is hard
+      top: -3px;
+    }
+    button{
+      margin-left: .5rem;
+    }
+    .encryptText{
+      margin-top: 1.5rem;
+    }
+  }
+  .cta{
+    max-width: 500px;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em;
+    & > *:not(form)+*:not(.horizontal-rule){
+      margin-top: 1em;
+    }
+    h2{
+      margin: 0;
+      font-size: 38px;
+    }
+    .horizontal-rule{
+      display: block;
+    }
+    .social{
+      order: 2;
+    }
+  }
+  .join-modal .cta{
+    @media(max-width: 600px){padding: .5em;}
+    button{margin-top: 1em;}
+  }
+  .dual-cta-wrapper{
+    @media(min-width: 767px){
+      display: flex;
+      .join-mozilla{
+        margin: 0 0 0 auto;
+      }
+      .share-this-now{
+        margin: 0 auto 0 0;
+      }
+    }
+  }
+}
+
+
+.join-mozilla-wrapper{
+  background-color: @primary_darkblue;
+  flex:1;
+}
+.share-wrapper{
+  flex: 1;
+  background-color: @primary_red;
+  display: flex;
+}
+
+//V3 Stuff
+
+.encrypt.v3{
+  main{
+    background-color: @contrast_lightblue;
+  }
+  @media(min-width: 500px){
+    .encryptText{
+      margin-bottom: 20px;
+    }
+  }
+  .videoSection{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+    @media(min-width: 755px){
+      display: flex;
+    }
+  }
+  .video-wrapper{
+    background: transparent;
+    flex: 2;
+    @media(min-width: 755px){
+      margin-right: 2em;
+    }
+  }
+  .encrypt-signup{
+    flex-shrink: 0;
+    text-align: center;
+    flex-basis: 300px;
+  }
+  .encrypt-meta-wrapper{
+    position: static;
+    margin-top: 2rem;
+    padding: 0;
+  }
+  .videoTitle{
+    @media(min-width: 450px){
+      font-size: 2.375rem;
+    }
+  }
+}

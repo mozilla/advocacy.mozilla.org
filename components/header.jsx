@@ -1,11 +1,12 @@
-var React = require('react');
-var Router = require('react-router');
+var React = require(`react`);
+var Router = require(`react-router`);
 var Link = Router.Link;
-var ImageTag = require('./imagetag.jsx');
+var ImageTag = require(`./imagetag.jsx`);
 
 module.exports = React.createClass({
   render: function() {
-    var logoImage = this.props.logoImage || "/assets/logo-advocacy.svg";
+    var logoImage = this.props.logoImage || `/assets/logo-advocacy.svg`;
+
     return (
       <div className="header">
         <div className="header-content">

@@ -1,36 +1,53 @@
 var React = require('react');
 var Footer = require('../../components/footer.jsx');
-var HeroUnit = require('../../components/hero-unit.jsx');
-var Video = require('../../components/video.jsx');
-var ContentContainer = require('../../components/content-container.jsx');
-var ImageTag = require('../../components/imagetag.jsx');
+var EncryptVideo = require('../../components/encrypt-video.jsx');
+var ShareThisNow = require('../../components/encrypt-share-this-now');
+var Icon = require('../../components/footer-icon.jsx');
+var EncryptHeader = require('../../components/encrypt-header');
+var Modal = require(`../../components/encrypt-modal.jsx`);
+var Signup = require(`../../components/encrypt-signup.jsx`);
+var classNames = require('classnames');
 
 module.exports = React.createClass({
+  getInitialState() {
+    return {
+      videoDidStart: false,
+      videoDidEnd: false
+    };
+  },
+  setPageState(state) {
+    this.setState(state);
+  },
+  hideModal() {
+    this.setState({
+      videoDidEnd: false,
+      videoDidStart: false
+    });
+  },
   render: function() {
     return (
-      <div className="encrypt">
-        <div className="header">
-          <div className="header-content">
-            <ImageTag height="30" width="105" src1x="/assets/logo-mozilla.svg" alt="Mozilla logo"/>
+      <div className="encrypt v1">
+        <EncryptHeader videoDidStart={this.state.videoDidStart}/>
+        <main>
+          <EncryptVideo version="1" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
+          <ShareThisNow/>
+        </main>
+        <Footer>
+        </Footer>
+          {this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo social-cta">
+          <p>Will you spread the word about why privacy is important?</p>
+          <div className="social">
+            <a target="_blank" href="mailto:?&subject=Sharing a video I thought you’d like. &body=I just watched a great video about online privacy and thought you would really like it. Check it out at https://mzl.la/encrypt. Hope you enjoy it as much as I did!" className="social-circle">
+              <i className="fa fa-envelope"></i>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://advocacy.mozilla.org/encrypt" className="social-circle">
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a target="_blank" href="https://twitter.com/intent/tweet?url=advocacy.mozilla.org/encrypt&text=I+just+watched+a+great+video+about+online+privacy+and+how+it+lets+%23youbeyou.+Check+it+out+at+mzl.la/encrypt" className="social-circle">
+              <i className="fa fa-twitter"></i>
+            </a>
           </div>
-          </div>
-        <HeroUnit>
-          <div className="encryptText">
-            <h1>hehe</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </HeroUnit>
-        <div className="page">
-          <Video/>
-          <ContentContainer className="encryptMeta">
-            <h2>
-              Why does encryption matter?
-            </h2>
-            <span className="videoMeta">FEBUARY 05, 2016  |  EPISODE 1  | 0:53</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </ContentContainer>
-        </div>
-        <Footer/>
+        </Modal> : ''}
       </div>
     );
   }

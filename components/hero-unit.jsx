@@ -1,11 +1,10 @@
-var React = require('react');
+var React = require(`react`);
 
 module.exports = React.createClass({
   calculateDensity: function() {
-    var
-        ratio;
+    var ratio;
 
-    if (typeof window !== 'undefined' && window.devicePixelRatio > 1.5) {
+    if (typeof window !== `undefined` && window.devicePixelRatio > 1.5) {
       ratio = 2;
     } else {
       ratio = 1;
@@ -16,6 +15,7 @@ module.exports = React.createClass({
 
   getInitialState: function() {
     var image = this.props.image;
+
     if (this.calculateDensity() === 2) {
       image = this.props.image2x || this.props.image;
     }
@@ -29,14 +29,16 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var className = "hero-unit-container";
+    var className = `hero-unit-container`;
+
     if (this.props.className) {
-      className += " " + this.props.className;
+      className += ` ` + this.props.className;
     }
     var style = {};
+
     if (this.props.image) {
       style = {
-        backgroundImage: 'url(' + this.state.image + ')'
+        backgroundImage: `url(` + this.state.image + `)`
       };
     }
     return (

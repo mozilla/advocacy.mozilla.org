@@ -1,40 +1,53 @@
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+require(`babel-core/register`);
+
+var path = require(`path`);
+var webpack = require('webpack');
+var ExtractTextPlugin = require(`extract-text-webpack-plugin`);
+var SimpleHtmlPrecompiler = require(`./scripts/simple-html-plugin.js`);
 
 module.exports = {
-  entry: './client.jsx',
+  entry: {
+    advocacy: [`./advocacy-main.jsx`, `./less/advocacy.less`],
+    encrypt: [`./encrypt-app.jsx`, `./less/encrypt.less`]
 
+  },
   output: {
-    filename: '[name].js',
-    chunkFilename: '[id].chunk.js',
-    path: path.join('public', 'build'),
-    publicPath: '/build/'
+    filename: `[name].js`,
+    chunkFilename: `[id].chunk.js`,
+    path: path.join(`public`, `build`),
+    publicPath: `/build/`
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: [``, `.js`, `.jsx`]
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loaders: ['react-hot', 'babel-loader']
+        loaders: [`react-hot`, `babel-loader`]
       },
       {
         test: /\.json$/,
-        loaders: ['json-loader'] },
+        loaders: [`json-loader`] },
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-        loader: 'url-loader?limit=8192'
+        loader: `url-loader?limit=8192`
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract('css?sourceMap!less?sourceMap'),
-        exclude: ['node_modules']
+        loader: ExtractTextPlugin.extract(`css?sourceMap!less?sourceMap`),
+        exclude: [`node_modules`]
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('index.css')
+    new ExtractTextPlugin(`[name].css`),
+    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/2`, `/encrypt/3`]), // FIXME: Make this dynamic somehow
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify({
+        BASKET_URL: process.env.BASKET_URL
+      })
+    })
   ]
 };
