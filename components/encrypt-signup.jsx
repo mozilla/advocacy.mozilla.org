@@ -60,7 +60,7 @@ module.exports = React.createClass({
         {this.props.children}
         <form id="form" onSubmit={this.sendEmailToBasket}></form>
         <input form="form" type="text" className="input" name="name" ref="name" valueLink={this.linkState(`name`)} placeholder="Name"/>
-	<input required="required" form="form" type="email" className="input" ref="email" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address (required)"/>
+        <input required="required" form="form" type="email" className="input" ref="email" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address (required)"/>
         <select className="country-input" valueLink={this.linkState(`country`)} required="required">
           <option value="" defaultValue="selected">
             Select your Country
