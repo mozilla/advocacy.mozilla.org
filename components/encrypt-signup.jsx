@@ -2,6 +2,12 @@ var React = require(`react`);
 
 module.exports = React.createClass({
   mixins: [require(`react-addons-linked-state-mixin`)],
+  getInitialState() {
+    return {
+      isSubmitting: false,
+      didSignUp: false
+    };
+  },
   componentDidMount: function() {
     this.refs.name.focus();
   },
@@ -37,7 +43,9 @@ module.exports = React.createClass({
     request.onreadystatechange = () => {
       if (request.readyState === 4) {
         // TODO: do something when submitted
-        console.log(`submitted`);
+        this.setState({
+          didSignUp: true
+        });
         if (this.props.onSubmission) {
           this.props.onSubmission();
         }
@@ -771,7 +779,7 @@ module.exports = React.createClass({
             I'm okay with you handling this info as you explain in your privacy policy.
           </label>
         </div>
-        <button type="submit" form="form" className="button button-groove">{this.props.submitButtonText}</button>
+        { this.state.didSignUp ? <button className="button" style={{padding: "12px 17px"}}>Thanks for signing up!</button> : <button type="submit" form="form" className="button button-groove">{this.props.submitButtonText}</button> }
       </div>
     );
   }
