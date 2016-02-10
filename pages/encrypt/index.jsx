@@ -18,18 +18,24 @@ module.exports = React.createClass({
           <meta charSet="UTF-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="common/assets/logo-og.png" />
+          <meta property="og:image" content="/assets/Encryption-social-05-07.png" />
           <meta property="og:image:width" content="1400" />
           <meta property="og:image:height" content="1400" />
-          <meta property="og:site_name" content="Mozilla Advocacy"/>
+          <meta property="og:site_name" content="Mozilla Advocacy - Encryption"/>
           <meta property="og:determiner" content="" />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:title" content="Mozilla&rsquo;s Policy & Advocacy Program - Home"/>
+          <meta property="og:title" content="Mozilla&rsquo;s Policy & Advocacy Program - Encryption"/>
           <meta property="og:url" content="http://advocacy.mozilla.org/"/>
           <meta property="description" content="We are building a global movement to protect the free and open Web." />
           <meta property="og:description" content="We are building a global movement to protect the free and open Web."/>
-          <meta name="description" content="We Are Building a Global Movement to Protect the Free and Open Web Mozilla supports the heroes of the Web — the developers, advocates and ..."/>
-          <meta name="title" content="Home | Mozilla Advocacy"/>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@mozilla" />
+          <meta name="twitter:title" content="Privacy Lets You Be You" />
+          <meta name="twitter:description" content="I just watched a great video about online privacy and how it let's #youbeyou. Check it out at mzl.la/encrypt" />
+          <meta name="twitter:image" content="/assets/Encryption-social-05-07.png" />
+
+          <meta name="description" content="I just watched a great video about online privacy and how it let's #youbeyou. Check it out at mzl.la/encrypt"/>
+          <meta name="title" content="Encryption | Mozilla Advocacy"/>
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/encrypt.css"/>

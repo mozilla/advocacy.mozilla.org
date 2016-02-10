@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin(`[name].css`),
-    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/v2`, `/encrypt/v3`]), // FIXME: Make this dynamic somehow
+    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/2`, `/encrypt/3`]), // FIXME: Make this dynamic somehow
     new webpack.DefinePlugin({
       'process.env': JSON.stringify({
         BASKET_URL: process.env.BASKET_URL
