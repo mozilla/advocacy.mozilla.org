@@ -16,6 +16,34 @@
       line-height: 25px;
     }
   }
+  .ford-logo {
+    @media screen and (min-width: 768px) {
+      padding: 0 20px;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      img {
+        margin-right: 40px;
+      }
+      .ford-logo-container {
+        width: ~"calc(100% - 238px)";
+        position: relative;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      img {
+        margin-bottom: 40px;
+      }
+    }
+    .supported-by {
+      font-size: 14px;
+      font-style: italic;
+      color: #7F7F7F;
+    }
+    p {
+      margin: 10px 0 0 0;
+    }
+  }
   .globe-image {
     &.mobile {
       display: none;
