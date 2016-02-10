@@ -1,3 +1,4 @@
+require('habitat').load();
 require(`babel-core/register`);
 
 var path = require(`path`);
