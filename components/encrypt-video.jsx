@@ -8,6 +8,11 @@ module.exports = React.createClass({
         videoIsPaused: false
       });
     });
+    this.refs.video.addEventListener("webkitendfullscreen", () => {
+      this.props.setPageState({
+        videoDidEnd: true
+      });
+    });
     this.refs.video.addEventListener("ended", (e) => {
       this.props.setPageState({
         videoDidEnd: true
