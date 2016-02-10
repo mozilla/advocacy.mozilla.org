@@ -24,9 +24,9 @@ module.exports = React.createClass({
           <meta property="og:site_name" content="Mozilla Advocacy - Encryption"/>
           <meta property="og:determiner" content="" />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:title" content="Mozilla&rsquo;s Policy & Advocacy Program - Encryption"/>
+          <meta property="og:title" content="Check out this awesome video"/>
           <meta property="og:url" content="http://advocacy.mozilla.org/encrypt/"/>
-          <meta property="description" content="We are building a global movement to protect the free and open Web." />
+          <meta property="description" content="Join the movement for online privacy." />
           <meta property="og:description" content="We are building a global movement to protect the free and open Web."/>
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@mozilla" />
