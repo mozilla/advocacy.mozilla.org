@@ -11,7 +11,8 @@ module.exports = React.createClass({
     return {
       didSignup: false,
       videoDidStart: false,
-      videoDidEnd: false
+      videoDidEnd: false,
+      videoIsPaused: false
     };
   },
   userDidSignup: function() {

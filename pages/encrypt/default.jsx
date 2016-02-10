@@ -12,7 +12,8 @@ module.exports = React.createClass({
   getInitialState() {
     return {
       videoDidStart: false,
-      videoDidEnd: false
+      videoDidEnd: false,
+      videoIsPaused: false
     };
   },
   setPageState(state) {
@@ -29,7 +30,7 @@ module.exports = React.createClass({
       <div className="encrypt v1">
         <EncryptHeader videoDidStart={this.state.videoDidStart}/>
         <main>
-          <EncryptVideo version="1" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
+          <EncryptVideo version="1" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart} videoIsPaused={this.state.videoIsPaused}/>
           <ShareThisNow/>
         </main>
         <Footer>

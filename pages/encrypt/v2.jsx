@@ -13,7 +13,8 @@ module.exports = React.createClass({
       formIsVisible: false,
       didSignUp: false,
       videoDidStart: false,
-      videoDidEnd: false
+      videoDidEnd: false,
+      videoIsPaused: false
     };
   },
   setPageState(state){
@@ -43,7 +44,7 @@ module.exports = React.createClass({
       <div className="encrypt v2">
       <EncryptHeader videoDidStart={this.state.videoDidStart} showModal={this.showModal}/>
         <main>
-	  <EncryptVideo version="2" className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
+	  <EncryptVideo version="2" className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart} videoIsPaused={this.state.videoIsPaused}/>
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">
