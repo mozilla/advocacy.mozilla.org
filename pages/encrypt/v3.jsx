@@ -41,7 +41,7 @@ module.exports = React.createClass({
                 headerClassName="cta-header"
                 textClassName="cta-text"
                 header="Join Mozilla"
-                text="For more resources and videos about encryption and other topics essential to protecting the Web, signup for email updates from Mozilla."
+                text="For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."
               />
           </Signup>
           </div>
