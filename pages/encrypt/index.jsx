@@ -23,13 +23,13 @@ module.exports = React.createClass({
           <meta property="og:site_name" content="Mozilla Advocacy - Encryption"/>
           <meta property="og:url" content="https://advocacy.mozilla.org/encrypt/"/>
           <meta property="og:description" content="Join the movement for online privacy."/>
-          <meta property="og:image" content="/assets/Encryption-social-05-07.png" />
+          <meta property="og:image" content="https://advocacy.mozilla.org/assets/Encryption-social-05-07.png" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@mozilla" />
           <meta name="twitter:title" content="Privacy Lets You Be You" />
           <meta name="twitter:description" content="I just watched a great video about online privacy and how it let's #youbeyou. Check it out at mzl.la/encrypt" />
-          <meta name="twitter:image" content="/assets/Encryption-social-05-07.png" />
+          <meta name="twitter:image" content="https://advocacy.mozilla.org/assets/Encryption-social-05-07.png" />
 
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
