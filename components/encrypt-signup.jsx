@@ -776,7 +776,7 @@ module.exports = React.createClass({
         <div className="checkboxDiv">
           <input id="privacyPolicy" form="form" type="checkbox" required="required"/>
           <label htmlFor="privacyPolicy" className="label">
-            I'm okay with you handling this info as you explain in your <a target="_blank" style={{"color":"white", "text-decoration":"underline"}}href="https://www.mozilla.org/en-US/privacy/">privacy policy</a>.
+            I’m okay with Mozilla handling my info as explained in <a href="https://www.mozilla.org/en-US/privacy/websites/" target="_blank" style={{"color":"white", "text-decoration":"underline"}}>this Privacy Notice</a>.
           </label>
         </div>
         { this.state.didSignUp ? <button className="button" style={{padding: "12px 17px"}}>Thanks for signing up!</button> : <button type="submit" form="form" className="button button-groove">{this.props.submitButtonText}</button> }
