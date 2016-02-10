@@ -14,7 +14,7 @@ module.exports = React.createClass({
             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://advocacy.mozilla.org/encrypt/" className="social-circle">
               <i className="fa fa-facebook"></i>
             </a>
-            <a target="_blank" href="https://twitter.com/intent/tweet?url=advocacy.mozilla.org/encrypt&text=I+just+watched+a+great+video+about+online+privacy+and+how+it+lets+%23youbeyou.+Check+it+out+at+mzl.la/encrypt" className="social-circle">
+            <a target="_blank" href="https://twitter.com/intent/tweet?url=advocacy.mozilla.org/encrypt&via=@mozilla&text=I+just+watched+a+great+video+about+online+privacy+and+how+it+lets+%23youbeyou.+Check+it+out+at+mzl.la/encrypt" className="social-circle">
               <i className="fa fa-twitter"></i>
             </a>
           </div>
