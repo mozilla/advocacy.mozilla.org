@@ -1,4 +1,3 @@
-
 var express = require('express'),
     Habitat = require('habitat'),
     path = require('path'),
