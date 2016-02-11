@@ -1,11 +1,15 @@
 var React = require(`react`);
+var ga = require('react-ga');
 
 module.exports = React.createClass({
   mixins: [require(`react-addons-linked-state-mixin`)],
   getInitialState() {
     return {
       isSubmitting: false,
-      didSignUp: false
+      didSignUp: false,
+      email: ``,
+      country: ``,
+      name: ``
     };
   },
   componentDidMount: function() {
@@ -42,7 +46,7 @@ module.exports = React.createClass({
     }
     request.onreadystatechange = () => {
       if (request.readyState === 4) {
-        // TODO: do something when submitted
+        ga.event({category: "Signup", action: "Submitted the form"});
         this.setState({
           didSignUp: true
         });
@@ -53,14 +57,6 @@ module.exports = React.createClass({
     };
     request.open(`POST`, url);
     request.send(params);
-  },
-  getInitialState: function() {
-    return {
-      email: ``,
-      country: ``,
-      name: ``,
-      isSubmitting: false
-    };
   },
   render: function() {
     return (

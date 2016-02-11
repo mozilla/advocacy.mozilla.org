@@ -1,4 +1,5 @@
 var React = require(`react`);
+var ga = require('react-ga');
 var classNames = require('classnames');
 
 module.exports = React.createClass({
@@ -7,6 +8,7 @@ module.exports = React.createClass({
       this.props.setPageState({
         videoIsPaused: false
       });
+      ga.event({category: "Video", action: "Video started"});
     });
     this.refs.video.addEventListener("webkitendfullscreen", () => {
       this.props.setPageState({
@@ -17,6 +19,7 @@ module.exports = React.createClass({
       this.props.setPageState({
         videoDidEnd: true
       });
+      ga.event({category: "Video", action: "Video ended"});
     });
     this.refs.theatre.addEventListener("click", (e)=>{
       this.hideTheatre();
@@ -27,12 +30,14 @@ module.exports = React.createClass({
     this.props.setPageState({
       videoDidStart: true
     });
+    ga.event({category: "Video", action: "Clicked on play button"});
   },
   hideTheatre: function() {
     this.refs.video.pause();
     this.props.setPageState({
       videoIsPaused: true
     });
+    ga.event({category: "Video", action: "Clicked to paused the video"});
   },
   render: function() {
 
