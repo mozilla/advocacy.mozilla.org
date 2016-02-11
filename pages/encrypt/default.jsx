@@ -7,6 +7,7 @@ var EncryptHeader = require('../../components/encrypt-header');
 var Modal = require(`../../components/encrypt-modal.jsx`);
 var Signup = require(`../../components/encrypt-signup.jsx`);
 var classNames = require('classnames');
+var ga = require('react-ga');
 
 module.exports = React.createClass({
   getInitialState() {
@@ -25,6 +26,9 @@ module.exports = React.createClass({
       videoDidStart: false
     });
   },
+  socialClicked(e) {
+    ga.event({catagory: "Social", action: "Clicked on " + e.target.dataset.social});
+  },
   render: function() {
     return (
       <div className="encrypt v1">
@@ -39,13 +43,13 @@ module.exports = React.createClass({
           <p className="cta-title">Will you spread the word about why privacy is important?</p>
           <div className="social">
             <a href="mailto:?&subject=Sharing a video I thought you’d like. &body=I just watched a great video about online privacy and thought you would really like it. Check it out at https://mzl.la/encrypt. Hope you enjoy it as much as I did!" className="social-circle">
-              <i className="fa fa-envelope"></i>
+              <i data-social="email" onClick={this.socialClicked} className="fa fa-envelope"></i>
             </a>
             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://advocacy.mozilla.org/encrypt/" className="social-circle">
-              <i className="fa fa-facebook"></i>
+              <i data-social="facebook" onClick={this.socialClicked} className="fa fa-facebook"></i>
             </a>
             <a target="_blank" href="https://twitter.com/intent/tweet?url=advocacy.mozilla.org/encrypt&via=mozilla&text=I+just+watched+a+great+video+about+online+privacy+and+how+it+lets+%23youbeyou.+Check+it+out+at+mzl.la/encrypt" className="social-circle">
-              <i className="fa fa-twitter"></i>
+              <i data-social="twitter" onClick={this.socialClicked} className="fa fa-twitter"></i>
             </a>
           </div>
         </Modal> : ''}
