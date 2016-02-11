@@ -38,7 +38,7 @@ module.exports = React.createClass({
           {this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo social-cta">
           <p className="cta-title">Will you spread the word about why privacy is important?</p>
           <div className="social">
-            <a target="_blank" href="mailto:?&subject=Sharing a video I thought you’d like. &body=I just watched a great video about online privacy and thought you would really like it. Check it out at https://mzl.la/encrypt. Hope you enjoy it as much as I did!" className="social-circle">
+            <a href="mailto:?&subject=Sharing a video I thought you’d like. &body=I just watched a great video about online privacy and thought you would really like it. Check it out at https://mzl.la/encrypt. Hope you enjoy it as much as I did!" className="social-circle">
               <i className="fa fa-envelope"></i>
             </a>
             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://advocacy.mozilla.org/encrypt/" className="social-circle">
