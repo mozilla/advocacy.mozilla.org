@@ -46,12 +46,18 @@ module.exports = React.createClass({
     }
     request.onreadystatechange = () => {
       if (request.readyState === 4) {
-        ga.event({category: "Signup", action: "Submitted the form"});
-        this.setState({
-          didSignUp: true
-        });
-        if (this.props.onSubmission) {
-          this.props.onSubmission();
+        if (request.status === 200) {
+          ga.event({category: "Signup", action: "Submitted the form"});
+          this.setState({
+            didSignUp: true
+          });
+          if (this.props.onSubmission) {
+            this.props.onSubmission();
+          }
+        } else {
+          ga.event({category: "Signup", action: "Form submit failed"});
+          console.log(request.statusText);
+          // FIXME: Do something if form submit failed
         }
       }
     };
@@ -772,7 +778,7 @@ module.exports = React.createClass({
         <div className="checkboxDiv">
           <input id="privacyPolicy" form="form" type="checkbox" required="required"/>
           <label htmlFor="privacyPolicy" className="label">
-            I’m okay with Mozilla handling my info as explained in <a href="https://www.mozilla.org/en-US/privacy/websites/" target="_blank" style={{"color":"white", "text-decoration":"underline"}}>this Privacy Notice</a>.
+            I’m okay with Mozilla handling my info as explained in <a href="https://www.mozilla.org/en-US/privacy/websites/" target="_blank" style={{"color":"white", "textDecoration":"underline"}}>this Privacy Notice</a>.
           </label>
         </div>
         { this.state.didSignUp ? <button className="button" style={{padding: "12px 17px"}}>Thanks for signing up!</button> : <button type="submit" form="form" className="button button-groove">{this.props.submitButtonText}</button> }
