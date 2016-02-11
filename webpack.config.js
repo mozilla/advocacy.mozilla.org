@@ -45,7 +45,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': JSON.stringify({
-        BASKET_URL: process.env.BASKET_URL
+        BASKET_URL: process.env.BASKET_URL,
+        GA_TRACKING_ID: process.env.GA_TRACKING_ID
       })
     }),
     new ExtractTextPlugin(`[name].css`),
