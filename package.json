@@ -10,7 +10,8 @@
     "build:l10njson": "node scripts/properties2json",
     "watch:js": "webpack --progress --profile --colors --watch",
     "server": "node app.js",
-    "lint": "eslint --config ./node_modules/mofo-style/.eslintrc.yaml --ext .js,.jsx . --fix",
+    "lint": "eslint --config ./node_modules/mofo-style/.eslintrc.yaml --ext .js,.jsx .",
+    "lintfix": "eslint --config ./node_modules/mofo-style/.eslintrc.yaml --ext .js,.jsx . --fix",
     "postinstall": "node scripts/build.js"
   },
   "repository": {
