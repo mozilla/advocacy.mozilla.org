@@ -114,6 +114,7 @@ video{
     margin-top: .5rem;
   }
   .videoTitle {
+    letter-spacing: -0.025em;
     font-size: 8vw;
     color: @primary_red;
     display: block;
@@ -161,6 +162,7 @@ video{
     flex-shrink: 0;
     font-weight: 100;
     margin: .5em 0 0;
+    letter-spacing: -0.025em;
   }
   @media(min-width: 750px){
       padding: 2em 10px;
@@ -208,6 +210,9 @@ video{
   i {
     padding: .33333em;
   }
+  .fa-envelope{
+    font-size: .95em;
+  }
 }
   .horizontal-rule {
     background-color: rgba(255,255,255,.5);
@@ -234,6 +239,7 @@ video{
   width: 100%;
   font-size: 1.125rem;
   line-height: 2rem;
+  padding-left: .3125rem;
   & + *{
     margin-top: 25px;
   }
@@ -250,7 +256,7 @@ select{
 .checkboxDiv {
   input[type="checkbox"] {
     float: left;
-    margin-top: 5px;
+    margin: 5px 5px 0 0;
   }
   .label {
     color: #FFF;
@@ -279,6 +285,9 @@ select{
   top: .5rem;
   color: white;
   cursor: pointer;
+  &:before{
+    font-size: 1.25em;
+  }
 }
 .modal{
   background-color: @primary_lightblue;
@@ -336,6 +345,9 @@ select{
     margin: 10px 0;
     padding: 0;
   }
+}
+.cta-title{
+  letter-spacing: -0.025em;
 }
 
 .social-cta .modal{
