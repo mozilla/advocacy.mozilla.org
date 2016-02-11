@@ -10,10 +10,11 @@ module.exports = React.createClass({
       });
       ga.event({category: "Video", action: "Video started"});
     });
-    this.refs.video.addEventListener("webkitendfullscreen", () => {
+    this.refs.video.addEventListener("webkitendfullscreen", (e) => {
       this.props.setPageState({
         videoDidEnd: true
       });
+      ga.event({category: "Video", action: "iOS user clicked done", value: e.srcElement.currentTime});
     });
     this.refs.video.addEventListener("ended", (e) => {
       this.props.setPageState({
@@ -30,7 +31,6 @@ module.exports = React.createClass({
     this.props.setPageState({
       videoDidStart: true
     });
-    ga.event({category: "Video", action: "Clicked on play button"});
   },
   hideTheatre: function() {
     this.refs.video.pause();
