@@ -11,6 +11,7 @@ module.exports = React.createClass({
           {this.props.children}
           <Icon href="https://www.mozilla.org/en-US/about/legal.html" src="/assets/footer-icon-terms.svg" title="">Legal</Icon>
           <Icon href="https://www.mozilla.org/en-US/privacy/" src="/assets/footer-icon-privacy.svg" title="">Privacy Policy</Icon>
+          <Icon href="https://donate.mozilla.org" src="/assets/heart.svg" title="Heart">Donate</Icon>
         </div>
         <div className="footer-content">
           <div>
