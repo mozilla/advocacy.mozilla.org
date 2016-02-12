@@ -2,7 +2,6 @@ var React = require(`react`);
 var Footer = require(`../../components/footer.jsx`);
 var EncryptVideo = require(`../../components/encrypt-video.jsx`);
 var Signup = require(`../../components/encrypt-signup.jsx`);
-var Icon = require(`../../components/footer-icon.jsx`);
 var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var Modal = require(`../../components/encrypt-modal.jsx`);
