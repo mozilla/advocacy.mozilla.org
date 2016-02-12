@@ -34,7 +34,7 @@ module.exports = React.createClass({
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/encrypt.css"/>
-          <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fira+Sans:i,300,400,600"/>
+          <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fira+Sans:300i,300,400,600"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
           <title>Mozilla Advocacy</title>
           <OptimizelySubdomain/>
