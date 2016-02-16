@@ -7,28 +7,54 @@ module.exports = React.createClass({
     var changableElements = document.querySelectorAll(".Position .Shapes > g, .Position .Chars > path");
     var finalElements = document.querySelectorAll(".final");
     Array.prototype.forEach.call(changableElements, (el)=>{el.style.display="none";});
-    var interval = setInterval(this.tick, 50, positions);
 
+    //These 2 lines are to fill an array with unique objects, instead of the same referenced object.
+    this.finalStates = Array.apply(null, Array(positions.length));
+    this.finalStates.map((x, i)=> { this.finalStates[i]={character:false,shape:false} });
+
+    this.interval = setInterval(this.tick, 25, positions);
+
+    //Shuffle everything until the first timeout
     window.setTimeout(()=>{
       this.stopChanging=true;
-      clearInterval(interval);
+    }, 1000);
+
+    //After the second timeout, make everything final.
+    window.setTimeout(()=>{
+      clearInterval(this.interval);
       Array.prototype.forEach.call(changableElements, (el)=>{el.style.display="none";});
       Array.prototype.forEach.call(finalElements, (el)=>{el.style.display="";});
-    }, 5000);
+    },5000);
 
   },
   tick(ElGroup) {
-      const index = Math.floor(Math.random() * ElGroup.length);
-      var subGroup;
-      //Half the time change a shape, otherwise change a character
-      if(Math.random()>.5){
-        subGroup = ElGroup[index].querySelectorAll(".Shapes > g");
-      } else {
-        subGroup = ElGroup[index].querySelectorAll(".Chars > path");
-      }
+    if(this.finalStates.every(function(el){return el.character && el.shape})){
+      clearInterval(this.interval);
+      return;
+    }
+    const index = Math.floor(Math.random() * ElGroup.length);
+    var subGroup;
+    var subGroupType;
+
+    //Half the time change a shape, otherwise change a character
+    if(Math.random()>.5){
+      subGroup = ElGroup[index].querySelectorAll(".Shapes > g");
+      subGroupType = "shape";
+    } else {
+      subGroup = ElGroup[index].querySelectorAll(".Chars > path");
+      subGroupType = "character";
+    }
+    var subGroupIndex = Math.floor(Math.random() * subGroup.length);
+    //After first timeout, if this character/shape is the correct one, lock it
+    if(this.stopChanging && subGroup[subGroupIndex].className.baseVal === "Final"){
       Array.prototype.forEach.call(subGroup, (el)=>{el.style.display="none";});
-      var subGroupIndex = Math.floor(Math.random() * subGroup.length);
       subGroup[subGroupIndex].style.display='';
+      this.finalStates[index][subGroupType]=true;
+      return;
+    } else if (!this.finalStates[index][subGroupType]){
+      Array.prototype.forEach.call(subGroup, (el)=>{el.style.display="none";});
+      subGroup[subGroupIndex].style.display='';
+    }
   },
   render: function() {
     return (
