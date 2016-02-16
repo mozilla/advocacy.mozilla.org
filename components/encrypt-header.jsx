@@ -24,7 +24,7 @@ module.exports = React.createClass({
       clearInterval(this.interval);
       Array.prototype.forEach.call(changableElements, (el)=>{el.style.display="none";});
       Array.prototype.forEach.call(finalElements, (el)=>{el.style.display="";});
-    },5000);
+    },3000);
 
   },
   tick(ElGroup) {
