@@ -23,7 +23,7 @@ module.exports = React.createClass({
     window.setTimeout(()=>{
       clearInterval(this.interval);
       Array.prototype.forEach.call(changableElements, (el)=>{el.style.display="none";});
-      Array.prototype.forEach.call(finalElements, (el)=>{el.style.display="";});
+      Array.prototype.forEach.call(finalElements, (el)=>{el.style.display="initial";});
     },10000);
 
   },
@@ -48,12 +48,12 @@ module.exports = React.createClass({
     //After first timeout, if this character/shape is the correct one, lock it
     if(this.stopChanging && subGroup[subGroupIndex].className.baseVal === "Final"){
       Array.prototype.forEach.call(subGroup, (el)=>{el.style.display="none";});
-      subGroup[subGroupIndex].style.display='';
+      subGroup[subGroupIndex].style.display='initial';
       this.finalStates[index][subGroupType]=true;
       return;
     } else if (!this.finalStates[index][subGroupType]){
       Array.prototype.forEach.call(subGroup, (el)=>{el.style.display="none";});
-      subGroup[subGroupIndex].style.display='';
+      subGroup[subGroupIndex].style.display='initial';
     }
   },
   render: function() {
