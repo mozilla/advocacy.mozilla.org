@@ -65,6 +65,14 @@ module.exports = React.createClass({
           </div>
         </main>
         <Footer>
+          <div className="icon-container">
+            <div className="icon">
+              <div className="social-circle footer-icon">
+                <i className="fa fa-medium"></i>
+              </div>
+              <a href="https://medium.com/encryption-matters">Join the Conversation</a>
+            </div>
+          </div>
         </Footer>
         { this.state.formIsVisible ?
           <Modal className="join-modal" hideModal={this.hideModal}>
