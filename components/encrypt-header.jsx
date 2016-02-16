@@ -17,14 +17,14 @@ module.exports = React.createClass({
     //Shuffle everything until the first timeout
     window.setTimeout(()=>{
       this.stopChanging=true;
-    }, 1000);
+    }, 1);
 
     //After the second timeout, make everything final.
     window.setTimeout(()=>{
       clearInterval(this.interval);
       Array.prototype.forEach.call(changableElements, (el)=>{el.style.display="none";});
       Array.prototype.forEach.call(finalElements, (el)=>{el.style.display="";});
-    },3000);
+    },10000);
 
   },
   tick(ElGroup) {
