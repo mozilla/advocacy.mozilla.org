@@ -26,7 +26,7 @@ module.exports = React.createClass({
     });
   },
   socialClicked(e) {
-    ga.event({catagory: "Social", action: "Clicked on " + e.target.dataset.social});
+    ga.event({category: "Social", action: "Clicked on " + e.target.dataset.social});
   },
   render: function() {
     return (
