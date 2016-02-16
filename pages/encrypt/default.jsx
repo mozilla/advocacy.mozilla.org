@@ -37,6 +37,14 @@ module.exports = React.createClass({
           <ShareThisNow/>
         </main>
         <Footer>
+          <div className="icon-container">
+            <div className="icon">
+              <div className="social-circle footer-icon">
+                <i className="fa fa-medium"></i>
+              </div>
+              <a href="https://medium.com/encryption-matters">Join the Conversation</a>
+            </div>
+          </div>
         </Footer>
           {this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo social-cta">
           <p className="cta-title">Will you spread the word about why privacy is important?</p>
