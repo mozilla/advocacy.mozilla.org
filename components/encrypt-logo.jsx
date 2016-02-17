@@ -3,7 +3,7 @@ var React = require(`react`);
 module.exports = React.createClass({
     render() {
         return (
-            <svg className="encrypt-logo" ref="logo" viewBox="0 0 631 110" style={{'max-height':'170px'}}>
+            <svg className="encrypt-logo" ref="logo" viewBox="0 0 631 110" style={{'maxHeight':'170px'}}>
                 <g className="Page-1" stroke="none" fill="none" fill-rule="evenodd" >
                     <g className="Animation" >
                         <g className="Position" transform="translate(546.000000, 0.000000)" >
