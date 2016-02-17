@@ -24,6 +24,17 @@
     width: 100%;
     opacity: 1;
     transition: opacity .5s;
+    svg{
+      max-width: 100%;
+    }
+  }
+  .encrypt-logo{
+    .Position .Shapes > g, .Position .Chars > path{
+      display: none;
+      &.final{
+        display: initial;
+      }
+    }
   }
   .header-cta{
     display: none;
