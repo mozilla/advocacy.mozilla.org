@@ -15,7 +15,7 @@ module.exports = React.createClass({
         </div>
         <div className="footer-content">
           <div>
-            <img height="30" width="105" src="/assets/mozilla-wordmark.svg"/>
+            <a href="https://mozilla.org"><img height="30" width="105" src="/assets/mozilla-wordmark.svg"/></a>
           </div>
           <div className="horizontal-rule"></div>
           <p>
