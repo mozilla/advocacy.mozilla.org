@@ -329,6 +329,10 @@ select{
   }
 }
 
+.encrypt-signup{
+  color: white;
+}
+
 .signup-cta .modal, .social-cta .modal{
   @media(min-width: 54rem){
     display: flex;
@@ -374,6 +378,20 @@ select{
     & + .social-circle{
       margin-left: .5em;
     }
+  }
+}
+
+.explaination-trigger{
+  position: relative;
+  cursor: help;
+  & + .explaination{
+    display: none;
+  }
+  &:hover + .explaination{
+    position: absolute;
+    background: #fff;
+    width: 500px;
+    display: block;
   }
 }
 
