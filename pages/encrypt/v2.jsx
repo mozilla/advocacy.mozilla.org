@@ -7,6 +7,9 @@ var EncryptHeader = require(`../../components/encrypt-header`);
 var Modal = require(`../../components/encrypt-modal.jsx`);
 var classNames = require('classnames');
 var Icon = require(`../../components/footer-icon.jsx`);
+var VideoData = require(`../../components/encryptVideos.js`);
+var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
+
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -15,8 +18,18 @@ module.exports = React.createClass({
       didSignUp: false,
       videoDidStart: false,
       videoDidEnd: false,
-      videoIsPaused: false
+      videoIsPaused: false,
+      activeVideo: 1
     };
+  },
+  componentWillMount() {
+    this.videoOptions = VideoData;
+    //TODO pull current video from URL params
+  },
+  changeVideo(video){
+    var didSignup = this.state.didSignup;
+    this.setState(this.getInitialState());
+    this.setState({activeVideo: video, didSignup: didSignup});
   },
   setPageState(state){
     this.setState(state);
@@ -48,7 +61,17 @@ module.exports = React.createClass({
       <div className="encrypt v2">
       <EncryptHeader videoDidStart={this.state.videoDidStart} showModal={this.showModal}/>
         <main>
-          <EncryptVideo version="2" className="video-wrapper" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart} videoIsPaused={this.state.videoIsPaused}/>
+          <EncryptVideo
+              pageVersion="2"
+              videoType="direct"
+              video={this.videoOptions[this.state.activeVideo]}
+              setPageState={this.setPageState}
+              videoDidEnd={this.state.videoDidEnd}
+              videoDidStart={this.state.videoDidStart}
+              videoIsPaused={this.state.videoIsPaused}
+              activeVideo={this.state.activeVideo}
+            />
+            <Playlist videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.state.activeVideo} changeVideo={this.changeVideo}/>
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">

@@ -8,14 +8,21 @@ var Signup = require(`../../components/encrypt-signup.jsx`);
 var classNames = require('classnames');
 var ga = require('react-ga');
 var Icon = require(`../../components/footer-icon.jsx`);
+var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
+var VideoData = require(`../../components/encryptVideos.js`);
+
 
 module.exports = React.createClass({
   getInitialState() {
     return {
       videoDidStart: false,
       videoDidEnd: false,
-      videoIsPaused: false
+      videoIsPaused: false,
+      activeVideo: 1
     };
+  },
+  componentWillMount() {
+    this.videoOptions = VideoData;
   },
   setPageState(state) {
     this.setState(state);
@@ -26,6 +33,10 @@ module.exports = React.createClass({
       videoDidStart: false
     });
   },
+  changeVideo(video){
+    this.setState(this.getInitialState());
+    this.setState({activeVideo: video});
+  },
   socialClicked(e) {
     ga.event({category: "Social", action: "Clicked on " + e.target.dataset.social});
   },
@@ -34,7 +45,17 @@ module.exports = React.createClass({
       <div className="encrypt v1">
         <EncryptHeader videoDidStart={this.state.videoDidStart}/>
         <main>
-          <EncryptVideo version="1" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart} videoIsPaused={this.state.videoIsPaused}/>
+          <EncryptVideo
+            pageVersion="1"
+            videoType="social"
+            video={this.videoOptions[this.state.activeVideo]}
+            setPageState={this.setPageState}
+            videoDidEnd={this.state.videoDidEnd}
+            videoDidStart={this.state.videoDidStart}
+            videoIsPaused={this.state.videoIsPaused}
+            activeVideo={this.state.activeVideo}
+          />
+          <Playlist videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.state.activeVideo} changeVideo={this.changeVideo}/>
           <ShareThisNow/>
         </main>
         <Footer>
