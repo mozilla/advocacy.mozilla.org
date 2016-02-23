@@ -52,6 +52,6 @@ module.exports = {
       })
     }),
     new ExtractTextPlugin(`[name].css`),
-    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/2`, `/encrypt/3`]) // FIXME: Make this dynamic somehow
+    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/2`, `/encrypt/3`, `/encrypt/signup`]) // FIXME: Make this dynamic somehow
   ]
 };
