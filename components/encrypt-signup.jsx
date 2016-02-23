@@ -47,6 +47,9 @@ module.exports = React.createClass({
     request.onreadystatechange = () => {
       if (request.readyState === 4) {
         if (request.status === 200) {
+          // Optimizely conversion tracking
+          window.optimizely = window.optimizely || [];
+          window.optimizely.push(['trackEvent', 'advocacysignup']);
           ga.event({category: "Signup", action: "Submitted the form"});
           this.setState({
             didSignUp: true
