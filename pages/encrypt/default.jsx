@@ -10,6 +10,7 @@ var ga = require('react-ga');
 var Icon = require(`../../components/footer-icon.jsx`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
 var VideoData = require(`../../components/encryptVideos.js`);
+var Link = require('react-router').Link;
 
 
 module.exports = React.createClass({
@@ -23,6 +24,11 @@ module.exports = React.createClass({
   },
   componentWillMount() {
     this.videoOptions = VideoData;
+  },
+  componentDidMount() {
+    if(this.props.location.query.video > 0  && this.props.location.query.video <= this.videoOptions.length){
+      this.setState({activeVideo: this.props.location.query.video-1});
+    }
   },
   setPageState(state) {
     this.setState(state);

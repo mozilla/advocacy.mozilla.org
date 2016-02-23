@@ -9,6 +9,7 @@ var classNames = require('classnames');
 var Icon = require(`../../components/footer-icon.jsx`);
 var VideoData = require(`../../components/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
+var Link = require('react-router').Link;
 
 
 module.exports = React.createClass({
@@ -25,6 +26,11 @@ module.exports = React.createClass({
   componentWillMount() {
     this.videoOptions = VideoData;
     //TODO pull current video from URL params
+  },
+  componentDidMount() {
+    if(this.props.location.query.video > 0 && this.props.location.query.video <= this.videoOptions.length){
+      this.setState({activeVideo: this.props.location.query.video-1});
+    }
   },
   changeVideo(video){
     var didSignup = this.state.didSignup;
