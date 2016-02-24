@@ -7,7 +7,7 @@ var EncryptHeader = require(`../../components/encrypt-header`);
 var Modal = require(`../../components/encrypt-modal.jsx`);
 var classNames = require('classnames');
 var Icon = require(`../../components/footer-icon.jsx`);
-var VideoData = require(`../../components/encryptVideos.js`);
+var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
 var Link = require('react-router').Link;
 
@@ -77,7 +77,7 @@ module.exports = React.createClass({
               videoIsPaused={this.state.videoIsPaused}
               activeVideo={this.state.activeVideo}
             />
-            <Playlist videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.state.activeVideo} changeVideo={this.changeVideo}/>
+            <Playlist location={this.props.location} videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.state.activeVideo} changeVideo={this.changeVideo}/>
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">

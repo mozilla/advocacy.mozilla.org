@@ -9,7 +9,7 @@ var classNames = require('classnames');
 var ga = require('react-ga');
 var Icon = require(`../../components/footer-icon.jsx`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
-var VideoData = require(`../../components/encryptVideos.js`);
+var VideoData = require(`../../data/encryptVideos.js`);
 var Link = require('react-router').Link;
 
 

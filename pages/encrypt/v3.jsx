@@ -6,7 +6,7 @@ var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptVideo = require(`../../components/encrypt-video.jsx`);
 var Icon = require(`../../components/footer-icon.jsx`);
-var VideoData = require(`../../components/encryptVideos.js`);
+var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
 var Link = require('react-router').Link;
 
