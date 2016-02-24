@@ -4,14 +4,10 @@ var EncryptVideo = require('../../components/encrypt-video.jsx');
 var ShareThisNow = require('../../components/encrypt-share-this-now');
 var EncryptHeader = require('../../components/encrypt-header');
 var Modal = require(`../../components/encrypt-modal.jsx`);
-var Signup = require(`../../components/encrypt-signup.jsx`);
-var classNames = require('classnames');
 var ga = require('react-ga');
 var Icon = require(`../../components/footer-icon.jsx`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
 var VideoData = require(`../../data/encryptVideos.js`);
-var Link = require('react-router').Link;
-
 
 module.exports = React.createClass({
   getInitialState() {
@@ -26,7 +22,7 @@ module.exports = React.createClass({
     this.videoOptions = VideoData;
   },
   componentDidMount() {
-    if(this.props.location.query.video > 0  && this.props.location.query.video <= this.videoOptions.length){
+    if (this.props.location.query.video > 0  && this.props.location.query.video <= this.videoOptions.length) {
       this.setState({activeVideo: this.props.location.query.video-1});
     }
   },
@@ -39,7 +35,7 @@ module.exports = React.createClass({
       videoDidStart: false
     });
   },
-  changeVideo(video){
+  changeVideo(video) {
     this.setState(this.getInitialState());
     this.setState({activeVideo: video});
   },
