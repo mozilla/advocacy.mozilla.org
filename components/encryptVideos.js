@@ -9,12 +9,12 @@ module.exports = [
         "poster": "/assets/encrypt-poster-dark-1920x1080.jpg",
         "thumbnail": "/assets/thumbnail-beat1.jpg"
       },{
-        "direct": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480",
-        "social": "http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480",
+        "direct": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/Mozilla_Encrypt_Beat2_landingpage",
+        "social": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/Mozilla_Encrypt_Beat2_landingpage",
         "title": "Meet Encryption",
-        "description": "Description of the second video",
+        "description": "Meet Encryption, and learn how she's hard at work to keep you safe online.",
         "date": "February 24, 2016",
-        "duration": "0:58",
+        "duration": "1:16",
         "poster": "/assets/video2poster.jpg",
         "thumbnail": "/assets/thumbnail-beat2.jpg"
       }
