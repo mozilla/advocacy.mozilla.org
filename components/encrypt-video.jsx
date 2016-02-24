@@ -79,8 +79,8 @@ module.exports = React.createClass({
             <img src={this.props.video.poster} hidden={this.props.videoDidStart} className="video-poster" style={{position:"absolute"}}/>
             <video className={videoClass} aria-describedby="videoDescription" ref="video" controls={this.props.videoDidStart} aria-labeledby="videoTitle" poster={this.props.video.poster} autoBuffer width={this.props.width} height={this.props.height} style={{zIndex:1000}}>
               A video about why encryption is important. Privacy lets you be you.
-              <source id="mp4" src={mp4Video} type="video/mp4"/>
               <source id="webm" src={webmVideo} type="video/webm"/>
+              <source id="mp4" src={mp4Video} type="video/mp4"/>
             </video>
           </div>
         <div className={encryptWrapperClass} ref="metaWrapper">

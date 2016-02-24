@@ -100,7 +100,7 @@ module.exports = React.createClass({
         { this.state.formIsVisible ?
           <Modal className="join-modal" hideModal={this.hideModal}>
             <div className="cta">
-              <h2 aria-role="label">Join the list</h2>
+              <h2 aria-role="label">Join the email list</h2>
               <div className="horizontal-rule"></div>
               <Signup submitButtonText="Subscribe" onSubmission={this.userDidSignup}/>
             </div>
