@@ -107,7 +107,7 @@ module.exports = React.createClass({
           </Modal>
           : '' }
 	{this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo signup-cta">
-	  <p className="cta-title">Stand with us for privacy and a free and open Internet.<br/>Sign on.</p>
+	  <p className="cta-title">Stand with us for a free and open Internet.<br/>Sign on.</p>
 	  <Signup />
 	</Modal> : ''}
       </div>
