@@ -6,6 +6,10 @@ var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptVideo = require(`../../components/encrypt-video.jsx`);
 var Icon = require(`../../components/footer-icon.jsx`);
+var VideoData = require(`../../data/encryptVideos.js`);
+var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
+var Link = require('react-router').Link;
+
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -13,8 +17,22 @@ module.exports = React.createClass({
       didSignup: false,
       videoDidStart: false,
       videoDidEnd: false,
-      videoIsPaused: false
+      videoIsPaused: false,
+      activeVideo: 1
     };
+  },
+  componentWillMount() {
+    this.videoOptions = VideoData;
+  },
+  componentDidMount() {
+    if(this.props.location.query.video > 0 && this.props.location.query.video <= this.videoOptions.length){
+      this.setState({activeVideo: this.props.location.query.beat-1});
+    }
+  },
+  changeVideo(video){
+    var didSignup = this.state.didSignup;
+    this.setState(this.getInitialState());
+    this.setState({activeVideo: video, didSignup: didSignup});
   },
   userDidSignup: function() {
     this.setState({
@@ -36,7 +54,16 @@ module.exports = React.createClass({
         <EncryptHeader />
         <main className="page">
           <div className="videoSection">
-            <EncryptVideo version="3" setPageState={this.setPageState} videoDidEnd={this.state.videoDidEnd} videoDidStart={this.state.videoDidStart}/>
+            <EncryptVideo
+              pageVersion="3"
+              videoType="social"
+              video={this.videoOptions[this.state.activeVideo]}
+              setPageState={this.setPageState}
+              videoDidEnd={this.state.videoDidEnd}
+              videoDidStart={this.state.videoDidStart}
+              videoIsPaused={this.state.videoIsPaused}
+              activeVideo={this.state.activeVideo}
+            />
             <Signup onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
@@ -45,7 +72,7 @@ module.exports = React.createClass({
                 header="Join Mozilla"
                 text="For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."
               />
-          </Signup>
+            </Signup>
           </div>
           <ShareThisNow/>
         </main>

@@ -141,9 +141,83 @@ video{
   }
   .episodeNumber{
     font-weight: bold;
+    margin-left: 0;
   }
   .video-date{
     color: #9499a2;
+  }
+}
+
+.playlist-wrapper{
+  background: #1b222d;
+  font-size: 3vw;
+  @media(min-width: 38rem){
+    font-size: 1rem;
+    padding: 1.5em;
+  }
+}
+.playlist{
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.video-thumbnail{
+  position: relative;
+  width: 280px;
+  margin: 5px;
+  .thumbnail-image{
+    outline: 5px solid transparent;
+    transition: outline .5s ease;
+    cursor: pointer;
+  }
+  &.active .thumbnail-image{
+    outline: .3125em solid #fff;
+  }
+  &:hover .thumbnail-image{
+    outline: .3125em solid #f46060;
+  }
+  .coming-soon{
+    background-image: url('/assets/coming-soon.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    //Aspect ratio trick
+    padding-bottom: 60.7142857%;
+    position: relative;
+    text-align: center;
+    span{
+      position: absolute;
+      top: ~"calc(50% - .5em)";
+      left:0;
+      width:100%;
+      text-align:center;
+      font-size: 3vw;
+      @media (min-width: 54rem){
+        font-size:2rem;
+      }
+      font-weight: 400;
+    }
+  }
+  .now-playing{
+    position: absolute;
+    font-size: .8125em;
+    background: #171d26;
+    text-transform: uppercase;
+    padding: .5em;
+  }
+  .episode-title{
+    font-size: 1.4375em;
+    line-height: 1em;
+    margin-top: .8em;
+  }
+  .episode-metadata{
+    font-size: 1.125em;
+    color: #b2afb2;
+    font-weight: 400;
+  }
+  .episode-duration{
+    font-weight: 300;
   }
 }
 
