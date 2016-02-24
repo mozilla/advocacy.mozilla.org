@@ -68,9 +68,9 @@ module.exports = React.createClass({
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
         </Footer>
           {this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo social-cta">
-          <p className="cta-title">Will you spread the word about why privacy is important?</p>
+          <p className="cta-title">Will you spread the word about our friend, encryption?</p>
           <div className="social">
-            <a href="mailto:?&subject=Sharing a video I thought you’d like. &body=I just watched a great video about online privacy and thought you would really like it. Check it out at https://mzl.la/encrypt. Hope you enjoy it as much as I did!" className="social-circle">
+            <a href="mailto:?&subject=Check out this great video on encryption. &body=I just watched a video about how encryption works in our everyday lives and thought you would really like it. Check it out at https://mzl.la/encrypt. Hope you enjoy it!" className="social-circle">
               <i data-social="email" onClick={this.socialClicked} className="fa fa-envelope"></i>
             </a>
             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://advocacy.mozilla.org/encrypt/" className="social-circle">
