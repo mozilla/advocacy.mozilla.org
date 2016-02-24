@@ -778,7 +778,7 @@ module.exports = React.createClass({
             Zimbabwe
           </option>
         </select>
-        <div className="why">Why do we ask for this <a className="explaination-trigger">information?</a><div className="explaination">We care about your privacy and helping you make informed choices. That’s why we link to our Privacy Notice  so you can easily read it. To receive emails we require only your email address -- “First Name” and “Country” aren’t required to sign up, but if you tell us your country we can send you local news and events — it’s your choice!</div></div>
+        <div className="why">Why do we ask for this <a className="explaination-trigger">information?</a><div className="explaination">We care about your privacy and helping you make informed choices. That’s why we link to our Privacy Notice  so you can easily read it. To receive emails we require only your email address — “First Name” and “Country” aren’t required to sign up, but if you tell us your country we can send you local news and events — it’s your choice!</div></div>
         <div className="checkboxDiv">
           <input id="privacyPolicy" form="form" type="checkbox" required="required"/>
           <label htmlFor="privacyPolicy" className="label">

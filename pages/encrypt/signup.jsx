@@ -7,6 +7,9 @@ var Link = require('react-router').Link;
 
 
 module.exports = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.object
+  },
   getInitialState: function() {
     return {
       formIsVisible: false,
@@ -21,10 +24,7 @@ module.exports = React.createClass({
     this.setState(state);
   },
   userDidSignup: function() {
-    this.setState({
-      didSignup: true
-    });
-    setTimeout(this.hideModal, 2000);
+    this.context.router.replace('/encrypt/signup-complete');
   },
   render: function() {
     var modalClass = classNames({
