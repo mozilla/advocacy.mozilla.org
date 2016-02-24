@@ -59,7 +59,7 @@ module.exports = React.createClass({
     });
     var playButtonClass = classNames({
       'playButton': true,
-      'fadedOut' : this.props.videoDidStart
+      'fadedOut' : this.props.videoDidStart  && !this.props.videoIsPaused
     });
     var videoTheatreClass = classNames({
       'video-theatre': true,
