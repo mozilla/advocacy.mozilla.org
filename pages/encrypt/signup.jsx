@@ -32,14 +32,16 @@ module.exports = React.createClass({
     });
     return (
       <div className="encrypt signup">
+      <a className="tabzilla" href="https://mozilla.org" aria-label="Mozilla"></a>
         <main>
+          <div className="signup-page-content">
             <div className="join-mozilla">
-              <h2>Join Mozilla</h2>
+              <h1>Join Mozilla</h1>
               <p>Mozilla stands up for online privacy. If you want to be in-the-know about our work and learn about opportunities to stand with us, sign up to be on our email list. We’ll send you important updates, news, and opportunities to take action.</p>
             </div>
             <Signup submitButtonText="Sign Up" onSubmission={this.userDidSignup}>
-            <div className="why">Why do we ask for this information?</div>
             </Signup>
+          </div>
         </main>
         <Footer>
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>

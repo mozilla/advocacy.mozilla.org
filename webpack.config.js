@@ -33,6 +33,9 @@ module.exports = {
         test: /\.json$/,
         loaders: [`json-loader`] },
       {
+        test: /\.png/,
+        loaders: [`file-loader`] },
+      {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
         loader: `url-loader?limit=8192`
       },
@@ -52,6 +55,6 @@ module.exports = {
       })
     }),
     new ExtractTextPlugin(`[name].css`),
-    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/2`, `/encrypt/3`, `/encrypt/signup`]) // FIXME: Make this dynamic somehow
+    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/2`, `/encrypt/3`, `/encrypt/signup`, `/encrypt/signup-complete`]) // FIXME: Make this dynamic somehow
   ]
 };

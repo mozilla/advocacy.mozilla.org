@@ -255,7 +255,9 @@ video{
     margin-top: 25px;
   }
 }
-
+.checkboxDiv{
+    margin-top: 1rem;
+  }
 .checkboxDiv + button{
   margin-top: 25px;
 }
@@ -380,17 +382,26 @@ select{
     }
   }
 }
-
+.why{
+    text-align: left;
+    font-size: .8125rem;
+    margin-top: .5rem;
+  }
 .explaination-trigger{
   position: relative;
   cursor: help;
   & + .explaination{
     display: none;
-  }
-  &:hover + .explaination{
+    opacity: 0;
+    transition: opacity .5s;
+    max-width: 40em;
+    padding: 1rem;
+    color: black;
     position: absolute;
     background: #fff;
-    width: 500px;
+  }
+  &:hover + .explaination{
+    opacity: 1;
     display: block;
   }
 }
