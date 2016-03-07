@@ -10,6 +10,9 @@ var Icon = require(`../../components/footer-icon.jsx`);
 var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
 var Link = require('react-router').Link;
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
+
 
 
 module.exports = React.createClass({
@@ -19,23 +22,16 @@ module.exports = React.createClass({
       didSignUp: false,
       videoDidStart: false,
       videoDidEnd: false,
-      videoIsPaused: false,
-      activeVideo: 1
+      videoIsPaused: false
     };
   },
   componentWillMount() {
     this.videoOptions = VideoData;
-    //TODO pull current video from URL params
-  },
-  componentDidMount() {
-    if(this.props.location.query.video > 0 && this.props.location.query.video <= this.videoOptions.length){
-      this.setState({activeVideo: this.props.location.query.video-1});
-    }
   },
   changeVideo(video){
     var didSignup = this.state.didSignup;
     this.setState(this.getInitialState());
-    this.setState({activeVideo: video, didSignup: didSignup});
+    this.setState({didSignup: didSignup});
   },
   setPageState(state){
     this.setState(state);
@@ -70,14 +66,14 @@ module.exports = React.createClass({
           <EncryptVideo
               pageVersion="2"
               videoType="direct"
-              video={this.videoOptions[this.state.activeVideo]}
+              video={this.videoOptions[this.props.params.video-1]}
               setPageState={this.setPageState}
               videoDidEnd={this.state.videoDidEnd}
               videoDidStart={this.state.videoDidStart}
               videoIsPaused={this.state.videoIsPaused}
-              activeVideo={this.state.activeVideo}
+              activeVideo={this.props.params.video-1}
             />
-            <Playlist location={this.props.location} videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.state.activeVideo} changeVideo={this.changeVideo}/>
+            <Playlist videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video-1} changeVideo={this.changeVideo} pageType="social"/>
           <div className="dual-cta-wrapper">
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">

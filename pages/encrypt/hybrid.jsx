@@ -9,6 +9,8 @@ var Icon = require(`../../components/footer-icon.jsx`);
 var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
 var Link = require('react-router').Link;
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
 
 
 module.exports = React.createClass({
@@ -17,8 +19,7 @@ module.exports = React.createClass({
       didSignup: false,
       videoDidStart: false,
       videoDidEnd: false,
-      videoIsPaused: false,
-      activeVideo: 1
+      videoIsPaused: false
     };
   },
   componentWillMount() {
@@ -57,12 +58,12 @@ module.exports = React.createClass({
             <EncryptVideo
               pageVersion="3"
               videoType="social"
-              video={this.videoOptions[this.state.activeVideo]}
+              video={this.videoOptions[this.props.params.video-1]}
               setPageState={this.setPageState}
               videoDidEnd={this.state.videoDidEnd}
               videoDidStart={this.state.videoDidStart}
               videoIsPaused={this.state.videoIsPaused}
-              activeVideo={this.state.activeVideo}
+              activeVideo={this.props.params.video}
             />
             <Signup onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
