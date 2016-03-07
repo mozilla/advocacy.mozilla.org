@@ -1,6 +1,7 @@
 import React from 'react';
 import Optimizely from '../../components/optimizely.jsx';
 import OptimizelySubdomain from '../../components/optimizelysubdomain.jsx';
+import Page from '../../components/Page.jsx';
 
 module.exports = React.createClass({
   render: function() {
@@ -42,7 +43,9 @@ module.exports = React.createClass({
           <script dangerouslySetInnerHTML={{__html: ga}}></script>
         </head>
         <body>
-          <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
+          <div id="my-app">
+            <Page>{this.props.children}</Page>
+          </div>
           <script src="/build/encrypt.js"></script>
         </body>
       </html>

@@ -1,8 +1,11 @@
+require(`babel-core/register`);
+
 var express = require('express'),
     Habitat = require('habitat'),
     path = require('path'),
     compression = require('compression'),
     helmet = require('helmet');
+    reactRouted = require('./lib/react-server-route.jsx');
 
 Habitat.load();
 
@@ -33,6 +36,7 @@ app.use(function(req, resp, next){
   }
 });
 
+app.use(reactRouted);
 app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
 app.use(function(err, req, res, next) {
   res.send(err);

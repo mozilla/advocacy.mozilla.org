@@ -5,7 +5,7 @@ module.exports = React.createClass({
   componentDidMount() {
     var positions = document.querySelectorAll(".Position");
     var changableElements = document.querySelectorAll(".Position .Shapes > g, .Position .Chars > path");
-    var finalElements = document.querySelectorAll(".final");
+    var finalElements = document.querySelectorAll(".Final");
     Array.prototype.forEach.call(changableElements, (el)=>{el.style.display="none";});
 
     //These 2 lines are to fill an array with unique objects, instead of the same referenced object.
