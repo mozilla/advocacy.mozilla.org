@@ -45,6 +45,7 @@
     "fs-writefile-promise": "1.0.3",
     "habitat": "3.1.2",
     "helmet": "1.1.0",
+    "history": "^2.0.1",
     "json-loader": "0.5.1",
     "jsx-loader": "0.13.2",
     "less": "2.5.3",
