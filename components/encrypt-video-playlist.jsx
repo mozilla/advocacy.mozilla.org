@@ -18,10 +18,6 @@ module.exports = React.createClass({
       <div className="playlist-wrapper">
         <div className="playlist">
           {thumbs}
-          <div className="video-thumbnail">
-            <div className="coming-soon"><span>COMING SOON</span></div>
-            <div className="episode-title" style={{'fontStyle':'italic'}}>Stay tuned for upcoming episodes on encryption</div>
-          </div>
         </div>
       </div>
     );

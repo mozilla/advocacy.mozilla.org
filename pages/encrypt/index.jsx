@@ -19,17 +19,17 @@ module.exports = React.createClass({
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Check out this awesome video"/>
+          <meta property="og:title" content="Encryption matters"/>
           <meta property="og:site_name" content="Mozilla Advocacy - Encryption"/>
           <meta property="og:url" content="https://advocacy.mozilla.org/encrypt/"/>
-          <meta property="og:description" content="I just watched a great video about encryption. Watch it yourself and learn more about how encryption works in our everyday lives."/>
-          <meta property="og:image" content="https://advocacy.mozilla.org/assets/img/share/beat-2_06-facebook.png" />
+          <meta property="og:description" content="I care about protecting #encryption and you should too. To learn more about how it works and why it’s worth protecting, check out this great site from @Mozilla at https://advocacy.mozilla.org/encrypt"/>
+          <meta property="og:image" content="https://advocacy.mozilla.org/assets/img/share/video3-facebook.png" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@mozilla" />
-          <meta name="twitter:title" content="Meet Encryption" />
-          <meta name="twitter:description" content="I just learned how encryption works in our everyday lives. Check it out at mzl.la/encrypt via @mozilla #encrypt" />
-          <meta name="twitter:image" content="https://advocacy.mozilla.org/assets/img/share/beat-2_06-twitter.png" />
+          <meta name="twitter:title" content="Encryption Matters" />
+          <meta name="twitter:description" content="I care about #encryption and you should too. Learn more about how it works from @Mozilla at mzl.la/encrypt" />
+          <meta name="twitter:image" content="https://advocacy.mozilla.org/assets/img/share/video3-twitter.png" />
 
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -46,6 +46,7 @@ module.exports = React.createClass({
             {this.props.children}
           </div>
           <script src="/build/encrypt.js"></script>
+          <script src="//c.shpg.org/352/sp.js"></script>
         </body>
       </html>
     );

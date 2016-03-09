@@ -40,6 +40,7 @@ module.exports = (
 			<Route path=":type/:video" component={require('./pages/encrypt/pageType.jsx')}/>
 			<Redirect from="direct" to={`/encrypt/direct/${encryptVideos.length}`} />
 			<Redirect from="social" to={`/encrypt/social/${encryptVideos.length}`} />
+			<Redirect from="hybrid" to={`/encrypt/hybrid/${encryptVideos.length}`} />
 			<Route path="2" onEnter={redirect} />
 			<Route path="3" onEnter={redirect} />
 			<Redirect from="*" to="/encrypt/" />

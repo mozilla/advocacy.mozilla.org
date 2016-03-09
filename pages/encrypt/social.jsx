@@ -87,13 +87,13 @@ module.exports = React.createClass({
                 {!this.state.didSignup ? <button onClick={this.showModal} className="button">Sign up</button> : 'Thank you!'}
               </div>
             </div>
-            <ShareThisNow/>
+            <ShareThisNow params={this.props.params} videos={VideoData}/>
           </div>
         </main>
         <Footer>
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
         </Footer>
-        { this.state.formIsVisible ?
+        <div hidden={!this.state.formIsVisible}>
           <Modal className="join-modal" hideModal={this.hideModal}>
             <div className="cta">
               <h2 aria-role="label">Join the email list</h2>
@@ -101,11 +101,13 @@ module.exports = React.createClass({
               <Signup submitButtonText="Subscribe" onSubmission={this.userDidSignup}/>
             </div>
           </Modal>
-          : '' }
-	{this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo signup-cta">
-	  <p className="cta-title">Stand with us for a free and open Internet.<br/>Sign on.</p>
-	  <Signup />
-	</Modal> : ''}
+        </div>
+        <div hidden={!this.state.videoDidEnd}>
+          <Modal hideModal={this.hideModal} className="postVideo signup-cta">
+            <p className="cta-title">Stand with us for a free and open Internet.<br/>Sign on.</p>
+            <Signup />
+          </Modal>
+        </div>
       </div>
     );
   }

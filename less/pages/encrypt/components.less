@@ -82,6 +82,7 @@ video{
   transition: opacity .5s;
   padding: 0 1rem;
   z-index: 2;
+  pointer-events: none;
 }
 @media(min-width: 650px){
 .encrypt-meta-wrapper{
@@ -129,6 +130,7 @@ video{
     font-size: 8vw;
     color: @primary_red;
     display: block;
+    max-width: 10em;
     @media(min-width: 470px){
       font-size: 45px;
     }
@@ -275,17 +277,19 @@ video{
   .social {
     display: flex;
   }
-  .social-circle{
+  .social-circle,
+  .sp-social-circle [class ^="sp_"]{
     background-color: #FF8F98;
     font-size: 1.1875rem;
     color: white;
-    i{
+    .fa{
       padding: .35em;
     }
   }
 }
 
-.social-circle{
+.social-circle,
+.sp-social-circle [class ^="sp_"]{
   display: inline-block;
   border-radius: 50%;
   font-size: .7rem;
@@ -296,13 +300,42 @@ video{
   width: 1.66666em;
   background-color: white;
   color: @contrast_darkblue;
-  i {
+  .fa, a{
     padding: .33333em;
   }
   .fa-envelope{
     font-size: .95em;
   }
 }
+
+.sp-social-circle{
+  display: inline-block;
+}
+
+//Replicating FontAwesome's .fa class
+.sp-social-circle [class ^= "sp"] a{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: initial;
+    height: initial;
+    background: none;
+    color: inherit;
+  }
+
+.sp-social-circle .sp_em_small a:before{
+  content: "\f0e0";
+}
+.sp-social-circle .sp_fb_small a:before{
+  content: "\f09a";
+}
+.sp-social-circle .sp_tw_small a:before{
+  content: "\f099";
+}
+
   .horizontal-rule {
     background-color: rgba(255,255,255,.5);
     height: 1px;
@@ -418,7 +451,6 @@ select{
 .signup-cta .modal, .social-cta .modal{
   @media(min-width: 54rem){
     display: flex;
-    top: 19%;
     p{
       width: 7em;
     }
@@ -452,14 +484,17 @@ select{
   p{
     width: 100%;
   }
-  .social-circle{
-    background-color: @primary_red;
+  .social-circle, .sp-social-circle [class ^="sp_"]{
+    background: @primary_red;
     font-size: 2em;
     color: white;
     margin-right: 0;
     & + .social-circle{
       margin-left: .5em;
     }
+  }
+  .sp-social-circle + .sp-social-circle{
+     margin-left: 1.5em;
   }
 }
 .why{
