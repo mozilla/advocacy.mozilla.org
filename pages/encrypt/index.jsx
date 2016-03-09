@@ -42,7 +42,9 @@ module.exports = React.createClass({
           <script dangerouslySetInnerHTML={{__html: ga}}></script>
         </head>
         <body>
-          <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.markup}}></div>
+          <div id="my-app">
+            {this.props.children}
+          </div>
           <script src="/build/encrypt.js"></script>
         </body>
       </html>

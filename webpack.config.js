@@ -4,7 +4,6 @@ require(`babel-core/register`);
 var path = require(`path`);
 var webpack = require(`webpack`);
 var ExtractTextPlugin = require(`extract-text-webpack-plugin`);
-var SimpleHtmlPrecompiler = require(`./scripts/simple-html-plugin.js`);
 var autoprefixer = require(`autoprefixer`);
 
 module.exports = {
@@ -54,7 +53,6 @@ module.exports = {
         GA_TRACKING_ID: process.env.GA_TRACKING_ID
       })
     }),
-    new ExtractTextPlugin(`[name].css`),
-    new SimpleHtmlPrecompiler([`/encrypt`, `/encrypt/2`, `/encrypt/3`, `/encrypt/signup`, `/encrypt/signup-complete`]) // FIXME: Make this dynamic somehow
+    new ExtractTextPlugin(`[name].css`)
   ]
 };

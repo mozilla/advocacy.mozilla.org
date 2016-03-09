@@ -1,14 +1,48 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 /* eslint-disable no-unused-vars */
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, browserHistory, Route, IndexRedirect, Redirect, IndexRoute } from 'react-router';
+import encryptVideos from './data/encryptVideos';
 
-export default (
-  (<Router history={browserHistory}>
-    <Route path="/encrypt" component={require(`./pages/encrypt/v2.jsx`)}/>
-    <Route path="/encrypt/2" component={require(`./pages/encrypt/default.jsx`)}/>
-    <Route path="/encrypt/3" component={require(`./pages/encrypt/v3.jsx`)}/>
-    <Route path="/encrypt/signup" component={require(`./pages/encrypt/signup.jsx`)}/>
-    <Route path="/encrypt/signup-complete" component={require(`./pages/encrypt/signup-complete.jsx`)}/>
-  </Router>)
-);
+function redirect(state, replace) {
+	var pageType;
+	switch(state.location.pathname.slice(-1)){
+		case '2':
+			pageType = 'direct';
+			break;
+		case '3':
+			pageType = 'hybrid';
+			break;
+		default:
+			pageType = 'social';
+	}
+  if (state.location.query.video) {
+    replace(`/encrypt/${pageType}/${state.location.query.video}`);
+  } else {
+  	replace(`/encrypt/${pageType}/${encryptVideos.length}`);
+  }
+}
+
+function indexDirect(state, replace) {
+	if(state.location.query.video){
+		replace(`/encrypt/social/${state.location.query.video}`);
+	} else {
+		replace(`/encrypt/social/${encryptVideos.length}`);
+	}
+}
+
+module.exports = (
+	<Router history={browserHistory}>
+		<Route path="/encrypt">
+			<IndexRoute onEnter={indexDirect} />
+			<Route path="signup" component={require(`./pages/encrypt/signup.jsx`)}/>
+			<Route path="signup-complete" component={require(`./pages/encrypt/signup-complete.jsx`)}/>
+			<Route path=":type/:video" component={require('./pages/encrypt/pageType.jsx')}/>
+			<Redirect from="direct" to={`/encrypt/direct/${encryptVideos.length}`} />
+			<Redirect from="social" to={`/encrypt/social/${encryptVideos.length}`} />
+			<Route path="2" onEnter={redirect} />
+			<Route path="3" onEnter={redirect} />
+			<Redirect from="*" to="/encrypt/" />
+		</Route>
+	</Router>
+	);

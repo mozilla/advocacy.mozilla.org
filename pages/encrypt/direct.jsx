@@ -14,17 +14,11 @@ module.exports = React.createClass({
     return {
       videoDidStart: false,
       videoDidEnd: false,
-      videoIsPaused: false,
-      activeVideo: 1
+      videoIsPaused: false
     };
   },
   componentWillMount() {
     this.videoOptions = VideoData;
-  },
-  componentDidMount() {
-    if (this.props.location.query.video > 0  && this.props.location.query.video <= this.videoOptions.length) {
-      this.setState({activeVideo: this.props.location.query.video-1});
-    }
   },
   setPageState(state) {
     this.setState(state);
@@ -37,7 +31,6 @@ module.exports = React.createClass({
   },
   changeVideo(video) {
     this.setState(this.getInitialState());
-    this.setState({activeVideo: video});
   },
   socialClicked(e) {
     ga.event({category: "Social", action: "Clicked on " + e.target.dataset.social});
@@ -50,14 +43,14 @@ module.exports = React.createClass({
           <EncryptVideo
             pageVersion="1"
             videoType="social"
-            video={this.videoOptions[this.state.activeVideo]}
+            video={this.videoOptions[this.props.params.video-1]}
             setPageState={this.setPageState}
             videoDidEnd={this.state.videoDidEnd}
             videoDidStart={this.state.videoDidStart}
             videoIsPaused={this.state.videoIsPaused}
-            activeVideo={this.state.activeVideo}
+            activeVideo={this.props.params.video-1}
           />
-          <Playlist videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.state.activeVideo} changeVideo={this.changeVideo}/>
+          <Playlist pageType="direct" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video-1} changeVideo={this.changeVideo}/>
           <ShareThisNow/>
         </main>
         <Footer>
