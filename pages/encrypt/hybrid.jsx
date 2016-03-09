@@ -25,11 +25,6 @@ module.exports = React.createClass({
   componentWillMount() {
     this.videoOptions = VideoData;
   },
-  componentDidMount() {
-    if(this.props.location.query.video > 0 && this.props.location.query.video <= this.videoOptions.length){
-      this.setState({activeVideo: this.props.location.query.beat-1});
-    }
-  },
   changeVideo(video){
     var didSignup = this.state.didSignup;
     this.setState(this.getInitialState());
@@ -63,7 +58,7 @@ module.exports = React.createClass({
               videoDidEnd={this.state.videoDidEnd}
               videoDidStart={this.state.videoDidStart}
               videoIsPaused={this.state.videoIsPaused}
-              activeVideo={this.props.params.video}
+              activeVideo={this.props.params.video-1}
             />
             <Signup onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA

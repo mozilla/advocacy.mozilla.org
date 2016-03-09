@@ -7,7 +7,8 @@ module.exports = [
         "date": "February 08, 2016",
         "duration": "0:58",
         "poster": "/assets/encrypt-poster-dark-1920x1080.jpg",
-        "thumbnail": "/assets/thumbnail-beat1.jpg"
+        "thumbnail": "/assets/thumbnail-beat1.jpg",
+        "cta" : "Will you spread the word about why privacy is important?"
       },{
         "direct": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/Mozilla_Encrypt_Beat2_landingpage",
         "social": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/Mozilla_Encrypt_Beat2_landingpage",
@@ -16,6 +17,17 @@ module.exports = [
         "date": "February 24, 2016",
         "duration": "1:16",
         "poster": "/assets/video2poster.jpg",
-        "thumbnail": "/assets/thumbnail-beat2.jpg"
+        "thumbnail": "/assets/thumbnail-beat2.jpg",
+        "cta": "Will you spread the word about our friend, encryption?"
+      },{
+        "direct": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/beat4_landingpage",
+        "social": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/beat4_landingpage",
+        "title": "Encryption, Journalism, and Free Expression",
+        "description": "Encryption doesn’t just protect your privacy — it also enables free expression. Encryption shields journalists and their sources, allowing individuals to tell powerful stories without placing themselves in imminent danger.",
+        "date": "March 9, 2016",
+        "duration": "1:30",
+        "poster": "/assets/video3poster.jpg",
+        "thumbnail": "/assets/thumbnail-beat3.jpg",
+        "cta": "Help spread the word about why encryption is worth protecting"
       }
      ]

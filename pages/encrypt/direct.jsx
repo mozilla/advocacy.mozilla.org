@@ -36,6 +36,7 @@ module.exports = React.createClass({
     ga.event({category: "Social", action: "Clicked on " + e.target.dataset.social});
   },
   render: function() {
+  	var CTA = this.videoOptions[this.props.params.video-1].cta;
     return (
       <div className="encrypt v1">
         <EncryptHeader videoDidStart={this.state.videoDidStart}/>
@@ -51,25 +52,27 @@ module.exports = React.createClass({
             activeVideo={this.props.params.video-1}
           />
           <Playlist pageType="direct" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video-1} changeVideo={this.changeVideo}/>
-          <ShareThisNow/>
+          <ShareThisNow params={this.props.params} videos={VideoData}/>
         </main>
         <Footer>
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
         </Footer>
-          {this.state.videoDidEnd ? <Modal hideModal={this.hideModal} className="postVideo social-cta">
-          <p className="cta-title">Will you spread the word about our friend, encryption?</p>
+          <div hidden={!this.state.videoDidEnd}>
+          	<Modal hideModal={this.hideModal} className="postVideo social-cta">
+          <p className="cta-title">{CTA}</p>
           <div className="social">
-            <a href="mailto:?&subject=Check out this great video on encryption.&body=I just watched a video about how encryption works in our everyday lives and thought you would really like it. Check it out at https://mzl.la/encrypt. Hope you enjoy it!" className="social-circle">
-              <i data-social="email" onClick={this.socialClicked} className="fa fa-envelope"></i>
-            </a>
-            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://advocacy.mozilla.org/encrypt/?video=2" className="social-circle">
-              <i data-social="facebook" onClick={this.socialClicked} className="fa fa-facebook"></i>
-            </a>
-            <a target="_blank" href="https://twitter.com/intent/tweet?text=I%20just%20learned%20how%20encryption%20works%20in%20our%20everyday%20lives.%20Check%20it%20out%20at%20mzl.la%2Fencrypt%20via%20%40mozilla%20%23encrypt" className="social-circle">
-              <i data-social="twitter" onClick={this.socialClicked} className="fa fa-twitter"></i>
-            </a>
+            <div className="sp-social-circle">
+		         	<div className='sp_161947 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
+	         	</div>
+	         	<div className="sp-social-circle">
+		         	<div data-social="facebook" onClick={this.socialClicked} className='sp_161949 sp_fb_small' ></div>
+	         	</div>
+	         	<div className="sp-social-circle">
+	         		<div data-social="twitter" onClick={this.socialClicked}  className='sp_161950 sp_tw_small' ></div>
+	         	</div>
           </div>
-        </Modal> : ''}
+        </Modal>
+        </div>
       </div>
     );
   }
