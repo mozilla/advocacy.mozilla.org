@@ -98,14 +98,14 @@ module.exports = React.createClass({
             <div className="cta">
               <h2 aria-role="label">Join the email list</h2>
               <div className="horizontal-rule"></div>
-              <Signup submitButtonText="Subscribe" onSubmission={this.userDidSignup}/>
+              <Signup formName="signup" submitButtonText="Subscribe" onSubmission={this.userDidSignup}/>
             </div>
           </Modal>
         </div>
         <div hidden={!this.state.videoDidEnd}>
           <Modal hideModal={this.hideModal} className="postVideo signup-cta">
             <p className="cta-title">Stand with us for a free and open Internet.<br/>Sign on.</p>
-            <Signup />
+            <Signup formName="afterVideo" />
           </Modal>
         </div>
       </div>
