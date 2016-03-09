@@ -12,7 +12,7 @@ module.exports = React.createClass({
   render: function() {
     var thumbs = [];
     for (var i = 0; i < this.props.videos.length; i++){
-      thumbs.unshift(<Thumb key={i} index={i} activeVideo={this.props.activeVideo} pageType={this.props.pageType} videoDidStart={this.props.videoDidStart}  video={this.props.videos[i]} />);
+      thumbs.unshift(<Thumb key={i} index={i} activeVideo={this.props.activeVideo} makeActive={this.props.changeVideo} pageType={this.props.pageType} videoDidStart={this.props.videoDidStart}  video={this.props.videos[i]} />);
     }
     return (
       <div className="playlist-wrapper">

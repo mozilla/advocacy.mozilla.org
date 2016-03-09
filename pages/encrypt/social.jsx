@@ -28,7 +28,7 @@ module.exports = React.createClass({
   componentWillMount() {
     this.videoOptions = VideoData;
   },
-  changeVideo(video){
+  changeVideo(){
     var didSignup = this.state.didSignup;
     this.setState(this.getInitialState());
     this.setState({didSignup: didSignup});
