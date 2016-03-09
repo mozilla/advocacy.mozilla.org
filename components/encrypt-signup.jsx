@@ -17,7 +17,8 @@ module.exports = React.createClass({
   },
   getDefaultProps() {
     return {
-      submitButtonText: "Sign Up"
+      submitButtonText: "Sign Up",
+      formName: "form"
     };
   },
   sendEmailToBasket: function(e) {
@@ -71,9 +72,9 @@ module.exports = React.createClass({
     return (
       <div className="encrypt-signup">
         {this.props.children}
-        <form id="form" onSubmit={this.sendEmailToBasket}></form>
-        <input form="form" type="text" className="input" name="name" ref="name" valueLink={this.linkState(`name`)} placeholder="First Name"/>
-        <input required="required" form="form" type="email" className="input" ref="email" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address (required)"/>
+        <form id={this.props.formName} onSubmit={this.sendEmailToBasket}></form>
+        <input form={this.props.formName} type="text" className="input" name="name" ref="name" valueLink={this.linkState(`name`)} placeholder="First Name"/>
+        <input required="required" form={this.props.formName} type="email" className="input" ref="email" name="email" valueLink={this.linkState(`email`)} placeholder="Email Address (required)"/>
         <select className="country-input" valueLink={this.linkState(`country`)} required="required">
           <option value="" defaultValue="selected">
             Select your Country
@@ -780,12 +781,12 @@ module.exports = React.createClass({
         </select>
         <div className="why">Why do we ask for this <a className="explaination-trigger">information?</a><div className="explaination">We care about your privacy and helping you make informed choices. That’s why we link to our Privacy Notice  so you can easily read it. To receive emails we require only your email address — “First Name” and “Country” aren’t required to sign up, but if you tell us your country we can send you local news and events — it’s your choice!</div></div>
         <div className="checkboxDiv">
-          <input id="privacyPolicy" form="form" type="checkbox" required="required"/>
+          <input id="privacyPolicy" form={this.props.formName} type="checkbox" required="required"/>
           <label htmlFor="privacyPolicy" className="label">
             I’m okay with Mozilla handling my info as explained in <a href="https://www.mozilla.org/en-US/privacy/websites/" target="_blank" style={{"color":"white", "textDecoration":"underline"}}>this Privacy Notice</a>.
           </label>
         </div>
-        { this.state.didSignUp ? <button className="button" style={{padding: "12px 17px"}}>Thanks for signing up!</button> : <button type="submit" form="form" className="button button-groove">{this.props.submitButtonText}</button> }
+        { this.state.didSignUp ? <button className="button" style={{padding: "12px 17px"}}>Thanks for signing up!</button> : <button type="submit" form={this.props.formName} className="button button-groove">{this.props.submitButtonText}</button> }
       </div>
     );
   }
