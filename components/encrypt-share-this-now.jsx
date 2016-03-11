@@ -3,7 +3,7 @@ var ga = require('react-ga');
 
 module.exports = React.createClass({
   socialClicked(e) {
-    ga.event({category: "Social", action: "Clicked on " + e.target.dataset.social});
+    ga.event({category: "Social", action: "Clicked on " + e.currentTarget.dataset.social});
   },
   render() {
     return (
