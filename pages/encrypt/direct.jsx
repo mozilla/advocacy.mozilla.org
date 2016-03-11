@@ -33,7 +33,7 @@ module.exports = React.createClass({
     this.setState(this.getInitialState());
   },
   socialClicked(e) {
-    ga.event({category: "Social", action: "Clicked on " + e.target.dataset.social});
+    ga.event({category: "Social", action: "Clicked on " + e.currentTarget.dataset.social});
   },
   render: function() {
   	var CTA = this.videoOptions[this.props.params.video-1].cta;
