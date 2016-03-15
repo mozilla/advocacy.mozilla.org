@@ -4,7 +4,8 @@ var express = require('express'),
     Habitat = require('habitat'),
     path = require('path'),
     compression = require('compression'),
-    helmet = require('helmet');
+    helmet = require('helmet'),
+    frameguard = helmet.frameguard,
     reactRouted = require('./lib/react-server-route.jsx');
 
 Habitat.load();
@@ -16,6 +17,22 @@ app.set('trust proxy', true);
 
 app.use(compression());
 app.use(helmet());
+app.use(frameguard({
+  action: "allow-from",
+  domain: "https://app.optimizely.com"
+}));
+app.use(helmet.csp({
+  directives:{
+    scriptSrc: ["'self'","'unsafe-inline'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org","https://*.shpg.org/", "https://www.google-analytics.com/"],
+    connectSrc:["'self'", "206878104.log.optimizely.com", "https://basket.mozilla.org/"],
+    childSrc:["'self'", "https://app.optimizely.com", "https://facebook.com"],
+    frameSrc: ["'self'", "https://app.optimizely.com"],
+    imgSrc:["'self'","data:", "https://www.google-analytics.com", "https://pontoon.mozilla.org","https://*.shpg.org/",
+          "https://cdn.optimizely.com"],
+    frameAncestors: ["https://app.optimizely.com"]
+  }
+}));
+
 app.use(helmet.hsts({
   maxAge: 90 * 24 * 60 * 60 * 1000 // 90 days
 }));
