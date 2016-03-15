@@ -31,7 +31,9 @@ module.exports = function(req, res, next) {
       // but that generates HTML without any React properties, so that _would_
       // get wiped if the HTML contains a <script> element that tries to load
       // the bundle for hooking into the DOM.
-      let html = ReactDOM.renderToString(<HTML>{renderToString(<RouterContext {...renderProps} />)}</HTML>);
+
+      let reactHTML = ReactDOM.renderToString(<RouterContext {...renderProps}/>);
+      let html = ReactDOM.renderToStaticMarkup(<HTML reactHTML={reactHTML}/>);
 
       // And to be good citizens of the web, we need a doctype, which React
       // cannot generate for us because exclamation points are funny.
