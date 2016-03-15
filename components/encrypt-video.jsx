@@ -3,20 +3,34 @@ var ga = require('react-ga');
 var classNames = require('classnames');
 
 module.exports = React.createClass({
+  getInitialState() {
+    return {
+      seventyFivePercentDone: false
+    };
+  },
   componentDidMount() {
-    this.refs.video.addEventListener("play", (e) =>{
+
+    var video = this.refs.video;
+
+    video.addEventListener("play", (e) =>{
       this.props.setPageState({
         videoIsPaused: false
       });
       ga.event({category: "Video", action: "Video started"});
     });
-    this.refs.video.addEventListener("webkitendfullscreen", (e) => {
+    video.addEventListener("webkitendfullscreen", (e) => {
       this.props.setPageState({
         videoDidEnd: true
       });
       ga.event({category: "Video", action: "iOS user clicked done", value: e.srcElement.currentTime});
     });
-    this.refs.video.addEventListener("ended", (e) => {
+    video.addEventListener("timeupdate", (e)=>{
+      if(video.currentTime/video.duration >= 0.75 && !this.state.seventyFivePercentDone){
+        ga.event({category: "Video", action: "75% complete"});
+        this.setState({seventyFivePercentDone: true});
+      }
+    });
+    video.addEventListener("ended", (e) => {
       this.props.setPageState({
         videoDidEnd: true
       });
