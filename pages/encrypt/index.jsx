@@ -30,7 +30,8 @@ module.exports = React.createClass({
           <meta name="twitter:title" content="Encryption Matters" />
           <meta name="twitter:description" content="I care about #encryption and you should too. Learn more about how it works from @Mozilla at mzl.la/encrypt" />
           <meta name="twitter:image" content="https://advocacy.mozilla.org/assets/img/share/video3-twitter.png" />
-
+          <meta description="Your online privacy depends on encryption. Learn more about how encryption works, why it's essential to a strong Web, and why it's worth protecting." />
+          
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/encrypt.css"/>
