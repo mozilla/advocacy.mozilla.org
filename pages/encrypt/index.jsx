@@ -38,6 +38,7 @@ module.exports = React.createClass({
           <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fira+Sans:300i,300,400,600"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
           <title>Mozilla Advocacy</title>
+          <title>Learn about encryption - Mozilla Advocacy</title>
           <OptimizelySubdomain/>
           <Optimizely/>
           <script dangerouslySetInnerHTML={{__html: ga}}></script>
