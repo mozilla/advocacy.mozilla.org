@@ -59,10 +59,6 @@ module.exports = React.createClass({
         <Header/>
         <HeroUnit image="/assets/overview.jpg">
           <h1>Open Web Fellows Program</h1>
-          <div>
-            <a href="https://mozilla-foundation-2.forms.fm/2016-ford-mozilla-open-web-fellows-application
-" className="button">apply now</a>
-          </div>
         </HeroUnit>
         <FellowsHeader/>
         <div className="page">
@@ -159,7 +155,7 @@ module.exports = React.createClass({
             </div>
           </ContentContainer>
         </div>
-        <Apply/>
+        <Apply version="full" />
         <Footer/>
       </div>
     );

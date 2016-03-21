@@ -1,19 +1,28 @@
 var React = require(`react`);
 var HeroUnit = require(`./hero-unit.jsx`);
+var Router = require(`react-router`);
+var Link = Router.Link;
 
 module.exports = React.createClass({
   render: function() {
+    var description = `Thank you to everyone who applied. We will be contacting candidates directly in mid-April and announcing 2016 fellows in June.`;
+    var cta = null;
+    if ( this.props.version === `full` ) {
+      description += ` If you’re interested in what current fellows are doing, please visit our fellows page.`;
+      cta = (
+        <div>
+          <Link to="/open-web-fellows/fellows" className="button">Fellows</Link>
+        </div>
+      );
+    }
+
     return (
       <div className="apply">
         <HeroUnit className="apply-hero-unit" image="/assets/apply.jpg">
-          <h2>Apply Now</h2>
+          <h2>Application Closed</h2>
           <div className="horizontal-rule"></div>
-          <h4>We are an inclusive program and seek Fellows that reflect the diversity of the communities we serve. We encourage unique contributors with varied backgrounds to apply; if you feel your perspective is underrepresented in technology, we want to hear from you.</h4>
-          <div>
-            <a href="https://mozilla-foundation-2.forms.fm/2016-ford-mozilla-open-web-fellows-application
-" className="button">apply to become a fellow</a>
-          </div>
-          <div className="fine-print">Deadline 11:59pm PDT March 20, 2016</div>
+          <h4>{description}</h4>
+          {cta}
         </HeroUnit>
       </div>
     );
