@@ -153,9 +153,8 @@ video{
 
 .playlist-wrapper{
   background: #1b222d;
-  font-size: 3vw;
+  font-size: 1rem;
   @media(min-width: 38rem){
-    font-size: 1rem;
     padding: 1.5em 0;
   }
 }
@@ -163,15 +162,18 @@ video{
   max-width: 960px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   @media(min-width: 38rem){
+    justify-content: space-between;
     padding: 1rem;
   }
 }
 .video-thumbnail{
   position: relative;
-  width: 280px;
+  max-width: 205px;
   margin: 5px;
+  flex-basis: 23%;
   .thumbnail-image{
     outline: 5px solid transparent;
     transition: outline .5s ease;
@@ -206,18 +208,18 @@ video{
   }
   .now-playing{
     position: absolute;
-    font-size: .8125em;
+    font-size: 0.8125em;
     background: #171d26;
     text-transform: uppercase;
     padding: .5em;
   }
   .episode-title{
-    font-size: 1.3em;
+    font-size: 1.05em;
     line-height: 1.25em;
     margin-top: .8em;
   }
   .episode-metadata{
-    font-size: 1.125em;
+    font-size: 0.8125em;
     color: #b2afb2;
     font-weight: 400;
   }
@@ -422,6 +424,7 @@ select{
   margin: 1rem auto;
   position: relative;
   box-shadow: 0 0 8px rgba(0,0,0,.5);
+  max-height: 100vh;
 }
 
 .postVideo .modal{
@@ -436,24 +439,55 @@ select{
     text-align: center;
   }
   @media(min-width: 54rem){
-    padding: 4rem;
+    padding: 3rem;
     max-width: 980px;
     p{
       font-size: 3rem;
     }
   }
 }
+.pledge-cta .modal{
+  background-image: url('../../../public/assets/graphic-bars.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: @contrast_lightblue;
+  max-width: 95%;
+  overflow: scroll;
+  // p{
+  //   font-weight: bold;
+  // }
+  & > div{
+    flex: 1;
+  }
+  @media(min-width: 54rem){
+    padding: 3rem;
+    max-width: 980px;
+    overflow: hidden;
+    & > div + div {
+      margin-left: 3rem;
+      max-width: 24rem;
+    }
+  }
+}
+.pledge-cta-title{
+  font-size: 2.8125rem;
+  color: #f46060;
+  margin-top: 0;
+}
+.pledge-cta-info{
+  font-size: 1.5rem;
+}
+.pledge-cta-why{
+  font-size: 0.8125rem;
+}
 
 .encrypt-signup{
   color: white;
 }
 
-.signup-cta .modal, .social-cta .modal{
+.signup-cta .modal, .social-cta .modal, .pledge-cta .modal{
   @media(min-width: 54rem){
     display: flex;
-    p{
-      width: 7em;
-    }
     .encrypt-signup:before{
       content:'';
       background: url('../../../public/assets/arrow.svg') no-repeat;
