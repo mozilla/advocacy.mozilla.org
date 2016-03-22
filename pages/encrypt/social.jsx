@@ -16,9 +16,13 @@ var Route = require('react-router').Route;
 
 
 module.exports = React.createClass({
+  contextTypes: {
+    location: React.PropTypes.object
+  },
   getInitialState: function() {
     return {
       formIsVisible: false,
+      prefillForm: false,
       didSignUp: false,
       videoDidStart: false,
       videoDidEnd: false,
@@ -64,6 +68,16 @@ module.exports = React.createClass({
   },
   socialClicked(e) {
     ga.event({category: "Social", action: "Clicked on " + e.currentTarget.dataset.social});
+  },
+  componentDidMount: function() {
+    var queryParams = this.context.location.query;
+    if ( queryParams.country || queryParams.email ) {
+      this.knownUserInfo = {
+        country: queryParams.country,
+        email: decodeURIComponent(queryParams.email)
+      }
+      this.setState({ prefillForm: true });
+    }
   },
   render: function() {
     var modalClass = classNames({
@@ -113,7 +127,7 @@ module.exports = React.createClass({
             </div>
             <div>
               <p className="pledge-cta-why">Let us know what country you’re in so if debates are happening in your country we can email you the most relevant updates. We’ll also send you useful tips about how to use encryption that you can share with friends. </p>
-              <Signup preFill={this.props.params} onSubmission={this.userDidSignup} formName="afterVideo" />
+              <Signup dataToPrefill={this.knownUserInfo} onSubmission={this.userDidSignup} formName="afterVideo" />
             </div>
           </Modal>
         </div>
