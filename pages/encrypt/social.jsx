@@ -16,9 +16,6 @@ var Route = require('react-router').Route;
 
 
 module.exports = React.createClass({
-  contextTypes: {
-    location: React.PropTypes.object
-  },
   getInitialState: function() {
     return {
       formIsVisible: false,
@@ -70,11 +67,11 @@ module.exports = React.createClass({
     ga.event({category: "Social", action: "Clicked on " + e.currentTarget.dataset.social});
   },
   componentDidMount: function() {
-    var queryParams = this.context.location.query;
+    var queryParams = this.props.location.query;
     if ( queryParams.country || queryParams.email ) {
       this.knownUserInfo = {
         country: queryParams.country,
-        email: decodeURIComponent(queryParams.email)
+        email: queryParams.email
       }
       this.setState({ prefillForm: true });
     }
