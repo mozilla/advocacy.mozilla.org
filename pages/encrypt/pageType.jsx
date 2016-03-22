@@ -21,7 +21,7 @@ var PageType = React.createClass({
 		}
 		return (
 		  <div>
-			  <Page params={this.props.params}/>
+			  <Page params={this.props.params} location={this.props.location}/>
 		  </div>
 		);
 	}

@@ -16,9 +16,6 @@ var Modal = require(`../../components/encrypt-modal.jsx`);
 
 
 module.exports = React.createClass({
-  contextTypes: {
-    location: React.PropTypes.object
-  },
   getInitialState: function() {
     return {
       didSignup: false,
@@ -56,11 +53,11 @@ module.exports = React.createClass({
     });
   },
   componentDidMount: function() {
-    var queryParams = this.context.location.query;
+    var queryParams = this.props.location.query;
     if ( queryParams.country || queryParams.email ) {
       this.knownUserInfo = {
         country: queryParams.country,
-        email: decodeURIComponent(queryParams.email)
+        email: queryParams.email
       }
       this.setState({ prefillForm: true });
     }
