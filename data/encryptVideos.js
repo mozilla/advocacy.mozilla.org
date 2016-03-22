@@ -23,7 +23,7 @@ module.exports = [
         "direct": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/beat4_landingpage",
         "social": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/beat4_landingpage",
         "title": "Encryption, Journalism, and Free Expression",
-        "description": "Encryption doesn't just protect your privacy -- it also enables free expression. Encryption helps shield journalists and their sources, allowing individuals to tell powerful stories.",
+        "description": "Encryption doesn't just protect your privacy — it also enables free expression. Encryption helps shield journalists and their sources, allowing individuals to tell powerful stories.",
         "date": "March 9, 2016",
         "duration": "1:30",
         "poster": "/assets/video3poster.jpg",
