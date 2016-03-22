@@ -66,7 +66,6 @@ module.exports = React.createClass({
     }
   },
   render: function() {
-    console.log("this.props = ", this.props);
     var pageClass = Classnames(
       'v3',
       'encrypt',
