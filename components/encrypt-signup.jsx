@@ -6,7 +6,7 @@ module.exports = React.createClass({
     submitButtonText: React.PropTypes.string,
     formName: React.PropTypes.string,
     onSubmission: React.PropTypes.func,
-    prefill: React.PropTypes.object
+    dataToPrefill: React.PropTypes.object
   },
   mixins: [require(`react-addons-linked-state-mixin`)],
   getInitialState() {
@@ -15,11 +15,22 @@ module.exports = React.createClass({
       didSignUp: false,
       email: ``,
       country: ``,
-      name: ``
+      name: ``,
+      formPrefilled: false
     };
   },
   componentDidMount: function() {
     this.refs.name.focus();
+  },
+  componentDidUpdate: function(prevProps, prevState) {
+    var dataToPrefill = this.props.dataToPrefill;
+    if ( dataToPrefill && !this.state.formPrefilled ) {
+      this.setState({
+        country: dataToPrefill.country ? dataToPrefill.country.toUpperCase() : "",
+        email: dataToPrefill.email ? dataToPrefill.email : "",
+        formPrefilled: true
+      });
+    }
   },
   getDefaultProps() {
     return {

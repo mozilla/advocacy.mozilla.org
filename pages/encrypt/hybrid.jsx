@@ -16,6 +16,9 @@ var Modal = require(`../../components/encrypt-modal.jsx`);
 
 
 module.exports = React.createClass({
+  contextTypes: {
+    location: React.PropTypes.object
+  },
   getInitialState: function() {
     return {
       didSignup: false,
@@ -52,7 +55,18 @@ module.exports = React.createClass({
       modalIsVisible: false
     });
   },
+  componentDidMount: function() {
+    var queryParams = this.context.location.query;
+    if ( queryParams.country || queryParams.email ) {
+      this.knownUserInfo = {
+        country: queryParams.country,
+        email: decodeURIComponent(queryParams.email)
+      }
+      this.setState({ prefillForm: true });
+    }
+  },
   render: function() {
+    console.log("this.props = ", this.props);
     var pageClass = Classnames(
       'v3',
       'encrypt',
@@ -76,7 +90,7 @@ module.exports = React.createClass({
               videoIsPaused={this.state.videoIsPaused}
               activeVideo={optionsIndex}
               />
-            <Signup prefill={this.props.params} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
+            <Signup dataToPrefill={this.knownUserInfo} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
