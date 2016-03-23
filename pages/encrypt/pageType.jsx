@@ -11,7 +11,6 @@ var PageType = React.createClass({
 	},
 	render: function() {
 		var Page;
-        console.log(this.props.params);
         if(this.props.params.type == 'direct' && this.props.params.video == '4'){
             Page = pageTypes.hybrid;
         } else if(this.props.params && pageTypes[this.props.params.type]){
