@@ -32,7 +32,7 @@ module.exports = [
       },{
         "direct": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/beat4_landingpage",
         "social": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/beat4_landingpage",
-        "title": "Pledge to stand up for Strong encryption",
+        "title": "Pledge to Stand Up For Strong Encryption",
         "description": "We’re seeing more and more governments attempt to undermine encryption. Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to be an encryption champion.",
         "date": "March 23, 2016",
         "duration": "1:30",
