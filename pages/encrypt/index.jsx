@@ -22,16 +22,16 @@ module.exports = React.createClass({
           <meta property="og:title" content="Encryption matters"/>
           <meta property="og:site_name" content="Mozilla Advocacy - Encryption"/>
           <meta property="og:url" content="https://advocacy.mozilla.org/encrypt/"/>
-          <meta property="og:description" content="I care about protecting #encryption and you should too. To learn more about how it works and why it’s worth protecting, check out this great site from @Mozilla at https://advocacy.mozilla.org/encrypt"/>
-          <meta property="og:image" content="https://advocacy.mozilla.org/assets/img/share/video3-facebook.png" />
+          <meta property="og:description" content="Encryption needs you! Sign Mozilla's pledge to stand up for encryption and a more secure Web at advocacy.mozilla.org/encrypt"/>
+          <meta property="og:image" content="https://advocacy.mozilla.org/assets/img/share/Encryption-facebook-b5-06.png" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@mozilla" />
           <meta name="twitter:title" content="Encryption Matters" />
-          <meta name="twitter:description" content="I care about #encryption and you should too. Learn more about how it works from @Mozilla at mzl.la/encrypt" />
-          <meta name="twitter:image" content="https://advocacy.mozilla.org/assets/img/share/video3-twitter.png" />
+          <meta name="twitter:description" content="Encryption needs you! Sign Mozilla's pledge to stand up for encryption & a more secure Web at mzl.la/encrypt" />
+          <meta name="twitter:image" content="https://advocacy.mozilla.org/assets/img/share/Encryption-twitter-b5-06.png" />
           <meta description="Your online privacy depends on encryption. Learn more about how encryption works, why it's essential to a strong Web, and why it's worth protecting." />
-          
+
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/encrypt.css"/>
