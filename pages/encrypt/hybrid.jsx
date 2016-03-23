@@ -11,6 +11,8 @@ var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
 var Link = require('react-router').Link;
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
+var Classnames = require(`classnames`);
+var Modal = require(`../../components/encrypt-modal.jsx`);
 
 
 module.exports = React.createClass({
@@ -19,55 +21,79 @@ module.exports = React.createClass({
       didSignup: false,
       videoDidStart: false,
       videoDidEnd: false,
-      videoIsPaused: false
+      videoIsPaused: false,
+      modalIsVisible: false
     };
   },
   componentWillMount() {
     this.videoOptions = VideoData;
   },
-  changeVideo(video){
+  changeVideo(video) {
     var didSignup = this.state.didSignup;
     this.setState(this.getInitialState());
-    this.setState({activeVideo: video, didSignup: didSignup});
+    this.setState({ activeVideo: video, didSignup: didSignup });
   },
   userDidSignup: function() {
     this.setState({
       didSignup: true
     });
+    this.showModal();
   },
   setPageState(state) {
     this.setState(state);
   },
+  showModal() {
+    this.setState({
+      modalIsVisible: true
+    })
+  },
   hideModal: function() {
     this.setState({
-      videoDidEnd: false,
-      videoDidStart: false
+      modalIsVisible: false
     });
   },
+  componentDidMount: function() {
+    var queryParams = this.props.location.query;
+    if ( queryParams.country || queryParams.email ) {
+      this.knownUserInfo = {
+        country: queryParams.country,
+        email: queryParams.email
+      }
+      this.setState({ prefillForm: true });
+    }
+  },
   render: function() {
+    var pageClass = Classnames(
+      'v3',
+      'encrypt',
+      { [`video${this.props.params.video}`]: true }
+    );
+    var optionsIndex = this.props.params.video - 1;
+    var ctaText = this.videoOptions[optionsIndex].cta;
+
     return (
-      <div className="encrypt v3">
+      <div className={pageClass}>
         <EncryptHeader />
         <main className="page">
           <div className="videoSection">
             <EncryptVideo
               pageVersion="3"
               videoType="social"
-              video={this.videoOptions[this.props.params.video-1]}
+              video={this.videoOptions[optionsIndex]}
               setPageState={this.setPageState}
               videoDidEnd={this.state.videoDidEnd}
               videoDidStart={this.state.videoDidStart}
               videoIsPaused={this.state.videoIsPaused}
-              activeVideo={this.props.params.video-1}
-            />
-            <Signup onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
+              activeVideo={optionsIndex}
+              />
+            <Signup dataToPrefill={this.knownUserInfo} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
                 textClassName="cta-text"
-                header="Join Mozilla"
-                text="For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."
-              />
+                header={this.videoOptions[optionsIndex].hybridHeader || "Join Mozilla"}
+                text={this.videoOptions[optionsIndex].hybridText || "For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."}
+                />
             </Signup>
           </div>
           <ShareThisNow/>
@@ -75,6 +101,22 @@ module.exports = React.createClass({
         <Footer>
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
         </Footer>
+        <div hidden={!this.state.modalIsVisible}>
+          <Modal hideModal={this.hideModal} className="postVideo social-cta">
+            <p className="cta-title">{ctaText}</p>
+            <div className="social">
+              <div className="sp-social-circle">
+                <div className='sp_161947 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
+              </div>
+              <div className="sp-social-circle">
+                <div data-social="facebook" onClick={this.socialClicked} className='sp_161949 sp_fb_small' ></div>
+              </div>
+              <div className="sp-social-circle">
+                <div data-social="twitter" onClick={this.socialClicked}  className='sp_161950 sp_tw_small' ></div>
+              </div>
+            </div>
+          </Modal>
+        </div>
       </div>
     );
   }
