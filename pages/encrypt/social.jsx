@@ -56,7 +56,7 @@ module.exports = React.createClass({
     this.setState({
       didSignup: true
     });
-    setTimeout(()=>{
+    setTimeout(() => {
       this.hideModal();
       this.setState({
         shareModalIsVisible: true
@@ -64,11 +64,11 @@ module.exports = React.createClass({
     }, 500);
   },
   socialClicked(e) {
-    ga.event({category: "Social", action: "Clicked on " + e.currentTarget.dataset.social});
+    ga.event({ category: "Social", action: "Clicked on " + e.currentTarget.dataset.social });
   },
   componentDidMount: function() {
     var queryParams = this.props.location.query;
-    if ( queryParams.country || queryParams.email ) {
+    if (queryParams.country || queryParams.email) {
       this.knownUserInfo = {
         country: queryParams.country,
         email: queryParams.email
@@ -80,8 +80,8 @@ module.exports = React.createClass({
     var modalClass = classNames({
       'join-modal': true
     });
-    var optionsIndex = this.props.params.video-1;
-    var CTA = this.videoOptions[this.props.params.video-1].cta;
+    var optionsIndex = this.props.params.video - 1;
+    var CTA = this.videoOptions[this.props.params.video - 1].cta;
     return (
       <div className="encrypt v2">
         <EncryptHeader videoDidStart={this.state.videoDidStart} showModal={this.showModal}/>
@@ -105,7 +105,7 @@ module.exports = React.createClass({
                 </h2>
                 <div className="horizontal-rule"></div>
                 <p>
-                  Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to be an encryption champion.
+                  Will you help others understand what encryption is and stand up for strong encryption when it matters most?Sign on to be an encryption champion.
                 </p>
                 {!this.state.didSignup ? <button onClick={this.showModal} className="button">Sign now</button> : 'Thank you!'}
               </div>
@@ -120,29 +120,29 @@ module.exports = React.createClass({
           <Modal hideModal={this.hideModal} className="pledge-cta">
             <div>
               <p className="pledge-cta-title">Pledge to stand up for strong encryption</p>
-              <p className="pledge-cta-info">We’re seeing more and more governments attempt to undermine encryption. Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to be an encryption champion.</p>
+              <p className="pledge-cta-info">We’re seeing more and more governments attempt to undermine encryption.Will you help others understand what encryption is and stand up for strong encryption when it matters most?Sign on to be an encryption champion.</p>
             </div>
             <div>
-              <p className="pledge-cta-why">Let us know what country you’re in so if debates are happening in your country we can email you the most relevant updates. We’ll also send you useful tips about how to use encryption that you can share with friends. </p>
+              <p className="pledge-cta-why">Let us know what country you’re in so if debates are happening in your country we can email you the most relevant updates.We’ll also send you useful tips about how to use encryption that you can share with friends.</p>
               <Signup dataToPrefill={this.knownUserInfo} onSubmission={this.userDidSignup} formName="afterVideo" />
             </div>
           </Modal>
         </div>
-         <div hidden={!this.state.shareModalIsVisible}>
-          	<Modal hideModal={this.hideModal} className="postVideo social-cta">
-          <p className="cta-title">{CTA}</p>
-          <div className="social">
-            <div className="sp-social-circle">
-		         	<div className='sp_161947 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
-	         	</div>
-	         	<div className="sp-social-circle">
-		         	<div data-social="facebook" onClick={this.socialClicked} className='sp_161949 sp_fb_small' ></div>
-	         	</div>
-	         	<div className="sp-social-circle">
-	         		<div data-social="twitter" onClick={this.socialClicked}  className='sp_161950 sp_tw_small' ></div>
-	         	</div>
-          </div>
-        </Modal>
+        <div hidden={!this.state.shareModalIsVisible}>
+          <Modal hideModal={this.hideModal} className="postVideo social-cta">
+            <p className="cta-title">{CTA}</p>
+            <div className="social">
+              <div className="sp-social-circle">
+                <div className='sp_163584 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
+              </div>
+              <div className="sp-social-circle">
+                <div data-social="facebook" onClick={this.socialClicked} className='sp_163585 sp_fb_small' ></div>
+              </div>
+              <div className="sp-social-circle">
+                <div data-social="twitter" onClick={this.socialClicked}  className='sp_163586 sp_tw_small' ></div>
+              </div>
+            </div>
+          </Modal>
         </div>
       </div>
     );
