@@ -90,7 +90,7 @@ module.exports = React.createClass({
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
-                textClassName="cta-text"
+                textClassName="cta-text hybrid"
                 header={this.videoOptions[optionsIndex].hybridHeader || "Join Mozilla"}
                 text={this.videoOptions[optionsIndex].hybridText || "For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."}
                 />
