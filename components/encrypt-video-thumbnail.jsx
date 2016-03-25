@@ -23,8 +23,8 @@ module.exports = React.createClass({
       <div className={thumbnailClass}>
         {(this.props.activeVideo == this.props.index) && this.props.videoDidStart ? <span className="now-playing">Now Playing</span> : ''}
         <Link to={target}><img onClick={this.changeVideo} className="thumbnail-image" src={this.props.video.thumbnail} alt="Video poster frame" /></Link>
-        <div className="episode-title">{this.props.video.title}</div>
         <div className="episode-metadata">EPISODE {this.props.index + 1} <span className="episode-duration">{this.props.video.duration}</span></div>
+        <div className="episode-title">{this.props.video.title}</div>
       </div>
     );
   }
