@@ -162,8 +162,12 @@ video{
   max-width: 960px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  padding: 1rem 0;
   justify-content: space-around;
+  flex-wrap: wrap;
+  @media(min-width: 30rem){
+    flex-wrap: nowrap;
+  }
   @media(min-width: 38rem){
     justify-content: space-between;
     padding: 1rem;
@@ -171,9 +175,8 @@ video{
 }
 .video-thumbnail{
   position: relative;
-  max-width: 205px;
   margin: 5px;
-  flex-basis: 23%;
+  flex: 1 1 40%;
   .thumbnail-image{
     outline: 5px solid transparent;
     transition: outline .5s ease;
