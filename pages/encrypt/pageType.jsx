@@ -11,14 +11,16 @@ var PageType = React.createClass({
 	},
 	render: function() {
 		var Page;
-		if(this.props.params && pageTypes[this.props.params.type]){
+        if(this.props.params.type == 'direct' && this.props.params.video == '4'){
+            Page = pageTypes.hybrid;
+        } else if(this.props.params && pageTypes[this.props.params.type]){
 			Page = pageTypes[this.props.params.type]
 		} else {
 			Page = pageTypes.social;
 		}
 		return (
 		  <div>
-			  <Page params={this.props.params}/>
+			  <Page params={this.props.params} location={this.props.location}/>
 		  </div>
 		);
 	}

@@ -61,7 +61,7 @@ module.exports = React.createClass({
       <header className="header">
         <div className="header-content">
           <a href="https://mozilla.org"><img className="logo" height="30" width="105" src="/assets/logo-mozilla.svg" alt="Mozilla"/></a>
-          <div className="header-cta">Get Mozilla Email Updates <button className="button" onClick={this.props.showModal}>Sign Up</button></div>
+          <div className="header-cta">Become an Encryption Champion<button className="button" onClick={this.props.showModal}>Take the Pledge</button></div>
           <h1 className="encryptText">
             <EncryptLogo />
           </h1>
