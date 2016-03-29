@@ -105,7 +105,7 @@ module.exports = React.createClass({
                 <time className="video-date" dateTime="2016-02-08">{this.props.video.date}</time>
                 <span className="duration">{this.props.video.duration}</span>
               </span>
-            : ''}
+            : null}
             <div id="videoTitle" className="videoTitle">
               {this.props.video.title}
             </div>
