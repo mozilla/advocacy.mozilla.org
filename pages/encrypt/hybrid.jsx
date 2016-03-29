@@ -37,7 +37,11 @@ module.exports = React.createClass({
     this.setState({
       didSignup: true
     });
-    this.showModal();
+    if (window && optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201] === "Share Progress") {
+      window.location.assign('http://share.mozilla.org/352/163971');
+    } else {
+      this.showModal();
+    }
   },
   setPageState(state) {
     this.setState(state);
@@ -54,7 +58,7 @@ module.exports = React.createClass({
   },
   componentDidMount: function() {
     var queryParams = this.props.location.query;
-    if ( queryParams.country || queryParams.email ) {
+    if (queryParams.country || queryParams.email) {
       this.knownUserInfo = {
         country: queryParams.country,
         email: queryParams.email
@@ -70,6 +74,31 @@ module.exports = React.createClass({
     );
     var optionsIndex = this.props.params.video - 1;
     var ctaText = this.videoOptions[optionsIndex].cta;
+    var nonOptimizelyShareBtns = (<div className="social">
+      <div className="sp-social-circle">
+        <div className='sp_163584 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
+      </div>
+      <div className="sp-social-circle">
+        <div data-social="facebook" onClick={this.socialClicked} className='sp_163585 sp_fb_small' ></div>
+      </div>
+      <div className="sp-social-circle">
+        <div data-social="twitter" onClick={this.socialClicked}  className='sp_163586 sp_tw_small' ></div>
+      </div>
+    </div>);
+
+    var optimizelyShareBtns = (
+      <div className="social">
+              <div className="sp-social-circle">
+                <div className='sp_164044 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
+              </div>
+              <div className="sp-social-circle">
+                <div data-social="facebook" onClick={this.socialClicked} className='sp_164043 sp_fb_small' ></div>
+              </div>
+              <div className="sp-social-circle">
+                <div data-social="twitter" onClick={this.socialClicked}  className='sp_164042 sp_tw_small' ></div>
+              </div>
+            </div>);
+
 
     return (
       <div className={pageClass}>
@@ -104,17 +133,7 @@ module.exports = React.createClass({
         <div hidden={!this.state.modalIsVisible}>
           <Modal hideModal={this.hideModal} className="postVideo social-cta">
             <p className="cta-title">{ctaText}</p>
-            <div className="social">
-              <div className="sp-social-circle">
-                <div className='sp_163584 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
-              </div>
-              <div className="sp-social-circle">
-                <div data-social="facebook" onClick={this.socialClicked} className='sp_163585 sp_fb_small' ></div>
-              </div>
-              <div className="sp-social-circle">
-                <div data-social="twitter" onClick={this.socialClicked}  className='sp_163586 sp_tw_small' ></div>
-              </div>
-            </div>
+            {(typeof window !== 'undefined' && optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201]) ? optimizelyShareBtns : nonOptimizelyShareBtns}
           </Modal>
         </div>
       </div>
