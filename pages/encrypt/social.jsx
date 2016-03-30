@@ -105,7 +105,7 @@ module.exports = React.createClass({
                 </h2>
                 <div className="horizontal-rule"></div>
                 <p>
-                  Will you help others understand what encryption is and stand up for strong encryption when it matters most?Sign on to be an encryption champion.
+                  Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to be an encryption champion.
                 </p>
                 {!this.state.didSignup ? <button onClick={this.showModal} className="button">Sign now</button> : 'Thank you!'}
               </div>
@@ -120,10 +120,10 @@ module.exports = React.createClass({
           <Modal hideModal={this.hideModal} className="pledge-cta">
             <div>
               <p className="pledge-cta-title">Pledge to stand up for strong encryption</p>
-              <p className="pledge-cta-info">We’re seeing more and more governments attempt to undermine encryption.Will you help others understand what encryption is and stand up for strong encryption when it matters most?Sign on to be an encryption champion.</p>
+              <p className="pledge-cta-info">We’re seeing more and more governments attempt to undermine encryption. Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to Mozilla's email list and be an encryption champion.</p>
             </div>
             <div>
-              <p className="pledge-cta-why">Let us know what country you’re in so if debates are happening in your country we can email you the most relevant updates.We’ll also send you useful tips about how to use encryption that you can share with friends.</p>
+              <p className="pledge-cta-why">Become an encryption champion and sign up for email updates. Let us know what country you’re in so if debates happen near you we can email you the most relevant information. We’ll also email you useful tips about how to use encryption you can share with friends.</p>
               <Signup dataToPrefill={this.knownUserInfo} onSubmission={this.userDidSignup} formName="afterVideo" />
             </div>
           </Modal>
