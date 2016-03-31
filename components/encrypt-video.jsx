@@ -99,13 +99,11 @@ module.exports = React.createClass({
           </div>
         <div className={encryptWrapperClass} ref="metaWrapper">
           <div className="encrypt-meta">
-            {this.props.activeVideo+1 !== 4 ?
               <span className="videoMeta">
                 <span className="episodeNumber">EPISODE <span className="episodeNumber">{this.props.activeVideo+1}</span></span>
                 <time className="video-date" dateTime="2016-02-08">{this.props.video.date}</time>
                 <span className="duration">{this.props.video.duration}</span>
               </span>
-            : null}
             <div id="videoTitle" className="videoTitle">
               {this.props.video.title}
             </div>
