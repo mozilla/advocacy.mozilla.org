@@ -107,7 +107,7 @@ module.exports = React.createClass({
             <div id="videoTitle" className="videoTitle">
               {this.props.video.title}
             </div>
-            <p id="videoDescription" className="video-description">{this.props.video.description}</p>
+            <p id="videoDescription" className="video-description">{this.props.description || this.props.video.description}</p>
           </div>
         </div>
       </div>

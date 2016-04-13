@@ -109,13 +109,14 @@ module.exports = React.createClass({
               pageVersion="3"
               videoType="social"
               video={this.videoOptions[optionsIndex]}
+              description={this.videoOptions[optionsIndex].hybridDescription}
               setPageState={this.setPageState}
               videoDidEnd={this.state.videoDidEnd}
               videoDidStart={this.state.videoDidStart}
               videoIsPaused={this.state.videoIsPaused}
               activeVideo={optionsIndex}
               />
-            <Signup dataToPrefill={this.knownUserInfo} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
+            <Signup dataToPrefill={this.knownUserInfo} submitButtonText="Update my information" onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
