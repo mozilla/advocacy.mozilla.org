@@ -796,7 +796,7 @@ module.exports = React.createClass({
           </select>
           <input form={this.props.formName} type="text" className="input" name="name" ref="name" valueLink={this.linkState(`name`) } placeholder="First Name"/>
           <input required="required" form={this.props.formName} type="email" className="input" ref="email" name="email" valueLink={this.linkState(`email`) } placeholder="Email Address (required)"/>
-          <div className="why">Why do we ask for this <a className="explaination-trigger">information?</a><div className="explaination">We care about your privacy and helping you make informed choices.That’s why we link to our Privacy Notice  so you can easily read it.To receive emails we require only your email address — “First Name” and “Country” aren’t required to sign up, but if you tell us your country we can send you local news and events — it’s your choice!</div></div>
+          <div className="why">Why do we ask for this <a className="explaination-trigger">information?</a><div className="explaination">We care about your privacy and helping you make informed choices. That’s why we link to our Privacy Notice  so you can easily read it. To receive emails we require only your email address — “First Name” and “Country” aren’t required to sign up, but if you tell us your country we can send you local news and events — it’s your choice!</div></div>
           <div className="checkboxDiv">
             <input id="privacyPolicy" form={this.props.formName} type="checkbox" required="required"/>
             <label htmlFor="privacyPolicy" className="label">
