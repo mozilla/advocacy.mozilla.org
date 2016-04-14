@@ -37,7 +37,7 @@ module.exports = [
         "hybridDescription": "More and more governments are attempting to undermine encryption. You can help by letting us know what country you’d like to receive relevant updates about. This doesn’t sign you up for a new newsletter, but it means you may get an extra email if there’s something specific happening in that country.",
         "poster": "/assets/video4poster.jpg",
         "thumbnail": "/assets/thumbnail-beat4.jpg",
-        "cta": "Thanks for signing the pledge! Can\u00A0you\u00A0help us spread the word?",
+        "cta": "Thank you! Can\u00A0you\u00A0help us spread the word?",
         "hybridHeader":" ",
         "duration": "0:43",
         "hybridText": "Become an encryption champion! Let us know your country preference so we can alert you to any encryption debates happening in that area."
