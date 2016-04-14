@@ -23,8 +23,8 @@ app.use(frameguard({
 }));
 app.use(helmet.csp({
   directives:{
-    scriptSrc: ["'self'","'unsafe-inline'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org","https://*.shpg.org/", "https://www.google-analytics.com/"],
-    connectSrc:["'self'", "206878104.log.optimizely.com", "https://basket.mozilla.org/"],
+    scriptSrc: ["'self'","'unsafe-inline'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org", "https://basket-dev.allizom.org","https://*.shpg.org/", "https://www.google-analytics.com/"],
+    connectSrc:["'self'", "206878104.log.optimizely.com", "https://basket.mozilla.org/", "https://basket-dev.allizom.org"],
     childSrc:["'self'", "https://app.optimizely.com", "https://facebook.com"],
     frameSrc: ["'self'", "https://app.optimizely.com"],
     imgSrc:["'self'","data:", "https://www.google-analytics.com", "https://pontoon.mozilla.org","https://*.shpg.org/",

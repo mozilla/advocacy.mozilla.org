@@ -70,6 +70,7 @@ module.exports = React.createClass({
     var pageClass = Classnames(
       'v3',
       'encrypt',
+      this.props.location.query.test,
       { [`video${this.props.params.video}`]: true }
     );
     var optionsIndex = this.props.params.video - 1;
