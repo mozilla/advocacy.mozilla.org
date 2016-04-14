@@ -34,11 +34,12 @@ module.exports = [
         "social": "https://d24kjznqej0s8a.cloudfront.net/2016/encryption_campaign/beat5_landingpage",
         "title": "Stand Up For Strong Encryption",
         "description": "We’re seeing more and more governments attempt to undermine encryption. Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to Mozilla's email list and be an encryption champion.",
+        "hybridDescription": "More and more governments are attempting to undermine encryption. You can help by letting us know what country you’d like to receive relevant updates about. This doesn’t sign you up for a new newsletter, but it means you may get an extra email if there’s something specific happening in that country.",
         "poster": "/assets/video4poster.jpg",
         "thumbnail": "/assets/thumbnail-beat4.jpg",
         "cta": "Thanks for signing the pledge! Can\u00A0you\u00A0help us spread the word?",
         "hybridHeader":" ",
         "duration": "0:43",
-        "hybridText": "Become an encryption champion and sign up for email updates. Let us know what country you’re in so if debates happen near you we can email you the most relevant information. We’ll also email you useful tips about how to use encryption you can share with friends."
+        "hybridText": "Become an encryption champion! Let us know your country preference so we can alert you to any encryption debates happening in that area."
       }
      ]
