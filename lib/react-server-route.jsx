@@ -17,7 +17,6 @@ module.exports = function(req, res, next) {
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     // obviously, we need an error handler.
     if (error) { res.status(500).send(error.message); }
-
     // React router lets you specify redirects. If we had any, we literally
     // just tell our server that we need to look up a different URL.
     else if (redirectLocation) {

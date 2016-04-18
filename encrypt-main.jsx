@@ -52,4 +52,4 @@ module.exports = (
       <Redirect from="*" to="/encrypt/" />
     </Route>
   </Router>
-  );
+);
