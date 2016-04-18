@@ -25,6 +25,9 @@ module.exports = React.createClass({
       modalIsVisible: false
     };
   },
+  contextTypes: {
+    optimizely: React.PropTypes.object
+  },
   componentWillMount() {
     this.videoOptions = VideoData;
   },
@@ -100,7 +103,7 @@ module.exports = React.createClass({
               </div>
             </div>);
 
-
+    var optimizely = this.context.optimizely;
     return (
       <div className={pageClass}>
         <EncryptHeader />
@@ -135,7 +138,7 @@ module.exports = React.createClass({
         <div hidden={!this.state.modalIsVisible}>
           <Modal hideModal={this.hideModal} className="postVideo social-cta">
             <p className="cta-title">{ctaText}</p>
-            {(typeof window !== 'undefined' && optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201]) ? optimizelyShareBtns : nonOptimizelyShareBtns}
+            {(optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201]) ? optimizelyShareBtns : nonOptimizelyShareBtns}
           </Modal>
         </div>
       </div>

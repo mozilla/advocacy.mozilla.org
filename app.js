@@ -11,9 +11,56 @@ var express = require('express'),
 Habitat.load();
 
 var app = express(),
-  env = new Habitat();
+  env = new Habitat(),
+  OPTIMIZELY_ID = env.get('OPTIMIZELY_ID'),
+  OptimizelyClient = require('optimizely-node-client'),
+  optimizely = new OptimizelyClient(env.get('OPTIMIZELY_TOKEN'));
 
 app.set('trust proxy', true);
+
+app.use( '/optimizely-experiments.js', function( req, res ) {
+  optimizely.getExperiments(OPTIMIZELY_ID).then(function(experiments) {
+    var experimentPromises = [];
+    var experimentData = {};
+    experimentPromises.push(new Promise(function(resolve) {
+      var variationsPromises = [];
+      experiments.forEach(function(experiment) {
+        experimentData[experiment.id] = {};
+        experiment.variation_ids.forEach(function(variationId) {
+          variationsPromises.push(optimizely.getVariation({id: variationId}).then(function(variation) {
+            if (variation.js_component) {
+              experimentData[experiment.id][variation.id] = variation.js_component;
+            }
+          }));
+        });
+      });
+
+      Promise.all(variationsPromises).then(resolve);
+    }));
+
+    function insertComma(index, arr) {
+      if (index < arr.length-1) {
+        return ","
+      }
+      return "";
+    }
+
+    Promise.all(experimentPromises).then(function() {
+      var jsComponents = "window.optimizelyExperimentData = {\n";
+      Object.keys(experimentData).forEach(function(experiment, index, arr) {
+        jsComponents += "  \"" + experiment + "\": {\n";
+        Object.keys(experimentData[experiment]).forEach(function(variation, index, arr) {
+          jsComponents += "    \"" + variation + "\": function() {\n";
+          jsComponents += "      " + experimentData[experiment][variation] + "\n";
+          jsComponents += "    }" + insertComma(index, arr) + "\n";
+        });
+        jsComponents += "  }" + insertComma(index, arr) + "\n";
+      });
+      jsComponents += "};";
+      res.status(200).type('application/javascript').send(jsComponents);
+    });
+  });
+});
 
 app.use(compression());
 app.use(helmet());
@@ -24,7 +71,7 @@ app.use(frameguard({
 app.use(helmet.csp({
   directives:{
     scriptSrc: ["'self'","'unsafe-inline'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org", "https://basket-dev.allizom.org","https://*.shpg.org/", "https://www.google-analytics.com/"],
-    connectSrc:["'self'", "206878104.log.optimizely.com", "https://basket.mozilla.org/", "https://basket-dev.allizom.org"],
+    connectSrc:["'self'", "5629570640.log.optimizely.com", "https://basket.mozilla.org/", "https://basket-dev.allizom.org"],
     childSrc:["'self'", "https://app.optimizely.com", "https://facebook.com"],
     frameSrc: ["'self'", "https://app.optimizely.com"],
     imgSrc:["'self'","data:", "https://www.google-analytics.com", "https://pontoon.mozilla.org","https://*.shpg.org/",

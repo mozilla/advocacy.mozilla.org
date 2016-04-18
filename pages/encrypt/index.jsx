@@ -41,6 +41,7 @@ module.exports = React.createClass({
           <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png"/>
           <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-196x196.png"/>
           <link rel="shortcut icon" href="/assets/favicon.ico"/>
+          <script src="/optimizely-experiments.js"/>
           <OptimizelySubdomain/>
           <Optimizely/>
           <script dangerouslySetInnerHTML={{__html: ga}}></script>
