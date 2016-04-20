@@ -2,6 +2,7 @@
 node_modules
 npm-debug.log*
 .env
+dist/*
 public/build/*
 public/encrypt/*
 public/index.css

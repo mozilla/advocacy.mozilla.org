@@ -1,8 +1,8 @@
 var React = require(`react`);
-var Footer = require(`../../components/footer.jsx`);
-var Signup = require(`../../components/encrypt-signup.jsx`);
+var Footer = require(`../../components/footer.js`);
+var Signup = require(`../../components/encrypt-signup.js`);
 var classNames = require('classnames');
-var Icon = require(`../../components/footer-icon.jsx`);
+var Icon = require(`../../components/footer-icon.js`);
 var Link = require('react-router').Link;
 
 

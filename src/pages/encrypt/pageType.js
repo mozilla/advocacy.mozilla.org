@@ -1,8 +1,8 @@
 var React = require('react');
 var pageTypes = {
-  'social': require(`./social.jsx`),
-  'direct': require(`./direct.jsx`),
-  'hybrid': require(`./hybrid.jsx`)
+  'social': require(`./social.js`),
+  'direct': require(`./direct.js`),
+  'hybrid': require(`./hybrid.js`)
 }
 
 var PageType = React.createClass({

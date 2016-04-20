@@ -1,10 +1,10 @@
 var React = require(`react`);
-var Footer = require(`../../components/footer.jsx`);
-var Header = require(`../../components/header.jsx`);
-var HeroUnit = require(`../../components/hero-unit.jsx`);
-var Apply = require(`../../components/apply.jsx`);
-var FellowsHeader = require(`../../components/fellows-header.jsx`);
-var ContentContainer = require(`../../components/content-container.jsx`);
+var Footer = require(`../../components/footer.js`);
+var Header = require(`../../components/header.js`);
+var HeroUnit = require(`../../components/hero-unit.js`);
+var Apply = require(`../../components/apply.js`);
+var FellowsHeader = require(`../../components/fellows-header.js`);
+var ContentContainer = require(`../../components/content-container.js`);
 
 var FellowBlock = React.createClass({
   render: function() {

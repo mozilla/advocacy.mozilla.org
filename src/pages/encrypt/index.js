@@ -1,6 +1,6 @@
 import React from 'react';
-import Optimizely from '../../components/optimizely.jsx';
-import OptimizelySubdomain from '../../components/optimizelysubdomain.jsx';
+import Optimizely from '../../components/optimizely.js';
+import OptimizelySubdomain from '../../components/optimizelysubdomain.js';
 
 module.exports = React.createClass({
   render: function() {

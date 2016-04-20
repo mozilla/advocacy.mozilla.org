@@ -1,5 +1,4 @@
 require(`habitat`).load();
-require(`babel-core/register`);
 
 var path = require(`path`);
 var webpack = require(`webpack`);
@@ -8,8 +7,8 @@ var autoprefixer = require(`autoprefixer`);
 
 module.exports = {
   entry: {
-    advocacy: [`./advocacy-main.jsx`, `./less/advocacy.less`],
-    encrypt: [`./encrypt-app.jsx`, `./less/encrypt.less`]
+    advocacy: [`./dist/advocacy-main.js`, `./less/advocacy.less`],
+    encrypt: [`./dist/encrypt-app.js`, `./less/encrypt.less`]
 
   },
   output: {
@@ -19,15 +18,10 @@ module.exports = {
     publicPath: `/build/`
   },
   resolve: {
-    extensions: [``, `.js`, `.jsx`]
+    extensions: [``, `.js`]
   },
   module: {
     loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loaders: [`react-hot`, `babel-loader`]
-      },
       {
         test: /\.json$/,
         loaders: [`json-loader`] },

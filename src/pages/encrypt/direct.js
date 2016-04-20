@@ -1,12 +1,12 @@
 var React = require('react');
-var Footer = require('../../components/footer.jsx');
-var EncryptVideo = require('../../components/encrypt-video.jsx');
+var Footer = require('../../components/footer.js');
+var EncryptVideo = require('../../components/encrypt-video.js');
 var ShareThisNow = require('../../components/encrypt-share-this-now');
 var EncryptHeader = require('../../components/encrypt-header');
-var Modal = require(`../../components/encrypt-modal.jsx`);
+var Modal = require(`../../components/encrypt-modal.js`);
 var ga = require('react-ga');
-var Icon = require(`../../components/footer-icon.jsx`);
-var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
+var Icon = require(`../../components/footer-icon.js`);
+var Playlist = require(`../../components/encrypt-video-playlist.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
 
 module.exports = React.createClass({

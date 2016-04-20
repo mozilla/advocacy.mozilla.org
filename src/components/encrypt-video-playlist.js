@@ -1,5 +1,5 @@
 var React = require(`react`);
-var Thumb = require(`./encrypt-video-thumbnail.jsx`);
+var Thumb = require(`./encrypt-video-thumbnail.js`);
 
 module.exports = React.createClass({
   //TODO: call Thumb for each video in object, passing object as props

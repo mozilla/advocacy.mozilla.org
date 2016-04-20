@@ -1,12 +1,10 @@
-require(`babel-core/register`);
-
 var express = require('express'),
     Habitat = require('habitat'),
     path = require('path'),
     compression = require('compression'),
     helmet = require('helmet'),
     frameguard = helmet.frameguard,
-    reactRouted = require('./lib/react-server-route.jsx');
+    reactRouted = require('./dist/lib/react-server-route.js');
 
 Habitat.load();
 

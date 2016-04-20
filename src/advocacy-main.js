@@ -11,10 +11,10 @@ function NotMatch(nextState, replace) {
 render((
   <Router history={browserHistory}>
     <Route path="/">
-      <IndexRoute component={require(`./pages/home.jsx`)}/>
-      <Route path="/open-web-fellows" component={require(`./pages/open-web-fellows/overview.jsx`)}/>
-      <Route path="/open-web-fellows/fellows" component={require(`./pages/open-web-fellows/fellows.jsx`)}/>
-      <Route path="/open-web-fellows/info" component={require(`./pages/open-web-fellows/info.jsx`)}/>
+      <IndexRoute component={require(`./pages/home.js`)}/>
+      <Route path="/open-web-fellows" component={require(`./pages/open-web-fellows/overview.js`)}/>
+      <Route path="/open-web-fellows/fellows" component={require(`./pages/open-web-fellows/fellows.js`)}/>
+      <Route path="/open-web-fellows/info" component={require(`./pages/open-web-fellows/info.js`)}/>
       <Route path="*" onEnter={NotMatch}/>
     </Route>
   </Router>

@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 import ga  from 'react-ga';
 import { match, Router } from 'react-router';
 import { createHistory, useQueries } from 'history';
-import routes from './encrypt-main.jsx';
+import routes from './encrypt-main.js';
 
 const history = useQueries(createHistory)();
 
