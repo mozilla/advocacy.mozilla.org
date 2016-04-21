@@ -3,16 +3,16 @@ import ReactDOM, { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 
 // Using a server response we don't have an "index.html", so instead of
-// generating a <Page>...</Page> like we do over in App.jsx, we actually
+// generating a <Page>...</Page> like we do over in App.js, we actually
 // use a component that wraps a <Page/> with a full HTML document:
-var HTML = require(`../pages/encrypt/index.jsx`);
-var routes = require('../encrypt-main.jsx');
+var HTML = require(`../pages/encrypt/index.js`);
+var routes = require('../encrypt-main.js');
 
 module.exports = function(req, res, next) {
   var location = req.url;
 
   // This is essentially a callback lookup. If the requested URL is a known
-  // URL based on the routing map as defined in routes.jsx, then this will
+  // URL based on the routing map as defined in routes.js, then this will
   // lead to render properties that can be used to generate page components.
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     // obviously, we need an error handler.

@@ -1,5 +1,5 @@
 var React = require(`react`);
-var HeroUnit = require(`./hero-unit.jsx`);
+var HeroUnit = require(`./hero-unit.js`);
 var Router = require(`react-router`);
 var Link = Router.Link;
 

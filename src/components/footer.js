@@ -1,5 +1,5 @@
 var React = require(`react`);
-var Icon = require(`./footer-icon.jsx`);
+var Icon = require(`./footer-icon.js`);
 
 module.exports = React.createClass({
   render: function() {

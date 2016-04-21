@@ -1,7 +1,7 @@
 var React = require(`react`);
 var Router = require(`react-router`);
 var Link = Router.Link;
-var ImageTag = require(`./imagetag.jsx`);
+var ImageTag = require(`./imagetag.js`);
 
 module.exports = React.createClass({
   render: function() {

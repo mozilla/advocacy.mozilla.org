@@ -1,18 +1,18 @@
 var React = require(`react`);
-var Footer = require(`../../components/footer.jsx`);
-var Signup = require(`../../components/encrypt-signup.jsx`);
-var CTA = require(`../../components/cta.jsx`);
+var Footer = require(`../../components/footer.js`);
+var Signup = require(`../../components/encrypt-signup.js`);
+var CTA = require(`../../components/cta.js`);
 var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
-var EncryptVideo = require(`../../components/encrypt-video.jsx`);
-var Icon = require(`../../components/footer-icon.jsx`);
+var EncryptVideo = require(`../../components/encrypt-video.js`);
+var Icon = require(`../../components/footer-icon.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
-var Playlist = require(`../../components/encrypt-video-playlist.jsx`);
+var Playlist = require(`../../components/encrypt-video-playlist.js`);
 var Link = require('react-router').Link;
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
 var Classnames = require(`classnames`);
-var Modal = require(`../../components/encrypt-modal.jsx`);
+var Modal = require(`../../components/encrypt-modal.js`);
 
 
 module.exports = React.createClass({

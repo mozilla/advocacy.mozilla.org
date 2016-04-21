@@ -1,9 +1,9 @@
 var React = require(`react`);
-var Footer = require(`../components/footer.jsx`);
-var Header = require(`../components/header.jsx`);
-var HeroUnit = require(`../components/hero-unit.jsx`);
-var ContentContainer = require(`../components/content-container.jsx`);
-var ImageTag = require(`../components/imagetag.jsx`);
+var Footer = require(`../components/footer.js`);
+var Header = require(`../components/header.js`);
+var HeroUnit = require(`../components/hero-unit.js`);
+var ContentContainer = require(`../components/content-container.js`);
+var ImageTag = require(`../components/imagetag.js`);
 
 var HomePageItem = React.createClass({
   render: function() {

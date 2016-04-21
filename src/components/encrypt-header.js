@@ -1,5 +1,5 @@
 var React = require(`react`);
-var EncryptLogo = require('./encrypt-logo.jsx');
+var EncryptLogo = require('./encrypt-logo.js');
 
 module.exports = React.createClass({
   componentDidMount() {
