@@ -34,15 +34,13 @@ Some server side files need the server to be rerun with npm start.
 
 ## Sitemap
 
-`/` -> `/src/pages/home.js`
-
-`/encrypt/` -> `/src/pages/encrypt/index.js`
-
-`/open-web-fellows/` -> `/src/pages/open-web-fellows/overview.js`
-
-`/open-web-fellows/info/` -> `/src/pages/open-web-fellows/info.js`
-
-`/open-web-fellows/fellows/` -> `/src/pages/open-web-fellows/fellows.js`
+```
+/ -> /src/pages/home.js
+/encrypt/ -> /src/pages/encrypt/index.js
+/open-web-fellows/ -> /src/pages/open-web-fellows/overview.js
+/open-web-fellows/info/ -> /src/pages/open-web-fellows/info.js
+/open-web-fellows/fellows/ -> /src/pages/open-web-fellows/fellows.js
+```
 
 ## Source Structure
 
