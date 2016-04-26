@@ -26,9 +26,9 @@ $ npm start
 
 ## Develop Workflow
 
-After successfully building and running the server, go to [localhost:8080/]()
+After successfully building and running the server, go to [localhost:8080/](http://localhost:8080/)
 
-Now start changing files in /src and refresh the browser.
+You can now start changing files in the `/src` directory, such that saving your changes and refreshing the browser will show your changes.
 
 Files outside of /src require npm start to be rerun
 
@@ -56,4 +56,4 @@ We use [react-router](https://github.com/reactjs/react-router) to handle the sit
 
 We use [node](http://nodejs.org/) version 4 or higher to run our server, which is handled in `app.js`.
 
-"Encrypt" pages are handled a bit differently from the rest. While the standard routes, and source, uses `/src/advocacy-main.js` for pretty much all the generating and packaging of files, routes, and source. Encrypt uses `/src/encrypt-app.js` to package client side files, and uses `/src/encrypt-main.js` and `/src/lib/react-server-rooute.js` to handle server side rendering.
+"Encrypt" pages are handled a bit differently from the rest. The standard routes, and source, use `/src/advocacy-main.js` for pretty much all the generating and packaging of files, routes, and source. Encrypt uses `/src/encrypt-app.js` to package client side files, and uses `/src/encrypt-main.js` and `/src/lib/react-server-rooute.js` to handle server side rendering.
