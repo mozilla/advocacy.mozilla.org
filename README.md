@@ -1,6 +1,6 @@
 # Overview
 
-This is the repository for [https://advocacy.mozilla.org]()
+This is the repository for [https://advocacy.mozilla.org](https://advocacy.mozilla.org)
 
 As of April 2016, there are three parts to the site.
 
