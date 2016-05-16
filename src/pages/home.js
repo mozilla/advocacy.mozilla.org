@@ -44,13 +44,13 @@ module.exports = React.createClass({
           <ContentContainer className="home-page-content grey center-align slant reverse flat-bottom">
             <HomePageItem
               alt="net neutrality image"
-              src1x="/assets/home-neutrality.jpg"
-              src2x="/assets/home-neutrality@2x.jpg"
-              label="Net Neutrality"
-              buttonHref="https://www.youtube.com/watch?v=I-UPyuW5j9o&feature=youtu.be"
-              buttonLabel="watch video"
+              src1x="/assets/digital-tools-for-activism.jpg"
+              src2x="/assets/digital-tools-for-activism@2x.jpg"
+              label="Tools for Activism"
+              buttonHref="https://github.com/mozilla/toolsforactivism"
+              buttonLabel="see the list"
             >
-              In 2015, we fought to keep the Internet free of fast lanes, slow lanes and corporate control. Our community petitioned Congress and made a difference.
+              Whether we're talking about human rights or climate change, in the 21st Century all campaigns will be won and lost on the Internet. The Open Web allows us to organize, coordinate, communicate, mobilize and take collective action.
             </HomePageItem>
             <HomePageItem
               alt="open web fellows image"
