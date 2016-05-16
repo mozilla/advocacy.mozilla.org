@@ -2,7 +2,6 @@ var React = require(`react`);
 
 var StickyButton = React.createClass({
   getInitialState: function() {
-    window.scrollTo(0, 0);
     return {
       sticky: this.props.initialState || false
     };
@@ -26,6 +25,7 @@ var StickyButton = React.createClass({
     }
   },
   componentDidMount: function() {
+    window.scrollTo(0, 0);
     document.addEventListener(`scroll`, this.onScroll);
   },
   componentWillUnmount: function() {

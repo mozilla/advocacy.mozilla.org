@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 /* eslint-disable no-unused-vars */
-import { Router, browserHistory, Route, IndexRedirect, Redirect, IndexRoute } from 'react-router';
+import { Route, IndexRedirect, Redirect, IndexRoute } from 'react-router';
 import encryptVideos from './data/encryptVideos';
 
 function redirect(state, replace) {
@@ -38,8 +38,25 @@ function indexDirect(state, replace) {
 }
 
 module.exports = (
-  <Router history={browserHistory}>
-    <Route path="/encrypt">
+  <Route path="/">
+    <IndexRoute component={require(`./pages/home.js`)}/>
+    <Route path="open-web-fellows">
+      <IndexRoute component={require('./pages/open-web-fellows/overview.js')}/>
+      <Route path="fellows" component={require(`./pages/open-web-fellows/fellows.js`)}/>
+      <Route path="info" component={require(`./pages/open-web-fellows/info.js`)}/>
+      <Redirect from="*" to="/open-web-fellows/" />
+    </Route>
+    <Route path="stay-secure">
+      <IndexRoute component={require(`./pages/stay-secure.js`)}/>
+      <Route path="thank-you" component={require(`./pages/stay-secure-thank-you.js`)}/>
+      <Redirect from="*" to="/stay-secure/" />
+    </Route>
+    <Route path="encrypt-hard-drive">
+      <IndexRoute component={require(`./pages/encrypt-hard-drive/encrypt-hard-drive.js`)}/>
+      <Route path="thank-you" component={require(`./pages/encrypt-hard-drive/encrypt-hard-drive-thank-you.js`)}/>
+      <Redirect from="*" to="/encrypt-hard-drive/" />
+    </Route>
+    <Route path="encrypt">
       <IndexRoute onEnter={indexDirect} />
       <Route path="signup" component={require(`./pages/encrypt/signup.js`)}/>
       <Route path="signupa" component={require(`./pages/encrypt/signup-a.js`)}/>
@@ -58,5 +75,5 @@ module.exports = (
       <Route path="3" onEnter={redirect} />
       <Redirect from="*" to="/encrypt/" />
     </Route>
-  </Router>
-  );
+  </Route>
+);

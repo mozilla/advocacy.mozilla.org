@@ -1,75 +1,76 @@
-//Elements
-*, *:before, *:after{
-	box-sizing: border-box;
-}
 
-html {
-  background-color: @contrast_darkblue;
-  font-family: 'Fira Sans',Arial,"Lucida Grande",sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-}
-body{
-	font-size: 1.125rem;
-	margin: 0;
-	background-color: #1c325e;
-	color: #fff;
-}
-
-img, video{
-max-width: 100%;
-}
-video{
-	width: 100%;
-}
-
-main{
-	background-color: black;
-}
-
-video{
-	display: block;
-	transition: opacity .5s;
-}
-
-a {
-	text-decoration: none;
-	color: #009DAA;
-	&:hover {
-		color: #003E60;
+.encrypt {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1c325e;
+    z-index: -1;
   }
-}
+  font-weight: 300;
+	color: #fff;
+	font-size: 1.125rem;
+  //Elements
+  *, *:before, *:after{
+	  box-sizing: border-box;
+  }
+  img, video{
+  max-width: 100%;
+  }
+  video{
+	  width: 100%;
+  }
 
-.button{
-	font-family: "Fira Sans", sans-serif;
-	font-size: 18px;
-	background-color: #f46060;
-	border: none;
-	color: white;
-	padding: 12px 37px;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 25px;
-	transition: all 0.5s ease-in-out 0s;
-	cursor: pointer;
-	&:hover{
-		background-color: white;
-		color: #f46060;
-	}
-}
+  main{
+	  background-color: black;
+  }
 
-//This is why overly specific targeting on shared components is annoying
-.footer .footer-content p{
-	color: #FFF;
-}
+  video{
+	  display: block;
+	  transition: opacity .5s;
+  }
 
-.hidden{
-	display: none !important;
-}
+  a {
+	  text-decoration: none;
+	  color: #009DAA;
+	  &:hover {
+		  color: #003E60;
+    }
+  }
 
-.fadedOut{
-	opacity: 0 !important;
-}
-.fadedIn{
-	opacity: 1 !important;
+  .button{
+	  font-family: "Fira Sans", sans-serif;
+	  font-size: 18px;
+	  background-color: #f46060;
+	  border: none;
+	  color: white;
+	  padding: 12px 37px;
+	  text-align: center;
+	  text-decoration: none;
+	  border-radius: 25px;
+	  transition: all 0.5s ease-in-out 0s;
+	  cursor: pointer;
+	  &:hover{
+		  background-color: white;
+		  color: #f46060;
+	  }
+  }
+
+  //This is why overly specific targeting on shared components is annoying
+  .footer .footer-content p{
+	  color: #FFF;
+  }
+
+  .hidden{
+	  display: none !important;
+  }
+
+  .fadedOut{
+	  opacity: 0 !important;
+  }
+  .fadedIn{
+	  opacity: 1 !important;
+  }
 }

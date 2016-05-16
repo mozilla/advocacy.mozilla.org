@@ -12,18 +12,20 @@
   header{
     max-height: 210px;
   }
-  .header-cta{
-    @media(min-width: 625px){
-      display: block;
-      position: relative;
-      //A little magic, but aligning with baseline of images is hard
-      top: -3px;
-    }
-    button{
-      margin-left: .5rem;
-    }
-    .encryptText{
-      margin-top: 1.5rem;
+  .encrypt-header {
+    .header-cta{
+      @media(min-width: 625px){
+        display: block;
+        position: relative;
+        //A little magic, but aligning with baseline of images is hard
+        top: -3px;
+      }
+      button{
+        margin-left: .5rem;
+      }
+      .encryptText{
+        margin-top: 1.5rem;
+      }
     }
   }
   .cta{
@@ -63,15 +65,16 @@
   }
 }
 
-
-.join-mozilla-wrapper{
-  background-color: @primary_darkblue;
-  flex:1;
-}
-.share-wrapper{
-  flex: 1;
-  background-color: @primary_red;
-  display: flex;
+.encrypt {
+  .join-mozilla-wrapper{
+    background-color: @primary_darkblue;
+    flex:1;
+  }
+  .share-wrapper{
+    flex: 1;
+    background-color: @primary_red;
+    display: flex;
+  }
 }
 
 //V3 Stuff
@@ -80,9 +83,11 @@
   main{
     background-color: @contrast_lightblue;
   }
-  @media(min-width: 500px){
-    .encryptText{
-      margin-bottom: 20px;
+  .encrypt-header {
+    @media(min-width: 500px){
+      .encryptText{
+        margin-bottom: 20px;
+      }
     }
   }
   .videoSection{
@@ -113,9 +118,11 @@
     margin-top: 2rem;
     padding: 0;
   }
-  .videoTitle{
-    @media(min-width: 450px){
-      font-size: 2.375rem;
+  .encrypt-meta {
+    .videoTitle{
+      @media(min-width: 450px){
+        font-size: 2.375rem;
+      }
     }
   }
   &.video4 .videoMeta{
