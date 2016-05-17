@@ -1,0 +1,18 @@
+.accordion-tab {
+  .tab-content {
+    transition: max-height .3s;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px 0 30px;
+  }
+  .accordion-handle {
+    cursor: pointer;
+  }
+  &.expand {
+    .tab-content {
+      max-height: 1400px;
+      transition: max-height 1s;
+      padding-bottom: 15px;
+    }
+  }
+}
