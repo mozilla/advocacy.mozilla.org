@@ -10,7 +10,7 @@ function NotMatch(nextState, replace) {
 }
 
 function logPageView() {
-  ga.pageview(window.location.pathname);
+  ga.pageview(window.location.pathname + window.location.search);
 }
 
 ga.initialize(process.env.GA_TRACKING_ID);
