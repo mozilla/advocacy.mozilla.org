@@ -57,6 +57,10 @@ app.use(function(err, req, res, next) {
   res.send(err);
 });
 
+app.get('/stay-secure/*', function (request, response) {
+  response.sendFile(path.join(__dirname, '/public/secure-index.html'));
+});
+
 app.get('*', function (request, response) {
   response.sendFile(path.join(__dirname, '/public/index.html'));
 });
