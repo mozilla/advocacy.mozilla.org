@@ -61,6 +61,10 @@ app.get('/stay-secure/*', function (request, response) {
   response.sendFile(path.join(__dirname, '/public/secure-index.html'));
 });
 
+app.get('/encrypt-hard-drive/*', function (request, response) {
+  response.sendFile(path.join(__dirname, '/public/encrypt-hard-drive.html'));
+});
+
 app.get('*', function (request, response) {
   response.sendFile(path.join(__dirname, '/public/index.html'));
 });

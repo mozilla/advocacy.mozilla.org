@@ -23,6 +23,11 @@ render((
         <Route path="thank-you" component={require(`./pages/stay-secure-thank-you.js`)}/>
         <Redirect from="*" to="/stay-secure/" />
       </Route>
+      <Route path="/encrypt-hard-drive">
+        <IndexRoute component={require(`./pages/encrypt-hard-drive/encrypt-hard-drive.js`)}/>
+        <Route path="thank-you" component={require(`./pages/encrypt-hard-drive/encrypt-hard-drive-thank-you.js`)}/>
+        <Redirect from="*" to="/encrypt-hard-drive/" />
+      </Route>
       <Route path="/open-web-fellows" component={require(`./pages/open-web-fellows/overview.js`)}/>
       <Route path="/open-web-fellows/fellows" component={require(`./pages/open-web-fellows/fellows.js`)}/>
       <Route path="/open-web-fellows/info" component={require(`./pages/open-web-fellows/info.js`)}/>

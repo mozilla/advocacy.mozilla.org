@@ -4,7 +4,7 @@ var ContentContainer = require('../components/content-container.js');
 import {Accordion, Tab} from '../components/mozilla-accordion.js';
 import ga from 'react-ga';
 import { browserHistory } from 'react-router';
-import StickContainer from '../components/sticky-container.js';
+import StickyContainer from '../components/sticky-container.js';
 
 module.exports = React.createClass({
   onButtonClick: function() {
@@ -163,9 +163,9 @@ module.exports = React.createClass({
                 <p><b>Mozilla cares about your privacy and security everywhere, not just on Firefox. The safer the Internet is, the easier it is to create and keep it open.</b> So please take a minute to update your software. The Web will thank you.</p>
               </div>
               <div ref="stickyContainer">
-                <StickContainer className="sticky-button" initialState={true} stickyTo={this.getPosition}>
+                <StickyContainer className="sticky-button" initialState={true} stickyTo={this.getPosition}>
                   <button className="button" onClick={this.onButtonClick}>I updated!</button>
-                </StickContainer>
+                </StickyContainer>
               </div>
             </div>
           </ContentContainer>
