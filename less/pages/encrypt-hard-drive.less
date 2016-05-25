@@ -1,4 +1,4 @@
-.stay-secure-page, .encrypt-hard-drive {
+.encrypt-hard-drive-page {
   border-top: 2px solid #FFFFFF;
   #tabzilla {
     position: absolute;
@@ -55,7 +55,7 @@
       position: absolute;
     }
   }
-  .stay-secure-thank-you-footer {
+  .encrypt-hard-drive-thank-you-footer {
     margin: 30px 0 70px;
     a {
       font-size: 22px;
@@ -64,7 +64,7 @@
       margin: 15px 0 0 0;
     }
   }
-  .stay-secure-thank-you-header h1 {
+  .encrypt-hard-drive-thank-you-header h1 {
     margin-top: 60px;
   }
   .page {
@@ -90,11 +90,8 @@
       flex-shrink: 0;
       justify-content: space-between;
       padding-bottom: 25px;
-      .accordion-container {
-        width: 382px;
-      }
-      .right-container {
-        width: ~"calc(100% - 402px)";
+      .left-container, .right-container {
+        width: 470px;
       }
     }
   }
@@ -105,87 +102,111 @@
         bottom: 0;
         width: 100%;
         left: 0;
+        z-index: 1;
         button {
-          margin-bottom: 0;
-          width: 100%;
-          border-radius: 0;
           display: -webkit-box;
         }
       }
     }
   }
-  .stay-secure-header .content {
+  .encrypt-hard-drive-header .content {
     padding-bottom: 10px;
     h1 {
       padding-top: 28px;
     }
   }
-  .accordion-container, .right-container, .social-container {
+  .content-container {
+    position: static;
+    .content {
+      position: static;
+      z-index: auto;
+    }
+  }
+  .left-container, .right-container, .social-container {
     background: #FFFFFF;
     box-shadow: 0px 2px 1px 0 #ABABAB;
     border-top: 1px solid #F6F6F5; 
     border-right: 1px solid #F6F6F6;
     box-sizing: border-box;
+    ol, ul {
+      font-weight: 300;
+      li {
+        margin: 10px 0px;
+      }
+    }
   }
-  .accordion-container {
+  .left-container, .right-container {
+    padding: 10px;
+    h2 {
+      font-weight: 400;
+    }
+  }
+  .left-container {
     margin-left: 1px;
-    height: 100%;
   }
   .right-container {
     margin-right: 1px;
-    padding: 20px;
-    h2 {
-      font-size: 28px;
-    }
   }
-  .accordion-tab {
-    .accordion-handle {
-      height: 65px;
-      font-weight: 400;
-      font-size: 18px;
-      border-top: 1px solid #F6F6F6;
-      border-bottom: 1px solid #F6F6F6;
-      margin: 0;
-      display: flex;
-      flex-shrink: 0;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 28px;
-      i {
-        color: #F16160;
-      }
-      &:hover {
-        i {
-          color: #e24949;
+  .troubleshooting-links {
+    padding-bottom: 28px;
+    .link-container {
+      width: 100%;
+      display: block;
+      a {
+        color: inherit;
+        border-bottom: 1.5px solid #383838;
+        &:hover {
+          color: #F46060;
+          border-bottom: 1.5px solid #F46060;
         }
       }
-    }
-    .tab-content {
-      p {
-        line-height: normal;
-      }
-      ol, ul {
-        padding-left: 15px;
-        padding-right: 20px;
-        font-weight: 300;
-        li {
-          margin: 10px 0px;
-        }
+      margin: 5px 0px;
+      @media screen and (min-width: 960px) {
+        max-width: 320px;
+        display: inline-block;
+        margin: 0;
       }
     }
   }
-  .button {
-    color: #FFFFFF;
-    background: #F46060;
-    cursor: pointer;
-    border-radius: 25px;
-    border: none;
-    text-transform: none;
-    padding: 0 22px;
-    font-family: inherit;
-    &:hover {
-      background: #E24949;
-      color: #FFFFFF;
+  .button-container {
+    background: #E24949;
+    .sticky-button {
+      .button-lead {
+        font-size: 19px;
+        color: #FFFFFF;
+        margin: 10px 0;
+      }
+      @media screen and (min-width: 650px) {
+        .button-lead {
+          display: inline;
+          margin: 0 8px 0 0;
+        }
+      }
+      .sticky-content {
+        padding: 8px 0;
+        background: #E24949;
+      }
+      .button {
+        height: 40px;
+        color: #FFFFFF;
+        background: #F46060;
+        cursor: pointer;
+        border-radius: 25px;
+        border: none;
+        text-transform: none;
+        padding: 0 22px;
+        font-family: inherit;
+        margin: 0 auto 10px;
+        &:hover {
+          color: #F46060;
+          background: #FFFFFF;
+        }
+      }
+      @media screen and (min-width: 650px) {
+        .button {
+          margin: 0;
+        }
+      }
     }
   }
   .align-left-content {
