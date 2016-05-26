@@ -46,6 +46,9 @@ module.exports = React.createClass({
                   <li>In the BitLocker menu, turn on BitLocker next to the drive(s) you wish to encrypt.</li>
                   <li>Remember to keep your recovery key and password safe.</li>
                 </ol>
+                <div className="vista-warn">
+                  Note: This is for Windows Vista or later. With earlier versions of Windows, BitLocker was not a built-in option. Don’t worry! You can still use BitLocker by downloading the software first.
+                </div>
               </div>
             </div>
           </ContentContainer>
