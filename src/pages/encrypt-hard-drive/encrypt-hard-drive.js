@@ -20,7 +20,7 @@ module.exports = React.createClass({
           <ContentContainer className="center-align encrypt-hard-drive-header">
             <div id="tabzilla"><a href="https://www.mozilla.org/">Mozilla</a></div>
             <h1>Encrypt Your Hard Drive</h1>
-            <h3>Check out the step by step guides:</h3>
+            <h3>Check out these step-by-step guides:</h3>
           </ContentContainer>
           <ContentContainer className="main-container">
             <div className="center-align left-container">
@@ -31,7 +31,7 @@ module.exports = React.createClass({
                   <li>Click the Security & Privacy icon in the System Preferences window.</li>
                   <li>Click the FileVault tab.</li>
                   <li>Click the lock icon and enter an administrator name and password.</li>
-                  <li>Click the "Turn On FileVault" button.</li>
+                  <li>Click the Turn On FileVault button.</li>
                   <li>Remember to keep your recovery key and password safe.</li>
                 </ol>
               </div>
@@ -42,7 +42,7 @@ module.exports = React.createClass({
                 <ol>
                   <li>Go to Control Panel</li>
                   <li>Choose System and Security</li>
-                  <li>Click the BitLocker Drive Encryption (In Windows 8, you can search Bitlocker.)</li>
+                  <li>Click the BitLocker Drive Encryption (In Windows 8, you can search BitLocker.)</li>
                   <li>In the BitLocker menu, turn on BitLocker next to the drive(s) you wish to encrypt.</li>
                   <li>Remember to keep your recovery key and password safe.</li>
                 </ol>
@@ -51,10 +51,10 @@ module.exports = React.createClass({
           </ContentContainer>
 
           <ContentContainer className="faq-container center-align">
-            <h3>FAQ Troubleshooting</h3>
+            <h3>FAQ and Troubleshooting</h3>
             <div className="troubleshooting-links">
               <span className="link-container">
-                <a href="https://support.apple.com/en-us/HT204837">FileVault Entire hard drive</a>
+                <a href="https://support.apple.com/en-us/HT204837">FileVault</a>
               </span>
               <span className="link-container">
                 <a href="http://windows.microsoft.com/en-us/windows/protect-files-bitlocker-drive-encryption#1TC=windows-8">BitLocker</a>
@@ -69,8 +69,8 @@ module.exports = React.createClass({
             <div ref="stickyContainer">
               <StickyContainer className="sticky-button" initialState={true} stickyTo={this.getPosition}>
                 <div className="sticky-content" ref="stickyContent">
-                  <div className="button-lead">Did this information help you install this software?</div>
-                  <button className="button" onClick={this.onButtonClick}>Yes, I did it!</button>
+                  <div className="button-lead">Did this information help you install the software?</div>
+                  <button className="button" onClick={this.onButtonClick}>Yes, it did!</button>
                 </div>
               </StickyContainer>
             </div>
