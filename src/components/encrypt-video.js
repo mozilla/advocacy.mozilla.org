@@ -85,6 +85,22 @@ module.exports = React.createClass({
       'playing': this.props.videoDidStart && !this.props.videoIsPaused && !this.props.videoDidEnd
     });
 
+    var videoMeta = (<div></div>);
+    if (!this.props.hideVideoMeta) {
+      videoMeta = (
+        <div>
+          <span className="videoMeta">
+            <span className="episodeNumber">EPISODE <span className="episodeNumber">{this.props.activeVideo+1}</span></span>
+            <time className="video-date" dateTime="2016-02-08">{this.props.video.date}</time>
+            <span className="duration">{this.props.video.duration}</span>
+          </span>
+          <div id="videoTitle" className="videoTitle">
+            {this.props.video.title}
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className={videoWrapperClass}>
         <div ref="theatre" className={videoTheatreClass}></div>
@@ -99,14 +115,7 @@ module.exports = React.createClass({
           </div>
         <div className={encryptWrapperClass} ref="metaWrapper">
           <div className="encrypt-meta">
-              <span className="videoMeta">
-                <span className="episodeNumber">EPISODE <span className="episodeNumber">{this.props.activeVideo+1}</span></span>
-                <time className="video-date" dateTime="2016-02-08">{this.props.video.date}</time>
-                <span className="duration">{this.props.video.duration}</span>
-              </span>
-            <div id="videoTitle" className="videoTitle">
-              {this.props.video.title}
-            </div>
+            {videoMeta}
             <p id="videoDescription" className="video-description">{this.props.description || this.props.video.description}</p>
           </div>
         </div>

@@ -42,7 +42,14 @@ module.exports = (
     <Route path="/encrypt">
       <IndexRoute onEnter={indexDirect} />
       <Route path="signup" component={require(`./pages/encrypt/signup.js`)}/>
+      <Route path="signupa" component={require(`./pages/encrypt/signup-a.js`)}/>
+      <Route path="signupb" component={require(`./pages/encrypt/signup-b.js`)}/>
+      <Route path="signupc" component={require(`./pages/encrypt/signup-c.js`)}/>
+      <Route path="blanka" component={require(`./pages/encrypt/signup-blank.js`)}/>
       <Route path="signup-complete" component={require(`./pages/encrypt/signup-complete.js`)}/>
+      <Route path="hybrida" component={require(`./pages/encrypt/hybrid-2-a.js`)}/>
+      <Route path="hybridb" component={require(`./pages/encrypt/hybrid-2-b.js`)}/>
+      <Route path="hybridc" component={require(`./pages/encrypt/hybrid-2-c.js`)}/>
       <Route path=":type/:video" component={require('./pages/encrypt/pageType.js')}/>
       <Redirect from="direct" to={`/encrypt/direct/${encryptVideos.length}`} />
       <Redirect from="social" to={`/encrypt/social/${encryptVideos.length}`} />
