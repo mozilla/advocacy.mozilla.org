@@ -6,6 +6,7 @@ module.exports = React.createClass({
     return (
       <Signup
         hideSignupMeta={true}
+        signupHeader="Sign up for Mozilla email"
       />
     );
   }
