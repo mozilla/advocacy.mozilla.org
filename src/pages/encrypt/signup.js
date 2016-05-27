@@ -32,7 +32,8 @@ module.exports = React.createClass({
     });
     var signupHeader = this.props.signupHeader || "Join Mozilla";
     var signupBody = this.props.signupBody || "Mozilla stands up for online privacy. If you want to be in-the-know about our work and learn about opportunities to stand with us, sign up to be on our email list. We’ll send you important updates, news, and opportunities to take action.";
-    var signupMeta = (<div></div>);
+    var signupMeta = (<h1></h1>);
+    var movedHeader = (<h1>{signupHeader}</h1>);
     if (!this.props.hideSignupMeta) {
       signupMeta = (
         <div className="join-mozilla">
@@ -40,6 +41,7 @@ module.exports = React.createClass({
           <p>{signupBody}</p>
         </div>
       );
+      movedHeader = (<div></div>);
     }
     return (
       <div className="encrypt signup">
@@ -48,6 +50,7 @@ module.exports = React.createClass({
           <div className="signup-page-content">
             {signupMeta}
             <Signup submitButtonText="Sign Up" onSubmission={this.userDidSignup}>
+              {movedHeader}
             </Signup>
           </div>
         </main>
