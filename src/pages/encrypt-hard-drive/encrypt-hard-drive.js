@@ -4,8 +4,12 @@ var ContentContainer = require('../../components/content-container.js');
 import StickyContainer from '../../components/sticky-container.js';
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   onButtonClick: function() {
-    window.location.href = '/encrypt-hard-drive/thank-you/?action=user_encrypted';
+    var locale = this.context.intl.locale;
+    window.location.href = '/' + locale + '/encrypt-hard-drive/thank-you/?action=user_encrypted';
   },
   getPosition: function() {
     if (!this.refs.stickyContainer) {

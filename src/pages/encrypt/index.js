@@ -1,9 +1,20 @@
 import React from 'react';
 import Optimizely from '../../components/optimizely.js';
 import OptimizelySubdomain from '../../components/optimizelysubdomain.js';
+import fs from 'fs';
+import Path from 'path';
 
 module.exports = React.createClass({
   render: function() {
+    var localeData = "";
+    var locale = this.props.locale || "";
+    var googleFonts = "//fonts.googleapis.com/css?family=Fira+Sans:300,300i,400i,400,600";
+    if (locale) {
+      if (locale === "cs") {
+        googleFonts += "&subset=latin-ext";
+      }
+      localeData = fs.readFileSync(Path.join(__dirname, '../../../node_modules/react-intl/locale-data/' + locale.split('-')[0] + '.js'), 'utf8');
+    }
     return (
       <html>
         <head>
@@ -28,12 +39,13 @@ module.exports = React.createClass({
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/main.css"/>
-          <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fira+Sans:300,300i,400i,400,600"/>
+          <link rel="stylesheet" type="text/css" href={googleFonts}/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
           <title>{this.props.title}</title>
           <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png"/>
           <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-196x196.png"/>
           <link rel="shortcut icon" href="/assets/favicon.ico"/>
+          <script dangerouslySetInnerHTML={{__html: localeData}}></script>
           <OptimizelySubdomain/>
           <Optimizely/>
         </head>

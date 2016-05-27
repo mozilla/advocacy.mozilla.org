@@ -1,6 +1,9 @@
 import React  from 'react';
 import ReactDOM, { renderToString } from 'react-dom/server';
+import { IntlProvider } from 'react-intl';
 import { match, RouterContext } from 'react-router';
+var locales = require('../../public/locales.json');
+var getLocale = require('./get-locale.js');
 
 // Using a server response we don't have an "index.html", so instead of
 // generating a <Page>...</Page> like we do over in App.js, we actually
@@ -10,6 +13,9 @@ var routes = require('../routes.js');
 
 module.exports = function(req, res, next) {
   var location = req.url;
+  var search = req.search || "";
+  var firstPath = location.split("/")[1];
+  var locale = "";
 
   var metaTitle = "Mozilla’s Policy & Advocacy Program - Home";
   var metaSiteName = "Mozilla Advocacy";
@@ -58,24 +64,42 @@ module.exports = function(req, res, next) {
   // lead to render properties that can be used to generate page components.
   match({ routes, location }, (error, redirectLocation, renderProps) => {
     // obviously, we need an error handler.
-    if (error) { res.status(500).send(error.message); }
+    if (error) {
+      res.status(500).send(error.message);
+      return;
+    }
 
     // React router lets you specify redirects. If we had any, we literally
     // just tell our server that we need to look up a different URL.
-    else if (redirectLocation) {
+    if (redirectLocation) {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     }
-
     // This is the most interesting part: we have content that React can render.
     else if (renderProps) {
+
+      locale = getLocale(req.headers["accept-language"], firstPath);
+      if (location === "/") {
+        res.redirect(302, location + locale + search);
+        return;
+      }
+      function createElement(Component, props) {
+        var messages = locales[locale];
+        // make sure you pass all the props in!
+        return (
+          <IntlProvider locale={locale} messages={messages}>
+            <Component {...props} />
+          </IntlProvider>
+        );
+      }
       // renderToString() generates React-properties-enriched HTML that a
       // React app can be loaded into. There's also renderToStaticMarkup(),
       // but that generates HTML without any React properties, so that _would_
       // get wiped if the HTML contains a <script> element that tries to load
       // the bundle for hooking into the DOM.
-      let reactHTML = ReactDOM.renderToString(<RouterContext {...renderProps}/>);
+      let reactHTML = ReactDOM.renderToString(<RouterContext createElement={createElement} {...renderProps}/>);
       let html = ReactDOM.renderToStaticMarkup(
         <HTML reactHTML={reactHTML}
+          locale={locale}
           metaTitle={metaTitle}
           metaSiteName={metaSiteName}
           metaUrl={metaUrl}

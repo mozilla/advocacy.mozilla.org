@@ -8,14 +8,14 @@ var EncryptVideo = require(`../../components/encrypt-video.js`);
 var Icon = require(`../../components/footer-icon.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.js`);
-var Link = require('react-router').Link;
-var Router = require('react-router').Router;
-var Route = require('react-router').Route;
 var Classnames = require(`classnames`);
 var Modal = require(`../../components/encrypt-modal.js`);
 
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   getInitialState: function() {
     return {
       didSignup: false,
@@ -74,7 +74,7 @@ module.exports = React.createClass({
       { [`video${this.props.params.video}`]: true }
     );
     var optionsIndex = this.props.params.video - 1;
-    var ctaText = this.videoOptions[optionsIndex].cta;
+    var ctaText = this.context.intl.formatMessage({id: this.videoOptions[optionsIndex].cta});
     var nonOptimizelyShareBtns = (<div className="social">
       <div className="sp-social-circle">
         <div className='sp_163584 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
@@ -101,6 +101,18 @@ module.exports = React.createClass({
             </div>);
 
 
+    var hybridHeader = this.videoOptions[optionsIndex].hybridHeader;
+    if (hybridHeader) {
+      hybridHeader = this.context.intl.formatMessage({id: hybridHeader});
+    }
+    var hybridText = this.videoOptions[optionsIndex].hybridText;
+    if (hybridText) {
+      hybridText = this.context.intl.formatMessage({id: hybridText});
+    }
+    var desc = this.videoOptions[optionsIndex].hybridDescription || "";
+    if (desc) {
+      desc = this.context.intl.formatMessage({id: desc})
+    }
     return (
       <div className={pageClass}>
         <EncryptHeader />
@@ -110,7 +122,7 @@ module.exports = React.createClass({
               pageVersion="3"
               videoType="social"
               video={this.videoOptions[optionsIndex]}
-              description={this.videoOptions[optionsIndex].hybridDescription}
+              description={desc}
               setPageState={this.setPageState}
               videoDidEnd={this.state.videoDidEnd}
               videoDidStart={this.state.videoDidStart}
@@ -118,20 +130,20 @@ module.exports = React.createClass({
               activeVideo={optionsIndex}
               hideVideoMeta={this.props.hideVideoMeta || false}
               />
-            <Signup dataToPrefill={this.knownUserInfo} submitButtonText="Update my information" onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
+            <Signup dataToPrefill={this.knownUserInfo} submitButtonText={this.context.intl.formatMessage({id: 'update_my_info'})} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
                 textClassName="cta-text hybrid"
-                header={this.props.signupHeader || this.videoOptions[optionsIndex].hybridHeader || "Join Mozilla"}
-                text={this.props.signupBody || this.videoOptions[optionsIndex].hybridText || "For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."}
+                header={this.props.signupHeader || hybridHeader || this.context.intl.formatMessage({id: 'join_mozilla'})}
+                text={this.props.signupBody || hybridText || this.context.intl.formatMessage({id: 'signup_for_resources'})}
                 />
             </Signup>
           </div>
           <ShareThisNow/>
         </main>
         <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
+          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: "join_the_convo"})}</Icon>
         </Footer>
         <div hidden={!this.state.modalIsVisible}>
           <Modal hideModal={this.hideModal} className="postVideo social-cta">

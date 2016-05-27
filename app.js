@@ -4,7 +4,8 @@ var express = require('express'),
     compression = require('compression'),
     helmet = require('helmet'),
     frameguard = helmet.frameguard,
-    reactRouted = require('./dist/lib/react-server-route.js');
+    reactRouted = require('./dist/lib/react-server-route.js'),
+    getLocale = require('./dist/lib/get-locale.js');
 
 Habitat.load();
 
@@ -53,6 +54,19 @@ app.use(function(req, resp, next){
 
 app.use(reactRouted);
 app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
+app.use(function(req, res, next) {
+  var firstPath = req.url.split("/")[1];
+  var search = req.search || "";
+  // Get a valid locale from the path and header
+  var locale = getLocale(req.headers["accept-language"], firstPath);
+  // Compare the best valid locale to the path,
+  // if they don't match, redirect.
+  if (firstPath !== locale) {
+    res.redirect(301, "/" + locale + req.url + search);
+  } else {
+    next();
+  }
+});
 app.use(function(err, req, res, next) {
   res.send(err);
 });

@@ -7,8 +7,12 @@ import { browserHistory } from 'react-router';
 import StickyContainer from '../components/sticky-container.js';
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   onButtonClick: function() {
-    window.location.href = '/stay-secure/thank-you/?action=user_updated';
+    var locale = this.context.intl.locale;
+    window.location.href = '/' + locale + '/stay-secure/thank-you/?action=user_updated';
   },
   getPosition: function() {
     if (!this.refs.stickyContainer) {

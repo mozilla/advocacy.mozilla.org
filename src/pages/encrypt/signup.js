@@ -3,12 +3,12 @@ var Footer = require(`../../components/footer.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var classNames = require('classnames');
 var Icon = require(`../../components/footer-icon.js`);
-var Link = require('react-router').Link;
 
 
 module.exports = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object
+    router: React.PropTypes.object,
+    intl: React.PropTypes.object
   },
   getInitialState: function() {
     return {
@@ -24,14 +24,15 @@ module.exports = React.createClass({
     this.setState(state);
   },
   userDidSignup: function() {
-    this.context.router.replace('/encrypt/signup-complete');
+    var locale = this.context.intl.locale;
+    this.context.router.replace("/" + locale + '/encrypt/signup-complete');
   },
   render: function() {
     var modalClass = classNames({
       'join-modal': true
     });
-    var signupHeader = this.props.signupHeader || "Join Mozilla";
-    var signupBody = this.props.signupBody || "Mozilla stands up for online privacy. If you want to be in-the-know about our work and learn about opportunities to stand with us, sign up to be on our email list. We’ll send you important updates, news, and opportunities to take action.";
+    var signupHeader = this.props.signupHeader || this.context.intl.formatMessage({id: 'join_mozilla'});
+    var signupBody = this.props.signupBody || this.context.intl.formatMessage({id: 'signup_body'});
     var signupMeta = (<h1></h1>);
     var movedHeader = (<h1>{signupHeader}</h1>);
     if (!this.props.hideSignupMeta) {
@@ -49,13 +50,13 @@ module.exports = React.createClass({
         <main>
           <div className="signup-page-content">
             {signupMeta}
-            <Signup submitButtonText="Sign Up" onSubmission={this.userDidSignup}>
+            <Signup submitButtonText={this.context.intl.formatMessage({id: 'sign_up'})} onSubmission={this.userDidSignup}>
               {movedHeader}
             </Signup>
           </div>
         </main>
         <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
+          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: 'join_the_convo'})}</Icon>
         </Footer>
       </div>
     );

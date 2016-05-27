@@ -2,6 +2,9 @@ var React = require('react');
 var Page = require(`./hybrid.js`);
 
 var HybridVariant = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   render: function() {
     return (
       <div>
@@ -10,8 +13,8 @@ var HybridVariant = React.createClass({
             video: '2',
             type: 'hybrid'
           }}
-          signupHeader="Be safety savvy"
-          signupBody="Get tips, news and resources delivered to your inbox from Mozilla, your trusted advocate for a safer, better online life."
+          signupHeader={this.context.intl.formatMessage({id: 'signup_header_variant_c'})}
+          signupBody={this.context.intl.formatMessage({id: 'signup_body_variant_c'})}
           hideVideoMeta={true}
           location={this.props.location}
         />

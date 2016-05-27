@@ -4,14 +4,18 @@ var Router = require(`react-router`);
 var Link = Router.Link;
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   render: function() {
-    var description = `Thank you to everyone who applied. We will be contacting candidates directly in mid-April and announcing 2016 fellows in June.`;
+    var locale = this.context.intl.locale;
+    var description = this.context.intl.formatMessage({id: 'apply_desc'});
     var cta = null;
     if ( this.props.version === `full` ) {
-      description += ` If you’re interested in what current fellows are doing, please visit our fellows page.`;
+      description = this.context.intl.formatMessage({id: 'apply_desc_more'});
       cta = (
         <div>
-          <Link to="/open-web-fellows/fellows" className="button">Fellows</Link>
+          <Link to={"/" + locale + "/open-web-fellows/fellows"} className="button">{this.context.intl.formatMessage({id: 'fellows'})}</Link>
         </div>
       );
     }
@@ -19,7 +23,7 @@ module.exports = React.createClass({
     return (
       <div className="apply">
         <HeroUnit className="apply-hero-unit" image="/assets/apply.jpg">
-          <h2>Application Closed</h2>
+          <h2>{this.context.intl.formatMessage({id: 'application_closed'})}</h2>
           <div className="horizontal-rule"></div>
           <h4>{description}</h4>
           {cta}
