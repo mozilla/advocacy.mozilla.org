@@ -30,15 +30,23 @@ module.exports = React.createClass({
     var modalClass = classNames({
       'join-modal': true
     });
+    var signupHeader = this.props.signupHeader || "Join Mozilla";
+    var signupBody = this.props.signupBody || "Mozilla stands up for online privacy. If you want to be in-the-know about our work and learn about opportunities to stand with us, sign up to be on our email list. We’ll send you important updates, news, and opportunities to take action.";
+    var signupMeta = (<div></div>);
+    if (!this.props.hideSignupMeta) {
+      signupMeta = (
+        <div className="join-mozilla">
+          <h1>{signupHeader}</h1>
+          <p>{signupBody}</p>
+        </div>
+      );
+    }
     return (
       <div className="encrypt signup">
       <a className="tabzilla" href="https://mozilla.org" aria-label="Mozilla"></a>
         <main>
           <div className="signup-page-content">
-            <div className="join-mozilla">
-              <h1>Join Mozilla</h1>
-              <p>Mozilla stands up for online privacy. If you want to be in-the-know about our work and learn about opportunities to stand with us, sign up to be on our email list. We’ll send you important updates, news, and opportunities to take action.</p>
-            </div>
+            {signupMeta}
             <Signup submitButtonText="Sign Up" onSubmission={this.userDidSignup}>
             </Signup>
           </div>

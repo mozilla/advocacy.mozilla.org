@@ -116,14 +116,15 @@ module.exports = React.createClass({
               videoDidStart={this.state.videoDidStart}
               videoIsPaused={this.state.videoIsPaused}
               activeVideo={optionsIndex}
+              hideVideoMeta={this.props.hideVideoMeta || false}
               />
             <Signup dataToPrefill={this.knownUserInfo} submitButtonText="Update my information" onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
                 textClassName="cta-text hybrid"
-                header={this.videoOptions[optionsIndex].hybridHeader || "Join Mozilla"}
-                text={this.videoOptions[optionsIndex].hybridText || "For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."}
+                header={this.props.signupHeader || this.videoOptions[optionsIndex].hybridHeader || "Join Mozilla"}
+                text={this.props.signupBody || this.videoOptions[optionsIndex].hybridText || "For more resources and videos about encryption and other topics essential to protecting the Web, sign up for email updates from Mozilla."}
                 />
             </Signup>
           </div>
