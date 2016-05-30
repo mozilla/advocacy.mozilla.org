@@ -3,6 +3,7 @@ import Optimizely from '../../components/optimizely.js';
 import OptimizelySubdomain from '../../components/optimizelysubdomain.js';
 import fs from 'fs';
 import Path from 'path';
+import Pontoon from '../../components/pontoon.js';
 
 module.exports = React.createClass({
   render: function() {
@@ -48,6 +49,7 @@ module.exports = React.createClass({
           <script dangerouslySetInnerHTML={{__html: localeData}}></script>
           <OptimizelySubdomain/>
           <Optimizely/>
+          <Pontoon/>
         </head>
         <body>
           <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.reactHTML}}/>
