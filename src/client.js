@@ -6,7 +6,7 @@ import { Router, browserHistory } from 'react-router';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import routes from './routes.js';
 import ga from 'react-ga';
-var locales = require('../public/locales.json');
+import locales from '../public/locales.json';
 
 function createElement(Component, props) {
   var locale = window.location.pathname.split("/")[1];
