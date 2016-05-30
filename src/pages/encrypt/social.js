@@ -9,13 +9,13 @@ var classNames = require('classnames');
 var Icon = require(`../../components/footer-icon.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.js`);
-var Link = require('react-router').Link;
-var Router = require('react-router').Router;
-var Route = require('react-router').Route;
 
 
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   getInitialState: function() {
     return {
       formIsVisible: false,
@@ -81,7 +81,7 @@ module.exports = React.createClass({
       'join-modal': true
     });
     var optionsIndex = this.props.params.video - 1;
-    var CTA = this.videoOptions[this.props.params.video - 1].cta;
+    var CTA = this.context.intl.formatMessage({id: this.videoOptions[this.props.params.video - 1].cta});
     return (
       <div className="encrypt v2">
         <EncryptHeader videoDidStart={this.state.videoDidStart} showModal={this.showModal}/>
@@ -101,29 +101,29 @@ module.exports = React.createClass({
             <div className="join-mozilla-wrapper">
               <div className="join-mozilla cta">
                 <h2>
-                  Take the Pledge
+                  {this.context.intl.formatMessage({id: 'take_the_pledge'})}
                 </h2>
                 <div className="horizontal-rule"></div>
                 <p>
-                  Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to be an encryption champion.
+                  {this.context.intl.formatMessage({id: 'help_others'})}
                 </p>
-                {!this.state.didSignup ? <button onClick={this.showModal} className="button">Sign now</button> : 'Thank you!'}
+                {!this.state.didSignup ? <button onClick={this.showModal} className="button">{this.context.intl.formatMessage({id: 'sign_now'})}</button> : this.context.intl.formatMessage({id: 'thank_you'})}
               </div>
             </div>
             <ShareThisNow params={this.props.params} videos={VideoData}/>
           </div>
         </main>
         <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
+          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: 'join_the_convo'})}</Icon>
         </Footer>
         <div hidden={!this.state.formIsVisible && !this.state.videoDidEnd}>
           <Modal hideModal={this.hideModal} className="pledge-cta">
             <div>
-              <p className="pledge-cta-title">Pledge to stand up for strong encryption</p>
-              <p className="pledge-cta-info">We’re seeing more and more governments attempt to undermine encryption. Will you help others understand what encryption is and stand up for strong encryption when it matters most? Sign on to Mozilla's email list and be an encryption champion.</p>
+              <p className="pledge-cta-title">{this.context.intl.formatMessage({id: 'pledge_to_stand'})}</p>
+              <p className="pledge-cta-info">{this.context.intl.formatMessage({id: 'undermine_encryption'})}</p>
             </div>
             <div>
-              <p className="pledge-cta-why">Become an encryption champion and sign up for email updates. Let us know what country you’re in so if debates happen near you we can email you the most relevant information. We’ll also email you useful tips about how to use encryption you can share with friends.</p>
+              <p className="pledge-cta-why">{this.context.intl.formatMessage({id: 'pledge_why'})}</p>
               <Signup dataToPrefill={this.knownUserInfo} onSubmission={this.userDidSignup} formName="afterVideo" />
             </div>
           </Modal>

@@ -10,6 +10,9 @@ var Playlist = require(`../../components/encrypt-video-playlist.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   getInitialState() {
     return {
       videoDidStart: false,
@@ -36,7 +39,7 @@ module.exports = React.createClass({
     ga.event({ category: "Social", action: "Clicked on " + e.currentTarget.dataset.social });
   },
   render: function() {
-    var CTA = this.videoOptions[this.props.params.video - 1].cta;
+    var CTA = this.context.intl.formatMessage({id: this.videoOptions[this.props.params.video - 1].cta});
     return (
       <div className="encrypt v1">
         <EncryptHeader videoDidStart={this.state.videoDidStart}/>
@@ -52,10 +55,10 @@ module.exports = React.createClass({
             activeVideo={this.props.params.video - 1}
             />
           <Playlist pageType="direct" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video - 1} changeVideo={this.changeVideo}/>
-          <ShareThisNow params={this.props.params} videos={VideoData}/>
+          <ShareThisNow params={this.props.params}/>
         </main>
         <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
+          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: "join_the_convo"})}</Icon>
         </Footer>
         <div hidden={!this.state.videoDidEnd}>
           <Modal hideModal={this.hideModal} className="postVideo social-cta">

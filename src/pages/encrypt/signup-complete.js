@@ -3,10 +3,13 @@ var Footer = require(`../../components/footer.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var classNames = require('classnames');
 var Icon = require(`../../components/footer-icon.js`);
-var Link = require('react-router').Link;
+import { FormattedHTMLMessage } from 'react-intl';
 
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   getInitialState: function() {
     return {
       formIsVisible: false,
@@ -19,12 +22,14 @@ module.exports = React.createClass({
       <a className="tabzilla" href="https://mozilla.org" aria-label="Mozilla"></a>
         <main>
           <div className="signup-complete">
-            <p className="next-step"><span className="excited">Great!</span> Look for a confirmation email in your inbox with the last step to complete the signup process.</p>
-            <p><i className="fa fa-arrow-right"></i><a className="exit-link" href="https://advocacy.mozilla.org/encrypt/2">Take me to the encryption website.</a></p>
+            <p className="next-step">
+              <FormattedHTMLMessage id="signup_next_steps"/>
+            </p>
+            <p><i className="fa fa-arrow-right"></i><a className="exit-link" href="https://advocacy.mozilla.org/encrypt/2">{this.context.intl.formatMessage({id: 'take_me_to_encryption'})}</a></p>
           </div>
         </main>
         <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">Join the Conversation</Icon>
+          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: 'join_the_convo'})}</Icon>
         </Footer>
       </div>
     );

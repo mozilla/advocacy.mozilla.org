@@ -2,6 +2,9 @@ var React = require(`react`);
 var EncryptLogo = require('./encrypt-logo.js');
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   componentDidMount() {
     var positions = document.querySelectorAll(".Position");
     var changableElements = document.querySelectorAll(".Position .Shapes > g, .Position .Chars > path");
@@ -61,7 +64,12 @@ module.exports = React.createClass({
       <header className="encrypt-header">
         <div className="header-content">
           <a href="https://mozilla.org"><img className="logo" height="30" width="105" src="/assets/logo-mozilla.svg" alt="Mozilla"/></a>
-          <div className="header-cta">Become an Encryption Champion<button className="button" onClick={this.props.showModal}>Take the Pledge</button></div>
+          <div className="header-cta">
+            {this.context.intl.formatMessage({id: 'become_champ'})}
+            <button className="button" onClick={this.props.showModal}>
+              {this.context.intl.formatMessage({id: 'take_the_pledge'})}
+            </button>
+          </div>
           <h1 className="encryptText">
             <EncryptLogo />
           </h1>

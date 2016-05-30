@@ -6,4 +6,5 @@ dist/*
 public/build/*
 public/encrypt/*
 public/index.css
+public/locales.json
 *~

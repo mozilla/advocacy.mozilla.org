@@ -25,7 +25,11 @@ var HomePageItem = React.createClass({
 });
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   render: function() {
+    var locale = this.context.intl.locale;
     return (
       <div className="home-page">
         <Header/>
@@ -33,13 +37,13 @@ module.exports = React.createClass({
           <ImageTag alt="encrypt banner image" width={790} src1x="/assets/encrypt/encrypt.svg"/>
           <p className="intro">Your online privacy depends on encryption. Learn more about how encryption works, why it's essential to a strong Web, and why it's worth protecting.</p>
           <div>
-            <a href="/encrypt/" className="button">learn more</a>
+            <a href={"/" + locale + "/encrypt/"} className="button">learn more</a>
           </div>
         </HeroUnit>
         <div className="page">
           <ContentContainer className="home-page-title center-align">
-            <h2>We Are Building a Global Movement to Protect the Free and Open Web</h2>
-            <p className="intro">We believe the Internet is at its best as a global public resource, open and accessible to all. We also believe a healthy Internet requires an active, global community. mozilla Advocacy brings together individuals from around the world to educate on and fight for privacy, inclusion and literacy online.</p>
+            <h2>{this.context.intl.formatMessage({id: 'home_header'})}</h2>
+            <p className="intro">{this.context.intl.formatMessage({id: 'home_intro'})}</p>
           </ContentContainer>
           <ContentContainer className="home-page-content grey center-align slant reverse flat-bottom">
             <HomePageItem
@@ -57,7 +61,7 @@ module.exports = React.createClass({
               src1x="/assets/home-fellows.jpg"
               src2x="/assets/home-fellows@2x.jpg"
               label="Open Web Fellows"
-              buttonHref="https://advocacy.mozilla.org/open-web-fellows/"
+              buttonHref={"/" + locale + "/open-web-fellows/"}
               buttonLabel="learn more"
             >
               The Open Web Fellows program places the best emerging technology talent at civil society organizations around the globe. As threats to digital freedom proliferate, it's critical to have capable leaders.

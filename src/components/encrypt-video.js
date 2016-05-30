@@ -1,8 +1,12 @@
 var React = require(`react`);
 var ga = require('react-ga');
 var classNames = require('classnames');
+import { FormattedMessage } from 'react-intl';
 
 module.exports = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   getInitialState() {
     return {
       seventyFivePercentDone: false
@@ -90,12 +94,19 @@ module.exports = React.createClass({
       videoMeta = (
         <div>
           <span className="videoMeta">
-            <span className="episodeNumber">EPISODE <span className="episodeNumber">{this.props.activeVideo+1}</span></span>
+            <span className="episodeNumber">
+              <FormattedMessage
+                id="episode_num"
+                values={{
+                  num: (<span className="episodeNumber">{this.props.activeVideo+1}</span>)
+                }}
+              />
+            </span>
             <time className="video-date" dateTime="2016-02-08">{this.props.video.date}</time>
             <span className="duration">{this.props.video.duration}</span>
           </span>
           <div id="videoTitle" className="videoTitle">
-            {this.props.video.title}
+            {this.context.intl.formatMessage({id: this.props.video.title})}
           </div>
         </div>
       );
@@ -116,7 +127,7 @@ module.exports = React.createClass({
         <div className={encryptWrapperClass} ref="metaWrapper">
           <div className="encrypt-meta">
             {videoMeta}
-            <p id="videoDescription" className="video-description">{this.props.description || this.props.video.description}</p>
+            <p id="videoDescription" className="video-description">{this.props.description || this.context.intl.formatMessage({id: this.props.video.description})}</p>
           </div>
         </div>
       </div>
