@@ -8,22 +8,31 @@
 
 @blue_ui_typography: #6DADE2;
 
+
+
 @import "../../components/footer";
 
 @import "base";
-@import "components";
 @import "layout";
 @import "snippet-signup";
 @import "hybrid-test";
 
-
 .encrypt {
+  @import "components";
   background: @primary_darkblue;
   .videoSection{
 
   }
 }
 
+.video4 .videoSection .encrypt-signup:before{
+  content:'';
+  background: url('../../../public/assets/arrow.svg') no-repeat;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  position: relative;
+}
 
 //TODO: Is this still necessary?
 .encrypt.v3{

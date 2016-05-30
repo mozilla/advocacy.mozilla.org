@@ -57,18 +57,6 @@ app.use(function(err, req, res, next) {
   res.send(err);
 });
 
-app.get('/stay-secure/*', function (request, response) {
-  response.sendFile(path.join(__dirname, '/public/secure-index.html'));
-});
-
-app.get('/encrypt-hard-drive/*', function (request, response) {
-  response.sendFile(path.join(__dirname, '/public/encrypt-hard-drive.html'));
-});
-
-app.get('*', function (request, response) {
-  response.sendFile(path.join(__dirname, '/public/index.html'));
-});
-
 app.listen(env.get('PORT'), function () {
   console.log('Server listening ( http://localhost:%d )', env.get('PORT'));
 });

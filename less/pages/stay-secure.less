@@ -1,4 +1,4 @@
-.stay-secure-page, .encrypt-hard-drive {
+.stay-secure-page {
   border-top: 2px solid #FFFFFF;
   #tabzilla {
     position: absolute;
@@ -73,23 +73,28 @@
   h1, h2, h3, h4 {
     font-weight: 300;
     margin: 15px 0;
+    color: inherit;
   }
   h1 {
     font-size: 43px;
     line-height: 1.2;
   }
   h2 {
+    font-size: 24px;
     line-height: 1.2;
   }
   h3 {
     font-size: 20px;
+  }
+  .content-container .content {
+    padding: 0;
   }
   @media screen and (min-width: 768px) {
     .main-container .content {
       display: flex;
       flex-shrink: 0;
       justify-content: space-between;
-      padding-bottom: 25px;
+      padding: 0 0 25px 0;
       .accordion-container {
         width: 382px;
       }
@@ -115,7 +120,7 @@
     }
   }
   .stay-secure-header .content {
-    padding-bottom: 10px;
+    padding: 0 0 10px 0;
     h1 {
       padding-top: 28px;
     }

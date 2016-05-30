@@ -6,11 +6,7 @@ var ExtractTextPlugin = require(`extract-text-webpack-plugin`);
 var autoprefixer = require(`autoprefixer`);
 
 module.exports = {
-  entry: {
-    advocacy: [`./dist/advocacy-main.js`, `./less/advocacy.less`],
-    encrypt: [`./dist/encrypt-app.js`, `./less/encrypt.less`]
-
-  },
+  entry: [`./dist/client.js`, `./less/index.less`],
   output: {
     filename: `[name].js`,
     chunkFilename: `[id].chunk.js`,

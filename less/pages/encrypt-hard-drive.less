@@ -7,6 +7,11 @@
       background-color: #383838;
     }
   }
+  .faq-container {
+    .content {
+      padding: 0;
+    }
+  }
   .social-container {
     padding: 30px;
     display: inline-block;
@@ -73,6 +78,7 @@
   h1, h2, h3, h4 {
     font-weight: 300;
     margin: 15px 0;
+    color: inherit;
   }
   h1 {
     font-size: 43px;
@@ -80,16 +86,23 @@
   }
   h2 {
     line-height: 1.2;
+    font-size: 24px;
   }
   h3 {
     font-size: 20px;
+  }
+  .main-container .content {
+    padding: 0;
+  }
+  .content-container .content {
+    padding: 0;
   }
   @media screen and (min-width: 768px) {
     .main-container .content {
       display: flex;
       flex-shrink: 0;
       justify-content: space-between;
-      padding-bottom: 25px;
+      padding: 0 0 25px 0;
       .left-container, .right-container {
         width: 470px;
       }
@@ -110,16 +123,18 @@
     }
   }
   .encrypt-hard-drive-header .content {
-    padding-bottom: 10px;
+    padding: 0 0 10px 0;
     h1 {
       padding-top: 28px;
     }
   }
-  .content-container {
-    position: static;
-    .content {
+  .main-encrypt-page {
+    .content-container {
       position: static;
-      z-index: auto;
+      .content {
+        position: static;
+        z-index: auto;
+      }
     }
   }
   .vista-warn {
@@ -176,6 +191,9 @@
     }
   }
   .button-container {
+    .content {
+      padding: 0;
+    }
     background: #E24949;
     .sticky-button {
       .button-lead {

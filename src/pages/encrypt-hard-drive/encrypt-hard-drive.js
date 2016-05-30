@@ -15,7 +15,7 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <div className="encrypt-hard-drive-page">
+      <div className="encrypt-hard-drive-page main-encrypt-page">
         <div className="page">
           <ContentContainer className="center-align encrypt-hard-drive-header">
             <div id="tabzilla"><a href="https://www.mozilla.org/">Mozilla</a></div>

@@ -58,7 +58,7 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <header className="header">
+      <header className="encrypt-header">
         <div className="header-content">
           <a href="https://mozilla.org"><img className="logo" height="30" width="105" src="/assets/logo-mozilla.svg" alt="Mozilla"/></a>
           <div className="header-cta">Become an Encryption Champion<button className="button" onClick={this.props.showModal}>Take the Pledge</button></div>
