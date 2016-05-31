@@ -50,7 +50,7 @@ module.exports = React.createClass({
               buttonHref="https://github.com/mozilla/toolsforactivism"
               buttonLabel="see the list"
             >
-              Whether we're talking about human rights or climate change, in the 21st Century all campaigns will be won and lost on the Internet. The Open Web allows us to organize, coordinate, communicate, mobilize and take collective action.
+              From climate change to human rights, 21st century campaigns will be won and lost online. Check out this list of tools from Mozilla and our friends that help us organize, coordinate, communicate, mobilize and take collective action.
             </HomePageItem>
             <HomePageItem
               alt="open web fellows image"
