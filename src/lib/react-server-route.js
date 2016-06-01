@@ -2,8 +2,9 @@ import React  from 'react';
 import ReactDOM, { renderToString } from 'react-dom/server';
 import { IntlProvider } from 'react-intl';
 import { match, RouterContext } from 'react-router';
+import url from 'url';
 var locales = require('../../public/locales.json');
-var getLocale = require('./get-locale.js');
+var locationParser = require('./location-parser.js');
 
 // Using a server response we don't have an "index.html", so instead of
 // generating a <Page>...</Page> like we do over in App.js, we actually
@@ -12,9 +13,8 @@ var HTML = require(`../pages/encrypt/index.js`);
 var routes = require('../routes.js');
 
 module.exports = function(req, res, next) {
-  var location = req.url;
-  var search = req.search || "";
-  var firstPath = location.split("/")[1];
+  var location = url.parse(req.url).pathname;
+  var search = url.parse(req.url).search || "";
   var locale = "";
 
   var metaTitle = "Mozilla’s Policy & Advocacy Program - Home";
@@ -72,12 +72,11 @@ module.exports = function(req, res, next) {
     // React router lets you specify redirects. If we had any, we literally
     // just tell our server that we need to look up a different URL.
     if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+      res.redirect(302, redirectLocation.pathname + search);
     }
     // This is the most interesting part: we have content that React can render.
     else if (renderProps) {
-
-      locale = getLocale(req.headers["accept-language"], firstPath);
+      locale = locationParser(req.headers["accept-language"], location).locale;
       if (location === "/") {
         res.redirect(302, location + locale + search);
         return;
