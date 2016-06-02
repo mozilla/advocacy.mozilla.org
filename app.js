@@ -21,6 +21,14 @@ app.use(frameguard({
   action: "allow-from",
   domain: "https://app.optimizely.com"
 }));
+app.use(frameguard({
+  action: "allow-from",
+  domain: "https://pontoon.mozilla.org"
+}));
+app.use(frameguard({
+  action: "allow-from",
+  domain: "https://mozilla-pontoon-staging.herokuapp.com"
+}));
 app.use(helmet.csp({
   directives:{
     scriptSrc: ["'self'","'unsafe-inline'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org", "https://basket-dev.allizom.org","https://*.shpg.org/", "https://www.google-analytics.com/", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
