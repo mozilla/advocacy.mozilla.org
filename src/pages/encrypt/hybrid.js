@@ -148,7 +148,7 @@ module.exports = React.createClass({
         <div hidden={!this.state.modalIsVisible}>
           <Modal hideModal={this.hideModal} className="postVideo social-cta">
             <p className="cta-title">{ctaText}</p>
-            {(typeof window !== 'undefined' && optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201]) ? optimizelyShareBtns : nonOptimizelyShareBtns}
+            {(typeof window !== 'undefined' && window.optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201]) ? optimizelyShareBtns : nonOptimizelyShareBtns}
           </Modal>
         </div>
       </div>
