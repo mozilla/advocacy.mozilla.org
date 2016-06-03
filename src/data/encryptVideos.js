@@ -38,7 +38,7 @@ module.exports = [
         "poster": "/assets/video4poster.jpg",
         "thumbnail": "/assets/thumbnail-beat4.jpg",
         "cta": "video_data_cta_4",
-        "hybridHeader":" ",
+        "hybridHeader": "",
         "duration": "0:43",
         "hybridText": "video_data_hybrid_text_4"
       }
