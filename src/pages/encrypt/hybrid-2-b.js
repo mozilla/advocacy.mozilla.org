@@ -13,8 +13,8 @@ var HybridVariant = React.createClass({
             video: '2',
             type: 'hybrid'
           }}
-          signupHeader={this.context.intl.formatMessage({id: 'singup_header_variant_b'})}
-          signupBody={this.context.intl.formatMessage({id: 'singup_body_variant_b'})}
+          signupHeader={this.context.intl.formatMessage({id: 'signup_header_variant_b'})}
+          signupBody={this.context.intl.formatMessage({id: 'signup_body_variant_b'})}
           hideVideoMeta={true}
           location={this.props.location}
         />
