@@ -112,6 +112,13 @@ module.exports = React.createClass({
       );
     }
 
+    var videoDesc = (<div></div>);
+    if (!this.props.hideVideoDesc) {
+      videoDesc = (
+        <p id="videoDescription" className="video-description">{this.props.description || this.context.intl.formatMessage({id: this.props.video.description})}</p>
+      );
+    }
+
     return (
       <div className={videoWrapperClass}>
         <div ref="theatre" className={videoTheatreClass}></div>
@@ -127,7 +134,7 @@ module.exports = React.createClass({
         <div className={encryptWrapperClass} ref="metaWrapper">
           <div className="encrypt-meta">
             {videoMeta}
-            <p id="videoDescription" className="video-description">{this.props.description || this.context.intl.formatMessage({id: this.props.video.description})}</p>
+            {videoDesc}
           </div>
         </div>
       </div>
