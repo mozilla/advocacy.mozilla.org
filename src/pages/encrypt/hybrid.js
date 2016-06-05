@@ -37,7 +37,7 @@ module.exports = React.createClass({
     this.setState({
       didSignup: true
     });
-    if (window && optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201] === "Share Progress") {
+    if (window && window.optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201] === "Share Progress") {
       window.location.assign('http://share.mozilla.org/352/163971');
     } else {
       this.showModal();

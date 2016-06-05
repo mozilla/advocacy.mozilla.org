@@ -9,7 +9,7 @@ module.exports = React.createClass({
   render: function() {
     var localeData = "";
     var locale = this.props.locale || "";
-    var googleFonts = "//fonts.googleapis.com/css?family=Fira+Sans:300,300i,400i,400,600";
+    var googleFonts = "//fonts.googleapis.com/css?family=Fira+Sans:300,300i,400i,400,600&family=Fira+Mono:300,300i,400i,400,600";
     if (locale) {
       if (locale === "cs") {
         googleFonts += "&subset=latin-ext";

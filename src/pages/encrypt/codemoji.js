@@ -2,7 +2,7 @@ var React = require(`react`);
 var Footer = require(`../../components/footer.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var CTA = require(`../../components/cta.js`);
-var codemojiBanner = require(`../../components/codemoji-banner.js`);
+var CodemojiBanner = require(`../../components/codemoji-banner.js`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptVideo = require(`../../components/encrypt-video.js`);
 var Icon = require(`../../components/footer-icon.js`);
@@ -37,7 +37,7 @@ module.exports = React.createClass({
     this.setState({
       didSignup: true
     });
-    if (window && optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201] === "Share Progress") {
+    if (window && window.optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201] === "Share Progress") {
       window.location.assign('http://share.mozilla.org/352/163971');
     } else {
       this.showModal();
@@ -70,11 +70,12 @@ module.exports = React.createClass({
     var pageClass = Classnames(
       'v3',
       'encrypt',
+      'codemoji-page',
       this.props.location.query.test,
       { [`video${this.props.params.video}`]: true }
     );
     var optionsIndex = this.props.params.video - 1;
-    var ctaText = this.context.intl.formatMessage({id: this.videoOptions[optionsIndex].cta});
+    var ctaText = this.context.intl.formatMessage({id: "encryption_essential_cta"});
     var nonOptimizelyShareBtns = (<div className="social">
       <div className="sp-social-circle">
         <div className='sp_163584 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
@@ -111,7 +112,7 @@ module.exports = React.createClass({
     }
     return (
       <div className={pageClass}>
-        <EncryptHeader />
+        <EncryptHeader headerMessage={this.context.intl.formatMessage({id: 'video_data_desc_1b'})}/>
         <main className="page">
           <div className="videoSection">
             <div>
@@ -127,19 +128,18 @@ module.exports = React.createClass({
                 hideVideoMeta={this.props.hideVideoMeta || true}
                 hideVideoDesc={this.props.hideVideoDesc || true}
                 />
-              <Playlist pageType="codemoji" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video - 1} changeVideo={this.changeVideo}/>
+              <Playlist playlistTitle={this.context.intl.formatMessage({id: this.videoOptions[optionsIndex]["title-b"]})} pageType="codemoji" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video - 1} changeVideo={this.changeVideo}/>
             </div>
-            <Signup dataToPrefill={this.knownUserInfo} submitButtonText={this.context.intl.formatMessage({id: 'update_my_info'})} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
+            <Signup dataToPrefill={this.knownUserInfo} submitButtonText={this.context.intl.formatMessage({id: 'sign_up'})} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
                 textClassName="cta-text hybrid"
-                header={this.props.signupHeader || hybridHeader || this.context.intl.formatMessage({id: 'join_mozilla'})}
-                text={this.props.signupBody || hybridText || this.context.intl.formatMessage({id: 'signup_for_resources'})}
+                text={this.context.intl.formatMessage({id: 'signup_body_variant_a'})}
                 />
             </Signup>
           </div>
-          <codemojiBanner/>
+          <CodemojiBanner />
         </main>
         <Footer>
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: "join_the_convo"})}</Icon>
@@ -147,7 +147,7 @@ module.exports = React.createClass({
         <div hidden={!this.state.modalIsVisible}>
           <Modal hideModal={this.hideModal} className="postVideo social-cta">
             <p className="cta-title">{ctaText}</p>
-            {(typeof window !== 'undefined' && optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201]) ? optimizelyShareBtns : nonOptimizelyShareBtns}
+            {(typeof window !== 'undefined' && window.optimizely && optimizely.variationNamesMap && optimizely.variationNamesMap[5424952201]) ? optimizelyShareBtns : nonOptimizelyShareBtns}
           </Modal>
         </div>
       </div>

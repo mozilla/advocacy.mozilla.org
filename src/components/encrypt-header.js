@@ -64,10 +64,11 @@ module.exports = React.createClass({
       <header className="encrypt-header">
         <div className="header-content">
           <a href="https://mozilla.org"><img className="logo" height="30" width="105" src="/assets/logo-mozilla.svg" alt="Mozilla"/></a>
+          <span className="header-message">{this.props.headerMessage}</span>
           <div className="header-cta">
-            {this.context.intl.formatMessage({id: 'become_champ'})}
+            {this.props.headerCta || this.context.intl.formatMessage({id: 'become_champ'})}
             <button className="button" onClick={this.props.showModal}>
-              {this.context.intl.formatMessage({id: 'take_the_pledge'})}
+              {this.props.headerButton || this.context.intl.formatMessage({id: 'take_the_pledge'})}
             </button>
           </div>
           <h1 className="encryptText">

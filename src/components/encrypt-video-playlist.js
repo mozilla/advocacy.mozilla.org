@@ -14,8 +14,15 @@ module.exports = React.createClass({
     for (var i = 0; i < this.props.videos.length; i++){
       thumbs.unshift(<Thumb key={i} index={i} activeVideo={this.props.activeVideo} makeActive={this.props.changeVideo} pageType={this.props.pageType} videoDidStart={this.props.videoDidStart}  video={this.props.videos[i]} />);
     }
+    var playlistTitle = (<div></div>);
+    if (this.props.playlistTitle) {
+      playlistTitle = (
+        <h2>{this.props.playlistTitle}</h2>
+      );
+    }
     return (
       <div className="playlist-wrapper">
+        {playlistTitle}
         <div className="playlist">
           {thumbs}
         </div>
