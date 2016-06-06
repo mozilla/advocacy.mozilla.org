@@ -13,8 +13,8 @@ module.exports = React.createClass({
           <Icon href="https://www.mozilla.org/contact/" src="/assets/footer-icon-help.svg" title="">{this.context.intl.formatMessage({id: 'contact_us'})}</Icon>
           <Icon href="https://twitter.com/Mozilla" src="/assets/footer-icon-twitter.svg" title="">{this.context.intl.formatMessage({id: 'connect_twitter'})}</Icon>
           {this.props.children}
-          <Icon href="https://www.mozilla.org/en-US/about/legal.html" src="/assets/footer-icon-terms.svg" title="">{this.context.intl.formatMessage({id: 'legal'})}</Icon>
-          <Icon href="https://www.mozilla.org/en-US/privacy/" src="/assets/footer-icon-privacy.svg" title="">{this.context.intl.formatMessage({id: 'privacy_policy'})}</Icon>
+          <Icon href="https://www.mozilla.org/about/legal.html" src="/assets/footer-icon-terms.svg" title="">{this.context.intl.formatMessage({id: 'legal'})}</Icon>
+          <Icon href="https://www.mozilla.org/privacy/" src="/assets/footer-icon-privacy.svg" title="">{this.context.intl.formatMessage({id: 'privacy_policy'})}</Icon>
           <Icon href="https://donate.mozilla.org" src="/assets/heart.svg" title="Heart">{this.context.intl.formatMessage({id: 'donate'})}</Icon>
         </div>
         <div className="footer-content">

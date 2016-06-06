@@ -98,7 +98,7 @@ module.exports = React.createClass({
           <ContentContainer className="grey slant flat-top responsibilities">
             <h2>Fellow Responsibilities</h2>
             <h4>A commitment to teamwork and working in the open.</h4>
-            <p>The fellowship team includes the host organizations, Mozilla, and the fellows. We expect you to join the working teams of your host organization and contribute to the mission, organizational culture and work products of your host organization. Successful fellows will enjoy both teaching and learning; mentorship is core to this fellowship. We expect you to follow the interaction styles and inclusion principles in the <a href="https://www.mozilla.org/en-US/about/governance/policies/participation/">Mozilla Community Participation Guidelines</a>.</p>
+            <p>The fellowship team includes the host organizations, Mozilla, and the fellows. We expect you to join the working teams of your host organization and contribute to the mission, organizational culture and work products of your host organization. Successful fellows will enjoy both teaching and learning; mentorship is core to this fellowship. We expect you to follow the interaction styles and inclusion principles in the <a href="https://www.mozilla.org/about/governance/policies/participation/">Mozilla Community Participation Guidelines</a>.</p>
             <h4>Documentation</h4>
             <p>The Fellowship is an opportunity for you to reach new audiences – both in the general public, and professionally within the Internet policy and advocacy space. Mozilla and host organizations expect fellows to document their year publicly via blogs, code sharing, and events.</p>
             <h4>Calls</h4>
