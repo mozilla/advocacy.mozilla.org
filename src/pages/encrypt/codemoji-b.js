@@ -100,11 +100,12 @@ module.exports = React.createClass({
             videoDidStart={this.state.videoDidStart}
             videoIsPaused={this.state.videoIsPaused}
             activeVideo={optionsIndex}
+            socialButtonLink="#"
             />
           <Playlist videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={optionsIndex} changeVideo={this.changeVideo} pageType="codemoji-b"/>
           <CodemojiBanner/>
         </main>
-        <Footer>
+        <Footer shareThisPage="#">
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: 'join_the_convo'})}</Icon>
         </Footer>
         <div hidden={!this.state.formIsVisible && !this.state.videoDidEnd}>

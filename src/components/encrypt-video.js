@@ -22,6 +22,13 @@ module.exports = React.createClass({
       });
       ga.event({category: "Video", action: "Video started"});
     });
+
+    video.addEventListener("pause", (e) =>{
+      this.props.setPageState({
+        videoIsPaused: true
+      });
+    });
+
     video.addEventListener("webkitendfullscreen", (e) => {
       this.props.setPageState({
         videoDidEnd: true
@@ -119,6 +126,15 @@ module.exports = React.createClass({
       );
     }
 
+    var socialButtonLink = (<div></div>);
+    if (this.props.socialButtonLink && (!this.props.videoDidStart || this.props.videoIsPaused || this.props.videoDidEnd)) {
+      socialButtonLink = (
+        <a className="video-share-link" href={this.props.socialButtonLink}>
+          <i className="fa fa-share-alt" aria-hidden="true"></i>
+        </a>
+      );
+    }
+
     return (
       <div className={videoWrapperClass}>
         <div ref="theatre" className={videoTheatreClass}></div>
@@ -130,6 +146,7 @@ module.exports = React.createClass({
               <source id="webm" src={webmVideo} type="video/webm"/>
               <source id="mp4" src={mp4Video} type="video/mp4"/>
             </video>
+            {socialButtonLink}
           </div>
         <div className={encryptWrapperClass} ref="metaWrapper">
           <div className="encrypt-meta">

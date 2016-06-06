@@ -127,6 +127,7 @@ module.exports = React.createClass({
                 activeVideo={optionsIndex}
                 hideVideoMeta={this.props.hideVideoMeta || true}
                 hideVideoDesc={this.props.hideVideoDesc || true}
+                socialButtonLink="#"
                 />
               <Playlist playlistTitle={this.context.intl.formatMessage({id: this.videoOptions[optionsIndex]["title-b"]})} pageType="codemoji" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video - 1} changeVideo={this.changeVideo}/>
             </div>
@@ -141,7 +142,7 @@ module.exports = React.createClass({
           </div>
           <CodemojiBanner />
         </main>
-        <Footer>
+        <Footer shareThisPage="#">
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: "join_the_convo"})}</Icon>
         </Footer>
         <div hidden={!this.state.modalIsVisible}>
