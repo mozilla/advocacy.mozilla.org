@@ -2,7 +2,9 @@ var React = require('react');
 var pageTypes = {
   'social': require(`./social.js`),
   'direct': require(`./direct.js`),
-  'hybrid': require(`./hybrid.js`)
+  'hybrid': require(`./hybrid.js`),
+  'codemoji': require(`./codemoji.js`),
+  'codemoji-b': require(`./codemoji-b.js`)
 }
 
 var PageType = React.createClass({

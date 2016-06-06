@@ -2,7 +2,7 @@ var React = require(`react`);
 var Footer = require(`../../components/footer.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var CTA = require(`../../components/cta.js`);
-var ShareThisNow = require(`../../components/encrypt-share-this-now`);
+var CodemojiBanner = require(`../../components/codemoji-banner.js`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptVideo = require(`../../components/encrypt-video.js`);
 var Icon = require(`../../components/footer-icon.js`);
@@ -70,11 +70,12 @@ module.exports = React.createClass({
     var pageClass = Classnames(
       'v3',
       'encrypt',
+      'codemoji-page',
       this.props.location.query.test,
       { [`video${this.props.params.video}`]: true }
     );
     var optionsIndex = this.props.params.video - 1;
-    var ctaText = this.context.intl.formatMessage({id: this.videoOptions[optionsIndex].cta});
+    var ctaText = this.context.intl.formatMessage({id: "encryption_essential_cta"});
     var nonOptimizelyShareBtns = (<div className="social">
       <div className="sp-social-circle">
         <div className='sp_163584 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
@@ -109,40 +110,39 @@ module.exports = React.createClass({
     if (hybridText) {
       hybridText = this.context.intl.formatMessage({id: hybridText});
     }
-    var desc = this.videoOptions[optionsIndex].hybridDescription || "";
-    if (desc) {
-      desc = this.context.intl.formatMessage({id: desc})
-    }
     return (
       <div className={pageClass}>
-        <EncryptHeader />
+        <EncryptHeader headerMessage={this.context.intl.formatMessage({id: 'video_data_desc_1b'})}/>
         <main className="page">
           <div className="videoSection">
-            <EncryptVideo
-              pageVersion="3"
-              videoType="social"
-              video={this.videoOptions[optionsIndex]}
-              description={desc}
-              setPageState={this.setPageState}
-              videoDidEnd={this.state.videoDidEnd}
-              videoDidStart={this.state.videoDidStart}
-              videoIsPaused={this.state.videoIsPaused}
-              activeVideo={optionsIndex}
-              hideVideoMeta={this.props.hideVideoMeta || false}
-              />
-            <Signup dataToPrefill={this.knownUserInfo} submitButtonText={this.context.intl.formatMessage({id: 'update_my_info'})} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
+            <div>
+              <EncryptVideo
+                pageVersion="3"
+                videoType="social"
+                video={this.videoOptions[optionsIndex]}
+                setPageState={this.setPageState}
+                videoDidEnd={this.state.videoDidEnd}
+                videoDidStart={this.state.videoDidStart}
+                videoIsPaused={this.state.videoIsPaused}
+                activeVideo={optionsIndex}
+                hideVideoMeta={this.props.hideVideoMeta || true}
+                hideVideoDesc={this.props.hideVideoDesc || true}
+                socialButtonLink="#"
+                />
+              <Playlist playlistTitle={this.context.intl.formatMessage({id: this.videoOptions[optionsIndex]["title-b"]})} pageType="codemoji" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video - 1} changeVideo={this.changeVideo}/>
+            </div>
+            <Signup dataToPrefill={this.knownUserInfo} submitButtonText={this.context.intl.formatMessage({id: 'sign_up'})} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"
                 textClassName="cta-text hybrid"
-                header={this.props.signupHeader || hybridHeader || this.context.intl.formatMessage({id: 'join_mozilla'})}
-                text={this.props.signupBody || hybridText || this.context.intl.formatMessage({id: 'signup_for_resources'})}
+                text={this.context.intl.formatMessage({id: 'signup_body_variant_a'})}
                 />
             </Signup>
           </div>
-          <ShareThisNow/>
+          <CodemojiBanner />
         </main>
-        <Footer>
+        <Footer shareThisPage="#">
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: "join_the_convo"})}</Icon>
         </Footer>
         <div hidden={!this.state.modalIsVisible}>

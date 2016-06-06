@@ -23,14 +23,21 @@ module.exports = function(req, res, next) {
   var metaDesc = "We are building a global movement to protect the free and open Web.";
   var metaImage = "common/assets/logo-og.png";
   var twitterImage = "";
+  var twitterDesc = "";
   var desc = "We Are Building a Global Movement to Protect the Free and Open Web Mozilla supports the heroes of the Web — the developers, advocates and ...";
   var title = "Mozilla Advocacy";
 
   if (location.indexOf('/encrypt/') !== -1) {
     metaTitle = "Encryption matters";
     metaSiteName = "Mozilla Advocacy - Encryption";
-    metaUrl = "https://advocacy.mozilla.org/encrypt/";
-    metaDesc = "Encryption needs you! Sign Mozilla's pledge to stand up for encryption and a more secure Web at advocacy.mozilla.org/encrypt";
+    if (location.indexOf('/encrypt/codemoji/') !== -1 || location.indexOf('/encrypt/codemoji-b/') !== -1) {
+      metaDesc = "I care about protecting #encryption and you should too. To learn more about how it works and why it’s worth protecting, check out this great website from @Mozilla.t";
+      twitterDesc = "Check out this great website from @Mozilla — it explains why #encryption is so important: advocacy.mozilla.org/encrypt";
+      metaUrl = "https://advocacy.mozilla.org/encrypt/codemoji/";
+    } else {
+      metaDesc = "Encryption needs you! Sign Mozilla's pledge to stand up for encryption and a more secure Web at advocacy.mozilla.org/encrypt";
+      metaUrl = "https://advocacy.mozilla.org/encrypt/";
+    }
     metaImage = "https://advocacy.mozilla.org/assets/img/share/Encryption-facebook-b5-06.png";
     twitterImage = "https://advocacy.mozilla.org/assets/img/share/Encryption-twitter-b5-06.png";
     desc = "Your online privacy depends on encryption. Learn more about how encryption works, why it's essential to a strong Web, and why it's worth protecting.";
@@ -103,6 +110,7 @@ module.exports = function(req, res, next) {
           metaSiteName={metaSiteName}
           metaUrl={metaUrl}
           metaDesc={metaDesc}
+          twitterDesc={twitterDesc}
           metaImage={metaImage}
           twitterImage={twitterImage}
           desc={desc}

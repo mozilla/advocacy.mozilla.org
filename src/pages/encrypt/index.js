@@ -9,7 +9,7 @@ module.exports = React.createClass({
   render: function() {
     var localeData = "";
     var locale = this.props.locale || "";
-    var googleFonts = "//fonts.googleapis.com/css?family=Fira+Sans:300,300i,400i,400,600";
+    var googleFonts = "//fonts.googleapis.com/css?family=Fira+Sans:300,300i,400i,400,600&family=Fira+Mono:300,300i,400i,400,600";
     if (locale) {
       if (locale === "cs") {
         googleFonts += "&subset=latin-ext";
@@ -33,7 +33,7 @@ module.exports = React.createClass({
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@mozilla" />
           <meta name="twitter:title" content={this.props.metaTitle} />
-          <meta name="twitter:description" content={this.props.metaDesc} />
+          <meta name="twitter:description" content={this.props.twitterDesc || this.props.metaDesc} />
           <meta name="twitter:image" content={this.props.twitterImage} />
           <meta description={this.props.desc} />
 

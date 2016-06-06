@@ -79,6 +79,8 @@ function buildRoutes() {
           <Redirect from="direct" to={"/" + locale + `/encrypt/direct/${encryptVideos.length}`} />
           <Redirect from="social" to={"/" + locale + `/encrypt/social/${encryptVideos.length}`} />
           <Redirect from="hybrid" to={"/" + locale + `/encrypt/hybrid/${encryptVideos.length}`} />
+          <Redirect from="codemoji" to={"/" + locale + "/encrypt/codemoji/2"} />
+          <Redirect from="codemoji-b" to={"/" + locale + "/encrypt/codemoji-b/2"} />
           <Route path="2" onEnter={redirect(locale)} />
           <Route path="3" onEnter={redirect(locale)} />
           <Redirect from="*" to={"/" + locale + "/encrypt/"} />
