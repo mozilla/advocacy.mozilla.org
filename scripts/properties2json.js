@@ -1,5 +1,5 @@
 var config = require('../intl-config.js');
-var properties = require('properties-parser');
+var propertiesParser = require('properties-parser');
 var path = require('path');
 var FS = require("q-io/fs");
 var Habitat = require('habitat');
@@ -51,24 +51,32 @@ function writeFile(entries) {
   });
 }
 
-function getContentMessages(locale) {
+function readPropertiesFile(filePath) {
   return new Promise(function(resolve, reject) {
-    properties.read(path.join(process.cwd(), config.src, locale, 'messages.properties'), function(message_error, message_properties) {
+    propertiesParser.read(filePath, function(message_error, message_properties) {
       if (message_error && message_error.code !== 'ENOENT') {
         return reject(message_error);
       }
+      resolve(message_properties);
+    });
+  });
+}
 
-      properties.read(path.join(process.cwd(), config.src, locale, 'email.properties'), function(email_error, email_properties) {
-        if (email_error && email_error.code !== 'ENOENT') {
-          return reject(email_error);
-        }
-
+function getContentMessages(locale) {
+  return new Promise(function(resolve, reject) {
+    FS.listTree(path.join(process.cwd(), config.src, locale), function(filePath, stat) {
+      return path.extname(filePath) === ".properties";
+    }).then(function(files) {
+      Promise.all(files.map(readPropertiesFile)).then(function(properties) {
         var merged_properties = {};
-        Hoek.merge(merged_properties, message_properties);
-        Hoek.merge(merged_properties, email_properties);
-
-        resolve({content: merged_properties || {}, locale: locale});
+        properties.forEach(function(messages) {
+          Hoek.merge(merged_properties, messages);
+        });
+        resolve({content: merged_properties, locale: locale});
       });
+    }).catch(function(e) {
+      console.log(e);
+      reject(e);
     });
   });
 }
