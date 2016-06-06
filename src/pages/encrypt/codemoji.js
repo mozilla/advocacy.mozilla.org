@@ -91,13 +91,13 @@ module.exports = React.createClass({
     var optimizelyShareBtns = (
       <div className="social">
               <div className="sp-social-circle">
-                <div className='sp_164044 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
+                <div className='sp_169721 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
               </div>
               <div className="sp-social-circle">
-                <div data-social="facebook" onClick={this.socialClicked} className='sp_164043 sp_fb_small' ></div>
+                <div data-social="facebook" onClick={this.socialClicked} className='sp_169722 sp_fb_small' ></div>
               </div>
               <div className="sp-social-circle">
-                <div data-social="twitter" onClick={this.socialClicked}  className='sp_164042 sp_tw_small' ></div>
+                <div data-social="twitter" onClick={this.socialClicked}  className='sp_169724 sp_tw_small' ></div>
               </div>
             </div>);
 
@@ -127,7 +127,7 @@ module.exports = React.createClass({
                 activeVideo={optionsIndex}
                 hideVideoMeta={this.props.hideVideoMeta || true}
                 hideVideoDesc={this.props.hideVideoDesc || true}
-                socialButtonLink="#"
+                socialButtonLink="https://share.mozilla.org/352/169283"
                 />
               <Playlist playlistTitle={this.context.intl.formatMessage({id: this.videoOptions[optionsIndex]["title-b"]})} pageType="codemoji" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video - 1} changeVideo={this.changeVideo}/>
             </div>
@@ -142,7 +142,7 @@ module.exports = React.createClass({
           </div>
           <CodemojiBanner />
         </main>
-        <Footer shareThisPage="#">
+        <Footer shareThisPage="https://share.mozilla.org/352/169283">
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: "join_the_convo"})}</Icon>
         </Footer>
         <div hidden={!this.state.modalIsVisible}>

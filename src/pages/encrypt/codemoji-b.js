@@ -100,12 +100,12 @@ module.exports = React.createClass({
             videoDidStart={this.state.videoDidStart}
             videoIsPaused={this.state.videoIsPaused}
             activeVideo={optionsIndex}
-            socialButtonLink="#"
+            socialButtonLink="https://share.mozilla.org/352/169283"
             />
           <Playlist videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={optionsIndex} changeVideo={this.changeVideo} pageType="codemoji-b"/>
           <CodemojiBanner/>
         </main>
-        <Footer shareThisPage="#">
+        <Footer shareThisPage="https://share.mozilla.org/352/169283">
           <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: 'join_the_convo'})}</Icon>
         </Footer>
         <div hidden={!this.state.formIsVisible && !this.state.videoDidEnd}>
@@ -125,13 +125,13 @@ module.exports = React.createClass({
             <p className="cta-title">{CTA}</p>
             <div className="social">
               <div className="sp-social-circle">
-                <div className='sp_163584 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
+                <div className='sp_169721 sp_em_small' data-social="email" onClick={this.socialClicked}></div>
               </div>
               <div className="sp-social-circle">
-                <div data-social="facebook" onClick={this.socialClicked} className='sp_163585 sp_fb_small' ></div>
+                <div data-social="facebook" onClick={this.socialClicked} className='sp_169722 sp_fb_small' ></div>
               </div>
               <div className="sp-social-circle">
-                <div data-social="twitter" onClick={this.socialClicked}  className='sp_163586 sp_tw_small' ></div>
+                <div data-social="twitter" onClick={this.socialClicked}  className='sp_169724 sp_tw_small' ></div>
               </div>
             </div>
           </Modal>
