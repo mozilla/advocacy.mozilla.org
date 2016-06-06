@@ -5,7 +5,7 @@ module.exports = React.createClass({
     return (
       <div className="icon-container">
         <div className="icon">
-          <img className="footer-icon" src={this.props.src}></img>
+          <img className="footer-icon" height="20" width="20" src={this.props.src}></img>
           <a href={this.props.href}>{this.props.children}</a>
         </div>
       </div>
