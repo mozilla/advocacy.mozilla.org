@@ -31,7 +31,7 @@ app.use(frameguard({
 }));
 app.use(helmet.csp({
   directives:{
-    scriptSrc: ["'self'","'unsafe-inline'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org", "https://basket-dev.allizom.org","https://*.shpg.org/", "https://www.google-analytics.com/", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
+    scriptSrc: ["'self'","'unsafe-inline'","'unsafe-eval'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org", "https://basket-dev.allizom.org","https://*.shpg.org/", "https://www.google-analytics.com/", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
     connectSrc:["'self'", "206878104.log.optimizely.com", "https://basket.mozilla.org/", "https://basket-dev.allizom.org", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
     childSrc:["'self'", "https://app.optimizely.com", "https://facebook.com", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
     frameSrc: ["'self'", "https://app.optimizely.com", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
