@@ -34,12 +34,14 @@ module.exports = function(req, res, next) {
       metaDesc = "I care about protecting #encryption and you should too. To learn more about how it works and why it’s worth protecting, check out this great website from @Mozilla.t";
       twitterDesc = "Check out this great website from @Mozilla — it explains why #encryption is so important: advocacy.mozilla.org/encrypt";
       metaUrl = "https://advocacy.mozilla.org/encrypt/codemoji/";
+      metaImage = "https://advocacy.mozilla.org/assets/img/share/video3-facebook.png";
+      twitterImage = "https://advocacy.mozilla.org/assets/img/share/video3-twitter.png";
     } else {
       metaDesc = "Encryption needs you! Sign Mozilla's pledge to stand up for encryption and a more secure Web at advocacy.mozilla.org/encrypt";
       metaUrl = "https://advocacy.mozilla.org/encrypt/";
+      metaImage = "https://advocacy.mozilla.org/assets/img/share/Encryption-facebook-b5-06.png";
+      twitterImage = "https://advocacy.mozilla.org/assets/img/share/Encryption-twitter-b5-06.png";
     }
-    metaImage = "https://advocacy.mozilla.org/assets/img/share/Encryption-facebook-b5-06.png";
-    twitterImage = "https://advocacy.mozilla.org/assets/img/share/Encryption-twitter-b5-06.png";
     desc = "Your online privacy depends on encryption. Learn more about how encryption works, why it's essential to a strong Web, and why it's worth protecting.";
     title = "Learn about encryption - Mozilla Advocacy";
   }
