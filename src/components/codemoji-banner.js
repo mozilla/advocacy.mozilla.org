@@ -13,8 +13,8 @@ module.exports = React.createClass({
           <FormattedHTMLMessage
             id="codemoji_banner"
           />
-          <ImageTag className="emoji-image-1" height="130" width="130" alt="emoji image 1" src1x="/assets/Emoji_1.svg"/>
-          <ImageTag className="emoji-image-2" height="85" width="85" alt="emoji image 2" src1x="/assets/Emoji_2.svg"/>
+          <ImageTag className="emoji-image-1" height={130} width={130} alt="emoji image 1" src1x="/assets/Emoji_1.svg"/>
+          <ImageTag className="emoji-image-2" height={85} width={85} alt="emoji image 2" src1x="/assets/Emoji_2.svg"/>
         </div>
       </div>
     );
