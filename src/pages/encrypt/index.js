@@ -33,7 +33,7 @@ module.exports = React.createClass({
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@mozilla" />
           <meta name="twitter:title" content={this.props.metaTitle} />
-          <meta name="twitter:description" content={this.props.metaDesc} />
+          <meta name="twitter:description" content={this.props.twitterDesc || this.props.metaDesc} />
           <meta name="twitter:image" content={this.props.twitterImage} />
           <meta description={this.props.desc} />
 
