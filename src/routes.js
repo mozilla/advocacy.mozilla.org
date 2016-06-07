@@ -22,7 +22,7 @@ function redirect(locale) {
       replace("/" + locale + `/encrypt/${pageType}/${state.location.query.video}`);
     } else {
       replace({
-        pathname: "/" + locale + `/encrypt/${pageType}/${encryptVideos.length}`,
+        pathname: "/" + locale + `/encrypt/${pageType}/1`,
         query: state.location.query
       });
     }
@@ -35,7 +35,7 @@ function indexDirect(locale) {
       replace("/" + locale + `/encrypt/social/${state.location.query.video}`);
     } else {
       replace({
-        pathname: "/" + locale + `/encrypt/social/${encryptVideos.length}`,
+        pathname: "/" + locale + `/encrypt/codemoji/1`,
         query: state.location.query
       });
     }
