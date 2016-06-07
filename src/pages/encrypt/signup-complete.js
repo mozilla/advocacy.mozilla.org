@@ -25,7 +25,7 @@ module.exports = React.createClass({
             <p className="next-step">
               <FormattedHTMLMessage id="signup_next_steps"/>
             </p>
-            <p><i className="fa fa-arrow-right"></i><a className="exit-link" href="https://advocacy.mozilla.org/encrypt/2">{this.context.intl.formatMessage({id: 'take_me_to_encryption'})}</a></p>
+            <p><i className="fa fa-arrow-right"></i><a className="exit-link" href="https://advocacy.mozilla.org/encrypt/">{this.context.intl.formatMessage({id: 'take_me_to_encryption'})}</a></p>
           </div>
         </main>
         <Footer>
