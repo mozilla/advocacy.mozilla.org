@@ -6,6 +6,7 @@
     padding-bottom: 0;
     @media screen and (max-width: 754px) {
       margin-right: 0;
+      margin-bottom: 1.2rem;
     }
     h2 {
       margin-top: 0;
@@ -14,11 +15,23 @@
       padding: 0 10px;
       font-weight: 400;
       font-size: 1.6rem;
+      @media screen and (max-width: 754px) {
+        margin-bottom: 0.3rem;
+        font-size: 1.2rem;
+      }
     }
     .playlist {
       padding: 0;
       .episode-title {
         display: none;
+      }
+      @media screen and (max-width: 754px) {
+        .video-thumbnail {
+          flex: 1 1 20%;
+          .episode-metadata {
+            display: none;
+          }
+        }
       }
     }
   }
