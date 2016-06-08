@@ -76,9 +76,9 @@ function buildRoutes() {
           <Route path="hybridb" component={require(`./pages/encrypt/hybrid-2-b.js`)}/>
           <Route path="hybridc" component={require(`./pages/encrypt/hybrid-2-c.js`)}/>
           <Route path=":type/:video" component={require('./pages/encrypt/pageType.js')}/>
-          <Redirect from="direct" to={"/" + locale + `/encrypt/direct/${encryptVideos.length}`} />
-          <Redirect from="social" to={"/" + locale + `/encrypt/social/${encryptVideos.length}`} />
-          <Redirect from="hybrid" to={"/" + locale + `/encrypt/hybrid/${encryptVideos.length}`} />
+          <Redirect from="direct" to={"/" + locale + "/encrypt/direct/1"} />
+          <Redirect from="social" to={"/" + locale + "/encrypt/social/1"} />
+          <Redirect from="hybrid" to={"/" + locale + "/encrypt/hybrid/1"} />
           <Redirect from="codemoji" to={"/" + locale + "/encrypt/codemoji/2"} />
           <Redirect from="codemoji-b" to={"/" + locale + "/encrypt/codemoji-b/2"} />
           <Route path="2" onEnter={redirect(locale)} />
