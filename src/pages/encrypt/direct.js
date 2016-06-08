@@ -1,6 +1,7 @@
 var React = require('react');
 var Footer = require('../../components/footer.js');
 var EncryptVideo = require('../../components/encrypt-video.js');
+var CodemojiBanner = require(`../../components/codemoji-banner.js`);
 var ShareThisNow = require('../../components/encrypt-share-this-now');
 var EncryptHeader = require('../../components/encrypt-header');
 var Modal = require(`../../components/encrypt-modal.js`);
@@ -55,6 +56,7 @@ module.exports = React.createClass({
             activeVideo={this.props.params.video - 1}
             />
           <Playlist pageType="direct" videoDidStart={this.state.videoDidStart} videos={this.videoOptions} activeVideo={this.props.params.video - 1} changeVideo={this.changeVideo}/>
+          <CodemojiBanner/>
           <ShareThisNow params={this.props.params}/>
         </main>
         <Footer>
