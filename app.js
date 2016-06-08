@@ -17,6 +17,10 @@ app.set('trust proxy', true);
 
 app.use(compression());
 app.use(helmet());
+app.use(frameguard({
+  action: "allow-from",
+  domain: "https://pontoon.mozilla.org"
+}));
 app.use(helmet.csp({
   directives:{
     scriptSrc: ["'self'","'unsafe-inline'","'unsafe-eval'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org", "https://basket-dev.allizom.org","https://*.shpg.org/", "https://www.google-analytics.com/", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
