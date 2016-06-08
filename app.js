@@ -19,15 +19,7 @@ app.use(compression());
 app.use(helmet());
 app.use(frameguard({
   action: "allow-from",
-  domain: "https://app.optimizely.com"
-}));
-app.use(frameguard({
-  action: "allow-from",
   domain: "https://pontoon.mozilla.org"
-}));
-app.use(frameguard({
-  action: "allow-from",
-  domain: "https://mozilla-pontoon-staging.herokuapp.com"
 }));
 app.use(helmet.csp({
   directives:{
