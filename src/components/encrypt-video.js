@@ -36,7 +36,7 @@ module.exports = React.createClass({
       ga.event({category: "Video", action: "iOS user clicked done", value: e.srcElement.currentTime});
     });
     video.addEventListener("timeupdate", (e)=>{
-      if(video.currentTime/video.duration >= 0.75 && !this.state.seventyFivePercentDone){
+      if (video.currentTime/video.duration >= 0.75 && !this.state.seventyFivePercentDone) {
         ga.event({category: "Video", action: "75% complete"});
         this.setState({seventyFivePercentDone: true});
       }
@@ -59,7 +59,7 @@ module.exports = React.createClass({
   },
   componentDidUpdate(prevProps, prevState) {
     //Slight hack to prevent flickering and allow switching of paused video
-    if(this.props.video !== prevProps.video){
+    if (this.props.video !== prevProps.video) {
       this.refs.videoWrapper.style.height = this.refs.videoWrapper.clientHeight + 'px';
       this.refs.video.load();
       this.refs.videoWrapper.style.height = '';
@@ -73,6 +73,9 @@ module.exports = React.createClass({
     ga.event({category: "Video", action: "Clicked to paused the video"});
   },
   render: function() {
+    var locale = this.context.intl.locale;
+    var mp4VideoLocalized = `${this.props.video[this.props.videoType]}-${locale}.mp4`;
+    var webmVideoLocalized = `${this.props.video[this.props.videoType]}-${locale}.webm`;
     var mp4Video = this.props.video[this.props.videoType] + '.mp4';
     var webmVideo = this.props.video[this.props.videoType] + '.webm';
     var encryptWrapperClass = classNames({
@@ -97,6 +100,7 @@ module.exports = React.createClass({
     });
 
     var videoMeta = (<div></div>);
+
     if (!this.props.hideVideoMeta) {
       videoMeta = (
         <div>
@@ -143,6 +147,8 @@ module.exports = React.createClass({
             <img src={this.props.video.poster} hidden={this.props.videoDidStart} className="video-poster" style={{position:"absolute"}}/>
             <video className={videoClass} aria-describedby="videoDescription" ref="video" controls={this.props.videoDidStart} aria-labeledby="videoTitle" poster={this.props.video.poster} autoBuffer width={this.props.width} height={this.props.height} style={{zIndex:1000}}>
               A video about why encryption is important. Privacy lets you be you.
+              <source id="webm" src={webmVideoLocalized} type="video/webm"/>
+              <source id="mp4" src={mp4VideoLocalized} type="video/mp4"/>
               <source id="webm" src={webmVideo} type="video/webm"/>
               <source id="mp4" src={mp4Video} type="video/mp4"/>
             </video>
