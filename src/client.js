@@ -30,8 +30,20 @@ function logPageView() {
 
 ga.initialize(process.env.GA_TRACKING_ID);
 
-render(
-  <Router createElement={createElement} onUpdate={logPageView} history={browserHistory}>
-    {routes}
-  </Router>, document.querySelector("#my-app")
-);
+//Polyfill Intl before starting app for browsers that don't support it *cough*Safari*cough*
+if (!window.Intl) {
+  require.ensure(['intl'], (require) => {
+    window.Intl = require('intl');
+    runApp();
+  }, "IntlBundle");
+} else {
+  runApp();
+}
+
+function runApp() {
+  render(
+    <Router createElement={createElement} onUpdate={logPageView} history={browserHistory}>
+      {routes}
+    </Router>, document.querySelector("#my-app")
+  );
+}
