@@ -29,7 +29,7 @@ var FellowBlock = React.createClass({
 module.exports = React.createClass({
   render: function() {
     return (
-      <div className="fellows-page">
+      <div className="past-fellows-page fellows-page">
         <Header/>
         <HeroUnit className="fellows-hero-unit" image="/assets/fellows.jpg">
           <h1>2015 Hosts & Fellows</h1>
@@ -37,6 +37,11 @@ module.exports = React.createClass({
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
+            <p className="intro">We are a network of technologists, makers, policy wonks, and civil society advocates passionate about protecting the free and open internet.</p>
+            <h2>Meet Our Fellows</h2>
+            <p className="fellows-description">Ford-Mozilla open web fellows are advocates and technologists on the...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero intermittunt aut admirationem earum rerum, quae sunt ab antiquis repertae, aut investigationem novarum. Tum mihi Piso: Quid ergo?</p>
+          </ContentContainer>
+          <ContentContainer className="grey slant">
             <FellowBlock
               name="Paola Villarreal"
               image="/assets/fellows/1-Paola.png"
@@ -49,7 +54,7 @@ module.exports = React.createClass({
               Paola is a self-taught systems programmer who, since 1998, has worked and played with all things “open” in governments, NGOs, and the private sector. She recently worked with the government of Mexico City on several civic innovation projects to build real, effective tools that defend democracy. She has also worked at Xamarin Inc. Her passion for open government and data, civic tech, and civil rights has fomented a curiosity to explore how and where technology, openness, and code can strengthen human rights. Paola will be working with the ACLU of Massachusetts on various projects, including collaboration with graduate students at the Massachusetts Institute of Technology on mobile applications that expose surveillance techniques employed by others.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer className="grey slant">
+          <ContentContainer>
             <FellowBlock
               name="Tim Sammut"
               image="/assets/fellows/2-Tim.png"
@@ -62,7 +67,7 @@ module.exports = React.createClass({
               Tim is a network security engineer and advocate with a career that has encompassed support, deployment, architecture, consulting, and innovation roles. He currently focuses on the opportunities and issues created by the blend of people, human rights, and technology around the world. He is looking forward to merging his interests, expertise, and creativity as an Open Web Fellow and hopes to make a positive impact on issues related to the Internet and human rights. Tim will be working at Amnesty International’s International Secretariat on both tools and policies to protect human rights workers online from targeted attacks, so they can continue the work to improve the world.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer>
+          <ContentContainer className="grey slant">
             <FellowBlock
               name="Andrea Del Rio"
               image="/assets/fellows/3-Andrea.png"
@@ -75,7 +80,7 @@ module.exports = React.createClass({
               Andrea is a software developer with a passion for closing the gender gap in STEM industries. She believes that combining technology and education can drive development and break the cycle of poverty, and as such, teaches programming to young women from vulnerable populations at Laboratoria in Lima, Peru. She is also the founder of coders.pe, an open online library of resources to learn how to code, and is passionate about using her skills to have a positive social impact. Andrea will be working with the Association of Progressive Communications on their Policy Program to make the African Declaration of Internet Rights more accessible, and with the Women’s Rights Program to protect women and other disenfranchised demographics online.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer className="grey slant">
+          <ContentContainer>
             <FellowBlock
               name="Drew Wilson"
               image="/assets/fellows/4-Drew.png"
@@ -88,7 +93,7 @@ module.exports = React.createClass({
               Drew is an organizer and software developer who’s passionate about using web technology to accelerate social change movements. With a background in computer science, he’s interested in using modern web technology as a tool to create a more participatory society. Previously, Drew was the technical lead at advocacy organizations focused on international refugee issues, animal protection, and transparency in government. In 2014, he was a Code for America fellow, where he worked with the city of Denver, Colorado to improve civic engagement using open data. In 2010, he founded New England VegFest, an annual vegetarian food festival, and is president of the VegFest foundation. Drew will be working with Free Press to provide educational context and tools to the public, and help Free Press’ digital campaigning efforts.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer>
+          <ContentContainer className="grey slant">
             <FellowBlock
               name="Gem Barrett"
               image="/assets/fellows/5-Gem.png"
@@ -101,7 +106,7 @@ module.exports = React.createClass({
               Gem is a technologist and speaker who specializes in the use of APIs in web and iOS development. Her extensive experience in design and development allows her to combine creativity and programming with open-source tools to experiment with various frameworks and languages. Being self-taught, she is looking for opportunities to mentor other female coders, and sees this Fellowship as a chance to positively promote women in technology. Her spare time is spent studying towards a BSc in Computing, IT and Design through the Open University, and she is also a keen gamer, cat owner, and tea-drinker. She will be working with OTI on their Measurement Lab initiative, analyzing and presenting data in visualizing stimulating ways to inform and empower the public about their broadband and mobile connections in an effort to sustain a healthy, innovative Internet.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer className="grey slant flat-bottom">
+          <ContentContainer>
             <FellowBlock
               name="Tennyson Holloway"
               image="/assets/fellows/6-Tennyson.png"
@@ -115,7 +120,6 @@ module.exports = React.createClass({
             </FellowBlock>
           </ContentContainer>
         </div>
-        <Apply/>
         <Footer/>
       </div>
     );

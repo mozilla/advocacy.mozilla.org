@@ -63,6 +63,7 @@ module.exports = React.createClass({
         <FellowsHeader/>
         <div className="page">
           <ContentContainer>
+            <h2>About the Program</h2>
             <p className="intro">The Open Web Fellows program -- a collaboration between <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web. <b>Specifically</b>, the goals of the Open Web Fellows programs are to:</p>
             <IconsContainer>
               <Icon alt="policy icon" src1x="/assets/icons/icon-policy.png" src2x="/assets/icons/icon-policy@2x.png">
@@ -76,18 +77,9 @@ module.exports = React.createClass({
               </Icon>
             </IconsContainer>
           </ContentContainer>
-          <ContentContainer className="globe-offset grey slant flat-top">
-            <h2>Who can become a Fellow?</h2>
-            <div className="row">
-              <div className="half">
-                <p><span className="highlight">It could be you!</span> Broadly speaking, we are looking for makers – those who see a problem in the world and can solve it through technology or media. The right candidate may bring specialities in design, development, storytelling, research and policy analysis, and should be comfortable performing as a technologist, a tinkerer, and a curious contributor to the fellowship program. <b>You do not need to have previous experience with Internet advocacy, policy or activism.</b> A lot of campaign design, community organizing, education, and</p>
-              </div>
-              <div className="half">
-                <p>coalition building happen through teamwork and skills like data visualization and participatory learning. You can be at any stage in your career, provided you are open to learning.</p>
-                <p>We are an international program with host organizations around the world; fellows will be placed in Canada, Chile, Kenya, the European Union, and the United States. We assist fellows with visa applications for working and traveling during the fellowship.</p>
-              </div>
-            </div>
-            <PlanetContent/>
+          <ContentContainer>
+            <h2>Expectations of Fellows</h2>
+            <p>Champion the open internet in collaboration with...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat enim summo bono afferre incrementum diem. At iste non dolendi status non vocatur voluptas. Polycratem Samium felicem appellabant. Inde sermone vario [redacted] illa a Dipylo stadia confecimus. Duo Reges: constructio interrete. Tum ille timide vel potius verecunde: Facio, inquit. Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Sed ad bona praeterita redeamus. Eadem nunc mea adversum te oratio est. Iam id ipsum absurdum, maximum malum neglegi.</p>
           </ContentContainer>
           <ContentContainer>
             <h2>Host Organizations</h2>
@@ -143,6 +135,10 @@ module.exports = React.createClass({
               />
             </div>
           </ContentContainer>
+          <ContentContainer>
+            <h2>Stipend and Financial Benefits</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nonne videmus quanta perturbatio rerum omnium consequatur, quanta confusio? Mihi, inquam, qui te id ipsum rogavi? An vero, inquit, quisquam potest probare, quod perceptfum, quod. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos. Sic, et quidem diligentius saepiusque ista loquemur inter nos agemusque communiter. Teneo, inquit, finem illi videri nihil dolere. Idem iste, inquam, de voluptate quid sentit?</p>
+          </ContentContainer>
           <ContentContainer className="grey">
             <div className="ford-logo">
               <div>
@@ -155,7 +151,6 @@ module.exports = React.createClass({
             </div>
           </ContentContainer>
         </div>
-        <Apply version="full" />
         <Footer/>
       </div>
     );

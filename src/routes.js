@@ -50,7 +50,8 @@ function buildRoutes() {
         <IndexRoute component={require(`./pages/home.js`)}/>
         <Route path="open-web-fellows">
           <IndexRoute component={require('./pages/open-web-fellows/overview.js')}/>
-          <Route path="fellows" component={require(`./pages/open-web-fellows/fellows.js`)}/>
+          <Route path="fellows2015" component={require(`./pages/open-web-fellows/fellows2015.js`)}/>
+          <Route path="fellows2016" component={require(`./pages/open-web-fellows/fellows2016.js`)}/>
           <Route path="info" component={require(`./pages/open-web-fellows/info.js`)}/>
           <Redirect from="*" to={"/" + locale + "/open-web-fellows/"} />
         </Route>
