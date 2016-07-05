@@ -27,7 +27,6 @@
 .rc-collapse > .rc-collapse-item > .rc-collapse-header::after {
   content: '+';
   color: #16afe5;
-  position: absolute;
   font-size: 3rem;
   font-weight: 200;
   right: 0;
@@ -49,3 +48,12 @@
 .rc-collapse-item:last-child {
   border-bottom: 1px solid #d9d9d9;
 }
+.rc-collapse .arrow {
+  display: none;
+}
+.rc-collapse .rc-collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
