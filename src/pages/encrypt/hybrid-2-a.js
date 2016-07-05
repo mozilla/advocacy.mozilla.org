@@ -3,7 +3,8 @@ var Page = require(`./hybrid.js`);
 
 var HybridVariant = React.createClass({
   contextTypes: {
-    intl: React.PropTypes.object
+    intl: React.PropTypes.object,
+    router: React.PropTypes.object
   },
   render: function() {
     return (
@@ -17,6 +18,11 @@ var HybridVariant = React.createClass({
           signupBody={this.context.intl.formatMessage({id: 'signup_body_variant_a'})}
           hideVideoMeta={true}
           location={this.props.location}
+          signupButtonText={this.context.intl.formatMessage({id: 'sign_up'})}
+          userDidSignup={() => {
+            var locale = this.context.intl.locale;
+            this.context.router.replace("/" + locale + '/encrypt/signup-complete/' + window.location.search);
+          }}
         />
       </div>
     );
