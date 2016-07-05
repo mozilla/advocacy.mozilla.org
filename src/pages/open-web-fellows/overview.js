@@ -64,26 +64,35 @@ module.exports = React.createClass({
         <div className="page">
           <ContentContainer>
             <h2>About the Program</h2>
-            <p className="intro">The Open Web Fellows program -- a collaboration between <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is an international leadership initiative that brings together technology talent and civil society organizations to advance and protect the open Web. <b>Specifically</b>, the goals of the Open Web Fellows programs are to:</p>
+            <p className="center-align">The Open Web Fellows program – a collaboration between the <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is a 10-month fellowship program that brings together technology talent and civil society organizations from around the world to advance and protect the open internet.<br/>The program aims to:
+            </p>
             <IconsContainer>
               <Icon alt="policy icon" src1x="/assets/icons/icon-policy.png" src2x="/assets/icons/icon-policy@2x.png">
-                Increase public awareness and understanding of Internet policy issues.
+                Increase public awareness and understanding of internet policy issues
               </Icon>
               <Icon alt="paths icon" src1x="/assets/icons/icon-paths.png" src2x="/assets/icons/icon-paths@2x.png">
-                Support career paths in the Internet policy and advocacy sector.
+                Support and enable career paths in the internet policy and advocacy sectors
               </Icon>
               <Icon alt="support icon" src1x="/assets/icons/icon-support.png" src2x="/assets/icons/icon-support@2x.png">
-                Celebrate and support the vibrant network of Internet advocacy organizations.
+                Celebrate and nurture a vibrant network of internet advocacy organizations
               </Icon>
             </IconsContainer>
+            <p>Fellows are makers and doers passionate about the open internet. They may bring specialities in data visualization, design, development, storytelling, research or policy analysis. While they may not have previous experience with internet advocacy, policy or activism, they are comfortable performing as technologists, experimenters and curious contributors to the open internet movement.
+            </p>
           </ContentContainer>
           <ContentContainer>
             <h2>Expectations of Fellows</h2>
-            <p>Champion the open internet in collaboration with...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat enim summo bono afferre incrementum diem. At iste non dolendi status non vocatur voluptas. Polycratem Samium felicem appellabant. Inde sermone vario [redacted] illa a Dipylo stadia confecimus. Duo Reges: constructio interrete. Tum ille timide vel potius verecunde: Facio, inquit. Quod autem meum munus dicis non equidem recuso, sed te adiungo socium. Sed ad bona praeterita redeamus. Eadem nunc mea adversum te oratio est. Iam id ipsum absurdum, maximum malum neglegi.</p>
+              <ul className="icon-list">
+                <li className="icon-life">Champion the open Internet in collaboration with their fellowship cohort peers</li>
+                <li className="icon-flag">Be an active contributor to the work, culture and mission of the host organization</li>
+                <li className="icon-flag">Participate in Mozilla-organized events, such as conferences, learning labs, and weekly calls, and community events (MozFest, etc.)</li>
+                <li className="icon-communicate">Communicate and share openly their work on an ongoing basis (e.g., blog posts)</li>
+                <li className="icon-flag">Program Timeline: The 2016 fellowship year starts September 1st. Host organizations for 2017 will be selected this fall, and applications for 2017 fellows will open in early spring. </li>
+              </ul>
           </ContentContainer>
           <ContentContainer>
             <h2>Host Organizations</h2>
-            <p className="center-align">Each year, fellows spend 10 months embedded at leading policy & advocacy organizations dedicated to safeguarding the open Internet as a global public resource. Fellows are based in the town of their host organization unless special circumstances dictate otherwise. Read the <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/">blog post</a> to find out what host organizations are looking for. The 2016 host organizations are:</p>
+            <p className="center-align">Host organizations are leading policy and advocacy organizations dedicated to safeguarding the open internet. Learn about the 2016 host organizations and their <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/" target="_blank">proposed projects</a>. Fellows will spend 10 months collaborating with a single host organization. 2016 host organizations include</p>
             <div className="organization-row">
               <Organization
                 imgSrc="/assets/logo-cipit.svg"
@@ -137,7 +146,9 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <h2>Stipend and Financial Benefits</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nonne videmus quanta perturbatio rerum omnium consequatur, quanta confusio? Mihi, inquam, qui te id ipsum rogavi? An vero, inquit, quisquam potest probare, quod perceptfum, quod. Duo Reges: constructio interrete. Ergo hoc quidem apparet, nos ad agendum esse natos. Sic, et quidem diligentius saepiusque ista loquemur inter nos agemusque communiter. Teneo, inquit, finem illi videri nihil dolere. Idem iste, inquam, de voluptate quid sentit?</p>
+            <p className="center-align">The fellowships are designed to allow flexibility for both Fellows and their families. The standard fellowship offers a stipend of $60,000 USD<sup><a href="#disclaimer">*</a></sup>, paid in 10 monthly installments. Fellows are responsible for remitting all applicable taxes and other government payments as required. To help offset cost of living, the fellowship also provides supplements for childcare and health insurance, and helps pay for research/equipment and books. The fellowship also covers the costs of required travel for fellowship activities.
+            </p>
+            <p id="disclaimer"><sup>*</sup>Proposed fellowship amounts are gross amounts and may be reduced by applicable taxes in the various applicable jurisdictions.</p>
           </ContentContainer>
           <ContentContainer className="grey">
             <div className="ford-logo">

@@ -44,7 +44,7 @@ module.exports = React.createClass({
           <ContentContainer className="grey slant">
             <FellowBlock
               name="Paola Villarreal"
-              image="/assets/fellows/1-Paola.png"
+              image="/assets/fellows2016/Berhan@2x.jpg"
               company="American Civil Liberties Union"
               companyHref="https://aclum.org/"
               quote="I am who I am because of the openness of the Web."
@@ -57,7 +57,7 @@ module.exports = React.createClass({
           <ContentContainer>
             <FellowBlock
               name="Tim Sammut"
-              image="/assets/fellows/2-Tim.png"
+              image="/assets/fellows2016/Eireann@2x.jpg"
               company="Amnesty International"
               companyHref="https://www.amnesty.org/en/"
               quote="The Internet is critical to free expression and access to information. It is paramount that it be open to everyone without limits."
@@ -70,7 +70,7 @@ module.exports = React.createClass({
           <ContentContainer className="grey slant">
             <FellowBlock
               name="Andrea Del Rio"
-              image="/assets/fellows/3-Andrea.png"
+              image="/assets/fellows2016/Etienne@2x.jpg"
               company="Association for Progressive Communications"
               companyHref="https://www.apc.org/"
               quote="On the Web, we are all the same. Once we have access to it, the possibilities are endless."
@@ -83,7 +83,7 @@ module.exports = React.createClass({
           <ContentContainer>
             <FellowBlock
               name="Drew Wilson"
-              image="/assets/fellows/4-Drew.png"
+              image="/assets/fellows2016/Jen@2x.jpg"
               company="Free Press"
               companyHref="https://www.freepress.net/"
               quote="Without the freedom to organize, communicate, and campaign, all social movements suffer."
@@ -96,7 +96,7 @@ module.exports = React.createClass({
           <ContentContainer className="grey slant">
             <FellowBlock
               name="Gem Barrett"
-              image="/assets/fellows/5-Gem.png"
+              image="/assets/fellows2016/Matt@2x.jpg"
               company="Open Technology Institute"
               companyHref="https://www.newamerica.org/oti/"
               quote="The Internet has given people a voice like no medium has before, and the ability for people to freely express themselves without fear of surveillance or censorship must be defended."
@@ -109,7 +109,7 @@ module.exports = React.createClass({
           <ContentContainer>
             <FellowBlock
               name="Tennyson Holloway"
-              image="/assets/fellows/6-Tennyson.png"
+              image="/assets/fellows2016/Sid@2x.jpg"
               company="Public Knowledge"
               companyHref="https://www.publicknowledge.org/"
               quote="I see computer science as a unique field; it is exceptionally accessible and the capacity for meaningful impact is remarkably high."
@@ -117,6 +117,32 @@ module.exports = React.createClass({
               handleHref="https://twitter.com/BaronTennyson"
             >
               Tennyson is a Free Culture enthusiast, video game edutech programmer, and college radio engineer. He operates a Tor relay, has hosted a weekly Creative Commons-only music show, and solves math problems in his free time. Tennyson believes more people can and should talk about protecting the open Web through tools that inform users about their privacy and interaction online. As such, he is dedicated to building open-source technologies that educate, inspire, and liberate communities and users. When not at his computer, Tennyson enjoys traveling, camping, and rock climbing. He will be working with Public Knowledge on initiatives to better inform policy makers in DC, and on projects that creatively educate people about threats to the open Internet.
+            </FellowBlock>
+          </ContentContainer>
+          <ContentContainer>
+            <FellowBlock
+              name=""
+              image="/assets/fellows2016/Steffania@2x.jpg"
+              company=""
+              companyHref=""
+              quote=""
+              handle=""
+              handleHref=""
+            >
+            lorem ipsum
+            </FellowBlock>
+          </ContentContainer>
+          <ContentContainer>
+            <FellowBlock
+              name=""
+              image="/assets/fellows2016/Suchana@2x.jpg"
+              company=""
+              companyHref=""
+              quote=""
+              handle=""
+              handleHref=""
+            >
+            lorem ipsum
             </FellowBlock>
           </ContentContainer>
         </div>

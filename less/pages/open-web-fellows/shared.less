@@ -70,12 +70,42 @@
     }
   }
 
-  p {
+  p, .icon-list li {
     font-size: 16px;
     line-height: 25px;
     font-weight: 300;
     margin: 25px 0;
   }
+
+  .icon-list li {
+    font-style: italic;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    &:before {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
+
+  .icon-life:before {
+    content: url('../../../public/assets/list-icons/icon-life.svg');
+  }
+  .icon-flag:before {
+    content: url('../../../public/assets/list-icons/icon-flag.svg');
+  }
+  .icon-cubes:before {
+    // content: url('../../../public/assets/list-icons/icon-cubes.svg');
+  }
+  .icon-communicate:before {
+    content: url('../../../public/assets/list-icons/icon-communicate.svg');
+  }
+  .icon-time:before {
+    // content: url('../../../public/assets/list-icons/icon-time.svg');
+  }
+
 
   .page {
     background-color: #FFFFFF;
