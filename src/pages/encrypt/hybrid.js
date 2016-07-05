@@ -113,6 +113,7 @@ module.exports = React.createClass({
     if (desc) {
       desc = this.context.intl.formatMessage({id: desc})
     }
+    var signupButtonText = this.props.signupButtonText || this.context.intl.formatMessage({id: 'update_my_info'});
     return (
       <div className={pageClass}>
         <EncryptHeader />
@@ -130,7 +131,7 @@ module.exports = React.createClass({
               activeVideo={optionsIndex}
               hideVideoMeta={this.props.hideVideoMeta || false}
               />
-            <Signup dataToPrefill={this.knownUserInfo} submitButtonText={this.context.intl.formatMessage({id: 'update_my_info'})} onSubmission={this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
+            <Signup dataToPrefill={this.knownUserInfo} submitButtonText={signupButtonText} onSubmission={this.props.userDidSignup || this.userDidSignup} ref="signup" className="encrypt-signup" signupSuccessful={this.state.didSignup}>
               <CTA
                 HrClassName="cta-hr"
                 headerClassName="cta-header"

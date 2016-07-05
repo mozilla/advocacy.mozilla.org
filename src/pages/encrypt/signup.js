@@ -25,7 +25,7 @@ module.exports = React.createClass({
   },
   userDidSignup: function() {
     var locale = this.context.intl.locale;
-    this.context.router.replace("/" + locale + '/encrypt/signup-complete');
+    this.context.router.replace("/" + locale + '/encrypt/signup-complete/' + window.location.search);
   },
   render: function() {
     var modalClass = classNames({
