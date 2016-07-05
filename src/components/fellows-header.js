@@ -23,7 +23,7 @@ module.exports = React.createClass({
             <Link to={"/" + locale + "/open-web-fellows/"}>{this.context.intl.formatMessage({id: 'overview'})}</Link>
           </div>
           <div className="nav-link-container info-link">
-            <Link to={"/" + locale + "/open-web-fellows/info"}>{this.context.intl.formatMessage({id: 'info'})}</Link>
+            <Link to={"/" + locale + "/open-web-fellows/info"}>{this.context.intl.formatMessage({id: 'faq'})}</Link>
           </div>
         </div>
       </StickyContainer>

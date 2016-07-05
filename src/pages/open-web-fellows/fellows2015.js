@@ -39,7 +39,7 @@ module.exports = React.createClass({
           <ContentContainer>
             <p className="intro">We are a network of technologists, makers, policy wonks, and civil society advocates passionate about protecting the free and open internet.</p>
             <h2>Meet Our Fellows</h2>
-            <p className="fellows-description">Ford-Mozilla open web fellows are advocates and technologists on the...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec vero intermittunt aut admirationem earum rerum, quae sunt ab antiquis repertae, aut investigationem novarum. Tum mihi Piso: Quid ergo?</p>
+            <p className="fellows-description">Ford-Mozilla Open Web Fellows are activists and technologists on the front lines of the open internet movement. They’re a diverse group: makers, artists, developers, and data scientists from across the globe. But Fellows all share a common belief: The world can be made a better place by leveraging the open internet.</p>
           </ContentContainer>
           <ContentContainer className="grey slant">
             <FellowBlock

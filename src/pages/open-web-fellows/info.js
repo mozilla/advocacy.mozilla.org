@@ -90,55 +90,29 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <Collapse>
-              <Panel header={`I live outside of the US, UK or Canada - am I eligible?`}>
-                <p>{`Yes, as long as you are legally allowed to work in the country where you currently reside.`}</p>
+              <Panel header={`How can I apply to become an Open Web Fellow?`}>
+                <p>{`The 2016 application period is closed at this time. The next call for applicants will open in the spring of 2017.`}</p>
               </Panel>
-
-              <Panel header={`What disciplines are included in "life and natural sciences"?`}>
-                <p>{`Biology, chemistry, earth science, physics, astronomy, ecology, etc.`}</p>
-                <p>{`For now, our call is limited to the disciplines listed above. We would like to extend this in future years, as we know open research is as important in other disciplines as it is in these.`}</p>
+              <Panel header={`What is the time commitment?`}>
+                <p>{`The fellowship is a 10-month program.`}</p>
               </Panel>
-
-              <Panel header={`I work at a research institution but not a "university" - can I still apply?`}>
-                <p>{`You bet! Government funded research institutions and groups (e.g., National Institutes of Health, Environmental Protection Agency, or research centers like NEON, BEACON, etc) as well as positions in other research institutions (e.g., Museum of Natural History and many Planetariums have research arms, as well) count!`}</p>
-                <p>{`Still unsure? Let us know - we'd be happy to talk it through.`}</p>
-              </Panel>
-
-              <Panel header={`I'm not currently at a university or research institution - can I still apply?`}>
-                <p>{`Fellows are required to be based at a university or research institution for the 10 month tenure. Mozilla cannot assist Fellows in finding placements.`}</p>
-              </Panel>
-
-              <Panel header={`Can I continue my research, coursework or teaching during this time?`}>
-                <p>{`It depends. Fellows are allowed to spend up to 20% of their time maintaining their work for their home institution - think, 1 day a week. Please note: This is a time commitment, and Fellows are expected to devote the majority of their time to the Fellowship, their projects and interaction with the Mozilla community. If you have a standing commitment that you think may affect your time, please note in your application.`}</p>
-                <p>{`Fellowship applicants must have buy-in from their supervisors in advance, and include supervisors' contact information on the application. Supervisors will be interviewed separately should applicants move on to the second round, and their support will be a critical consideration for acceptance of fellows.`}</p>
-              </Panel>
-
-              <Panel header={`When are Fellowships intended to start? And end?`}>
-                <p>{`The anticipated start date for Fellows is in September 2016, running through July 2017.`}</p>
-              </Panel>
-
-              <Panel header={`When will we be notified if we're selected?`}>
-                <p>{`The notification date will vary depending on the volume of applications received but we project that prospective candidates will be contacted by the last week in August, 2016.`}</p>
-              </Panel>
-
               <Panel header={`What sort of travel is expected?`}>
-                <p>{`There are a few events and times over the course of the 10 months that fellows are expected to travel and come together at a minimum. There's onboarding (likely late Sept / early October), the Mozilla Festival (Oct. 28-30 in London), and two workweeks in 2016 - location TBD.`}</p>
+                <p>{`Fellows are expected to relocate to the location of their host organization. There are a few events and times over the course of the 10 months that fellows are expected to travel. There's onboarding, the Mozilla Festival, workweeks, Internet Freedom Festival, and RightsCon.`}</p>
               </Panel>
-
-              <Panel header={`I'm a pre-tenure, early career faculty member - does that rule me out?`}>
-                <p>{`Not necessarily! Be sure to list your teaching commitments in the application, as there are travel obligations and expectations that we want to make sure you have adequate time for.`}</p>
+              <Panel header={`Who are the host organizations?`}>
+                <p>{`Host organizations are leading policy and advocacy organizations dedicated to safeguarding the open internet. Host organizations include Centre for Intellectual Property and Information Technology Law , The Citizen Lab, University of Toronto, ColorOfChange, Data & Society, Derechos Digitales, European Digital Rights (EDRi), Freedom of the Press Foundation, Privacy International, American Civil Liberties Union, Amnesty International, Association for Progressive Communications, Free Press, Open Technology Institute, and Public Knowledge.`}</p>
               </Panel>
-
-              <Panel header={`What role does my advisor play in this process?`}>
-                <p>{`We want to make sure Fellows, as they'll be working somewhat autonomously within their institution are in supportive environments. We find this is best achieved with advisors who are supportive and tuned in to the challenges around open research practice and data sharing within the university, and are open to Fellows working more full-time for 10 months to build momentum, teach, and collaborate to advance those goals within those labs and research settings.`}</p>
+              <Panel header={`How are host organizations selected?`}>
+                <p>Host organizations are selected via an open call for applications. The call for 2017 host organizations will open in fall of 2016. If you’re interested in being a host organization or learning more, please contact <a href="mailto:melissa@mozillafoundation.org">Melissa Romaine, Network Manager.</a></p>
               </Panel>
-
-              <Panel header={`How will I be funded over the Fellowship?`}>
-                <p>{`Funding and apitional supplements for which fellows may be eligible are allocated to the individual directly on a monthly basis, not run through institutions. No university overhead-like arrangements - the funding goes straight to the Fellow themselves.`}</p>
+              <Panel header={`What kind of projects do the fellows work on?`}>
+                <p>Fellows focus on three primary project areas during their participation in the fellowship: projects in development with the host organization, personal projects (either pre existing or new initiatives), and community created projects (with the fellowship cohort and or Mozilla’s Policy & Advocacy network at-large). A list of proposed 2016 host organization projects can be found <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/" target="_blank">here</a>.</p>
               </Panel>
-
-              <Panel header={`What are the tax considerations alluded to in the call for applications?`}>
-                <p>{`Proposed fellowship amounts are gross amounts and may be reduced by applicable taxes.  Fellows are responsible to pay all applicable taxes, whether in their home jurisdictions, the jurisdiction where the fellowship occurs, or any other jurisdiction.  In some cases Mozilla may be required to withhold such taxes at the time of payment, and reduce the amount of fellows’ payments accordingly.  For instance, Mozilla may have to withhold up to 30% of any stipend payments attributable to fellowship activities taking place in the U.S., although fellows may be able to claim reduced rates of withholding or refund of a portion of these taxes.  It is fellows’ responsibility to communicate in advance with Mozilla about where they will be located throughout the fellowship.`}</p>
+              <Panel header={`How are fellows funded over the fellowship?`}>
+                <p>{`Funding and additional supplements for which fellows may be eligible are allocated to the individual directly on a monthly basis.`}</p>
+              </Panel>
+              <Panel header={`What are the tax considerations for the proposed fellowship amounts?`}>
+                <p>{`Proposed fellowship amounts are gross amounts and may be reduced by applicable taxes. Fellows are responsible to pay all applicable taxes, whether in their home jurisdictions, the jurisdiction where the fellowship occurs, or any other jurisdiction. In some cases, Mozilla may be required to withhold such taxes at the time of payment, and reduce the amount of fellows’ payments accordingly. For instance, Mozilla may have to withhold up to 30% of any stipend payments attributable to fellowship activities taking place in the U.S., although fellows may be able to claim reduced rates of withholding or refund of a portion of these taxes. It is fellows’ responsibility to communicate in advance with Mozilla about where they will be located throughout the fellowship.`}</p>
               </Panel>
             </Collapse>
           </ContentContainer>
