@@ -9,8 +9,13 @@ module.exports = React.createClass({
   },
   getInitialState() {
     return {
-      seventyFivePercentDone: false
+      nextPercentDone: 0.25
     };
+  },
+  videoGaEvent(props) {
+    props.category = props.category || "Video";
+    props.label = props.label || this.context.intl.formatMessage({id: this.props.video.title});
+    ga.event(props);
   },
   componentDidMount() {
 
@@ -20,7 +25,7 @@ module.exports = React.createClass({
       this.props.setPageState({
         videoIsPaused: false
       });
-      ga.event({category: "Video", action: "Video started"});
+      this.videoGaEvent({action: "Video started"});
     });
 
     video.addEventListener("pause", (e) =>{
@@ -33,19 +38,20 @@ module.exports = React.createClass({
       this.props.setPageState({
         videoDidEnd: true
       });
-      ga.event({category: "Video", action: "iOS user clicked done", value: e.srcElement.currentTime});
+      this.videoGaEvent({action: "iOS user clicked done", value: e.srcElement.currentTime});
     });
     video.addEventListener("timeupdate", (e)=>{
-      if (video.currentTime/video.duration >= 0.75 && !this.state.seventyFivePercentDone) {
-        ga.event({category: "Video", action: "75% complete"});
-        this.setState({seventyFivePercentDone: true});
+      var nextPercentDone = this.state.nextPercentDone;
+      if (video.currentTime/video.duration >= nextPercentDone) {
+        this.videoGaEvent({action: (nextPercentDone * 100) + "% complete"});
+        this.setState({nextPercentDone: nextPercentDone + 0.25});
       }
     });
     video.addEventListener("ended", (e) => {
       this.props.setPageState({
         videoDidEnd: true
       });
-      ga.event({category: "Video", action: "Video ended"});
+      this.videoGaEvent({action: "Video ended"});
     });
     this.refs.theatre.addEventListener("click", (e)=>{
       this.hideTheatre();
@@ -70,7 +76,7 @@ module.exports = React.createClass({
     this.props.setPageState({
       videoIsPaused: true
     });
-    ga.event({category: "Video", action: "Clicked to paused the video"});
+    this.videoGaEvent({action: "Clicked to paused the video"});
   },
   render: function() {
     var locale = this.context.intl.locale;
