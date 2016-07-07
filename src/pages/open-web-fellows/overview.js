@@ -85,9 +85,9 @@ module.exports = React.createClass({
               <ul className="icon-list">
                 <li className="icon-life">Champion the open Internet in collaboration with their fellowship cohort peers</li>
                 <li className="icon-flag">Be an active contributor to the work, culture and mission of the host organization</li>
-                <li className="icon-flag">Participate in Mozilla-organized events, such as conferences, learning labs, and weekly calls, and community events (MozFest, etc.)</li>
+                <li className="icon-cubes">Participate in Mozilla-organized events, such as conferences, learning labs, and weekly calls, and community events (MozFest, etc.)</li>
                 <li className="icon-communicate">Communicate and share openly their work on an ongoing basis (e.g., blog posts)</li>
-                <li className="icon-flag">Program Timeline: The 2016 fellowship year starts September 1st. Host organizations for 2017 will be selected this fall, and applications for 2017 fellows will open in early spring. </li>
+                <li className="icon-time">Program Timeline: The 2016 fellowship year starts September 1st. Host organizations for 2017 will be selected this fall, and applications for 2017 fellows will open in early spring. </li>
               </ul>
           </ContentContainer>
           <ContentContainer>
