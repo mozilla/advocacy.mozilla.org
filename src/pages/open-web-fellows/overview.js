@@ -64,19 +64,13 @@ module.exports = React.createClass({
         <div className="page">
           <ContentContainer>
             <h2>About the Program</h2>
-            <p className="center-align">The Open Web Fellows program – a collaboration between the <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is a 10-month fellowship program that brings together technology talent and civil society organizations from around the world to advance and protect the open internet.<br/>The program aims to:
+            <p>The Open Web Fellows program – a collaboration between the <a href="http://www.fordfoundation.org/">Ford Foundation</a> and Mozilla – is a 10-month fellowship program that brings together technology talent and civil society organizations from around the world to advance and protect the open internet.<br/>The program aims to:
             </p>
-            <IconsContainer>
-              <Icon alt="policy icon" src1x="/assets/icons/icon-policy.png" src2x="/assets/icons/icon-policy@2x.png">
-                Increase public awareness and understanding of internet policy issues
-              </Icon>
-              <Icon alt="paths icon" src1x="/assets/icons/icon-paths.png" src2x="/assets/icons/icon-paths@2x.png">
-                Support and enable career paths in the internet policy and advocacy sectors
-              </Icon>
-              <Icon alt="support icon" src1x="/assets/icons/icon-support.png" src2x="/assets/icons/icon-support@2x.png">
-                Celebrate and nurture a vibrant network of internet advocacy organizations
-              </Icon>
-            </IconsContainer>
+            <ul className="icon-list">
+              <li className="icon-institution">Increase public awareness and understanding of internet policy issues</li>
+              <li className="icon-trips">Support and enable career paths in the internet policy and advocacy sectors</li>
+              <li className="icon-approve">Celebrate and nurture a vibrant network of internet advocacy organizations</li>
+            </ul>
             <p>Fellows are makers and doers passionate about the open internet. They may bring specialities in data visualization, design, development, storytelling, research or policy analysis. While they may not have previous experience with internet advocacy, policy or activism, they are comfortable performing as technologists, experimenters and curious contributors to the open internet movement.
             </p>
           </ContentContainer>
@@ -92,7 +86,7 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <h2>Host Organizations</h2>
-            <p className="center-align">Host organizations are leading policy and advocacy organizations dedicated to safeguarding the open internet. Learn about the 2016 host organizations and their <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/" target="_blank">proposed projects</a>. Fellows will spend 10 months collaborating with a single host organization. 2016 host organizations include</p>
+            <p>Host organizations are leading policy and advocacy organizations dedicated to safeguarding the open internet. Learn about the 2016 host organizations and their <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/" target="_blank">proposed projects</a>. Fellows will spend 10 months collaborating with a single host organization. 2016 host organizations include</p>
             <div className="organization-row">
               <Organization
                 imgSrc="/assets/logo-cipit.svg"
@@ -146,8 +140,12 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <h2>Stipend and Financial Benefits</h2>
-            <p className="center-align">The fellowships are designed to allow flexibility for both Fellows and their families. The standard fellowship offers a stipend of $60,000 USD<sup><a href="#disclaimer">*</a></sup>, paid in 10 monthly installments. Fellows are responsible for remitting all applicable taxes and other government payments as required. To help offset cost of living, the fellowship also provides supplements for childcare and health insurance, and helps pay for research/equipment and books. The fellowship also covers the costs of required travel for fellowship activities.
-            </p>
+            <p>The fellowships are designed to allow flexibility for both Fellows and their families.</p>
+            <ul className="icon-list">
+            <li className="icon-stipend"><span>The standard fellowship offers a stipend of $60,000 USD<sup><a href="#disclaimer">*</a></sup>, paid in 10 monthly installments. Fellows are responsible for remitting all applicable taxes and other government payments as required.</span></li>
+            <li className="icon-insurance">To help offset cost of living, the fellowship also provides supplements for childcare and health insurance, and helps pay for research/equipment and books.</li>
+            <li className="icon-travel">The fellowship also covers the costs of required travel for fellowship activities.</li>
+            </ul>
             <p id="disclaimer"><sup>*</sup>Proposed fellowship amounts are gross amounts and may be reduced by applicable taxes in the various applicable jurisdictions.</p>
           </ContentContainer>
           <ContentContainer className="grey">
