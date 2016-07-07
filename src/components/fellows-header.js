@@ -20,7 +20,7 @@ module.exports = React.createClass({
             <Link to={"/" + locale + "/open-web-fellows/fellows2015"}>{this.context.intl.formatMessage({id: 'fellows2015'})}</Link>
           </div>
           <div className="nav-link-container overview-link">
-            <Link to={"/" + locale + "/open-web-fellows/"}>{this.context.intl.formatMessage({id: 'overview'})}</Link>
+            <Link to={"/" + locale + "/open-web-fellows/overview"}>{this.context.intl.formatMessage({id: 'overview'})}</Link>
           </div>
           <div className="nav-link-container info-link">
             <Link to={"/" + locale + "/open-web-fellows/info"}>{this.context.intl.formatMessage({id: 'faq'})}</Link>
