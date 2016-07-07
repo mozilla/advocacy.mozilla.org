@@ -34,7 +34,7 @@ module.exports = React.createClass({
     return (
       <div className="current-fellows-page fellows-page">
         <Header/>
-        <HeroUnit className="fellows-hero-unit" image="/assets/fellows.jpg">
+        <HeroUnit className="fellows-hero-unit" image="/assets/2016-hero@2x.jpg">
           <h1>2016 Hosts & Fellows</h1>
         </HeroUnit>
         <FellowsHeader/>
