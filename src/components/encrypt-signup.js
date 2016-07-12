@@ -65,6 +65,8 @@ module.exports = React.createClass({
     if (firstName) {
       params += `&first_name=` + firstName;
     }
+
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.onreadystatechange = () => {
       if (request.readyState === 4) {
         if (request.status === 200) {
