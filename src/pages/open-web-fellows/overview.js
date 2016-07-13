@@ -71,8 +71,8 @@ module.exports = React.createClass({
               <li className="icon-trips">Support and enable career paths in the internet policy and advocacy sectors</li>
               <li className="icon-approve">Celebrate and nurture a vibrant network of internet advocacy organizations</li>
             </ul>
-            <p>Fellows are makers and doers passionate about the open internet. They may bring specialities in data visualization, design, development, storytelling, research or policy analysis. While they may not have previous experience with internet advocacy, policy or activism, they are comfortable performing as technologists, experimenters and curious contributors to the open internet movement.
-            </p>
+            <p>Fellows are makers and doers passionate about the open internet. They may bring specialities in data visualization, design, development, storytelling, research or policy analysis. While they may not have previous experience with internet advocacy, policy or activism, they are comfortable performing as technologists, experimenters and curious contributors to the open internet movement.</p>
+            <p><a href="http://mozilla.github.io/content/open-web-fellows-report/#introduction">Read the report-out on Year 1 of the Fellowship</a></p>
           </ContentContainer>
           <ContentContainer>
             <h2>Expectations of Fellows</h2>
