@@ -16,7 +16,7 @@
     "server": "node app.js",
     "lint": "eslint --config ./node_modules/mofo-style/.eslintrc.yaml --ext .js .",
     "lintfix": "eslint --config ./node_modules/mofo-style/.eslintrc.yaml --ext .js . --fix",
-    "postinstall": "node scripts/build.js"
+    "postinstall": "npm start"
   },
   "repository": {
     "type": "git",
