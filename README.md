@@ -21,7 +21,6 @@ To start local development, install and run the following commands:
 ``` bash
 $ cp sample.env .env
 $ npm install
-$ npm start
 ```
 
 ## Develop Workflow
