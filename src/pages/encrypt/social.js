@@ -1,12 +1,11 @@
 var React = require(`react`);
-var Footer = require(`../../components/footer.js`);
+var EncryptFooter = require(`../../components/encrypt-footer.js`);
 var EncryptVideo = require(`../../components/encrypt-video.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var Modal = require(`../../components/encrypt-modal.js`);
 var classNames = require('classnames');
-var Icon = require(`../../components/footer-icon.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.js`);
 
@@ -113,9 +112,7 @@ module.exports = React.createClass({
             <ShareThisNow params={this.props.params} videos={VideoData}/>
           </div>
         </main>
-        <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: 'join_the_convo'})}</Icon>
-        </Footer>
+        <EncryptFooter/>
         <div hidden={!this.state.formIsVisible && !this.state.videoDidEnd}>
           <Modal hideModal={this.hideModal} className="pledge-cta">
             <div>

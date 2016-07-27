@@ -1,8 +1,7 @@
 var React = require(`react`);
-var Footer = require(`../../components/footer.js`);
+var EncryptFooter = require(`../../components/encrypt-footer.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var classNames = require('classnames');
-var Icon = require(`../../components/footer-icon.js`);
 
 
 module.exports = React.createClass({
@@ -55,9 +54,7 @@ module.exports = React.createClass({
             </Signup>
           </div>
         </main>
-        <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: 'join_the_convo'})}</Icon>
-        </Footer>
+        <EncryptFooter/>
       </div>
     );
   }

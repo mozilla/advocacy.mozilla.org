@@ -1,12 +1,11 @@
 var React = require('react');
-var Footer = require('../../components/footer.js');
 var EncryptVideo = require('../../components/encrypt-video.js');
 var CodemojiBanner = require(`../../components/codemoji-banner.js`);
 var ShareThisNow = require('../../components/encrypt-share-this-now');
 var EncryptHeader = require('../../components/encrypt-header');
+var EncryptFooter = require(`../../components/encrypt-footer`);
 var Modal = require(`../../components/encrypt-modal.js`);
 var ga = require('react-ga');
-var Icon = require(`../../components/footer-icon.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
 
@@ -59,9 +58,7 @@ module.exports = React.createClass({
           <CodemojiBanner/>
           <ShareThisNow params={this.props.params}/>
         </main>
-        <Footer>
-          <Icon href="https://medium.com/encryption-matters" src="/assets/footer-icon-medium.svg" title="Medium">{this.context.intl.formatMessage({id: "join_the_convo"})}</Icon>
-        </Footer>
+        <EncryptFooter/>
         <div hidden={!this.state.videoDidEnd}>
           <Modal hideModal={this.hideModal} className="postVideo social-cta">
             <p className="cta-title">{CTA}</p>
