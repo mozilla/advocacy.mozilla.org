@@ -87,6 +87,7 @@ module.exports = React.createClass({
       }
     };
     request.open(`POST`, url);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     request.send(params);
   },
   render: function() {
