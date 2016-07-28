@@ -1,5 +1,5 @@
 var React = require(`react`);
-var FooEncryptFooterter = require(`../../components/encrypt-footer.js`);
+var EncryptFooter = require(`../../components/encrypt-footer.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var classNames = require('classnames');
 import { FormattedHTMLMessage } from 'react-intl';
