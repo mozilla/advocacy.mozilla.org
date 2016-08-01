@@ -4,6 +4,25 @@
       background-position: center 20%;
     }
   }
+  .fellow-bio-links {
+    font-size: 1.25em;
+    line-height: 1.25;
+    font-weight: 300;
+  }
+  .fellow-bio-links .fellow-bio-link + .fellow-bio-link:before {
+    content: "|";
+    margin: 0 0.25em;
+  }
+  .page .intro {
+    margin: 1em 0 2em;
+  }
+  .content-container:first-child .content {
+    padding: 1em 0 3em;
+  }
+  .fellows-description {
+    text-align: center;
+    margin-top: 0;
+  }
   .fellow-block {
     max-width: 780px;
     margin: 0 auto;
@@ -17,6 +36,7 @@
         }
       }
       h2 {
+        text-align: left;
         color: #804A80;
         margin: 0;
       }
@@ -33,6 +53,7 @@
       .fellow-image-container {
         img {
           margin-bottom: 15px;
+          border-radius: 50%;
           @media screen and (min-width: 768px) {
             margin-right: 25px;
             margin-bottom: 0;

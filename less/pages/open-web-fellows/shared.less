@@ -20,8 +20,10 @@
       line-height: 40px;
     }
   }
-
   h2 {
+    color: #804A80;
+    margin: 10px 0;
+    text-align: center;
     font-size: 50px;
     font-weight: 700;
     @media screen and (max-width: 767px) {
@@ -68,12 +70,64 @@
     }
   }
 
-  p {
+  p, .icon-list li {
     font-size: 16px;
     line-height: 25px;
     font-weight: 300;
     margin: 25px 0;
   }
+
+  .icon-list {
+    margin: 3em 0;
+  }
+
+  .icon-list li {
+    font-style: italic;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    &:before {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      margin-right: 1.5rem;
+    }
+  }
+
+  .icon-life:before {
+    content: url('../../../public/assets/list-icons/icon-life.svg');
+  }
+  .icon-flag:before {
+    content: url('../../../public/assets/list-icons/icon-flag.svg');
+  }
+  .icon-cubes:before {
+    content: url('../../../public/assets/list-icons/icon-cubes.svg');
+  }
+  .icon-communicate:before {
+    content: url('../../../public/assets/list-icons/icon-communicate.svg');
+  }
+  .icon-time:before {
+    content: url('../../../public/assets/list-icons/icon-time.svg');
+  }
+  .icon-institution:before {
+    content: url('../../../public/assets/list-icons/icon-institution.svg');
+  }
+  .icon-trips:before {
+    content: url('../../../public/assets/list-icons/icon-trips.svg');
+  }
+  .icon-approve:before {
+    content: url('../../../public/assets/list-icons/icon-approve.svg');
+  }
+  .icon-stipend:before {
+    content: url('../../../public/assets/list-icons/icon-stipend.svg');
+  }
+  .icon-insurance:before {
+    content: url('../../../public/assets/list-icons/icon-insurance.svg');
+  }
+  .icon-travel:before {
+    content: url('../../../public/assets/list-icons/icon-travel.svg');
+  }
+
 
   .page {
     background-color: #FFFFFF;

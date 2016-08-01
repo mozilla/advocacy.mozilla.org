@@ -61,8 +61,8 @@ module.exports = React.createClass({
               src1x="/assets/home-fellows.jpg"
               src2x="/assets/home-fellows@2x.jpg"
               label="Open Web Fellows"
-              buttonHref={"/" + locale + "/open-web-fellows/"}
-              buttonLabel="learn more"
+              buttonHref="http://mozilla.github.io/content/open-web-fellows-report/#introduction"
+              buttonLabel="Read our Year 1 Report"
             >
               The Open Web Fellows program places the best emerging technology talent at civil society organizations around the globe. As threats to digital freedom proliferate, it's critical to have capable leaders.
             </HomePageItem>

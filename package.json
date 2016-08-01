@@ -2,6 +2,9 @@
   "name": "advocacy.mozilla.org",
   "version": "1.0.0",
   "description": "advocacy.mozilla.org",
+  "engines": {
+    "node": ">=4 <7"
+  },
   "scripts": {
     "start": "npm-run-all --parallel build:l10njson watch:js server",
     "build:l10njson": "node scripts/properties2json",
@@ -60,6 +63,7 @@
     "postcss-loader": "0.8.1",
     "properties-parser": "0.3.1",
     "q-io": "1.13.2",
+    "rc-collapse": "1.6.3",
     "react": "0.14.6",
     "react-addons-linked-state-mixin": "0.14.6",
     "react-dom": "0.14.6",

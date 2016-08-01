@@ -2,20 +2,6 @@
   width: 100%;
   position: relative;
 
-  @media screen and (min-width: 768px) {
-    &.sticky {
-      position: fixed;
-      top: 52px;
-      z-index: 2;
-      .fellow-header-overlay {
-        opacity: 1;
-        background-color: #009DAA;
-      }
-    }
-    .fellow-header-overlay {
-      transition: opacity .1s, background-color .1s;
-    }
-  }
   .fellow-header-overlay {
     position: absolute;
     background-color: #003E60;
@@ -37,17 +23,35 @@
     height: 100%;
     margin: 0 auto;
     .nav-link-container {
-      font-size: 20px;
+      font-size: 16px;
       color: #FFFFFF;
       opacity: .6;
       margin: 0 18px;
       font-weight: 400;
+      text-align: center;
       a {
         padding: 16px 0;
       }
       &:hover {
         opacity: 1;
       }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &.sticky {
+      position: fixed;
+      top: 52px;
+      z-index: 2;
+      .fellow-header-overlay {
+        opacity: 1;
+        background-color: #009DAA;
+      }
+    }
+    .fellow-header-overlay {
+      transition: opacity .1s, background-color .1s;
+    }
+    .nav-items .nav-link-container {
+      font-size: 20px;
     }
   }
   @media screen and (max-width: 767px) {
@@ -59,8 +63,12 @@
     }
   }
 }
-
-.fellows-page .fellows-header .nav-items {
+.past-fellows-page .fellows-header .nav-items {
+  .nav-link-container.past-fellows-link {
+    opacity: 1;
+  }
+}
+.current-fellows-page .fellows-header .nav-items {
   .nav-link-container.current-fellows-link {
     opacity: 1;
   }

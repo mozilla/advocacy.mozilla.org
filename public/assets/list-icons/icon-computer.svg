@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20">
+    <defs>
+        <style>
+            .cls-1{fill:#ba75b2;}
+        </style>
+    </defs>
+    <title>
+        all-icons
+    </title>
+    <path class="cls-1" d="M31.5 16.15h-3V.5A.5.5 0 0 0 28 0H4a.5.5 0 0 0-.5.5v15.65h-3a.5.5 0 0 0-.5.5v2.85a.5.5 0 0 0 .5.5h31a.5.5 0 0 0 .5-.5v-2.85a.5.5 0 0 0-.5-.5zM4.5 1h23v15.15h-23V1zM31 19H1v-1.85h30V19z"/>
+    <path class="cls-1" d="M17 1.9h-2a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+</svg>
