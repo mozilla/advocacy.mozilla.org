@@ -2,7 +2,6 @@ var React = require(`react`);
 var Footer = require(`../../components/footer.js`);
 var Header = require(`../../components/header.js`);
 var HeroUnit = require(`../../components/hero-unit.js`);
-var Apply = require(`../../components/apply.js`);
 var FellowsHeader = require(`../../components/fellows-header.js`);
 var ImageTag = require(`../../components/imagetag.js`);
 var ContentContainer = require(`../../components/content-container.js`);
