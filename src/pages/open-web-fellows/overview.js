@@ -6,38 +6,6 @@ var FellowsHeader = require(`../../components/fellows-header.js`);
 var ImageTag = require(`../../components/imagetag.js`);
 var ContentContainer = require(`../../components/content-container.js`);
 
-var IconsContainer = React.createClass({
-  render: function() {
-    return (
-      <div className="icons-container">
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-var Icon = React.createClass({
-  render: function() {
-    return (
-      <div className="icon">
-        <ImageTag height={101} width={101} alt={this.props.alt} src1x={this.props.src1x} src2x={this.props.src2x}/>
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-var PlanetContent = React.createClass({
-  render: function() {
-    return (
-      <div className="globe-image-container">
-        <ImageTag className="globe-image desktop" alt="globe" width={763} height={441} src1x="/assets/icon-globe.png" src2x="/assets/icon-globe@2x.png"/>
-        <ImageTag className="globe-image mobile" alt="globe" width={271} height={271} src1x="/assets/icon-globe-mobile.png" src2x="/assets/icon-globe-mobile@2x.png"/>
-      </div>
-    );
-  }
-});
-
 var Organization = React.createClass({
   render: function() {
     return (

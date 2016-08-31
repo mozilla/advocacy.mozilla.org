@@ -6,7 +6,6 @@ var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptFooter = require(`../../components/encrypt-footer`);
 var EncryptVideo = require(`../../components/encrypt-video.js`);
 var VideoData = require(`../../data/encryptVideos.js`);
-var Playlist = require(`../../components/encrypt-video-playlist.js`);
 var Classnames = require(`classnames`);
 var Modal = require(`../../components/encrypt-modal.js`);
 

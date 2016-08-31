@@ -1,7 +1,6 @@
 var React = require(`react`);
 var EncryptFooter = require(`../../components/encrypt-footer.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
-var classNames = require('classnames');
 
 
 module.exports = React.createClass({
@@ -27,9 +26,6 @@ module.exports = React.createClass({
     this.context.router.replace("/" + locale + '/encrypt/signup-complete/' + window.location.search);
   },
   render: function() {
-    var modalClass = classNames({
-      'join-modal': true
-    });
     var signupHeader = this.props.signupHeader || this.context.intl.formatMessage({id: 'join_mozilla'});
     var signupBody = this.props.signupBody || this.context.intl.formatMessage({id: 'signup_body'});
     var signupMeta = (<h1></h1>);

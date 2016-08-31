@@ -2,11 +2,9 @@ var React = require(`react`);
 var EncryptVideo = require(`../../components/encrypt-video.js`);
 var Signup = require(`../../components/encrypt-signup.js`);
 var CodemojiBanner = require(`../../components/codemoji-banner.js`);
-var ShareThisNow = require(`../../components/encrypt-share-this-now`);
 var EncryptHeader = require(`../../components/encrypt-header`);
 var EncryptFooter = require(`../../components/encrypt-footer`);
 var Modal = require(`../../components/encrypt-modal.js`);
-var classNames = require('classnames');
 var VideoData = require(`../../data/encryptVideos.js`);
 var Playlist = require(`../../components/encrypt-video-playlist.js`);
 
@@ -77,9 +75,6 @@ module.exports = React.createClass({
     }
   },
   render: function() {
-    var modalClass = classNames({
-      'join-modal': true
-    });
     var optionsIndex = this.props.params.video - 1;
     var CTA = this.context.intl.formatMessage({id: this.videoOptions[this.props.params.video - 1].cta});
     return (
