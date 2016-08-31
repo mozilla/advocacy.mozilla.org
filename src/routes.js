@@ -2,7 +2,6 @@
 import React from 'react';
 /* eslint-disable no-unused-vars */
 import { Route, IndexRedirect, Redirect, IndexRoute } from 'react-router';
-import encryptVideos from './data/encryptVideos';
 var locales = Object.keys(require('../public/locales.json'));
 
 function redirect(locale) {

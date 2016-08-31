@@ -4,75 +4,10 @@ var Header = require(`../../components/header.js`);
 var HeroUnit = require(`../../components/hero-unit.js`);
 var FellowsHeader = require(`../../components/fellows-header.js`);
 var ContentContainer = require(`../../components/content-container.js`);
-var ImageTag = require(`../../components/imagetag.js`);
 
 var Collapse = require(`rc-collapse`);
 
 let Panel = Collapse.Panel;
-
-
-var IconListContainer = React.createClass({
-  render: function() {
-    return (
-      <div className="iconlist-container">{this.props.children}</div>
-    );
-  }
-});
-
-var IconListItem = React.createClass({
-  render: function() {
-    return (
-      <div className="iconlist-item">
-        <div>
-          <ImageTag height={this.props.height} width={this.props.width} alt={this.props.alt} src1x={this.props.src1x} src2x={this.props.src2x}/>
-        </div>
-        <div className="content-container">
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
-});
-
-var TimeLineItemContainer = React.createClass({
-  render: function() {
-    return (
-      <div className="timeline-item-container">
-        <div className="timeline-month-container">
-          <div className="timeline-month">
-            {this.props.month}
-          </div>
-          <div className="vertical-line"></div>
-        </div>
-        <div className="timeline-item-container-content">{this.props.children}</div>
-      </div>
-    );
-  }
-});
-
-var TimeLineItem = React.createClass({
-  render: function() {
-    return (
-      <div className="timeline-item">
-        <div>
-          <h4>{this.props.label}</h4>
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
-});
-
-var FinancialItem = React.createClass({
-  render: function() {
-    return (
-      <div className="financial-item">
-        <span className="label">{this.props.label}</span>
-        <span className="amount">{this.props.amount}</span>
-      </div>
-    );
-  }
-});
 
 module.exports = React.createClass({
   render: function() {

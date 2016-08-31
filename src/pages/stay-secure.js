@@ -2,8 +2,6 @@ var React = require('react');
 var Footer = require('../components/footer.js');
 var ContentContainer = require('../components/content-container.js');
 import {Accordion, Tab} from '../components/mozilla-accordion.js';
-import ga from 'react-ga';
-import { browserHistory } from 'react-router';
 import StickyContainer from '../components/sticky-container.js';
 
 module.exports = React.createClass({
