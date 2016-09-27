@@ -6,13 +6,15 @@ import url from 'url';
 var locales = require('../../public/locales.json');
 var locationParser = require('./location-parser.js');
 
-// Using a server response we don't have an "index.html", so instead of
-// generating a <Page>...</Page> like we do over in App.js, we actually
-// use a component that wraps a <Page/> with a full HTML document:
-var HTML = require(`../pages/encrypt/index.js`);
-var routes = require('../routes.js');
-
 module.exports = function(req, res, next) {
+  // Using a server response we don't have an "index.html", so instead of
+  // generating a <Page>...</Page> like we do over in App.js, we actually
+  // use a component that wraps a <Page/> with a full HTML document:
+  var HTML = require(`../pages/encrypt/index.js`);
+  var routes = require('../routes.js');
+
+  var ActivitiesHTML = require(`../pages/maker-party/activities/index.js`);
+
   var location = url.parse(req.url).pathname;
   var search = url.parse(req.url).search || "";
   var locale = "";
@@ -105,20 +107,43 @@ module.exports = function(req, res, next) {
       // get wiped if the HTML contains a <script> element that tries to load
       // the bundle for hooking into the DOM.
       let reactHTML = ReactDOM.renderToString(<RouterContext createElement={createElement} {...renderProps}/>);
-      let html = ReactDOM.renderToStaticMarkup(
-        <HTML reactHTML={reactHTML}
-          locale={locale}
-          metaTitle={metaTitle}
-          metaSiteName={metaSiteName}
-          metaUrl={metaUrl}
-          metaDesc={metaDesc}
-          twitterDesc={twitterDesc}
-          metaImage={metaImage}
-          twitterImage={twitterImage}
-          desc={desc}
-          title={title}
-        />
-      );
+
+      let html = "";
+      if (location.indexOf('/maker-party/') !== -1) {
+        if (location.indexOf('/post-crimes/') !== -1) {
+          title = "Maker Party | Postcrimes";
+        }
+        if (location.indexOf('/meme-around/') !== -1) {
+          title = "Maker Party | Meme Around";
+        }
+        if (location.indexOf('/contribute-to-the-commons/') !== -1) {
+          title = "Maker Party | Contribute to the Commons";
+        }
+        if (location.indexOf('/combined-maker-party-activities/') !== -1) {
+          title = "Maker Party | Combines Maker Party Activities";
+        }
+        html = ReactDOM.renderToStaticMarkup(
+          <ActivitiesHTML reactHTML={reactHTML}
+            locale={locale}
+            title={title}
+          />
+        );
+      } else {
+        html = ReactDOM.renderToStaticMarkup(
+          <HTML reactHTML={reactHTML}
+            locale={locale}
+            metaTitle={metaTitle}
+            metaSiteName={metaSiteName}
+            metaUrl={metaUrl}
+            metaDesc={metaDesc}
+            twitterDesc={twitterDesc}
+            metaImage={metaImage}
+            twitterImage={twitterImage}
+            desc={desc}
+            title={title}
+          />
+        );
+      }
 
       // And to be good citizens of the web, we need a doctype, which React
       // cannot generate for us because exclamation points are funny.
