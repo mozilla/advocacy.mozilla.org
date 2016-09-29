@@ -1,16 +1,12 @@
 import React from 'react'
 
 module.exports = {
-  contextTypes: {
-    intl: React.PropTypes.object
-  },
   componentDidMount: function() {
     var navTop, navEl, windowHeight, navHeight;
 
     navEl = document.querySelector(".agenda-navigation");
     var navOffset = navEl.getBoundingClientRect();
     navTop = navOffset.top;
-
     navigate(window.location.hash);
 
     function hide(el) {
@@ -33,10 +29,13 @@ module.exports = {
 
     applyAll(navEl.querySelectorAll('a'), "click", function(e) {
       e.preventDefault();
-      navigate(e.target.getAttribute("href"));
+      navigate(this.getAttribute("href"));
     });
 
     function navigate(hash) {
+      if (!hash) {
+        return;
+      }
       // First, we'll hide all of the content
       forEachList(document.querySelectorAll(".agenda > li"), function(item) {
         hide(item);

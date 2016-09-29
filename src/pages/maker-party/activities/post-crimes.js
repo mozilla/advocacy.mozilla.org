@@ -5,7 +5,6 @@ module.exports = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
   },
-  mixins: [require('./mixin.js')],
   render: function() {
     return (
       <ActivityTemplate
@@ -13,7 +12,7 @@ module.exports = React.createClass({
         overview={{
           duration: "45 minutes",
           activityNumber: 1,
-          activityTotal: 4,
+          activityTotal: 3,
           contents: (
             <div>
               <p>In this activity you’ll engage your group in building virtual post-cards about outdated copyright laws that get printed out and sent to law-makers!</p><br />

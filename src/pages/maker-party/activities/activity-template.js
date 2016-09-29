@@ -1,4 +1,7 @@
 var React = require(`react`);
+var StickyContainer = require("../../../components/sticky-container.js");
+var FormattedHTMLMessage = require("react-intl").FormattedHTMLMessage;
+var FormattedMessage = require("react-intl").FormattedMessage;
 
 var Overview = React.createClass({
   contextTypes: {
@@ -9,19 +12,25 @@ var Overview = React.createClass({
     if (this.props.duration) {
       duration = (
         <p className="time total-time">
-          {this.props.duration}
+          <FormattedMessage id={this.props.duration}/>
         </p>
       );
+    }
+    var activityNumber = (<div></div>);
+    if (this.props.activityNumber && this.props.activityTotal) {
+      activityNumber = (<h4><FormattedMessage id="activity_number" values={{
+        num: this.props.activityNumber,
+        total: this.props.activityTotal
+      }}/></h4>);
     }
     return (
       <section className="overview">
         <p className="made-by">
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a> by <a href="https://learning.mozilla.org">Mozilla</a> 
+          <FormattedHTMLMessage id="creative_commons"/> 
         </p>
 
         {duration}
-
-        <h4>{"Activity " + this.props.activityNumber + " of " + this.props.activityTotal}</h4>
+        {activityNumber}
         <div>{this.props.children}</div>
       </section>
     );
@@ -37,13 +46,13 @@ var Step = React.createClass({
     if (this.props.duration) {
       duration = (
         <div className="time step-time">
-          {this.props.duration}
+          <FormattedMessage id={this.props.duration}/>
         </div>
       );
     }
     return (
       <li>
-        <h1>{this.props.title}</h1>
+        <h1><FormattedMessage id={this.props.title}/></h1>
         {duration}
         <div>{this.props.children}</div>
       </li>
@@ -55,32 +64,44 @@ module.exports = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
   },
+  getPosition: function() {
+    if (!this.refs.stickyContainer) {
+      return 0;
+    }
+    return 350;
+  },
+  mixins: [require('./mixin.js')],
   render: function() {
     return (
-      <div className="wrapper" mode="overview">
+      <div className="activity-template wrapper" mode="overview">
         <aside>
           <div className="image">
             <img src="/assets/maker-party/maker-party-logo.png" alt="An image of the Maker Party logo"></img>
             <a className="attribution" href="">
-              <i className="fa fa-camera"></i> by Mozilla
+              <i className="fa fa-camera"></i>&nbsp;
+              <FormattedHTMLMessage id="by_mozilla"/>
             </a>
           </div>
 
-          <ul className="agenda-navigation">
-            <li><a href="#overview">Overview</a></li>
-            {
-              this.props.steps.map(function(step, index) {
-                return (
-		              <li key={step.title}><a href={"#step-" + (index+1)}>{step.title}</a></li>
-                );
-              })
-            }
-          </ul>
+          <div ref="stickyContainer">
+            <StickyContainer className="sticky-button" stickyFrom={this.getPosition}>
+              <ul className="agenda-navigation" ref="stickyContent">
+                <li><a href="#overview"><FormattedMessage id="overview"/></a></li>
+                {
+                  this.props.steps.map(function(step, index) {
+                    return (
+		                  <li key={step.title}><a href={"#step-" + (index+1)}><FormattedMessage id={step.title}/></a></li>
+                    );
+                  })
+                }
+              </ul>
+            </StickyContainer>
+          </div>
         </aside>
 
         <article className="main">
 
-          <h1 className="activity-title">{"Maker Party | " + this.props.title}</h1>
+          <h1 className="activity-title"><FormattedMessage id="activity_title" values={{title: this.context.intl.formatMessage({id: this.props.title})}}/></h1>
 
           <Overview {...this.props.overview}>
             {this.props.overview.contents}

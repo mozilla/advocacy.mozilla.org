@@ -5,7 +5,6 @@ module.exports = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
   },
-  mixins: [require('./mixin.js')],
   render: function() {
     return (
       <ActivityTemplate
@@ -13,7 +12,7 @@ module.exports = React.createClass({
         overview={{
           duration: "45 minutes",
           activityNumber: 2,
-          activityTotal: 4,
+          activityTotal: 3,
           contents: (
             <div>
               <p style={{textAlign: "center"}}>
@@ -23,7 +22,7 @@ module.exports = React.createClass({
                   A popular <a href="https://cdn.meme.am/instances/45922429.jpg">“Everywhere”</a> meme
                 </em>
               </p>
-              <br/>
+              <br />
               
               <p>In this activity you’ll engage your group in creating memes that support copyright reform! You’ll show the group how to use their own pictures or pictures from the public domain to speak up without breaking the current copyright laws that make it so difficult to create and share memes in the EU. </p><br/>
 

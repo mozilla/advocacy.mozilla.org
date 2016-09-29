@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>flag</title>
+    <desc>Created with Sketch.</desc>
+    <defs/>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="flag" fill="#FFFFFF">
+            <g id="Page-1" transform="translate(1.000000, 1.000000)">
+                <polygon id="Fill-1" points="0 18.0179 2 18.0179 2 0.0179 0 0.0179"/>
+                <path d="M3,1.0179 L3,10.0179 C3,10.0179 6.731,11.1349 8,11.0179 C9.341,10.8949 11.667,9.2039 13,9.0179 C14.263,8.8419 18,10.0179 18,10.0179 L18,1.0179 C18,1.0179 14.263,-0.1581 13,0.0179 C11.667,0.2039 9.341,1.8949 8,2.0179 C6.731,2.1349 3,1.0179 3,1.0179" id="Fill-2"/>
+            </g>
+        </g>
+    </g>
+</svg>

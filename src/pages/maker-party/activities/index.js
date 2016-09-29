@@ -39,6 +39,24 @@ module.exports = React.createClass({
           <OptimizelySubdomain/>
           <Optimizely/>
           <Pontoon/>
+          <style type="text/css">
+            {`
+              @media (min-width: 600px) {
+                .activity-template .sticky-button.sticky {
+                  max-width: 350px;
+                  width: 100%;
+                  position: fixed;
+                  top: 0;
+                }
+              }
+              .activity-template .agenda-navigation li:nth-child(1)::after {
+                background-image: url(/assets/maker-party/flag.svg);
+              }
+              .activity-template .total-time {
+                background-image: url(/assets/maker-party/clock.svg);
+              }
+            `}
+          </style>
         </head>
         <body>
           <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.reactHTML}}/>
