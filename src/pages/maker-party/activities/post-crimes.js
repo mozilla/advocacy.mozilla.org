@@ -28,7 +28,7 @@ module.exports = React.createClass({
                 <li><FormattedHTMLMessage id="postcrimes_overview_list_3"/></li>
                 <li><FormattedMessage id="postcrimes_overview_list_4"/></li>
               </ul>
-                        
+
               <h4><FormattedMessage id="postcrimes_overview_5"/></h4>
               
               <ol className="fancy">
