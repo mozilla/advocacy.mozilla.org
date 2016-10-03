@@ -163,7 +163,6 @@ module.exports = React.createClass({
 
                 <p><FormattedMessage id="contribute_step_2_3"/></p>
                 <p><FormattedMessage id="contribute_step_2_4"/></p>
-
               </div>
             )
           },
