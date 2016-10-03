@@ -65,6 +65,12 @@ function buildRoutes() {
           <Route path="thank-you" component={require(`./pages/encrypt-hard-drive/encrypt-hard-drive-thank-you.js`)}/>
           <Redirect from="*" to={"/" + locale + "/encrypt-hard-drive/"} />
         </Route>
+        <Route path="maker-party/activities">
+          <Route path="post-crimes" component={require(`./pages/maker-party/activities/post-crimes.js`)}/>
+          <Route path="meme-around" component={require(`./pages/maker-party/activities/meme-around.js`)}/>
+          <Route path="contribute-to-the-commons" component={require(`./pages/maker-party/activities/contribute-to-the-commons.js`)}/>
+          <Route path="combined-maker-party-activities" component={require(`./pages/maker-party/activities/combined-maker-party-activities.js`)}/>
+        </Route>
         <Route path="encrypt">
           <IndexRoute onEnter={indexDirect(locale)} />
           <Route path="signup" component={require(`./pages/encrypt/signup.js`)}/>
