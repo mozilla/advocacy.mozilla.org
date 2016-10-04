@@ -27,7 +27,7 @@ module.exports = React.createClass({
               <br />
               
               <p><FormattedMessage id="memearound_overview_2"/></p><br/>
-              <p><FormattedMessage id="memearound_overview_3"/></p><br/>
+              <p><FormattedHTMLMessage id="memearound_overview_3"/></p><br/>
               <p><FormattedMessage id="memearound_overview_4"/></p><br/>
               
               <hr style={{
@@ -42,7 +42,7 @@ module.exports = React.createClass({
               <ul className="fancy">
                 <li><FormattedMessage id="memearound_overview_list_1"/></li>
                 <li><FormattedMessage id="memearound_overview_list_2"/></li>
-                <li><FormattedMessage id="memearound_overview_list_3"/></li>
+                <li><FormattedHTMLMessage id="memearound_overview_list_3"/></li>
                 <li><FormattedMessage id="memearound_overview_list_4"/></li>
               </ul>
               
@@ -117,7 +117,7 @@ module.exports = React.createClass({
                 <li><FormattedMessage id="memearound_overview_list_16"/></li>
                 <li><FormattedMessage id="memearound_overview_list_17"/></li>
                 <li><FormattedMessage id="memearound_overview_list_18"/></li>
-                <li><FormattedMessage id="memearound_overview_list_19"/></li>
+                <li><FormattedHTMLMessage id="memearound_overview_list_19"/></li>
                 <li><FormattedMessage id="memearound_overview_list_20"/></li>
                 <li><FormattedMessage id="memearound_overview_list_21"/></li>
                 <li><FormattedMessage id="memearound_overview_list_22"/></li>
@@ -143,7 +143,7 @@ module.exports = React.createClass({
                 <p><FormattedMessage id="memearound_step_1_2"/></p>
                 <p><FormattedMessage id="memearound_step_1_3"/></p>
                 <p><FormattedMessage id="memearound_step_1_4"/></p>
-                <p><FormattedMessage id="memearound_step_1_5"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_1_5"/></p>
               </div>
             )
           },
@@ -171,7 +171,7 @@ module.exports = React.createClass({
             contents: (
               <div>
                 <p><FormattedMessage id="memearound_step_3_1"/></p>
-                <p><FormattedMessage id="memearound_step_3_2"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_3_2"/></p>
                 <p><FormattedMessage id="memearound_step_3_3"/></p> 
                 
                 <ul className="fancy">
@@ -186,18 +186,18 @@ module.exports = React.createClass({
                 <p><FormattedMessage id="memearound_step_3_7"/></p>
                 <p><strong><em><FormattedMessage id="memearound_step_3_8"/></em></strong></p>
                 <p><em><FormattedMessage id="memearound_step_3_9"/></em></p>
-                <p><FormattedMessage id="memearound_step_3_10"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_3_10"/></p>
                 <p><em><FormattedMessage id="memearound_open_norm"/></em></p>
-                <p><FormattedMessage id="memearound_step_3_11"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_3_11"/></p>
                 <p><strong><em><FormattedMessage id="memearound_step_3_12"/></em></strong></p>
-                <p><FormattedMessage id="memearound_step_3_13"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_3_13"/></p>
                 <p><FormattedMessage id="memearound_step_3_14"/></p>
                 
                 <p style={{textAlign: "center"}}>
                   <img src="/assets/maker-party/Typical_internet_meme_image_format.svg.png"  width="50%" alt="An image of a meme macro showing where to out top text, bottom text, and the picture" />
                   <br/>
                   <em style={{fontSize: ".9em"}}>
-                    <FormattedMessage id="memearound_step_3_15"/>
+                    <FormattedHTMLMessage id="memearound_step_3_15"/>
                   </em>
                 </p>
                 
@@ -207,11 +207,11 @@ module.exports = React.createClass({
                   <img src="/assets/maker-party/9148130.jpg" width="50%" alt="An image of a meme of a historical expert that says, ‘I don’t know therefore aliens’" />
                   <br/>
                   <em style={{fontSize: ".9em"}}>
-                    <FormattedMessage id="memearound_step_3_17"/>
+                    <FormattedHTMLMessage id="memearound_step_3_17"/>
                   </em>
                 </p>
                 
-                <p style={{textAlign: "center"}}><img src="/assets/maker-party/1241222446876.jpg" width="50%" alt="An image of a meme that shows a velocoraptor saying, 'If actons are stronger than words, why is the pen mightier than the sword?'" / ><br/><em style={{fontSize: ".9em"}}><FormattedMessage id="memearound_step_3_18"/></em></p>
+                <p style={{textAlign: "center"}}><img src="/assets/maker-party/1241222446876.jpg" width="50%" alt="An image of a meme that shows a velocoraptor saying, 'If actons are stronger than words, why is the pen mightier than the sword?'" / ><br/><em style={{fontSize: ".9em"}}><FormattedHTMLMessage id="memearound_step_3_18"/></em></p>
 
                 <p><FormattedMessage id="memearound_step_3_19"/></p>
                 <p><FormattedMessage id="memearound_step_3_20"/></p>
@@ -223,14 +223,14 @@ module.exports = React.createClass({
                 <p><FormattedHTMLMessage id="memearound_step_3_26"/></p>
                 <p><FormattedHTMLMessage id="memearound_step_3_27"/></p>
                 <p><strong><em><FormattedMessage id="memearound_step_3_28"/></em></strong></p>
-                <p><FormattedMessage id="memearound_step_3_29"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_3_29"/></p>
                 
                 <ul className="fancy">
                   <li><FormattedMessage id="memearound_step_3_list_4"/></li>
                   <li><FormattedMessage id="memearound_step_3_list_5"/></li>
                 </ul>
                 
-                <p><FormattedMessage id="memearound_step_3_30"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_3_30"/></p>
                 <p><FormattedMessage id="memearound_step_3_31"/></p>
                 <p><FormattedMessage id="memearound_step_3_32"/></p>
                 
@@ -243,10 +243,10 @@ module.exports = React.createClass({
                 <p><FormattedMessage id="memearound_step_3_34"/></p>
 
                 <ul className="fancy">              
-                  <li><FormattedMessage id="memearound_step_3_list_8"/></li>
-                  <li><FormattedMessage id="memearound_step_3_list_9"/></li>
-                  <li><FormattedMessage id="memearound_step_3_list_10"/></li>
-                  <li><FormattedMessage id="memearound_step_3_list_11"/></li>
+                  <li><FormattedHTMLMessage id="memearound_step_3_list_8"/></li>
+                  <li><FormattedHTMLMessage id="memearound_step_3_list_9"/></li>
+                  <li><FormattedHTMLMessage id="memearound_step_3_list_10"/></li>
+                  <li><FormattedHTMLMessage id="memearound_step_3_list_11"/></li>
                 </ul>
               </div>
             )
@@ -256,7 +256,7 @@ module.exports = React.createClass({
             duration: "duration_20_min",
             contents: (
               <div>
-                <p><FormattedMessage id="memearound_step_4_1"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_4_1"/></p>
                 <p><FormattedMessage id="memearound_step_4_2"/></p>
                 <p><FormattedMessage id="memearound_step_4_3"/></p>
                 <p><FormattedMessage id="memearound_step_4_4"/></p>
@@ -269,7 +269,7 @@ module.exports = React.createClass({
                   <li><a href="http://www.nypl.org/blog/2016/01/05/share-public-domain-collections"><FormattedMessage id="memearound_step_4_list_5"/></a></li>
                 </ul>
                 
-                <p><FormattedMessage id="memearound_step_4_5"/></p>
+                <p><FormattedHTMLMessage id="memearound_step_4_5"/></p>
               </div>
             )
           },
@@ -279,7 +279,7 @@ module.exports = React.createClass({
             contents: (
               <div>
                 <p><FormattedMessage id="memearound_reflection_1"/></p>
-                <p><FormattedMessage id="memearound_reflection_2"/></p>
+                <p><FormattedHTMLMessage id="memearound_reflection_2"/></p>
                 <p><FormattedMessage id="memearound_reflection_3"/></p>
                 
                 <ul className="fancy">
@@ -288,9 +288,9 @@ module.exports = React.createClass({
                   <li><FormattedMessage id="memearound_reflection_list_3"/></li>
                 </ul>
                 
-                <p><FormattedMessage id="memearound_reflection_4"/></p>
-                <p><FormattedMessage id="memearound_reflection_5"/></p>
-                <p><FormattedMessage id="memearound_reflection_6"/></p>
+                <p><FormattedHTMLMessage id="memearound_reflection_4"/></p>
+                <p><FormattedHTMLMessage id="memearound_reflection_5"/></p>
+                <p><FormattedHTMLMessage id="memearound_reflection_6"/></p>
                 <p><FormattedMessage id="memearound_reflection_7"/></p>
                   
                 <ul className="fancy">
@@ -299,7 +299,7 @@ module.exports = React.createClass({
                   <li><FormattedMessage id="memearound_reflection_list_6"/></li>
                 </ul>
 
-			          <p><FormattedMessage id="memearound_reflection_8"/></p>
+			          <p><FormattedHTMLMessage id="memearound_reflection_8"/></p>
               </div>
             )
           }
