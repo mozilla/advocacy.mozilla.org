@@ -101,8 +101,8 @@ module.exports = React.createClass({
                 </ul>
                 
                 <p><FormattedMessage id="postcrimes_step_2_2"/></p>
-                <p><FormattedMessage id="postcrimes_step_2_3"/></p> 
-                <p><FormattedMessage id="postcrimes_step_2_4"/></p>
+                <p><FormattedHTMLMessage id="postcrimes_step_2_3"/></p> 
+                <p><FormattedHTMLMessage id="postcrimes_step_2_4"/></p>
                 <p><FormattedMessage id="postcrimes_step_2_5"/></p>
                 <p><FormattedMessage id="postcrimes_step_2_6"/></p>
                 <p><FormattedMessage id="postcrimes_step_2_7"/></p>
