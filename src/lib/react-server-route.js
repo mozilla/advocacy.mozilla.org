@@ -93,7 +93,7 @@ module.exports = function(req, res, next) {
         return;
       }
       function createElement(Component, props) {
-        var messages = locales[locale];
+        var messages = Object.assign({}, locales["en-US"], locales[locale]);
         // make sure you pass all the props in!
         return (
           <IntlProvider locale={locale} messages={messages}>
@@ -120,7 +120,7 @@ module.exports = function(req, res, next) {
           title = "Maker Party | Contribute to the Commons";
         }
         if (location.indexOf('/combined-maker-party-activities/') !== -1) {
-          title = "Maker Party | Combines Maker Party Activities";
+          title = "Maker Party | Combined Maker Party Activities";
         }
         html = ReactDOM.renderToStaticMarkup(
           <ActivitiesHTML reactHTML={reactHTML}
