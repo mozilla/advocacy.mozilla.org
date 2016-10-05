@@ -60,6 +60,7 @@
     "less-loader": "2.2.2",
     "mozilla-tabzilla": "^0.5.1",
     "npm-run-all": "1.2.4",
+    "object-assign": "4.1.0",
     "postcss-loader": "0.8.1",
     "properties-parser": "0.3.1",
     "q-io": "1.13.2",

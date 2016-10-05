@@ -7,11 +7,12 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import routes from './routes.js';
 import ga from 'react-ga';
 import locales from '../public/locales.json';
+import assign from 'object-assign';
 
 function createElement(Component, props) {
   var locale = window.location.pathname.split("/")[1];
   var ReactIntlLocaleData = window.ReactIntlLocaleData;
-  var messages = locales[locale];
+  var messages = assign({}, locales['en-US'], locales[locale]);
 
   Object.keys(ReactIntlLocaleData).forEach((lang) => {
     addLocaleData(ReactIntlLocaleData[lang]);
