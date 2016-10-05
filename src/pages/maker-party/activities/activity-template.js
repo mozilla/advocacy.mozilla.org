@@ -76,7 +76,7 @@ module.exports = React.createClass({
       <div className="activity-template wrapper" mode="overview">
         <aside>
           <div className="image">
-            <img src="/assets/maker-party/maker-party-logo.png" alt="An image of the Maker Party logo"></img>
+            <img height="350" width="350" src="/assets/maker-party/maker-party-logo.png" alt="An image of the Maker Party logo"></img>
             <a className="attribution" href="">
               <i className="fa fa-camera"></i>&nbsp;
               <FormattedHTMLMessage id="by_mozilla"/>

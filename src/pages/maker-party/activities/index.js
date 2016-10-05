@@ -42,12 +42,44 @@ module.exports = React.createClass({
           <style type="text/css">
             {`
               @media (min-width: 600px) {
+                .activity-template aside {
+                  width: 250px;
+                }
+                .activity-template aside .image img {
+                  margin-left: -52px;;
+                }
                 .activity-template .sticky-button.sticky {
-                  max-width: 350px;
+                  max-width: 250px;
                   width: 100%;
                   position: fixed;
                   top: 0;
                 }
+              }
+              @media (min-width: 800px) {
+                .activity-template aside {
+                  width: 300px;
+                }
+                .activity-template aside .image img {
+                  margin-left: -26px;
+                }
+                .activity-template .sticky-button.sticky {
+                  max-width: 300px;
+                }
+              }
+              @media (min-width: 1000px) {
+                .activity-template aside {
+                  width: 350px;
+                }
+                .activity-template aside .image img {
+                  margin-left: 0;
+                }
+                .activity-template .sticky-button.sticky {
+                  max-width: 350px;
+                }
+              }
+              .activity-template aside .image img {
+                width: 350px;
+                height: 350px;
               }
               .activity-template .agenda-navigation li:nth-child(1)::after {
                 background-image: url(/assets/maker-party/flag.svg);
