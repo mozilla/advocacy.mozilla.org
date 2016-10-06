@@ -94,7 +94,7 @@ module.exports = React.createClass({
               link="https://subalterntones.wordpress.com/"
               linkName="Berhan’s blog"
             >
-              Berhan is a social justice activist, a peace studies practitioner, and an avid advocate for open data and the open web. Berhan previously worked at a Conflict Early Warning and Early Response Center mitigating violence in East Africa. She has also conducted research on transitional justice and criminal violence at the University of Notre Dame, consulted for intergovernmental bodies in Addis Ababa and Nairobi, and engaged legislative processes related to land rights in Cape Town. As an Open Web Fellow, Berhan will be based at the Center for Intellectual Property and Information Technology (CIPIT) at the Strathmore Law School in Nairobi, Kenya, focusing on internet freedom in Eastern Africa.
+              Berhan is a social justice activist, a peace studies practitioner, and an avid advocate for open data and the open web. Berhan previously worked at a Conflict Early Warning and Early Response Center mitigating violence in East Africa. She has also conducted research on transitional justice and criminal violence at the University of Notre Dame, consulted for intergovernmental bodies in Addis Ababa and Nairobi, and engaged legislative processes related to land rights in Cape Town.
             </FellowBlock>
           </ContentContainer>
           <ContentContainer className="grey slant">
