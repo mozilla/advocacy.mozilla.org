@@ -9,11 +9,7 @@ module.exports = React.createClass({
   render: function() {
     var localeData = "";
     var locale = this.props.locale || "";
-    var googleFonts = "//fonts.googleapis.com/css?family=Fira+Sans:300,300i,400i,400,600|Fira+Mono:400";
     if (locale) {
-      if (locale === "cs") {
-        googleFonts += "&subset=latin-ext";
-      }
       localeData = fs.readFileSync(Path.join(__dirname, '../../../node_modules/react-intl/locale-data/' + locale.split('-')[0] + '.js'), 'utf8');
     }
     return (
@@ -38,9 +34,8 @@ module.exports = React.createClass({
           <meta description={this.props.desc} />
 
           <link rel="preconnect" href="https://www.google-analytics.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="stylesheet" type="text/css" href="/build/main.css"/>
-          <link rel="stylesheet" type="text/css" href={googleFonts}/>
+          <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
           <title>{this.props.title}</title>
           <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png"/>
