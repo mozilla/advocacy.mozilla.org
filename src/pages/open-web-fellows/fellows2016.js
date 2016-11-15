@@ -87,8 +87,6 @@ module.exports = React.createClass({
             <FellowBlock
               name="Berhan Taye"
               image="/assets/fellows2016/Berhan@2x.jpg"
-              company="Center for Intellectual Property and Information"
-              companyHref="https://www.cipit.org/"
               handle="btayeg"
               handleHref="https://twitter.com/btayeg"
               link="https://subalterntones.wordpress.com/"
