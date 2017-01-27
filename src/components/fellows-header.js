@@ -14,16 +14,16 @@ module.exports = React.createClass({
         <div className="fellow-header-overlay"></div>
         <div className="nav-items">
           <div className="nav-link-container current-fellows-link">
-            <Link to={"/" + locale + "/open-web-fellows/fellows2016"}>{this.context.intl.formatMessage({id: 'fellows2016'})}</Link>
+            <Link to={"/" + locale + "/open-web-fellows/fellows2016"}>2016 Fellows</Link>
           </div>
           <div className="nav-link-container past-fellows-link">
-            <Link to={"/" + locale + "/open-web-fellows/fellows2015"}>{this.context.intl.formatMessage({id: 'fellows2015'})}</Link>
+            <Link to={"/" + locale + "/open-web-fellows/fellows2015"}>2015 Fellows</Link>
           </div>
           <div className="nav-link-container overview-link">
-            <Link to={"/" + locale + "/open-web-fellows/overview"}>{this.context.intl.formatMessage({id: 'overview'})}</Link>
+            <Link to={"/" + locale + "/open-web-fellows/overview"}>Overview</Link>
           </div>
           <div className="nav-link-container info-link">
-            <Link to={"/" + locale + "/open-web-fellows/info"}>{this.context.intl.formatMessage({id: 'faq'})}</Link>
+            <Link to={"/" + locale + "/open-web-fellows/info"}>FAQ</Link>
           </div>
         </div>
       </StickyContainer>
