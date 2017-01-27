@@ -35,9 +35,9 @@ module.exports = React.createClass({
         <Header/>
         <HeroUnit className="home-page-hero-unit">
           <ImageTag alt="encrypt banner image" width={790} src1x="/assets/encrypt/encrypt.svg"/>
-          <p className="intro">Your online privacy depends on encryption. Learn more about how encryption works, why it's essential to a strong Web, and why it's worth protecting.</p>
+          <p className="intro">{this.context.intl.formatMessage({id: 'new_intro'})}</p>
           <div>
-            <a href={"/" + locale + "/encrypt/"} className="button">learn more</a>
+            <a href={"/" + locale + "/encrypt/"} className="button">{this.context.intl.formatMessage({id: 'learn_more'})}</a>
           </div>
         </HeroUnit>
         <div className="page">
@@ -47,44 +47,44 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer className="home-page-content grey center-align slant reverse flat-bottom">
             <HomePageItem
-              alt="net neutrality image"
+              alt={this.context.intl.formatMessage({id: 'activism_alt'})}
               src1x="/assets/digital-tools-for-activism.jpg"
               src2x="/assets/digital-tools-for-activism@2x.jpg"
-              label="Tools for Activism"
+              label={this.context.intl.formatMessage({id: 'activism_label'})}
               buttonHref="https://github.com/mozilla/toolsforactivism"
-              buttonLabel="see the list"
+              buttonLabel={this.context.intl.formatMessage({id: 'activism_button'})}
             >
-              From climate change to human rights, 21st century campaigns will be won and lost online. Check out this list of tools from Mozilla and our friends that help us organize, coordinate, communicate, mobilize and take collective action.
+              {this.context.intl.formatMessage({id: 'activism_description'})}
             </HomePageItem>
             <HomePageItem
-              alt="open web fellows image"
+              alt={this.context.intl.formatMessage({id: 'fellows_alt'})}
               src1x="/assets/home-fellows.jpg"
               src2x="/assets/home-fellows@2x.jpg"
-              label="Open Web Fellows"
+              label={this.context.intl.formatMessage({id: 'fellows_label'})}
               buttonHref="http://mozilla.github.io/content/open-web-fellows-report/#introduction"
-              buttonLabel="Read our Year 1 Report"
+              buttonLabel={this.context.intl.formatMessage({id: 'fellows_button'})}
             >
-              The Open Web Fellows program places the best emerging technology talent at civil society organizations around the globe. As threats to digital freedom proliferate, it's critical to have capable leaders.
+              {this.context.intl.formatMessage({id: 'fellows_description'})}
             </HomePageItem>
             <HomePageItem
-              alt="usa freedom act image"
+              alt={this.context.intl.formatMessage({id: 'freedom_alt'})}
               src1x="/assets/home-freedom.jpg"
               src2x="/assets/home-freedom@2x.jpg"
-              label="USA FREEDOM Act"
+              label={this.context.intl.formatMessage({id: 'freedom_label'})}
               buttonHref="https://blog.mozilla.org/netpolicy/2015/06/02/mozilla-applauds-u-s-senates-passage-of-the-usa-freedom-act/"
-              buttonLabel="read post"
+              buttonLabel={this.context.intl.formatMessage({id: 'freedom_button'})}
             >
-              Mass Surveillance is a threat to privacy and trust online. Our community fought for the successful passage of the USA FREEDOM Act, a first step toward reforming mass surveillance.
+              {this.context.intl.formatMessage({id: 'freedom_description'})}
             </HomePageItem>
             <HomePageItem
-              alt="net policy blog image"
+              alt={this.context.intl.formatMessage({id: 'policy_alt'})}
               src1x="/assets/home-policy.jpg"
               src2x="/assets/home-policy@2x.jpg"
-              label="Net Policy Blog"
+              label={this.context.intl.formatMessage({id: 'policy_label'})}
               buttonHref="https://blog.mozilla.org/netpolicy/"
-              buttonLabel="read post"
+              buttonLabel={this.context.intl.formatMessage({id: 'policy_button'})}
             >
-              Mozilla's team of policy experts and engineers are fighting for a free and open Internet. Read the latest developments and news on Our Net Policy blog.
+              {this.context.intl.formatMessage({id: 'policy_description'})}
             </HomePageItem>
           </ContentContainer>
         </div>
