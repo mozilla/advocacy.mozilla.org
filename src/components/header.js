@@ -18,11 +18,11 @@ module.exports = React.createClass({
             <Link to={"/" + locale + "/"}>
               <div className="logo-fade">
                 <ImageTag src1x="/assets/logo-mozilla.svg"
-                  alt="advocacy logo"/>
+                  alt={this.context.intl.formatMessage({id: 'advocacy_alt'})}/>
               </div>
               <div>
                 <ImageTag src1x={logoImage}
-                  alt="advocacy logo"/>
+                  alt={this.context.intl.formatMessage({id: 'advocacy_alt'})}/>
               </div>
             </Link>
           </div>

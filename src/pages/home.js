@@ -34,7 +34,7 @@ module.exports = React.createClass({
       <div className="home-page">
         <Header/>
         <HeroUnit className="home-page-hero-unit">
-          <ImageTag alt="encrypt banner image" width={790} src1x="/assets/encrypt/encrypt.svg"/>
+          <ImageTag alt={this.context.intl.formatMessage({id: 'encrypt_alt'})} width={790} src1x="/assets/encrypt/encrypt.svg"/>
           <p className="intro">{this.context.intl.formatMessage({id: 'new_intro'})}</p>
           <div>
             <a href={"/" + locale + "/encrypt/"} className="button">{this.context.intl.formatMessage({id: 'learn_more'})}</a>
