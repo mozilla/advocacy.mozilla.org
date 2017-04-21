@@ -23,7 +23,7 @@ module.exports = React.createClass({
             <Link to={"/" + locale + "/open-web-fellows/overview"}>Overview</Link>
           </div>
           <div className="nav-link-container info-link">
-            <Link to={"/" + locale + "/open-web-fellows/info"}>FAQ</Link>
+            <a href="https://docs.google.com/document/d/1WLfmXOtIO4rtynR1pi6ekO0-NMjRFkVtLea3T8_KJ3o/">FAQ</a>
           </div>
         </div>
       </StickyContainer>
