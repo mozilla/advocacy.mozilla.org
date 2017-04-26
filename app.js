@@ -8,13 +8,18 @@ var express = require('express'),
     reactRouted = require('./dist/lib/react-server-route.js'),
     locationParser = require('./dist/lib/location-parser.js');
 
+var bodyParser = require('body-parser');
+
 Habitat.load();
 
 var app = express(),
   env = new Habitat();
 
+var routes = require('./routes');
+
 app.set('trust proxy', true);
 
+app.use(bodyParser.json());
 app.use(compression());
 app.use(helmet());
 app.use(frameguard({
@@ -52,6 +57,8 @@ app.use(function(req, resp, next){
     next();
   }
 });
+
+app.post('/api/petition/sheets', routes.sheets);
 
 app.use(reactRouted);
 app.use(express.static(__dirname + '/public', {maxAge: 3600000}));
