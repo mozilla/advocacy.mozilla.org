@@ -71,6 +71,11 @@ function buildRoutes() {
           <Route path="contribute-to-the-commons" component={require(`./pages/maker-party/activities/contribute-to-the-commons.js`)}/>
           <Route path="combined-maker-party-activities" component={require(`./pages/maker-party/activities/combined-maker-party-activities.js`)}/>
         </Route>
+        <Route path="net-neutrality">
+          <IndexRoute component={require(`./pages/net-neutrality/signup.js`)}/>
+          <Route path="share" component={require(`./pages/net-neutrality/share.js`)}/>
+          <Redirect from="*" to={"/" + locale + "/net-neutrality/"} />
+        </Route>
         <Route path="encrypt">
           <IndexRoute onEnter={indexDirect(locale)} />
           <Route path="signup" component={require(`./pages/encrypt/signup.js`)}/>

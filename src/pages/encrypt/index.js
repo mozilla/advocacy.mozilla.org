@@ -13,7 +13,7 @@ module.exports = React.createClass({
       localeData = fs.readFileSync(Path.join(__dirname, '../../../node_modules/react-intl/locale-data/' + locale.split('-')[0] + '.js'), 'utf8');
     }
     return (
-      <html>
+      <html className={this.props.htmlClassName}>
         <head>
           <meta charSet="UTF-8"/>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>

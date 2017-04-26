@@ -70,6 +70,11 @@ module.exports = function(req, res, next) {
     title = "Update Your Software";
   }
 
+  var htmlClassName = "";
+  if (location.indexOf('/net-neutrality') !== -1) {
+    htmlClassName = "net-netrality-html";
+  }
+
   // This is essentially a callback lookup. If the requested URL is a known
   // URL based on the routing map as defined in routes.js, then this will
   // lead to render properties that can be used to generate page components.
@@ -141,6 +146,7 @@ module.exports = function(req, res, next) {
             twitterImage={twitterImage}
             desc={desc}
             title={title}
+            htmlClassName={htmlClassName}
           />
         );
       }
