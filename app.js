@@ -31,9 +31,8 @@ app.use(helmet.csp({
     scriptSrc: ["'self'","'unsafe-inline'","'unsafe-eval'","data:", "https://cdn.optimizely.com", "https://app.optimizely.com", "https://basket.mozilla.org", "https://basket-dev.allizom.org","https://*.shpg.org/", "https://www.google-analytics.com/", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
     connectSrc:["'self'", "206878104.log.optimizely.com", "https://basket.mozilla.org/", "https://basket-dev.allizom.org", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
     childSrc:["'self'", "https://app.optimizely.com", "https://facebook.com", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
-    frameSrc: ["'self'", "https://app.optimizely.com", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
     imgSrc:["'self'","data:", "https://www.google-analytics.com", "https://pontoon.mozilla.org","https://*.shpg.org/",
-          "https://cdn.optimizely.com", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com'],
+          "https://cdn.optimizely.com", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com', 'data:'],
     frameAncestors: ["https://app.optimizely.com", 'https://pontoon.mozilla.org', 'https://mozilla-pontoon-staging.herokuapp.com']
   }
 }));
