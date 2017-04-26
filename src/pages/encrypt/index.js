@@ -49,7 +49,7 @@ module.exports = React.createClass({
         <body>
           <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.reactHTML}}/>
           <script src="/build/main.js"></script>
-          <script src="//c.shpg.org/352/sp.js"></script>
+          <script src="https://c.shpg.org/352/sp.js"></script>
         </body>
       </html>
     );

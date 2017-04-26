@@ -35,9 +35,7 @@ var Footer = React.createClass({
               <a className="logo" href="https://mozilla.org"></a>
             </div>
             <span className="org-info-container">
-              <FormattedHTMLMessage
-                id='footer_description'
-              />
+              footer description
             </span>
           </div>
         </div>
