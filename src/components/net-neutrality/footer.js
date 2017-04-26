@@ -12,22 +12,22 @@ var Footer = React.createClass({
         <div className="footer-contents">
           <div className="footer-links">
             <a href="https://www.mozilla.org/contact/" className="footer-link contact">
-              {this.context.intl.formatMessage({id: 'contact_us'})}
+              Contact Us
             </a>
             <a href={shareLink} className="footer-link share">
-              {this.context.intl.formatMessage({id: 'share_this_page'})}
+              Share this page
             </a>
             <a href="https://twitter.com/Mozilla" className="footer-link follow">
-              {this.context.intl.formatMessage({id: 'follow'})}
+              Follow
             </a>
             <a href="https://www.mozilla.org/about/legal/terms/mozilla/" className="footer-link legal">
-              {this.context.intl.formatMessage({id: 'legal'})}
+              Legal
             </a>
             <a href="https://www.mozilla.org/privacy/websites/" className="footer-link privacy">
-              {this.context.intl.formatMessage({id: 'privacy'})}
+              Privacy
             </a>
             <a href="https://donate.mozilla.org/" className="footer-link donate">
-              {this.context.intl.formatMessage({id: 'donate'})}
+              Donate
             </a>
           </div>
           <div className="org-info">
