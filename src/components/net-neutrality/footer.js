@@ -35,7 +35,7 @@ var Footer = React.createClass({
               <a className="logo" href="https://mozilla.org"></a>
             </div>
             <span className="org-info-container">
-              footer description
+              Mozilla is a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href="https://www.mozilla.org">mozilla.org</a>.
             </span>
           </div>
         </div>

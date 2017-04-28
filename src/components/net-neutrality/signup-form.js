@@ -97,7 +97,7 @@ var Signup = React.createClass({
       });
     }
 
-    if (!this.state.signupCheckbox) {
+    /*if (!this.state.signupCheckbox) {
       valid = false;
       this.setState({
         signupCheckboxError: 'This field is required.'
@@ -107,7 +107,7 @@ var Signup = React.createClass({
         action: "Form Error",
         label: "Opt-in Error"
       });
-    }
+    }*/
 
     if (valid) {
       reactGA.event({
@@ -180,24 +180,21 @@ var Signup = React.createClass({
       "submitting": this.state.submitting === SIGNUP_SUBMITTING,
       "arrow": this.state.submitting === NOT_SUBMITTING
     });
-    var buttonText = 'ADD MY NAME'
+    var buttonText = 'Send your comment'
     if (this.state.submitting) {
       buttonText = ``;
     }
 
     return (
       <div>
-        <h3>
-          take action headline
-        </h3>
         <p>
-          take action description
+          We need to act immediately and raise our voices to remind Chairman Pai and the FCC it is their job to protect net neutrality. Fill out the form below and tell the FCC why you think net neutrality is fundamental and must be protected.
         </p>
         <div ref={(element) => { this.stickyContainer = element; }}>
           <StickyContainer className="sticky-container" stickyTo={this.getPosition}>
             <div className="sticky-content" ref={(element) => { this.stickyContent = element; }}>
               <a onClick={this.mobileGetInvolved} className="get-involved button arrow" href="#get-involved">
-                get involved
+                Send your comment
               </a>
             </div>
           </StickyContainer>
