@@ -171,6 +171,14 @@ var Signup = React.createClass({
       label: "Opt-in Checkbox Focus"
     });
   },
+  renderError: function(message) {
+    if (!message) {
+      return null;
+    }
+    return (
+      <p className="error-message">{message}</p>
+    );
+  },
   render: function() {
     var emailClassName = classnames({
       "invalid": !!this.state.emailError
@@ -200,22 +208,28 @@ var Signup = React.createClass({
           </StickyContainer>
         </div>
         <input onClick={this.onFirstNameInputClick} autoComplete="off" type='text' value={this.state.firstName} onChange={this.firstNameChange} placeholder={'First Name'}/>
+        {this.renderError(this.state.firstNameError)}
         <input onClick={this.onLastNameInputClick} autoComplete="off" type='text' value={this.state.lastName} onChange={this.lastNameChange} placeholder={'Last Name'}/>
+        {this.renderError(this.state.lastNameError)}
         <input onClick={this.onEmailInputClick} autoComplete="off" ref={(input) => { this.emailInput = input; }} type='email' className={emailClassName} value={this.state.email} onChange={this.emailChange} required placeholder={'Email'}/>
-        <p className="error-message">{this.state.emailError}</p>
-        <p className="error-message">{this.state.signupError}</p>
+        {this.renderError(this.state.emailError)}
+        {/*<input onClick={this.onAddressInputClick} autoComplete="off" type='text' value={this.state.address} onChange={this.addressChange} placeholder={'Address'}/>
+        {this.renderError(this.state.addressError)}
+        <textarea onClick={this.onCommentInputClick} autoComplete="off" type='text' value={this.state.comment} onChange={this.commentChange} placeholder={'Comment'}/>
+        {this.renderError(this.state.commentError)}*/}
+        {this.renderError(this.state.signupError)}
         <label>
           <input onClick={this.onSignupCheckboxClick} className="checkbox" autoComplete="off" onChange={this.signupCheckboxChange} value={this.state.signupCheckbox} type="checkbox"></input>
           <span>Yes, I want to receive email updates about Mozilla's campaigns.</span>
+          {this.renderError(this.state.signupCheckboxError)}
         </label>
-        <p className="privacy-error error-message">{this.state.signupCheckboxError}</p>
         <label>
           <input onClick={this.onPrivacyCheckboxClick} className="checkbox" autoComplete="off" onChange={this.privacyCheckboxChange} value={this.state.privacyCheckbox} type="checkbox"></input>
           <span>
             I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/websites/">Privacy Notice</a>
           </span>
+          {this.renderError(this.state.privacyCheckboxError)}
         </label>
-        <p className="privacy-error error-message">{this.state.privacyCheckboxError}</p>
         <button onClick={this.onSubmit} className={buttonClassName}>
           {buttonText}
         </button>
