@@ -19,7 +19,9 @@ var Signup = React.createClass({
       email: "",
       emailError: "",
       firstName: "",
+      firstNameError: "",
       lastName: "",
+      lastNameError: "",
       signupCheckbox: "",
       signupCheckboxError: "",
       privacyCheckbox: "",
@@ -28,12 +30,14 @@ var Signup = React.createClass({
   },
   firstNameChange: function(e) {
     this.setState({
-      firstName: e.target.value
+      firstName: e.target.value,
+      firstNameError: ""
     });
   },
   lastNameChange: function(e) {
     this.setState({
-      lastName: e.target.value
+      lastName: e.target.value,
+      lastNameError: ""
     });
   },
   emailChange: function(e) {
@@ -82,6 +86,32 @@ var Signup = React.createClass({
         category: "Signup",
         action: "Form Error",
         label: "Invalid Email Error"
+      });
+    }
+
+    if (!this.state.firstName.trim()) {
+      valid = false;
+
+      this.setState({
+        firstNameError: 'This field is required.'
+      });
+      reactGA.event({
+        category: "Signup",
+        action: "Form Error",
+        label: "Empty firstName Error"
+      });
+    }
+
+    if (!this.state.lastName.trim()) {
+      valid = false;
+
+      this.setState({
+        lastNameError: 'This field is required.'
+      });
+      reactGA.event({
+        category: "Signup",
+        action: "Form Error",
+        label: "Empty lastName Error"
       });
     }
 
@@ -180,6 +210,12 @@ var Signup = React.createClass({
     );
   },
   render: function() {
+    var firstNameClassName = classnames({
+      "invalid": !!this.state.firstNameError
+    });
+    var lastNameClassName = classnames({
+      "invalid": !!this.state.lastNameError
+    });
     var emailClassName = classnames({
       "invalid": !!this.state.emailError
     });
@@ -207,11 +243,11 @@ var Signup = React.createClass({
             </div>
           </StickyContainer>
         </div>
-        <input onClick={this.onFirstNameInputClick} autoComplete="off" type='text' value={this.state.firstName} onChange={this.firstNameChange} placeholder={'First Name'}/>
+        <input onClick={this.onFirstNameInputClick} autoComplete="off" type='text' className={firstNameClassName} value={this.state.firstName} onChange={this.firstNameChange} placeholder={'First Name'}/>
         {this.renderError(this.state.firstNameError)}
-        <input onClick={this.onLastNameInputClick} autoComplete="off" type='text' value={this.state.lastName} onChange={this.lastNameChange} placeholder={'Last Name'}/>
+        <input onClick={this.onLastNameInputClick} autoComplete="off" type='text' className={lastNameClassName} value={this.state.lastName} onChange={this.lastNameChange} placeholder={'Last Name'}/>
         {this.renderError(this.state.lastNameError)}
-        <input onClick={this.onEmailInputClick} autoComplete="off" ref={(input) => { this.emailInput = input; }} type='email' className={emailClassName} value={this.state.email} onChange={this.emailChange} required placeholder={'Email'}/>
+        <input onClick={this.onEmailInputClick} autoComplete="off" type='email' ref={(input) => { this.emailInput = input; }} className={emailClassName} value={this.state.email} onChange={this.emailChange} required placeholder={'Email'}/>
         {this.renderError(this.state.emailError)}
         {/*<input onClick={this.onAddressInputClick} autoComplete="off" type='text' value={this.state.address} onChange={this.addressChange} placeholder={'Address'}/>
         {this.renderError(this.state.addressError)}
