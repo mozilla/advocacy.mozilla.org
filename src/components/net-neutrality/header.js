@@ -19,13 +19,13 @@ module.exports = React.createClass({
         <div className="header-content">
           <div className="header-content-container">
             <h1>
-              Make your voice heard: Stand up for the open internet.
+              Make your voice heard: Stand up for net neutrality.
             </h1>
             <p>
               The FCC has a plan to destroy Net Neutrality. It’s up to us to stop it.
             </p>
             <a onClick={this.mobileGetInvolved} className="get-involved button arrow" href="#get-involved">
-              Send your comment
+              Sign our letter supporting NN
             </a>
           </div>
         </div>

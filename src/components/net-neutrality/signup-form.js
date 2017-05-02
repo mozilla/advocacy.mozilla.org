@@ -224,7 +224,7 @@ var Signup = React.createClass({
       "submitting": this.state.submitting === SIGNUP_SUBMITTING,
       "arrow": this.state.submitting === NOT_SUBMITTING
     });
-    var buttonText = 'Send your comment'
+    var buttonText = 'Sign our letter supporting NN'
     if (this.state.submitting) {
       buttonText = ``;
     }
@@ -232,13 +232,30 @@ var Signup = React.createClass({
     return (
       <div>
         <p>
-          We need to act immediately and raise our voices to remind Chairman Pai and the FCC it is their job to protect net neutrality. Fill out the form below and tell the FCC why you think net neutrality is fundamental and must be protected.
+          <i>It’s time to save the internet -- again</i>
+        </p>
+        <div className="letter">
+          <p>
+            Dear FCC Chairman Ajit Pai:
+          </p>
+          <p>
+            Your proposal to weaken existing net neutrality rules is unacceptable. It would weaken competition, stifle innovation, undermine user choice, and threaten free speech online.
+          </p>
+          <p>
+            You can’t fix what’s not broken. Leave net neutrality alone.
+          </p>
+        </div>
+        <p>
+          We’ll deliver this letter, with your signature, straight to the FCC as it considers its next action on net neutrality.
+        </p>
+        <p>
+          By signing onto this letter, you agree to add your name to a public letter to be delivered to the FCC.
         </p>
         <div ref={(element) => { this.stickyContainer = element; }}>
           <StickyContainer className="sticky-container" stickyTo={this.getPosition}>
             <div className="sticky-content" ref={(element) => { this.stickyContent = element; }}>
               <a onClick={this.mobileGetInvolved} className="get-involved button arrow" href="#get-involved">
-                Send your comment
+                Sign our letter supporting NN
               </a>
             </div>
           </StickyContainer>
