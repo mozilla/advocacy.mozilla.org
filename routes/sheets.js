@@ -14,7 +14,11 @@ var petitionRoutes = function(transaction, callback) {
   var promises = [];
 
   promises.push(new Promise((resolve, reject) => {
-    hatchet.send("net-neutrality-petition-signup", formData, function(err) {
+    hatchet.send("send_post_request", {
+      url: "https://docs.google.com/a/mozillafoundation.org/forms/d/e/1FAIpQLSfMxhSq-KqhWHQn5efvL-mgr4M_a0nOpV_kiFfwLLkesYM6vw/formResponse",
+      json: true,
+      form: formData
+    }, function(err) {
       resolve(err);
     });
   }));
