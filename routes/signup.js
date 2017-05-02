@@ -1,5 +1,5 @@
 var hatchet = require('hatchet');
-var url = process.env.SIGNUP;
+var url = process.env.BASKET_URL;
 
 var signupRoutes = function(transaction, callback) {
   var payload = {
