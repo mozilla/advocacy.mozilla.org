@@ -1,3 +1,22 @@
+/*Loading Zilla-Slab font*/
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('../../../public/assets/fonts/woff/ZillaSlab-Light.woff') format('woff'),
+       url('../../../public/assets/fonts/otf/ZillaSlab-Light.otf') format('otf'),
+       url('../../../public/assets/fonts/ttf/ZillaSlab-Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zilla Slab';
+  src: url('../../../public/assets/fonts/woff/ZillaSlab-SemiBold.woff') format('woff'),
+       url('../../../public/assets/fonts/otf/ZillaSlab-SemiBold.otf') format('otf'),
+       url('../../../public/assets/fonts/ttf/ZillaSlab-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 .signup-container {
   overflow: hidden;
   @media screen and (min-width: 992px) {
@@ -11,7 +30,9 @@
 }
 
 .net-neutrality-html {
-  font-family: Fira Sans, sans-serif;
+  font-family: 'Zilla Slab', serif;
+  font-weight: 100;
+  font-style: normal;
   scroll-behavior: smooth;
   font-size: 16px;
   @media screen and (min-width: 768px) {
@@ -77,10 +98,14 @@
   margin: 54px 0;
   .form-body {
     width: 100%;
-    max-width: 800px;
+    max-width: 750px;
     padding: 0 20px;
     display: block;
     margin: 0 auto;
+    li {
+      line-height: inherit;
+      margin-bottom: 20px;
+    }
     .horizontal-rule {
       margin-top: 50px;
       width: 68px;
@@ -89,7 +114,7 @@
     }
     .form-description {
       font-size: 1.25rem;
-      line-height: 1.85rem;
+      line-height: 1.7rem;
       margin-bottom: 50px;
       letter-spacing: -0.01rem;
       &::first-letter {
@@ -157,7 +182,7 @@
     margin: 54px 0 54px 0;
     .signup-form {
       padding: 0 20px;
-      max-width: 800px;
+      max-width: 750px;
       display: block;
       margin: 0 auto;
       @media screen and (max-width: 992px) {
@@ -173,17 +198,16 @@
     }
     h3 {
       font-size: 1.5rem;
-      font-weight: 400;
+      font-weight: 600;
     }
     p {
       font-size: 0.9375rem;
-      line-height: 1.4375rem;
     }
     label {
-      font-family: Fira Sans Condensed, sans-serif;
+      font-family: Zilla Slab;
       color: #5b555c;
       font-size: 0.75rem;
-      margin: 12px 0;
+      margin: 20px 0;
       display: block;
     }
     .privacy-policy {
@@ -280,12 +304,12 @@
 
   p {
     color: #4A4A4A;
-    line-height: 1.625rem;
+    line-height: 1.4rem;
   }
 
   h4 {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   a {
@@ -305,7 +329,7 @@
   }
 
   p.error-message {
-    font-family: Fira Sans Condensed, sans-serif;
+    font-family: Zilla Slab;
     margin-top: 0;
     font-size: .75rem;
   }
@@ -314,9 +338,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    &.arrow {
-      padding: 1rem;
-    }
   }
 
   .button {
@@ -401,8 +422,8 @@
         max-width: 500px;
         h1 {
           font-size: 2.3rem;
-          font-weight: 400;
-          letter-spacing: -0.075rem;
+          font-weight: 600;
+          line-height: 2.5rem;
         }
         @media screen and (max-width: 400px) {
           h1 {
@@ -444,7 +465,7 @@
 
 .net-neutrality-footer {
   margin: 0 15px;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: Zilla Slab;
   .footer-contents {
     text-align: center;
     width: 1200px;
@@ -568,4 +589,3 @@
     }
   }
 }
-

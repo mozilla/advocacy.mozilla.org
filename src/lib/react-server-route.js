@@ -72,7 +72,7 @@ module.exports = function(req, res, next) {
 
   var htmlClassName = "";
   if (location.indexOf('/net-neutrality') !== -1) {
-    htmlClassName = "net-netrality-html";
+    htmlClassName = "net-neutrality-html";
   }
 
   // This is essentially a callback lookup. If the requested URL is a known
