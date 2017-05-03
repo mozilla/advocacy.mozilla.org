@@ -219,13 +219,6 @@
       margin: 20px 0;
       display: block;
     }
-    .privacy-policy {
-      font-family: Fira Sans Condensed, sans-serif;
-      font-size: 0.75rem;
-      line-height: 1.2rem;
-      color: #5b555c;
-      margin: 20px 0;
-    }
     input, select, textarea {
       font-family: Fira Sans Condensed, sans-serif;
       letter-spacing: 0.03rem;
@@ -265,14 +258,11 @@
     }
     .get-involved {
       display: none;
-      &:after {
-        display: none;
-      }
     }
     @media screen and (max-width: 992px) {
       .sticky .get-involved {
         position: fixed;
-        display: flex;
+        display: block;
         bottom: 0;
         left: 0;
         right: 0;
@@ -344,9 +334,7 @@
   }
 
   a.button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
   }
 
   .button {

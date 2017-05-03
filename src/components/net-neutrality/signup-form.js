@@ -5,7 +5,7 @@ import StickyContainer from './sticky-container.js';
 import reactGA from 'react-ga';
 
 var NOT_SUBMITTING = 0;
-var SIGNUP_SUBMITTING = 1;
+var PETITION_SUBMITTING = 2;
 
 var Signup = React.createClass({
   mixins: [require('../../mixins/signup.js')],
@@ -221,7 +221,7 @@ var Signup = React.createClass({
     });
 
     var buttonClassName = classnames(`button`, {
-      "submitting": this.state.submitting === SIGNUP_SUBMITTING,
+      "submitting": this.state.submitting === PETITION_SUBMITTING,
       "arrow": this.state.submitting === NOT_SUBMITTING
     });
     var buttonText = 'Sign our letter'
