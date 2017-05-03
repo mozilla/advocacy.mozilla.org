@@ -77,8 +77,8 @@ module.exports = function(req, res, next) {
     metaSiteName = "Join me in protecting net neutrality";
     metaUrl = "https://advocacy.mozilla.org/net-neutrality/";
     metaDesc = "The FCC has a plan to destroy net neutrality. It’s up to us to stop it.";
-    metaImage = "https://advocacy.mozilla.org/assets/net-neutrality/NN-share-progress.jpg";
-    twitterImage = "https://advocacy.mozilla.org/assets/net-neutrality/NN-share-progress.jpg";
+    metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/NN-share-progress.jpg";
+    twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/NN-share-progress.jpg";
     desc = "The FCC has a plan to destroy net neutrality. It’s up to us to stop it.";
     title = "Mozilla Advocacy - Stand up for net neutrality";
   }
