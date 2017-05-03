@@ -25,7 +25,7 @@ module.exports = React.createClass({
               The FCC has a plan to destroy Net Neutrality. It’s up to us to stop it.
             </p>
             <a onClick={this.mobileGetInvolved} className="get-involved button arrow" href="#get-involved">
-              Sign our letter supporting NN
+              Sign our letter
             </a>
           </div>
         </div>

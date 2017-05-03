@@ -224,25 +224,24 @@ var Signup = React.createClass({
       "submitting": this.state.submitting === SIGNUP_SUBMITTING,
       "arrow": this.state.submitting === NOT_SUBMITTING
     });
-    var buttonText = 'Sign our letter supporting NN'
+    var buttonText = 'Sign our letter'
     if (this.state.submitting) {
       buttonText = ``;
     }
 
     return (
       <div>
-        <p>
-          <i>It’s time to save the internet -- again</i>
-        </p>
+        <h4>
+          It’s time to save the internet &mdash; again
+        </h4>
         <div className="letter">
           <p>
             Dear FCC Chairman Ajit Pai:
           </p>
           <p>
-            Your proposal to weaken existing net neutrality rules is unacceptable. It would weaken competition, stifle innovation, undermine user choice, and threaten free speech online.
-          </p>
-          <p>
-            You can’t fix what’s not broken. Leave net neutrality alone.
+            <b>
+              Your proposal to weaken existing net neutrality rules is unacceptable. It would weaken competition, stifle innovation, undermine user choice, and threaten free speech online.
+            </b>
           </p>
         </div>
         <p>
@@ -255,7 +254,7 @@ var Signup = React.createClass({
           <StickyContainer className="sticky-container" stickyTo={this.getPosition}>
             <div className="sticky-content" ref={(element) => { this.stickyContent = element; }}>
               <a onClick={this.mobileGetInvolved} className="get-involved button arrow" href="#get-involved">
-                Sign our letter supporting NN
+                Sign our letter
               </a>
             </div>
           </StickyContainer>
