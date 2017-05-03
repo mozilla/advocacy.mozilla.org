@@ -12,6 +12,7 @@ var Signup = React.createClass({
     if (this.props.test) {
       className += " " + this.props.test;
     }
+
     return (
       <div className={className}>
         <div className="net-neutrality-page page">
@@ -21,7 +22,7 @@ var Signup = React.createClass({
           <div className="signup-container">
             <FormBody/>
             <SignupFormSticky>
-              <SignupForm/>
+              <SignupForm subscribed={this.props.location.query.subscribed}/>
             </SignupFormSticky>
           </div>
         </div>
