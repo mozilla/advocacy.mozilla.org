@@ -32,7 +32,7 @@ var SignupMixin = {
     submit(url, props, success, error);
   },
   petitionSuccess: function(result) {
-    this.doPetitionSuccess(result, '/net-neutrality/share');
+    this.doPetitionSuccess(result, 'http://share.mozilla.org/352/180765');
   },
   sheets: function(props) {
     this.doPetition("/api/petition/sheets", props, this.petitionSuccess, this.petitionError);
@@ -60,7 +60,7 @@ var SignupMixin = {
     submit(url, props, success, error);
   },
   signupSuccess: function(result) {
-    this.doSignupSuccess(result, '/net-neutrality/share');
+    this.doSignupSuccess(result, 'http://share.mozilla.org/352/180765');
   },
   basket: function(props) {
     this.doSignup("/api/signup/basket", props, this.signupSuccess, this.signupError);
