@@ -23,7 +23,7 @@ var SimpleNav = React.createClass({
       <div className="nav-container">
         <div className="nav">
           <div className="nav-logo-container">
-            <a href="https://mozilla.org/" className="nav-logo"></a>
+            <a href="https://mozilla.org/" className="nav-logo">mozilla</a>
           </div>
         </div>
       </div>
