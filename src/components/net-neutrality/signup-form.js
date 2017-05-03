@@ -229,6 +229,18 @@ var Signup = React.createClass({
       buttonText = ``;
     }
 
+    var signupCheckbox = (
+      <label>
+        <input onClick={this.onSignupCheckboxClick} className="checkbox" autoComplete="off" onChange={this.signupCheckboxChange} value={this.state.signupCheckbox} type="checkbox"></input>
+        <span>Yes, I want to receive email updates about Mozilla's campaigns.</span>
+        {this.renderError(this.state.signupCheckboxError)}
+      </label>
+    );
+
+    if (this.props.subscribed) {
+      signupCheckbox = null;
+    }
+
     return (
       <div>
         <h4>
@@ -265,16 +277,8 @@ var Signup = React.createClass({
         {this.renderError(this.state.lastNameError)}
         <input onClick={this.onEmailInputClick} autoComplete="off" type='email' ref={(input) => { this.emailInput = input; }} className={emailClassName} value={this.state.email} onChange={this.emailChange} required placeholder={'Email'}/>
         {this.renderError(this.state.emailError)}
-        {/*<input onClick={this.onAddressInputClick} autoComplete="off" type='text' value={this.state.address} onChange={this.addressChange} placeholder={'Address'}/>
-        {this.renderError(this.state.addressError)}
-        <textarea onClick={this.onCommentInputClick} autoComplete="off" type='text' value={this.state.comment} onChange={this.commentChange} placeholder={'Comment'}/>
-        {this.renderError(this.state.commentError)}*/}
         {this.renderError(this.state.signupError)}
-        <label>
-          <input onClick={this.onSignupCheckboxClick} className="checkbox" autoComplete="off" onChange={this.signupCheckboxChange} value={this.state.signupCheckbox} type="checkbox"></input>
-          <span>Yes, I want to receive email updates about Mozilla's campaigns.</span>
-          {this.renderError(this.state.signupCheckboxError)}
-        </label>
+        {signupCheckbox}
         <label>
           <input onClick={this.onPrivacyCheckboxClick} className="checkbox" autoComplete="off" onChange={this.privacyCheckboxChange} value={this.state.privacyCheckbox} type="checkbox"></input>
           <span>
