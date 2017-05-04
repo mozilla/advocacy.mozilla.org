@@ -93,7 +93,7 @@ var Signup = React.createClass({
   render: function() {
     return (
       <div  ref={(element) => { this.formContainerElement = element; }} className="signup-form-container">
-        <div id="get-involved" className="nav-anchor nav-offset"></div>
+        <div id="get-involved" className="nav-anchor"></div>
         <div ref={(element) => { this.formElement = element; }} className="signup-form" style={{top: this.state.formTop + "px", position: this.state.formPosition}}>
           {this.props.children}
         </div>
