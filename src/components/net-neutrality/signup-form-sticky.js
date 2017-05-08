@@ -29,10 +29,10 @@ var Signup = React.createClass({
     }
     var formTop = this.state.formTop;
     var formPosition = this.state.formPosition;
-    var viewportPadding = 30;
-    var navHeight = 65;
+    var viewportPadding = 80;
+    var navHeight = 0;
     var formBottomPadding = 144;
-    var formTopPadding = 64;
+    var formTopPadding = 34;
     var formHeight = this.formElement.offsetHeight;
     var formPaddingHeight = formTopPadding + formHeight + formBottomPadding;
     var formViewHeight = viewportPadding + formHeight + viewportPadding;
@@ -51,7 +51,7 @@ var Signup = React.createClass({
 
     // If the view is above the form container,
     // just plop the form at the top of the container.
-    if (viewportTop <= formContainerTop + viewportPadding) {
+    if (viewportTop + viewportPadding <= formContainerTop + formTopPadding) {
       formPosition = "absolute";
       formTop = 0;
     // If the form bottom is touching the bottom of the container,
@@ -70,7 +70,7 @@ var Signup = React.createClass({
       // position fix it to the bottom of the viewport.
       if (delta < 0 && viewportBottom - formContainerTop >= formElementTop + formHeight + viewportPadding) {
         formPosition = "fixed";
-        formTop = windowHeight - ( formHeight + viewportPadding );
+        formTop = window.innerHeight - formHeight - formTopPadding - viewportPadding;
       // Scroll up.
       // If the form top is at the top of the viewport,
       // position fix it to the top of the viewport.
@@ -79,10 +79,14 @@ var Signup = React.createClass({
         formTop = navHeight + viewportPadding - formTopPadding;
       }
     } else if (formPosition === "fixed") {
-      // Scroll up or down.
       // If the scroll is inside the form,
       // make the form absolute positioned.
-      if ((delta < 0 && formElementTop >= formTopPadding - viewportPadding) || (delta > 0 && formElementTop <= navHeight - viewportPadding)) {
+      // Scrolling down.
+      if (delta < 0 && formElementTop + navHeight >= viewportPadding) {
+        formTop = viewportTop - formContainerTop - formTopPadding - navHeight + formElementTop;
+        formPosition = "absolute";
+      // Scrolling up.
+      } else if (delta > 0 && formElementTop + navHeight <= viewportPadding) {
         formTop = viewportTop - formContainerTop - formTopPadding - navHeight + formElementTop;
         formPosition = "absolute";
       }
