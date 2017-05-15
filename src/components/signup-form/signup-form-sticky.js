@@ -13,27 +13,40 @@ var Signup = React.createClass({
     return {
       formTop: 0,
       formPosition: "absolute",
-      previousViewportTop
+      previousViewportTop,
+      formPaddingBottom: 0,
+      formPaddingTop: 0
     };
   },
   componentDidMount: function() {
     document.addEventListener(`scroll`, this.onScroll);
+    document.addEventListener(`resize`, this.onResize);
     setTimeout(this.onScroll);
+    this.setState({
+      formPaddingBottom: parseInt(getComputedStyle(this.formElement).marginBottom),
+      formPaddingTop: parseInt(getComputedStyle(this.formElement).marginTop)
+    });
   },
   componentWillUnmount: function() {
+    document.removeEventListener(`resize`, this.onResize);
     document.removeEventListener(`scroll`, this.onScroll);
   },
+  onResize: function() {
+    this.onScroll();
+  },
   onScroll: function() {
+    var formHeight = this.formElement.offsetHeight;
+
     if (window.innerWidth <= 992 ) {
       return;
     }
+
     var formTop = this.state.formTop;
     var formPosition = this.state.formPosition;
-    var viewportPadding = 30;
+    var viewportPadding = this.props.viewportPadding;
     var navHeight = 0;
-    var formBottomPadding = 144;
-    var formTopPadding = 34;
-    var formHeight = this.formElement.offsetHeight;
+    var formBottomPadding = this.state.formPaddingBottom;
+    var formTopPadding = this.state.formPaddingTop;
     var formPaddingHeight = formTopPadding + formHeight + formBottomPadding;
     var formViewHeight = viewportPadding + formHeight + viewportPadding;
     var windowHeight = window.innerHeight - navHeight;
@@ -86,7 +99,7 @@ var Signup = React.createClass({
         formTop = viewportTop - formContainerTop - formTopPadding - navHeight + formElementTop;
         formPosition = "absolute";
       // Scrolling up.
-      } else if (delta > 0 && formElementTop + navHeight <= viewportPadding) {
+      } else if (delta > 0 && formElementTop + navHeight < viewportPadding) {
         formTop = viewportTop - formContainerTop - formTopPadding - navHeight + formElementTop;
         formPosition = "absolute";
       }

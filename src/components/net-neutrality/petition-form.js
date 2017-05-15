@@ -1,7 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 import classnames from "classnames";
-import StickyContainer from './sticky-container.js';
 import reactGA from 'react-ga';
 
 var NOT_SUBMITTING = 0;
@@ -153,19 +151,6 @@ var Signup = React.createClass({
       });
     }
   },
-  mobileGetInvolved: function() {
-    reactGA.event({
-      category: "Signup",
-      action: "Form Step",
-      label: "Get Involved Clicked"
-    });
-  },
-  getPosition: function() {
-    if (!this.stickyContainer) {
-      return 0;
-    }
-    return this.stickyContainer.getClientRects()[0].top + this.stickyContent.offsetHeight + window.scrollY - window.innerHeight;
-  },
   onFirstNameInputClick: function() {
     reactGA.event({
       category: "Signup",
@@ -224,7 +209,7 @@ var Signup = React.createClass({
       "submitting": this.state.submitting === PETITION_SUBMITTING,
       "arrow": this.state.submitting === NOT_SUBMITTING
     });
-    var buttonText = 'Sign our letter'
+    var buttonText = this.props.cta || "";
     if (this.state.submitting) {
       buttonText = ``;
     }
@@ -243,34 +228,6 @@ var Signup = React.createClass({
 
     return (
       <div>
-        <h4>
-          It’s time to save the internet &mdash; again
-        </h4>
-        <div className="letter">
-          <p>
-            Dear FCC Chairman Ajit Pai:
-          </p>
-          <p>
-            <b>
-              Your proposal to weaken existing net neutrality rules is unacceptable. It would weaken competition, stifle innovation, undermine user choice, and threaten free speech online.
-            </b>
-          </p>
-        </div>
-        <p>
-          We’ll deliver this letter, with your signature, straight to the FCC as it considers its next action on net neutrality.
-        </p>
-        <p>
-          By signing onto this letter, you agree to add your name to a public letter to be delivered to the FCC.
-        </p>
-        <div ref={(element) => { this.stickyContainer = element; }}>
-          <StickyContainer className="sticky-container" stickyTo={this.getPosition}>
-            <div className="sticky-content" ref={(element) => { this.stickyContent = element; }}>
-              <a onClick={this.mobileGetInvolved} className="get-involved button arrow" href="#get-involved">
-                Sign our letter
-              </a>
-            </div>
-          </StickyContainer>
-        </div>
         <input onClick={this.onFirstNameInputClick} autoComplete="off" type='text' className={firstNameClassName} value={this.state.firstName} onChange={this.firstNameChange} placeholder={'First Name'}/>
         {this.renderError(this.state.firstNameError)}
         <input onClick={this.onLastNameInputClick} autoComplete="off" type='text' className={lastNameClassName} value={this.state.lastName} onChange={this.lastNameChange} placeholder={'Last Name'}/>

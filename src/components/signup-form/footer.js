@@ -6,6 +6,7 @@ var Footer = React.createClass({
     intl: React.PropTypes.object
   },
   render: function() {
+    var shareLink = this.props.shareLink || "";
     return (
       <footer className="net-neutrality-footer">
         <div className="footer-contents">
@@ -13,7 +14,7 @@ var Footer = React.createClass({
             <a href="https://www.mozilla.org/contact/" className="footer-link contact">
               Contact Us
             </a>
-            <a href="http://share.mozilla.org/352/180765" className="footer-link share">
+            <a href={shareLink} className="footer-link share">
               Share this page
             </a>
             <a href="https://twitter.com/Mozilla" className="footer-link follow">
