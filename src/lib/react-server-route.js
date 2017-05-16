@@ -82,6 +82,17 @@ module.exports = function(req, res, next) {
     desc = "The FCC has a plan to destroy net neutrality. It’s up to us to stop it.";
     title = "Mozilla Advocacy - Stand up for net neutrality";
   }
+  if (location.indexOf('/net-neutrality-comments') !== -1) {
+    htmlClassName = "net-neutrality-html";
+    metaTitle = "";
+    metaSiteName = "";
+    metaUrl = "https://advocacy.mozilla.org/en-US/net-neutrality-comments/";
+    metaDesc = "";
+    metaImage = "";
+    twitterImage = "";
+    desc = "";
+    title = "Mozilla Advocacy - Stand up for net neutrality";
+  }
 
   // This is essentially a callback lookup. If the requested URL is a known
   // URL based on the routing map as defined in routes.js, then this will

@@ -4,6 +4,8 @@ import submit from '../lib/submit';
 
 var NOT_SUBMITTING = 0;
 var PETITION_SUBMITTING = 2;
+// Need to make this work
+var FCC_COMMENT_SUBMITTING = 3;
 
 var SignupMixin = {
   contextTypes: {
