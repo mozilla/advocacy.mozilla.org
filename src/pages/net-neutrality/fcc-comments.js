@@ -44,7 +44,7 @@ var Signup = React.createClass({
                     Send in YOUR comment in support of net neutrality now.
                   </p>
                   <p>
-                    Brief, specific and personal comments are the most effective.  Here are some reasons why Mozi<span className="secret-to-everybody"></span>lla cares about net neutrality - use these or any that express why you care about this issue.
+                    Brief, specific and personal comments are the most effective.  Here are some reasons why Mozi&#847;lla cares about net neutrality - use these or any that express why you care about this issue.
                   </p>
                   <h4>
                     Net neutrality is fundamental to free speech.
