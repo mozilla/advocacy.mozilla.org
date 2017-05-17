@@ -30,31 +30,36 @@ var Signup = React.createClass({
     this.setState({
       firstName: e.target.value,
       firstNameError: ""
-    });
+    }, this.onResize);
   },
   lastNameChange: function(e) {
     this.setState({
       lastName: e.target.value,
       lastNameError: ""
-    });
+    }, this.onResize);
   },
   emailChange: function(e) {
     this.setState({
       email: e.target.value,
       emailError: ""
-    });
+    }, this.onResize);
   },
   signupCheckboxChange: function(e) {
     this.setState({
       signupCheckbox: e.target.checked,
       signupCheckboxError: ""
-    });
+    }, this.onResize);
   },
   privacyCheckboxChange: function(e) {
     this.setState({
       privacyCheckbox: e.target.checked,
       privacyCheckboxError: ""
-    });
+    }, this.onResize);
+  },
+  onResize: function() {
+    if (this.props.onResize) {
+      this.props.onResize();
+    }
   },
   onSubmit: function() {
     var valid = true;
@@ -68,7 +73,7 @@ var Signup = React.createClass({
 
       this.setState({
         emailError: 'This field is required.'
-      });
+      }, this.onResize);
       reactGA.event({
         category: "Signup",
         action: "Form Error",
@@ -79,7 +84,7 @@ var Signup = React.createClass({
 
       this.setState({
         emailError: 'Please enter a valid email address.'
-      });
+      }, this.onResize);
       reactGA.event({
         category: "Signup",
         action: "Form Error",
@@ -92,7 +97,7 @@ var Signup = React.createClass({
 
       this.setState({
         firstNameError: 'This field is required.'
-      });
+      }, this.onResize);
       reactGA.event({
         category: "Signup",
         action: "Form Error",
@@ -105,7 +110,7 @@ var Signup = React.createClass({
 
       this.setState({
         lastNameError: 'This field is required.'
-      });
+      }, this.onResize);
       reactGA.event({
         category: "Signup",
         action: "Form Error",
@@ -117,7 +122,7 @@ var Signup = React.createClass({
       valid = false;
       this.setState({
         privacyCheckboxError: 'This field is required.'
-      });
+      }, this.onResize);
       reactGA.event({
         category: "Signup",
         action: "Form Error",

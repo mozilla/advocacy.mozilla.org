@@ -8,6 +8,12 @@ import SignupFormContainer from '../../components/signup-form/signup-form-contai
 import FormBody from '../../components/signup-form/form-body.js';
 
 var Signup = React.createClass({
+  onResize: function() {
+    if (!this.stickyForm) {
+      return;
+    }
+    this.stickyForm.onResize();
+  },
   render: function() {
     var className = "signup net-neutrality-signup";
     if (this.props.test) {
@@ -45,7 +51,7 @@ var Signup = React.createClass({
                 <li><b>Net neutrality is fundamental to user choice.</b> Without net neutrality, ISPs could decide you watched too many cat videos in one day and throttle your Internet speeds leaving you behind on the latest Maru memes.</li>
               </ul>
             </FormBody>
-            <SignupFormSticky viewportPadding={30}>
+            <SignupFormSticky viewportPadding={30} ref={(input) => { this.stickyForm = input; }}>
               <h4>
                 It’s time to save the internet &mdash; again
               </h4>
@@ -67,6 +73,7 @@ var Signup = React.createClass({
               </p>
               <SignupFormContainer cta="Sign our letter">
                 <SignupForm
+                  onResize={this.onResize}
                   subscribed={this.props.location.query.subscribed}
                   cta="Sign our letter"
                 />

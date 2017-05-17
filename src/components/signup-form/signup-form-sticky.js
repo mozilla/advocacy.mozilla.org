@@ -32,9 +32,9 @@ var Signup = React.createClass({
     document.removeEventListener(`scroll`, this.onScroll);
   },
   onResize: function() {
-    this.onScroll();
+    this.onScroll(false, true);
   },
-  onScroll: function() {
+  onScroll: function(e, resize) {
     var formHeight = this.formElement.offsetHeight;
 
     if (window.innerWidth <= 992 ) {
@@ -100,6 +100,10 @@ var Signup = React.createClass({
         formPosition = "absolute";
       // Scrolling up.
       } else if (delta > 0 && formElementTop + navHeight < viewportPadding) {
+        formTop = viewportTop - formContainerTop - formTopPadding - navHeight + formElementTop;
+        formPosition = "absolute";
+      // If we resized, we may be in an unexpected spot.
+      } else if (resize) {
         formTop = viewportTop - formContainerTop - formTopPadding - navHeight + formElementTop;
         formPosition = "absolute";
       }
