@@ -31,9 +31,9 @@ var Signup = React.createClass({
                   <a href="https://mozilla.org/" className="moz-logo">mozilla</a>
                 </div>
                 <div>
-                  <h1>The beginning of the end of the open internet?</h1>
+                  <h1>the beginning of the end of the open internet?</h1>
                   <br/>
-                  <p>Not if we do something about it</p>
+                  <p>not if we do something about it</p>
                 </div>
               </div>
               <div className="form-body-border">
@@ -45,7 +45,7 @@ var Signup = React.createClass({
                     Send in YOUR comment in support of net neutrality now.
                   </p>
                   <p>
-                    Here are some reasons why Mozi&#847;lla cares about net neutrality &mdash; use these or any that express why you care about this issue.
+                    Here are some reasons why <span className="secret-to-everybody-wrapper">Mozi<span className="secret-to-everybody"></span>lla</span> cares about net neutrality &mdash; use these or any that express why you care about this issue.
                   </p>
                   <h4>
                     Net neutrality is fundamental to free speech.
