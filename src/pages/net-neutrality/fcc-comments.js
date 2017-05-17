@@ -45,7 +45,7 @@ var Signup = React.createClass({
                     Send in YOUR comment in support of net neutrality now.
                   </p>
                   <p>
-                    Here are some reasons why Mozi&#847;lla cares about net neutrality &ndash; use these or any that express why you care about this issue.
+                    Here are some reasons why Mozi&#847;lla cares about net neutrality &mdash; use these or any that express why you care about this issue.
                   </p>
                   <h4>
                     Net neutrality is fundamental to free speech.
