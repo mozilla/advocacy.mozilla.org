@@ -45,7 +45,7 @@ var Signup = React.createClass({
                     Send in YOUR comment in support of net neutrality now.
                   </p>
                   <p>
-                    Brief, specific and personal comments are the most effective.  Here are some reasons why Mozi&#847;lla cares about net neutrality - use these or any that express why you care about this issue.
+                    Here are some reasons why Mozi&#847;lla cares about net neutrality &ndash; use these or any that express why you care about this issue.
                   </p>
                   <h4>
                     Net neutrality is fundamental to free speech.
@@ -60,13 +60,13 @@ var Signup = React.createClass({
                     Without net neutrality, creators and entrepreneurs could struggle to reach new users. Investment in new ideas would dry up and only the big companies would survive, stifling innovation.
                   </p>
                   <h4>
-                    Net neutrality allows consumers -- not big companies -- to choose what they watch & do online.
+                    Net neutrality allows consumers &mdash; not big companies &mdash; to choose what they watch & do online.
                   </h4>
                   <p>
                     Without net neutrality, ISPs could decide you watched too many videos on Netflix in one day and throttle your Internet speeds, while keeping their own video apps running smooth.
                   </p>
                   <p>
-                    placeholder
+                    Brief, specific and personal comments are the most effective. Submit your comment now, and tell the FCC to leave net neutrality alone.
                   </p>
                 </div>
               </div>
@@ -78,11 +78,11 @@ var Signup = React.createClass({
               <p className="blue-paragraph">
                 Write your comment below to tell the FCC why net neutrality MUST be protected. We’ll deliver your comment straight to the agency.
               </p>
-              <SignupFormContainer cta="Comment">
+              <SignupFormContainer cta="Tell the FCC: Leave Net Neutrality Alone">
                 <SignupForm
                   onResize={this.onResize}
                   subscribed={this.props.location.query.subscribed}
-                  cta="Comment"
+                  cta="Submit your comment"
                 />
               </SignupFormContainer>
             </SignupFormSticky>
