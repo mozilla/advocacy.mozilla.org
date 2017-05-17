@@ -32,6 +32,7 @@ var Signup = React.createClass({
                 </div>
                 <div>
                   <h1>The beginning of the end of the open internet?</h1>
+                  <br/>
                   <p>Not if we do something about it</p>
                 </div>
               </div>
