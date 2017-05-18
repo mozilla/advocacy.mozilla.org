@@ -148,7 +148,7 @@ var Signup = React.createClass({
         action: "Submitting the form",
         label: "Copyright"
       });
-      this.sheets({
+      this.petitionSheet({
         email: this.state.email,
         firstName: this.state.firstName,
         lastName: this.state.lastName,
@@ -248,6 +248,7 @@ var Signup = React.createClass({
           </span>
           {this.renderError(this.state.privacyCheckboxError)}
         </label>
+        {this.renderError(this.state.petitionError)}
         <button onClick={this.onSubmit} className={buttonClassName}>
           {buttonText}
         </button>

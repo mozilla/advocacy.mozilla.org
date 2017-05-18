@@ -47,7 +47,7 @@ var InputElement = React.createClass({
 });
 
 var Signup = React.createClass({
-  //mixins: [require('../../mixins/signup.js')],
+  mixins: [require('../../mixins/signup.js')],
   getInitialState: function() {
     return {
       comment: "",
@@ -227,12 +227,16 @@ var Signup = React.createClass({
         action: "Submitting the form",
         label: "FCC Comments"
       });
-      /*this.sheets({
+      this.fccCommentSheet({
+        comment: this.state.comment,
+        name: this.state.name,
+        address: this.state.address,
+        city: this.state.city,
+        state: this.state.state,
+        zip: this.state.zip,
         email: this.state.email,
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
         signup: this.state.signupCheckbox
-      });*/
+      });
     } else {
       this.setState({
         commentError,
@@ -409,6 +413,7 @@ var Signup = React.createClass({
         <label>
           Note: Mozilla will be filing this document on your behalf via <a href="https://www.fcc.gov/ecfs/filings/express">https://www.fcc.gov/ecfs/filings/express</a> into an official FCC proceeding. Per FCC guidelines, the FCC will make all information submitted, including names and addresses, publicly available via the web. Mozilla will otherwise manage your submitted information as explained in our <a href="https://www.mozilla.org/privacy/websites/">Privacy Notice</a>.
         </label>
+        <ErrorMessage>{this.state.fccCommentError}</ErrorMessage>
         <button onClick={this.onSubmit} className={buttonClassName}>
           {buttonText}
         </button>
