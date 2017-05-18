@@ -33,7 +33,7 @@ var routes = {
 
     var url = "https://docs.google.com/a/mozillafoundation.org/forms/d/e/1FAIpQLSfMxhSq-KqhWHQn5efvL-mgr4M_a0nOpV_kiFfwLLkesYM6vw/formResponse";
 
-    sheets(url, formData, 'https://advocacy.mozilla.org/net-neutrality/', transaction, function(err, payload) {
+    sheets(url, formData, 'https://advocacy.mozilla.org/net-neutrality/', transaction, transaction.signup, function(err, payload) {
       if (err) {
         return res.status(500).send({error: err});
       }
@@ -63,7 +63,7 @@ var routes = {
 
     var url = "https://docs.google.com/a/mozillafoundation.org/forms/d/e/1FAIpQLSfLFZ_PYeEuW7n6CaJ_1vxlKtoE_yqA2css-rrtfThi8nJGEA/formResponse";
 
-    sheets(url, formData, 'https://advocacy.mozilla.org/net-neutrality-comments/', {email: transaction.email, firstName: transaction.name}, function(err, payload) {
+    sheets(url, formData, 'https://advocacy.mozilla.org/net-neutrality-comments/', {email: transaction.email, firstName: transaction.name}, transaction.signup, function(err, payload) {
       if (err) {
         return res.status(500).send({error: err});
       }

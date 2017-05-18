@@ -21,7 +21,7 @@ var SignupMixin = {
   signupError: function(result) {
     this.setState({
       submitting: NOT_SUBMITTING,
-      signupError: this.context.intl.formatMessage({id: 'try_again_later'})
+      signupError: 'try again later'
     });
   },
   doSignup: function(url, props, success, error) {
@@ -63,13 +63,13 @@ var SignupMixin = {
   petitionError: function(result) {
     this.setState({
       submitting: NOT_SUBMITTING,
-      petitionError: this.context.intl.formatMessage({id: 'try_again_later'})
+      petitionError: 'try again later'
     });
   },
   fccCommentError: function(result) {
     this.setState({
       submitting: NOT_SUBMITTING,
-      fccCommentError: this.context.intl.formatMessage({id: 'try_again_later'})
+      fccCommentError: 'try again later'
     });
   },
   doPetition: function(url, props, success, error) {
