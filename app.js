@@ -57,7 +57,8 @@ app.use(function(req, resp, next){
   }
 });
 
-app.post('/api/petition/sheets', routes.sheets);
+app.post('/api/petition/sheets', routes.petitionSheets);
+app.post('/api/fcc-comment/sheets', routes.fccCommentSheets);
 
 app.use(reactRouted);
 app.use(express.static(__dirname + '/public', {maxAge: 3600000}));

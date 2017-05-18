@@ -2,20 +2,14 @@ var hatchet = require("hatchet");
 var request = require("request");
 var signup = require("./signup.js");
 
-var petitionRoutes = function(transaction, callback) {
+var petitionRoutes = function(url, formData, callback) {
   callback = callback || function() {};
-  var formData = {
-    "entry.825163439": transaction.firstName,
-    "entry.129687116": transaction.lastName,
-    "entry.329351653": transaction.email,
-    "entry.1319525634": 'en-US'
-  };
 
   var promises = [];
 
   promises.push(new Promise((resolve, reject) => {
     hatchet.send("send_post_request", {
-      url: "https://docs.google.com/a/mozillafoundation.org/forms/d/e/1FAIpQLSfMxhSq-KqhWHQn5efvL-mgr4M_a0nOpV_kiFfwLLkesYM6vw/formResponse",
+      url: url,
       json: true,
       form: formData
     }, function(err) {
@@ -25,6 +19,7 @@ var petitionRoutes = function(transaction, callback) {
 
   if (transaction.signup) {
     promises.push(new Promise((resolve, reject) => {
+      // Need to make sure this has the right URL
       signup(transaction, function(err) {
         resolve(err);
       });
