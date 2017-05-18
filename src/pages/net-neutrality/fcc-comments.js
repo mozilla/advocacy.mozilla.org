@@ -88,7 +88,7 @@ var Signup = React.createClass({
             </SignupFormSticky>
           </div>
         </div>
-        <Footer shareLink="#"/>
+        <Footer shareLink="http://share.mozilla.org/352/181032"/>
       </div>
     );
   }
