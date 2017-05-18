@@ -84,14 +84,14 @@ module.exports = function(req, res, next) {
   }
   if (location.indexOf('/net-neutrality-comments') !== -1) {
     htmlClassName = "net-neutrality-html";
-    metaTitle = "";
-    metaSiteName = "";
+    metaTitle = "Submit your comment to the FCC";
+    metaSiteName = "Submit your comment to the FCC";
     metaUrl = "https://advocacy.mozilla.org/en-US/net-neutrality-comments/";
-    metaDesc = "";
-    metaImage = "";
-    twitterImage = "";
-    desc = "";
-    title = "Mozilla Advocacy - Stand up for net neutrality";
+    metaDesc = "Send in YOUR comment in support of net neutrality now.";
+    metaImage = "https://advocacy-mozilla-org-staging.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
+    twitterImage = "https://advocacy-mozilla-org-staging.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
+    desc = "Send in YOUR comment in support of net neutrality now.";
+    title = "Mozilla Advocacy - Submit your comment to the FCC";
   }
 
   // This is essentially a callback lookup. If the requested URL is a known
