@@ -51,7 +51,7 @@ var Signup = React.createClass({
                     Net neutrality is fundamental to free speech.
                   </h4>
                   <p>
-                    Without net neutrality, big companies could censor people and perspectives online. Net neutrality has been called the "First Amendment of the Internet".
+                    Without net neutrality, big companies could censor people and perspectives online. Net neutrality has been called the "First Amendment of the Internet."
                   </p>
                   <h4>
                     Net neutrality protects small businesses and innovators who are just getting started.
