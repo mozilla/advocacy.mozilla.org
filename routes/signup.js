@@ -1,5 +1,5 @@
 var hatchet = require('hatchet');
-var url = process.env.BASKET_URL;
+var basketUrl = process.env.BASKET_URL;
 
 var signupRoutes = function(url, transaction, callback) {
   var payload = {
@@ -10,12 +10,15 @@ var signupRoutes = function(url, transaction, callback) {
     source_url: url,
     email: transaction.email,
     country: 'US',
-    first_name: transaction.firstName,
-    last_name: transaction.lastName
+    first_name: transaction.firstName
   };
 
+  if (transaction.lastName) {
+    payload.last_name = transaction.lastName;
+  }
+
   hatchet.send("send_post_request", {
-    url: url,
+    url: basketUrl,
     json: true,
     form: payload
   }, (hatchet_error, response) => {
