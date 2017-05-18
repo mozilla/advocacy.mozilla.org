@@ -1,13 +1,13 @@
 var hatchet = require('hatchet');
 var url = process.env.BASKET_URL;
 
-var signupRoutes = function(transaction, callback) {
+var signupRoutes = function(url, transaction, callback) {
   var payload = {
     format: 'html',
     lang: 'en-US',
     newsletters: 'mozilla-foundation',
     trigger_welcome: 'N',
-    source_url: 'https://advocacy.mozilla.org/net-neutrality/',
+    source_url: url,
     email: transaction.email,
     country: 'US',
     first_name: transaction.firstName,
