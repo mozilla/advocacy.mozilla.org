@@ -2,7 +2,7 @@ var hatchet = require("hatchet");
 var request = require("request");
 var signup = require("./signup.js");
 
-var petitionRoutes = function(url, formData, signupUrl, signupData, callback) {
+var petitionRoutes = function(url, formData, signupUrl, signupData, doSignup, callback) {
   callback = callback || function() {};
 
   var promises = [];
@@ -17,7 +17,7 @@ var petitionRoutes = function(url, formData, signupUrl, signupData, callback) {
     });
   }));
 
-  if (transaction.signup) {
+  if (doSignup) {
     promises.push(new Promise((resolve, reject) => {
       signup(signupUrl, signupData, function(err) {
         resolve(err);
