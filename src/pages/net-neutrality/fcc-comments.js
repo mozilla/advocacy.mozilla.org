@@ -65,9 +65,6 @@ var Signup = React.createClass({
                   <p>
                     Without net neutrality, ISPs could decide you watched too many videos on Netflix in one day and throttle your Internet speeds, while keeping their own video apps running smooth.
                   </p>
-                  <p>
-                    Brief, specific and personal comments are the most effective. Submit your comment now, and tell the FCC to leave net neutrality alone.
-                  </p>
                 </div>
               </div>
             </div>
