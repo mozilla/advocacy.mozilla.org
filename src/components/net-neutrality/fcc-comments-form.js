@@ -318,7 +318,7 @@ var Signup = React.createClass({
 
     return (
       <div className="fcc-form-input-container">
-        <InputElement name="comment" label="Comment Box" type="textarea" value={this.state.comment} onChange={this.onChange} placeholder="Brief comments*" errorMessage={this.state.commentError}/>
+        <InputElement name="comment" label="Comment Box" type="textarea" value={this.state.comment} onChange={this.onChange} placeholder="Brief comments* (Brief, specific and personal comments are most effective)" errorMessage={this.state.commentError}/>
         <ErrorMessage>{this.state.commentError}</ErrorMessage>
 
         <InputElement name="name" label="Name" type="text" value={this.state.name} onChange={this.onChange} placeholder="Name*" errorMessage={this.state.nameError}/>
