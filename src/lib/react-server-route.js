@@ -88,8 +88,8 @@ module.exports = function(req, res, next) {
     metaSiteName = "Submit your comment to the FCC";
     metaUrl = "https://advocacy.mozilla.org/en-US/net-neutrality-comments/";
     metaDesc = "Send in YOUR comment in support of net neutrality now.";
-    metaImage = "https://advocacy-mozilla-org-staging.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
-    twitterImage = "https://advocacy-mozilla-org-staging.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
+    metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/breaking-glass.jpg";
+    twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/breaking-glass.jpg";
     desc = "Send in YOUR comment in support of net neutrality now.";
     title = "Mozilla Advocacy - Submit your comment to the FCC";
   }
