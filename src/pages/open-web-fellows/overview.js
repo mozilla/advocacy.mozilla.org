@@ -53,7 +53,7 @@ module.exports = React.createClass({
           </ContentContainer>
           <ContentContainer>
             <h2>Host Organizations</h2>
-            <p>Host organizations are leading policy and advocacy organizations dedicated to safeguarding the open internet. Learn about the 2016 host organizations and their <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/" target="_blank">proposed projects</a>. Fellows will spend 10 months collaborating with a single host organization. 2016 host organizations include</p>
+            <p>Host organizations are leading policy and advocacy organizations dedicated to safeguarding the open internet. Host organizations include:</p>
             <div className="organization-row">
               <Organization
                 imgSrc="/assets/logo-cipit.svg"
