@@ -75,6 +75,7 @@
     "react-intl": "^2.1.2",
     "react-redux": "4.4.5",
     "react-router": "2.0.0",
+    "react-youtube": "^7.4.0",
     "redux": "3.6.0",
     "request": "2.67.0",
     "style-loader": "0.13.0",

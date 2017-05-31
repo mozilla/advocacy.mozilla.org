@@ -93,6 +93,17 @@ module.exports = function(req, res, next) {
     desc = "Send in YOUR comment in support of net neutrality now.";
     title = "Mozilla Advocacy - Submit your comment to the FCC";
   }
+  if (location.indexOf('/safety') !== -1) {
+    htmlClassName = "safety-html";
+    metaTitle = "";
+    metaSiteName = "";
+    metaUrl = "https://advocacy.mozilla.org/en-US/safety/";
+    metaDesc = "";
+    metaImage = "";
+    twitterImage = "";
+    desc = "";
+    title = "";
+  }
 
   // This is essentially a callback lookup. If the requested URL is a known
   // URL based on the routing map as defined in routes.js, then this will
