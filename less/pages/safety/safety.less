@@ -44,14 +44,29 @@
     position: fixed;
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: scroll;
+    .safety-modal-container {
+      position: relative;
+      margin: auto;
+    }
+    .modal-close {
+      line-height: 14px;
+      .fa-times {
+        line-height: inherit;
+      }
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 1rem;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
   }
-  .signup-form {
+  .signup-form, .signup-success {
     background: #B94FBB;
     max-width: 640px;
     width: 100%;
-    padding: 22px;
+    padding: 1rem;
     color: #000000;
     font-family: Antonio;
     font-weight: bold;
@@ -212,6 +227,9 @@
         text-transform: none;
         li {
           border-bottom: 2px #FFFFFF solid;
+          &:last-child {
+            border-bottom: none;
+          }
           padding: 1rem 0 0.8rem 0;
           list-style: none;
           display: flex;
@@ -335,7 +353,7 @@
       margin: 0.4rem;
       width: 440px;
       background: #000000;
-      padding: 18px;
+      padding: 0.77rem;
       img {
         width: 100%;
       }

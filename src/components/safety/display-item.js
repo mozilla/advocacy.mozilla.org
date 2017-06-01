@@ -128,11 +128,11 @@ var DisplayItem = React.createClass({
             <ol>
               {safetyTips}
             </ol>
-            <div>
+            {/*<div>
               is this information helpful?
               <button className={succesButton} onClick={this.tipSuccess}>Yes I got it!</button>
               <button className={failureButton} onClick={this.tipFailure}>No, this does not help me</button>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>

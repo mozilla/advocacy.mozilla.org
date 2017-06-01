@@ -95,6 +95,7 @@ var SignupForm = React.createClass({
           action: "Submitted the form",
           label: "Safety Tips"
         });
+        this.props.onSuccess();
       }, () => {
         // signup error
         this.setState({
