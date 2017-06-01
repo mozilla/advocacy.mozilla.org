@@ -3,16 +3,19 @@ import PosterImage from './poster-image.js';
 import PlayButton from './play-button.js';
 import NextVideo from './next-video.js';
 import YouTube from 'react-youtube';
+import reactGA from 'react-ga';
+import classnames from "classnames";
 
 var DisplayItem = React.createClass({
   getInitialState: function() {
     return {
-      status: "stopped"
+      videoStatus: "stopped",
+      tipStatus: "nothing"
     };
   },
   onClick: function() {
     this.setState({
-      status: "playing"
+      videoStatus: "playing"
     });
   },
   componentDidMount: function() {
@@ -21,15 +24,43 @@ var DisplayItem = React.createClass({
   componentWillReceiveProps: function() {
     window.scrollTo(0, 0);
     this.setState({
-      status: "stopped"
+      videoStatus: "stopped"
     });
   },
   onEnd: function() {
     this.setState({
-      status: "ended"
+      videoStatus: "ended"
+    });
+  },
+  tipSuccess: function() {
+    reactGA.event({
+      category: "Button",
+      action: "Tip Result",
+      label: "Success"
+    });
+    this.setState({
+      tipStatus: "success"
+    });
+  },
+  tipFailure: function() {
+    reactGA.event({
+      category: "Button",
+      action: "Tip Result",
+      label: "Failure"
+    });
+    this.setState({
+      tipStatus: "failure"
     });
   },
   render: function() {
+
+    var tipStatus = this.state.tipStatus;
+    var succesButton = classnames(`button`, {
+      "success": tipStatus === "success"
+    });
+    var failureButton = classnames(`button`, {
+      "failure": tipStatus === "failure"
+    });
 
     const safetyTips = this.props.item.tips.map((tip, index) => {
       return (
@@ -48,7 +79,7 @@ var DisplayItem = React.createClass({
       </PosterImage>
     );
 
-    if (this.state.status === "playing") {
+    if (this.state.videoStatus === "playing") {
       video = (
         <div className="youtube-container">
           <YouTube
@@ -62,7 +93,7 @@ var DisplayItem = React.createClass({
           />
         </div>
       );
-    } else if (this.state.status === "ended") {
+    } else if (this.state.videoStatus === "ended") {
       video = (
         <PosterImage onClick={this.onClick} src={this.props.item.thumbnail}>
           <NextVideo itemIndex={this.props.itemIndex}/>
@@ -75,7 +106,18 @@ var DisplayItem = React.createClass({
         <div className="display-item-video">
           <div className="container">
             {video}
-            <div className="title">{this.props.item.title}</div>
+            <div className="title-container">
+              <div className="title">{this.props.item.title}</div>
+              <div className="share-button">
+                <i className="fa fa-facebook" aria-hidden="true"></i>
+              </div>
+              <div className="share-button">
+                <i className="fa fa-twitter" aria-hidden="true"></i>
+              </div>
+              <div className="share-button">
+                <i className="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+            </div>
           </div>
         </div>
         <div className="display-item-tips">
@@ -88,8 +130,8 @@ var DisplayItem = React.createClass({
             </ol>
             <div>
               is this information helpful?
-              <button>Yes I got it!</button>
-              <button>No, this does not help me</button>
+              <button className={succesButton} onClick={this.tipSuccess}>Yes I got it!</button>
+              <button className={failureButton} onClick={this.tipFailure}>No, this does not help me</button>
             </div>
           </div>
         </div>

@@ -58,6 +58,7 @@ app.use(function(req, resp, next){
   }
 });
 
+app.post('/api/signup/basket', routes.signup);
 app.post('/api/petition/sheets', routes.petitionSheets);
 app.post('/api/fcc-comment/sheets', routes.fccCommentSheets);
 
