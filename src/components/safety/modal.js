@@ -7,9 +7,21 @@ var Modal = React.createClass({
   componentWillUnmount: function() {
     document.querySelector("html").style.overflow = "auto";
   },
+  stopClick: function(e) {
+    e.stopPropagation();
+  },
   render: function() {
     return (
-      <div className="safety-modal">{this.props.children}</div>
+      <div className="safety-modal" onClick={this.props.onClose}>
+        <div className="safety-modal-container">
+          <div onClick={this.props.onClose} className="modal-close">
+            <i className="fa fa-times" aria-hidden="true"></i>
+          </div>
+          <div onClick={this.stopClick} className="modal-content">
+            {this.props.children}
+          </div>
+        </div>
+      </div>
     );
   }
 });

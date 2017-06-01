@@ -14,7 +14,8 @@ var Safety = React.createClass({
   getInitialState: function() {
     return {
       showModal: false,
-      cancelTimeout: false
+      cancelTimeout: false,
+      signupSuccess: false
     };
   },
   componentDidMount: function() {
@@ -44,6 +45,11 @@ var Safety = React.createClass({
       cancelTimeout: true
     });
   },
+  onSuccess: function() {
+    this.setState({
+      signupSuccess: true
+    });
+  },
   render: function() {
     var className = "safety";
     if (this.props.test) {
@@ -69,11 +75,27 @@ var Safety = React.createClass({
 
     var modal = null;
     if (this.state.showModal) {
-      modal = (
-        <Modal>
-          <SignupForm onClose={this.closeModal}/>
-        </Modal>
-      );
+      if (this.state.signupSuccess) {
+        modal = (
+          <Modal onClose={this.closeModal}>
+            <div className="signup-success">
+              <div className="form-copy">
+                <div><span className="white">Thanks!</span></div>
+                <div>
+                  If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+                </div>
+              </div>
+              <button onClick={this.closeModal}>got it</button>
+            </div>
+          </Modal>
+        );
+      } else {
+        modal = (
+          <Modal onClose={this.closeModal}>
+            <SignupForm onClose={this.closeModal} onSuccess={this.onSuccess}/>
+          </Modal>
+        );
+      }
     }
 
     return (
