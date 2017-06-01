@@ -148,6 +148,7 @@
     text-transform: uppercase;
     .title {
       margin-top: 1rem;
+      margin-right: auto;
     }
     .description {
       color: #000000;
@@ -164,6 +165,27 @@
         width: 100%;
         max-width: 664px;
         margin: 0 auto;
+      }
+      .title-container {
+        display: flex;
+      }
+      .share-button {
+        margin-left: 0.48rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.1rem;
+        border: 1px solid #3DFFFF;
+        color: #3DFFFF;
+        height: 1.3rem;
+        width: 1.3rem;
+        .fa-facebook {
+          font-size: 0.9rem;
+        }
+        .fa-envelope {
+          font-size: 0.8rem;
+        }
       }
       .youtube-container {
         min-height: 360px;
@@ -209,6 +231,12 @@
         font-size: 1rem;
         padding-top: 4px;
         padding-bottom: 4px;
+        &.success {
+          background: green;
+        }
+        &.failure {
+          background: red;
+        }
       }
     }
   }

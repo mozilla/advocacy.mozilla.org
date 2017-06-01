@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from "classnames";
 import reactGA from 'react-ga';
+import submit from '../../lib/submit';
 
 var ErrorMessage = React.createClass({
   render: function() {
@@ -14,6 +15,9 @@ var ErrorMessage = React.createClass({
 });
 
 var SignupForm = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   getInitialState: function() {
     return {
       emailInput: "",
@@ -77,6 +81,27 @@ var SignupForm = React.createClass({
 
     if (valid) {
       // submit
+      this.setState({
+        submitting: true,
+        submissionError: ""
+      });
+      submit("/api/signup/basket", {
+        email: this.state.emailInput,
+        locale: this.context.intl.locale
+      }, () => {
+        // signup success
+        reactGA.event({
+          category: "Signup",
+          action: "Submitted the form",
+          label: "Safety Tips"
+        });
+      }, () => {
+        // signup error
+        this.setState({
+          submitting: false,
+          submissionError: "try again later"
+        });
+      });
     } else {
       this.setState({
         privacyCheckboxError: privacyCheckboxError,
