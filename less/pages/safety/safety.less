@@ -55,9 +55,9 @@
         line-height: inherit;
       }
       position: absolute;
-      right: 0;
-      top: 0;
-      padding: 1rem;
+      right: 0.5rem;
+      top: 0.5rem;
+      padding: 0.3rem;
       color: #FFFFFF;
       cursor: pointer;
     }
@@ -66,7 +66,7 @@
     background: #B94FBB;
     max-width: 640px;
     width: 100%;
-    padding: 1rem;
+    padding: 1.7rem 1rem;
     color: #000000;
     font-family: Antonio;
     font-weight: bold;
@@ -77,6 +77,11 @@
     text-transform: uppercase;
     .white {
       color: #FFFFFF;
+    }
+    .light {
+      text-transform: none;
+      color: #FFFFFF;
+      opacity: 0.5;
     }
     label {
       margin-top: 0.6rem;
@@ -138,6 +143,11 @@
       &:invalid {
         box-shadow: none;
       }
+    }
+  }
+  .signup-success {
+    .form-copy {
+      line-height: 2.1rem;
     }
   }
   .gallery-item-header-container {
