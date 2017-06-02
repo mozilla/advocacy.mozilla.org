@@ -9,13 +9,16 @@ import SignupCta from '../../components/safety/signup-cta.js';
 import SafetyGallery from '../../components/safety/safety-gallery.js';
 import GalleryItem from '../../components/safety/gallery-item.js';
 import galleryData from '../../components/safety/gallery-data.js';
+import NextVideo from '../../components/safety/next-video.js';
+import StickyContainer from '../../components/signup-form/sticky-container.js';
 
 var Safety = React.createClass({
   getInitialState: function() {
     return {
       showModal: false,
       cancelTimeout: false,
-      signupSuccess: false
+      signupSuccess: false,
+      videoFinished: false
     };
   },
   componentDidMount: function() {
@@ -50,6 +53,17 @@ var Safety = React.createClass({
       signupSuccess: true
     });
   },
+  getPosition: function() {
+    if (!this.stickyContainer) {
+      return 0;
+    }
+    return this.stickyContainer.getClientRects()[0].top + window.scrollY - window.innerHeight;
+  },
+  onEnd: function() {
+    this.setState({
+      videoFinished: true
+    });
+  },
   render: function() {
     var className = "safety";
     if (this.props.test) {
@@ -58,15 +72,36 @@ var Safety = React.createClass({
 
     const video = this.props.params.video;
     var displayItem = null;
+    var itemIndex = 0;
+    var items = [];
+    var currentIndex = 0;
 
-    const items = galleryData.map((item, index) => {
+    galleryData.forEach((item, index) => {
       if (video === item.slug) {
-        displayItem = (<DisplayItem item={item} itemIndex={index}/>);
+        itemIndex = index;
+        displayItem = (<DisplayItem item={item} itemIndex={itemIndex} onEnd={this.onEnd}/>);
+        currentIndex = 1;
+        if (this.state.videoFinished) {
+          items.splice(0, 0, (
+            <div className="next-video-sticky-container">
+              <div ref={(element) => { this.stickyContainer = element; }}>
+                <StickyContainer stickyTo={this.getPosition}>
+                  <div className="sticky-content" ref={(element) => { this.stickyContent = element; }}>
+                    <NextVideo itemIndex={itemIndex}/>
+                  </div>
+                </StickyContainer>
+              </div>
+            </div>
+          ));
+        } else {
+          items.splice(0, 0, null);
+        }
+      } else {
+        items.splice(currentIndex, 0, (<GalleryItem key={item.slug} item={item}/>));
+        currentIndex++;
       }
-      return (
-        <GalleryItem key={item.slug} item={item}/>
-      );
     });
+
     var header = (<Header/>);
 
     if (video) {

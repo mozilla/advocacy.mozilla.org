@@ -28,6 +28,9 @@ var DisplayItem = React.createClass({
     });
   },
   onEnd: function() {
+    if (this.props.onEnd) {
+      this.props.onEnd();
+    }
     this.setState({
       videoStatus: "ended"
     });
