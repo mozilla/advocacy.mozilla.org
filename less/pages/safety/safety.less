@@ -154,6 +154,9 @@
     }
   }
   .gallery-item-header-container {
+    .mobile-header {
+      display: none;
+    }
     overflow: hidden;
     .gallery-item-header {
       margin: 0.35rem 0;
@@ -381,6 +384,9 @@
     }
   }
   .safety-header {
+    .mobile-header {
+      display: none;
+    }
     width: 100%;
     background-image: linear-gradient(#B94FBB 0, #B94FBB 22.7%, #3DFFFF 0, #3DFFFF 53.2%, #9195B2 0, #9195B2 76.4%, #F8B83D 0, #F8B83D 100%);
     .container {
@@ -393,23 +399,29 @@
     }
   }
   @media screen and (max-width: 420px) {
-    .safety-header {
-      .header-image {
-        display: none;
-      }
+    .safety-header .header-image,
+    .gallery-item-header-container .gallery-item-header {
+      display: none;
+    }
+    .safety-header, .gallery-item-header-container {
       background: #FDE94A;
-      padding: 10px 0;
-      .container {
+      .mobile-header {
         display: flex;
+        padding: 10px 0;
+        align-items: center;
         justify-content: space-between;
+        .moz-logo {
+          width: 25%;
+          padding: 0;
+          background: none;
+        }
         .mobile-header-image {
           width: 71%;
         }
       }
-      .moz-logo {
-        height: 22px;
-        font-size: 20px;
-      }
+    }
+    .gallery-item-header-container {
+      padding: 0 12px;
     }
     .signup-cta {
       padding: 7px 0;
@@ -420,6 +432,7 @@
       .cta {
         color: #fff;
         font-size: 1rem;
+        width: 55%;
       }
       .container {
         justify-content: space-between;
