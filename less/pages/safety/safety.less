@@ -26,6 +26,9 @@
     .container {
       display: flex;
       align-items: center;
+      .mobile-header-image {
+        display: none;
+      }
     }
     .cta {
       margin-right: auto;
@@ -293,7 +296,7 @@
     }
     img {
       border: 2px solid #000000;
-      margin-right: 0.65rem; 
+      margin-right: 0.65rem;
     }
   }
   .poster-image {
@@ -387,6 +390,43 @@
       height: 100%;
       width: 100%;
       display: block;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .safety-header {
+      .header-image {
+        display: none;
+      }
+      background: #FDE94A;
+      padding: 10px 0;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        .mobile-header-image {
+          width: 71%;
+        }
+      }
+      .moz-logo {
+        height: 22px;
+        font-size: 20px;
+      }
+    }
+    .signup-cta {
+      padding: 7px 0;
+      background: #B94FBB;
+      .moz-logo {
+        display: none;
+      }
+      .cta {
+        color: #fff;
+        font-size: 1rem;
+      }
+      .container {
+        justify-content: space-between;
+      }
+    }
+    .safety-gallery {
+      padding: 0 0 0.5rem;
     }
   }
 }
