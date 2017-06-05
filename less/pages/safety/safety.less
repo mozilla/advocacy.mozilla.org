@@ -34,10 +34,11 @@
       margin-right: auto;
     }
     .moz-logo {
-      font-size: 36px;
-      padding: 0 8px 2px 8px;
-      margin-right: 18px;
-      height: 38px;
+      font-size: 1.636rem;
+      padding: 0 0.364rem 0.091rem 0.364rem;
+      margin-right: 0.85rem;
+      height: auto;
+      line-height: 1.636rem;
     }
   }
   .safety-modal {
@@ -275,6 +276,10 @@
     }
   }
   .next-video-container {
+    font-family: Antonio;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
     a {
       display: block;
       color: inherit;
@@ -288,9 +293,7 @@
       align-items: center;
     }
     background: #B94FBB;
-    padding: 0.65rem;
-    font-size: 0.75rem;
-    line-height: 0.9rem;
+    display: inline-block;
     .next-tip-copy {
       max-width: 160px;
     }
@@ -300,6 +303,28 @@
     img {
       border: 2px solid #000000;
       margin-right: 0.65rem;
+      width: 100%;
+    }
+  }
+
+
+  .next-video-sticky-container {
+    display: none;
+  }
+  @media screen and (max-width: 440px) {
+    .next-video-sticky-container {
+      display: block;
+      width: 100%;
+      .sticky {
+        .next-video-container {
+          position: fixed;
+          bottom: 0;
+          left:0;
+          right: 0;
+          z-index: 1;
+          padding: 0.8rem;
+        }
+      }
     }
   }
   .poster-image {
@@ -314,6 +339,12 @@
       position: absolute;
       right: 0.6rem;
       bottom: 0.6rem;
+      font-size: 0.75rem;
+      line-height: 0.9rem;
+      padding: 0.65rem;
+      @media screen and (max-width: 440px) {
+        display: none;
+      }
     }
     .play-button-container {
       position: absolute;
@@ -344,11 +375,19 @@
     }
   }
   .safety-gallery {
-    margin: 0 -10px;
+    margin: 0 -0.4rem;
     padding: 1.4rem 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    .next-video-container {
+      padding: 0.4rem;
+      max-width: 440px;
+      width: 100%;
+      img {
+        width: 7.5rem;
+      }
+    }
     a {
       display: block;
       img, span {
@@ -367,7 +406,8 @@
         color: #C3CAE0;
       }
       margin: 0.4rem;
-      width: 440px;
+      max-width: 440px;
+      width: 100%;
       background: #000000;
       padding: 0.77rem;
       img {
@@ -407,13 +447,15 @@
       background: #FDE94A;
       .mobile-header {
         display: flex;
-        padding: 10px 0;
+        padding: 2.384vw 0;
         align-items: center;
         justify-content: space-between;
         .moz-logo {
-          width: 25%;
-          padding: 0;
-          background: none;
+          font-size: 6.55vw;
+          padding: 0 0.364rem 0.091rem 0.364rem;
+          margin-right: 0.85rem;
+          height: auto;
+          line-height: 6.45vw;
         }
         .mobile-header-image {
           width: 71%;
