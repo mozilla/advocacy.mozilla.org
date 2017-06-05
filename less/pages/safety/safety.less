@@ -32,6 +32,7 @@
     }
     .cta {
       margin-right: auto;
+      padding-right: 0.85rem;
     }
     .moz-logo {
       font-size: 1.636rem;
@@ -77,6 +78,7 @@
     .form-copy {
       line-height: 2rem;
       font-size: 1.8rem;
+      max-width: 20rem;
     }
     text-transform: uppercase;
     .white {
@@ -107,6 +109,20 @@
       margin-top: 0.6rem;
       &.secondary {
         margin-left: 0.9rem;
+      }
+    }
+    @media screen and (max-width: 420px) {
+      min-height: 100vh;
+      button {
+        line-height: 3.8rem;
+        font-size: 1.8rem;
+        width: 100%;
+        &.secondary {
+          margin-left: 0;
+        }
+      }
+      .form-copy {
+        max-width: 285px;
       }
     }
     .error-message {
@@ -160,6 +176,7 @@
     }
     overflow: hidden;
     .gallery-item-header {
+      display: block;
       margin: 0.35rem 0;
       background-image: url('/assets/safety/header-2.svg');
       height: 4.5rem;
@@ -220,7 +237,8 @@
         }
       }
       .youtube-container {
-        min-height: 360px;
+        height: 52vw;
+        max-height: 360px;
       }
       img {
         width: 100%;
@@ -381,7 +399,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     .next-video-container {
-      padding: 0.4rem;
+      padding: 0.8rem 0.4rem 0.4rem 0.4rem;
       max-width: 440px;
       width: 100%;
       img {
@@ -474,7 +492,6 @@
       .cta {
         color: #fff;
         font-size: 1rem;
-        width: 55%;
       }
       .container {
         justify-content: space-between;

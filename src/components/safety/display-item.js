@@ -87,6 +87,8 @@ var DisplayItem = React.createClass({
         <div className="youtube-container">
           <YouTube
             opts={{
+              height: '100%',
+              width: '100%',
               playerVars: { 
                 autoplay: 1
               } 
