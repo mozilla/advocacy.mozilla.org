@@ -8,12 +8,32 @@
     border: none;
     font-family: inherit;
     font-size: 1.2rem;
+    line-height: 1.75rem;
     cursor: pointer;
     color: #FFFFFF;
     padding: 0 18px;
     font-weight: bold;
     &.secondary {
       background: #CA78CC;
+    }
+    &.submitting {
+      color: transparent;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        animation: spin 1s linear infinite; /* CSS3 */
+        border: 0.2rem solid #FFFFFF;
+        border-right: 0.2rem solid #000000;
+        border-radius: 50%;
+        height: 1.2rem;
+        width: 1.2rem;
+        left: 50%;
+        top: 50%;
+        margin-left: -0.6rem;
+        margin-top: -0.6rem;
+        box-sizing: border-box;
+      }
     }
   }
   .signup-cta {
@@ -119,6 +139,16 @@
         width: 100%;
         &.secondary {
           margin-left: 0;
+        }
+        &.submitting {
+          &::after {
+            height: 2.8rem;
+            width: 2.8rem;
+            margin-left: -1.4rem;
+            margin-top: -1.4rem;
+            border: 0.5rem solid #FFFFFF;
+            border-right: 0.5rem solid #000000;
+          }
         }
       }
       .form-copy {
@@ -476,8 +506,12 @@
           height: auto;
           line-height: 6.45vw;
         }
-        .mobile-header-image {
-          width: 71%;
+        .home-link {
+          display: block;
+          width: 100%;
+          .mobile-header-image {
+            display: block;
+          }
         }
       }
     }
