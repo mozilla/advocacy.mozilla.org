@@ -5,7 +5,7 @@ var SignupCta = React.createClass({
     return (
       <div className="signup-cta">
         <div className="container">
-          <div className="moz-logo">mozilla</div>
+          <a href="https://mozilla.org/" className="moz-logo">mozilla</a>
           <div className="cta">keeping you & your digital loved ones secure</div>
           <button onClick={this.props.onCta}>subscribe</button>
         </div>

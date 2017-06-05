@@ -119,8 +119,9 @@ var SignupForm = React.createClass({
       <div className="signup-form">
         <div className="form-copy">
           <div>get your security on.</div>
-          <div><span className="white">subscribe</span> and never miss</div>
-          <div>an update from mozilla.</div>
+          <div>
+            <span className="white">subscribe</span> and never miss an update from mozilla.
+        </div>
         </div>
         <input ref={(input) => { this.emailInput = input; }} value={this.state.emailInput} onChange={this.onEmailChange} className="email-input" placeholder="your email here" type="email"/>
         <ErrorMessage>{this.state.emailInputError}</ErrorMessage>
