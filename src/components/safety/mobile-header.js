@@ -4,7 +4,7 @@ var MobileHeader = React.createClass({
   render: function() {
     return (
       <div className="mobile-header">
-        <img src="/assets/safety/moz-logo.svg" className="moz-logo"/>
+        <div className="moz-logo">mozilla</div>
         <img src="/assets/safety/mobile-header.svg" className="mobile-header-image"/>
       </div>
     );
