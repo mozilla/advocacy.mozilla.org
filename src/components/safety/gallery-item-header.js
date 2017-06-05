@@ -10,7 +10,7 @@ var GalleryItemHeader = React.createClass({
   render: function() {
     return (
       <div className="gallery-item-header-container">
-        <MobileHeader/>
+        <MobileHeader linkTo={"/" + this.context.intl.locale + "/safety"}/>
         <Link to={"/" + this.context.intl.locale + "/safety"}>
           <span className="gallery-item-header"></span>
         </Link>
