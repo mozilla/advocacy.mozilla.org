@@ -115,10 +115,10 @@ var Safety = React.createClass({
           <Modal onClose={this.closeModal}>
             <div className="signup-success">
               <div className="form-copy">
-                <div><span className="white">Thanks!</span> <span className="light">If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.</span>
+                <div><span className="white">Thanks!</span> <span className="light">Please check your inbox or your spam filter for an email from us to confirm your subscription.</span>
                 </div>
               </div>
-              <button onClick={this.closeModal}>yes I got it!</button>
+              <button onClick={this.closeModal}>yes, I got it</button>
             </div>
           </Modal>
         );
