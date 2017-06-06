@@ -12,6 +12,18 @@ module.exports = React.createClass({
     if (locale) {
       localeData = fs.readFileSync(Path.join(__dirname, '../../../node_modules/react-intl/locale-data/' + locale.split('-')[0] + '.js'), 'utf8');
     }
+    var shareProgressButtons = null;
+
+    if (this.props.shareProgress === "safetyTips") {
+      shareProgressButtons = (
+        <div>
+          <div id="share-progress-fb" className='share-progress-button sp_181324 sp_fb_small'></div>
+          <div id="share-progress-em" className='share-progress-button sp_181323 sp_em_small'></div>
+          <div id="share-progress-tw" className='share-progress-button sp_181322 sp_tw_small'></div>
+        </div>
+      );
+    }
+
     var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700";
     return (
       <html className={this.props.htmlClassName}>
@@ -54,6 +66,7 @@ module.exports = React.createClass({
           <script src="/build/main.js"></script>
           <script src="https://c.shpg.org/352/sp.js"></script>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+          {shareProgressButtons}
         </body>
       </html>
     );

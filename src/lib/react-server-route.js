@@ -93,6 +93,7 @@ module.exports = function(req, res, next) {
     desc = "Send in YOUR comment in support of net neutrality now.";
     title = "Mozilla Advocacy - Submit your comment to the FCC";
   }
+  var shareProgress = "";
   if (location.indexOf('/safety') !== -1) {
     htmlClassName = "safety-html";
     metaTitle = "";
@@ -103,6 +104,7 @@ module.exports = function(req, res, next) {
     twitterImage = "";
     desc = "";
     title = "";
+    shareProgress = "safetyTips";
   }
 
   // This is essentially a callback lookup. If the requested URL is a known
@@ -177,6 +179,7 @@ module.exports = function(req, res, next) {
             desc={desc}
             title={title}
             htmlClassName={htmlClassName}
+            shareProgress={shareProgress}
           />
         );
       }

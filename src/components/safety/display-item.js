@@ -67,6 +67,30 @@ var DisplayItem = React.createClass({
       tipStatus: "failure"
     });
   },
+  shareFbClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Facebook"
+    });
+    document.querySelector("#share-progress-fb a").click();
+  },
+  shareTwClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Twitter"
+    });
+    document.querySelector("#share-progress-tw a").click();
+  },
+  shareEmClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Email"
+    });
+    document.querySelector("#share-progress-em a").click();
+  },
   render: function() {
 
     var tipStatus = this.state.tipStatus;
@@ -126,13 +150,13 @@ var DisplayItem = React.createClass({
             {video}
             <div className="title-container">
               <div className="title">{this.props.item.title}</div>
-              <div className="share-button">
+              <div onClick={this.shareFbClick} className="share-button">
                 <i className="fa fa-facebook" aria-hidden="true"></i>
               </div>
-              <div className="share-button">
+              <div onClick={this.shareTwClick} className="share-button">
                 <i className="fa fa-twitter" aria-hidden="true"></i>
               </div>
-              <div className="share-button">
+              <div onClick={this.shareEmClick} className="share-button">
                 <i className="fa fa-envelope" aria-hidden="true"></i>
               </div>
             </div>
