@@ -2,7 +2,7 @@ module.exports = [
   {
     "slug": "password-manager",
     "title": "I’ve been hacked",
-    "description": "Why you need a password manager, now",
+    "description": "<em>Why you need</em> a password manager, now",
     "thumbnail": "https://img.youtube.com/vi/dkX8J-FKndE/mqdefault.jpg",
     "video": "dkX8J-FKndE",
     "tips": [
@@ -12,7 +12,7 @@ module.exports = [
   {
     "slug": "software-update",
     "title": "Update Available",
-    "description": "<em>How not to</em> be the next ransomware victim",
+    "description": "<em>How not to</em> be a ransomware victim",
     "thumbnail": "https://img.youtube.com/vi/eowrFdpcRbs/mqdefault.jpg",
     "video": "eowrFdpcRbs",
     "tips": [
@@ -22,7 +22,7 @@ module.exports = [
   {
     "slug": "use-encryption",
     "title": "Encrypt the Cybers",
-    "description": "<em>How to</em> protect what’s private with encryption",
+    "description": "<em>Protect what’s private</em> with encryption",
     "thumbnail": "https://img.youtube.com/vi/mz_YWNhKOkM/mqdefault.jpg",
     "video": "mz_YWNhKOkM",
     "tips": [
@@ -34,7 +34,7 @@ module.exports = [
   {
     "slug": "public-wifi",
     "title": "Trouble Connecting?",
-    "description": "<em>How to</em> understand the true cost of free public WiFi",
+    "description": "<em>The true cost</em> of free public WiFi",
     "thumbnail": "https://img.youtube.com/vi/fQUul8tWORM/mqdefault.jpg",
     "video": "fQUul8tWORM",
     "tips": [
@@ -46,7 +46,7 @@ module.exports = [
   {
     "slug": "router-security",
     "title": "How safe is your smart home?",
-    "description": "Locking your digital doors",
+    "description": "<em>Time to lock</em> your digital doors",
     "thumbnail": "https://img.youtube.com/vi/fQUul8tWORM/mqdefault.jpg",
     "video": "fQUul8tWORM",
     "tips": [
@@ -56,7 +56,7 @@ module.exports = [
   {
     "slug": "2fa",
     "title": "Double the Defense",
-    "description": "Staying safe with 2-factor authentication",
+    "description": "<em>Stay safe</em> with 2-factor authentication",
     "thumbnail": "https://img.youtube.com/vi/fQUul8tWORM/mqdefault.jpg",
     "video": "fQUul8tWORM",
     "tips": [
