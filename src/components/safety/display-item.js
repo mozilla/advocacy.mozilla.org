@@ -34,6 +34,18 @@ var DisplayItem = React.createClass({
     this.setState({
       videoStatus: "ended"
     });
+    reactGA.event({
+      category: "Video",
+      action: "Video Ended",
+      label: this.props.item.title
+    });
+  },
+  onPlay: function() {
+    reactGA.event({
+      category: "Video",
+      action: "Video Played",
+      label: this.props.item.title
+    });
   },
   tipSuccess: function() {
     reactGA.event({
@@ -95,6 +107,7 @@ var DisplayItem = React.createClass({
             }}
             videoId={this.props.item.video}
             onEnd={this.onEnd}
+            onPlay={this.onPlay}
           />
         </div>
       );
