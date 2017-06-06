@@ -18,13 +18,12 @@ var DisplayItem = React.createClass({
       videoStatus: "playing"
     });
   },
-  componentDidMount: function() {
-    window.scrollTo(0, 0);
-  },
   componentWillReceiveProps: function() {
-    window.scrollTo(0, 0);
+    if (this.props.scrollUp) {
+      window.scrollTo(0, 0);
+    }
     this.setState({
-      videoStatus: "stopped"
+      videoStatus: this.props.videoStatus || "stopped"
     });
   },
   onEnd: function() {

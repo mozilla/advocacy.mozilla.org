@@ -12,7 +12,13 @@ var GalleryItem = React.createClass({
     var locale = this.context.intl.locale;
     return (
       <div className="gallery-item">
-        <Link to={"/" + locale + "/safety/" + this.props.item.slug}>
+        <Link to={{
+          pathname: "/" + locale + "/safety/" + this.props.item.slug,
+          state: {
+            videoStatus: "playing",
+            scrollUp: true
+          }
+        }}>
           <PosterImage src={this.props.item.thumbnail}>
             <PlayButton/>
           </PosterImage>
