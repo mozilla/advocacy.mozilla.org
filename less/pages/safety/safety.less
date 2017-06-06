@@ -105,6 +105,28 @@
       margin: 0 0.2rem 0 0;
       height: 1rem;
     }
+    input[type=checkbox] {
+      display: none;
+    }
+    label:before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      bottom: 88px;
+      background-color: #B94FBB;
+      border: 1px solid white;
+      margin-right: 50px;
+      cursor: pointer;
+    }
+    input[type=checkbox]:checked + label:before {
+      content: "\2713";
+      font-size: 15px;
+      color: #f3f3f3;
+      text-align: center;
+      line-height: 15px;
+    }
     button {
       margin-top: 0.6rem;
       &.secondary {
