@@ -123,12 +123,12 @@ var SignupForm = React.createClass({
             <span className="white">subscribe</span> and never miss an update from mozilla.
         </div>
         </div>
-        <input ref={(input) => { this.emailInput = input; }} value={this.state.emailInput} onChange={this.onEmailChange} className="email-input" placeholder="your email here" type="email"/>
+        <input ref={(input) => { this.emailInput = input; }} value={this.state.emailInput} onChange={this.onEmailChange} className="email-input" placeholder="email" type="email"/>
         <ErrorMessage>{this.state.emailInputError}</ErrorMessage>
         <label>
           <input className="privacy-checkbox" type="checkbox" onChange={this.onPrivacyChange} value={this.state.privacyCheckboxChecked}/>
           <span>
-            I'm ok with mozilla handling my info as explained in this <a href="">privacy notice</a>
+            I'm ok with mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/websites/">privacy notice</a>
           </span>
         </label>
         <ErrorMessage>{this.state.privacyCheckboxError}</ErrorMessage>
