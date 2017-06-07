@@ -96,14 +96,14 @@ module.exports = function(req, res, next) {
   var shareProgress = "";
   if (location.indexOf('/safety') !== -1) {
     htmlClassName = "safety-html";
-    metaTitle = "";
-    metaSiteName = "";
+    metaTitle = "Safety Tips";
+    metaSiteName = "Safety Tips";
     metaUrl = "https://advocacy.mozilla.org/en-US/safety/";
-    metaDesc = "";
+    metaDesc = "Staying safe online has never been so simple. Check out these simple privacy tips from Mozilla";
     metaImage = "";
     twitterImage = "";
-    desc = "";
-    title = "";
+    desc = "Staying safe online has never been so simple. Check out these simple privacy tips from Mozilla";
+    title = "Safety Tips";
     shareProgress = "safetyTips";
   }
 

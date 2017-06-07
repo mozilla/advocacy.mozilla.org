@@ -142,7 +142,7 @@ var Safety = React.createClass({
             {items}
           </SafetyGallery>
         </div>
-        <Footer/>
+        <Footer shareLink="http://share.mozilla.org/352/181351"/>
       </div>
     );
   }
