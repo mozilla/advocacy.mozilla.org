@@ -54,7 +54,7 @@ var Safety = React.createClass({
     });
   },
   getPosition: function() {
-    if (!this.stickyContainer) {
+    if (!this.stickyContainer || !this.stickyContainer.getClientRects()[0]) {
       return 0;
     }
     return this.stickyContainer.getClientRects()[0].top + window.scrollY - window.innerHeight;
@@ -83,7 +83,7 @@ var Safety = React.createClass({
         currentIndex = 1;
         if (this.state.videoFinished) {
           items.splice(0, 0, (
-            <div className="next-video-sticky-container">
+            <div key={item.slug} className="next-video-sticky-container">
               <div ref={(element) => { this.stickyContainer = element; }}>
                 <StickyContainer stickyTo={this.getPosition}>
                   <div className="sticky-content" ref={(element) => { this.stickyContent = element; }}>
