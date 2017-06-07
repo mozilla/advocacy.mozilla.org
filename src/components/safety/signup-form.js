@@ -126,8 +126,8 @@ var SignupForm = React.createClass({
         <input ref={(input) => { this.emailInput = input; }} value={this.state.emailInput} onChange={this.onEmailChange} className="email-input" placeholder="your email here" type="email"/>
         <ErrorMessage>{this.state.emailInputError}</ErrorMessage>
         <div>
-          <input className="privacy-checkbox" type="checkbox" id="c1" onChange={this.onPrivacyChange} value={this.state.privacyCheckboxChecked}/>
-          <label htmlFor="c1">
+          <input className="privacy-checkbox" type="checkbox" id="privacy-checkbox" onChange={this.onPrivacyChange} value={this.state.privacyCheckboxChecked}/>
+          <label htmlFor="privacy-checkbox">
           I'm ok with mozilla handling my info as explained in this <a href="">privacy notice</a>
           </label>
         </div>
