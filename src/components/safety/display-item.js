@@ -9,41 +9,36 @@ import classnames from "classnames";
 var DisplayItem = React.createClass({
   getInitialState: function() {
     return {
-      videoStatus: "stopped",
       tipStatus: "nothing"
     };
   },
-  onClick: function() {
-    this.setState({
-      videoStatus: "playing"
+  onStart: function() {
+    if (this.props.onStart) {
+      this.props.onStart();
+    }
+    reactGA.event({
+      category: "Video",
+      action: "Video Played",
+      label: this.props.item.title
     });
   },
-  componentDidMount: function() {
-    window.scrollTo(0, 0);
-  },
-  componentWillReceiveProps: function() {
-    window.scrollTo(0, 0);
-    this.setState({
-      videoStatus: "stopped"
+  onReplay: function() {
+    if (this.props.onStart) {
+      this.props.onStart();
+    }
+    reactGA.event({
+      category: "Video",
+      action: "Video Replayed",
+      label: this.props.item.title
     });
   },
   onEnd: function() {
     if (this.props.onEnd) {
       this.props.onEnd();
     }
-    this.setState({
-      videoStatus: "ended"
-    });
     reactGA.event({
       category: "Video",
       action: "Video Ended",
-      label: this.props.item.title
-    });
-  },
-  onPlay: function() {
-    reactGA.event({
-      category: "Video",
-      action: "Video Played",
       label: this.props.item.title
     });
   },
@@ -113,12 +108,12 @@ var DisplayItem = React.createClass({
     });
 
     var video = (
-      <PosterImage onClick={this.onClick} src={this.props.item.thumbnail}>
+      <PosterImage onClick={this.onStart} src={this.props.item.thumbnail}>
         <PlayButton/>
       </PosterImage>
     );
 
-    if (this.state.videoStatus === "playing") {
+    if (this.props.videoStatus === "playing") {
       video = (
         <div className="youtube-container">
           <YouTube
@@ -131,13 +126,12 @@ var DisplayItem = React.createClass({
             }}
             videoId={this.props.item.video}
             onEnd={this.onEnd}
-            onPlay={this.onPlay}
           />
         </div>
       );
-    } else if (this.state.videoStatus === "ended") {
+    } else if (this.props.videoStatus === "ended") {
       video = (
-        <PosterImage onClick={this.onClick} src={this.props.item.thumbnail}>
+        <PosterImage onClick={this.onReplay} src={this.props.item.thumbnail}>
           <NextVideo itemIndex={this.props.itemIndex}/>
         </PosterImage>
       );
