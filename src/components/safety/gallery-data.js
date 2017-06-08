@@ -50,7 +50,7 @@ module.exports = [
     "thumbnail": "/assets/safety/posters/router-security.jpg",
     "video": "fQUul8tWORM",
     "tips": [
-      "Do away with the default. Check your router settings and make sure you aren’t still using the defaults. If you are, update your username and password. 
+      "Do away with the default. Check your router settings and make sure you aren’t still using the defaults. If you are, update your username and password." 
       "Make it even more secure. Read Consumer Reports <a href='http://www.consumerreports.org/cro/news/2014/04/5-ways-to-hack-proof-your-router/index.htm'>5 ways to hack proof your router</a> for additional measures to secure your router. "
     ]
   },
