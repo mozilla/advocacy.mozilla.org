@@ -455,6 +455,9 @@
     .next-video-container {
       padding: 0.4rem;
       max-width: 440px;
+      @media screen and (min-width: 440px) {
+        flex: 1 0 440px;
+      }
       width: 100%;
       img {
         width: 7.5rem;
@@ -479,6 +482,9 @@
       }
       margin: 0.4rem;
       max-width: 440px;
+      @media screen and (min-width: 440px) {
+        flex: 1 0 440px;
+      }
       width: 100%;
       background: #000000;
       padding: 0.77rem;
@@ -529,7 +535,10 @@
           height: auto;
           line-height: 6.45vw;
         }
-        .home-link {
+        .mobile-header-image {
+          width: 100%;
+        }
+        .home-link, .mobile-header-image-container {
           display: block;
           width: 100%;
           .mobile-header-image {
