@@ -18,12 +18,13 @@ var Safety = React.createClass({
       showModal: false,
       cancelTimeout: false,
       signupSuccess: false,
-      videoFinished: false
+      videoFinished: false,
+      videoStatus: "stopped",
+      scrollUp: false
     };
   },
   componentDidMount: function() {
     const video = this.props.params.video;
-
     if (!video) {
       setTimeout(() => {
         if (!this.state.cancelTimeout) {
@@ -36,6 +37,20 @@ var Safety = React.createClass({
     this.setState({
       cancelTimeout: true
     });
+  },
+  componentDidUpdate: function(prevProps, prevState) {
+    var videoStatus = "stopped";
+    var scrollUp = false;
+    if (this.props.location.state) {
+      videoStatus = this.props.location.state.videoStatus || "stopped";
+      scrollUp = this.props.location.state.scrollUp || false;
+    }
+    if (prevState.videoStatus !== videoStatus || prevState.scrollUp !== scrollUp) {
+      this.setState({
+        videoStatus: videoStatus,
+        scrollUp: scrollUp
+      });
+    }
   },
   closeModal: function() {
     this.setState({
@@ -79,7 +94,7 @@ var Safety = React.createClass({
     galleryData.forEach((item, index) => {
       if (video === item.slug) {
         itemIndex = index;
-        displayItem = (<DisplayItem item={item} itemIndex={itemIndex} onEnd={this.onEnd}/>);
+        displayItem = (<DisplayItem item={item} itemIndex={itemIndex} onEnd={this.onEnd} videoStatus={this.state.videoStatus} scrollUp={this.state.scrollUp}/>);
         currentIndex = 1;
         if (this.state.videoFinished) {
           items.splice(0, 0, (
