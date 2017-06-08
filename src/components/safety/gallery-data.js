@@ -50,7 +50,8 @@ module.exports = [
     "thumbnail": "/assets/safety/posters/router-security.jpg",
     "video": "fQUul8tWORM",
     "tips": [
-      "Do away with the default. Check your router settings and make sure you aren’t still using the defaults. If you are update your password."
+      "Do away with the default. Check your router settings and make sure you aren’t still using the defaults. If you are, update your username and password. 
+      "Make it even more secure. Read Consumer Reports <a href='http://www.consumerreports.org/cro/news/2014/04/5-ways-to-hack-proof-your-router/index.htm'>5 ways to hack proof your router</a> for additional measures to secure your router. "
     ]
   },
   {
@@ -60,7 +61,8 @@ module.exports = [
     "thumbnail": "/assets/safety/posters/2fa.jpg",
     "video": "fQUul8tWORM",
     "tips": [
-      "Use “two-factor authentication” wherever you can."
+      "Plan for the worst.  Whenever it’s available, use multi-factor authentication to log in to websites and apps.  If your password is breached, 2FA has your back."
+      "Read <a href='https://blog.mozilla.org/internetcitizen/2017/01/25/better-password-security/'>Mozilla’s tips for better password practices</a>, including 2FA."
     ]
   }
 ];
