@@ -18,7 +18,7 @@ var Safety = React.createClass({
       showModal: false,
       cancelTimeout: false,
       signupSuccess: false,
-      videoFinished: false
+      videoStatus: "stopped"
     };
   },
   componentDidMount: function() {
@@ -61,7 +61,12 @@ var Safety = React.createClass({
   },
   onEnd: function() {
     this.setState({
-      videoFinished: true
+      videoStatus: "ended"
+    });
+  },
+  onStart: function() {
+    this.setState({
+      videoStatus: "playing"
     });
   },
   render: function() {
@@ -79,9 +84,15 @@ var Safety = React.createClass({
     galleryData.forEach((item, index) => {
       if (video === item.slug) {
         itemIndex = index;
-        displayItem = (<DisplayItem item={item} itemIndex={itemIndex} onEnd={this.onEnd}/>);
+        displayItem = (
+          <DisplayItem item={item} itemIndex={itemIndex}
+            onEnd={this.onEnd}
+            onStart={this.onStart}
+            videoStatus={this.state.videoStatus}
+          />
+        );
         currentIndex = 1;
-        if (this.state.videoFinished) {
+        if (this.state.videoStatus === "ended") {
           items.splice(0, 0, (
             <div key={item.slug} className="next-video-sticky-container">
               <div ref={(element) => { this.stickyContainer = element; }}>
@@ -97,7 +108,7 @@ var Safety = React.createClass({
           items.splice(0, 0, null);
         }
       } else {
-        items.splice(currentIndex, 0, (<GalleryItem key={item.slug} item={item}/>));
+        items.splice(currentIndex, 0, (<GalleryItem key={item.slug} item={item} onClick={this.onStart}/>));
         currentIndex++;
       }
     });
