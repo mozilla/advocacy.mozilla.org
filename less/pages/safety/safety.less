@@ -52,6 +52,11 @@
       .mobile-header-image {
         display: none;
       }
+      @media screen and (max-width: 420px) {
+        button {
+          line-height: 2.3rem;
+        }
+      }
     }
     .cta {
       margin-right: auto;
@@ -273,21 +278,24 @@
         display: flex;
       }
       .share-button {
-        margin-left: 0.48rem;
+        margin-left: 0.8rem;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 1.1rem;
+        margin-top: 0.8rem;
         border: 1px solid #3DFFFF;
         color: #3DFFFF;
-        height: 1.3rem;
-        width: 1.3rem;
+        height: 1.8rem;
+        width: 1.8rem;
         .fa-facebook {
-          font-size: 0.9rem;
+          font-size: 1.3rem;
+        }
+        .fa-twitter {
+          font-size: 1.3rem;
         }
         .fa-envelope {
-          font-size: 0.8rem;
+          font-size: 1.2rem;
         }
       }
       .youtube-container {
@@ -559,6 +567,7 @@
       .cta {
         color: #fff;
         font-size: 1rem;
+        line-height: 1.3rem;
       }
       .container {
         justify-content: space-between;
