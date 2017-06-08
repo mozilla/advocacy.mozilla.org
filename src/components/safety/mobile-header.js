@@ -8,8 +8,13 @@ var MobileHeader = React.createClass({
     var image = (
       <img src="/assets/safety/mobile-header.svg" className="mobile-header-image"/>
     );
+    var imageContainer = (
+      <div className="mobile-header-image-container">
+        {image}
+      </div>
+    );
     if (linkTo) {
-      image = (
+      imageContainer = (
         <Link to={linkTo} className="home-link">
           {image}
         </Link>
@@ -18,7 +23,7 @@ var MobileHeader = React.createClass({
     return (
       <div className="mobile-header">
         <a href="https://mozilla.org/" className="moz-logo">mozilla</a>
-        {image}
+        {imageContainer}
       </div>
     );
   }
