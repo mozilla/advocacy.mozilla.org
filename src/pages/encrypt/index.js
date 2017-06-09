@@ -48,9 +48,7 @@ module.exports = React.createClass({
 
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link rel="stylesheet" type="text/css" href="/build/main.css"/>
-          <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
           <title>{this.props.title}</title>
           <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png"/>
           <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-196x196.png"/>
@@ -66,6 +64,7 @@ module.exports = React.createClass({
           <script src="/build/main.js"></script>
           <script src="https://c.shpg.org/352/sp.js"></script>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+          <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css"/>
           {shareProgressButtons}
         </body>
       </html>
