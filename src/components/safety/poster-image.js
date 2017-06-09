@@ -5,7 +5,7 @@ var PosterImage = React.createClass({
     return (
       <span onClick={this.props.onClick} className="poster-image">
         {this.props.children}
-        <img src={this.props.src}/>
+        <img className="poster-image-element" src={this.props.src}/>
       </span>
     );
   }
