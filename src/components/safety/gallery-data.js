@@ -14,7 +14,7 @@ module.exports = [
     "title": "Update Available",
     "description": "<em>How not to</em> be a ransomware victim",
     "thumbnail": "/assets/safety/posters/software-update.jpg",
-    "video": "eowrFdpcRbs",
+    "video": "NAAd3V-aCy8",
     "tips": [
       "Keep it updated. <a href='https://advocacy.mozilla.org/stay-secure/'>Updating to the latest security software</a>, browser, and operating system provides an important defense against viruses, malware, and other online threats."
     ]
@@ -26,9 +26,9 @@ module.exports = [
     "thumbnail": "/assets/safety/posters/use-encryption.jpg",
     "video": "On-rrkIzjMA",
     "tips": [
-      "Encrypt your communications. Signal, Whatsapp and iMessage are all encrypted.",
+      "Encrypt your communications. <a href='https://signal.org/'>Signal</a>, <a href='https://www.whatsapp.com/'>Whatsapp</a> and <a href='https://support.apple.com/explore/messages'>iMessage</a> are all encrypted.",
       "Look for the lock. Before you enter personal information online, make sure the website is encrypted by looking for the lock icon next to the URL (lock icon).",
-      "Advocate for encryption. If a favorite or frequently visited website isn’t encrypted tell them about Let’s Encrypt, a free, automated and open certificate authority run for the public’s benefit."
+      "Advocate for encryption. If a favorite or frequently visited website isn’t encrypted tell them about <a href='https://letsencrypt.org/'>Let’s Encrypt</a>, a free, automated and open certificate authority run for the public’s benefit."
     ]
   },
   {
@@ -48,7 +48,7 @@ module.exports = [
     "title": "How safe is your smart home?",
     "description": "<em>Time to lock</em> your digital doors",
     "thumbnail": "/assets/safety/posters/router-security.jpg",
-    "video": "fQUul8tWORM",
+    "video": "xbutW-MuKqo",
     "tips": [
       "Do away with the default. Check your router settings and make sure you aren’t still using the defaults. If you are, update your username and password.",
       "Make it even more secure. Read Consumer Reports <a href='http://www.consumerreports.org/cro/news/2014/04/5-ways-to-hack-proof-your-router/index.htm'>5 ways to hack proof your router</a> for additional measures to secure your router. "
