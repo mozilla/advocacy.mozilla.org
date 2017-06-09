@@ -414,6 +414,10 @@
     cursor: pointer;
     img {
       display: block;
+      min-height: 301px;
+      @media screen and (max-width: 440px) {
+        min-height: 62vw;
+      }
     }
     .next-video-container {
       position: absolute;
@@ -520,6 +524,10 @@
     }
     .header-image {
       height: 100%;
+      min-height: 328px;
+      @media screen and (max-width: 924px) {
+        min-height: 35vw;
+      }
       width: 100%;
       display: block;
     }
