@@ -4,7 +4,7 @@ module.exports = [
     "title": "I’ve been hacked",
     "description": "<em>Why you need</em> a password manager, now",
     "thumbnail": "/assets/safety/posters/password-manager.jpg",
-    "video": "dkX8J-FKndE",
+    "video": "0-Z56jrCbQg",
     "tips": [
       "Protect your logins. Use a <a href='https://www.wired.com/2016/01/you-need-a-password-manager/'>password manager</a> to make creating and remembering passwords easier. (Note: we haven’t tried them all – see what works for you.)"
     ]
@@ -24,7 +24,7 @@ module.exports = [
     "title": "Encrypt the Cybers",
     "description": "<em>Protect what’s private</em> with encryption",
     "thumbnail": "/assets/safety/posters/use-encryption.jpg",
-    "video": "mz_YWNhKOkM",
+    "video": "On-rrkIzjMA",
     "tips": [
       "Encrypt your communications. Signal, Whatsapp and iMessage are all encrypted.",
       "Look for the lock. Before you enter personal information online, make sure the website is encrypted by looking for the lock icon next to the URL (lock icon).",
@@ -36,7 +36,7 @@ module.exports = [
     "title": "Trouble Connecting?",
     "description": "<em>The true cost</em> of free public WiFi",
     "thumbnail": "/assets/safety/posters/public-wifi.jpg",
-    "video": "fQUul8tWORM",
+    "video": "MnK2-PcDLQw",
     "tips": [
       "Look for the lock. Before you enter personal information online, make sure the website is encrypted by looking for the lock icon next to the URL (lock icon).",
       "Go Virtual. If you use WiFi often, use a VPN (Virtual Private Network).",
@@ -57,9 +57,9 @@ module.exports = [
   {
     "slug": "2fa",
     "title": "Double the Defense",
-    "description": "<em>Stay safe</em> with 2-factor authentication",
+    "description": "<em>Multi-factor authentication.</em> Big words, big help.",
     "thumbnail": "/assets/safety/posters/2fa.jpg",
-    "video": "fQUul8tWORM",
+    "video": "_T0VfwSb4U8",
     "tips": [
       "Plan for the worst.  Whenever it’s available, use multi-factor authentication to log in to websites and apps.  If your password is breached, 2FA has your back."
       "Read <a href='https://blog.mozilla.org/internetcitizen/2017/01/25/better-password-security/'>Mozilla’s tips for better password practices</a>, including 2FA."
