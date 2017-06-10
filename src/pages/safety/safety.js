@@ -142,6 +142,12 @@ var Safety = React.createClass({
       }
     }
 
+    if (displayItem) {
+      className += " display-item-page";
+    } else {
+      className += " safety-home-page";
+    }
+
     return (
       <div className={className}>
         {modal}

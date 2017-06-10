@@ -52,7 +52,10 @@
       .mobile-header-image {
         display: none;
       }
-      @media screen and (max-width: 420px) {
+      button {
+        width: 6.969rem;
+      }
+      @media screen and (max-width: 596px) {
         button {
           line-height: 2.3rem;
         }
@@ -61,6 +64,10 @@
     .cta {
       margin-right: auto;
       padding-right: 0.85rem;
+      max-height: 1.75rem;
+      @media screen and (max-width: 440px) {
+        max-height: 2.6rem;
+      }
     }
     .moz-logo {
       font-size: 1.636rem;
@@ -316,8 +323,8 @@
 
       .next-video-container {
         img {
-          width: 126px;
-          height: 70px;
+          height: 3.2rem;
+          width: 5.7rem;
         }
       }
     }
@@ -483,6 +490,7 @@
       width: 100%;
       img {
         width: 7.5rem;
+        height: 4.5rem;
       }
     }
     a {
@@ -542,7 +550,7 @@
       display: block;
     }
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 596px) {
     .safety-header .header-image,
     .gallery-item-header-container .gallery-item-header {
       display: none;
@@ -577,7 +585,7 @@
       padding: 0 12px;
     }
     .signup-cta {
-      padding: 7px 0;
+      padding: 0.45rem 0;
       background: #B94FBB;
       .moz-logo {
         display: none;
@@ -593,6 +601,14 @@
     }
     .safety-gallery {
       padding: 0.5rem 0;
+    }
+    .safety-home-page {
+      .signup-cta {
+        padding-bottom: 0;
+      }
+      .safety-gallery {
+        padding: 0 0 0.5rem 0;
+      }
     }
   }
 }
