@@ -308,18 +308,24 @@
         }
       }
       .youtube-container {
-        height: ~'calc(76vw - 24px)';
-        max-height: 480px;
+        width: 100%;
+        padding-bottom: 75%;
         margin-bottom: 12px;
+        position: relative;
+        iframe {
+          position: absolute;
+        }
       }
 
-      .poster-image-element {
+      .poster-image {
         width: 100%;
-        height: 480px;
-        display: block;
-        @media screen and (max-width: 664px) {
-          height: ~'calc(76vw - 24px)';
-          min-height: auto;
+        padding-bottom: 75%;
+        position: relative;
+
+        .poster-image-element {
+          width: 100%;
+          position: absolute;
+          display: block;
         }
       }
 
