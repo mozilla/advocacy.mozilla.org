@@ -69,6 +69,7 @@
       max-height: 1.75rem;
       @media screen and (max-width: 440px) {
         max-height: 2.6rem;
+        max-width: 12rem;
       }
     }
     .moz-logo {
@@ -347,7 +348,7 @@
         font-family: 'Zilla Slab', serif;
         font-weight: 100;
         font-style: normal;
-        font-size: 1rem;
+        font-size: 1.15rem;
         text-transform: none;
         li {
           border-bottom: 2px #FFFFFF solid;
@@ -502,6 +503,23 @@
         width: 7.5rem;
       }
     }
+    &:after {
+      content: "";
+      flex: auto;
+    }
+
+    &:after,
+    .gallery-item {
+      margin: 0.4rem;
+      max-width: 440px;
+      width: 100%;
+      @media screen and (min-width: 440px) {
+        flex: 1 0 416px;
+      }
+      @media screen and (min-width: 822px) {
+        flex: 1 0 440px;
+      }
+    }
     a {
       display: block;
       img, span {
@@ -519,12 +537,6 @@
       .description {
         color: #C3CAE0;
       }
-      margin: 0.4rem;
-      max-width: 440px;
-      @media screen and (min-width: 440px) {
-        flex: 1 0 416px;
-      }
-      width: 100%;
       background: #000000;
       padding: 0.77rem;
       img {
