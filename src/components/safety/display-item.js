@@ -108,7 +108,7 @@ var DisplayItem = React.createClass({
     });
 
     var video = (
-      <PosterImage onClick={this.onStart} src={this.props.item.thumbnail}>
+      <PosterImage onClick={this.onStart} src={this.props.item.poster}>
         <PlayButton/>
       </PosterImage>
     );
@@ -131,7 +131,7 @@ var DisplayItem = React.createClass({
       );
     } else if (this.props.videoStatus === "ended") {
       video = (
-        <PosterImage onClick={this.onReplay} src={this.props.item.thumbnail}>
+        <PosterImage onClick={this.onReplay} src={this.props.item.poster}>
           <NextVideo itemIndex={this.props.itemIndex}/>
         </PosterImage>
       );

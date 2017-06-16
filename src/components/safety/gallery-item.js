@@ -19,7 +19,7 @@ var GalleryItem = React.createClass({
     return (
       <div className="gallery-item">
         <Link onClick={this.onClick} to={"/" + locale + "/safety/" + this.props.item.slug}>
-          <PosterImage src={this.props.item.thumbnail}>
+          <PosterImage src={this.props.item.thumbnail || this.props.item.poster}>
             <PlayButton/>
           </PosterImage>
           <span className="title">{this.props.item.title}</span>

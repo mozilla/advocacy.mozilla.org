@@ -22,7 +22,7 @@ var PosterImage = React.createClass({
       <span className="next-video-container">
         <Link onClick={this.onClick} to={"/" + locale + "/safety/" + nextVideo.slug}>
           <span className="next-video">
-            <img src={nextVideo.thumbnail}/>
+            <img src={nextVideo.poster}/>
             <span className="next-tip-copy">
               <span className="black-copy">next tip</span>
               <span>{nextVideo.title}</span>
