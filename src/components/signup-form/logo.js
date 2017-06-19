@@ -6,7 +6,7 @@ var Logo = React.createClass({
       <div className="nav-container">
         <div className="nav">
           <div className="nav-logo-container">
-            <a href="https://mozilla.org/" className="nav-logo">mozilla</a>
+            <a href="https://mozilla.org/" className="nav-logo"></a>
           </div>
         </div>
       </div>

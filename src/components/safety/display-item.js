@@ -120,9 +120,10 @@ var DisplayItem = React.createClass({
             opts={{
               height: '100%',
               width: '100%',
-              playerVars: { 
+              playerVars: {
+                rel: 0,
                 autoplay: 1
-              } 
+              }
             }}
             videoId={this.props.item.video}
             onEnd={this.onEnd}
