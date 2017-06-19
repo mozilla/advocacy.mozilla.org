@@ -28,7 +28,7 @@ var Signup = React.createClass({
             <div className="form-body-container">
               <div className="nn-comments-header">
                 <div>
-                  <a href="https://mozilla.org/" className="moz-logo">mozilla</a>
+                  <a href="https://mozilla.org/" className="moz-logo"></a>
                 </div>
                 <div>
                   <h1>the beginning of the end of the open internet?</h1>
