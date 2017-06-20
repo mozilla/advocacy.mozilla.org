@@ -3,7 +3,6 @@ import PosterImage from './poster-image.js';
 import PlayButton from './play-button.js';
 import NextVideo from './next-video.js';
 import YouTube from 'react-youtube';
-import reactGA from 'react-ga';
 import classnames from "classnames";
 
 var DisplayItem = React.createClass({
@@ -12,35 +11,20 @@ var DisplayItem = React.createClass({
       tipStatus: "nothing"
     };
   },
-  onStart: function() {
+  onPlay: function() {
     if (this.props.onStart) {
       this.props.onStart();
     }
-    reactGA.event({
-      category: "Video",
-      action: "Video Played",
-      label: this.props.item.title
-    });
-  },
-  onReplay: function() {
-    if (this.props.onStart) {
-      this.props.onStart();
-    }
-    reactGA.event({
-      category: "Video",
-      action: "Video Replayed",
-      label: this.props.item.title
-    });
   },
   onEnd: function() {
     if (this.props.onEnd) {
       this.props.onEnd();
     }
-    reactGA.event({
-      category: "Video",
-      action: "Video Ended",
-      label: this.props.item.title
-    });
+  },
+  onNew: function() {
+    if (this.props.onNew) {
+      this.props.onNew();
+    }
   },
   tipSuccess: function() {
     reactGA.event({
@@ -108,12 +92,21 @@ var DisplayItem = React.createClass({
     });
 
     var video = (
-      <PosterImage onClick={this.onStart} src={this.props.item.poster}>
+      <PosterImage onClick={this.onPlay} src={this.props.item.poster}>
         <PlayButton/>
       </PosterImage>
     );
 
-    if (this.props.videoStatus === "playing") {
+    var autoPlay = 1;
+    var pageWidth = 0;
+    if (typeof window !== 'undefined') {
+      pageWidth = window.innerWidth;
+      if (this.props.videoStatus !== "playing") {
+        autoPlay = 0;
+      }
+    }
+
+    if (this.props.videoStatus === "playing" || pageWidth <= 440) {
       video = (
         <div className="youtube-container">
           <YouTube
@@ -122,18 +115,19 @@ var DisplayItem = React.createClass({
               width: '100%',
               playerVars: {
                 rel: 0,
-                autoplay: 1
+                autoplay: autoPlay
               }
             }}
             videoId={this.props.item.video}
             onEnd={this.onEnd}
+            onPlay={this.onPlay}
           />
         </div>
       );
     } else if (this.props.videoStatus === "ended") {
       video = (
-        <PosterImage onClick={this.onReplay} src={this.props.item.poster}>
-          <NextVideo itemIndex={this.props.itemIndex}/>
+        <PosterImage onClick={this.onPlay} src={this.props.item.poster}>
+          <NextVideo onClick={this.onNew} itemIndex={this.props.itemIndex}/>
         </PosterImage>
       );
     }

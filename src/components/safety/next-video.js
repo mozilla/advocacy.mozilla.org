@@ -7,8 +7,12 @@ var PosterImage = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
   },
-  onClick: function() {
+  onClick: function(e) {
     window.scrollTo(0, 0);
+    e.stopPropagation();
+    if (this.props.onClick) {
+      this.props.onClick();
+    }
   },
   render: function() {
     var locale = this.context.intl.locale;

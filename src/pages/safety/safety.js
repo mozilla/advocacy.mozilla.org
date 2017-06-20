@@ -11,6 +11,7 @@ import GalleryItem from '../../components/safety/gallery-item.js';
 import galleryData from '../../components/safety/gallery-data.js';
 import NextVideo from '../../components/safety/next-video.js';
 import StickyContainer from '../../components/signup-form/sticky-container.js';
+import reactGA from 'react-ga';
 
 var Safety = React.createClass({
   getInitialState: function() {
@@ -63,8 +64,32 @@ var Safety = React.createClass({
     this.setState({
       videoStatus: "ended"
     });
+    reactGA.event({
+      category: "Video",
+      action: "Video Ended",
+      label: this.props.params.video
+    });
   },
   onStart: function() {
+    if (this.state.videoStatus === "ended") {
+      reactGA.event({
+        category: "Video",
+        action: "Video Replayed",
+        label: this.props.params.video
+      });
+    } else if (this.state.videoStatus === "stopped") {
+      reactGA.event({
+        category: "Video",
+        action: "Video Played",
+        label: this.props.params.video
+      });
+    }
+
+    this.setState({
+      videoStatus: "playing"
+    });
+  },
+  onNew: function() {
     this.setState({
       videoStatus: "playing"
     });
@@ -88,6 +113,7 @@ var Safety = React.createClass({
           <DisplayItem item={item} itemIndex={itemIndex}
             onEnd={this.onEnd}
             onStart={this.onStart}
+            onNew={this.onNew}
             videoStatus={this.state.videoStatus}
           />
         );
@@ -98,7 +124,7 @@ var Safety = React.createClass({
               <div ref={(element) => { this.stickyContainer = element; }}>
                 <StickyContainer stickyTo={this.getPosition}>
                   <div className="sticky-content" ref={(element) => { this.stickyContent = element; }}>
-                    <NextVideo itemIndex={itemIndex}/>
+                    <NextVideo onClick={this.onNew} itemIndex={itemIndex}/>
                   </div>
                 </StickyContainer>
               </div>
@@ -108,7 +134,9 @@ var Safety = React.createClass({
           items.splice(0, 0, null);
         }
       } else {
-        items.splice(currentIndex, 0, (<GalleryItem key={item.slug} item={item} onClick={this.onStart}/>));
+        items.splice(currentIndex, 0, (
+          <GalleryItem key={item.slug} item={item} onClick={this.onNew}/>
+        ));
         currentIndex++;
       }
     });
