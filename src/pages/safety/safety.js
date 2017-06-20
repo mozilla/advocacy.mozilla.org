@@ -58,7 +58,7 @@ var Safety = React.createClass({
     if (!this.stickyContainer || !this.stickyContainer.getClientRects()[0]) {
       return 0;
     }
-    return this.stickyContainer.getClientRects()[0].top + window.scrollY - window.innerHeight;
+    return this.stickyContainer.getClientRects()[0].top + window.scrollY - window.innerHeight + this.stickyContent.children[0].offsetHeight;
   },
   onEnd: function() {
     this.setState({
@@ -131,7 +131,7 @@ var Safety = React.createClass({
             </div>
           ));
         } else {
-          items.splice(0, 0, null);
+          items.splice(0, 0, <div className="sticky-position-placeholder"></div>);
         }
       } else {
         items.splice(currentIndex, 0, (
