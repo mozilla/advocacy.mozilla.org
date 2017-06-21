@@ -131,7 +131,7 @@ var Safety = React.createClass({
             </div>
           ));
         } else {
-          items.splice(0, 0, <div className="sticky-position-placeholder"></div>);
+          items.splice(0, 0, <div key={item.slug} className="sticky-position-placeholder"></div>);
         }
       } else {
         items.splice(currentIndex, 0, (
