@@ -4,6 +4,7 @@ import PlayButton from './play-button.js';
 import NextVideo from './next-video.js';
 import YouTube from 'react-youtube';
 import classnames from "classnames";
+import reactGA from 'react-ga';
 
 var DisplayItem = React.createClass({
   getInitialState: function() {
