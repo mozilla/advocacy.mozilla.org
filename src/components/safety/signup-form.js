@@ -86,6 +86,7 @@ var SignupForm = React.createClass({
         submissionError: ""
       });
       submit("/api/signup/basket", {
+        url: window.location.href,
         email: this.state.emailInput,
         locale: this.context.intl.locale
       }, () => {
