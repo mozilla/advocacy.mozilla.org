@@ -20,7 +20,7 @@ function createElement(Component, props) {
 
   return (
     <IntlProvider locale={locale} messages={messages}>
-      <Component {...props}/>
+      <Component {...props} test={props.location.query.test}/>
     </IntlProvider>
   );
 }

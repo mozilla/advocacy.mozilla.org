@@ -2,12 +2,39 @@ import React  from 'react';
 import Footer from '../../components/signup-form/footer.js';
 import Header from '../../components/signup-form/header.js';
 import Logo from '../../components/signup-form/logo.js';
-import SignupFormSticky from '../../components/signup-form/signup-form-sticky.js';
-import SignupForm from '../../components/net-neutrality/fcc-comments-form.js';
-import SignupFormContainer from '../../components/signup-form/signup-form-container.js';
+import CommentFormSticky from '../../components/signup-form/signup-form-sticky.js';
+import CommentForm from '../../components/net-neutrality/fcc-comments-form.js';
+import CommentFormContainer from '../../components/signup-form/signup-form-container.js';
+import SignupForm from '../../components/net-neutrality/signup-form.js';
 import FormBody from '../../components/signup-form/form-body.js';
+import Modal from '../../components/modal.js';
 
 var Signup = React.createClass({
+  getInitialState: function() {
+    return {
+      showModal: false,
+      signupSuccess: false
+    };
+  },
+  componentDidMount: function() {
+    if (this.props.test === "signup-modal" || this.props.location.query.subscribed) {
+      setTimeout(() => {
+        this.setState({
+          showModal: true
+        });
+      }, 3000);
+    }
+  },
+  closeModal: function() {
+    this.setState({
+      showModal: false
+    });
+  },
+  onSuccess: function() {
+    this.setState({
+      signupSuccess: true
+    });
+  },
   onResize: function() {
     if (!this.stickyForm) {
       return;
@@ -20,8 +47,32 @@ var Signup = React.createClass({
       className += " " + this.props.test;
     }
 
+    var modal = null;
+    if (this.state.showModal) {
+      if (this.state.signupSuccess) {
+        modal = (
+          <Modal onClose={this.closeModal}>
+            <div className="signup-success">
+              <div className="form-copy">
+                <div><span className="white">Thanks!</span> <span className="light">Please check your inbox or your spam filter for an email from us to confirm your subscription.</span>
+                </div>
+              </div>
+              <button className="button" onClick={this.closeModal}>Yes, I got it</button>
+            </div>
+          </Modal>
+        );
+      } else {
+        modal = (
+          <Modal onClose={this.closeModal}>
+            <SignupForm onClose={this.closeModal} onSuccess={this.onSuccess}/>
+          </Modal>
+        );
+      }
+    }
+
     return (
       <div className={className}>
+        {modal}
         <div className="net-neutrality-page page">
           <div id="about" className="nav-anchor nav-offset"></div>
           <div className="signup-container">
@@ -68,21 +119,21 @@ var Signup = React.createClass({
                 </div>
               </div>
             </div>
-            <SignupFormSticky viewportPadding={0} ref={(input) => { this.stickyForm = input; }}>
+            <CommentFormSticky viewportPadding={0} ref={(input) => { this.stickyForm = input; }}>
               <h4>
                 Tell the FCC to leave net neutrality alone.
               </h4>
               <p className="blue-paragraph">
                 Write your comment below to tell the FCC why net neutrality MUST be protected. We’ll deliver your comment straight to the agency.
               </p>
-              <SignupFormContainer cta="Tell the FCC: Leave Net Neutrality Alone">
-                <SignupForm
+              <CommentFormContainer cta="Tell the FCC: Leave Net Neutrality Alone">
+                <CommentForm
                   onResize={this.onResize}
-                  subscribed={this.props.location.query.subscribed}
+                  subscribed={this.props.location.query.subscribed || this.state.signupSuccess}
                   cta="Submit your comment"
                 />
-              </SignupFormContainer>
-            </SignupFormSticky>
+              </CommentFormContainer>
+            </CommentFormSticky>
           </div>
         </div>
         <Footer shareLink="http://share.mozilla.org/352/181032"/>

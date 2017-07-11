@@ -3,7 +3,7 @@ import Footer from '../../components/safety/footer.js';
 import Header from '../../components/safety/header.js';
 import GalleryItemHeader from '../../components/safety/gallery-item-header.js';
 import DisplayItem from '../../components/safety/display-item.js';
-import Modal from '../../components/safety/modal.js';
+import Modal from '../../components/modal.js';
 import SignupForm from '../../components/safety/signup-form.js';
 import SignupCta from '../../components/safety/signup-cta.js';
 import SafetyGallery from '../../components/safety/safety-gallery.js';

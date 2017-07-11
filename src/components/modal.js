@@ -12,8 +12,8 @@ var Modal = React.createClass({
   },
   render: function() {
     return (
-      <div className="safety-modal" onClick={this.props.onClose}>
-        <div className="safety-modal-container">
+      <div className="modal" onClick={this.props.onClose}>
+        <div className="modal-container">
           <div onClick={this.props.onClose} className="modal-close">
             <i className="fa fa-times" aria-hidden="true"></i>
           </div>
@@ -27,3 +27,4 @@ var Modal = React.createClass({
 });
 
 module.exports = Modal;
+
