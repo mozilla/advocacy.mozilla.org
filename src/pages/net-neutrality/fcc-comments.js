@@ -17,7 +17,7 @@ var Signup = React.createClass({
     };
   },
   componentDidMount: function() {
-    if (this.props.test === "signup-modal" || this.props.location.query.subscribed) {
+    if (!this.props.location.query.subscribed) {
       setTimeout(() => {
         this.setState({
           showModal: true
