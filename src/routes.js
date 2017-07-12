@@ -79,6 +79,10 @@ function buildRoutes() {
           <IndexRoute component={require(`./pages/net-neutrality/fcc-comments.js`)}/>
           <Redirect from="*" to={"/" + locale + "/net-neutrality-comments/"} />
         </Route>
+        <Route path="net-neutrality-comments-simple">
+          <IndexRoute component={require(`./pages/net-neutrality/fcc-comments-simple.js`)}/>
+          <Redirect from="*" to={"/" + locale + "/net-neutrality-comments/"} />
+        </Route>
         <Route path="safety">
           <IndexRoute component={require(`./pages/safety/safety.js`)}/>
           <Route path=":video" component={require(`./pages/safety/safety.js`)}/>
