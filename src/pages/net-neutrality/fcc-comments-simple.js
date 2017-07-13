@@ -26,6 +26,7 @@ var Signup = React.createClass({
                   <CommentForm
                     subscribed={this.props.location.query.subscribed}
                     cta="Submit your comment"
+                    redirectUrl="https://mozilla.org"
                   />
                 </CommentFormContainer>
               </div>

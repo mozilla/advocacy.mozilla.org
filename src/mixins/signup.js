@@ -36,7 +36,7 @@ var SignupMixin = {
     this.doPetitionSuccess(result, 'http://share.mozilla.org/352/180765');
   },
   fccCommentSuccess: function(result) {
-    this.doFccCommentSuccess(result, 'http://share.mozilla.org/352/181032');
+    this.doFccCommentSuccess(result, this.props.redirectUrl || 'http://share.mozilla.org/352/181032');
   },
   petitionSheet: function(props) {
     this.doPetition("/api/petition/sheets", props, this.petitionSuccess, this.petitionError);
