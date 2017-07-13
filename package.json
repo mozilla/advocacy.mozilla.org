@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "advocacy.mozilla.org",
   "engines": {
-    "node": "^4.6.0"
+    "node": "^4.8.4"
   },
   "scripts": {
     "start": "npm-run-all --parallel build:l10njson watch:js server",
