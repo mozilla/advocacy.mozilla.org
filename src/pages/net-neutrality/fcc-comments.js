@@ -123,9 +123,12 @@ var Signup = React.createClass({
               <h4>
                 Tell the FCC to leave net neutrality alone.
               </h4>
-              <p className="blue-paragraph">
-                Write your comment below to tell the FCC why net neutrality MUST be protected. We’ll deliver your comment straight to the agency.
-              </p>
+              <div className="blue-paragraph">
+                <p>
+                  Write your comment below to tell the FCC why net neutrality MUST be protected. We’ll deliver your comment straight to the agency.</p>
+                <p>
+                  Keep commenting! The FCC is continuing to take comments on net neutrality through August 16, though earlier comments were used in their first round of review.</p>
+              </div>
               <CommentFormContainer cta="Tell the FCC: Leave Net Neutrality Alone">
                 <CommentForm
                   onResize={this.onResize}
