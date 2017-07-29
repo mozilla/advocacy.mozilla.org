@@ -44,6 +44,9 @@ var Safety = React.createClass({
     });
   },
   openModal: function() {
+    if (this.props.subscribed) {
+      return;
+    }
     this.setState({
       showModal: true,
       cancelTimeout: true
@@ -181,7 +184,7 @@ var Safety = React.createClass({
         {modal}
         <div className="safety-page">
           {header}
-          <SignupCta onCta={this.openModal}/>
+          <SignupCta onCta={this.openModal} subscribed={this.props.subscribed}/>
           {displayItem}
           <SafetyGallery>
             {items}
