@@ -19,9 +19,9 @@ var Signup = React.createClass({
                 <h4>
                   Tell the FCC to leave net neutrality alone.
                 </h4>
-                <p className="blue-paragraph">
-                  Write your comment below to tell the FCC why net neutrality MUST be protected. We’ll deliver your comment straight to the agency.
-                </p>
+                <div className="blue-paragraph">
+                  <p>Write your comment below to tell the FCC why net neutrality MUST be protected. We’ll deliver your comment straight to the agency.</p>
+                </div>
                 <CommentFormContainer cta="Tell the FCC: Leave Net Neutrality Alone">
                   <CommentForm
                     subscribed={this.props.location.query.subscribed}
