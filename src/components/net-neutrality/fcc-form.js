@@ -264,12 +264,9 @@ console.log("wtf");
         <label>
           <input onClick={this.onPrivacyCheckboxClick} className="checkbox" autoComplete="off" onChange={this.privacyCheckboxChange} value={this.state.privacyCheckbox} type="checkbox"></input>
           <span>
-            I’m okay with Mozilla using my comments for its net neutrality campaign, in accordance with the Mozilla <a href="https://www.mozilla.org/about/legal/terms/mozilla/">Terms of Service</a>
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/en-US/privacy/websites/">Privacy Notice</a>
           </span>
           <ErrorMessage>{this.state.privacyCheckboxError}</ErrorMessage>
-        </label>
-        <label>
-          Note: Mozilla will be filing this document on your behalf via <a href="https://www.fcc.gov/ecfs/filings/express">https://www.fcc.gov/ecfs/filings/express</a> into an official FCC proceeding. Per FCC guidelines, the FCC will make all information submitted, including names and addresses, publicly available via the web. Mozilla will otherwise manage your submitted information as explained in our <a href="https://www.mozilla.org/privacy/websites/">Privacy Notice</a>.
         </label>
         <ErrorMessage>{this.state.signupError}</ErrorMessage>
         <button onClick={this.onSubmit} className={buttonClassName}>
