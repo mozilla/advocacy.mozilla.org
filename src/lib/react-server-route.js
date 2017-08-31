@@ -73,25 +73,14 @@ module.exports = function(req, res, next) {
   var htmlClassName = "";
   if (location.indexOf('/net-neutrality') !== -1) {
     htmlClassName = "net-neutrality-html";
-    metaTitle = "Stand up for net neutrality";
+    metaTitle = "Will they hand the internet over to the big cable companies? Not if we do something about it.";
     metaSiteName = "Join me in protecting net neutrality";
     metaUrl = "https://advocacy.mozilla.org/en-US/net-neutrality/";
-    metaDesc = "The FCC has a plan to destroy net neutrality. It’s up to us to stop it.";
-    metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/NN-share-progress.jpg";
-    twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/NN-share-progress.jpg";
-    desc = "The FCC has a plan to destroy net neutrality. It’s up to us to stop it.";
-    title = "Mozilla Advocacy - Stand up for net neutrality";
-  }
-  if (location.indexOf('/net-neutrality-comments') !== -1) {
-    htmlClassName = "net-neutrality-html";
-    metaTitle = "Submit your comment to the FCC";
-    metaSiteName = "Submit your comment to the FCC";
-    metaUrl = "https://advocacy.mozilla.org/en-US/net-neutrality-comments/";
-    metaDesc = "Send in YOUR comment in support of net neutrality now.";
-    metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/breaking-glass.jpg";
-    twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/breaking-glass.jpg";
-    desc = "Send in YOUR comment in support of net neutrality now.";
-    title = "Mozilla Advocacy - Submit your comment to the FCC";
+    metaDesc = "The FCC’s received more than 22 million comments on whether to water down existing Net Neutrality rules and wants to vote on it in a month. One month to read all 22 million comments? That’s crazy. Tell the FCC to slow it down.";
+    metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
+    twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
+    desc = "The FCC’s received more than 22 million comments on whether to water down existing Net Neutrality rules and wants to vote on it in a month. One month to read all 22 million comments? That’s crazy. Tell the FCC to slow it down.";
+    title = "Will they hand the internet over to the big cable companies? Not if we do something about it.";
   }
   var shareProgress = "";
   if (location.indexOf('/safety') !== -1) {
