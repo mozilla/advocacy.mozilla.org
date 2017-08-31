@@ -75,14 +75,8 @@ function buildRoutes() {
           <IndexRoute component={require(`./pages/net-neutrality/petition.js`)}/>
           <Redirect from="*" to={"/" + locale + "/net-neutrality/"} />
         </Route>
-        <Route path="net-neutrality-comments">
-          <IndexRoute component={require(`./pages/net-neutrality/fcc-comments.js`)}/>
-          <Redirect from="*" to={"/" + locale + "/net-neutrality-comments/"} />
-        </Route>
-        <Route path="net-neutrality-comments-simple">
-          <IndexRoute component={require(`./pages/net-neutrality/fcc-comments-simple.js`)}/>
-          <Redirect from="*" to={"/" + locale + "/net-neutrality-comments/"} />
-        </Route>
+        <Redirect from="net-neutrality-comments" to={"/" + locale + "/net-neutrality/"} />
+        <Redirect from="net-neutrality-comments-simple" to={"/" + locale + "/net-neutrality/"} />
         <Route path="safety">
           <IndexRoute component={require(`./pages/safety/safety.js`)}/>
           <Route path=":video" component={require(`./pages/safety/safety.js`)}/>
