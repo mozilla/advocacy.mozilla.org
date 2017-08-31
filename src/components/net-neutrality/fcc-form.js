@@ -3,7 +3,7 @@ import classnames from "classnames";
 import reactGA from 'react-ga';
 
 var NOT_SUBMITTING = 0;
-var FCC_COMMENT_SUBMITTING = 3;
+var PETITION_SUBMITTING = 2;
 
 var ErrorMessage = React.createClass({
   render: function() {
@@ -101,7 +101,6 @@ var Signup = React.createClass({
   },
   onSubmit: function() {
     var valid = true;
-console.log("wtf");
     if (this.state.submitting !== NOT_SUBMITTING) {
       return;
     }
@@ -214,7 +213,7 @@ console.log("wtf");
   },
   render: function() {
     var buttonClassName = classnames(`button`, {
-      "submitting": this.state.submitting === FCC_COMMENT_SUBMITTING
+      "submitting": this.state.submitting === PETITION_SUBMITTING
     });
 
     var buttonText = this.props.cta || "";
