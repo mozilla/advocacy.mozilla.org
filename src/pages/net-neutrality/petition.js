@@ -132,7 +132,7 @@ var Signup = React.createClass({
                 <FccForm
                   onResize={this.onResize}
                   subscribed={this.props.location.query.subscribed || this.state.signupSuccess}
-                  cta="Submit your comment"
+                  cta="Sign our letter"
                 />
               </FccFormContainer>
             </FccFormSticky>
