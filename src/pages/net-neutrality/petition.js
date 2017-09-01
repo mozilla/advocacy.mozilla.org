@@ -102,13 +102,13 @@ var Signup = React.createClass({
                     The folks at the FCC might be fast readers. But no one is that fast. <b>That’s why we’re calling for the FCC to Slow. It. Down.</b>
                   </p>
                   <p>
-                    We don’t want to slow down the Internet, of course (though other companies might..).  Instead, we’re urging the FCC -- and Congress, which oversees the agency -- to slow down its process so it can read and analyze the response rather than charging forward on an ill-advised, Internet-killing plan. There’s a reason that the government sometimes moves slowly: because it has an outsized impact and should not make decisions like this rashly.
+                    We don’t want to slow down the Internet, of course.  Instead, we’re urging the FCC -- and Congress, which oversees the agency -- to slow down its process so it can read and analyze the response rather than charging forward on an ill-advised, Internet-killing plan. There’s a reason that the government sometimes moves slowly: because it has an outsized impact and should not make decisions like this rashly.
                   </p>
                   <p>
                     <b>Take action now and tell the FCC to slow it down.</b> The future of the Internet depends on it.
                   </p>
                   <p>
-                    Many millions of people spoke out against Chairman Ajit Pai’s proposal to scrap existing net neutrality rules that would allow big companies to slice up the Internet into fast lanes (for those who can pay) and slow lanes (for everyone else), stamp out competition from small businesses, and block speech they don’t agree with. The FCC sought public comments -- the least it can do is to review these opinions, facts, and ideas before it makes a critical vote on Net Neutrality.
+                    Many millions of people spoke out against Chairman Ajit Pai’s proposal to scrap existing Net Neutrality rules that would allow big companies to slice up the Internet into fast lanes (for those who can pay) and slow lanes (for everyone else), stamp out competition from small businesses, and block speech they don’t agree with. The FCC sought public comments -- the least it can do is to review these opinions, facts, and ideas before it makes a critical vote on Net Neutrality.
                   </p>
                 </div>
               </div>
