@@ -14,6 +14,9 @@ module.exports = React.createClass({
         <div className="fellow-header-overlay"></div>
         <div className="nav-items">
           <div className="nav-link-container current-fellows-link">
+            <Link to={"/" + locale + "/open-web-fellows/fellows2017"}>2017 Fellows</Link>
+          </div>
+          <div className="nav-link-container past-fellows-link">
             <Link to={"/" + locale + "/open-web-fellows/fellows2016"}>2016 Fellows</Link>
           </div>
           <div className="nav-link-container past-fellows-link">
