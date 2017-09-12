@@ -86,6 +86,7 @@ var Signup = React.createClass({
                   <br/>
                   <p>*Not the Internet. The FCC.</p>
                 </div>
+                <a className="attribution" href="https://www.flickr.com/photos/josephgruber/15109096143/in/photolist-p294TD-pY1vRA">Image by Joseph Gruber, CC BY-NC-ND 2.0</a>
               </div>
               <div className="form-body-border">
                 <div className="form-body">

@@ -456,18 +456,30 @@
 
   .nn-comments-header {
     padding: 1.2rem 1.5rem;
-    height: 70vh;
+    height: 24rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("/assets/net-neutrality/breaking-glass.jpg");
-    background-size: cover;
+    background-image: url("/assets/net-neutrality/save-the-internet.jpg");
+    background-color: #000000;
+    background-size: 100%;
     background-position: 50%;
+    background-repeat: no-repeat;
     h1, p {
       display: inline;
       box-decoration-break: clone;
       margin: 0;
       padding: 0.2rem 0.4rem;
+    }
+    position: relative;
+    .attribution {
+      position: absolute;
+      color: #FFFFFF;
+      opacity: 0.6;
+      right: 0;
+      bottom: 0;
+      margin: 1.2rem 1.5rem;
+      font-size: 0.8rem;
     }
     h1 {
       color: #FFFFFF;
