@@ -133,7 +133,7 @@ module.exports = React.createClass({
               Rebecca is a multidisciplinary software developer, researcher, and advocate who is engaged in issues of privacy and freedom of expression online. Drawing on a background in Middle East politics and Arabic, she has conducted research at New York University on algorithmic and surveillance systems, with a particular emphasis on government repression. A self-taught programmer, she is passionate about building digital tools for activists that promote free speech on the internet.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer className="grey slant">
+          <ContentContainer>
             <FellowBlock
               name="Maya Wagoner"
               image="/assets/fellows2017/Maya@2x.jpg"
@@ -147,7 +147,7 @@ module.exports = React.createClass({
               Maya is a researcher, user experience designer, and organizer passionate about critical pedagogy and democratizing technology. She previously worked at the Open Technology Institute on a participatory action research project to understand how activists, advocates, educators, and technologists work with technology for social justice. While at MIT, Maya helped develop curricula with the Imagination, Computation, and Expression Lab to understand how identity and the use of avatars play a role in computer science education. Prior to this, she served as a co-chair of the UC Santa Cruz African/Black Student Alliance, and an organizer of Code for San Francisco, a volunteer civic technology group.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer>
+          <ContentContainer className="grey slant">
             <FellowBlock
               name="Aleksandar Todorović (r3bl)"
               image="/assets/fellows2017/Aleksandar@2x.jpg"
@@ -161,7 +161,7 @@ module.exports = React.createClass({
             Aleksandar describes himself as an open source advocate with a passion in information security. So far, he has contributed to some worldly-known projects such as reddit and elementary OS. Previously he has been working for an investigative journalism organization (Organized Crime and Corruption Reporting Project), where, amongst other things, he was helping journalists to become more secure in their communication with their sources and between themselves.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer className="grey slant">
+          <ContentContainer>
             <FellowBlock
               name="Orlando Del Aguila"
               image="/assets/fellows2017/Orlando@2x.jpg"
