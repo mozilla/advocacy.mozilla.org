@@ -86,8 +86,10 @@ module.exports = React.createClass({
               company="Free Press"
               companyHref="https://www.freepress.net/"
               quote="Without the freedom to organize, communicate, and campaign, all social movements suffer."
-              handle="DrewSaysGoVeg"
+              handle="drewSaysGoVeg"
               handleHref="https://twitter.com/DrewSaysGoVeg"
+              linkName="Drew's website"
+              link="https://www.rishabn.com/"
             >
               Drew is an organizer and software developer who’s passionate about using web technology to accelerate social change movements. With a background in computer science, he’s interested in using modern web technology as a tool to create a more participatory society. Previously, Drew was the technical lead at advocacy organizations focused on international refugee issues, animal protection, and transparency in government. In 2014, he was a Code for America fellow, where he worked with the city of Denver, Colorado to improve civic engagement using open data. In 2010, he founded New England VegFest, an annual vegetarian food festival, and is president of the VegFest Foundation. During the Open Web Fellowship, Drew was based at Free Press and launched the national Internet 2016 campaign, started a podcast about tech activism with two other fellows (<a href="https://netposi.com/" target="_blank">NetPosi</a>), and conducted research around digital tools for activism.
             </FellowBlock>
