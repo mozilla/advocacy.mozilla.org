@@ -31,7 +31,7 @@ var FellowBlock = React.createClass({
 module.exports = React.createClass({
   render: function() {
     return (
-      <div className="current-fellows-page fellows-page">
+      <div className="fellows-page-2017 fellows-page">
         <Header/>
         <HeroUnit className="fellows-hero-unit" image="/assets/2016-hero@2x.jpg">
           <h1>2017 Hosts & Fellows</h1>
@@ -175,7 +175,7 @@ module.exports = React.createClass({
               Orlando is a software engineer, entrepreneur and a consultant who is experienced in high scalability projects. He aims to take on more social projects that impact the lives of underrepresented communities, however he is a traveler and a foodie at heart.
             </FellowBlock>
           </ContentContainer>
-          <ContentContainer className="grey slant">
+          <ContentContainer className="grey slant flat-bottom">
             <FellowBlock
               name="Nasma Ahmed"
               image="/assets/fellows2017/Nasma@2x.jpg"

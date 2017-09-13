@@ -28,7 +28,7 @@ var FellowBlock = React.createClass({
 module.exports = React.createClass({
   render: function() {
     return (
-      <div className="past-fellows-page fellows-page">
+      <div className="fellows-page-2015 fellows-page">
         <Header/>
         <HeroUnit className="fellows-hero-unit" image="/assets/fellows.jpg">
           <h1>2015 Hosts & Fellows</h1>

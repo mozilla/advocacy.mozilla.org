@@ -13,13 +13,13 @@ module.exports = React.createClass({
       <StickyContainer className="fellows-header" stickyFrom={() => 448}>
         <div className="fellow-header-overlay"></div>
         <div className="nav-items">
-          <div className="nav-link-container current-fellows-link">
+          <div className="nav-link-container fellows-link-2017">
             <Link to={"/" + locale + "/open-web-fellows/fellows2017"}>2017 Fellows</Link>
           </div>
-          <div className="nav-link-container past-fellows-link">
+          <div className="nav-link-container fellows-link-2016">
             <Link to={"/" + locale + "/open-web-fellows/fellows2016"}>2016 Fellows</Link>
           </div>
-          <div className="nav-link-container past-fellows-link">
+          <div className="nav-link-container fellows-link-2015">
             <Link to={"/" + locale + "/open-web-fellows/fellows2015"}>2015 Fellows</Link>
           </div>
           <div className="nav-link-container overview-link">
