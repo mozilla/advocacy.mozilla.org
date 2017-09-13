@@ -51,7 +51,7 @@ module.exports = React.createClass({
               companyHref="https://www.ihollaback.org/"
               handle="sa0un"
               handleHref="https://twitter.com/sa0un"
-              link="www.sarahaoun.com"
+              link="http://www.sarahaoun.com/"
               linkName="Sarah's website"
             >
               Sarah is a data activist, operational security trainer, and programmer. Her work lies at the intersection of tech, human rights, and transformative justice. She’s collaborated with activists, journalists, grassroots social movements, and NGOs in the US and MENA region on digital security, ethical data & privacy, and data-driven storytelling. Sarah grew up in Lebanon and holds a B.A. in International Relations from Brown University.
@@ -114,7 +114,7 @@ module.exports = React.createClass({
               handle="rishabn_"
               handleHref="https://twitter.com/rishabn_"
               linkName="Rishab’s website"
-              link="www.rishabn.com"
+              link="https://www.rishabn.com/"
             >
               Rishab has research interests in the areas of security, privacy, and Internet measurement. More specifically, he enjoys research geared towards defending anonymity, understanding Internet censorship, measuring aspects of the advertising and tracking ecosystem, and generally understanding the impact of the Internet on the sociopolitical realities of today. In the past, he dabbled in usable security and computer theory. In the coming year, he plans to work towards understanding of how the Internet impacts political action and discourse.
             </FellowBlock>
@@ -183,7 +183,7 @@ module.exports = React.createClass({
               companyHref="https://mpowerchange.org/"
               handle="nasma_ahmed"
               handleHref="https://twitter.com/nasma_ahmed"
-              link="www.nasmaahmed.ca"
+              link="http://www.nasmaahmed.ca/"
               linkName="Nasma's website"
             >
               Nasma is a black Muslimah working within the intersections of social justice,technology and policy. She is a technologist and capacity builder based in Toronto. Currently she works with feminist organizations based in Canada focusing on digital literacy and digital security. Recently she finished a degree at the University of Toronto majoring in Public Policy and City Studies. She is passionate about building accessible and inclusive technology for communities she cares about.
