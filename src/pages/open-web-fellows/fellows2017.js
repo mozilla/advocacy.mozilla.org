@@ -127,10 +127,10 @@ module.exports = React.createClass({
               companyHref="https://www.hrw.org/"
               handle="baricks"
               handleHref="https://twitter.com/baricks"
-              link="http://beccaricks.com"
+              link="http://beccaricks.space/"
               linkName="Rebecca's website"
             >
-              Rebecca is a multidisciplinary software developer, researcher, and advocate who is engaged in issues of privacy and freedom of expression online. Drawing on a background in Middle East politics and Arabic, she has conducted research at New York University on algorithmic and surveillance systems, with a particular emphasis on government repression. A self-taught programmer, she is passionate about building digital tools for activists that promote free speech on the internet.
+              Rebecca is a multidisciplinary software developer, researcher, and activist who is engaged in issues of privacy and freedom of expression online. She holds a master's degree from NYU-ITP., where she has researched and built interactive experiences that probe algorithmic and surveillance systems.  A self-taught programmer, she is passionate about building digital tools for activists. As an Open Web Fellow, Rebecca will contribute to advocacy work at Human Rights Watch, with a particular emphasis on privacy and surveillance.
             </FellowBlock>
           </ContentContainer>
           <ContentContainer>
