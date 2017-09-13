@@ -96,6 +96,17 @@ module.exports = function(req, res, next) {
     shareProgress = "safetyTips";
   }
 
+  if (location.indexOf('/open-web-fellows') !== -1) {
+    metaTitle = "Ford-Mozilla Open Web Fellows";
+    metaSiteName = "Ford-Mozilla Open Web Fellows";
+    metaUrl = "https://advocacy.mozilla.org/open-web-fellows/";
+    metaDesc = "Current and alumni fellows working at the intersection of tech, policy, advocacy, and the open web.";
+    metaImage = "https://advocacy.mozilla.org/assets/2016-hero@2x.jpg";
+    twitterImage = "https://advocacy.mozilla.org/assets/fellows.jpg";
+    desc = "Current and alumni fellows working at the intersection of tech, policy, advocacy, and the open web.";
+    title = "Ford-Mozilla Open Web Fellows";
+  }
+
   // This is essentially a callback lookup. If the requested URL is a known
   // URL based on the routing map as defined in routes.js, then this will
   // lead to render properties that can be used to generate page components.
