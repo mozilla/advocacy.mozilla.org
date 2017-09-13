@@ -186,7 +186,7 @@ module.exports = React.createClass({
               link="http://www.nasmaahmed.ca/"
               linkName="Nasma's website"
             >
-              Nasma is a black Muslimah working within the intersections of social justice,technology and policy. She is a technologist and capacity builder based in Toronto. Currently she works with feminist organizations based in Canada focusing on digital literacy and digital security. Recently she finished a degree at the University of Toronto majoring in Public Policy and City Studies. She is passionate about building accessible and inclusive technology for communities she cares about.
+              Nasma is a black Muslimah working within the intersections of social justice, technology and policy. She is a technologist and capacity builder based in Toronto. Currently she works with feminist organizations based in Canada focusing on digital literacy and digital security. Recently she finished a degree at the University of Toronto majoring in Public Policy and City Studies. She is passionate about building accessible and inclusive technology for communities she cares about.
             </FellowBlock>
           </ContentContainer>
         </div>
