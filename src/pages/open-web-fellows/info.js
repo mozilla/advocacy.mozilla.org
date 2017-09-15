@@ -40,7 +40,7 @@ module.exports = React.createClass({
                 <p>Host organizations are selected via an open call for applications. The call for 2017 host organizations is now open. <a href="https://mozilla.forms.fm/2017-ford-mozilla-open-web-fellowship">Apply here</a>. If you’re interested in being a host organization or learning more, please contact <a href="mailto:vanessa@mozillafoundation.org">Vanessa Rhinesmith</a>, Program Manager.</p>
               </Panel>
               <Panel header={`What kind of projects do the fellows work on?`}>
-                <p>Fellows focus on three primary project areas during their participation in the fellowship: projects in development with the host organization, personal projects (either pre existing or new initiatives), and community created projects (with the fellowship cohort and or Mozilla’s Policy & Advocacy network at-large). A list of proposed 2016 host organization projects can be found <a href="https://blog.mozilla.org/netpolicy/2016/02/01/2016-open-web-fellows-program-host-organizations/" target="_blank">here</a>.</p>
+                <p>Fellows focus on three primary project areas during their participation in the fellowship: projects in development with the host organization, personal projects (either pre existing or new initiatives), and community created projects (with the fellowship cohort and or Mozilla’s Policy & Advocacy network at-large). </p>
               </Panel>
               <Panel header={`How are fellows funded over the fellowship?`}>
                 <p>{`Funding and additional supplements for which fellows may be eligible are allocated to the individual directly on a monthly basis.`}</p>
