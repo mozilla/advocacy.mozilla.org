@@ -75,8 +75,8 @@ module.exports = React.createClass({
               image="/assets/fellows2017/Sarahk@2x.jpg"
               company="Research ICT Africa"
               companyHref="http://www.researchictafrica.net/home.php"
-              handle="skay319"
-              handleHref="https://twitter.com/skay319"
+              handle="MsKiden"
+              handleHref="https://twitter.com/MsKiden"
             >
               Sarah is a technologist, academic and trainer, passionate about Open Source solutions, Internet Policy and ICT for Development. She is on the core engineering team at Research and Education Network for Uganda, coordinating capacity building initiatives for Universities and Research Institutions in Uganda. She volunteers with the Internet Society Uganda Chapter, ICANN’s At-Large Advisory Committee, is a Board Advisor for One Mobile Projector per Trainer and a Co-Founder of DigiWave Africa. Sarah holds an MSc in Information Systems. As an Open Web Fellow, Sarah will be based at Research ICT Africa, where she will work on the Internet measurements project, focusing on broadband performance, Internet peering and users behavior.
             </FellowBlock>
