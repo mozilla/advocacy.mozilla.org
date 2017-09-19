@@ -15,6 +15,7 @@ var FellowBlock = React.createClass({
           </div>
           <div className="fellow-info">
             <h2>{this.props.name}</h2>
+            {this.props.link ? <p><a href={this.props.link}>{this.props.linkName}</a></p> : null }
             <p><a href={this.props.companyHref}>{this.props.company}</a></p>
             <p>{`"` + this.props.quote + `"`} <a href={this.props.handleHref}>{`@` + this.props.handle}</a></p>
           </div>
