@@ -1,0 +1,70 @@
+.buyers-guide-home {
+  section {
+    background: #FFFFFF;
+    overflow: hidden;
+  }
+  .red {
+    overflow: hidden;
+    color: #FFFFFF;
+    background: linear-gradient(#E54544, #B73333);
+    text-align: center;
+  }
+  .categories-container {
+    background: #FFFFFF;
+  }
+  .header-section,
+  .footer {
+    overflow-y: scroll;
+  }
+  .header-section,
+  .footer,
+  .categories-container {
+    position: fixed;
+    padding-top: 45px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s top;
+    &.bottom {
+      top: 100%;
+    }
+    &.top {
+      top: -100%;
+    }
+  }
+  .swiper-container-top {
+    height: 50% !important;
+    overflow: hidden;
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+  .swiper-container-bottom {
+    height: 50% !important;
+    overflow: hidden;
+    .swiper-wrapper {
+      position: relative;
+      .swiper-slide {
+        position: absolute;
+        top: 0;
+        opacity: 0 !important;
+      }
+      .swiper-slide-active {
+        opacity: 1 !important;
+      }
+    }
+  }
+  .swiper-slide,
+  .swiper-wrapper {
+    height: 100% !important;
+  }
+  .swiper-end {
+    opacity: 0;
+  }
+}

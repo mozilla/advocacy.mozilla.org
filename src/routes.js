@@ -83,6 +83,14 @@ function buildRoutes() {
           <Route path=":video" component={require(`./pages/safety/safety.js`)}/>
           <Redirect from="*" to={"/" + locale + "/safety/"} />
         </Route>
+        <Route path="buyers-guide">
+          <IndexRoute component={require(`./pages/buyers-guide/home.js`)}/>
+          <Route path="category">
+            <Route path=":category" component={require(`./pages/buyers-guide/category.js`)}/>
+            <Route path=":category/:item" component={require(`./pages/buyers-guide/item.js`)}/>
+          </Route>
+          <Redirect from="*" to={"/" + locale + "/buyers-guide/"} />
+        </Route>
         <Route path="encrypt">
           <IndexRoute onEnter={indexDirect(locale)} />
           <Route path="signup" component={require(`./pages/encrypt/signup.js`)}/>
