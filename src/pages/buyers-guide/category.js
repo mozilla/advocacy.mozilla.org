@@ -1,69 +1,7 @@
 import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
-
-var guideData = {
-  "toys": {
-    "item-1": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    },
-    "item-2": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    },
-    "item-3": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    },
-    "item-4": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    },
-    "item-5": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    },
-    "item-6": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    }
-  },
-  "game-consoles": {
-    "item-1": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    }
-  },
-  "home-hubs": {
-    "item-1": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    }
-  },
-  "smart-home-accessories": {
-    "item-1": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    }
-  },
-  "gadgets-gizmos": {
-    "item-1": {
-      "label": "maker",
-      "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    }
-  }
-};
+import guideData from '../../data/buyers-guide.js';
 
 var Item = React.createClass({
   render: function() {
@@ -83,7 +21,8 @@ var BuyersGuide = React.createClass({
   },
   render: function() {
     const category = this.props.params.category;
-    const items = guideData[category];
+    const items = guideData[category] || {};
+
     const locale = this.context.intl.locale;
     return (
       <div className="buyers-guide buyers-guide-category">
