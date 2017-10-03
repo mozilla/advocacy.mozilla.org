@@ -25,7 +25,7 @@ var Breadcrumb = React.createClass({
     }
     return (
       <div className="breadcrumb">
-        CATEGORIES > <a href={"/" + locale + "/buyers-guide/category/" + category}> {" " + " category "} </a> > <a href={"/" + locale + "/buyers-guide/category/" + category + "/" + item}> {item} </a>
+        CATEGORIES > <a href={"/" + locale + "/buyers-guide/category/" + category}> {category} </a> > <a href={"/" + locale + "/buyers-guide/category/" + category + "/" + item}> {item} </a>
       </div>
     );
   }
