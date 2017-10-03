@@ -73,8 +73,12 @@ var BuyersGuide = React.createClass({
     const category = this.props.params.category;
     const itemName = this.props.params.item;
     const items = guideData[category];
-    const item = items[itemName];
+    var item = items[itemName];
     const locale = this.context.intl.locale;
+
+    if (!item) {
+      item = {};
+    }
 
     return (
       <div className="buyers-guide buyers-guide-item">
