@@ -24,7 +24,12 @@ module.exports = React.createClass({
       );
     }
 
-    var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700";
+    var coralScript = null;
+    if (this.props.buyersGuide) {
+      coralScript = (<script src="https://mozilla-foundation-talk.herokuapp.com/embed.js"></script>);
+    }
+
+    var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700|Playfair+Display:200,300,400";
     return (
       <html className={this.props.htmlClassName}>
         <head>
@@ -59,6 +64,7 @@ module.exports = React.createClass({
           <Pontoon/>
         </head>
         <body>
+          {coralScript}
           <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.reactHTML}}/>
           <link rel="stylesheet" href={googleFonts}/>
           <script src="/build/main.js"></script>

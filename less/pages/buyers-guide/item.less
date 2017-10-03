@@ -1,0 +1,62 @@
+.buyers-guide-item {
+  section {
+    h2 {
+      opacity: 0.5;
+      font-weight: 400;
+    }
+    background: #FFFFFF;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      display: block;
+      margin: 20px 0;
+    }
+    .clear {
+      overflow: hidden;
+    }
+    .category-item-label {
+      opacity: 0.5;
+      font-size: 24px;
+      float: left;
+      line-height: 23px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .age-range {
+      font-style: italic;
+    }
+    .copy-link {
+      background: #F44041;
+      color: #FFFFFF;
+      vertical-align: text-bottom;
+      padding: 2px 12px;
+      float: right;
+    }
+    .copy-status {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 45px;
+      opacity: 0;
+      visibility: none;
+      pointer-events: none;
+      background: #F44041;
+      transition: opacity 0.3s;
+      color: #FFFFFF;
+      text-align: center;
+      font-style: italic;
+      box-sizing: border-box;
+      padding: 6px 20px;
+      &.show {
+        transition: opacity 0s;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+  }
+}
