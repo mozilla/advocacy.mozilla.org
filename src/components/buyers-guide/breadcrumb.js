@@ -19,13 +19,13 @@ var Breadcrumb = React.createClass({
     if (!item) {
       return (
         <div className="breadcrumb">
-          CATEGORIES > <a href={"/" + locale + "/buyers-guide/category/" + category}> {category} </a>
+          CATEGORIES > {category}
         </div>
       );
     }
     return (
       <div className="breadcrumb">
-        CATEGORIES > <a href={"/" + locale + "/buyers-guide/category/" + category}> {category} </a> > <a href={"/" + locale + "/buyers-guide/category/" + category + "/" + item}> {item} </a>
+        CATEGORIES > <a href={"/" + locale + "/buyers-guide/category/" + category}> {category} </a> > {item}
       </div>
     );
   }
