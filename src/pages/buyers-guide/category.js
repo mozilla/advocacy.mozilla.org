@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
+import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
 import guideData from '../../data/buyers-guide.js';
 
 var Item = React.createClass({
@@ -28,9 +29,9 @@ var BuyersGuide = React.createClass({
       <div className="buyers-guide buyers-guide-category">
         <Header/>
         <section>
-          <div className="breadcrumb">
-            CATEGORIES > {category}
-          </div>
+          <Breadcrumb
+            category={category}
+          />
           <h1>Category Name</h1>
           <p>LOREM IPSUM DOLOR sit amet.</p>
           <div>

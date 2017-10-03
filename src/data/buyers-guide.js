@@ -10,10 +10,10 @@ module.exports = {
     "item-2": {
       "label": "maker",
       "header": "Echo",
-      "img": "/assets/126x126.jpg"
-    },,
+      "img": "/assets/126x126.jpg",
       "age": "Appropriate for ages 0-101.",
       "description": "Something about rubber ducks."
+    },
     "item-3": {
       "label": "maker",
       "header": "Echo",

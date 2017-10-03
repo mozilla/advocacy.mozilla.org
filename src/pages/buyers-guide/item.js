@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
+import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
 import guideData from '../../data/buyers-guide.js';
 
 var BuyersGuide = React.createClass({
@@ -18,9 +19,10 @@ var BuyersGuide = React.createClass({
       <div className="buyers-guide buyers-guide-item">
         <Header/>
         <section>
-          <div className="breadcrumb">
-            CATEGORIES > {category} > {itemName}
-          </div>
+          <Breadcrumb
+            category={category}
+            item={itemName}
+          />
           <img src={item.img}/>
           <div>{item.label}</div>
           <h1>{item.header}</h1>
@@ -29,18 +31,20 @@ var BuyersGuide = React.createClass({
           <div>Safety Review</div>
           <div>CAN IT SPY ON ME?</div>
           <table>
-            <tr>
-              <td>camera</td>
-              <td>no</td>
-            </tr>
-            <tr>
-              <td>microphone</td>
-              <td>no</td>
-            </tr>
-            <tr>
-              <td>tracks location</td>
-              <td>yes</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>camera</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>microphone</td>
+                <td>no</td>
+              </tr>
+              <tr>
+                <td>tracks location</td>
+                <td>yes</td>
+              </tr>
+            </tbody>
           </table>
           <div>WHAT INFORMATION CAN THE APP ACCESS?</div>
           <ul>
