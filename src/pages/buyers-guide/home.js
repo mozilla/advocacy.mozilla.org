@@ -148,8 +148,8 @@ var BuyersGuide = React.createClass({
         <Header/>
         <section ref={(input) => {this.headerInput = input;}} className={headerClassName}>
           <header className="red">
-            <h1>The Most Wonderful Time Of The Year, But Wait</h1>
-            <p>
+            <h1 className="playfair">The Most Wonderful Time Of The Year, But Wait</h1>
+            <p className="playfair">
               The holidays, it's the most wonderful time of the year. unless you buy a gift that spies on your kid or tracks your brother or gets your friend hacked.
             </p>
             <p>
@@ -159,12 +159,16 @@ var BuyersGuide = React.createClass({
                 to Consumer Reports
               </span>
             </p>
-            <div>ARROW</div>
+            <div><i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+</div>
           </header>
-          <p>That's why mozilla</p>
-          <div className="start-show" onTouchMove={this.slideUp} onClick={this.slideUp}>
-            <p>See The Gift Guide</p>
-            <p>DOWN ARROW</p>
+          <div className="content">
+            <p className="playfair fancy-letter">THAT'S WHY MOZILLA asked some folks like The Dad Lab, Scarry Mommy, and other safety concerned individuals to take a crack at reviewing the hottest gift this season. The result is a real person's guide to connected gifts. Because no one wants to get spied on for Christmas.</p>
+            <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
+              <h2>See The Gift Guide</h2>
+              <p className="itallic">Scroll to begin journey</p>
+              <div className="center-line"></div>
+            </div>
           </div>
         </section>
 

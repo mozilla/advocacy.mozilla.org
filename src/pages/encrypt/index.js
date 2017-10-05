@@ -24,7 +24,7 @@ module.exports = React.createClass({
       );
     }
 
-    var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700";
+    var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700|Playfair+Display:200,300,400";
     return (
       <html className={this.props.htmlClassName}>
         <head>

@@ -46,6 +46,10 @@
   }
 }
 
+.itallic {
+  font-style: italic;
+}
+
 .buyers-guide {
   .breadcrumb {
     height: 37px;
@@ -53,9 +57,45 @@
     display: flex;
     align-items: center;
   }
+  .center-line {
+    background: #000000;
+    width: 2px;
+    height: 60px;
+    margin: 0 auto;
+  }
+  .fancy-letter {
+    text-align: left;
+    &::first-letter {
+      color: #FFFFFF;
+      background: linear-gradient(#E54544, #B73333);
+      font-weight: 600;
+      float: left;
+      font-size: 50px;
+      padding: 10px 13px;
+      margin: 5px 5px 0 0;
+    }
+  }
+
+  .content {
+    padding: 0 30px;
+  }
+  .playfair {
+    font-family: 'Playfair Display';
+  }
   .generic-footer {
     a {
       color: #FFFFFF;
+    }
+  }
+  .header-section {
+    text-align: center;
+    header {
+      padding: 0 30px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding-top: 45px;
     }
   }
 }
