@@ -19,8 +19,10 @@
   .footer {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 0;
     section.red {
       padding: 0 30px;
+      padding-top: 45px;
     }
     h2 {
       margin: 80px 0;
@@ -31,6 +33,12 @@
         color: #BB3535;
       }
     }
+  }
+  .donate-button {
+    background: #000000;
+    height: 52px;
+    padding: 0 36px;
+    margin-bottom: 40px;
   }
   .header-section,
   .footer,
@@ -47,9 +55,18 @@
       top: -100%;
     }
   }
-  .footer,
   .categories-container {
     padding-top: 45px;
+  }
+  .donate-container {
+    position: relative;
+    .close-button {
+      position: absolute;
+      top: 4px;
+      right: 12px;
+      padding: 6px;
+      margin: 0;
+    }
   }
   .swiper-container-top {
     height: 50% !important;

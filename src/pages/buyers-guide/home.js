@@ -238,9 +238,12 @@ var BuyersGuide = React.createClass({
               </button>
             </div>
           </section>
-          <section className="red">
+          <section className="red donate-container">
+            <button className="close-button">
+              <i className="fa fa-times fa-2x" aria-hidden="true"></i>
+            </button>
             <p>Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.</p>
-            <button>DONATE NOW</button>
+            <button className="donate-button">DONATE NOW</button>
           </section>
           <Footer/>
         </div>
