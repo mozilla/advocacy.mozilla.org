@@ -7,11 +7,13 @@ import guideData from '../../data/buyers-guide.js';
 var Item = React.createClass({
   render: function() {
     return (
-      <a href={this.props.href}>
-        <img src={this.props.img}/>
-        <div>{this.props.label}</div>
-        <div>{this.props.header}</div>
-      </a>
+      <div className="category-item-container">
+        <a href={this.props.href}>
+          <img src={this.props.img}/>
+          <div className="category-item-label">{this.props.label}</div>
+          <div className="category-item-header playfair">{this.props.header}</div>
+        </a>
+      </div>
     );
   }
 });
@@ -35,7 +37,7 @@ var BuyersGuide = React.createClass({
           <div className="page-width">
             <h1 className="playfair">Category Name</h1>
             <p className="playfair fancy-letter"><b>LOREM IPSUM DOLOR</b> sit amet, consectetur adipiscing elit. Vivamus gravida purus feugiat lecus eleifend gravida. Integer lobortis lacus quis nisi.</p>
-            <div>
+            <div className="categories-container">
               {Object.keys(items).map(function(itemName, index) {
                 const item = items[itemName];
                 return (
