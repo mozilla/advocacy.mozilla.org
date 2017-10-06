@@ -159,8 +159,9 @@ var BuyersGuide = React.createClass({
                 to Consumer Reports
               </span>
             </p>
-            <div><i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
-</div>
+            <div>
+              <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+            </div>
           </header>
           <div className="content">
             <p className="playfair fancy-letter">THAT'S WHY MOZILLA asked some folks like The Dad Lab, Scarry Mommy, and other safety concerned individuals to take a crack at reviewing the hottest gift this season. The result is a real person's guide to connected gifts. Because no one wants to get spied on for Christmas.</p>
@@ -220,10 +221,10 @@ var BuyersGuide = React.createClass({
         <div ref={(input) => {this.footerInput = input;}} className={footerClassName}>
           <section className="red">
             <div onClick={this.slideDown} onTouchMove={this.slideDown}>
-              <p>^</p>
-              <p>Experience the journey again</p>
+              <i className="fa fa-angle-up fa-5x" aria-hidden="true"></i><br/>
+              <span className="itallic">Experience the journey again</span>
             </div>
-            <p>Best wishes to you and yours</p>
+            <h2 className="playfair">Best wishes to you and yours</h2>
             <p>SHARE THIS PAGE</p>
             <div><button>F</button><button>T</button><button>E</button></div>
           </section>
