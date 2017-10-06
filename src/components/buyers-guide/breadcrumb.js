@@ -12,20 +12,26 @@ var Breadcrumb = React.createClass({
     if (!category) {
       return (
         <div className="breadcrumb">
-          CATEGORIES >
+          <span className="breadcrumb-item last">CATEGORIES</span>
         </div>
       );
     }
     if (!item) {
       return (
         <div className="breadcrumb">
-          CATEGORIES > {category}
+          <span className="breadcrumb-item">CATEGORIES</span>
+          <span className="breadcrumb-split">&gt;</span>
+          <span className="breadcrumb-item last">{category}</span>
         </div>
       );
     }
     return (
       <div className="breadcrumb">
-        CATEGORIES > <a href={"/" + locale + "/buyers-guide/category/" + category}> {category} </a> > {item}
+        <span className="breadcrumb-item">CATEGORIES</span>
+        <span className="breadcrumb-split">&gt;</span>
+        <span className="breadcrumb-item"><a href={"/" + locale + "/buyers-guide/category/" + category}>{category}</a></span>
+        <span className="breadcrumb-split">&gt;</span>
+        <span className="breadcrumb-item last">{item}</span>
       </div>
     );
   }

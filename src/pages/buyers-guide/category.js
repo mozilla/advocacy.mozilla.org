@@ -32,15 +32,17 @@ var BuyersGuide = React.createClass({
           <Breadcrumb
             category={category}
           />
-          <h1>Category Name</h1>
-          <p>LOREM IPSUM DOLOR sit amet.</p>
-          <div>
-            {Object.keys(items).map(function(itemName, index) {
-              const item = items[itemName];
-              return (
-                <Item {...item} href={"/" + locale + "/buyers-guide/category/" + category + "/" + itemName}/>
-              );
-            })}
+          <div className="page-width">
+            <h1 className="playfair">Category Name</h1>
+            <p className="playfair fancy-letter"><b>LOREM IPSUM DOLOR</b> sit amet, consectetur adipiscing elit. Vivamus gravida purus feugiat lecus eleifend gravida. Integer lobortis lacus quis nisi.</p>
+            <div>
+              {Object.keys(items).map(function(itemName, index) {
+                const item = items[itemName];
+                return (
+                  <Item {...item} href={"/" + locale + "/buyers-guide/category/" + category + "/" + itemName}/>
+                );
+              })}
+            </div>
           </div>
         </section>
         <Footer/>
