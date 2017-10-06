@@ -226,7 +226,17 @@ var BuyersGuide = React.createClass({
             </div>
             <h2 className="playfair">Best wishes to you and yours</h2>
             <p>SHARE THIS PAGE</p>
-            <div><button>F</button><button>T</button><button>E</button></div>
+            <div className="social-buttons">
+              <button className="social-button">
+                <i className="fa fa-facebook fa-1x"></i>
+              </button>
+              <button className="social-button">
+                <i className="fa fa-twitter fa-1x"></i>
+              </button>
+              <button className="social-button">
+                <i className="fa fa-envelope fa-1x"></i>
+              </button>
+            </div>
           </section>
           <section className="red">
             <p>Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.</p>
