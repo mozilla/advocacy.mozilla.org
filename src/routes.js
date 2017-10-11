@@ -107,6 +107,22 @@ function buildRoutes() {
       </Route>
     );
   });
+
+  ["en-US", "es"].forEach(function(locale) {
+    routes.push(
+      <Route key={locale + "-buyers-guide"} path={locale}>
+        <Route path="buyers-guide">
+          <IndexRoute component={require(`./pages/buyers-guide/home.js`)}/>
+          <Route path="category">
+            <Route path=":category" component={require(`./pages/buyers-guide/category.js`)}/>
+            <Route path=":category/:item" component={require(`./pages/buyers-guide/item.js`)}/>
+          </Route>
+          <Redirect from="*" to={"/" + locale + "/buyers-guide/"} />
+        </Route>
+      </Route>
+    );
+  });
+
   return routes;
 }
 // just need to handle / redirect now
