@@ -1,4 +1,4 @@
-var config = require('../intl-config.js');
+var defaultConfig = require('../intl-config.js');
 var propertiesParser = require('properties-parser');
 var path = require('path');
 var FS = require("q-io/fs");
@@ -10,35 +10,44 @@ var env = new Habitat();
 
 var supportedLocales = env.get('SUPPORTED_LOCALES') || "*";
 
-function getListLocales() {
-  return new Promise(function(resolve, reject) {
-    if (supportedLocales === "*") {
-      FS.listDirectoryTree(path.join(process.cwd(), config.src)).then(function(dirTree) {
-        var list = [];
-        dirTree.forEach(function(i) {
-          var that = i.split(config.src + '/');
-          if (that[1]) {
-            list.push(that[1]);
-          }
-        });
-        return resolve(list);
-      }).catch(function(e) {
-        console.log(e);
-        reject(e);
-      });
-    } else {
-      resolve(supportedLocales);
-    }
+function getDirectoryLocales(src) {
+  return FS.listDirectoryTree(path.join(process.cwd(), src)).then(function(dirTree) {
+    var list = [];
+    dirTree.forEach(function(i) {
+      var that = i.split(src + '/');
+      if (that[1]) {
+        list.push(that[1]);
+      }
+    });
+    return list;
   });
 }
 
-function writeFile(entries) {
+function getStaticLocales() {
+  return new Promise(function(resolve, reject) {
+    resolve(supportedLocales);
+  });
+}
+
+function getListLocales(src) {
+  if (supportedLocales === "*") {
+    return getDirectoryLocales(src);
+  } else {
+    return getStaticLocales();
+  }
+}
+
+function buildDictionary(entries) {
   var dictionary = entries.reduce(function(prevEntry, entry) {
     prevEntry[entry.locale] = entry.content;
     return prevEntry;
   }, {});
-  var publicPath = path.join(process.cwd(), config.dest);
-  var localesPath = path.join(publicPath, 'locales.json');
+  return dictionary;
+}
+
+function writeFile(dictionary, dir, file) {
+  var publicPath = path.join(process.cwd(), dir);
+  var localesPath = path.join(publicPath, file);
   FS.makeTree(publicPath).then(function() {
     FS.write(localesPath, JSON.stringify(dictionary, null, 2))
     .then(function() {
@@ -62,30 +71,37 @@ function readPropertiesFile(filePath) {
   });
 }
 
-function getContentMessages(locale) {
-  return new Promise(function(resolve, reject) {
-    FS.listTree(path.join(process.cwd(), config.src, locale), function(filePath, stat) {
+function getContentMessages(src) {
+  return function(locale) {
+    return FS.listTree(path.join(process.cwd(), src, locale), function(filePath, stat) {
       return path.extname(filePath) === ".properties";
     }).then(function(files) {
-      Promise.all(files.map(readPropertiesFile)).then(function(properties) {
+      return Promise.all(files.map(readPropertiesFile)).then(function(properties) {
         var merged_properties = {};
         properties.forEach(function(messages) {
           Hoek.merge(merged_properties, messages);
         });
-        resolve({content: merged_properties, locale: locale});
+        return {content: merged_properties, locale: locale};
       });
-    }).catch(function(e) {
-      console.log(e);
-      reject(e);
     });
+  };
+}
+
+function applyConfig(config) {
+  getListLocales(config.src).then(function(locales) {
+    return Promise.all(locales.map(getContentMessages(config.src)));
+  }).then(function(entries) {
+    writeFile(buildDictionary(entries), config.dest.dir, config.dest.file);
+  }).catch(function(err) {
+    console.error(err);
   });
 }
 
-function processMessageFiles(locales) {
-  return Promise.all(locales.map(getContentMessages));
-}
-
-getListLocales().then(processMessageFiles)
-.then(writeFile).catch(function(err) {
-  console.error(err);
+applyConfig(defaultConfig);
+applyConfig({
+  "dest": {
+    "dir": "public",
+    "file": "buyers-guide-locales.json"
+  },
+  "src": "buyers-guide-locales"
 });

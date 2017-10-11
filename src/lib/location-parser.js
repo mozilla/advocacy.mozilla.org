@@ -1,7 +1,9 @@
 var Parser = require("accept-language-parser");
 var bestLang = require("bestlang");
 var langmap = require("langmap");
-var locales = require('../../public/locales.json');
+var defaultLocales = require('../../public/locales.json');
+var buyersGuideLocales = require('../../public/buyers-guide-locales.json');
+var locales = defaultLocales;
 
 function getLocale(acceptLang) {
   var langHeader = Parser.parse(acceptLang);
@@ -17,6 +19,10 @@ module.exports = function(acceptLang, location) {
   var locationSplit = location.split("/");
   var locale = locationSplit[1];
   var redirect = "";
+
+  if (location.indexOf('/buyers-guide') !== -1) {
+    locales = buyersGuideLocales;
+  }
 
   if (!locale || !langmap[locale]) {
     // No locale or not a valid locale.

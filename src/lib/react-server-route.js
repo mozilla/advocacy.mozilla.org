@@ -3,7 +3,8 @@ import ReactDOM, { renderToString } from 'react-dom/server';
 import { IntlProvider } from 'react-intl';
 import { match, RouterContext } from 'react-router';
 import url from 'url';
-var locales = require('../../public/locales.json');
+
+var getMessages = require('./get-messages.js');
 var locationParser = require('./location-parser.js');
 
 module.exports = function(req, res, next) {
@@ -130,7 +131,7 @@ module.exports = function(req, res, next) {
         return;
       }
       function createElement(Component, props) {
-        var messages = Object.assign({}, locales["en-US"], locales[locale]);
+        var messages = getMessages(Object.assign, locale, location);
         // make sure you pass all the props in!
         return (
           <IntlProvider locale={locale} messages={messages}>

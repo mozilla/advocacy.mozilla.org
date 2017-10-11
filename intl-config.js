@@ -1,4 +1,7 @@
 module.exports = {
-  "dest": "public",
+  "dest": {
+    "dir": "public",
+    "file": "locales.json"
+  },
   "src": "locales"
 };
