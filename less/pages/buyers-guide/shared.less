@@ -24,6 +24,33 @@
 }
 
 .buyers-guide {
+  .modal {
+    .modal-close {
+      top: 50px;
+      right: 15px;
+      padding: 5px;
+      @media screen and (min-width: 376px) {
+        top: 15px;
+      }
+    }
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .signup-form {
+      background: #F53F3E;
+      width: 100%;
+      color: #FFFFFF;
+      max-width: 376px;
+      padding: 45px 20px 27px 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      @media screen and (max-width: 376px) {
+        min-height: 100vh;
+      }
+    }
+  }
   button {
     border: none;
     background: none;
