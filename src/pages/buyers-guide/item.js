@@ -4,6 +4,7 @@ import Header from '../../components/buyers-guide/header.js';
 import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
 import guideData from '../../data/buyers-guide.js';
 import Modal from '../../components/modal.js';
+import SignupForm from '../../components/buyers-guide/signup-form.js';
 
 var BuyersGuide = React.createClass({
   getInitialState: function() {
@@ -71,12 +72,23 @@ var BuyersGuide = React.createClass({
           <Modal onClose={this.closeModal}>
             <div className="signup-form">
               <div>
-                <h2>
+                <h2 className="playfair">
                   {this.context.intl.formatMessage({id: 'thank_you_sign_up'})}
                 </h2>
                 <p>
                   {this.context.intl.formatMessage({id: 'double_check_sign_up'})}
                 </p>
+                <div className="social-buttons">
+                  <button className="social-button">
+                    <i className="fa fa-facebook fa-2x"></i>
+                  </button>
+                  <button className="social-button">
+                    <i className="fa fa-twitter fa-2x"></i>
+                  </button>
+                  <button className="social-button">
+                    <i className="fa fa-envelope fa-2x"></i>
+                  </button>
+                </div>
                 <a onClick={this.closeModal}>
                   {this.context.intl.formatMessage({id: 'no_thanks'})}
                 </a>
@@ -89,12 +101,23 @@ var BuyersGuide = React.createClass({
           <Modal onClose={this.closeModal}>
             <div className="signup-form">
               <div>
-                <h2>
+                <h2 className="playfair">
                   {this.context.intl.formatMessage({id: 'next_time'})}
                 </h2>
                 <p>
                   {this.context.intl.formatMessage({id: 'next_time_paragraph'})}
                 </p>
+                <div className="social-buttons">
+                  <button className="social-button">
+                    <i className="fa fa-facebook fa-2x"></i>
+                  </button>
+                  <button className="social-button">
+                    <i className="fa fa-twitter fa-2x"></i>
+                  </button>
+                  <button className="social-button">
+                    <i className="fa fa-envelope fa-2x"></i>
+                  </button>
+                </div>
                 <a onClick={this.closeModal}>
                   {this.context.intl.formatMessage({id: 'no_thanks'})}
                 </a>
@@ -107,21 +130,13 @@ var BuyersGuide = React.createClass({
           <Modal onClose={this.closeModal}>
             <div className="signup-form">
               <div>
-                <h2>
+                <h2 className="playfair">
                   {this.context.intl.formatMessage({id: 'want_more_privacy'})}
                 </h2>
                 <p>
                   {this.context.intl.formatMessage({id: 'sign_up_paragraph'})}
                 </p>
-                <input placeHolder={this.context.intl.formatMessage({id: 'email_placeholder'})}/>
-                <input type="checkbox"/>
-                <label>{this.context.intl.formatMessage({id: 'privacy_policy'})}</label>
-                <button>
-                  {this.context.intl.formatMessage({id: 'subscribe_button'})}
-                </button>
-                <a onClick={this.nextTime}>
-                  {this.context.intl.formatMessage({id: 'maybe_later'})}
-                </a>
+                <SignupForm onClose={this.nextTime} onSuccess={this.onSuccess}/>
               </div>
             </div>
           </Modal>
