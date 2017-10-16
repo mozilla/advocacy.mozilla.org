@@ -28,6 +28,13 @@ var BuyersGuide = React.createClass({
         }
       }, 3000);
     }
+    if (typeof Coral === "undefined") {
+      return;
+    }
+    const coralContent = document.querySelector("#coral_talk_40192114661713907");
+    Coral.Talk.render(coralContent, {
+      talk: 'http://127.0.0.1:3000/'
+    });
   },
   componentWillReceiveProps: function() {
     this.setState({
@@ -186,6 +193,7 @@ var BuyersGuide = React.createClass({
           <div>CAN I CONTROL IT?</div>
           <div>IF YOU WANT MORE</div>
           <div>Related products</div>
+          <div id="coral_talk_40192114661713907"></div>
         </section>
         <Footer/>
       </div>
