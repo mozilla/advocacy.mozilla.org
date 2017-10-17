@@ -161,10 +161,17 @@ var BuyersGuide = React.createClass({
             item={itemName}
           />
           <img src={item.img}/>
-          <div>{item.label}</div>
-          <h1>{item.header}</h1>
+          <div className="clear">
+            <span className="category-item-label">
+              {item.label}
+            </span>
+            <button className="copy-link">
+              {this.context.intl.formatMessage({id: 'copy_link'})}
+            </button>
+          </div>
+          <h1 className="playfair">{item.header}</h1>
           <p>{item.description}</p>
-          <p>{item.age}</p>
+          <p className="age-range">{item.age}</p>
           <div>Safety Review</div>
           <div>CAN IT SPY ON ME?</div>
           <table>
