@@ -35,5 +35,28 @@
       padding: 2px 12px;
       float: right;
     }
+    .copy-status {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 82px;
+      opacity: 0;
+      visibility: none;
+      pointer-events: none;
+      background: #F44041;
+      transition: opacity 0.3s;
+      color: #FFFFFF;
+      text-align: center;
+      font-style: italic;
+      box-sizing: border-box;
+      padding: 6px 20px;
+      &.show {
+        transition: opacity 0s;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
   }
 }
