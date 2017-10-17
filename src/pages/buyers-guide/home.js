@@ -148,18 +148,22 @@ var BuyersGuide = React.createClass({
         <Header/>
         <section ref={(input) => {this.headerInput = input;}} className={headerClassName}>
           <header className="red">
-            <h1 className="playfair">The Most Wonderful Time Of The Year, But Wait</h1>
-            <p className="playfair">
-              The holidays, it's the most wonderful time of the year. unless you buy a gift that spies on your kid or tracks your brother or gets your friend hacked.
-            </p>
-            <p>
+            <div className="center-header">
+              <h1 className="playfair">
+                {this.context.intl.formatMessage({id: 'privacy_not_included'})}
+              </h1>
+              <p className="playfair">
+                {this.context.intl.formatMessage({id: 'hero_unit_paragraph'})}
+              </p>
+            </div>
+            {/*<p>
               A PROJECT BY<br/>
               <span className="itallic">
                 Mozilla with spcial thanks<br/>
                 to Consumer Reports
               </span>
-            </p>
-            <div>
+            </p>*/}
+            <div className="more-arrow">
               <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
             </div>
           </header>
