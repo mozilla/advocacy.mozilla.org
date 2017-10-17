@@ -19,21 +19,31 @@
   }
   .menu-container {
     position: fixed;
+    display: none;
     width: 100%;
     height: 100%;
     padding-top: 45px;
     z-index: 1;
+    font-size: 0;
     a {
+      transition: height 0.3s;
+      height: 0;
       width: 50%;
-      height: 25%;
       background: #F44041;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       &:nth-child(4n+2),
       &:nth-child(4n+3) {
         background: #E53939;
       }
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 0 20px;
+      overflow: hidden;
       @media (orientation: landscape) {
         width: 25%;
         height: 50%;
@@ -49,6 +59,12 @@
         &:nth-child(2n+6) {
           background: #F44041;
         }
+      }
+    }
+    &.show {
+      display: block;
+      a {
+        height: 25%;
       }
     }
   }
