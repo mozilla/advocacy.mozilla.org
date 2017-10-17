@@ -27,6 +27,10 @@
     pointer-events: none;
     .link-container {
       a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
         transition: height 0.3s;
         height: 0;
         color: #FFFFFF;
@@ -41,10 +45,37 @@
         font-weight: 600;
         overflow: hidden;
       }
+      position: relative;
       &:nth-child(4n+2) a,
       &:nth-child(4n+3) a {
         background: #E53939;
       }
+
+      &:nth-child(1) a {
+        transition-delay: 0s;
+      }
+      &:nth-child(2) a {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(3) a {
+        transition-delay: 0.1s;
+      }
+      &:nth-child(4) a {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(5) a {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(6) a {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(7) a {
+        transition-delay: 0.3s;
+      }
+      &:nth-child(8) a {
+        transition-delay: 0.4s;
+      }
+
       overflow: hidden;
       width: 50%;
       height: 25%;
@@ -63,6 +94,31 @@
         }
         &:nth-child(2n+6) a {
           background: #F44041;
+        }
+
+        &:nth-child(1) a {
+          transition-delay: 0s;
+        }
+        &:nth-child(2) a {
+          transition-delay: 0.1s;
+        }
+        &:nth-child(3) a {
+          transition-delay: 0.2s;
+        }
+        &:nth-child(4) a {
+          transition-delay: 0.3s;
+        }
+        &:nth-child(5) a {
+          transition-delay: 0.1s;
+        }
+        &:nth-child(6) a {
+          transition-delay: 0.2s;
+        }
+        &:nth-child(7) a {
+          transition-delay: 0.3s;
+        }
+        &:nth-child(8) a {
+          transition-delay: 0.4s;
         }
       }
     }
