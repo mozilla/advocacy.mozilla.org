@@ -13,8 +13,9 @@ var Category = React.createClass({
     return (
       <div className="swiper-slide">
         <div>
-          <p>{this.props.category}</p>
-          <h2 className="playfair">{this.props.header}</h2>
+          <h2 className="playfair">{this.props.category}</h2>
+          <p className="playfair">{this.props.header}</p>
+          <br/>
           <a className="itallic" href={this.props.href}>Discover this type of gift</a>
         </div>
       </div>
@@ -173,8 +174,10 @@ var BuyersGuide = React.createClass({
               <FormattedHTMLMessage id="thats_why"/>
             </p>
             <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
-              <h2>See The Gift Guide</h2>
-              <p className="itallic">Scroll to begin journey</p>
+              <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
+              <p className="itallic">
+                {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
+              </p>
               <div className="center-line"></div>
             </div>
           </div>
@@ -185,29 +188,34 @@ var BuyersGuide = React.createClass({
             <div className="swiper-wrapper">
               <div className="swiper-slide swiper-end">swiper end</div>
               <Category
-                category="TOYS"
-                header="Gadgets for tots"
+                category={this.context.intl.formatMessage({id: 'cat_1_title'})}
+                header={this.context.intl.formatMessage({id: 'cat_1_desc'})}
                 href={"/" + locale + "/buyers-guide/category/toys"}
               />
               <Category
-                category="GAME CONSOLES"
-                header="Get your game on"
+                category={this.context.intl.formatMessage({id: 'cat_2_title'})}
+                header={this.context.intl.formatMessage({id: 'cat_2_desc'})}
                 href={"/" + locale + "/buyers-guide/category/game-consoles"}
               />
               <Category
-                category="HOME HUBS"
-                header="you always wanted a butler"
+                category={this.context.intl.formatMessage({id: 'cat_3_title'})}
+                header={this.context.intl.formatMessage({id: 'cat_3_desc'})}
                 href={"/" + locale + "/buyers-guide/category/home-hubs"}
               />
               <Category
-                category="SMART HOME ACCESSORIES"
-                header="Home is where the tech is"
+                category={this.context.intl.formatMessage({id: 'cat_4_title'})}
+                header={this.context.intl.formatMessage({id: 'cat_4_desc'})}
                 href={"/" + locale + "/buyers-guide/category/smart-home-accessories"}
               />
               <Category
-                category="GADGETS & GIZMOS"
-                header="THings you didn't know you need"
+                category={this.context.intl.formatMessage({id: 'cat_5_title'})}
+                header={this.context.intl.formatMessage({id: 'cat_5_desc'})}
                 href={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}
+              />
+              <Category
+                category={this.context.intl.formatMessage({id: 'cat_6_title'})}
+                header={this.context.intl.formatMessage({id: 'cat_6_desc'})}
+                href={"/" + locale + "/buyers-guide/category/health-excercise"}
               />
               <div className="swiper-slide swiper-end">swiper end</div>
             </div>
@@ -229,10 +237,14 @@ var BuyersGuide = React.createClass({
           <section className="red">
             <div onClick={this.slideDown} onTouchMove={this.slideDown}>
               <i className="fa fa-angle-up fa-5x" aria-hidden="true"></i><br/>
-              <span className="itallic">Experience the journey again</span>
+              <span className="itallic">
+                {this.context.intl.formatMessage({id: 'experience_again'})}
+              </span>
             </div>
-            <h2 className="playfair">Best wishes to you and yours</h2>
-            <p>SHARE THIS PAGE</p>
+            <h2 className="playfair">
+              {this.context.intl.formatMessage({id: 'best_to_you_and_yours'})}
+            </h2>
+            <p>{this.context.intl.formatMessage({id: 'share_this_page'})}</p>
             <div className="social-buttons">
               <button className="social-button">
                 <i className="fa fa-facebook fa-1x"></i>
@@ -249,8 +261,12 @@ var BuyersGuide = React.createClass({
             <button className="close-button">
               <i className="fa fa-times fa-2x" aria-hidden="true"></i>
             </button>
-            <p>Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.</p>
-            <button className="donate-button">DONATE NOW</button>
+            <p>
+              {this.context.intl.formatMessage({id: 'donate_cta'})}
+            </p>
+            <button className="donate-button">
+              {this.context.intl.formatMessage({id: 'donate_now'})}
+            </button>
           </section>
           <Footer/>
         </div>
