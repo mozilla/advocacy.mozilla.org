@@ -229,50 +229,52 @@ var BuyersGuide = React.createClass({
             category={category}
             item={itemName}
           />
-          <div className={copyStatusClassName}>
-            {this.context.intl.formatMessage({id: 'link_copied'})}
+          <div className="page-width">
+            <div className={copyStatusClassName}>
+              {this.context.intl.formatMessage({id: 'link_copied'})}
+            </div>
+            <img src={item.img}/>
+            <div className="clear">
+              <span className="category-item-label">
+                {item.label}
+              </span>
+              <button className="copy-link" onClick={this.copyLink}>
+                {this.context.intl.formatMessage({id: 'copy_link'})}
+              </button>
+            </div>
+            <h1 className="playfair">{item.header}</h1>
+            <p>{item.description}</p>
+            <p className="age-range">{item.age}</p>
+            <div>Safety Review</div>
+            <div>CAN IT SPY ON ME?</div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>camera</td>
+                  <td>no</td>
+                </tr>
+                <tr>
+                  <td>microphone</td>
+                  <td>no</td>
+                </tr>
+                <tr>
+                  <td>tracks location</td>
+                  <td>yes</td>
+                </tr>
+              </tbody>
+            </table>
+            <div>WHAT INFORMATION CAN THE APP ACCESS?</div>
+            <ul>
+              <li>My photos</li>
+              <li>My contacts</li>
+              <li>Bluetooth</li>
+            </ul>
+            <div>WHAT DOES IT KNOW ABOUT ME?</div>
+            <div>CAN I CONTROL IT?</div>
+            <div>IF YOU WANT MORE</div>
+            <div>Related products</div>
+            <div id="coral_talk_40192114661713907"></div>
           </div>
-          <img src={item.img}/>
-          <div className="clear">
-            <span className="category-item-label">
-              {item.label}
-            </span>
-            <button className="copy-link" onClick={this.copyLink}>
-              {this.context.intl.formatMessage({id: 'copy_link'})}
-            </button>
-          </div>
-          <h1 className="playfair">{item.header}</h1>
-          <p>{item.description}</p>
-          <p className="age-range">{item.age}</p>
-          <div>Safety Review</div>
-          <div>CAN IT SPY ON ME?</div>
-          <table>
-            <tbody>
-              <tr>
-                <td>camera</td>
-                <td>no</td>
-              </tr>
-              <tr>
-                <td>microphone</td>
-                <td>no</td>
-              </tr>
-              <tr>
-                <td>tracks location</td>
-                <td>yes</td>
-              </tr>
-            </tbody>
-          </table>
-          <div>WHAT INFORMATION CAN THE APP ACCESS?</div>
-          <ul>
-            <li>My photos</li>
-            <li>My contacts</li>
-            <li>Bluetooth</li>
-          </ul>
-          <div>WHAT DOES IT KNOW ABOUT ME?</div>
-          <div>CAN I CONTROL IT?</div>
-          <div>IF YOU WANT MORE</div>
-          <div>Related products</div>
-          <div id="coral_talk_40192114661713907"></div>
         </section>
         <Footer/>
       </div>
