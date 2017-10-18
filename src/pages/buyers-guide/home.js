@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
+import { FormattedHTMLMessage } from 'react-intl';
 
 var Swiper;
 if (typeof window !== "undefined") {
@@ -168,7 +169,9 @@ var BuyersGuide = React.createClass({
             </div>
           </header>
           <div className="content">
-            <p className="playfair fancy-letter"><b>THAT'S WHY MOZILLA</b> asked some folks like The Dad Lab, Scarry Mommy, and other safety concerned individuals to take a crack at reviewing the hottest gift this season. The result is a real person's guide to connected gifts. Because no one wants to get spied on for Christmas.</p>
+            <p className="playfair fancy-letter">
+              <FormattedHTMLMessage id="thats_why"/>
+            </p>
             <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
               <h2>See The Gift Guide</h2>
               <p className="itallic">Scroll to begin journey</p>
