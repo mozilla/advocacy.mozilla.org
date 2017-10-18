@@ -245,8 +245,8 @@ var BuyersGuide = React.createClass({
             <h1 className="playfair">{item.header}</h1>
             <p>{item.description}</p>
             <p className="age-range">{item.age}</p>
-            <div>Safety Review</div>
-            <div>CAN IT SPY ON ME?</div>
+            <h2>Safety Review</h2>
+            <h3>CAN IT SPY ON ME?</h3>
             <table>
               <tbody>
                 <tr>
@@ -263,17 +263,18 @@ var BuyersGuide = React.createClass({
                 </tr>
               </tbody>
             </table>
-            <div>WHAT INFORMATION CAN THE APP ACCESS?</div>
+            <h3>WHAT INFORMATION CAN THE APP ACCESS?</h3>
             <ul>
               <li>My photos</li>
               <li>My contacts</li>
               <li>Bluetooth</li>
             </ul>
-            <div>WHAT DOES IT KNOW ABOUT ME?</div>
-            <div>CAN I CONTROL IT?</div>
-            <div>IF YOU WANT MORE</div>
-            <div>Related products</div>
+            <h3>WHAT DOES IT KNOW ABOUT ME?</h3>
+            <h4>Is app data sent to the company?</h4>
+            <h3>CAN I CONTROL IT?</h3>
+            <h3>IF YOU WANT MORE</h3>
             <div id="coral_talk_40192114661713907"></div>
+            <h2>Related products</h2>
           </div>
         </section>
         <Footer/>
