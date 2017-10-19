@@ -26,7 +26,7 @@ module.exports = React.createClass({
 
     var coralScript = null;
     if (this.props.buyersGuide) {
-      coralScript = (<script src="http://127.0.0.1:3000/embed.js"></script>);
+      coralScript = (<script src="https://mozilla-foundation-talk.herokuapp.com/embed.js"></script>);
     }
 
     var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700|Playfair+Display:200,300,400";

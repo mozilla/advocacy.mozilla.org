@@ -32,9 +32,9 @@ var BuyersGuide = React.createClass({
     if (typeof Coral === "undefined") {
       return;
     }
-    const coralContent = document.querySelector("#coral_talk_40192114661713907");
+    const coralContent = document.querySelector("#coral_talk_7574501203394207");
     Coral.Talk.render(coralContent, {
-      talk: 'http://127.0.0.1:3000/'
+      talk: 'https://mozilla-foundation-talk.herokuapp.com/'
     });
   },
   componentWillReceiveProps: function() {
@@ -273,7 +273,7 @@ var BuyersGuide = React.createClass({
             <h4>Is app data sent to the company?</h4>
             <h3>CAN I CONTROL IT?</h3>
             <h3>IF YOU WANT MORE</h3>
-            <div id="coral_talk_40192114661713907"></div>
+            <div id="coral_talk_7574501203394207"></div>
             <h2>Related products</h2>
           </div>
         </section>
