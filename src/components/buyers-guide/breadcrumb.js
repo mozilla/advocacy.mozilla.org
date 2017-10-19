@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 var Breadcrumb = React.createClass({
   contextTypes: {
@@ -19,7 +20,9 @@ var Breadcrumb = React.createClass({
     if (!item) {
       return (
         <div className="breadcrumb">
-          <span className="breadcrumb-item"><a href={"/" + locale + "/buyers-guide/"}>CATEGORIES</a></span>
+          <span className="breadcrumb-item">
+            <Link to={"/" + locale + "/buyers-guide/"}>CATEGORIES</Link>
+          </span>
           <span className="breadcrumb-split">&gt;</span>
           <span className="breadcrumb-item last">{category}</span>
         </div>
@@ -27,9 +30,13 @@ var Breadcrumb = React.createClass({
     }
     return (
       <div className="breadcrumb">
-        <span className="breadcrumb-item"><a href={"/" + locale + "/buyers-guide/"}>CATEGORIES</a></span>
+        <span className="breadcrumb-item">
+          <Link to={"/" + locale + "/buyers-guide/"}>CATEGORIES</Link>
+        </span>
         <span className="breadcrumb-split">&gt;</span>
-        <span className="breadcrumb-item"><a href={"/" + locale + "/buyers-guide/category/" + category}>{category}</a></span>
+        <span className="breadcrumb-item">
+          <Link to={"/" + locale + "/buyers-guide/category/" + category}>{category}</Link>
+        </span>
         <span className="breadcrumb-split">&gt;</span>
         <span className="breadcrumb-item last">{item}</span>
       </div>

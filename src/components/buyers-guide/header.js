@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 var Header = React.createClass({
   getInitialState: function() {
@@ -43,44 +44,44 @@ var Header = React.createClass({
         </div>
         <div className={menuClassName}>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/"}>
+            <Link to={"/" + locale + "/buyers-guide/"}>
               {this.context.intl.formatMessage({id: 'home_label'})}
-            </a>
+            </Link>
           </div>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/category/toys"}>
+            <Link to={"/" + locale + "/buyers-guide/category/toys"}>
               {this.context.intl.formatMessage({id: 'toys_label'})}
-            </a>
+            </Link>
           </div>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/category/game-consoles"}>
+            <Link to={"/" + locale + "/buyers-guide/category/game-consoles"}>
               {this.context.intl.formatMessage({id: 'game_consoles_label'})}
-            </a>
+            </Link>
           </div>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/category/home-hubs"}>
+            <Link to={"/" + locale + "/buyers-guide/category/home-hubs"}>
               {this.context.intl.formatMessage({id: 'home_hubs_label'})}
-            </a>
+            </Link>
           </div>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/category/smart-home-accessories"}>
+            <Link to={"/" + locale + "/buyers-guide/category/smart-home-accessories"}>
               {this.context.intl.formatMessage({id: 'smart_accessories_label'})}
-            </a>
+            </Link>
           </div>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}>
+            <Link to={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}>
               {this.context.intl.formatMessage({id: 'gadgets_gizmos_label'})}
-            </a>
+            </Link>
           </div>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/category/health-excercise"}>
+            <Link to={"/" + locale + "/buyers-guide/category/health-excercise"}>
               {this.context.intl.formatMessage({id: 'health_exercise_label'})}
-            </a>
+            </Link>
           </div>
           <div className="link-container">
-            <a href={"/" + locale + "/buyers-guide/why-we-made"}>
+            <Link to={"/" + locale + "/buyers-guide/why-we-made"}>
               {this.context.intl.formatMessage({id: 'why_label'})}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

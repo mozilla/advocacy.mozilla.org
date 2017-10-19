@@ -20,22 +20,16 @@ var BuyersGuide = React.createClass({
     intl: React.PropTypes.object
   },
   componentDidMount: function() {
-    const video = this.props.params.video;
-
-    if (!video) {
-      setTimeout(() => {
-        if (!this.state.cancelTimeout) {
-          this.openModal();
-        }
-      }, 3000);
+    setTimeout(() => {
+      if (!this.state.cancelTimeout) {
+        this.openModal();
+      }
+    }, 3000);
+    if (typeof Coral !== "undefined") {
+      Coral.Talk.render(document.querySelector("#coral_talk_7574501203394207"), {
+        talk: 'https://mozilla-foundation-talk.herokuapp.com/'
+      });
     }
-    if (typeof Coral === "undefined") {
-      return;
-    }
-    const coralContent = document.querySelector("#coral_talk_7574501203394207");
-    Coral.Talk.render(coralContent, {
-      talk: 'https://mozilla-foundation-talk.herokuapp.com/'
-    });
   },
   componentWillReceiveProps: function() {
     this.setState({
@@ -53,9 +47,10 @@ var BuyersGuide = React.createClass({
     });
   },
   openModal: function() {
-    if (this.props.subscribed) {
+    if (this.props.subscribed || window.sessionStorage.getItem('disable-modal')) {
       return;
     }
+    window.sessionStorage.setItem('disable-modal', true);
     this.setState({
       showModal: true,
       cancelTimeout: true

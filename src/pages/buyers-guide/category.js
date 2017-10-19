@@ -4,15 +4,17 @@ import Header from '../../components/buyers-guide/header.js';
 import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
 import guideData from '../../data/buyers-guide.js';
 
+import { Link } from 'react-router';
+
 var Item = React.createClass({
   render: function() {
     return (
       <div className="category-item-container">
-        <a href={this.props.href}>
+        <Link to={this.props.href}>
           <img src={this.props.img}/>
           <div className="category-item-label">{this.props.label}</div>
           <div className="category-item-header playfair">{this.props.header}</div>
-        </a>
+        </Link>
       </div>
     );
   }
