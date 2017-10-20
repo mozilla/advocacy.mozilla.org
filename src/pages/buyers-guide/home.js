@@ -282,11 +282,12 @@ var BuyersGuide = React.createClass({
           <div className="swiper-container-bottom">
             <div className="swiper-wrapper">
               <div className="swiper-slide swiper-end">swiper end</div>
-              <img className="swiper-slide" src="/assets/126x126.jpg"/>
-              <img className="swiper-slide" src="/assets/202.jpg"/>
-              <img className="swiper-slide" src="/assets/302x201.jpg"/>
-              <img className="swiper-slide" src="/assets/126x126.jpg"/>
-              <img className="swiper-slide" src="/assets/202.jpg"/>
+              <img className="swiper-slide" src="/assets/buyers-guide/01-Toy-Illustration copy.jpg"/>
+              <img className="swiper-slide" src="/assets/buyers-guide/02-game-consoles.jpg"/>
+              <img className="swiper-slide" src="/assets/buyers-guide/04-smart-home-accessories.jpg"/>
+              <img className="swiper-slide" src="/assets/buyers-guide/01-Toy-Illustration copy.jpg"/>
+              <img className="swiper-slide" src="/assets/buyers-guide/05-gadgets-gizmos.jpg"/>
+              <img className="swiper-slide" src="/assets/buyers-guide/01-Toy-Illustration copy.jpg"/>
               <div className="swiper-slide swiper-end">swiper end</div>
             </div>
           </div>
