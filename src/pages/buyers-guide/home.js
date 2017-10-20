@@ -12,12 +12,10 @@ var Category = React.createClass({
   render: function() {
     return (
       <div className="swiper-slide">
-        <div>
+        <a href={this.props.href}>
           <h2 className="playfair">{this.props.category}</h2>
           <p className="playfair">{this.props.header}</p>
-          <br/>
-          <a className="itallic" href={this.props.href}>Discover this type of gift</a>
-        </div>
+        </a>
       </div>
     );
   }
@@ -70,7 +68,7 @@ var BuyersGuide = React.createClass({
     if (swiper.activeIndex === 0) {
       this.hideDown();
     }
-    if (swiper.activeIndex === 6) {
+    if (swiper.activeIndex === 7) {
       this.hideUp();
     }
   },
@@ -117,7 +115,7 @@ var BuyersGuide = React.createClass({
     this.setState({
       galleryPosition: "middle"
     }, () => {
-      this.swiper.slideTo(5);
+      this.swiper.slideTo(1);
     });
   },
   hideUp: function() {
@@ -173,9 +171,12 @@ var BuyersGuide = React.createClass({
             <p className="playfair fancy-letter">
               <FormattedHTMLMessage id="thats_why"/>
             </p>
+            <p className="itallic info-blob playfair">
+              <FormattedHTMLMessage id="info_blob"/>
+            </p>
             <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
               <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
-              <p className="itallic">
+              <p className="itallic playfair">
                 {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
               </p>
               <div className="center-line"></div>
@@ -257,11 +258,8 @@ var BuyersGuide = React.createClass({
               </button>
             </div>
           </section>
-          <section className="red donate-container">
-            <button className="close-button">
-              <i className="fa fa-times fa-2x" aria-hidden="true"></i>
-            </button>
-            <p>
+          <section className="donate-container">
+            <p className="playfair">
               {this.context.intl.formatMessage({id: 'donate_cta'})}
             </p>
             <button className="donate-button">

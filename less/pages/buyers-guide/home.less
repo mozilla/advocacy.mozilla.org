@@ -16,6 +16,10 @@
   .footer {
     overflow-y: scroll;
   }
+  .info-blob {
+    text-align: left;
+    font-size: 12px;
+  }
   .header-section {
     header {
       .center-header {
@@ -49,12 +53,6 @@
       }
     }
   }
-  .donate-button {
-    background: #000000;
-    height: 52px;
-    padding: 0 36px;
-    margin-bottom: 40px;
-  }
   .header-section,
   .footer,
   .categories-container {
@@ -74,13 +72,17 @@
     padding-top: 45px;
   }
   .donate-container {
-    position: relative;
-    .close-button {
-      position: absolute;
-      top: 4px;
-      right: 12px;
-      padding: 6px;
-      margin: 0;
+    padding: 25px 30px;
+    color: #000000;
+    p {
+      margin: 16px 0;
+    }
+    .donate-button {
+      background: #000000;
+      color: #FFFFFF;
+      height: 52px;
+      padding: 0 36px;
+      margin: 16px 0;
     }
   }
   .swiper-container-top {
@@ -97,6 +99,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
       p {
         margin: 0;
       }
