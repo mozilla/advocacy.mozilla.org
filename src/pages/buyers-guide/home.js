@@ -24,7 +24,9 @@ var Category = React.createClass({
 var BuyersGuide = React.createClass({
   getInitialState: function() {
     return {
-      galleryPosition: "bottom"
+      galleryPosition: "bottom",
+      readyToSlide: false,
+      slideWait: false
     };
   },
   contextTypes: {
@@ -37,12 +39,22 @@ var BuyersGuide = React.createClass({
       if (e.deltaY > 0 && this.state.galleryPosition === "bottom") {
         if (this.headerInput.scrollTop === (this.headerInput.scrollHeight - this.headerInput.offsetHeight)) {
           this.slideUp();
+        } else {
+          this.setState({
+            readyToSlide: false,
+            slideWait: false
+          });
         }
       }
       // Wheel up
       if (e.deltaY < 0 && this.state.galleryPosition === "top") {
         if (this.footerInput.scrollTop === 0) {
           this.slideDown();
+        } else {
+          this.setState({
+            readyToSlide: false,
+            slideWait: false
+          });
         }
       }
     }
@@ -54,12 +66,22 @@ var BuyersGuide = React.createClass({
       if (e.keyCode === 40 && this.state.galleryPosition === "bottom") {
         if (this.headerInput.scrollTop === (this.headerInput.scrollHeight - this.headerInput.offsetHeight)) {
           this.slideUp();
+        } else {
+          this.setState({
+            readyToSlide: false,
+            slideWait: false
+          });
         }
       }
       // Up key
       if (e.keyCode === 38 && this.state.galleryPosition === "top") {
         if (this.footerInput.scrollTop === 0) {
           this.slideDown();
+        } else {
+          this.setState({
+            readyToSlide: false,
+            slideWait: false
+          });
         }
       }
     }
@@ -105,18 +127,54 @@ var BuyersGuide = React.createClass({
     window.removeEventListener("keyDown", this.onKeyDown, true);
   },
   slideUp: function() {
-    this.setState({
-      galleryPosition: "middle"
-    }, () => {
-      this.swiper.slideTo(1);
-    });
+    if (!this.state.readyToSlide) {
+      if (!this.state.slideWait) {
+        this.setState({
+          slideWait: true
+        }, () => {
+          setTimeout(() => {
+            if (this.state.slideWait) {
+              this.setState({
+                readyToSlide: true
+              });
+            }
+          }, 10);
+        });
+      }
+    } else {
+      this.setState({
+        readyToSlide: false,
+        slideWait: false,
+        galleryPosition: "middle"
+      }, () => {
+        this.swiper.slideTo(1);
+      });
+    }
   },
   slideDown: function() {
-    this.setState({
-      galleryPosition: "middle"
-    }, () => {
-      this.swiper.slideTo(1);
-    });
+    if (!this.state.readyToSlide) {
+      if (!this.state.slideWait) {
+        this.setState({
+          slideWait: true
+        }, () => {
+          setTimeout(() => {
+            if (this.state.slideWait) {
+              this.setState({
+                readyToSlide: true
+              });
+            }
+          }, 10);
+        });
+      }
+    } else {
+      this.setState({
+        readyToSlide: false,
+        slideWait: false,
+        galleryPosition: "middle"
+      }, () => {
+        this.swiper.slideTo(1);
+      });
+    }
   },
   hideUp: function() {
     this.setState({
