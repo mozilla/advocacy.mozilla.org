@@ -189,33 +189,33 @@ var BuyersGuide = React.createClass({
             <div className="swiper-wrapper">
               <div className="swiper-slide swiper-end">swiper end</div>
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_1_title'})}
-                header={this.context.intl.formatMessage({id: 'cat_1_desc'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_toys'})}
+                header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
                 href={"/" + locale + "/buyers-guide/category/toys"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_2_title'})}
-                header={this.context.intl.formatMessage({id: 'cat_2_desc'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
+                header={this.context.intl.formatMessage({id: 'cat_desc_gameconsoles'})}
                 href={"/" + locale + "/buyers-guide/category/game-consoles"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_3_title'})}
-                header={this.context.intl.formatMessage({id: 'cat_3_desc'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
+                header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
                 href={"/" + locale + "/buyers-guide/category/home-hubs"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_4_title'})}
-                header={this.context.intl.formatMessage({id: 'cat_4_desc'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
+                header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
                 href={"/" + locale + "/buyers-guide/category/smart-home-accessories"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_5_title'})}
-                header={this.context.intl.formatMessage({id: 'cat_5_desc'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
+                header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
                 href={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_6_title'})}
-                header={this.context.intl.formatMessage({id: 'cat_6_desc'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
+                header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
                 href={"/" + locale + "/buyers-guide/category/health-excercise"}
               />
               <div className="swiper-slide swiper-end">swiper end</div>

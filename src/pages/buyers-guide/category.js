@@ -38,7 +38,9 @@ var BuyersGuide = React.createClass({
           />
           <div className="page-width">
             <h1 className="playfair">Category Name</h1>
-            <p className="playfair fancy-letter"><b>LOREM IPSUM DOLOR</b> sit amet, consectetur adipiscing elit. Vivamus gravida purus feugiat lecus eleifend gravida. Integer lobortis lacus quis nisi.</p>
+            <p className="itallic info-blob playfair">
+              {this.context.intl.formatMessage({id: 'info_provided'})}
+            </p>
             <div className="categories-container">
               {Object.keys(items).map(function(itemName, index) {
                 const item = items[itemName];

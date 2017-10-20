@@ -44,42 +44,42 @@ var Header = React.createClass({
         </div>
         <div className={menuClassName}>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/"}>
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/"}>
               {this.context.intl.formatMessage({id: 'home_label'})}
             </Link>
           </div>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/category/toys"}>
-              {this.context.intl.formatMessage({id: 'toys_label'})}
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/category/toys"}>
+              {this.context.intl.formatMessage({id: 'cat_title_toys'})}
             </Link>
           </div>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/category/game-consoles"}>
-              {this.context.intl.formatMessage({id: 'game_consoles_label'})}
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/category/game-consoles"}>
+              {this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
             </Link>
           </div>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/category/home-hubs"}>
-              {this.context.intl.formatMessage({id: 'home_hubs_label'})}
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/category/home-hubs"}>
+              {this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
             </Link>
           </div>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/category/smart-home-accessories"}>
-              {this.context.intl.formatMessage({id: 'smart_accessories_label'})}
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/category/smart-home-accessories"}>
+              {this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
             </Link>
           </div>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}>
-              {this.context.intl.formatMessage({id: 'gadgets_gizmos_label'})}
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}>
+              {this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
             </Link>
           </div>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/category/health-excercise"}>
-              {this.context.intl.formatMessage({id: 'health_exercise_label'})}
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/category/health-excercise"}>
+              {this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
             </Link>
           </div>
           <div className="link-container">
-            <Link to={"/" + locale + "/buyers-guide/why-we-made"}>
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/buyers-guide/why-we-made"}>
               {this.context.intl.formatMessage({id: 'why_label'})}
             </Link>
           </div>
