@@ -282,12 +282,12 @@ var BuyersGuide = React.createClass({
           <div className="swiper-container-bottom">
             <div className="swiper-wrapper">
               <div className="swiper-slide swiper-end">swiper end</div>
-              <img className="swiper-slide" src="/assets/buyers-guide/01-Toy-Illustration copy.jpg"/>
-              <img className="swiper-slide" src="/assets/buyers-guide/02-game-consoles.jpg"/>
-              <img className="swiper-slide" src="/assets/buyers-guide/04-smart-home-accessories.jpg"/>
-              <img className="swiper-slide" src="/assets/buyers-guide/01-Toy-Illustration copy.jpg"/>
-              <img className="swiper-slide" src="/assets/buyers-guide/05-gadgets-gizmos.jpg"/>
-              <img className="swiper-slide" src="/assets/buyers-guide/01-Toy-Illustration copy.jpg"/>
+              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toy.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/01-toy.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-gizmos.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/01-toy.jpg)"}}></div>
               <div className="swiper-slide swiper-end">swiper end</div>
             </div>
           </div>

@@ -101,7 +101,7 @@ var SignupForm = React.createClass({
         // signup error
         this.setState({
           submitting: false,
-          submissionError: this.context.intl.formatMessage({id: 'try_later'});
+          submissionError: this.context.intl.formatMessage({id: 'try_later'})
         });
       });
     } else {
