@@ -4,6 +4,7 @@ import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import { FormattedHTMLMessage } from 'react-intl';
 import { Link } from 'react-router';
+import reactGA from 'react-ga';
 
 var Swiper;
 if (typeof window !== "undefined") {
@@ -130,6 +131,30 @@ var BuyersGuide = React.createClass({
       galleryPosition: "bottom"
     });
   },
+  shareFbClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Facebook"
+    });
+    document.querySelector("#share-progress-fb a").click();
+  },
+  shareTwClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Twitter"
+    });
+    document.querySelector("#share-progress-tw a").click();
+  },
+  shareEmClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Email"
+    });
+    document.querySelector("#share-progress-em a").click();
+  },
   render: function() {
     var categoriesContainerClassName = "categories-container";
     var headerClassName = "header-section";
@@ -250,13 +275,13 @@ var BuyersGuide = React.createClass({
             </h2>
             <p>{this.context.intl.formatMessage({id: 'share_this_page'})}</p>
             <div className="social-buttons">
-              <button className="social-button">
+              <button onClick={this.shareFbClick} className="social-button">
                 <i className="fa fa-facebook fa-1x"></i>
               </button>
-              <button className="social-button">
+              <button onClick={this.shareTwClick} className="social-button">
                 <i className="fa fa-twitter fa-1x"></i>
               </button>
-              <button className="social-button">
+              <button onClick={this.shareEmClick} className="social-button">
                 <i className="fa fa-envelope fa-1x"></i>
               </button>
             </div>

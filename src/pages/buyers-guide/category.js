@@ -45,7 +45,7 @@ var BuyersGuide = React.createClass({
               {Object.keys(items).map(function(itemName, index) {
                 const item = items[itemName];
                 return (
-                  <Item {...item} href={"/" + locale + "/buyers-guide/category/" + category + "/" + itemName}/>
+                  <Item {...item} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + itemName}/>
                 );
               })}
             </div>

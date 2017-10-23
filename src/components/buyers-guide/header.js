@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import reactGA from 'react-ga';
 
 var Header = React.createClass({
   getInitialState: function() {
@@ -14,6 +15,30 @@ var Header = React.createClass({
     this.setState({
       menuOpen: !this.state.menuOpen
     });
+  },
+  shareFbClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Facebook"
+    });
+    document.querySelector("#share-progress-fb a").click();
+  },
+  shareTwClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Twitter"
+    });
+    document.querySelector("#share-progress-tw a").click();
+  },
+  shareEmClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Email"
+    });
+    document.querySelector("#share-progress-em a").click();
   },
   render: function() {
     const locale = this.context.intl.locale;
@@ -31,13 +56,13 @@ var Header = React.createClass({
             <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
           </button>
           <div className="social-buttons">
-            <button className="social-button">
+            <button onClick={this.shareFbClick} className="social-button">
               <i className="fa fa-facebook fa-1x"></i>
             </button>
-            <button className="social-button">
+            <button onClick={this.shareTwClick} className="social-button">
               <i className="fa fa-twitter fa-1x"></i>
             </button>
-            <button className="social-button">
+            <button onClick={this.shareEmClick} className="social-button">
               <i className="fa fa-envelope fa-1x"></i>
             </button>
           </div>
