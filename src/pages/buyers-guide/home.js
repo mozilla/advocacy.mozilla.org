@@ -148,7 +148,7 @@ var BuyersGuide = React.createClass({
       <div className="buyers-guide buyers-guide-home">
         <Header/>
         <section ref={(input) => {this.headerInput = input;}} className={headerClassName}>
-          <header className="red">
+          <header className="header-image">
             <div className="center-header">
               <h1 className="playfair">
                 {this.context.intl.formatMessage({id: 'privacy_not_included'})}
@@ -225,12 +225,12 @@ var BuyersGuide = React.createClass({
           <div className="swiper-container-bottom">
             <div className="swiper-wrapper">
               <div className="swiper-slide swiper-end">.</div>
-              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.png)"}}></div>
-              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.png)"}}></div>
-              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/03-home-hubs.png)"}}></div>
-              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.png)"}}></div>
-              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-and-gizmos.png)"}}></div>
-              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.png)"}}></div>
+              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/03-home-hubs.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-and-gizmos.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/06-health-and-exercise.jpg)"}}></div>
               <div className="swiper-slide swiper-end">.</div>
             </div>
           </div>
