@@ -1,4 +1,5 @@
 import React from 'react';
+import debounce from 'debounce';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import { FormattedHTMLMessage } from 'react-intl';
@@ -24,41 +25,29 @@ var Category = React.createClass({
 var BuyersGuide = React.createClass({
   getInitialState: function() {
     return {
-      galleryPosition: "bottom",
-      readyToSlide: false,
-      slideWait: false
+      galleryPosition: "bottom"
     };
   },
   contextTypes: {
     intl: React.PropTypes.object
   },
-  onWheel: function(e) {
+  onWheel: debounce(function(e) {
     if (this.state.galleryPosition !== "middle") {
       e.stopPropagation();
       // Wheel down
       if (e.deltaY > 0 && this.state.galleryPosition === "bottom") {
         if (this.headerInput.scrollTop === (this.headerInput.scrollHeight - this.headerInput.offsetHeight)) {
           this.slideUp();
-        } else {
-          this.setState({
-            readyToSlide: false,
-            slideWait: false
-          });
         }
       }
       // Wheel up
       if (e.deltaY < 0 && this.state.galleryPosition === "top") {
         if (this.footerInput.scrollTop === 0) {
           this.slideDown();
-        } else {
-          this.setState({
-            readyToSlide: false,
-            slideWait: false
-          });
         }
       }
     }
-  },
+  }, 100, true),
   onKeyDown: function(e) {
     if (this.state.galleryPosition !== "middle") {
       e.stopPropagation();
@@ -66,22 +55,12 @@ var BuyersGuide = React.createClass({
       if (e.keyCode === 40 && this.state.galleryPosition === "bottom") {
         if (this.headerInput.scrollTop === (this.headerInput.scrollHeight - this.headerInput.offsetHeight)) {
           this.slideUp();
-        } else {
-          this.setState({
-            readyToSlide: false,
-            slideWait: false
-          });
         }
       }
       // Up key
       if (e.keyCode === 38 && this.state.galleryPosition === "top") {
         if (this.footerInput.scrollTop === 0) {
           this.slideDown();
-        } else {
-          this.setState({
-            readyToSlide: false,
-            slideWait: false
-          });
         }
       }
     }
@@ -127,54 +106,18 @@ var BuyersGuide = React.createClass({
     window.removeEventListener("keyDown", this.onKeyDown, true);
   },
   slideUp: function() {
-    if (!this.state.readyToSlide) {
-      if (!this.state.slideWait) {
-        this.setState({
-          slideWait: true
-        }, () => {
-          setTimeout(() => {
-            if (this.state.slideWait) {
-              this.setState({
-                readyToSlide: true
-              });
-            }
-          }, 10);
-        });
-      }
-    } else {
-      this.setState({
-        readyToSlide: false,
-        slideWait: false,
-        galleryPosition: "middle"
-      }, () => {
-        this.swiper.slideTo(1);
-      });
-    }
+    this.setState({
+      galleryPosition: "middle"
+    }, () => {
+      this.swiper.slideTo(1);
+    });
   },
   slideDown: function() {
-    if (!this.state.readyToSlide) {
-      if (!this.state.slideWait) {
-        this.setState({
-          slideWait: true
-        }, () => {
-          setTimeout(() => {
-            if (this.state.slideWait) {
-              this.setState({
-                readyToSlide: true
-              });
-            }
-          }, 10);
-        });
-      }
-    } else {
-      this.setState({
-        readyToSlide: false,
-        slideWait: false,
-        galleryPosition: "middle"
-      }, () => {
-        this.swiper.slideTo(1);
-      });
-    }
+    this.setState({
+      galleryPosition: "middle"
+    }, () => {
+      this.swiper.slideTo(1);
+    });
   },
   hideUp: function() {
     this.setState({
@@ -245,7 +188,7 @@ var BuyersGuide = React.createClass({
         <div className={categoriesContainerClassName}>
           <div className="swiper-container-top">
             <div className="swiper-wrapper">
-              <div className="swiper-slide swiper-end">swiper end</div>
+              <div className="swiper-slide swiper-end">.</div>
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_toys'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
@@ -276,19 +219,19 @@ var BuyersGuide = React.createClass({
                 header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
                 href={"/" + locale + "/buyers-guide/category/health-excercise"}
               />
-              <div className="swiper-slide swiper-end">swiper end</div>
+              <div className="swiper-slide swiper-end">.</div>
             </div>
           </div>
           <div className="swiper-container-bottom">
             <div className="swiper-wrapper">
-              <div className="swiper-slide swiper-end">swiper end</div>
-              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toy.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/01-toy.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-gizmos.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/01-toy.jpg)"}}></div>
-              <div className="swiper-slide swiper-end">swiper end</div>
+              <div className="swiper-slide swiper-end">.</div>
+              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.png)"}}></div>
+              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.png)"}}></div>
+              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/03-home-hubs.png)"}}></div>
+              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.png)"}}></div>
+              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-and-gizmos.png)"}}></div>
+              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.png)"}}></div>
+              <div className="swiper-slide swiper-end">.</div>
             </div>
           </div>
         </div>

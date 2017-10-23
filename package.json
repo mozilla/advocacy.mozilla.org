@@ -45,6 +45,7 @@
     "compression": "1.6.1",
     "cross-spawn": "0.2.9",
     "css-loader": "0.14.2",
+    "debounce": "^1.0.2",
     "eslint-plugin-react": "3.16.1",
     "express": "4.13.4",
     "extract-text-webpack-plugin": "1.0.1",
