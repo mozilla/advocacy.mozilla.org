@@ -27,6 +27,13 @@ module.exports = React.createClass({
     var coralScript = null;
     if (this.props.buyersGuide) {
       coralScript = (<script src="https://mozilla-foundation-talk.herokuapp.com/embed.js"></script>);
+      shareProgressButtons = (
+        <div>
+          <div id="share-progress-fb" className='share-progress-button sp_184067 sp_fb_small'></div>
+          <div id="share-progress-em" className='share-progress-button sp_184068 sp_em_small'></div>
+          <div id="share-progress-tw" className='share-progress-button sp_184069 sp_tw_small'></div>
+        </div>
+      );
     }
 
     var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700|Playfair+Display:200,300,400";

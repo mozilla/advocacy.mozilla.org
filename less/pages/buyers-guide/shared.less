@@ -48,7 +48,7 @@
       position: relative;
       &:nth-child(4n+2) a,
       &:nth-child(4n+3) a {
-        background: #E53939;
+        background-color: #E53939;
       }
 
       &:nth-child(1) a {
@@ -76,6 +76,37 @@
         transition-delay: 0.4s;
       }
 
+      a {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &.home-link a {
+        background-image: url(/assets/buyers-guide/01-toys-thumbnail.jpg);
+      }
+      &.toys-link a {
+        background-image: url(/assets/buyers-guide/01-toys-thumbnail.jpg);
+      }
+      &.game-consoles-link a {
+        background-image: url(/assets/buyers-guide/02-game-consoles-thumbnail.jpg);
+      }
+      &.home-hubs-link a {
+        background-image: url(/assets/buyers-guide/03-home-hubs-thumbnail.jpg);
+      }
+      &.smart-home-accessories-link a {
+        background-image: url(/assets/buyers-guide/04-smart-home-accessories-thumbnail.jpg);
+      }
+      &.gadgets-gizmos-link a {
+        background-image: url(/assets/buyers-guide/05-gadgets-and-gizmos-thumbnail.jpg);
+      }
+      &.health-excercise-link a {
+        background-image: url(/assets/buyers-guide/06-health-and-exercise-thumbnail.jpg);
+      }
+      &.why-link a {
+        background-image: url(/assets/buyers-guide/01-toys-thumbnail.jpg);
+      }
+
       overflow: hidden;
       width: 50%;
       height: 25%;
@@ -84,16 +115,16 @@
         width: 25%;
         height: 50%;
         &:nth-child(2n+1) a {
-          background: #F44041;
+          background-color: #F44041;
         }
         &:nth-child(2n+2) a {
-          background: #E53939;
+          background-color: #E53939;
         }
         &:nth-child(2n+5) a {
-          background: #E53939;
+          background-color: #E53939;
         }
         &:nth-child(2n+6) a {
-          background: #F44041;
+          background-color: #F44041;
         }
 
         &:nth-child(1) a {
@@ -143,6 +174,11 @@
   font-style: italic;
 }
 
+.buyers-guide-html {
+  .share-progress-button {
+    display: none;
+  }
+}
 .buyers-guide {
   .info-blob {
     text-align: left;

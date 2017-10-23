@@ -3,6 +3,8 @@ import debounce from 'debounce';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import { FormattedHTMLMessage } from 'react-intl';
+import { Link } from 'react-router';
+import reactGA from 'react-ga';
 
 var Swiper;
 if (typeof window !== "undefined") {
@@ -13,10 +15,10 @@ var Category = React.createClass({
   render: function() {
     return (
       <div className="swiper-slide">
-        <a href={this.props.href}>
+        <Link to={this.props.href}>
           <h2 className="playfair">{this.props.category}</h2>
           <p className="playfair">{this.props.header}</p>
-        </a>
+        </Link>
       </div>
     );
   }
@@ -129,6 +131,30 @@ var BuyersGuide = React.createClass({
       galleryPosition: "bottom"
     });
   },
+  shareFbClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Facebook"
+    });
+    document.querySelector("#share-progress-fb a").click();
+  },
+  shareTwClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Twitter"
+    });
+    document.querySelector("#share-progress-tw a").click();
+  },
+  shareEmClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Clicked Share Button",
+      label: "Email"
+    });
+    document.querySelector("#share-progress-em a").click();
+  },
   render: function() {
     var categoriesContainerClassName = "categories-container";
     var headerClassName = "header-section";
@@ -148,7 +174,7 @@ var BuyersGuide = React.createClass({
       <div className="buyers-guide buyers-guide-home">
         <Header/>
         <section ref={(input) => {this.headerInput = input;}} className={headerClassName}>
-          <header className="red">
+          <header className="header-image">
             <div className="center-header">
               <h1 className="playfair">
                 {this.context.intl.formatMessage({id: 'privacy_not_included'})}
@@ -192,32 +218,32 @@ var BuyersGuide = React.createClass({
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_toys'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
-                href={"/" + locale + "/buyers-guide/category/toys"}
+                href={"/" + locale + "/privacynotincluded/category/toys"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gameconsoles'})}
-                href={"/" + locale + "/buyers-guide/category/game-consoles"}
+                href={"/" + locale + "/privacynotincluded/category/gameconsoles"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
-                href={"/" + locale + "/buyers-guide/category/home-hubs"}
+                href={"/" + locale + "/privacynotincluded/category/homehubs"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
-                href={"/" + locale + "/buyers-guide/category/smart-home-accessories"}
+                href={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
-                href={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}
+                href={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
-                href={"/" + locale + "/buyers-guide/category/health-excercise"}
+                href={"/" + locale + "/privacynotincluded/category/healthexcercise"}
               />
               <div className="swiper-slide swiper-end">.</div>
             </div>
@@ -225,12 +251,12 @@ var BuyersGuide = React.createClass({
           <div className="swiper-container-bottom">
             <div className="swiper-wrapper">
               <div className="swiper-slide swiper-end">.</div>
-              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.png)"}}></div>
-              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.png)"}}></div>
-              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/03-home-hubs.png)"}}></div>
-              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.png)"}}></div>
-              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-and-gizmos.png)"}}></div>
-              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.png)"}}></div>
+              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/03-home-hubs.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-and-gizmos.jpg)"}}></div>
+              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/06-health-and-exercise.jpg)"}}></div>
               <div className="swiper-slide swiper-end">.</div>
             </div>
           </div>
@@ -249,13 +275,13 @@ var BuyersGuide = React.createClass({
             </h2>
             <p>{this.context.intl.formatMessage({id: 'share_this_page'})}</p>
             <div className="social-buttons">
-              <button className="social-button">
+              <button onClick={this.shareFbClick} className="social-button">
                 <i className="fa fa-facebook fa-1x"></i>
               </button>
-              <button className="social-button">
+              <button onClick={this.shareTwClick} className="social-button">
                 <i className="fa fa-twitter fa-1x"></i>
               </button>
-              <button className="social-button">
+              <button onClick={this.shareEmClick} className="social-button">
                 <i className="fa fa-envelope fa-1x"></i>
               </button>
             </div>
@@ -264,9 +290,9 @@ var BuyersGuide = React.createClass({
             <p className="playfair">
               {this.context.intl.formatMessage({id: 'donate_cta'})}
             </p>
-            <button className="donate-button">
+            <a href="https://donate.mozilla.org" className="donate-button">
               {this.context.intl.formatMessage({id: 'donate_now'})}
-            </button>
+            </a>
           </section>
           <Footer/>
         </div>

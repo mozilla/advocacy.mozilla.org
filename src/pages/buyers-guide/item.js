@@ -2,9 +2,27 @@ import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
-import guideData from '../../data/buyers-guide.js';
+import productData from '../../data/buyers-guide-products.js';
+import categoryData from '../../data/buyers-guide-categories.js';
 import Modal from '../../components/modal.js';
 import SignupForm from '../../components/buyers-guide/signup-form.js';
+
+import { Link } from 'react-router';
+
+var Product = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
+  render: function() {
+    return (
+      <div className="related-products-item-container">
+        <Link to={this.props.href}>
+          <img src={this.props.img}/>
+        </Link>
+      </div>
+    );
+  }
+});
 
 var BuyersGuide = React.createClass({
   getInitialState: function() {
@@ -128,8 +146,8 @@ var BuyersGuide = React.createClass({
   render: function() {
     const category = this.props.params.category;
     const itemName = this.props.params.item;
-    const items = guideData[category] || {};
-    const item = items[itemName] || {};
+    const products = categoryData[category] || [];
+    const item = productData[itemName] || {};
     const locale = this.context.intl.locale;
     const copyStatus = this.state.copyStatus;
     var copyStatusClassName = "copy-status";
@@ -215,6 +233,61 @@ var BuyersGuide = React.createClass({
       }
     }
 
+    var camera = (null);
+    var mic = (null);
+    var tracksLocation = (null);
+
+    if (item.camera) {
+      camera = (<i className="fa fa-check" ariaHidden="true"></i>);
+    }
+    if (item.microphone) {
+      mic = (<i className="fa fa-check" ariaHidden="true"></i>);
+    }
+    if (item.location) {
+      tracksLocation = (<i className="fa fa-check" ariaHidden="true"></i>);
+    }
+
+    var no = this.context.intl.formatMessage({id: 'review_no'});
+    var yes = this.context.intl.formatMessage({id: 'review_yes'});
+    var unknown = this.context.intl.formatMessage({id: 'review_unknown'});
+    var account = no;
+    var privacyControls = no;
+    var deleteData = no;
+
+    if (item["need-account"]) {
+      account = yes;
+    }
+    if (item["privacy-controls"] === "unknown") {
+      privacyControls = unknown;
+    } else if (item["privacy-controls"]) {
+      privacyControls = yes;
+    }
+    if (item["delete-data"] === "unknown") {
+      deleteData = unknown;
+    } else if (item["delete-data"]) {
+      deleteData = yes;
+    }
+
+    var childRules = this.context.intl.formatMessage({id: 'review_n_a'});
+    if (item['child-rules'] === "yes") {
+      childRules = yes;
+    }
+    if (item['child-rules'] === "no") {
+      childRules = no;
+    }
+
+    var privacyPolicy = (
+      <div>{this.context.intl.formatMessage({id: 'review_none'})}</div>
+    );
+
+    if (item['privacy-policy'] !== "none") {
+      privacyPolicy = (
+        <a className="privacy-url" href={item['privacy-policy']}>
+          {this.context.intl.formatMessage({id: "review_view_privacy_policy"})}
+        </a>
+      );
+    }
+
     return (
       <div className="buyers-guide buyers-guide-item">
         {modal}
@@ -231,45 +304,103 @@ var BuyersGuide = React.createClass({
             <img src={item.img}/>
             <div className="clear">
               <span className="category-item-label">
-                {item.label}
+                {item.company}
               </span>
               <button className="copy-link" onClick={this.copyLink}>
                 {this.context.intl.formatMessage({id: 'copy_link'})}
               </button>
             </div>
-            <h1 className="playfair">{item.header}</h1>
-            <p>{item.description}</p>
-            <p className="age-range">{item.age}</p>
-            <h2>Safety Review</h2>
-            <h3>CAN IT SPY ON ME?</h3>
-            <table>
-              <tbody>
-                <tr>
-                  <td>camera</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>microphone</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>tracks location</td>
-                  <td>yes</td>
-                </tr>
-              </tbody>
-            </table>
-            <h3>WHAT INFORMATION CAN THE APP ACCESS?</h3>
-            <ul>
-              <li>My photos</li>
-              <li>My contacts</li>
-              <li>Bluetooth</li>
-            </ul>
-            <h3>WHAT DOES IT KNOW ABOUT ME?</h3>
-            <h4>Is app data sent to the company?</h4>
-            <h3>CAN I CONTROL IT?</h3>
-            <h3>IF YOU WANT MORE</h3>
+            <h1 className="playfair">
+              {this.context.intl.formatMessage({id: item.product})}
+            </h1>
+            <a className="product-url" href={item.url}>{item.url}</a>
+            <div>{item.price}</div>
+            <p>
+              {this.context.intl.formatMessage({id: item.blerb})}
+            </p>
+            {/*<p className="age-range">{item.age}</p>*/}
+            <h2>
+              {this.context.intl.formatMessage({id: "safety_review"})}
+            </h2>
+            <h3>
+              {this.context.intl.formatMessage({id: "review_can_it_spy"})}
+            </h3>
+            <div className="can-it-spy-table">
+              <div className="spy-table-row">
+                {this.context.intl.formatMessage({id: "review_spy_camera"})}
+                {camera}
+              </div>
+              <div className="spy-table-row">
+                {this.context.intl.formatMessage({id: "review_spy_microphone"})}
+                {mic}
+              </div>
+              <div className="spy-table-row">
+                {this.context.intl.formatMessage({id: "review_spy_location"})}
+                {tracksLocation}
+              </div>
+            </div>
+            <h3>
+              {this.context.intl.formatMessage({id: "review_know_about_me"})}
+            </h3>
+            <div className="yes-no-table">
+              <div className="yes-no-table-row">
+                {this.context.intl.formatMessage({id: "review_account_required"})}
+                {account}
+              </div>
+              <div className="yes-no-table-row">
+                {this.context.intl.formatMessage({id: "review_privacy_controls"})}
+                {privacyControls}
+              </div>
+              <div className="yes-no-table-row">
+                {this.context.intl.formatMessage({id: "review_delete_data"})}
+                {deleteData}
+              </div>
+            </div>
+            <h4>{this.context.intl.formatMessage({id: "review_share_data"})}</h4>
+            <div className="can-it-spy-table">
+              <div className="spy-table-row">
+                ??
+              </div>
+              <div className="spy-table-row">
+                ??
+              </div>
+              <div className="spy-table-row">
+                ??
+              </div>
+            </div>
+            <div className="single-row">
+              <h4>
+                {this.context.intl.formatMessage({id: "review_child_privacy"})}
+              </h4>
+              {childRules}
+            </div>
+            <h4 className="privacy-message">
+              {this.context.intl.formatMessage({id: "review_privacy_policy"})}
+            </h4>
+            {privacyPolicy}
+            <h4 className="privacy-message">
+              {this.context.intl.formatMessage({id: "review_what_could_happen"})}
+            </h4>
+            <div>
+              {this.context.intl.formatMessage({id: item['worst-case']})}
+            </div>
+            <br/>
+            <a className="read-more-url" href="#">
+              {this.context.intl.formatMessage({id: 'review_partners_link'})}
+            </a>
+            <br/>
             <div id="coral_talk_7574501203394207"></div>
-            <h2>Related products</h2>
+            <h2>
+              {this.context.intl.formatMessage({id: "review_related_products"})}
+            </h2>
+            <div className="related-products-container">
+              {products.map(function(productKey, index) {
+                const product = productData[productKey] || {};
+                return (
+                  <Product {...product} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + productKey}/>
+                );
+              })}
+            </div>
           </div>
         </section>
         <Footer/>

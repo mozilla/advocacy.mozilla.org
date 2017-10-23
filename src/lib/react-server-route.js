@@ -109,7 +109,8 @@ module.exports = function(req, res, next) {
   }
 
   var buyersGuide = false;
-  if (location.indexOf('/buyers-guide') !== -1) {
+  if (location.indexOf('/privacynotincluded') !== -1) {
+    htmlClassName = "buyers-guide-html";
     buyersGuide = true;
   }
 
