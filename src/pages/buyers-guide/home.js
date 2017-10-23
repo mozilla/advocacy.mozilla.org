@@ -3,6 +3,7 @@ import debounce from 'debounce';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import { FormattedHTMLMessage } from 'react-intl';
+import { Link } from 'react-router';
 
 var Swiper;
 if (typeof window !== "undefined") {
@@ -13,10 +14,10 @@ var Category = React.createClass({
   render: function() {
     return (
       <div className="swiper-slide">
-        <a href={this.props.href}>
+        <Link to={this.props.href}>
           <h2 className="playfair">{this.props.category}</h2>
           <p className="playfair">{this.props.header}</p>
-        </a>
+        </Link>
       </div>
     );
   }
@@ -192,32 +193,32 @@ var BuyersGuide = React.createClass({
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_toys'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
-                href={"/" + locale + "/buyers-guide/category/toys"}
+                href={"/" + locale + "/privacynotincluded/category/toys"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gameconsoles'})}
-                href={"/" + locale + "/buyers-guide/category/game-consoles"}
+                href={"/" + locale + "/privacynotincluded/category/game-consoles"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
-                href={"/" + locale + "/buyers-guide/category/home-hubs"}
+                href={"/" + locale + "/privacynotincluded/category/home-hubs"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
-                href={"/" + locale + "/buyers-guide/category/smart-home-accessories"}
+                href={"/" + locale + "/privacynotincluded/category/smart-home-accessories"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
-                href={"/" + locale + "/buyers-guide/category/gadgets-gizmos"}
+                href={"/" + locale + "/privacynotincluded/category/gadgets-gizmos"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
-                href={"/" + locale + "/buyers-guide/category/health-excercise"}
+                href={"/" + locale + "/privacynotincluded/category/health-excercise"}
               />
               <div className="swiper-slide swiper-end">.</div>
             </div>

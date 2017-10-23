@@ -21,7 +21,7 @@ var Breadcrumb = React.createClass({
       return (
         <div className="breadcrumb">
           <span className="breadcrumb-item">
-            <Link to={"/" + locale + "/buyers-guide/"}>CATEGORIES</Link>
+            <Link to={"/" + locale + "/privacynotincluded/"}>CATEGORIES</Link>
           </span>
           <span className="breadcrumb-split">&gt;</span>
           <span className="breadcrumb-item last">{category}</span>
@@ -31,11 +31,11 @@ var Breadcrumb = React.createClass({
     return (
       <div className="breadcrumb">
         <span className="breadcrumb-item">
-          <Link to={"/" + locale + "/buyers-guide/"}>CATEGORIES</Link>
+          <Link to={"/" + locale + "/privacynotincluded/"}>CATEGORIES</Link>
         </span>
         <span className="breadcrumb-split">&gt;</span>
         <span className="breadcrumb-item">
-          <Link to={"/" + locale + "/buyers-guide/category/" + category}>{category}</Link>
+          <Link to={"/" + locale + "/privacynotincluded/category/" + category}>{category}</Link>
         </span>
         <span className="breadcrumb-split">&gt;</span>
         <span className="breadcrumb-item last">{item}</span>

@@ -3,6 +3,7 @@ import debounce from 'debounce';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import { FormattedHTMLMessage } from 'react-intl';
+import { Link } from 'react-router';
 
 var BuyersGuide = React.createClass({
   contextTypes: {
@@ -22,9 +23,9 @@ var BuyersGuide = React.createClass({
               <h1 className="playfair">
                 {this.context.intl.formatMessage({id: 'wwmt_main_title'})}
               </h1>
-              <a className="button" href={"/" + locale + "/buyers-guide/"}>
+              <Link className="button" to={"/" + locale + "/privacynotincluded/"}>
                 {this.context.intl.formatMessage({id: 'wwmt_button_text'})}
-              </a>
+              </Link>
             </div>
           </header>
         </section>
