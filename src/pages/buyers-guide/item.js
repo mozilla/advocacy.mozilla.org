@@ -202,7 +202,7 @@ var BuyersGuide = React.createClass({
             <div className="signup-form">
               <div>
                 <h2 className="playfair">
-                  {this.context.intl.formatMessage({id: 'want_more_privacy'})}
+                  {this.context.intl.formatMessage({id: 'sign_up_title'})}
                 </h2>
                 <p>
                   {this.context.intl.formatMessage({id: 'sign_up_paragraph'})}
