@@ -2,18 +2,24 @@ import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
-import guideData from '../../data/buyers-guide.js';
+import categoryData from '../../data/buyers-guide-categories.js';
+import productData from '../../data/buyers-guide-products.js';
 
 import { Link } from 'react-router';
 
-var Item = React.createClass({
+var Product = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
   render: function() {
     return (
       <div className="category-item-container">
         <Link to={this.props.href}>
           <img src={this.props.img}/>
-          <div className="category-item-label">{this.props.label}</div>
-          <div className="category-item-header playfair">{this.props.header}</div>
+          <div className="category-item-label">{this.props.company}</div>
+          <div className="category-item-header playfair">
+            {this.context.intl.formatMessage({id: this.props.product})}
+          </div>
         </Link>
       </div>
     );
@@ -26,8 +32,7 @@ var BuyersGuide = React.createClass({
   },
   render: function() {
     const category = this.props.params.category;
-    const items = guideData[category] || {};
-
+    const products = categoryData[category] || [];
     const locale = this.context.intl.locale;
     return (
       <div className="buyers-guide buyers-guide-category">
@@ -37,15 +42,17 @@ var BuyersGuide = React.createClass({
             category={category}
           />
           <div className="page-width">
-            <h1 className="playfair">Category Name</h1>
+            <h1 className="playfair">
+              {this.context.intl.formatMessage({id: 'cat_title_' + category})}
+            </h1>
             <p className="itallic info-blob playfair">
               {this.context.intl.formatMessage({id: 'info_provided'})}
             </p>
             <div className="categories-container">
-              {Object.keys(items).map(function(itemName, index) {
-                const item = items[itemName];
+              {products.map(function(productKey, index) {
+                const product = productData[productKey] || {};
                 return (
-                  <Item {...item} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + itemName}/>
+                  <Product {...product} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + productKey}/>
                 );
               })}
             </div>

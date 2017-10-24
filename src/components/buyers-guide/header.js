@@ -79,27 +79,27 @@ var Header = React.createClass({
             </Link>
           </div>
           <div className="link-container game-consoles-link">
-            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/game-consoles"}>
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/gameconsoles"}>
               {this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
             </Link>
           </div>
           <div className="link-container home-hubs-link">
-            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/home-hubs"}>
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/homehubs"}>
               {this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
             </Link>
           </div>
           <div className="link-container smart-home-accessories-link">
-            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/smart-home-accessories"}>
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}>
               {this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
             </Link>
           </div>
           <div className="link-container gadgets-gizmos-link">
-            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/gadgets-gizmos"}>
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}>
               {this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
             </Link>
           </div>
           <div className="link-container health-excercise-link">
-            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/health-excercise"}>
+            <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/category/healthexcercise"}>
               {this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
             </Link>
           </div>

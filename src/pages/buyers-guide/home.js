@@ -223,27 +223,27 @@ var BuyersGuide = React.createClass({
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gameconsoles'})}
-                href={"/" + locale + "/privacynotincluded/category/game-consoles"}
+                href={"/" + locale + "/privacynotincluded/category/gameconsoles"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
-                href={"/" + locale + "/privacynotincluded/category/home-hubs"}
+                href={"/" + locale + "/privacynotincluded/category/homehubs"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
-                href={"/" + locale + "/privacynotincluded/category/smart-home-accessories"}
+                href={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
-                href={"/" + locale + "/privacynotincluded/category/gadgets-gizmos"}
+                href={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}
               />
               <Category
                 category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
-                href={"/" + locale + "/privacynotincluded/category/health-excercise"}
+                href={"/" + locale + "/privacynotincluded/category/healthexcercise"}
               />
               <div className="swiper-slide swiper-end">.</div>
             </div>

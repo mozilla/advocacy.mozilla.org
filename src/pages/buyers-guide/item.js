@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
-import guideData from '../../data/buyers-guide.js';
+import productData from '../../data/buyers-guide-products.js';
 import Modal from '../../components/modal.js';
 import SignupForm from '../../components/buyers-guide/signup-form.js';
 
@@ -128,8 +128,7 @@ var BuyersGuide = React.createClass({
   render: function() {
     const category = this.props.params.category;
     const itemName = this.props.params.item;
-    const items = guideData[category] || {};
-    const item = items[itemName] || {};
+    const item = productData[itemName] || {};
     const locale = this.context.intl.locale;
     const copyStatus = this.state.copyStatus;
     var copyStatusClassName = "copy-status";
@@ -231,14 +230,18 @@ var BuyersGuide = React.createClass({
             <img src={item.img}/>
             <div className="clear">
               <span className="category-item-label">
-                {item.label}
+                {item.company}
               </span>
               <button className="copy-link" onClick={this.copyLink}>
                 {this.context.intl.formatMessage({id: 'copy_link'})}
               </button>
             </div>
-            <h1 className="playfair">{item.header}</h1>
-            <p>{item.description}</p>
+            <h1 className="playfair">
+              {this.context.intl.formatMessage({id: item.product})}
+            </h1>
+            <p>
+              {this.context.intl.formatMessage({id: item.blerb})}
+            </p>
             <p className="age-range">{item.age}</p>
             <h2>Safety Review</h2>
             <h3>CAN IT SPY ON ME?</h3>
