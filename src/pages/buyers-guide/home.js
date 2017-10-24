@@ -290,9 +290,9 @@ var BuyersGuide = React.createClass({
             <p className="playfair">
               {this.context.intl.formatMessage({id: 'donate_cta'})}
             </p>
-            <button className="donate-button">
+            <a href="https://donate.mozilla.org" className="donate-button">
               {this.context.intl.formatMessage({id: 'donate_now'})}
-            </button>
+            </a>
           </section>
           <Footer/>
         </div>
