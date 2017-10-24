@@ -1,4 +1,23 @@
 .buyers-guide-item {
+  .product-url {
+    color: red;
+    text-decoration: none;
+  }
+  .can-it-spy-table {
+    width: 100%;
+    .spy-table-row {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:nth-child(2n+1) {
+        background-color: #F1F1F1;
+      }
+    }
+    .fa-check {
+      color: #F44041;
+    }
+  }
   section {
     h2 {
       opacity: 0.5;

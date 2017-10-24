@@ -214,6 +214,20 @@ var BuyersGuide = React.createClass({
       }
     }
 
+    var camera = (null);
+    var mic = (null);
+    var tracksLocation = (null);
+
+    if (item.camera) {
+      camera = (<i className="fa fa-check" ariaHidden="true"></i>);
+    }
+    if (item.microphone) {
+      mic = (<i className="fa fa-check" ariaHidden="true"></i>);
+    }
+    if (item.location) {
+      tracksLocation = (<i className="fa fa-check" ariaHidden="true"></i>);
+    }
+
     return (
       <div className="buyers-guide buyers-guide-item">
         {modal}
@@ -239,28 +253,32 @@ var BuyersGuide = React.createClass({
             <h1 className="playfair">
               {this.context.intl.formatMessage({id: item.product})}
             </h1>
+            <a className="product-url" href={item.url}>{item.url}</a>
+            <div>{item.price}</div>
             <p>
               {this.context.intl.formatMessage({id: item.blerb})}
             </p>
-            <p className="age-range">{item.age}</p>
-            <h2>Safety Review</h2>
-            <h3>CAN IT SPY ON ME?</h3>
-            <table>
-              <tbody>
-                <tr>
-                  <td>camera</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>microphone</td>
-                  <td>no</td>
-                </tr>
-                <tr>
-                  <td>tracks location</td>
-                  <td>yes</td>
-                </tr>
-              </tbody>
-            </table>
+            {/*<p className="age-range">{item.age}</p>*/}
+            <h2>
+              {this.context.intl.formatMessage({id: "safety_review"})}
+            </h2>
+            <h3>
+              {this.context.intl.formatMessage({id: "review_can_it_spy"})}
+            </h3>
+            <div className="can-it-spy-table">
+              <div className="spy-table-row">
+                {this.context.intl.formatMessage({id: "review_spy_camera"})}
+                {camera}
+              </div>
+              <div className="spy-table-row">
+                {this.context.intl.formatMessage({id: "review_spy_microphone"})}
+                {mic}
+              </div>
+              <div className="spy-table-row">
+                {this.context.intl.formatMessage({id: "review_spy_location"})}
+                {tracksLocation}
+              </div>
+            </div>
             <h3>WHAT INFORMATION CAN THE APP ACCESS?</h3>
             <ul>
               <li>My photos</li>
