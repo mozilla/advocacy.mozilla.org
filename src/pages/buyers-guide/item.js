@@ -228,6 +228,30 @@ var BuyersGuide = React.createClass({
       tracksLocation = (<i className="fa fa-check" ariaHidden="true"></i>);
     }
 
+    var no = this.context.intl.formatMessage({id: 'review_no'});
+    var yes = this.context.intl.formatMessage({id: 'review_yes'});
+    var account = no;
+    var privacyControls = no;
+    var deleteData = no;
+
+    if (item["need-account"]) {
+      account = yes;
+    }
+    if (item["privacy-controls"]) {
+      privacyControls = yes;
+    }
+    if (item["delete-data"]) {
+      deleteData = yes;
+    }
+
+    var childRules = this.context.intl.formatMessage({id: 'review_n_a'});
+    if (item['child-rules'] === "yes") {
+      childRules = yes;
+    }
+    if (item['child-rules'] === "no") {
+      childRules = no;
+    }
+
     return (
       <div className="buyers-guide buyers-guide-item">
         {modal}
@@ -279,18 +303,62 @@ var BuyersGuide = React.createClass({
                 {tracksLocation}
               </div>
             </div>
-            <h3>WHAT INFORMATION CAN THE APP ACCESS?</h3>
-            <ul>
-              <li>My photos</li>
-              <li>My contacts</li>
-              <li>Bluetooth</li>
-            </ul>
-            <h3>WHAT DOES IT KNOW ABOUT ME?</h3>
-            <h4>Is app data sent to the company?</h4>
-            <h3>CAN I CONTROL IT?</h3>
-            <h3>IF YOU WANT MORE</h3>
+            <h3>
+              {this.context.intl.formatMessage({id: "review_know_about_me"})}
+            </h3>
+            <div className="yes-no-table">
+              <div className="yes-no-table-row">
+                {this.context.intl.formatMessage({id: "review_account_required"})}
+                {account}
+              </div>
+              <div className="yes-no-table-row">
+                {this.context.intl.formatMessage({id: "review_privacy_controls"})}
+                {privacyControls}
+              </div>
+              <div className="yes-no-table-row">
+                {this.context.intl.formatMessage({id: "review_delete_data"})}
+                {deleteData}
+              </div>
+            </div>
+            <h4>{this.context.intl.formatMessage({id: "review_share_data"})}</h4>
+            <div className="can-it-spy-table">
+              <div className="spy-table-row">
+                ??
+              </div>
+              <div className="spy-table-row">
+                ??
+              </div>
+              <div className="spy-table-row">
+                ??
+              </div>
+            </div>
+            <div className="single-row">
+              <h4>
+                {this.context.intl.formatMessage({id: "review_child_privacy"})}
+              </h4>
+              {childRules}
+            </div>
+            <h4 className="privacy-message">
+              {this.context.intl.formatMessage({id: "review_privacy_policy"})}
+            </h4>
+            <a className="privacy-url" href={item['privacy-policy']}>
+              {this.context.intl.formatMessage({id: "review_view_privacy_policy"})}
+            </a>
+            <h4 className="privacy-message">
+              {this.context.intl.formatMessage({id: "review_what_could_happen"})}
+            </h4>
+            <div>
+              {this.context.intl.formatMessage({id: item['worst-case']})}
+            </div>
+            <br/>
+            <a className="read-more-url" href="#">
+              {this.context.intl.formatMessage({id: 'review_partners_link'})}
+            </a>
+            <br/>
             <div id="coral_talk_7574501203394207"></div>
-            <h2>Related products</h2>
+            <h2>
+              {this.context.intl.formatMessage({id: "review_related_products"})}
+            </h2>
           </div>
         </section>
         <Footer/>

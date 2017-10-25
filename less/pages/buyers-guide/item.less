@@ -1,7 +1,15 @@
 .buyers-guide-item {
-  .product-url {
+  .product-url,
+  .privacy-url,
+  .read-more-url {
     color: red;
     text-decoration: none;
+  }
+  .read-more-url {
+    display: block;
+  }
+  .privacy-message {
+    margin-bottom: 4px;
   }
   .can-it-spy-table {
     width: 100%;
@@ -17,6 +25,32 @@
     .fa-check {
       color: #F44041;
     }
+  }
+  .yes-no-table {
+    width: 100%;
+    .yes-no-table-row {
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ECECEC;
+      :first-child {
+        padding-right: 12px;
+      }
+    }
+  }
+  .single-row {
+    h4 {
+      padding-right: 12px;
+      margin: 0;
+    }
+    padding: 10px 0;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
   }
   section {
     h2 {
