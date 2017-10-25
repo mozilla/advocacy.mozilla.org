@@ -230,6 +230,7 @@ var BuyersGuide = React.createClass({
 
     var no = this.context.intl.formatMessage({id: 'review_no'});
     var yes = this.context.intl.formatMessage({id: 'review_yes'});
+    var unknown = this.context.intl.formatMessage({id: 'review_unknown'});
     var account = no;
     var privacyControls = no;
     var deleteData = no;
@@ -237,10 +238,14 @@ var BuyersGuide = React.createClass({
     if (item["need-account"]) {
       account = yes;
     }
-    if (item["privacy-controls"]) {
+    if (item["privacy-controls"] === "unknown") {
+      privacyControls = unknown;
+    } else if (item["privacy-controls"]) {
       privacyControls = yes;
     }
-    if (item["delete-data"]) {
+    if (item["delete-data"] === "unknown") {
+      deleteData = unknown;
+    } else if (item["delete-data"]) {
       deleteData = yes;
     }
 
@@ -250,6 +255,18 @@ var BuyersGuide = React.createClass({
     }
     if (item['child-rules'] === "no") {
       childRules = no;
+    }
+
+    var privacyPolicy = (
+      <div>{this.context.intl.formatMessage({id: 'review_none'})}</div>
+    );
+
+    if (item['privacy-policy'] !== "none") {
+      privacyPolicy = (
+        <a className="privacy-url" href={item['privacy-policy']}>
+          {this.context.intl.formatMessage({id: "review_view_privacy_policy"})}
+        </a>
+      );
     }
 
     return (
@@ -341,9 +358,7 @@ var BuyersGuide = React.createClass({
             <h4 className="privacy-message">
               {this.context.intl.formatMessage({id: "review_privacy_policy"})}
             </h4>
-            <a className="privacy-url" href={item['privacy-policy']}>
-              {this.context.intl.formatMessage({id: "review_view_privacy_policy"})}
-            </a>
+            {privacyPolicy}
             <h4 className="privacy-message">
               {this.context.intl.formatMessage({id: "review_what_could_happen"})}
             </h4>

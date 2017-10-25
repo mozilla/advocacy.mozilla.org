@@ -1,20 +1,40 @@
 module.exports = {
   "toys": [
-    "dysonpurehotcoollink"
+    "smartletters",
+    "edwintheduck",
+    "adidasmicoachsmartsoccerball"
   ],
   "gameconsoles": [
-    "ringdoorbell2"
   ],
   "homehubs": [
-    "sengledsnap"
   ],
   "smarthomeaccessories": [
-    "augustsmartdoorlock"
+    "ringdoorbell2",
+    "augustsmartdoorlock",
+    "sengledsnap",
+    "eero",
+    "chamberlainmyqsmartgaragehub",
+    "idevicesswitch",
+    "aumismartnightlight",
+    "targetthresholdsmarttablelamp",
+    "philipshuewhitecolorambiancestarterkit",
+    "roomba980"
   ],
   "gadgetsgizmos": [
-    "eero"
+    "dysonpurehotcoollink",
+    "parrotpot",
+    "nanoleafaurora",
+    "meuralcanvas",
+    "hiku",
+    "flic",
+    "petcubeplay",
+    "dropkitchenscale",
+    "weberigrill2"
   ],
   "healthexcercise": [
-    "chamberlainmyqsmartgaragehub"
+    "mocacuff",
+    "spire",
+    "oralbgeniuspro8000",
+    "kinsasmartearthermometer"
   ]
 };
