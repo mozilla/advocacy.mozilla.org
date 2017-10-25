@@ -3,8 +3,26 @@ import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
 import productData from '../../data/buyers-guide-products.js';
+import categoryData from '../../data/buyers-guide-categories.js';
 import Modal from '../../components/modal.js';
 import SignupForm from '../../components/buyers-guide/signup-form.js';
+
+import { Link } from 'react-router';
+
+var Product = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },
+  render: function() {
+    return (
+      <div className="related-products-item-container">
+        <Link to={this.props.href}>
+          <img src={this.props.img}/>
+        </Link>
+      </div>
+    );
+  }
+});
 
 var BuyersGuide = React.createClass({
   getInitialState: function() {
@@ -128,6 +146,7 @@ var BuyersGuide = React.createClass({
   render: function() {
     const category = this.props.params.category;
     const itemName = this.props.params.item;
+    const products = categoryData[category] || [];
     const item = productData[itemName] || {};
     const locale = this.context.intl.locale;
     const copyStatus = this.state.copyStatus;
@@ -374,6 +393,14 @@ var BuyersGuide = React.createClass({
             <h2>
               {this.context.intl.formatMessage({id: "review_related_products"})}
             </h2>
+            <div className="related-products-container">
+              {products.map(function(productKey, index) {
+                const product = productData[productKey] || {};
+                return (
+                  <Product {...product} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + productKey}/>
+                );
+              })}
+            </div>
           </div>
         </section>
         <Footer/>
