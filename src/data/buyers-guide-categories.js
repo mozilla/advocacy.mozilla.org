@@ -2,11 +2,27 @@ module.exports = {
   "toys": [
     "smartletters",
     "edwintheduck",
-    "adidasmicoachsmartsoccerball"
+    "adidasmicoachsmartsoccerball",
+    "ozobotevo",
+    "beastsofbalance",
+    "toymailtalkie",
+    "spherosprkp",
+    "osmo",
+    "dashtherobot",
+    "bb8bysphero",
+    "airjamzairguitar",
+    "hellobarbie"
   ],
   "gameconsoles": [
+    "microsoftxboxone",
+    "sonyplaystation4",
+    "nintendoswitch"
   ],
   "homehubs": [
+    "amazonechoshow",
+    "samsungsmartthingshomemonitoringkit",
+    "googlehome",
+    "winkhubs"
   ],
   "smarthomeaccessories": [
     "ringdoorbell2",
@@ -18,7 +34,14 @@ module.exports = {
     "aumismartnightlight",
     "targetthresholdsmarttablelamp",
     "philipshuewhitecolorambiancestarterkit",
-    "roomba980"
+    "roomba980",
+    "boplaybeoplaym5",
+    "sonosplay1",
+    "nestthermostat",
+    "nestprotect",
+    "nestcamoutdoorsecuritycamera",
+    "nestcamindoorsecuritycamera",
+    "ecobee4thermostat"
   ],
   "gadgetsgizmos": [
     "dysonpurehotcoollink",
@@ -29,12 +52,16 @@ module.exports = {
     "flic",
     "petcubeplay",
     "dropkitchenscale",
-    "weberigrill2"
+    "weberigrill2",
+    "tilemate",
+    "automaticpro"
   ],
   "healthexcercise": [
     "mocacuff",
     "spire",
     "oralbgeniuspro8000",
-    "kinsasmartearthermometer"
+    "kinsasmartearthermometer",
+    "quell",
+    "fitbitsurge"
   ]
 };

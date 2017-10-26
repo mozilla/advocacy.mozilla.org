@@ -254,7 +254,9 @@ var BuyersGuide = React.createClass({
     var privacyControls = no;
     var deleteData = no;
 
-    if (item["need-account"]) {
+    if (item["need-account"] === "unknown") {
+      account = unknown;
+    } else if (item["need-account"]) {
       account = yes;
     }
     if (item["privacy-controls"] === "unknown") {
@@ -268,19 +270,27 @@ var BuyersGuide = React.createClass({
       deleteData = yes;
     }
 
-    var childRules = this.context.intl.formatMessage({id: 'review_n_a'});
+    var childRules = "";
+    var na = this.context.intl.formatMessage({id: 'review_n_a'});
     if (item['child-rules'] === "yes") {
       childRules = yes;
-    }
-    if (item['child-rules'] === "no") {
+    } else if (item['child-rules'] === "no") {
       childRules = no;
+    } else if (item['child-rules'] === "N/A") {
+      childRules = na;
+    } else if (item['child-rules']) {
+      childRules = this.context.intl.formatMessage({id: item['child-rules']});
     }
 
     var privacyPolicy = (
       <div>{this.context.intl.formatMessage({id: 'review_none'})}</div>
     );
 
-    if (item['privacy-policy'] !== "none") {
+    if (item['privacy-policy'] === "N/A") {
+      privacyPolicy = (
+        <div>{na}</div>
+      );
+    } else if (item['privacy-policy'] !== "none") {
       privacyPolicy = (
         <a className="privacy-url" href={item['privacy-policy']}>
           {this.context.intl.formatMessage({id: "review_view_privacy_policy"})}
