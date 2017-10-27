@@ -174,7 +174,7 @@ var BuyersGuide = React.createClass({
       <div className="buyers-guide buyers-guide-home">
         <Header/>
         <section ref={(input) => {this.headerInput = input;}} className={headerClassName}>
-          <header className="header-image">
+          <header className="red header-image">
             <div className="center-header">
               <h1 className="playfair">
                 {this.context.intl.formatMessage({id: 'privacy_not_included'})}
@@ -263,7 +263,7 @@ var BuyersGuide = React.createClass({
         </div>
 
         <div ref={(input) => {this.footerInput = input;}} className={footerClassName}>
-          <section className="red">
+          <section className="red footer-image">
             <div onClick={this.slideDown} onTouchMove={this.slideDown}>
               <i className="fa fa-angle-up fa-5x" aria-hidden="true"></i><br/>
               <span className="itallic">

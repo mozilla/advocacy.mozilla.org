@@ -52,9 +52,9 @@ var Header = React.createClass({
           <button className="hamburger" onClick={this.toggleMenu}>
             <i className="fa fa-bars fa-2x"></i>
           </button>
-          <button className="moz-logo">
+          <a className="moz-logo" href="https://mozilla.org">
             <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
-          </button>
+          </a>
           <div className="social-buttons">
             <button onClick={this.shareFbClick} className="social-button">
               <i className="fa fa-facebook fa-1x"></i>
