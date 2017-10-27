@@ -52,7 +52,7 @@ var Header = React.createClass({
           <button className="hamburger" onClick={this.toggleMenu}>
             <i className="fa fa-bars fa-2x"></i>
           </button>
-          <a className="moz-logo" href="https://mozilla.org">
+          <a className="moz-logo" href={"/" + locale + "/privacynotincluded/"}>
             <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
           </a>
           <div className="social-buttons">
