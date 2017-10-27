@@ -6,6 +6,7 @@ import productData from '../../data/buyers-guide-products.js';
 import categoryData from '../../data/buyers-guide-categories.js';
 import Modal from '../../components/modal.js';
 import SignupForm from '../../components/buyers-guide/signup-form.js';
+import debounce from 'debounce';
 
 import { Link } from 'react-router';
 
@@ -29,7 +30,6 @@ var BuyersGuide = React.createClass({
     return {
       showModal: false,
       maybeLater: false,
-      cancelTimeout: false,
       signupSuccess: false,
       copyStatus: ""
     };
@@ -38,22 +38,21 @@ var BuyersGuide = React.createClass({
     intl: React.PropTypes.object
   },
   componentDidMount: function() {
-    setTimeout(() => {
-      if (!this.state.cancelTimeout) {
-        this.openModal();
-      }
-    }, 3000);
     if (typeof Coral !== "undefined") {
       Coral.Talk.render(document.querySelector("#coral_talk_7574501203394207"), {
         talk: 'https://mozilla-foundation-talk.herokuapp.com/'
       });
     }
+    window.addEventListener("scroll", this.onScroll, true);
   },
-  componentWillReceiveProps: function() {
-    this.setState({
-      cancelTimeout: true
-    });
+  componentWillUnmount: function() {
+    window.removeEventListener("scroll", this.onScroll, true);
   },
+  onScroll: debounce(function(e) {
+    if (e.pageY >= 900) {
+      this.openModal();
+    }
+  }, 100, true),
   closeModal: function() {
     this.setState({
       showModal: false
@@ -66,12 +65,12 @@ var BuyersGuide = React.createClass({
   },
   openModal: function() {
     if (this.props.subscribed || window.sessionStorage.getItem('disable-modal')) {
+      window.removeEventListener("scroll", this.onScroll, true);
       return;
     }
     window.sessionStorage.setItem('disable-modal', true);
     this.setState({
-      showModal: true,
-      cancelTimeout: true
+      showModal: true
     });
   },
   copyLink: function() {

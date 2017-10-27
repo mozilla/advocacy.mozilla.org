@@ -85,12 +85,14 @@ var BuyersGuide = React.createClass({
     this.swiper = new Swiper('.swiper-container-top', {
       direction: 'vertical',
       mousewheel: {enabled: true},
-      keyboard: {enabled: true}
+      keyboard: {enabled: true},
+      speed: 200
     });
     this.swiperBottom = new Swiper('.swiper-container-bottom', {
       direction: 'vertical',
       mousewheel: {enabled: true},
-      effect: "fade"
+      effect: "fade",
+      speed: 200
     });
 
     this.swiper.controller.control = this.swiperBottom;
