@@ -124,7 +124,12 @@ var SignupForm = React.createClass({
           <input className="privacy-checkbox" type="checkbox" id="privacy-checkbox" onChange={this.onPrivacyChange} value={this.state.privacyCheckboxChecked}/>
           <label htmlFor="privacy-checkbox">
             <div>
-              {this.context.intl.formatMessage({id: 'privacy_policy'})}
+              <FormattedMessage
+                id='privacy_policy'
+                values={{
+                  linkPrivacyNotice: (<a href="https://www.mozilla.org/privacy/websites/">{this.context.intl.formatMessage({id: 'link_privacy_notice'})}</a>)
+                }}
+              />
             </div>
           </label>
         </div>
