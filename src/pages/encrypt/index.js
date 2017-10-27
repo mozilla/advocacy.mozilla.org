@@ -24,8 +24,11 @@ module.exports = React.createClass({
       );
     }
 
+    var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700";
+
     var coralScript = null;
     if (this.props.buyersGuide) {
+      googleFonts += "|Playfair+Display:400,400i,700,900";
       coralScript = (<script src="https://mozilla-foundation-talk.herokuapp.com/embed.js"></script>);
       shareProgressButtons = (
         <div>
@@ -36,7 +39,6 @@ module.exports = React.createClass({
       );
     }
 
-    var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700|Playfair+Display:200,300,400";
     return (
       <html className={this.props.htmlClassName}>
         <head>

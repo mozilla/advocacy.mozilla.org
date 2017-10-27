@@ -184,6 +184,13 @@
     text-align: left;
     font-size: 12px;
   }
+  h1 {
+    font-weight: 900;
+
+    @media screen and (min-width: 668px) {
+      font-size: 70px;
+    }
+  }
   .modal {
     .modal-close {
       top: 60px;
@@ -362,12 +369,15 @@
     margin: 0 auto;
   }
   .fancy-letter {
+    b {
+      letter-spacing: 1.5px;
+    }
     overflow: hidden;
     text-align: left;
     &::first-letter {
       color: #FFFFFF;
       background: linear-gradient(#E54544, #B73333);
-      font-weight: 600;
+      font-weight: 900;
       float: left;
       font-size: 50px;
       padding: 10px 13px;
@@ -398,6 +408,13 @@
       flex-direction: column;
       justify-content: center;
       padding-top: 45px;
+      p {
+        font-weight: 700;
+
+        @media screen and (min-width: 668px) {
+          font-size: 37px;
+        }
+      }
     }
   }
 }
