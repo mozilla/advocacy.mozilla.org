@@ -535,7 +535,7 @@ module.exports = {
     "need-account": false,
     "privacy-controls": false,
     "delete-data": true,
-    "share-data": "adverrtising",
+    "share-data": "advertising",
     "child-rules": "product_30_child_rules",
     "privacy-policy": "https://ozobot.com/TOS-app"
   },
@@ -553,7 +553,7 @@ module.exports = {
     "need-account": false,
     "privacy-controls": true,
     "delete-data": true,
-    "share-data": "adverrtising",
+    "share-data": "advertising",
     "child-rules": "product_31_child_rules",
     "privacy-policy": "https://beastsofbalance.com/privacy/"
   },

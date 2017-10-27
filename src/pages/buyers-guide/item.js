@@ -281,6 +281,22 @@ var BuyersGuide = React.createClass({
       childRules = this.context.intl.formatMessage({id: item['child-rules']});
     }
 
+    var shareData = "";
+    var marketing = this.context.intl.formatMessage({id: 'review_marketing'});
+    var advertising = this.context.intl.formatMessage({id: 'review_advertising'});
+    var onlineTracking = this.context.intl.formatMessage({id: 'review_online_tracking'});
+    if (item['share-data'] === "no") {
+      shareData = no;
+    } else if (item['share-data'] === "marketing") {
+      shareData = marketing;
+    } else if (item['share-data'] === "advertising") {
+      shareData = advertising;
+    } else if (item['share-data'] === "online tracking") {
+      shareData = onlineTracking;
+    } else if (item['share-data'] === "unknown") {
+      shareData = unknown;
+    }
+
     var privacyPolicy = (
       <div>{this.context.intl.formatMessage({id: 'review_none'})}</div>
     );
@@ -365,18 +381,13 @@ var BuyersGuide = React.createClass({
                 {deleteData}
               </div>
             </div>
-            <h4>{this.context.intl.formatMessage({id: "review_share_data"})}</h4>
-            <div className="can-it-spy-table">
-              <div className="spy-table-row">
-                ??
-              </div>
-              <div className="spy-table-row">
-                ??
-              </div>
-              <div className="spy-table-row">
-                ??
-              </div>
+            <div className="single-row">
+              <h4>
+                {this.context.intl.formatMessage({id: "review_share_data"})}
+              </h4>
+              {shareData}
             </div>
+
             <div className="single-row">
               <h4>
                 {this.context.intl.formatMessage({id: "review_child_privacy"})}
