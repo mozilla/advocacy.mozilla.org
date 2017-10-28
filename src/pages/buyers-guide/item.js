@@ -14,10 +14,13 @@ var Product = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
   },
+  scrollToTop: function() {
+    window.scrollTo(0, 0);
+  },
   render: function() {
     return (
       <div className="related-products-item-container">
-        <Link to={this.props.href}>
+        <Link onClick={this.scrollToTop} to={this.props.href}>
           <img src={this.props.img}/>
         </Link>
       </div>
