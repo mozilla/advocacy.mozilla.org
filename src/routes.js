@@ -112,8 +112,9 @@ function buildRoutes() {
     routes.push(
       <Route key={locale + "-privacynotincluded"} path={locale}>
         <Route path="privacynotincluded">
-          <IndexRoute component={require(`./pages/buyers-guide/home.js`)}/>
+          <IndexRoute galleryPosition="bottom" component={require(`./pages/buyers-guide/home.js`)}/>
           <Route path="why-we-made" component={require(`./pages/buyers-guide/why-we-made.js`)}/>
+          <Route path="categories" galleryPosition="middle" component={require(`./pages/buyers-guide/home.js`)}/>
           <Route path="category">
             <Route path=":category" component={require(`./pages/buyers-guide/category.js`)}/>
             <Route path=":category/:item" component={require(`./pages/buyers-guide/item.js`)}/>

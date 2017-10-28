@@ -27,11 +27,20 @@ var Category = React.createClass({
 var BuyersGuide = React.createClass({
   getInitialState: function() {
     return {
-      galleryPosition: "bottom"
+      galleryPosition: this.props.route.galleryPosition || "bottom"
     };
   },
   contextTypes: {
     intl: React.PropTypes.object
+  },
+  componentWillReceiveProps: function(nextProps) {
+    if (nextProps.route.galleryPosition && nextProps.route.galleryPosition !== this.state.galleryPosition) {
+      if (nextProps.route.galleryPosition === "middle") {
+        this.slideUp();
+      } else if (nextProps.route.galleryPosition === "bottom") {
+        this.hideDown();
+      }
+    }
   },
   onWheel: debounce(function(e) {
     if (this.state.galleryPosition !== "middle") {
@@ -94,6 +103,8 @@ var BuyersGuide = React.createClass({
       effect: "fade",
       speed: 200
     });
+    this.swiper.slideTo(1);
+    this.swiperBottom.slideTo(1);
 
     this.swiper.controller.control = this.swiperBottom;
     this.swiperBottom.controller.control = this.swiper;
@@ -185,13 +196,6 @@ var BuyersGuide = React.createClass({
                 {this.context.intl.formatMessage({id: 'hero_unit_paragraph'})}
               </p>
             </div>
-            {/*<p>
-              A PROJECT BY<br/>
-              <span className="itallic">
-                Mozilla with spcial thanks<br/>
-                to Consumer Reports
-              </span>
-            </p>*/}
             <div className="more-arrow">
               <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
             </div>

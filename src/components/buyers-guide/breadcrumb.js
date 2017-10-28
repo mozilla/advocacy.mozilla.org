@@ -28,7 +28,7 @@ var Breadcrumb = React.createClass({
       return (
         <div className="breadcrumb">
           <span className="breadcrumb-item">
-            <Link to={"/" + locale + "/privacynotincluded/"}>
+            <Link to={"/" + locale + "/privacynotincluded/categories/"}>
               {this.context.intl.formatMessage({id: 'categories'})}
             </Link>
           </span>
@@ -46,7 +46,7 @@ var Breadcrumb = React.createClass({
     return (
       <div className="breadcrumb">
         <span className="breadcrumb-item">
-          <Link to={"/" + locale + "/privacynotincluded/"}>
+          <Link to={"/" + locale + "/privacynotincluded/categories/"}>
             {this.context.intl.formatMessage({id: 'categories'})}
           </Link>
         </span>
