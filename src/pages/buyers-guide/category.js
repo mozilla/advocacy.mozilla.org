@@ -18,7 +18,9 @@ var Product = React.createClass({
     return (
       <div className="category-item-container">
         <Link onClick={this.scrollToTop} to={this.props.href}>
-          <img src={this.props.img}/>
+          <div className="category-image-container">
+            <img src={this.props.img}/>
+          </div>
           <div className="category-item-label">{this.props.company}</div>
           <div className="category-item-header playfair">
             {this.context.intl.formatMessage({id: this.props.product})}
@@ -55,7 +57,7 @@ var BuyersGuide = React.createClass({
               {products.map(function(productKey, index) {
                 const product = productData[productKey] || {};
                 return (
-                  <Product {...product} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + productKey}/>
+                  <Product key={productKey} {...product} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + productKey}/>
                 );
               })}
             </div>

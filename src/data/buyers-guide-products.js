@@ -1,6 +1,6 @@
 module.exports = {
   "dysonpurehotcoollink": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Dyson Pure Hot Cool Link Hero.jpg",
     "company": "Dyson",
     "product": "product_1_title",
     "blerb": "product_1_blurb",
@@ -18,7 +18,7 @@ module.exports = {
     "worst-case": "product_1_worst_case"
   },
   "ringdoorbell2": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Ring Doorbell 2.jpg",
     "company": "Ring",
     "product": "product_2_title",
     "blerb": "product_2_blurb",
@@ -36,7 +36,7 @@ module.exports = {
     "worst-case": "product_2_worst_case"
   },
   "sengledsnap": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Snap.jpg",
     "company": "Sengled Optoeletronics Co",
     "product": "product_3_title",
     "blerb": "product_3_blurb",
@@ -54,7 +54,7 @@ module.exports = {
     "worst-case": "product_3_worst_case"
   },
   "augustsmartdoorlock": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/august_smart_lock.jpg",
     "company": "August",
     "product": "product_4_title",
     "blerb": "product_4_blurb",
@@ -72,7 +72,7 @@ module.exports = {
     "worst-case": "product_4_worst_case"
   },
   "eero": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/eero.jpg",
     "company": "eero",
     "product": "product_5_title",
     "blerb": "product_5_blurb",
@@ -90,7 +90,7 @@ module.exports = {
     "worst-case": "product_5_worst_case"
   },
   "chamberlainmyqsmartgaragehub": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Chamberlain-Smart-Garage-Hub-2.jpg",
     "company": "Chamberlain",
     "product": "product_6_title",
     "blerb": "product_6_blurb",
@@ -108,7 +108,7 @@ module.exports = {
     "worst-case": "product_6_worst_case"
   },
   "idevicesswitch": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/iDevices-Switch.jpg",
     "company": "iDevices",
     "product": "product_7_title",
     "blerb": "product_7_blurb",
@@ -126,7 +126,7 @@ module.exports = {
     "worst-case": "product_7_worst_case"
   },
   "aumismartnightlight": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/aumi on white front.jpg",
     "company": "Aumi",
     "product": "product_8_title",
     "blerb": "product_8_blurb",
@@ -144,7 +144,7 @@ module.exports = {
     "worst-case": "product_8_worst_case"
   },
   "parrotpot": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/parrot-pot.png",
     "company": "Parrot",
     "product": "product_9_title",
     "blerb": "product_9_blurb",
@@ -162,7 +162,7 @@ module.exports = {
     "worst-case": "product_9_worst_case"
   },
   "tilemate": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Tile Sport.jpg",
     "product": "product_10_title",
     "blerb": "product_10_blurb",
     "worst-case": "product_10_worst_case",
@@ -180,7 +180,7 @@ module.exports = {
     "privacy-policy": "https://www.thetileapp.com/privacy"
   },
   "amazonechoshow": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/amazon_echo_show.jpg",
     "product": "product_11_title",
     "blerb": "product_11_blurb",
     "worst-case": "product_11_worst_case",
@@ -198,7 +198,7 @@ module.exports = {
     "privacy-policy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201909010"
   },
   "boplaybeoplaym5": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/B_O M5 Natural.jpg",
     "product": "product_12_title",
     "blerb": "product_12_blurb",
     "worst-case": "product_12_worst_case",
@@ -216,7 +216,7 @@ module.exports = {
     "privacy-policy": "https://www.beoplay.com/privacy-policy"
   },
   "nanoleafaurora": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Nanoleaf_Aurora5.jpg",
     "company": "Nanoleaf",
     "product": "product_13_title",
     "blerb": "product_13_blurb",
@@ -234,7 +234,7 @@ module.exports = {
     "worst-case": "product_13_worst_case"
   },
   "samsungsmartthingshomemonitoringkit": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Samsung Smart Home Monitoring Kit.jpg",
     "product": "product_14_title",
     "blerb": "product_14_blurb",
     "worst-case": "product_14_worst_case",
@@ -252,7 +252,7 @@ module.exports = {
     "privacy-policy": "https://www.smartthings.com/privacy/"
   },
   "targetthresholdsmarttablelamp": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/threshold smart lamp target.png",
     "company": "Target",
     "product": "product_15_title",
     "blerb": "product_15_blurb",
@@ -270,7 +270,7 @@ module.exports = {
     "worst-case": "product_15_worst_case"
   },
   "sonosplay1": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/sonos-one.jpg",
     "product": "product_16_title",
     "blerb": "product_16_blurb",
     "worst-case": "product_16_worst_case",
@@ -288,7 +288,7 @@ module.exports = {
     "privacy-policy": "http://www.sonos.com/en-us/legal/privacy"
   },
   "philipshuewhitecolorambiancestarterkit": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Philips-Hue-white-ambiance-E27-on.jpg",
     "product": "product_17_title",
     "blerb": "product_17_blurb",
     "worst-case": "product_17_worst_case",
@@ -306,7 +306,7 @@ module.exports = {
     "privacy-policy": "http://www2.meethue.com/en-us/support/privacy-policy"
   },
   "nestthermostat": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/nest_thermostat.jpg",
     "product": "product_18_title",
     "blerb": "product_18_blurb",
     "worst-case": "product_18_worst_case",
@@ -324,7 +324,7 @@ module.exports = {
     "privacy-policy": "https://nest.com/legal/privacy-statement/"
   },
   "nestprotect": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/nest-protect-white.jpg",
     "product": "product_19_title",
     "blerb": "product_19_blurb",
     "worst-case": "product_19_worst_case",
@@ -342,7 +342,7 @@ module.exports = {
     "privacy-policy": "https://nest.com/legal/privacy-statement/"
   },
   "nestcamoutdoorsecuritycamera": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/nest-cam-outdoor.png",
     "product": "product_20_title",
     "blerb": "product_20_blurb",
     "worst-case": "product_20_worst_case",
@@ -360,7 +360,7 @@ module.exports = {
     "privacy-policy": "https://nest.com/legal/privacy-statement/"
   },
   "nestcamindoorsecuritycamera": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/nest-indoor-security-cam.jpg",
     "product": "product_21_title",
     "blerb": "product_21_blurb",
     "worst-case": "product_21_worst_case",
@@ -378,7 +378,7 @@ module.exports = {
     "privacy-policy": "https://nest.com/legal/privacy-statement/"
   },
   "meuralcanvas": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/meural-canvas.jpg",
     "product": "product_22_title",
     "blerb": "product_22_blurb",
     "worst-case": "product_22_worst_case",
@@ -396,7 +396,7 @@ module.exports = {
     "privacy-policy": "none"
   },
   "roomba980": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Roomba+980_rear.jpg",
     "product": "product_23_title",
     "blerb": "product_23_blurb",
     "worst-case": "product_23_worst_case",
@@ -414,7 +414,7 @@ module.exports = {
     "privacy-policy": "http://www.irobot.com/Legal/Documents.aspx"
   },
   "hiku": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/hiku.png",
     "product": "product_24_title",
     "blerb": "product_24_blurb",
     "worst-case": "product_24_worst_case",
@@ -432,7 +432,7 @@ module.exports = {
     "privacy-policy": "http://hiku.us/privacy-1/"
   },
   "googlehome": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/google-home.jpg",
     "product": "product_25_title",
     "blerb": "product_25_blurb",
     "worst-case": "product_25_worst_case",
@@ -450,7 +450,7 @@ module.exports = {
     "privacy-policy": "https://support.google.com/googlehome/answer/7072285?hl=en"
   },
   "flic": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/flic.png",
     "product": "product_26_title",
     "blerb": "product_26_blurb",
     "worst-case": "product_26_worst_case",
@@ -468,7 +468,7 @@ module.exports = {
     "privacy-policy": "https://flic.io/privacy-policy"
   },
   "automaticpro": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/automatic-pro-in-hand.jpg",
     "product": "product_27_title",
     "blerb": "product_27_blurb",
     "worst-case": "product_27_worst_case",
@@ -486,7 +486,7 @@ module.exports = {
     "privacy-policy": "https://www.automatic.com/legal/#privacy"
   },
   "winkhubs": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Wink Hub 2-Product-1.jpg",
     "product": "product_28_title",
     "blerb": "product_28_blurb",
     "worst-case": "product_28_worst_case",
@@ -504,7 +504,7 @@ module.exports = {
     "privacy-policy": "https://www.wink.com/legal/"
   },
   "ecobee4thermostat": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/ecobee.jpg",
     "product": "product_29_title",
     "blerb": "product_29_blurb",
     "worst-case": "product_29_worst_case",
@@ -522,7 +522,7 @@ module.exports = {
     "privacy-policy": "https://www.ecobee.com/legal/use/"
   },
   "ozobotevo": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/",
     "product": "product_30_title",
     "blerb": "product_30_blurb",
     "worst-case": "product_30_worst_case",
@@ -540,7 +540,7 @@ module.exports = {
     "privacy-policy": "https://ozobot.com/TOS-app"
   },
   "beastsofbalance": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Beasts of Balance play set (wide).png",
     "product": "product_31_title",
     "blerb": "product_31_blurb",
     "worst-case": "product_31_worst_case",
@@ -558,7 +558,7 @@ module.exports = {
     "privacy-policy": "https://beastsofbalance.com/privacy/"
   },
   "toymailtalkie": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/toymail.png",
     "product": "product_32_title",
     "blerb": "product_32_blurb",
     "worst-case": "product_32_worst_case",
@@ -576,7 +576,7 @@ module.exports = {
     "privacy-policy": "https://toymail.co/pages/privacy"
   },
   "spherosprkp": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/SPRKPlus-Hero.png",
     "product": "product_33_title",
     "blerb": "product_33_blurb",
     "worst-case": "product_33_worst_case",
@@ -594,7 +594,7 @@ module.exports = {
     "privacy-policy": "http://www.sphero.com/privacy"
   },
   "osmo": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/osmo.png",
     "product": "product_34_title",
     "blerb": "product_34_blurb",
     "worst-case": "product_34_worst_case",
@@ -612,7 +612,7 @@ module.exports = {
     "privacy-policy": "https://www.playosmo.com/en/privacy-policy/"
   },
   "smartletters": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/1. Marbotic-iPad-smart-letters.jpg",
     "product": "product_35_title",
     "blerb": "product_35_blurb",
     "worst-case": "product_35_worst_case",
@@ -630,7 +630,7 @@ module.exports = {
     "privacy-policy": "http://www.marbotic.com/privacy/"
   },
   "edwintheduck": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Edwin_The_Duck_AV0.jpg",
     "product": "product_36_title",
     "blerb": "product_36_blurb",
     "worst-case": "product_36_worst_case",
@@ -648,7 +648,7 @@ module.exports = {
     "privacy-policy": "http://www.edwintheduck.com/privacy-policy"
   },
   "dashtherobot": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Dash - Front - High Res.png",
     "product": "product_37_title",
     "blerb": "product_37_blurb",
     "worst-case": "product_37_worst_case",
@@ -666,7 +666,7 @@ module.exports = {
     "privacy-policy": "https://www.makewonder.com/privacy"
   },
   "bb8bysphero": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/bb-8.jpg",
     "product": "product_38_title",
     "blerb": "product_38_blurb",
     "worst-case": "product_38_worst_case",
@@ -684,7 +684,7 @@ module.exports = {
     "privacy-policy": "http://www.sphero.com/privacy/bb8"
   },
   "airjamzairguitar": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/airpick.jpg",
     "product": "product_39_title",
     "blerb": "product_39_blurb",
     "worst-case": "product_39_worst_case",
@@ -702,7 +702,7 @@ module.exports = {
     "privacy-policy": "N/A"
   },
   "hellobarbie": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/barbie.jpg",
     "product": "product_40_title",
     "blerb": "product_40_blurb",
     "worst-case": "product_40_worst_case",
@@ -720,7 +720,7 @@ module.exports = {
     "privacy-policy": "https://toytalk.com/hellobarbie/privacy/"
   },
   "microsoftxboxone": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Xbox-One-X_Console-Controller_Hrz_Family_Mirror_White-and-Black.jpg",
     "product": "product_41_title",
     "blerb": "product_41_blurb",
     "worst-case": "product_41_worst_case",
@@ -738,7 +738,7 @@ module.exports = {
     "privacy-policy": "https://go.microsoft.com/fwlink/p/?LinkId=123161"
   },
   "sonyplaystation4": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/sony-ps4.png",
     "product": "product_42_title",
     "blerb": "product_42_blurb",
     "worst-case": "product_42_worst_case",
@@ -756,7 +756,7 @@ module.exports = {
     "privacy-policy": "https://www.playstation.com/en-us/legal/terms-of-use/op-privacy-policy/"
   },
   "nintendoswitch": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/",
     "product": "product_43_title",
     "blerb": "product_43_blurb",
     "worst-case": "product_43_worst_case",
@@ -774,7 +774,7 @@ module.exports = {
     "privacy-policy": "https://accounts.nintendo.com/term_chooser/privacy_policy"
   },
   "quell": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/",
     "product": "product_44_title",
     "blerb": "product_44_blurb",
     "worst-case": "product_44_worst_case",
@@ -792,7 +792,7 @@ module.exports = {
     "privacy-policy": "https://www.quellrelief.com/privacy/"
   },
   "hatchbabyrest": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/HatchBabyRestNightLightwithApp_Large.jpg",
     "product": "product_45_title",
     "blerb": "product_45_blurb",
     "worst-case": "product_45_worst_case",
@@ -810,7 +810,7 @@ module.exports = {
     "privacy-policy": "https://www.hatchbaby.com/pages/privacy-policy"
   },
   "fitbitsurge": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/surge.png",
     "product": "product_46_title",
     "blerb": "product_46_blurb",
     "worst-case": "product_46_worst_case",
@@ -828,7 +828,7 @@ module.exports = {
     "privacy-policy": "http://www.fitbit.com/legal/privacy"
   },
   "mocacuff": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/color_MOCAheart.png",
     "product": "product_47_title",
     "blerb": "product_47_blurb",
     "worst-case": "product_47_worst_case",
@@ -846,7 +846,7 @@ module.exports = {
     "privacy-policy": "https://www.mocacare.com/privacy.html"
   },
   "spire": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/spire.png",
     "product": "product_48_title",
     "blerb": "product_48_blurb",
     "worst-case": "product_48_worst_case",
@@ -864,7 +864,7 @@ module.exports = {
     "privacy-policy": "https://spire.io/pages/privacy-policy"
   },
   "oralbgeniuspro8000": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/",
     "product": "product_49_title",
     "blerb": "product_49_blurb",
     "worst-case": "product_49_worst_case",
@@ -882,7 +882,7 @@ module.exports = {
     "privacy-policy": "http://www.pg.com/privacy/english/privacy_notice.shtml"
   },
   "kinsasmartearthermometer": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/kinsa_ear_thermometer.jpg",
     "product": "product_50_title",
     "blerb": "product_50_blurb",
     "worst-case": "product_50_worst_case",
@@ -900,7 +900,7 @@ module.exports = {
     "privacy-policy": "https://www.kinsahealth.com/privacy"
   },
   "adidasmicoachsmartsoccerball": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/adidas-smart-ball-needs-attribution.jpg",
     "product": "product_51_title",
     "blerb": "product_51_blurb",
     "worst-case": "product_51_worst_case",
@@ -918,7 +918,7 @@ module.exports = {
     "privacy-policy": "https://micoach.adidas.com/content/PrivacyPolicy"
   },
   "petcubeplay": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/Petcube-Play_White-1.png",
     "product": "product_52_title",
     "blerb": "product_52_blurb",
     "worst-case": "product_52_worst_case",
@@ -936,7 +936,7 @@ module.exports = {
     "privacy-policy": "https://petcube.com/docs/privacy-policy/"
   },
   "dropkitchenscale": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/kitchen-drop.jpg",
     "product": "product_53_title",
     "blerb": "product_53_blurb",
     "worst-case": "product_53_worst_case",
@@ -954,7 +954,7 @@ module.exports = {
     "privacy-policy": "https://www.getdrop.com/privacy-policy"
   },
   "weberigrill2": {
-    "img": "",
+    "img": "/assets/buyers-guide/products/iGrill 2.jpg",
     "product": "product_54_title",
     "blerb": "product_54_blurb",
     "worst-case": "product_54_worst_case",

@@ -21,7 +21,9 @@ var Product = React.createClass({
     return (
       <div className="related-products-item-container">
         <Link onClick={this.scrollToTop} to={this.props.href}>
-          <img src={this.props.img}/>
+          <div className="related-products-image-container">
+            <img src={this.props.img}/>
+          </div>
         </Link>
       </div>
     );
@@ -329,7 +331,9 @@ var BuyersGuide = React.createClass({
             <div className={copyStatusClassName}>
               {this.context.intl.formatMessage({id: 'link_copied'})}
             </div>
-            <img src={item.img}/>
+            <div className="main-product-image-container">
+              <img src={item.img}/>
+            </div>
             <div className="clear">
               <span className="category-item-label">
                 {item.company}
@@ -420,7 +424,7 @@ var BuyersGuide = React.createClass({
               {products.map(function(productKey, index) {
                 const product = productData[productKey] || {};
                 return (
-                  <Product {...product} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + productKey}/>
+                  <Product key={productKey} {...product} href={"/" + locale + "/privacynotincluded/category/" + category + "/" + productKey}/>
                 );
               })}
             </div>

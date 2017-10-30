@@ -5,8 +5,9 @@
   }
   .categories-container {
     margin: 0 -10px;
-    text-align: center;
+    text-align: left;
     .category-item-container {
+      vertical-align: top;
       margin: 10px;
       width: 155px;
       display: inline-block;
@@ -15,10 +16,16 @@
         color: inherit;
         text-align: left;
       }
-      img {
+      .category-image-container {
+        display: flex;
         height: 155px;
         width: 155px;
         box-shadow: 0px 0px 5px #383838;
+      }
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto;
       }
       .category-item-label {
         opacity: 0.5;

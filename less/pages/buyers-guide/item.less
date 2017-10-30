@@ -18,14 +18,22 @@
     .related-products-item-container {
       margin: 5px;
       a {
-        height: 100px;
-        width: 100px;
+        height: 116px;
+        width: 116px;
         box-shadow: 0px 0px 5px #383838;
         display: block;
-        img {
+        .related-products-image-container {
           height: 100%;
           width: 100%;
           margin: 0;
+          display: flex;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            width: auto;
+            margin: auto;
+          }
         }
       }
     }
@@ -77,12 +85,17 @@
     }
     background: #FFFFFF;
     overflow: hidden;
-    img {
-      width: 100%;
-      max-width: 520px;
-      margin: 0 auto;
-      display: block;
+    .main-product-image-container {
+      width: 505px;
+      height: 500px;
+      display: flex;
       margin: 20px 0;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+      display: block;
     }
     .clear {
       overflow: hidden;
