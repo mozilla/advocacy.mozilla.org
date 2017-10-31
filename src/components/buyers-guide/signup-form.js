@@ -62,7 +62,7 @@ var SignupForm = React.createClass({
     if (!this.state.emailInput.trim()) {
       valid = false;
 
-      emailError = this.context.intl.formatMessage({id: 'email_invalid'});
+      emailError = this.context.intl.formatMessage({id: 'required_error_generic'});
       reactGA.event({
         category: "Signup",
         action: "Form Error",

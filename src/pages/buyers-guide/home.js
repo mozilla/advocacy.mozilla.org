@@ -222,32 +222,32 @@ var BuyersGuide = React.createClass({
             <div className="swiper-wrapper">
               <div className="swiper-slide swiper-end">.</div>
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_toys'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_toys_home'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
                 href={"/" + locale + "/privacynotincluded/category/toys"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles_home'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gameconsoles'})}
                 href={"/" + locale + "/privacynotincluded/category/gameconsoles"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_homehubs_home'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
                 href={"/" + locale + "/privacynotincluded/category/homehubs"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories_home'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
                 href={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos_home'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
                 href={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}
               />
               <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
+                category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise_home'})}
                 header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
                 href={"/" + locale + "/privacynotincluded/category/healthexcercise"}
               />
