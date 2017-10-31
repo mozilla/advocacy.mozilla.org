@@ -105,7 +105,7 @@ var Header = React.createClass({
           </div>
           <div className="link-container why-link">
             <Link onClick={this.toggleMenu} to={"/" + locale + "/privacynotincluded/why-we-made"}>
-              {this.context.intl.formatMessage({id: 'why_label'})}
+              {this.context.intl.formatMessage({id: 'wwmt_main_title'})}
             </Link>
           </div>
         </div>
