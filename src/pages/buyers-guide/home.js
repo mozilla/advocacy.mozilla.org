@@ -211,9 +211,6 @@ var BuyersGuide = React.createClass({
             <p className="playfair fancy-letter">
               <FormattedHTMLMessage id="thats_why"/>
             </p>
-            <p className="itallic info-blob playfair">
-              <FormattedHTMLMessage id="info_blob"/>
-            </p>
             <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
               <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
               <p className="itallic playfair">
@@ -283,6 +280,9 @@ var BuyersGuide = React.createClass({
                 {this.context.intl.formatMessage({id: 'experience_again'})}
               </span>
             </div>
+            <p className="page-width itallic info-blob playfair">
+              <FormattedHTMLMessage id="info_blob"/>
+            </p>
             <h2 className="playfair">
               {this.context.intl.formatMessage({id: 'best_to_you_and_yours'})}
             </h2>
