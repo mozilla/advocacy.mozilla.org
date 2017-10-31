@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from "classnames";
 import reactGA from 'react-ga';
 import submit from '../../lib/submit';
+import { FormattedMessage } from 'react-intl';
 
 var ErrorMessage = React.createClass({
   render: function() {

@@ -55,7 +55,7 @@ var BuyersGuide = React.createClass({
     window.removeEventListener("scroll", this.onScroll, true);
   },
   onScroll: debounce(function(e) {
-    if (e.pageY >= 900) {
+    if (e.pageY >= 300) {
       this.openModal();
     }
   }, 100, true),
@@ -381,26 +381,27 @@ var BuyersGuide = React.createClass({
             <div className="main-product-image-container">
               <img src={item.img}/>
             </div>
-            <div className="clear">
-              <span className="category-item-label">
-                {item.company}
-              </span>
-              <button className="copy-link" onClick={this.copyLink}>
-                {this.context.intl.formatMessage({id: 'copy_link'})}
-              </button>
-            </div>
-            <h1 className="playfair">
-              {this.context.intl.formatMessage({id: item.product})}
-            </h1>
-            <a className="product-url" href={item.url}>{item.url}</a>
+            <h2 className="company-title">
+              {item.company}
+            </h2>
+            <a className="product-url" href={item.url}>
+              <h1 className="playfair">
+                {this.context.intl.formatMessage({id: item.product})}
+              </h1>
+            </a>
             <div>{item.price}</div>
             <p>
               {this.context.intl.formatMessage({id: item.blerb})}
             </p>
             {/*<p className="age-range">{item.age}</p>*/}
-            <h2>
-              {this.context.intl.formatMessage({id: "safety_review"})}
-            </h2>
+            <div className="clear copy-link-container">
+              <span className="category-item-label">
+                {this.context.intl.formatMessage({id: "safety_review"})}
+              </span>
+              <button className="copy-link" onClick={this.copyLink}>
+                {this.context.intl.formatMessage({id: 'copy_link'})}
+              </button>
+            </div>
             <h3>
               {this.context.intl.formatMessage({id: "review_can_it_spy"})}
             </h3>
