@@ -36,7 +36,7 @@ var Footer = React.createClass({
             </div>
             <span className="org-info-container">
               <FormattedHTMLMessage
-                id='mozilla_blerb'
+                id='mozilla_blerb2'
               />
             </span>
           </div>

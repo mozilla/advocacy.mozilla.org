@@ -2,7 +2,6 @@ import React from 'react';
 import classnames from "classnames";
 import reactGA from 'react-ga';
 import submit from '../../lib/submit';
-import { FormattedMessage } from 'react-intl';
 
 var ErrorMessage = React.createClass({
   render: function() {
@@ -63,7 +62,7 @@ var SignupForm = React.createClass({
     if (!this.state.emailInput.trim()) {
       valid = false;
 
-      emailError = this.context.intl.formatMessage({id: 'required_error'});
+      emailError = this.context.intl.formatMessage({id: 'email_invalid'});
       reactGA.event({
         category: "Signup",
         action: "Form Error",
