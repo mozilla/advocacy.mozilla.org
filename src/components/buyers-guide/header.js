@@ -19,7 +19,7 @@ var Header = React.createClass({
   shareFbClick: function() {
     reactGA.event({
       category: "Social",
-      action: "Clicked Share Button",
+      action: "Header clicked Share Button",
       label: "Facebook"
     });
     document.querySelector("#share-progress-fb a").click();
@@ -27,7 +27,7 @@ var Header = React.createClass({
   shareTwClick: function() {
     reactGA.event({
       category: "Social",
-      action: "Clicked Share Button",
+      action: "Header clicked Share Button",
       label: "Twitter"
     });
     document.querySelector("#share-progress-tw a").click();
@@ -35,7 +35,7 @@ var Header = React.createClass({
   shareEmClick: function() {
     reactGA.event({
       category: "Social",
-      action: "Clicked Share Button",
+      action: "Header clicked Share Button",
       label: "Email"
     });
     document.querySelector("#share-progress-em a").click();

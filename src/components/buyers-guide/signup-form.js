@@ -28,6 +28,20 @@ var SignupForm = React.createClass({
       submitting: false
     };
   },
+  onEmailFocus: function() {
+    reactGA.event({
+      category: "Signup",
+      action: "Email input focus",
+      label: "Buyer's Guide"
+    });
+  },
+  onEmailBlur: function() {
+    reactGA.event({
+      category: "Signup",
+      action: "Email input blur",
+      label: "Buyer's Guide"
+    });
+  },
   onEmailChange: function(e) {
     this.setState({
       emailInput: e.target.value,
@@ -35,6 +49,12 @@ var SignupForm = React.createClass({
     });
   },
   onPrivacyChange: function(e) {
+    reactGA.event({
+      category: "Signup",
+      action: "Privacy checkbox checked",
+      label: "Buyer's Guide",
+      value: e.target.checked
+    });
     this.setState({
       privacyCheckboxChecked: e.target.checked,
       privacyCheckboxError: ""
@@ -94,7 +114,7 @@ var SignupForm = React.createClass({
         reactGA.event({
           category: "Signup",
           action: "Submitted the form",
-          label: "Safety Tips"
+          label: "Buyer's Guide"
         });
         this.props.onSuccess();
       }, () => {
@@ -118,7 +138,7 @@ var SignupForm = React.createClass({
 
     return (
       <div>
-        <input ref={(input) => { this.emailInput = input; }} value={this.state.emailInput} onChange={this.onEmailChange} className="email-input" placeholder={this.context.intl.formatMessage({id: 'email_placeholder'})} type="email"/>
+        <input ref={(input) => { this.emailInput = input; }} value={this.state.emailInput} onChange={this.onEmailChange} onFocus={this.onEmailFocus} onBlur={this.onEmailBlur} className="email-input" placeholder={this.context.intl.formatMessage({id: 'email_placeholder'})} type="email"/>
         <ErrorMessage>{this.state.emailInputError}</ErrorMessage>
         <div>
           <input className="privacy-checkbox" type="checkbox" id="privacy-checkbox" onChange={this.onPrivacyChange} value={this.state.privacyCheckboxChecked}/>

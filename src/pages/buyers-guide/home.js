@@ -147,7 +147,7 @@ var BuyersGuide = React.createClass({
   shareFbClick: function() {
     reactGA.event({
       category: "Social",
-      action: "Clicked Share Button",
+      action: "Home clicked Share Button",
       label: "Facebook"
     });
     document.querySelector("#share-progress-fb a").click();
@@ -155,7 +155,7 @@ var BuyersGuide = React.createClass({
   shareTwClick: function() {
     reactGA.event({
       category: "Social",
-      action: "Clicked Share Button",
+      action: "Home clicked Share Button",
       label: "Twitter"
     });
     document.querySelector("#share-progress-tw a").click();
@@ -163,10 +163,17 @@ var BuyersGuide = React.createClass({
   shareEmClick: function() {
     reactGA.event({
       category: "Social",
-      action: "Clicked Share Button",
+      action: "Home clicked Share Button",
       label: "Email"
     });
     document.querySelector("#share-progress-em a").click();
+  },
+  donateClicked: function() {
+    reactGA.event({
+      category: "Button",
+      action: "Home Clicked Donate Button",
+      label: "Fundraising"
+    });
   },
   render: function() {
     var categoriesContainerClassName = "categories-container";
@@ -296,7 +303,7 @@ var BuyersGuide = React.createClass({
             <p className="playfair">
               {this.context.intl.formatMessage({id: 'donate_cta'})}
             </p>
-            <a href="https://donate.mozilla.org" className="donate-button">
+            <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
               {this.context.intl.formatMessage({id: 'donate_now'})}
             </a>
           </section>

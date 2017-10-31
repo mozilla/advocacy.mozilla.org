@@ -7,6 +7,7 @@ import categoryData from '../../data/buyers-guide-categories.js';
 import Modal from '../../components/modal.js';
 import SignupForm from '../../components/buyers-guide/signup-form.js';
 import debounce from 'debounce';
+import reactGA from 'react-ga';
 
 import { Link } from 'react-router';
 
@@ -59,11 +60,21 @@ var BuyersGuide = React.createClass({
     }
   }, 100, true),
   closeModal: function() {
+    reactGA.event({
+      category: "Signup",
+      action: "Signup modal closed",
+      label: "Buyer's Guide"
+    });
     this.setState({
       showModal: false
     });
   },
   nextTime: function() {
+    reactGA.event({
+      category: "Signup",
+      action: "Maybe later clicked",
+      label: "Buyer's Guide"
+    });
     this.setState({
       maybeLater: true
     });
@@ -73,10 +84,39 @@ var BuyersGuide = React.createClass({
       window.removeEventListener("scroll", this.onScroll, true);
       return;
     }
+    reactGA.event({
+      category: "Signup",
+      action: "Signup modal shown",
+      label: "Buyer's Guide"
+    });
     window.sessionStorage.setItem('disable-modal', true);
     this.setState({
       showModal: true
     });
+  },
+  shareFbClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Modal clicked Share Button",
+      label: "Facebook"
+    });
+    document.querySelector("#share-progress-fb a").click();
+  },
+  shareTwClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Modal clicked Share Button",
+      label: "Twitter"
+    });
+    document.querySelector("#share-progress-tw a").click();
+  },
+  shareEmClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: "Modal clicked Share Button",
+      label: "Email"
+    });
+    document.querySelector("#share-progress-em a").click();
   },
   copyLink: function() {
     var textArea = document.createElement("textarea");
@@ -129,6 +169,13 @@ var BuyersGuide = React.createClass({
       this.setState({
         copyStatus: "successful"
       });
+
+      reactGA.event({
+        category: "Button",
+        action: "Copy link button clicked",
+        label: "Click"
+      });
+
       setTimeout(() => {
         this.setState({
           copyStatus: ""
@@ -172,13 +219,13 @@ var BuyersGuide = React.createClass({
                   {this.context.intl.formatMessage({id: 'double_check_sign_up'})}
                 </p>
                 <div className="social-buttons">
-                  <button className="social-button">
+                  <button onClick={this.shareFbClick} className="social-button">
                     <i className="fa fa-facebook fa-2x"></i>
                   </button>
-                  <button className="social-button">
+                  <button onClick={this.shareTwClick} className="social-button">
                     <i className="fa fa-twitter fa-2x"></i>
                   </button>
-                  <button className="social-button">
+                  <button onClick={this.shareEmClick} className="social-button">
                     <i className="fa fa-envelope fa-2x"></i>
                   </button>
                 </div>
