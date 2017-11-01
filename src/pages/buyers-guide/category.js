@@ -41,7 +41,7 @@ var BuyersGuide = React.createClass({
     const locale = this.context.intl.locale;
     return (
       <div className="buyers-guide buyers-guide-category">
-        <Header/>
+        <Header title={true}/>
         <section>
           <Breadcrumb
             category={category}

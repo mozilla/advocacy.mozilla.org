@@ -368,7 +368,7 @@ var BuyersGuide = React.createClass({
     return (
       <div className="buyers-guide buyers-guide-item">
         {modal}
-        <Header/>
+        <Header title={true}/>
         <section>
           <Breadcrumb
             category={category}

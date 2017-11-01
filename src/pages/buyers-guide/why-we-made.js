@@ -14,7 +14,7 @@ var BuyersGuide = React.createClass({
 
     return (
       <div className="buyers-guide buyers-guide-why">
-        <Header/>
+        <Header title={true}/>
         <div>
           <section>
             <div className="content">
