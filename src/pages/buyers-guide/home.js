@@ -207,16 +207,18 @@ var BuyersGuide = React.createClass({
               <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
             </div>
           </header>
-          <div className="content">
-            <p className="playfair fancy-letter">
-              <FormattedHTMLMessage id="thats_why"/>
-            </p>
-            <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
-              <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
-              <p className="itallic playfair">
-                {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
+          <div className="content-container">
+            <div className="content">
+              <p className="playfair fancy-letter">
+                <FormattedHTMLMessage id="thats_why"/>
               </p>
-              <div className="center-line"></div>
+              <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
+                <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
+                <p className="itallic playfair">
+                  {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
+                </p>
+                <div className="center-line"></div>
+              </div>
             </div>
           </div>
         </section>
