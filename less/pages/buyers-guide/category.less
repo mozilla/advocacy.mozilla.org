@@ -3,6 +3,14 @@
     background: #FFFFFF;
     overflow: hidden;
   }
+  h1.playfair {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    @media screen and (min-width: 750px) {
+      font-size: 52px;
+    }
+  }
   .categories-container {
     margin: 0 -10px;
     text-align: left;
@@ -10,6 +18,9 @@
       vertical-align: top;
       margin: 10px;
       width: 155px;
+      @media screen and (min-width: 750px) {
+        width: 349px;
+      }
       display: inline-block;
       a {
         text-decoration: none;
@@ -17,10 +28,15 @@
         text-align: left;
       }
       .category-image-container {
+        margin-bottom: 20px;
         display: flex;
         height: 155px;
         width: 155px;
-        box-shadow: 0px 0px 5px 3px #E1E1E1;
+        @media screen and (min-width: 750px) {
+          height: 349px;
+          width: 349px;
+        }
+        box-shadow: 0px 0px 1px 1px #E1E1E1;
       }
       img {
         max-height: 100%;
@@ -29,9 +45,19 @@
       }
       .category-item-label {
         opacity: 0.5;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        @media screen and (min-width: 750px) {
+          font-size: 24px;
+        }
       }
       .category-item-header {
-
+        font-weight: 700;
+        margin-bottom: 15px;
+        @media screen and (min-width: 750px) {
+          font-size: 24px;
+          margin-bottom: 50px;
+        }
       }
     }
   }

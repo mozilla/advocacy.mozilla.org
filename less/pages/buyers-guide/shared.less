@@ -331,13 +331,17 @@
     }
   }
   .breadcrumb {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.7px;
     height: 37px;
     box-shadow: 0 3px 5px #E1E1E1;
     display: flex;
     align-items: center;
     text-transform: uppercase;
     .breadcrumb-split {
-      margin: 0 5px;
+      margin: 0 10px;
     }
     a {
       color: inherit;
@@ -350,12 +354,19 @@
   .page-width {
     width: 100%;
     max-width: 545px;
+    @media screen and (min-width: 750px) {
+      max-width: 800px;
+    }
     margin: 0 auto;
   }
   .info-blob {
     text-align: left;
-    font-size: 12px;
-    margin: 30px auto;
+    font-size: 13px;
+    margin: 0 auto 15px;
+    @media screen and (min-width: 750px) {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
   }
   .page-width,
   .breadcrumb {
