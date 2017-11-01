@@ -31,6 +31,26 @@ var Product = React.createClass({
   }
 });
 
+var Green = React.createClass({
+  render: function() {
+    return (
+      <div className="green-result">
+        {this.props.children}
+      </div>
+    );
+  }
+});
+
+var Red = React.createClass({
+  render: function() {
+    return (
+      <div className="red-result">
+        {this.props.children}
+      </div>
+    );
+  }
+});
+
 var BuyersGuide = React.createClass({
   getInitialState: function() {
     return {
@@ -284,51 +304,123 @@ var BuyersGuide = React.createClass({
       }
     }
 
-    var camera = (null);
-    var mic = (null);
-    var tracksLocation = (null);
-
-    if (item.camera) {
-      camera = (<i className="fa fa-check" ariaHidden="true"></i>);
-    }
-    if (item.microphone) {
-      mic = (<i className="fa fa-check" ariaHidden="true"></i>);
-    }
-    if (item.location) {
-      tracksLocation = (<i className="fa fa-check" ariaHidden="true"></i>);
-    }
-
     var no = this.context.intl.formatMessage({id: 'review_no'});
     var yes = this.context.intl.formatMessage({id: 'review_yes'});
     var unknown = this.context.intl.formatMessage({id: 'review_unknown'});
-    var account = no;
-    var privacyControls = no;
-    var deleteData = no;
+    var account = (
+      <Green>
+        {no}
+      </Green>
+    );
+    var privacyControls = (
+      <Red>
+        {no}
+      </Red>
+    );
+    var deleteData = (
+      <Red>
+        {no}
+      </Red>
+    );
+
+    var camera = (
+      <Green>
+        {no}
+      </Green>
+    );
+    var mic = (
+      <Green>
+        {no}
+      </Green>
+    );
+    var tracksLocation = (
+      <Green>
+        {no}
+      </Green>
+    );
+
+    if (item.camera) {
+      camera = (
+        <Red>
+          {yes}
+        </Red>
+      );
+    }
+    if (item.microphone) {
+      mic = (
+        <Red>
+          {yes}
+        </Red>
+      );
+    }
+    if (item.location) {
+      tracksLocation = (
+        <Red>
+          {yes}
+        </Red>
+      );
+    }
 
     if (item["need-account"] === "unknown") {
-      account = unknown;
+      account = (
+        <Red>
+          {unknown}
+        </Red>
+      );
     } else if (item["need-account"]) {
-      account = yes;
+      account = (
+        <Red>
+          {yes}
+        </Red>
+      );
     }
     if (item["privacy-controls"] === "unknown") {
-      privacyControls = unknown;
+      privacyControls = (
+        <Red>
+          {unknown}
+        </Red>
+      );
     } else if (item["privacy-controls"]) {
-      privacyControls = yes;
+      privacyControls = (
+        <Green>
+          {yes}
+        </Green>
+      );
     }
     if (item["delete-data"] === "unknown") {
-      deleteData = unknown;
+      deleteData = (
+        <Red>
+          {unknown}
+        </Red>
+      );
     } else if (item["delete-data"]) {
-      deleteData = yes;
+      deleteData = (
+        <Green>
+          {yes}
+        </Green>
+      );
     }
 
     var childRules = "";
     var na = this.context.intl.formatMessage({id: 'review_n_a'});
     if (item['child-rules'] === "yes") {
-      childRules = yes;
+      childRules = (
+        <Green>
+          {yes}
+        </Green>
+      );
     } else if (item['child-rules'] === "no") {
-      childRules = no;
+      childRules = (
+        <Red>
+          {no}
+        </Red>
+      );
     } else if (item['child-rules'] === "N/A") {
-      childRules = na;
+      childRules = (
+        <Green>
+          {na}
+        </Green>
+      );
     } else if (item['child-rules']) {
       childRules = this.context.intl.formatMessage({id: item['child-rules']});
     }
@@ -338,15 +430,35 @@ var BuyersGuide = React.createClass({
     var advertising = this.context.intl.formatMessage({id: 'review_advertising'});
     var onlineTracking = this.context.intl.formatMessage({id: 'review_online_tracking'});
     if (item['share-data'] === "no") {
-      shareData = no;
+      shareData = (
+        <Green>
+          {no}
+        </Green>
+      );
     } else if (item['share-data'] === "marketing") {
-      shareData = marketing;
+      shareData = (
+        <Red>
+          {marketing}
+        </Red>
+      );
     } else if (item['share-data'] === "advertising") {
-      shareData = advertising;
+      shareData = (
+        <Red>
+          {advertising}
+        </Red>
+      );
     } else if (item['share-data'] === "online tracking") {
-      shareData = onlineTracking;
+      shareData = (
+        <Red>
+          {onlineTracking}
+        </Red>
+      );
     } else if (item['share-data'] === "unknown") {
-      shareData = unknown;
+      shareData = (
+        <Red>
+          {unknown}
+        </Red>
+      );
     }
 
     var privacyPolicy = (
