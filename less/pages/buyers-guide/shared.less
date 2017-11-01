@@ -16,6 +16,15 @@
       text-align: right;
       margin: 0 5px;
     }
+    .header-title {
+      position: absolute;
+      text-align: center;
+      right: 200px;
+      left: 200px;
+      &::before {
+        color: red;
+      }
+    }
   }
   .menu-container {
     position: fixed;
@@ -180,6 +189,11 @@
   }
 }
 .buyers-guide {
+  .asterix {
+    &:before {
+      content: '*';
+    }
+  }
   .modal {
     .modal-close {
       top: 60px;
@@ -395,6 +409,10 @@
     }
   }
 
+  .content-container {
+    width: 100%;
+    background: #FFFFFF;
+  }
   .content {
     padding: 0 20px;
     width: 100%;
@@ -413,7 +431,7 @@
     text-align: center;
     header {
       padding: 0 20px;
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;

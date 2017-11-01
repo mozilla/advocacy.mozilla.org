@@ -65,8 +65,8 @@ module.exports = React.createClass({
           <link rel="stylesheet" type="text/css" href="/build/main.css"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <title>{this.props.title}</title>
-          <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png"/>
-          <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-196x196.png"/>
+          <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/apple-touch-icon-180x180.png"/>
+          <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon-196x196.png"/>
           <link rel="shortcut icon" href="/assets/favicon.png"/>
           <script dangerouslySetInnerHTML={{__html: localeData}}></script>
           <OptimizelySubdomain/>

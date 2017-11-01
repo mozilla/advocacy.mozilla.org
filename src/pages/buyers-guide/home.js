@@ -179,6 +179,7 @@ var BuyersGuide = React.createClass({
     var categoriesContainerClassName = "categories-container";
     var headerClassName = "header-section";
     var footerClassName = "footer";
+    var headerTitle = false;
     const locale = this.context.intl.locale;
     if (this.state.galleryPosition === "bottom") {
       categoriesContainerClassName += " bottom";
@@ -186,17 +187,19 @@ var BuyersGuide = React.createClass({
     } else if (this.state.galleryPosition === "top") {
       categoriesContainerClassName += " top";
       headerClassName += " top";
+      headerTitle = true;
     } else if (this.state.galleryPosition === "middle") {
       headerClassName += " top";
       footerClassName += " bottom";
+      headerTitle = true;
     }
     return (
       <div className="buyers-guide buyers-guide-home">
-        <Header/>
+        <Header title={headerTitle}/>
         <section ref={(input) => {this.headerInput = input;}} className={headerClassName}>
           <header className="red header-image">
             <div className="center-header">
-              <h1 className="playfair">
+              <h1 className="asterix playfair">
                 {this.context.intl.formatMessage({id: 'privacy_not_included'})}
               </h1>
               <p className="playfair">
@@ -207,16 +210,18 @@ var BuyersGuide = React.createClass({
               <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
             </div>
           </header>
-          <div className="content">
-            <p className="playfair fancy-letter">
-              <FormattedHTMLMessage id="thats_why"/>
-            </p>
-            <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
-              <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
-              <p className="itallic playfair">
-                {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
+          <div className="content-container">
+            <div className="content">
+              <p className="playfair fancy-letter">
+                <FormattedHTMLMessage id="thats_why"/>
               </p>
-              <div className="center-line"></div>
+              <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
+                <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
+                <p className="itallic playfair">
+                  {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
+                </p>
+                <div className="center-line"></div>
+              </div>
             </div>
           </div>
         </section>

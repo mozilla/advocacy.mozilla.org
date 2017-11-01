@@ -46,6 +46,15 @@ var Header = React.createClass({
     if (this.state.menuOpen) {
       menuClassName += " show";
     }
+
+    var headerTitle = null;
+    if (this.props.title) {
+      headerTitle = (
+        <div className="asterix header-title">
+          {this.context.intl.formatMessage({id: 'privacy_not_included'})}
+        </div>
+      );
+    }
     return (
       <div className="buyers-guide-header-container">
         <div className="buyers-guide-header">
@@ -55,6 +64,7 @@ var Header = React.createClass({
           <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
             <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
           </Link>
+          {headerTitle}
           <div className="social-buttons">
             <button onClick={this.shareFbClick} className="social-button">
               <i className="fa fa-facebook fa-1x"></i>
