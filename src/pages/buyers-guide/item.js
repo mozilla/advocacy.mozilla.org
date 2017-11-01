@@ -374,12 +374,12 @@ var BuyersGuide = React.createClass({
             category={category}
             item={itemName}
           />
+          <div className="main-product-image-container">
+            <img src={item.img}/>
+          </div>
           <div className="page-width">
             <div className={copyStatusClassName}>
               {this.context.intl.formatMessage({id: 'link_copied'})}
-            </div>
-            <div className="main-product-image-container">
-              <img src={item.img}/>
             </div>
             <h2 className="company-title">
               {item.company}
