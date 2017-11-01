@@ -29,6 +29,7 @@ module.exports = React.createClass({
     var coralScript = null;
     if (this.props.buyersGuide) {
       googleFonts += "|Playfair+Display:400,400i,700,900";
+      googleFonts += "|Open+Sans:300,600";
       coralScript = (<script src="https://mozilla-foundation-talk.herokuapp.com/embed.js"></script>);
       shareProgressButtons = (
         <div>
