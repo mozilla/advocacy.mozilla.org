@@ -25,6 +25,21 @@ module.exports = React.createClass({
     }
 
     var googleFonts = "https://fonts.googleapis.com/css?family=Arvo:600,400,300,300italic|Fira+Sans+Condensed:200,300,400,700";
+
+    var coralScript = null;
+    if (this.props.buyersGuide) {
+      googleFonts += "|Playfair+Display:400,400i,700,900";
+      googleFonts += "|Open+Sans:300,600";
+      coralScript = (<script src="https://mozilla-foundation-talk.herokuapp.com/embed.js"></script>);
+      shareProgressButtons = (
+        <div>
+          <div id="share-progress-fb" className='share-progress-button sp_184067 sp_fb_small'></div>
+          <div id="share-progress-em" className='share-progress-button sp_184068 sp_em_small'></div>
+          <div id="share-progress-tw" className='share-progress-button sp_184069 sp_tw_small'></div>
+        </div>
+      );
+    }
+
     return (
       <html className={this.props.htmlClassName}>
         <head>
@@ -50,8 +65,8 @@ module.exports = React.createClass({
           <link rel="stylesheet" type="text/css" href="/build/main.css"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <title>{this.props.title}</title>
-          <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png"/>
-          <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon/favicon-196x196.png"/>
+          <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/apple-touch-icon-180x180.png"/>
+          <link rel="icon" type="image/png" sizes="196x196" href="/assets/favicon-196x196.png"/>
           <link rel="shortcut icon" href="/assets/favicon.png"/>
           <script dangerouslySetInnerHTML={{__html: localeData}}></script>
           <OptimizelySubdomain/>
@@ -59,6 +74,7 @@ module.exports = React.createClass({
           <Pontoon/>
         </head>
         <body>
+          {coralScript}
           <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.reactHTML}}/>
           <link rel="stylesheet" href={googleFonts}/>
           <script src="/build/main.js"></script>
