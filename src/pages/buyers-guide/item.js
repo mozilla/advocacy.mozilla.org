@@ -576,6 +576,12 @@ var BuyersGuide = React.createClass({
               {this.context.intl.formatMessage({id: 'review_partners_link'})}
             </a>
             <br/>
+            <p>
+              {this.context.intl.formatMessage({id: 'review_got_feedback_title'})}
+            </p>
+            <p>
+              {this.context.intl.formatMessage({id: 'review_got_feedback_tagline'})}
+            </p>
             <div id="coral_talk_7574501203394207"></div>
             <h2>
               {this.context.intl.formatMessage({id: "review_related_products"})}
