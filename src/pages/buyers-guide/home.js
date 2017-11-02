@@ -135,7 +135,7 @@ var BuyersGuide = React.createClass({
             category={this.context.intl.formatMessage({id: 'cat_title_toys_home'})}
             header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
             href={"/" + locale + "/privacynotincluded/category/toys"}
-            image={"01-toys.jpg"}
+            image={"01-toys-background.jpg"}
           />
           <Category
             scrollY={scrollY}
@@ -155,7 +155,7 @@ var BuyersGuide = React.createClass({
             category={this.context.intl.formatMessage({id: 'cat_title_homehubs_home'})}
             header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
             href={"/" + locale + "/privacynotincluded/category/homehubs"}
-            image={"03-home-hubs.jpg"}
+            image={"03-you-always-wanted-a-butler.jpg"}
           />
           <Category
             scrollY={scrollY}
@@ -165,7 +165,7 @@ var BuyersGuide = React.createClass({
             category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories_home'})}
             header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
             href={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}
-            image={"04-smart-home-accessories.jpg"}
+            image={"04-home-is-where-the-tech-is.jpg"}
           />
           <Category
             scrollY={scrollY}
@@ -175,7 +175,7 @@ var BuyersGuide = React.createClass({
             category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos_home'})}
             header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
             href={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}
-            image={"05-gadgets-and-gizmos.jpg"}
+            image={"05-things-you-didnt-know-you-need.jpg"}
           />
           <Category
             scrollY={scrollY}
@@ -185,7 +185,7 @@ var BuyersGuide = React.createClass({
             category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise_home'})}
             header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
             href={"/" + locale + "/privacynotincluded/category/healthexcercise"}
-            image={"06-health-and-exercise.jpg"}
+            image={"06-taking-care-of-me.jpg"}
           />
         </div>
 
