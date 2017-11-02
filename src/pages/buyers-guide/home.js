@@ -96,7 +96,7 @@ var BuyersGuide = React.createClass({
     const scrollY = this.state.scrollY;
     const offsetTop = this.state.offsetTop;
     const windowHeight = this.state.windowHeight;
-    console.log("-------");
+
     return (
       <div className="buyers-guide buyers-guide-home">
         <Header title={false}/>
