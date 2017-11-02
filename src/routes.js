@@ -110,14 +110,16 @@ function buildRoutes() {
 
   ["en-US", "es"].forEach(function(locale) {
     routes.push(
-      <Route key={locale + "-buyers-guide"} path={locale}>
-        <Route path="buyers-guide">
-          <IndexRoute component={require(`./pages/buyers-guide/home.js`)}/>
+      <Route key={locale + "-privacynotincluded"} path={locale}>
+        <Route path="privacynotincluded">
+          <IndexRoute galleryPosition="bottom" component={require(`./pages/buyers-guide/home.js`)}/>
+          <Route path="why-we-made" component={require(`./pages/buyers-guide/why-we-made.js`)}/>
+          <Route path="categories" galleryPosition="middle" component={require(`./pages/buyers-guide/home.js`)}/>
           <Route path="category">
             <Route path=":category" component={require(`./pages/buyers-guide/category.js`)}/>
             <Route path=":category/:item" component={require(`./pages/buyers-guide/item.js`)}/>
           </Route>
-          <Redirect from="*" to={"/" + locale + "/buyers-guide/"} />
+          <Redirect from="*" to={"/" + locale + "/privacynotincluded/"} />
         </Route>
       </Route>
     );
