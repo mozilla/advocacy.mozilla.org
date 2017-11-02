@@ -110,21 +110,17 @@ var BuyersGuide = React.createClass({
                 {this.context.intl.formatMessage({id: 'hero_unit_paragraph'})}
               </p>
             </div>
-            <div className="more-arrow">
-              <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
-            </div>
           </header>
           <div className="content-container">
             <div className="content">
               <p className="playfair fancy-letter">
                 <FormattedHTMLMessage id="thats_why"/>
               </p>
-              <div className="start-show playfair" onTouchMove={this.slideUp} onClick={this.slideUp}>
+              <div className="start-show playfair">
                 <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
-                <p className="itallic playfair">
-                  {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
-                </p>
-                <div className="center-line"></div>
+                <div className="more-arrow">
+                  <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -195,7 +191,7 @@ var BuyersGuide = React.createClass({
 
         <div className={footerClassName}>
           <section className="red footer-image">
-            <div onClick={this.slideDown} onTouchMove={this.slideDown}>
+            <div>
               <i className="fa fa-angle-up fa-5x" aria-hidden="true"></i><br/>
               <span className="itallic">
                 {this.context.intl.formatMessage({id: 'experience_again'})}
