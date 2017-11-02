@@ -1,148 +1,61 @@
 import React from 'react';
-import debounce from 'debounce';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
 import { FormattedHTMLMessage } from 'react-intl';
 import { Link } from 'react-router';
 import reactGA from 'react-ga';
 
-var Swiper;
-if (typeof window !== "undefined") {
-  Swiper = require("swiper");
-}
-
 var Category = React.createClass({
   render: function() {
+    var linkClassName = "category-top";
+    const scrollY = this.props.scrollY;
+    const offsetTop = this.props.offsetTop;
+    const windowHeight = this.props.windowHeight;
+    const windowHalf = windowHeight/2;
+    const index = this.props.index;
+    if ((index * windowHeight) + offsetTop <= scrollY + windowHalf && (index * windowHeight) + offsetTop >= scrollY - windowHalf) {
+      linkClassName += " show";
+    }
     return (
-      <div className="swiper-slide">
-        <Link to={this.props.href}>
-          <h2 className="playfair">{this.props.header}</h2>
-          <p className="playfair">{this.props.category}</p>
-        </Link>
+      <div className="home-category-container">
+        <div className={linkClassName}>
+          <Link to={this.props.href}>
+            <h2 className="playfair">{this.props.header}</h2>
+            <p className="playfair">{this.props.category}</p>
+          </Link>
+        </div>
+        <div className="category-bottom">
+          <div className="image-container" style={{backgroundImage: "url(/assets/buyers-guide/" + this.props.image + ")"}}></div>
+        </div>
       </div>
     );
   }
 });
 
 var BuyersGuide = React.createClass({
-  getInitialState: function() {
-    return {
-      galleryPosition: this.props.route.galleryPosition || "bottom"
-    };
-  },
   contextTypes: {
     intl: React.PropTypes.object
   },
-  componentWillReceiveProps: function(nextProps) {
-    if (nextProps.route.galleryPosition && nextProps.route.galleryPosition !== this.state.galleryPosition) {
-      if (nextProps.route.galleryPosition === "middle") {
-        this.slideUp();
-      } else if (nextProps.route.galleryPosition === "bottom") {
-        this.hideDown();
-      }
-    }
+  getInitialState: function() {
+    return {
+      scrollY: 0,
+      offsetTop: 0,
+      windowHeight: 0
+    };
   },
-  onWheel: debounce(function(e) {
-    if (this.state.galleryPosition !== "middle") {
-      e.stopPropagation();
-      // Wheel down
-      if (e.deltaY > 0 && this.state.galleryPosition === "bottom") {
-        if (this.headerInput.scrollTop === (this.headerInput.scrollHeight - this.headerInput.offsetHeight)) {
-          this.slideUp();
-        }
-      }
-      // Wheel up
-      if (e.deltaY < 0 && this.state.galleryPosition === "top") {
-        if (this.footerInput.scrollTop === 0) {
-          this.slideDown();
-        }
-      }
-    }
-  }, 100, true),
-  onKeyDown: function(e) {
-    if (this.state.galleryPosition !== "middle") {
-      e.stopPropagation();
-      // Down key
-      if (e.keyCode === 40 && this.state.galleryPosition === "bottom") {
-        if (this.headerInput.scrollTop === (this.headerInput.scrollHeight - this.headerInput.offsetHeight)) {
-          this.slideUp();
-        }
-      }
-      // Up key
-      if (e.keyCode === 38 && this.state.galleryPosition === "top") {
-        if (this.footerInput.scrollTop === 0) {
-          this.slideDown();
-        }
-      }
-    }
-  },
-  onActiveIndexChange: function(swiper) {
-    if (swiper.activeIndex === 0) {
-      this.hideDown();
-    }
-    if (swiper.activeIndex === 7) {
-      this.hideUp();
-    }
-  },
-  onTopActiveIndexChange: function() {
-    this.onActiveIndexChange(this.swiper);
-  },
-  onBottomActiveIndexChange: function() {
-    this.onActiveIndexChange(this.swiperBottom);
+  onScroll: function() {
+    this.setState({
+      scrollY: window.scrollY,
+      offsetTop: this.categoriesContainer.offsetTop,
+      windowHeight: window.innerHeight
+    });
   },
   componentDidMount: function() {
-    this.swiper = new Swiper('.swiper-container-top', {
-      direction: 'vertical',
-      mousewheel: {enabled: true},
-      keyboard: {enabled: true},
-      speed: 200
-    });
-    this.swiperBottom = new Swiper('.swiper-container-bottom', {
-      direction: 'vertical',
-      mousewheel: {enabled: true},
-      effect: "fade",
-      speed: 200
-    });
-    this.swiper.slideTo(1);
-    this.swiperBottom.slideTo(1);
-
-    this.swiper.controller.control = this.swiperBottom;
-    this.swiperBottom.controller.control = this.swiper;
-
-    this.swiper.on("activeIndexChange", this.onTopActiveIndexChange);
-    this.swiperBottom.on("activeIndexChange", this.onBottomActiveIndexChange);
-    window.addEventListener("wheel", this.onWheel, true);
-    window.addEventListener("keydown", this.onKeyDown, true);
+    this.onScroll();
+    window.addEventListener("scroll", this.onScroll);
   },
   componentWillUnmount: function() {
-    this.swiper.off("activeIndexChange", this.onTopActiveIndexChange);
-    this.swiperBottom.off("activeIndexChange", this.onBottomActiveIndexChange);
-    window.removeEventListener("wheel", this.onWheel, true);
-    window.removeEventListener("keyDown", this.onKeyDown, true);
-  },
-  slideUp: function() {
-    this.setState({
-      galleryPosition: "middle"
-    }, () => {
-      this.swiper.slideTo(1);
-    });
-  },
-  slideDown: function() {
-    this.setState({
-      galleryPosition: "middle"
-    }, () => {
-      this.swiper.slideTo(1);
-    });
-  },
-  hideUp: function() {
-    this.setState({
-      galleryPosition: "top"
-    });
-  },
-  hideDown: function() {
-    this.setState({
-      galleryPosition: "bottom"
-    });
+    window.removeEventListener("scroll", this.onScroll);
   },
   shareFbClick: function() {
     reactGA.event({
@@ -179,24 +92,15 @@ var BuyersGuide = React.createClass({
     var categoriesContainerClassName = "categories-container";
     var headerClassName = "header-section";
     var footerClassName = "footer";
-    var headerTitle = false;
     const locale = this.context.intl.locale;
-    if (this.state.galleryPosition === "bottom") {
-      categoriesContainerClassName += " bottom";
-      footerClassName += " bottom";
-    } else if (this.state.galleryPosition === "top") {
-      categoriesContainerClassName += " top";
-      headerClassName += " top";
-      headerTitle = true;
-    } else if (this.state.galleryPosition === "middle") {
-      headerClassName += " top";
-      footerClassName += " bottom";
-      headerTitle = true;
-    }
+    const scrollY = this.state.scrollY;
+    const offsetTop = this.state.offsetTop;
+    const windowHeight = this.state.windowHeight;
+    console.log("-------");
     return (
       <div className="buyers-guide buyers-guide-home">
-        <Header title={headerTitle}/>
-        <section ref={(input) => {this.headerInput = input;}} className={headerClassName}>
+        <Header title={false}/>
+        <section className={headerClassName}>
           <header className="red header-image">
             <div className="center-header">
               <h1 className="asterix playfair">
@@ -226,58 +130,70 @@ var BuyersGuide = React.createClass({
           </div>
         </section>
 
-        <div className={categoriesContainerClassName}>
-          <div className="swiper-container-top">
-            <div className="swiper-wrapper">
-              <div className="swiper-slide swiper-end">.</div>
-              <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_toys_home'})}
-                header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
-                href={"/" + locale + "/privacynotincluded/category/toys"}
-              />
-              <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles_home'})}
-                header={this.context.intl.formatMessage({id: 'cat_desc_gameconsoles'})}
-                href={"/" + locale + "/privacynotincluded/category/gameconsoles"}
-              />
-              <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_homehubs_home'})}
-                header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
-                href={"/" + locale + "/privacynotincluded/category/homehubs"}
-              />
-              <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories_home'})}
-                header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
-                href={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}
-              />
-              <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos_home'})}
-                header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
-                href={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}
-              />
-              <Category
-                category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise_home'})}
-                header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
-                href={"/" + locale + "/privacynotincluded/category/healthexcercise"}
-              />
-              <div className="swiper-slide swiper-end">.</div>
-            </div>
-          </div>
-          <div className="swiper-container-bottom">
-            <div className="swiper-wrapper">
-              <div className="swiper-slide swiper-end">.</div>
-              <div className="swiper-slide swiper-image-1" style={{backgroundImage: "url(/assets/buyers-guide/01-toys.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-2" style={{backgroundImage: "url(/assets/buyers-guide/02-game-consoles.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-3" style={{backgroundImage: "url(/assets/buyers-guide/03-home-hubs.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-4" style={{backgroundImage: "url(/assets/buyers-guide/04-smart-home-accessories.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-5" style={{backgroundImage: "url(/assets/buyers-guide/05-gadgets-and-gizmos.jpg)"}}></div>
-              <div className="swiper-slide swiper-image-6" style={{backgroundImage: "url(/assets/buyers-guide/06-health-and-exercise.jpg)"}}></div>
-              <div className="swiper-slide swiper-end">.</div>
-            </div>
-          </div>
+        <div ref={(input) => { this.categoriesContainer = input; }} className={categoriesContainerClassName}>
+          <Category
+            scrollY={scrollY}
+            offsetTop={offsetTop}
+            windowHeight={windowHeight}
+            index={0}
+            category={this.context.intl.formatMessage({id: 'cat_title_toys_home'})}
+            header={this.context.intl.formatMessage({id: 'cat_desc_toys'})}
+            href={"/" + locale + "/privacynotincluded/category/toys"}
+            image={"01-toys.jpg"}
+          />
+          <Category
+            scrollY={scrollY}
+            offsetTop={offsetTop}
+            windowHeight={windowHeight}
+            index={1}
+            category={this.context.intl.formatMessage({id: 'cat_title_gameconsoles_home'})}
+            header={this.context.intl.formatMessage({id: 'cat_desc_gameconsoles'})}
+            href={"/" + locale + "/privacynotincluded/category/gameconsoles"}
+            image={"02-game-consoles.jpg"}
+          />
+          <Category
+            scrollY={scrollY}
+            offsetTop={offsetTop}
+            windowHeight={windowHeight}
+            index={2}
+            category={this.context.intl.formatMessage({id: 'cat_title_homehubs_home'})}
+            header={this.context.intl.formatMessage({id: 'cat_desc_homehubs'})}
+            href={"/" + locale + "/privacynotincluded/category/homehubs"}
+            image={"03-home-hubs.jpg"}
+          />
+          <Category
+            scrollY={scrollY}
+            offsetTop={offsetTop}
+            windowHeight={windowHeight}
+            index={3}
+            category={this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories_home'})}
+            header={this.context.intl.formatMessage({id: 'cat_desc_smarthomeaccessories'})}
+            href={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}
+            image={"04-smart-home-accessories.jpg"}
+          />
+          <Category
+            scrollY={scrollY}
+            offsetTop={offsetTop}
+            windowHeight={windowHeight}
+            index={4}
+            category={this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos_home'})}
+            header={this.context.intl.formatMessage({id: 'cat_desc_gadgetsgizmos'})}
+            href={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}
+            image={"05-gadgets-and-gizmos.jpg"}
+          />
+          <Category
+            scrollY={scrollY}
+            offsetTop={offsetTop}
+            windowHeight={windowHeight}
+            index={5}
+            category={this.context.intl.formatMessage({id: 'cat_title_healthexcercise_home'})}
+            header={this.context.intl.formatMessage({id: 'cat_desc_healthexcercise'})}
+            href={"/" + locale + "/privacynotincluded/category/healthexcercise"}
+            image={"06-health-and-exercise.jpg"}
+          />
         </div>
 
-        <div ref={(input) => {this.footerInput = input;}} className={footerClassName}>
+        <div className={footerClassName}>
           <section className="red footer-image">
             <div onClick={this.slideDown} onTouchMove={this.slideDown}>
               <i className="fa fa-angle-up fa-5x" aria-hidden="true"></i><br/>
