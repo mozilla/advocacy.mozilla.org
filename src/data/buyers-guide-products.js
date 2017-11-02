@@ -522,7 +522,7 @@ module.exports = {
     "privacy-policy": "https://www.ecobee.com/legal/use/"
   },
   "ozobotevo": {
-    "img": "/assets/buyers-guide/products/",
+    "img": "/assets/buyers-guide/products/ozobot.jpg",
     "product": "product_30_title",
     "blerb": "product_30_blurb",
     "worst-case": "product_30_worst_case",
@@ -756,7 +756,7 @@ module.exports = {
     "privacy-policy": "https://www.playstation.com/en-us/legal/terms-of-use/op-privacy-policy/"
   },
   "nintendoswitch": {
-    "img": "/assets/buyers-guide/products/",
+    "img": "/assets/buyers-guide/products/nintendo-switch.jpg",
     "product": "product_43_title",
     "blerb": "product_43_blurb",
     "worst-case": "product_43_worst_case",
@@ -774,7 +774,7 @@ module.exports = {
     "privacy-policy": "https://accounts.nintendo.com/term_chooser/privacy_policy"
   },
   "quell": {
-    "img": "/assets/buyers-guide/products/",
+    "img": "/assets/buyers-guide/products/quell.jpg",
     "product": "product_44_title",
     "blerb": "product_44_blurb",
     "worst-case": "product_44_worst_case",
@@ -864,7 +864,7 @@ module.exports = {
     "privacy-policy": "https://spire.io/pages/privacy-policy"
   },
   "oralbgeniuspro8000": {
-    "img": "/assets/buyers-guide/products/",
+    "img": "/assets/buyers-guide/products/Oral-B GENIUS Product Suite Image_Press Release_1.jpg",
     "product": "product_49_title",
     "blerb": "product_49_blurb",
     "worst-case": "product_49_worst_case",
