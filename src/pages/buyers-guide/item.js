@@ -531,23 +531,25 @@ var BuyersGuide = React.createClass({
                 {tracksLocation}
               </div>
             </div>
+            <br/>
             <h3>
               {this.context.intl.formatMessage({id: "review_know_about_me"})}
             </h3>
-            <div className="yes-no-table">
-              <div className="yes-no-table-row">
+            <div className="can-it-spy-table">
+              <div className="spy-table-row">
                 {this.context.intl.formatMessage({id: "review_account_required"})}
                 {account}
               </div>
-              <div className="yes-no-table-row">
+              <div className="spy-table-row">
                 {this.context.intl.formatMessage({id: "review_privacy_controls"})}
                 {privacyControls}
               </div>
-              <div className="yes-no-table-row">
+              <div className="spy-table-row">
                 {this.context.intl.formatMessage({id: "review_delete_data"})}
                 {deleteData}
               </div>
             </div>
+            <br/>
             <div className="single-row">
               <h4>
                 {this.context.intl.formatMessage({id: "review_share_data"})}
@@ -562,23 +564,23 @@ var BuyersGuide = React.createClass({
               {childRules}
             </div>
             <h4 className="privacy-message">
-              {this.context.intl.formatMessage({id: "review_privacy_policy"})}
-            </h4>
-            {privacyPolicy}
-            <h4 className="privacy-message">
               {this.context.intl.formatMessage({id: "review_what_could_happen"})}
             </h4>
             <div>
               {this.context.intl.formatMessage({id: item['worst-case']})}
             </div>
+            <h4 className="privacy-message">
+              {this.context.intl.formatMessage({id: "review_privacy_policy"})}
+            </h4>
+            {privacyPolicy}
+            <br/>
             <br/>
             <a className="read-more-url" href="#">
               {this.context.intl.formatMessage({id: 'review_partners_link'})}
             </a>
-            <br/>
-            <p>
+            <h3>
               {this.context.intl.formatMessage({id: 'review_got_feedback_title'})}
-            </p>
+            </h3>
             <p>
               {this.context.intl.formatMessage({id: 'review_got_feedback_tagline'})}
             </p>
