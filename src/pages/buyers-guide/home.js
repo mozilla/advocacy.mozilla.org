@@ -16,8 +16,8 @@ var Category = React.createClass({
     return (
       <div className="swiper-slide">
         <Link to={this.props.href}>
-          <h2 className="playfair">{this.props.category}</h2>
-          <p className="playfair">{this.props.header}</p>
+          <h2 className="playfair">{this.props.header}</h2>
+          <p className="playfair">{this.props.category}</p>
         </Link>
       </div>
     );
