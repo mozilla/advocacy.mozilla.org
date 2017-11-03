@@ -472,7 +472,7 @@ module.exports = {
     "product": "product_27_title",
     "blerb": "product_27_blurb",
     "worst-case": "product_27_worst_case",
-    "url": "https://store.google.com/us/product/google_home",
+    "url": "https://www.automatic.com/pro/?gclid=EAIaIQobChMIqJS66uX41gIVwrbACh2pIwnjEAAYASAAEgJQHvD_BwE",
     "price": "$129.95",
     "company": "Automatic",
     "camera": false,
