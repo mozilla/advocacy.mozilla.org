@@ -15,12 +15,17 @@
       width: 100%;
       text-align: right;
       margin: 0 5px;
+      white-space: nowrap;
     }
     .header-title {
-      position: absolute;
+      width: 100%;
+      @media screen and (min-width: 750px) {
+        position: absolute;
+        right: 200px;
+        left: 200px;
+        width: auto;
+      }
       text-align: center;
-      right: 200px;
-      left: 200px;
       &::before {
         color: red;
       }
@@ -329,7 +334,7 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      margin: 0 10px;
+      margin: 0 5px;
       height: 30px;
       width: 30px;
     }
