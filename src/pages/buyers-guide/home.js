@@ -6,20 +6,26 @@ import { Link } from 'react-router';
 import reactGA from 'react-ga';
 
 var Category = React.createClass({
+  scrollToTop: function() {
+    window.scrollTo(0, 0);
+  },
   render: function() {
-    var linkClassName = "category-top";
+    var linkClassName = "";
     const scrollY = this.props.scrollY;
     const offsetTop = this.props.offsetTop;
     const windowHeight = this.props.windowHeight;
     const windowHalf = windowHeight/2;
     const index = this.props.index;
+    if (windowHeight !== 0) {
+      linkClassName = "category-top";
+    }
     if ((index * windowHeight) + offsetTop <= scrollY + windowHalf && (index * windowHeight) + offsetTop >= scrollY - windowHalf) {
       linkClassName += " show";
     }
     return (
       <div className="home-category-container">
         <div className={linkClassName}>
-          <Link to={this.props.href}>
+          <Link onClick={this.scrollToTop} to={this.props.href}>
             <h2 className="playfair">{this.props.header}</h2>
             <p className="playfair">{this.props.category}</p>
           </Link>

@@ -6,7 +6,7 @@ var Footer = React.createClass({
     intl: React.PropTypes.object
   },
   render: function() {
-    var shareLink = this.props.shareLink || "";
+    var shareLink = this.props.shareLink || "https://share.mozilla.org/352/184264";
     return (
       <footer className="generic-footer">
         <div className="footer-contents">
