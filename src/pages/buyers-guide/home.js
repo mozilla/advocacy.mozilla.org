@@ -125,7 +125,7 @@ var BuyersGuide = React.createClass({
               <div className="start-show playfair">
                 <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
                 <div className="more-arrow">
-                  <i className="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+                  <img className="more-arrow" src="/assets/arrow-icon.png"/>
                 </div>
               </div>
             </div>
@@ -196,19 +196,21 @@ var BuyersGuide = React.createClass({
         </div>
 
         <div className={footerClassName}>
-          <section className="red footer-image">
-            <div>
-              <i className="fa fa-angle-up fa-5x" aria-hidden="true"></i><br/>
-              <span className="itallic">
-                {this.context.intl.formatMessage({id: 'experience_again'})}
-              </span>
-            </div>
-            <p className="page-width itallic info-blob playfair">
-              <FormattedHTMLMessage id="info_blob"/>
+          <section className="donate-container">
+            <p className="playfair">
+              {this.context.intl.formatMessage({id: 'donate_cta'})}
             </p>
+            <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
+              {this.context.intl.formatMessage({id: 'donate_now'})}
+            </a>
+          </section>
+          <section className="red footer-image">
             <h2 className="playfair">
               {this.context.intl.formatMessage({id: 'best_to_you_and_yours'})}
             </h2>
+            <p className="page-width itallic info-blob playfair">
+              <FormattedHTMLMessage id="info_blob"/>
+            </p>
             <p>{this.context.intl.formatMessage({id: 'share_this_page'})}</p>
             <div className="social-buttons">
               <button onClick={this.shareFbClick} className="social-button">
@@ -221,14 +223,6 @@ var BuyersGuide = React.createClass({
                 <i className="fa fa-envelope fa-1x"></i>
               </button>
             </div>
-          </section>
-          <section className="donate-container">
-            <p className="playfair">
-              {this.context.intl.formatMessage({id: 'donate_cta'})}
-            </p>
-            <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
-              {this.context.intl.formatMessage({id: 'donate_now'})}
-            </a>
           </section>
           <Footer/>
         </div>

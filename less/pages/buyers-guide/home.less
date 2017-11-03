@@ -6,6 +6,9 @@
       font-size: 70px;
     }
   }
+  h2.playfair {
+    max-width: 450px;
+  }
   section {
     background: #FFFFFF;
     overflow: hidden;
@@ -24,9 +27,6 @@
   }
   .header-image {
     background-image: url(/assets/buyers-guide/landing-page.jpg);
-  }
-  .footer-image {
-    background-image: url(/assets/buyers-guide/footer.jpg);
   }
   .start-show {
     h2 {
@@ -118,12 +118,14 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .more-arrow {
-        margin-top: auto;
-      }
     }
     div.content-container {
       .content {
+        overflow: hidden;
+        .more-arrow {
+          margin: auto;
+          height: 40px;
+        }
         max-width: 700px;
         p.playfair.fancy-letter {
           margin-top: 30px;
@@ -142,32 +144,60 @@
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
+    background-color: #000000;
     section.red {
       padding: 0 30px;
-      padding-top: 45px;
+      padding-top: 40px;
+      background-color: #000000;
+    }
+    h2, p {
+      margin: 0 auto;
+      margin-bottom: 30px;
+      max-width: 700px;
     }
     h2 {
-      margin: 60px 0;
+      font-size: 40px;
+    }
+    p, a {
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 1.5px;
+    }
+    p.playfair, p.playfair a {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      line-height: 23px;
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+    a {
+      color: #ffffff;
     }
     .social-buttons {
-      margin-bottom: 20px;
+      margin-bottom: 50px;
       .social-button {
-        color: #BB3535;
+        color: #000000;
+        background-color: #ffffff;
+        height: 40px;
+        width: 40px;
       }
+    }
+    div.footer-links a.footer-link{
+      letter-spacing: 0;
     }
   }
   .donate-container {
-    padding: 25px 30px;
-    color: #000000;
+    padding: 40px 30px;
+    background-color: #ffffff;
     p {
-      margin: 16px 0;
+      margin: 0 auto 15px;
+      color: #000000;
     }
     .donate-button {
-      background: #000000;
+      background: #f42c2c;
       color: #FFFFFF;
       height: 52px;
       padding: 0 36px;
-      margin: 16px 0;
+      margin: 15px 0 0;
       display: inline-flex;
       align-items: center;
       text-decoration: none;
