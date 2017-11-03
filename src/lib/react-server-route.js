@@ -108,12 +108,6 @@ module.exports = function(req, res, next) {
     title = "Ford-Mozilla Open Web Fellows";
   }
 
-  var buyersGuide = false;
-  if (location.indexOf('/privacynotincluded') !== -1) {
-    htmlClassName = "buyers-guide-html";
-    buyersGuide = true;
-  }
-
   // This is essentially a callback lookup. If the requested URL is a known
   // URL based on the routing map as defined in routes.js, then this will
   // lead to render properties that can be used to generate page components.
@@ -132,6 +126,7 @@ module.exports = function(req, res, next) {
     // This is the most interesting part: we have content that React can render.
     else if (renderProps) {
       locale = locationParser(req.headers["accept-language"], location).locale;
+      var messages = getMessages(Object.assign, locale, location);
       if (location === "/") {
         res.redirect(302, location + locale + search);
         return;
@@ -151,6 +146,21 @@ module.exports = function(req, res, next) {
       // get wiped if the HTML contains a <script> element that tries to load
       // the bundle for hooking into the DOM.
       let reactHTML = ReactDOM.renderToString(<RouterContext createElement={createElement} {...renderProps}/>);
+
+      var buyersGuide = false;
+      if (location.indexOf('/privacynotincluded') !== -1) {
+        htmlClassName = "buyers-guide-html";
+        buyersGuide = true;
+
+        metaTitle = messages["privacy_not_included"];
+        metaSiteName = messages["privacy_not_included"];
+        metaUrl = "https://advocacy.mozilla.org/privacynotincluded/";
+        metaDesc = messages["bg_sharing_facebook_body_1"];
+        metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_facebook.jpg";
+        twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_twitter.jpg";
+        desc = messages["bg_sharing_facebook_body_1"];
+        title = messages["privacy_not_included"];
+      }
 
       let html = "";
       if (location.indexOf('/maker-party/') !== -1) {
