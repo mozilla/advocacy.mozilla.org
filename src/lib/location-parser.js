@@ -20,7 +20,7 @@ module.exports = function(acceptLang, location) {
   var locale = locationSplit[1];
   var redirect = "";
 
-  if (location.indexOf('/buyers-guide') !== -1) {
+  if (location.indexOf('/privacynotincluded') !== -1) {
     locales = buyersGuideLocales;
   }
 
