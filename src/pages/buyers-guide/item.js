@@ -268,13 +268,13 @@ var BuyersGuide = React.createClass({
                   {this.context.intl.formatMessage({id: 'next_time_paragraph'})}
                 </p>
                 <div className="social-buttons">
-                  <button className="social-button">
+                  <button onClick={this.shareFbClick} className="social-button">
                     <i className="fa fa-facebook fa-2x"></i>
                   </button>
-                  <button className="social-button">
+                  <button onClick={this.shareTwClick} className="social-button">
                     <i className="fa fa-twitter fa-2x"></i>
                   </button>
-                  <button className="social-button">
+                  <button onClick={this.shareEmClick} className="social-button">
                     <i className="fa fa-envelope fa-2x"></i>
                   </button>
                 </div>
