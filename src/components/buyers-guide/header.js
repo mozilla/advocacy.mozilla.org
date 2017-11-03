@@ -62,7 +62,8 @@ var Header = React.createClass({
             <i className="fa fa-bars fa-2x"></i>
           </button>
           <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
-            <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
+          </Link>
+          <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}>
           </Link>
           {headerTitle}
           <div className="social-buttons">
