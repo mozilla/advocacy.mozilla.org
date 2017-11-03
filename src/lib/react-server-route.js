@@ -158,6 +158,10 @@ module.exports = function(req, res, next) {
         metaDesc = messages["bg_sharing_facebook_body_1"];
         metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_facebook.jpg";
         twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_twitter.jpg";
+        if (locale === "es") {
+          metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_facebook-ES.jpg";
+          twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_twitter-ES.jpg";
+        }
         desc = messages["bg_sharing_facebook_body_1"];
         title = messages["privacy_not_included"];
       }
