@@ -111,12 +111,30 @@
         margin-bottom: auto;
       }
       h1, p, div {
-        max-width: 520px;
+        max-width: 325px;
+        @media screen and (min-width: 750px) {
+          max-width: 800px;
+        }
         margin-left: auto;
         margin-right: auto;
       }
       .more-arrow {
         margin-top: auto;
+      }
+    }
+    div.content-container {
+      .content {
+        max-width: 700px;
+        p.playfair.fancy-letter {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          font-size: 22px;
+          line-height: 32px;
+          @media screen and (max-width: 750px) {
+            font-size: 16px;
+            line-height: 26px;
+          }
+        }
       }
     }
   }
