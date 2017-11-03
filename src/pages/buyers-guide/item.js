@@ -575,7 +575,7 @@ var BuyersGuide = React.createClass({
             {privacyPolicy}
             <br/>
             <br/>
-            <a className="read-more-url" href="#">
+            <a className="read-more-url" href="https://www.univision.com/seguridad-online">
               {this.context.intl.formatMessage({id: 'review_partners_link'})}
             </a>
             <h3>
