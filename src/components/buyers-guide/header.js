@@ -102,7 +102,7 @@ var Header = React.createClass({
               </button>
             </div>
           </div>
-          <Menu open={this.state.menuOpen} onClick={this.toggleMenu}/>
+          <Menu open={this.state.menuOpen} onClick={this.onClick}/>
         </div>
         {breadcrumb}
       </div>
