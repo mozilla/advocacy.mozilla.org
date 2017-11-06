@@ -342,7 +342,7 @@ module.exports = {
     "privacy-policy": "https://nest.com/legal/privacy-statement/"
   },
   "nestcamoutdoorsecuritycamera": {
-    "img": "/assets/buyers-guide/products/nest-cam-outdoor.png",
+    "img": "/assets/buyers-guide/products/nest-cam-outdoor.jpg",
     "product": "product_20_title",
     "blerb": "product_20_blurb",
     "worst-case": "product_20_worst_case",
@@ -414,7 +414,7 @@ module.exports = {
     "privacy-policy": "http://www.irobot.com/Legal/Documents.aspx"
   },
   "hiku": {
-    "img": "/assets/buyers-guide/products/hiku.png",
+    "img": "/assets/buyers-guide/products/hiku.jpg",
     "product": "product_24_title",
     "blerb": "product_24_blurb",
     "worst-case": "product_24_worst_case",
@@ -846,7 +846,7 @@ module.exports = {
     "privacy-policy": "https://www.mocacare.com/privacy.html"
   },
   "spire": {
-    "img": "/assets/buyers-guide/products/spire.png",
+    "img": "/assets/buyers-guide/products/spire.jpg",
     "product": "product_48_title",
     "blerb": "product_48_blurb",
     "worst-case": "product_48_worst_case",
@@ -918,7 +918,7 @@ module.exports = {
     "privacy-policy": "https://micoach.adidas.com/content/PrivacyPolicy"
   },
   "petcubeplay": {
-    "img": "/assets/buyers-guide/products/Petcube-Play_White-1.png",
+    "img": "/assets/buyers-guide/products/Petcube-Play_White-1.jpg",
     "product": "product_52_title",
     "blerb": "product_52_blurb",
     "worst-case": "product_52_worst_case",
@@ -958,7 +958,7 @@ module.exports = {
     "product": "product_54_title",
     "blerb": "product_54_blurb",
     "worst-case": "product_54_worst_case",
-    "url": "https://www.weber.com/US/en/accessories/igrill-thermometers-timers/igrill-3",
+    "url": "https://www.weber.com/US/en/accessories/igrill-thermometers-timers/igrill-2",
     "price": "$99",
     "company": "Weber",
     "camera": true,

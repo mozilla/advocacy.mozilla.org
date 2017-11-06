@@ -41,7 +41,8 @@ module.exports = {
     "nestprotect",
     "nestcamoutdoorsecuritycamera",
     "nestcamindoorsecuritycamera",
-    "ecobee4thermostat"
+    "ecobee4thermostat",
+    "hatchbabyrest"
   ],
   "gadgetsgizmos": [
     "dysonpurehotcoollink",
