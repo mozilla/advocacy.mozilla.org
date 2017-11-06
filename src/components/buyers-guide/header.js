@@ -87,7 +87,8 @@ var Header = React.createClass({
           <div className="buyers-guide-header">
             {hamburger}
             <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
-              <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
+            </Link>
+            <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}>
             </Link>
             {headerTitle}
             <div className="social-buttons">
