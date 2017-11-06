@@ -480,12 +480,11 @@ var BuyersGuide = React.createClass({
     return (
       <div className="buyers-guide buyers-guide-item">
         {modal}
-        <Header title={true}/>
+        <Header title={true} bradcrumb={true}
+          category={category}
+          item={itemName}
+        />
         <section>
-          <Breadcrumb
-            category={category}
-            item={itemName}
-          />
           <div className="main-product-image-container">
             <img src={item.img}/>
           </div>

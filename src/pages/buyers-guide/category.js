@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../../components/buyers-guide/footer.js';
 import Header from '../../components/buyers-guide/header.js';
-import Breadcrumb from '../../components/buyers-guide/breadcrumb.js';
 import categoryData from '../../data/buyers-guide-categories.js';
 import productData from '../../data/buyers-guide-products.js';
 
@@ -41,11 +40,8 @@ var BuyersGuide = React.createClass({
     const locale = this.context.intl.locale;
     return (
       <div className="buyers-guide buyers-guide-category">
-        <Header title={true}/>
+        <Header title={true} bradcrumb={true} category={category}/>
         <section>
-          <Breadcrumb
-            category={category}
-          />
           <div className="page-width">
             <h1 className="playfair">
               {this.context.intl.formatMessage({id: 'cat_title_' + category})}

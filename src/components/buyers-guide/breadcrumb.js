@@ -28,9 +28,9 @@ var Breadcrumb = React.createClass({
       return (
         <div className="breadcrumb">
           <span className="breadcrumb-item">
-            <Link to={"/" + locale + "/privacynotincluded/categories/"}>
+            <button onClick={this.props.openMenu}>
               {this.context.intl.formatMessage({id: 'categories'})}
-            </Link>
+            </button>
           </span>
           <span className="breadcrumb-split">&gt;</span>
           <span className="breadcrumb-item last">
@@ -46,9 +46,9 @@ var Breadcrumb = React.createClass({
     return (
       <div className="breadcrumb">
         <span className="breadcrumb-item">
-          <Link to={"/" + locale + "/privacynotincluded/categories/"}>
+          <button onClick={this.props.openMenu}>
             {this.context.intl.formatMessage({id: 'categories'})}
-          </Link>
+          </button>
         </span>
         <span className="breadcrumb-split">&gt;</span>
         <span className="breadcrumb-item">
