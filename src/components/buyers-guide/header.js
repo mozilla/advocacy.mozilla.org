@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import reactGA from 'react-ga';
+import Menu from './menu.js';
+import Breadcrumb from './breadcrumb.js';
 
 var Header = React.createClass({
   getInitialState: function() {
@@ -46,12 +48,14 @@ var Header = React.createClass({
   },
   render: function() {
     const locale = this.context.intl.locale;
-    var menuClassName = "menu-container playfair";
-    if (this.state.menuOpen) {
-      menuClassName += " show";
-    }
 
     var headerTitle = null;
+    var breadcrumb = null;
+    var hamburger = (
+      <button className="hamburger" onClick={this.toggleMenu}>
+        <i className="fa fa-bars fa-2x"></i>
+      </button>
+    );
     if (this.props.title) {
       headerTitle = (
         <div className="asterix header-title">
@@ -59,70 +63,48 @@ var Header = React.createClass({
         </div>
       );
     }
+    if (this.props.bradcrumb) {
+      breadcrumb = (
+        <Breadcrumb
+          category={this.props.category}
+          item={this.props.item}
+          openMenu={this.toggleMenu}
+          onClick={this.onClick}
+        />
+      );
+    }
+    if (this.state.menuOpen) {
+      hamburger = (
+        <button className="hamburger" onClick={this.toggleMenu}>
+          <i className="fa fa-times"></i>
+        </button>
+      );
+    }
+
     return (
-      <div className="buyers-guide-header-container">
-        <div className="buyers-guide-header">
-          <button className="hamburger" onClick={this.toggleMenu}>
-            <i className="fa fa-bars fa-2x"></i>
-          </button>
-          <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
-            <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
-          </Link>
-          {headerTitle}
-          <div className="social-buttons">
-            <button onClick={this.shareFbClick} className="social-button">
-              <i className="fa fa-facebook fa-1x"></i>
-            </button>
-            <button onClick={this.shareTwClick} className="social-button">
-              <i className="fa fa-twitter fa-1x"></i>
-            </button>
-            <button onClick={this.shareEmClick} className="social-button">
-              <i className="fa fa-envelope fa-1x"></i>
-            </button>
+      <div>
+        <div className="buyers-guide-header-container">
+          <div className="buyers-guide-header">
+            {hamburger}
+            <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
+              <img src="/assets/moz-fav-bw-rgb-reverse.svg"/>
+            </Link>
+            {headerTitle}
+            <div className="social-buttons">
+              <button onClick={this.shareFbClick} className="social-button">
+                <i className="fa fa-facebook fa-1x"></i>
+              </button>
+              <button onClick={this.shareTwClick} className="social-button">
+                <i className="fa fa-twitter fa-1x"></i>
+              </button>
+              <button onClick={this.shareEmClick} className="social-button">
+                <i className="fa fa-envelope fa-1x"></i>
+              </button>
+            </div>
           </div>
+          <Menu open={this.state.menuOpen} onClick={this.toggleMenu}/>
         </div>
-        <div className={menuClassName}>
-          <div className="link-container home-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/"}>
-              {this.context.intl.formatMessage({id: 'home_label'})}
-            </Link>
-          </div>
-          <div className="link-container toys-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/category/toys"}>
-              {this.context.intl.formatMessage({id: 'cat_title_toys'})}
-            </Link>
-          </div>
-          <div className="link-container game-consoles-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/category/gameconsoles"}>
-              {this.context.intl.formatMessage({id: 'cat_title_gameconsoles'})}
-            </Link>
-          </div>
-          <div className="link-container home-hubs-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/category/homehubs"}>
-              {this.context.intl.formatMessage({id: 'cat_title_homehubs'})}
-            </Link>
-          </div>
-          <div className="link-container smart-home-accessories-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/category/smarthomeaccessories"}>
-              {this.context.intl.formatMessage({id: 'cat_title_smarthomeaccessories'})}
-            </Link>
-          </div>
-          <div className="link-container gadgets-gizmos-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/category/gadgetsgizmos"}>
-              {this.context.intl.formatMessage({id: 'cat_title_gadgetsgizmos'})}
-            </Link>
-          </div>
-          <div className="link-container health-excercise-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/category/healthexcercise"}>
-              {this.context.intl.formatMessage({id: 'cat_title_healthexcercise'})}
-            </Link>
-          </div>
-          <div className="link-container why-link">
-            <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/why-we-made"}>
-              {this.context.intl.formatMessage({id: 'wwmt_main_title'})}
-            </Link>
-          </div>
-        </div>
+        {breadcrumb}
       </div>
     );
   }
