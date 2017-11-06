@@ -6,7 +6,12 @@ var Footer = React.createClass({
     intl: React.PropTypes.object
   },
   render: function() {
-    var shareLink = this.props.shareLink || "https://share.mozilla.org/352/184264";
+    const locale = this.context.intl.locale;
+    var defaultShare = "https://share.mozilla.org/352/184264";
+    if (locale === "es") {
+      defaulShare = "https://share.mozilla.org/352/184298";
+    }
+    var shareLink = this.props.shareLink || defaultShare;
     return (
       <footer className="generic-footer">
         <div className="footer-contents">

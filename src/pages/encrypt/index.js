@@ -39,6 +39,15 @@ module.exports = React.createClass({
           <div id="share-progress-tw" className='share-progress-button sp_184069 sp_tw_small'></div>
         </div>
       );
+      if (locale === "es") {
+        shareProgressButtons = (
+          <div>
+            <div id="share-progress-fb" className='share-progress-button sp_184294 sp_fb_small'></div>
+            <div id="share-progress-em" className='share-progress-button sp_184295 sp_em_small'></div>
+            <div id="share-progress-tw" className='share-progress-button sp_184296 sp_tw_small'></div>
+          </div>
+        );
+      }
     }
 
     return (
