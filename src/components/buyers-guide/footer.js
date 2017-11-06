@@ -9,7 +9,7 @@ var Footer = React.createClass({
     const locale = this.context.intl.locale;
     var defaultShare = "https://share.mozilla.org/352/184264";
     if (locale === "es") {
-      defaulShare = "https://share.mozilla.org/352/184298";
+      defaultShare = "https://share.mozilla.org/352/184298";
     }
     var shareLink = this.props.shareLink || defaultShare;
     return (
