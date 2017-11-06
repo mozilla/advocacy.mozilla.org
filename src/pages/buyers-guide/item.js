@@ -556,12 +556,6 @@ var BuyersGuide = React.createClass({
               {shareData}
             </div>
 
-            <div className="single-row">
-              <h4>
-                {this.context.intl.formatMessage({id: "review_child_privacy"})}
-              </h4>
-              {childRules}
-            </div>
             <h4 className="privacy-message">
               {this.context.intl.formatMessage({id: "review_what_could_happen"})}
             </h4>
