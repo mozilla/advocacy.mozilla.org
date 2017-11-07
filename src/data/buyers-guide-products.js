@@ -187,7 +187,7 @@ module.exports = {
     "url": "https://www.amazon.com/dp/B01J24C0TI?tag=googhydr-20&hvadid=208988526199&hvpos=1t1&hvnetw=g&hvrand=1919366643122015300&hvpone=&hvptwo=&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032089&hvtargid=kwd-309179344440&ref=pd_sl_1foyxz097s_e",
     "price": "$229",
     "company": "Amazon",
-    "camera": false,
+    "camera": true,
     "microphone": true,
     "location": false,
     "need-account": true,
