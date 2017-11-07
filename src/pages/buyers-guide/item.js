@@ -425,6 +425,11 @@ var BuyersGuide = React.createClass({
       childRules = this.context.intl.formatMessage({id: item['child-rules']});
     }
 
+    var partnersLink = "https://www.univision.com/onlinesafety";
+    if (locale === "es") {
+      partnersLink = "https://www.univision.com/seguridad-online"
+    }
+
     var shareData = "";
     var marketing = this.context.intl.formatMessage({id: 'review_marketing'});
     var advertising = this.context.intl.formatMessage({id: 'review_advertising'});
@@ -568,7 +573,7 @@ var BuyersGuide = React.createClass({
             {privacyPolicy}
             <br/>
             <br/>
-            <a className="read-more-url" href="https://www.univision.com/seguridad-online">
+            <a className="read-more-url" href={partnersLink}>
               {this.context.intl.formatMessage({id: 'review_partners_link'})}
             </a>
             <h3>
