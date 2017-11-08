@@ -426,8 +426,14 @@ var BuyersGuide = React.createClass({
     }
 
     var partnersLink = "https://www.univision.com/onlinesafety";
+    var partnersBlob = null;
     if (locale === "es") {
       partnersLink = "https://www.univision.com/seguridad-online"
+      partnersBlob = (
+        <a className="read-more-url" href={partnersLink}>
+          {this.context.intl.formatMessage({id: 'review_partners_link'})}
+        </a>
+      );
     }
 
     var shareData = "";
@@ -573,9 +579,7 @@ var BuyersGuide = React.createClass({
             {privacyPolicy}
             <br/>
             <br/>
-            <a className="read-more-url" href={partnersLink}>
-              {this.context.intl.formatMessage({id: 'review_partners_link'})}
-            </a>
+            {partnersBlob}
             <h3>
               {this.context.intl.formatMessage({id: 'review_got_feedback_title'})}
             </h3>
