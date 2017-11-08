@@ -154,7 +154,7 @@ module.exports = function(req, res, next) {
 
         metaTitle = messages["privacy_not_included"];
         metaSiteName = messages["privacy_not_included"];
-        metaUrl = "https://advocacy.mozilla.org/privacynotincluded/";
+        metaUrl = "https://advocacy.mozilla.org/en-US/privacynotincluded/";
         if (locale === "es") {
           metaUrl = "https://advocacy.mozilla.org/es/privacynotincluded/";
         }
