@@ -154,7 +154,10 @@ module.exports = function(req, res, next) {
 
         metaTitle = messages["privacy_not_included"];
         metaSiteName = messages["privacy_not_included"];
-        metaUrl = "https://advocacy.mozilla.org/privacynotincluded/";
+        metaUrl = "https://advocacy.mozilla.org/en-US/privacynotincluded/";
+        if (locale === "es") {
+          metaUrl = "https://advocacy.mozilla.org/es/privacynotincluded/";
+        }
         metaDesc = messages["bg_sharing_facebook_body_1"];
         metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_facebook.jpg";
         twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_twitter.jpg";
