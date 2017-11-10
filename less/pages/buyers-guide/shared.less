@@ -19,14 +19,27 @@
       text-align: right;
       margin: 0 5px;
     }
+    .hamburger {
+      position: relative;
+    }
+    .social-button {
+      position: relative;
+    }
+    .moz-logo,
+    .moz-logo-2 {
+      position: relative;
+    }
     .header-title {
+      top: 0;
+      bottom: 0;
       position: absolute;
-      text-align: center;
-      right: 200px;
-      left: 200px;
-      @media screen and (max-width: 750px) {
-        right: 0;
-        left: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width: 380px) {
+        font-size: 12px;
       }
       &::before {
         color: red;
@@ -395,12 +408,22 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    @media screen and (max-width: 380px) {
+      font-size: 12px;
+    }
     .breadcrumb-split {
       margin: 0 10px;
+      @media screen and (max-width: 380px) {
+        margin: 0 5px;
+      }
     }
     a {
       color: inherit;
       text-decoration: none;
+    }
+    .breadcrumb-item button {
+      font-size: inherit;
+      margin: 0;
     }
     .breadcrumb-item.last {
       color: #FF0000;

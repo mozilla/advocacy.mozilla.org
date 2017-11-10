@@ -85,12 +85,12 @@ var Header = React.createClass({
       <div>
         <div className="buyers-guide-header-container">
           <div className="buyers-guide-header">
+            {headerTitle}
             {hamburger}
             <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
             </Link>
             <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}>
             </Link>
-            {headerTitle}
             <div className="social-buttons">
               <button onClick={this.shareFbClick} className="social-button">
                 <i className="fa fa-facebook fa-1x"></i>
