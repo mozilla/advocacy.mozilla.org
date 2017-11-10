@@ -524,9 +524,12 @@ var BuyersGuide = React.createClass({
                 {this.context.intl.formatMessage({id: 'copy_link'})}
               </button>
             </div>
-            <h3>
+            <h3 className="can-it-spy-header">
               {this.context.intl.formatMessage({id: "review_can_it_spy"})}
             </h3>
+            <div className="app-and-device">
+              {this.context.intl.formatMessage({id: "review_app_and_device"})}
+            </div>
             <div className="can-it-spy-table">
               <div className="spy-table-row">
                 {this.context.intl.formatMessage({id: "review_spy_camera"})}
