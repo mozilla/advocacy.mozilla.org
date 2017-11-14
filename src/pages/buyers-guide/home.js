@@ -116,6 +116,9 @@ var BuyersGuide = React.createClass({
                 {this.context.intl.formatMessage({id: 'hero_unit_paragraph'})}
               </p>
             </div>
+            <div className="more-arrow">
+              <img className="more-arrow" src="/assets/arrow-icon-white.png"/>
+            </div>
           </header>
           <div className="content-container">
             <div className="content">
@@ -124,9 +127,10 @@ var BuyersGuide = React.createClass({
               </p>
               <div className="start-show playfair">
                 <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
-                <div className="more-arrow">
-                  <img className="more-arrow" src="/assets/arrow-icon.png"/>
-                </div>
+                <p className="itallic playfair">
+                  {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
+                </p>
+                <div className="center-line"></div>
               </div>
             </div>
           </div>
