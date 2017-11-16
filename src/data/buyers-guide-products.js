@@ -37,7 +37,7 @@ module.exports = {
   },
   "sengledsnap": {
     "img": "/assets/buyers-guide/products/Snap.jpg",
-    "company": "Sengled Optoeletronics Co",
+    "company": "Sengled",
     "product": "product_3_title",
     "blerb": "product_3_blurb",
     "url": "https://us.sengled.com/pages/snap",
