@@ -8,6 +8,7 @@ import Modal from '../../components/modal.js';
 import SignupForm from '../../components/buyers-guide/signup-form.js';
 import debounce from 'debounce';
 import reactGA from 'react-ga';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import { Link } from 'react-router';
 
@@ -214,6 +215,13 @@ var BuyersGuide = React.createClass({
       signupSuccess: true
     });
   },
+  donateClicked: function() {
+    reactGA.event({
+      category: "Button",
+      action: "Product Page Modal Clicked Donate Button",
+      label: "Fundraising"
+    });
+  },
   render: function() {
     const category = this.props.params.category;
     const itemName = this.props.params.item;
@@ -265,7 +273,7 @@ var BuyersGuide = React.createClass({
                   {this.context.intl.formatMessage({id: 'next_time'})}
                 </h2>
                 <p>
-                  {this.context.intl.formatMessage({id: 'next_time_paragraph'})}
+                  {this.context.intl.formatMessage({id: 'donate_now'})}
                 </p>
                 <div className="social-buttons">
                   <button onClick={this.shareFbClick} className="social-button">
@@ -291,12 +299,14 @@ var BuyersGuide = React.createClass({
             <div className="signup-form">
               <div>
                 <h2 className="playfair">
-                  {this.context.intl.formatMessage({id: 'sign_up_title'})}
+                  <FormattedHTMLMessage id='donate_modal_title'/>
                 </h2>
-                <p>
-                  {this.context.intl.formatMessage({id: 'sign_up_paragraph'})}
-                </p>
-                <SignupForm onClose={this.nextTime} onSuccess={this.onSuccess}/>
+                <FormattedHTMLMessage id='donate_modal_copy'/>
+                <div className="donate-container">
+                  <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
+                    {this.context.intl.formatMessage({id: 'donate_now'})}
+                  </a>
+                </div>
               </div>
             </div>
           </Modal>
