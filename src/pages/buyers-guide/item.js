@@ -69,16 +69,16 @@ var BuyersGuide = React.createClass({
         talk: 'https://mozilla-foundation-talk.herokuapp.com/'
       });
     }
-    window.addEventListener("scroll", this.onScroll, true);
+    window.addEventListener("scroll", this.onScroll);
   },
   componentWillUnmount: function() {
-    window.removeEventListener("scroll", this.onScroll, true);
+    window.removeEventListener("scroll", this.onScroll);
   },
-  onScroll: debounce(function(e) {
-    if (e.pageY >= 300) {
+  onScroll: function(e) {
+    if (window.pageYOffset >= 300) {
       this.openModal();
     }
-  }, 100, true),
+  },
   closeModal: function() {
     reactGA.event({
       category: "Signup",
