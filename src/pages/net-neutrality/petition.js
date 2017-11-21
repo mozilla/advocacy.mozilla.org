@@ -91,7 +91,7 @@ var Signup = React.createClass({
               <div className="form-body-border">
                 <div className="form-body">
                   <p className="form-description fancy-letter">
-                    Over the last three months -- let’s call it the summer of Net Neutrality -- the FCC has received more than 22 million comments on the issue of whether to gut rules essential for free speech, innovation, and consumer freedom and choice.
+                    The FCC has received more than 22 million comments on the issue of whether to gut rules essential for free speech, innovation, and consumer freedom and choice.
                   </p>
                   <p className="form-description">
                     Yet Ajit Pai has announced the Federal Communications Commission will be voting on Net Neutrality in just a few weeks.
@@ -117,7 +117,7 @@ var Signup = React.createClass({
                 <p>
                   Dear FCC Chairman Ajit Pai:</p>
                 <p>
-                  Over the last three months, the FCC has received more than 22 million comments on the issue of whether to water down existing Net Neutrality rules.
+                  The FCC has received more than 22 million comments on the issue of whether to water down existing Net Neutrality rules.
                 </p>
                 <p>
                   Given the enormity of this response, coming from private citizens, startups, and industry -- and the importance of this decision to the future of the Internet -- the FCC needs to slow things down and ensure it’s taking the volume and substance of the public’s response into account. Anything less would be an abdication of your responsibilities.
