@@ -301,7 +301,12 @@ var BuyersGuide = React.createClass({
                 <h2 className="playfair">
                   <FormattedHTMLMessage id='donate_modal_title'/>
                 </h2>
-                <FormattedHTMLMessage id='donate_modal_copy'/>
+                <p>
+                  <FormattedHTMLMessage id='donate_modal_intro'/>
+                </p>
+                <p className="emphasized">
+                  {this.context.intl.formatMessage({id: 'donate_modal_ask'})}
+                </p>
                 <div className="donate-container">
                   <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
                     {this.context.intl.formatMessage({id: 'donate_now'})}
