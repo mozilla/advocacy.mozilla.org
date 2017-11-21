@@ -308,7 +308,7 @@ var BuyersGuide = React.createClass({
                   {this.context.intl.formatMessage({id: 'donate_modal_ask'})}
                 </p>
                 <div className="donate-container">
-                  <a onClick={this.donateClicked} href="https://donate.mozilla.org/en-US/?presets=3,15,25,50&amount=25&utm_source=website&utm_medium=referral&utm_campaign=PNI&utm_term=pnimodal" className="donate-button">
+                  <a onClick={this.donateClicked} href="https://donate.mozilla.org/en-US/?utm_source=website&utm_medium=referral&utm_campaign=PNI&utm_term=pnimodal" className="donate-button">
                     {this.context.intl.formatMessage({id: 'donate_now'})}
                   </a>
                 </div>
