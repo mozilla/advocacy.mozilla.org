@@ -94,22 +94,16 @@ var Signup = React.createClass({
                     Over the last three months -- let’s call it the summer of Net Neutrality -- the FCC has received more than 22 million comments on the issue of whether to gut rules essential for free speech, innovation, and consumer freedom and choice.
                   </p>
                   <p className="form-description">
-                    The comment period just ended this week, and the agency could vote on Pai’s rules as early as late September.
+                    Yet Ajit Pai has announced the Federal Communications Commission will be voting on Net Neutrality in just a few weeks.
                   </p>
                   <p>
-                    Wait what?!  Only a month to read all 22 million comments before a fundamental decision about free speech, innovation and choice on the Internet?
+                    <b>Pai’s timing is revealing — making the announcement while millions of Americans are traveling for Thanksgiving.</b>
                   </p>
                   <p>
-                    The folks at the FCC might be fast readers. But no one is that fast. <b>That’s why we’re calling for the FCC to Slow. It. Down.</b>
+                    From the start, the FCC’s process around these rules failed to properly consider public input — and there’s no way that they’ve actually considered each of the 22 million comments they received.
                   </p>
                   <p>
-                    We don’t want to slow down the Internet, of course.  Instead, we’re urging the FCC -- and Congress, which oversees the agency -- to slow down its process so it can read and analyze the response rather than charging forward on an ill-advised, Internet-killing plan. There’s a reason that the government sometimes moves slowly: because it has an outsized impact and should not make decisions like this rashly.
-                  </p>
-                  <p>
-                    <b>Take action now and tell the FCC to slow it down.</b> The future of the Internet depends on it.
-                  </p>
-                  <p>
-                    Many millions of people spoke out against Chairman Ajit Pai’s proposal to scrap existing Net Neutrality rules that would allow big companies to slice up the Internet into fast lanes (for those who can pay) and slow lanes (for everyone else), stamp out competition from small businesses, and block speech they don’t agree with. The FCC sought public comments -- the least it can do is to review these opinions, facts, and ideas before it makes a critical vote on Net Neutrality.
+                    That’s why they’re burying the news just days before one of our biggest holidays — they were hoping you and I wouldn’t notice. We can’t let them get away with this. We’re building a fighting fund for the open web, so we can send a clear message to the FCC: we see, we care — and we won’t go down without a fight.
                   </p>
                 </div>
               </div>
