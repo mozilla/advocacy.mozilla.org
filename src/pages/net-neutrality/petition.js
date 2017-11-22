@@ -28,8 +28,14 @@ var Signup = React.createClass({
       window.removeEventListener('scroll', this._withScroll);
     }
   },
-  handleScroll: function() {
-    if (!this.state.dismissedModal) {
+  handleScroll: function(e) {
+    if (this._ctaTimeout) {
+      clearTimeout(this._ctaTimeout);
+    }
+    this._ctaTimeout = setTimeout(() => this.spawnDonateCTA(), 250);
+  },
+  spawnDonateCTA: function() {
+    if (!sessionStorage.getItem('dismissedModal')) {
       this.setState({
         showModal: true
       });
@@ -37,9 +43,8 @@ var Signup = React.createClass({
   },
   closeModal: function() {
     this.setState({
-      showModal: false,
-      dismissedModal: true
-    });
+      showModal: false
+    }, () => sessionStorage.setItem('dismissedModal', 'true'));
   },
   onSuccess: function() {
     this.setState({
