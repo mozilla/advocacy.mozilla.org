@@ -132,7 +132,6 @@ var Signup = React.createClass({
               </FccFormContainer>
             </FccFormSticky>
           </div>
-  
           <section className="donate-container">
             <p className="playfair">
               Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.
@@ -141,8 +140,6 @@ var Signup = React.createClass({
               DONATE NOW
             </a>
           </section>
-
-
         </div>
         <Footer shareLink="http://share.mozilla.org/352/180765"/>
       </div>
