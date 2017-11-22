@@ -13,21 +13,32 @@ var Signup = React.createClass({
   getInitialState: function() {
     return {
       showModal: false,
+      dismissedModal: false,
       signupSuccess: false
     };
   },
   componentDidMount: function() {
-    /*if (!this.props.location.query.subscribed) {
-      setTimeout(() => {
-        this.setState({
-          showModal: true
-        });
-      }, 3000);
-    }*/
+    if (typeof window !== "undefined" && window.document) {
+      this._withScroll = e => this.handleScroll(e);
+      window.addEventListener('scroll', this._withScroll);
+    }
+  },
+  componentWillUnmount() {
+    if (this._withScroll) {
+      window.removeEventListener('scroll', this._withScroll);
+    }
+  },
+  handleScroll: function() {
+    if (!this.state.dismissedModal) {
+      this.setState({
+        showModal: true
+      });
+    }
   },
   closeModal: function() {
     this.setState({
-      showModal: false
+      showModal: false,
+      dismissedModal: true
     });
   },
   onSuccess: function() {
@@ -64,7 +75,14 @@ var Signup = React.createClass({
       } else {
         modal = (
           <Modal onClose={this.closeModal}>
-            <SignupForm onClose={this.closeModal} onSuccess={this.onSuccess}/>
+            <section className="donate-container">
+              <p className="playfair">
+                Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.
+              </p>
+              <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
+                DONATE NOW
+              </a>
+            </section>          
           </Modal>
         );
       }
@@ -132,14 +150,6 @@ var Signup = React.createClass({
               </FccFormContainer>
             </FccFormSticky>
           </div>
-          <section className="donate-container">
-            <p className="playfair">
-              Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.
-            </p>
-            <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
-              DONATE NOW
-            </a>
-          </section>
         </div>
         <Footer shareLink="http://share.mozilla.org/352/180765"/>
       </div>
