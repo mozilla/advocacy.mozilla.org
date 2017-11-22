@@ -10,9 +10,6 @@ import FormBody from '../../components/signup-form/form-body.js';
 import Modal from '../../components/modal.js';
 
 var Signup = React.createClass({
-  contextTypes: {
-    intl: React.PropTypes.object
-  },  
   getInitialState: function() {
     return {
       showModal: false,
