@@ -10,6 +10,9 @@ import FormBody from '../../components/signup-form/form-body.js';
 import Modal from '../../components/modal.js';
 
 var Signup = React.createClass({
+  contextTypes: {
+    intl: React.PropTypes.object
+  },  
   getInitialState: function() {
     return {
       showModal: false,
@@ -132,6 +135,17 @@ var Signup = React.createClass({
               </FccFormContainer>
             </FccFormSticky>
           </div>
+  
+          <section className="donate-container">
+            <p className="playfair">
+              Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.
+            </p>
+            <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
+              DONATE NOW
+            </a>
+          </section>
+
+
         </div>
         <Footer shareLink="http://share.mozilla.org/352/180765"/>
       </div>
