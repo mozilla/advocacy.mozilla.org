@@ -16,7 +16,7 @@ var Footer = React.createClass({
       <footer className="generic-footer">
         <div className="footer-contents">
           <div className="footer-links">
-            <a href="mailto:advocacy@mozilla.com" className="footer-link contact">
+            <a href="https://www.mozilla.org/contact/" className="footer-link contact">
               {this.context.intl.formatMessage({id: 'bg_footer_contact_us'})}
             </a>
             <a href={shareLink} className="footer-link share">
