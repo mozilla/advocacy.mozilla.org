@@ -9,6 +9,8 @@ import SignupForm from '../../components/net-neutrality/signup-form.js';
 import FormBody from '../../components/signup-form/form-body.js';
 import Modal from '../../components/modal.js';
 
+const DONATE_CTA_DELAY = 1000; // in milliseconds
+
 var Signup = React.createClass({
   getInitialState: function() {
     return {
@@ -32,7 +34,7 @@ var Signup = React.createClass({
     if (this._ctaTimeout) {
       clearTimeout(this._ctaTimeout);
     }
-    this._ctaTimeout = setTimeout(() => this.spawnDonateCTA(), 250);
+    this._ctaTimeout = setTimeout(() => this.spawnDonateCTA(), DONATE_CTA_DELAY);
   },
   spawnDonateCTA: function() {
     if (!sessionStorage.getItem('dismissedModal')) {
