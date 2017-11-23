@@ -9,7 +9,7 @@ import SignupForm from '../../components/net-neutrality/signup-form.js';
 import FormBody from '../../components/signup-form/form-body.js';
 import Modal from '../../components/modal.js';
 
-const DONATE_CTA_DELAY = 1000; // in milliseconds
+const DONATE_CTA_DELAY = 750; // in milliseconds
 
 var Signup = React.createClass({
   getInitialState: function() {
@@ -83,13 +83,17 @@ var Signup = React.createClass({
         modal = (
           <Modal onClose={this.closeModal}>
             <section className="donate-container">
+            <h2>We all love the web.<br/> Join Mozilla in defending it.</h2>
               <p className="playfair">
-                Mozilla is a non-profit fighting for the good of the internet. Become a supporter today.
+                The future of the Internet is at stake, with new threats to our online privacy and security almost every day. M<span class="blankSpace">&nbsp;</span>ozilla fights to save a healthy Internet, with grassroots advocacy work and software that enables the open web.
+              </p>
+              <p className="playfair emphasized">
+                As a non-profit we rely on your support, so please donate today.
               </p>
               <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
                 DONATE NOW
               </a>
-            </section>          
+            </section>
           </Modal>
         );
       }
