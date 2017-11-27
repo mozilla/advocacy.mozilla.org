@@ -1,3 +1,17 @@
 @import "comment";
 @import "signup";
 @import "shared";
+
+/**
+ * Custom overrides for the donation modal.
+ */
+.net-neutrality-comments {
+  .modal {
+    overflow: hidden;
+    animation: backgroundFadeIn .15s ease-out;
+ 
+    @keyframes backgroundFadeIn {
+      0% { background: rgba(0,0,0,0) }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React  from 'react';
 import ga from 'react-ga';
+import storage from '../../lib/session-storage.js';
 
 import Footer from '../../components/signup-form/footer.js';
 import Header from '../../components/signup-form/header.js';
@@ -12,16 +13,6 @@ import FormBody from '../../components/signup-form/form-body.js';
 import Modal from '../../components/modal.js';
 
 const DONATE_CTA_DELAY = 750; // in milliseconds
-
-// Use sessionStorage to make sure we don't show the CTA again,
-// unles the user has cookies etc. disabled, in which case we use
-// a shim that acts like sessionStorage for as long as the page
-// is open, but does not persist across reloads.
-const storage = (typeof sessionStorage !== "undefined") ? sessionStorage : {
-  map: {},
-  getItem: (name => storage.map[name]),
-  setItem: ((name,value) => storage.map[name]=value)
-};
 
 var Signup = React.createClass({
   getInitialState: function() {
@@ -56,6 +47,7 @@ var Signup = React.createClass({
     }
   },
   donateClicked: function() {
+    // TODO: add in the correct GA even to fire prior to resolving 
     // ga.callSomeFunction()
   },
   closeModal: function() {
@@ -74,49 +66,55 @@ var Signup = React.createClass({
     }
     this.stickyForm.onResize();
   },
+  generateModal: function() {
+    if (this.state.showModal) {
+      if (this.state.signupSuccess) {
+        return this.generateSignupModal();
+      }
+      return this.generateDonationModal();
+    }
+    return null;
+  },
+  generateSignupModal: function() {
+    return (
+      <Modal onClose={this.closeModal}>
+        <div className="signup-success">
+          <div className="form-copy">
+            <div><span className="white">Thanks!</span> <span className="light">Please check your inbox or your spam filter for an email from us to confirm your subscription.</span>
+            </div>
+          </div>
+          <button className="button" onClick={this.closeModal}>Yes, I got it</button>
+        </div>
+      </Modal>
+    );
+  },
+  generateDonationModal: function() {
+    return (
+      <Modal onClose={() => this.closeModal()}>
+        <section className="donate-container">
+        <h2>We all love the web.<br/> Join Mozilla in defending it.</h2>
+          <p className="playfair">
+            The future of the Internet is at stake, with new threats to our online privacy and security almost every day. M<span className="blankSpace">&nbsp;</span>ozilla fights to save a healthy Internet, with grassroots advocacy work and software that enables the open web.
+          </p>
+          <p className="playfair emphasized">
+            As a non-profit we rely on your support, so please donate today.
+          </p>
+          <a onClick={() => this.donateClicked()} href="https://donate.mozilla.org" className="donate-button">
+            DONATE NOW
+          </a>
+        </section>
+      </Modal>
+    );
+  },
   render: function() {
     var className = "signup net-neutrality-comments";
     if (this.props.test) {
       className += " " + this.props.test;
     }
 
-    var modal = null;
-    if (this.state.showModal) {
-      if (this.state.signupSuccess) {
-        modal = (
-          <Modal onClose={this.closeModal}>
-            <div className="signup-success">
-              <div className="form-copy">
-                <div><span className="white">Thanks!</span> <span className="light">Please check your inbox or your spam filter for an email from us to confirm your subscription.</span>
-                </div>
-              </div>
-              <button className="button" onClick={this.closeModal}>Yes, I got it</button>
-            </div>
-          </Modal>
-        );
-      } else {
-        modal = (
-          <Modal onClose={() => this.closeModal()}>
-            <section className="donate-container">
-            <h2>We all love the web.<br/> Join Mozilla in defending it.</h2>
-              <p className="playfair">
-                The future of the Internet is at stake, with new threats to our online privacy and security almost every day. M<span className="blankSpace">&nbsp;</span>ozilla fights to save a healthy Internet, with grassroots advocacy work and software that enables the open web.
-              </p>
-              <p className="playfair emphasized">
-                As a non-profit we rely on your support, so please donate today.
-              </p>
-              <a onClick={() => this.donateClicked()} href="https://donate.mozilla.org" className="donate-button">
-                DONATE NOW
-              </a>
-            </section>
-          </Modal>
-        );
-      }
-    }
-
     return (
       <div className={className}>
-        {modal}
+        { this.generateModal() }
         <div className="net-neutrality-page page">
           <div id="about" className="nav-anchor nav-offset"></div>
           <div className="signup-container">
