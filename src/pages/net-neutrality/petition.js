@@ -1,4 +1,6 @@
 import React  from 'react';
+import ga from 'react-ga';
+
 import Footer from '../../components/signup-form/footer.js';
 import Header from '../../components/signup-form/header.js';
 import Logo from '../../components/signup-form/logo.js';
@@ -11,6 +13,16 @@ import Modal from '../../components/modal.js';
 
 const DONATE_CTA_DELAY = 750; // in milliseconds
 
+// Use sessionStorage to make sure we don't show the CTA again,
+// unles the user has cookies etc. disabled, in which case we use
+// a shim that acts like sessionStorage for as long as the page
+// is open, but does not persist across reloads.
+const storage = (typeof sessionStorage !== "undefined") ? sessionStorage : {
+  map: {},
+  getItem: (name => storage.map[name]),
+  setItem: ((name,value) => storage.map[name]=value)
+};
+
 var Signup = React.createClass({
   getInitialState: function() {
     return {
@@ -20,7 +32,7 @@ var Signup = React.createClass({
     };
   },
   componentDidMount: function() {
-    if (typeof window !== "undefined" && window.document) {
+    if (typeof window !== "undefined" && window.addEventListener) {
       this._withScroll = e => this.handleScroll(e);
       window.addEventListener('scroll', this._withScroll);
     }
@@ -37,16 +49,19 @@ var Signup = React.createClass({
     this._ctaTimeout = setTimeout(() => this.spawnDonateCTA(), DONATE_CTA_DELAY);
   },
   spawnDonateCTA: function() {
-    if (!sessionStorage.getItem('dismissedModal')) {
+    if (!storage.getItem('dismissedModal')) {
       this.setState({
         showModal: true
       });
     }
   },
+  donateClicked: function() {
+    // ga.callSomeFunction()
+  },
   closeModal: function() {
     this.setState({
       showModal: false
-    }, () => sessionStorage.setItem('dismissedModal', 'true'));
+    }, () => storage.setItem('dismissedModal', 'true'));
   },
   onSuccess: function() {
     this.setState({
@@ -81,16 +96,16 @@ var Signup = React.createClass({
         );
       } else {
         modal = (
-          <Modal onClose={this.closeModal}>
+          <Modal onClose={() => this.closeModal()}>
             <section className="donate-container">
             <h2>We all love the web.<br/> Join Mozilla in defending it.</h2>
               <p className="playfair">
-                The future of the Internet is at stake, with new threats to our online privacy and security almost every day. M<span class="blankSpace">&nbsp;</span>ozilla fights to save a healthy Internet, with grassroots advocacy work and software that enables the open web.
+                The future of the Internet is at stake, with new threats to our online privacy and security almost every day. M<span className="blankSpace">&nbsp;</span>ozilla fights to save a healthy Internet, with grassroots advocacy work and software that enables the open web.
               </p>
               <p className="playfair emphasized">
                 As a non-profit we rely on your support, so please donate today.
               </p>
-              <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
+              <a onClick={() => this.donateClicked()} href="https://donate.mozilla.org" className="donate-button">
                 DONATE NOW
               </a>
             </section>
