@@ -12,7 +12,7 @@ As of April 2016, there are three parts to the site.
 
 Clone a copy of the repository using something like [git](http://git-scm.com/).
 
-To get a local version of the site running, you'll need [node](http://nodejs.org/) 4 or higher installed on your local machine.
+To get a local version of the site running, you'll need [node](http://nodejs.org/) 8 or higher installed on your local machine.
 
 ## Build
 
@@ -54,6 +54,6 @@ We use [webpack](https://webpack.github.io/) to package our client side files in
 
 We use [react-router](https://github.com/reactjs/react-router) to handle the site structure, which live in `/src/avocacy-main.js` and `/src/encrypt-main.js`.
 
-We use [node](http://nodejs.org/) version 4 or higher to run our server, which is handled in `app.js`.
+We use [node](http://nodejs.org/) version 8 or higher to run our server, which is handled in `app.js`.
 
 "Encrypt" pages are handled a bit differently from the rest. The standard routes, and source, use `/src/advocacy-main.js` for pretty much all the generating and packaging of files, routes, and source. Encrypt uses `/src/encrypt-app.js` to package client side files, and uses `/src/encrypt-main.js` and `/src/lib/react-server-rooute.js` to handle server side rendering.
