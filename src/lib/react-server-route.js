@@ -16,9 +16,12 @@ module.exports = function(req, res, next) {
 
   var ActivitiesHTML = require(`../pages/maker-party/activities/index.js`);
 
+
   var location = url.parse(req.url).pathname;
   var search = url.parse(req.url).search || "";
   var locale = "";
+
+  console.log('rr:', req.url, location, search)
 
   var metaTitle = "Mozilla’s Policy & Advocacy Program - Home";
   var metaSiteName = "Mozilla Advocacy";
@@ -121,13 +124,19 @@ module.exports = function(req, res, next) {
     // React router lets you specify redirects. If we had any, we literally
     // just tell our server that we need to look up a different URL.
     if (redirectLocation) {
+      console.log('found redirect:', redirectLocation);
+
       res.redirect(302, redirectLocation.pathname + search);
     }
     // This is the most interesting part: we have content that React can render.
     else if (renderProps) {
+      console.log('renderprops:', renderProps);
+
       locale = locationParser(req.headers["accept-language"], location).locale;
       var messages = getMessages(Object.assign, locale, location);
       if (location === "/") {
+        console.log('root redirect:', location, locale, search);
+
         res.redirect(302, location + locale + search);
         return;
       }
@@ -167,6 +176,7 @@ module.exports = function(req, res, next) {
       }
 
       let html = "";
+
       if (location.indexOf('/maker-party/') !== -1) {
         if (location.indexOf('/post-crimes/') !== -1) {
           title = "Maker Party | Postcrimes";
@@ -186,24 +196,31 @@ module.exports = function(req, res, next) {
             title={title}
           />
         );
-      } else {
-        html = ReactDOM.renderToStaticMarkup(
-          <HTML reactHTML={reactHTML}
-            locale={locale}
-            metaTitle={metaTitle}
-            metaSiteName={metaSiteName}
-            metaUrl={metaUrl}
-            metaDesc={metaDesc}
-            twitterDesc={twitterDesc}
-            metaImage={metaImage}
-            twitterImage={twitterImage}
-            desc={desc}
-            title={title}
-            htmlClassName={htmlClassName}
-            shareProgress={shareProgress}
-            buyersGuide={buyersGuide}
-          />
-        );
+      }
+
+      else {
+        console.log('rendertostatic');
+
+        let htmlProps = {
+          reactHTML: reactHTML,
+          locale: locale,
+          metaTitle: metaTitle,
+          metaSiteName: metaSiteName,
+          metaUrl: metaUrl,
+          metaDesc: metaDesc,
+          twitterDesc: twitterDesc,
+          metaImage: metaImage,
+          twitterImage: twitterImage,
+          desc: desc,
+          title: title,
+          htmlClassName: htmlClassName,
+          shareProgress: shareProgress,
+          buyersGuide: buyersGuide
+        };
+
+        html = ReactDOM.renderToStaticMarkup(<HTML {...htmlProps} />);
+
+        console.log(html);
       }
 
       // And to be good citizens of the web, we need a doctype, which React
@@ -218,6 +235,10 @@ module.exports = function(req, res, next) {
     // and it didn't find any render properties with which to render
     // a (set of) React component(s), we should fall through to whatever
     // else our express server can try to do to serve up content.
-    else { next(); }
+    else {
+      console.log('fallthrough');
+
+      next();
+    }
   });
 };

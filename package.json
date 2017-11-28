@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "npm-run-all --parallel build:l10njson watch:js server",
-    "build:l10njson": "node scripts/properties2json",
+    "build:l10njson": "node scripts/writeLocales",
     "build:babel": "babel src --compact=true -s --out-dir dist",
     "build:webpack": "webpack --optimize-minimize --optimize-dedupe",
     "watch:js": "npm-run-all --parallel watch:webpack watch:babel",

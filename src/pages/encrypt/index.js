@@ -86,12 +86,9 @@ module.exports = React.createClass({
         <body>
           {coralScript}
           <div id="my-app" dangerouslySetInnerHTML={{__html: this.props.reactHTML}}/>
-          <link rel="stylesheet" href={googleFonts}/>
+
           <script src="/build/main.js"></script>
-          <script src="https://c.shpg.org/352/sp.js"></script>
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-          <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css"/>
-          {shareProgressButtons}
+
         </body>
       </html>
     );
