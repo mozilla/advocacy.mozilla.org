@@ -1,35 +1,36 @@
 .donate-container {
   padding: 40px 30px;
   max-width: 90vw;
- 
+  text-align: center;
+
   @media screen and (min-width: 768px) {
     max-width: 60vw;
   }
- 
+
   background-color: #ffffff;
   animation: popupAppear .15s ease-out;
- 
+
   @keyframes popupAppear {
     0% { transform: scale(.85) }
   }
- 
+
   h2 {
     margin-top: 0;
   }
- 
+
   p {
     margin: 0 auto 15px;
     color: #000000;
- 
+
     &.emphasized {
       font-weight: bold;
     }
   }
- 
+
   .blankSpace {
     display: none;
   }
- 
+
   .donate-button {
     background: #f42c2c;
     color: #FFFFFF;
@@ -40,10 +41,4 @@
     align-items: center;
     text-decoration: none;
   }
- }
- 
- /* overrides to make it at least work a little */
- 
- .donate-container {
-   text-align: center;
  }

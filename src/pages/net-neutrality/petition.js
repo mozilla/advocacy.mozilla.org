@@ -1,5 +1,4 @@
 import React  from 'react';
-import ga from 'react-ga';
 import storage from '../../lib/session-storage.js';
 
 import Footer from '../../components/signup-form/footer.js';
@@ -45,10 +44,6 @@ var Signup = React.createClass({
         showModal: true
       });
     }
-  },
-  donateClicked: function() {
-    // TODO: add in the correct GA even to fire prior to resolving 
-    // ga.callSomeFunction()
   },
   closeModal: function() {
     this.setState({
@@ -99,7 +94,7 @@ var Signup = React.createClass({
           <p className="playfair emphasized">
             As a non-profit we rely on your support, so please donate today.
           </p>
-          <a onClick={() => this.donateClicked()} href="https://donate.mozilla.org" className="donate-button">
+          <a href="https://donate.mozilla.org" className="donate-button">
             DONATE NOW
           </a>
         </section>
