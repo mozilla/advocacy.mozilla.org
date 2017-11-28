@@ -16,13 +16,9 @@ module.exports = function(req, res, next) {
 
   var ActivitiesHTML = require(`../pages/maker-party/activities/index.js`);
 
-
   var location = url.parse(req.url).pathname;
   var search = url.parse(req.url).search || "";
   var locale = "";
-
-  console.log('rr:', req.url, location, search)
-
   var metaTitle = "Mozilla’s Policy & Advocacy Program - Home";
   var metaSiteName = "Mozilla Advocacy";
   var metaUrl = "http://advocacy.mozilla.org/";
@@ -124,19 +120,13 @@ module.exports = function(req, res, next) {
     // React router lets you specify redirects. If we had any, we literally
     // just tell our server that we need to look up a different URL.
     if (redirectLocation) {
-      console.log('found redirect:', redirectLocation);
-
       res.redirect(302, redirectLocation.pathname + search);
     }
     // This is the most interesting part: we have content that React can render.
     else if (renderProps) {
-      console.log('renderprops:', renderProps);
-
       locale = locationParser(req.headers["accept-language"], location).locale;
       var messages = getMessages(Object.assign, locale, location);
       if (location === "/") {
-        console.log('root redirect:', location, locale, search);
-
         res.redirect(302, location + locale + search);
         return;
       }
@@ -199,8 +189,6 @@ module.exports = function(req, res, next) {
       }
 
       else {
-        console.log('rendertostatic');
-
         let htmlProps = {
           reactHTML: reactHTML,
           locale: locale,
@@ -219,8 +207,6 @@ module.exports = function(req, res, next) {
         };
 
         html = ReactDOM.renderToStaticMarkup(<HTML {...htmlProps} />);
-
-        console.log(html);
       }
 
       // And to be good citizens of the web, we need a doctype, which React
@@ -236,8 +222,6 @@ module.exports = function(req, res, next) {
     // a (set of) React component(s), we should fall through to whatever
     // else our express server can try to do to serve up content.
     else {
-      console.log('fallthrough');
-
       next();
     }
   });
