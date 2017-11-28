@@ -24,6 +24,7 @@ function getDirectoryLocales(src) {
 
     if (list.length === 0) {
       console.error("No locale data was aggregated!");
+      process.exit(1);
     }
 
     return list;
