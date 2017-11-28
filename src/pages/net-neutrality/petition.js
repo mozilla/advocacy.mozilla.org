@@ -1,4 +1,6 @@
 import React  from 'react';
+import storage from '../../lib/session-storage.js';
+
 import Footer from '../../components/signup-form/footer.js';
 import Header from '../../components/signup-form/header.js';
 import Logo from '../../components/signup-form/logo.js';
@@ -9,26 +11,44 @@ import SignupForm from '../../components/net-neutrality/signup-form.js';
 import FormBody from '../../components/signup-form/form-body.js';
 import Modal from '../../components/modal.js';
 
+const DONATE_CTA_DELAY = 750; // in milliseconds
+
 var Signup = React.createClass({
   getInitialState: function() {
     return {
       showModal: false,
+      dismissedModal: false,
       signupSuccess: false
     };
   },
   componentDidMount: function() {
-    /*if (!this.props.location.query.subscribed) {
-      setTimeout(() => {
-        this.setState({
-          showModal: true
-        });
-      }, 3000);
-    }*/
+    if (typeof window !== "undefined" && window.addEventListener) {
+      this._withScroll = e => this.handleScroll(e);
+      window.addEventListener('scroll', this._withScroll);
+    }
+  },
+  componentWillUnmount() {
+    if (this._withScroll) {
+      window.removeEventListener('scroll', this._withScroll);
+    }
+  },
+  handleScroll: function(e) {
+    if (this._ctaTimeout) {
+      clearTimeout(this._ctaTimeout);
+    }
+    this._ctaTimeout = setTimeout(() => this.spawnDonateCTA(), DONATE_CTA_DELAY);
+  },
+  spawnDonateCTA: function() {
+    if (!storage.getItem('dismissedModal')) {
+      this.setState({
+        showModal: true
+      });
+    }
   },
   closeModal: function() {
     this.setState({
       showModal: false
-    });
+    }, () => storage.setItem('dismissedModal', 'true'));
   },
   onSuccess: function() {
     this.setState({
@@ -41,38 +61,55 @@ var Signup = React.createClass({
     }
     this.stickyForm.onResize();
   },
+  generateModal: function() {
+    if (this.state.showModal) {
+      if (this.state.signupSuccess) {
+        return this.generateSignupModal();
+      }
+      return this.generateDonationModal();
+    }
+    return null;
+  },
+  generateSignupModal: function() {
+    return (
+      <Modal onClose={this.closeModal}>
+        <div className="signup-success">
+          <div className="form-copy">
+            <div><span className="white">Thanks!</span> <span className="light">Please check your inbox or your spam filter for an email from us to confirm your subscription.</span>
+            </div>
+          </div>
+          <button className="button" onClick={this.closeModal}>Yes, I got it</button>
+        </div>
+      </Modal>
+    );
+  },
+  generateDonationModal: function() {
+    return (
+      <Modal onClose={() => this.closeModal()}>
+        <section className="donate-container">
+        <h2>We all love the web.<br/> Join Mozilla in defending it.</h2>
+          <p className="playfair">
+            The future of the Internet is at stake, with new threats to our online privacy and security almost every day. M<span className="blankSpace">&nbsp;</span>ozilla fights to save a healthy Internet, with grassroots advocacy work and software that enables the open web.
+          </p>
+          <p className="playfair emphasized">
+            As a non-profit we rely on your support, so please donate today.
+          </p>
+          <a href="https://donate.mozilla.org" className="donate-button">
+            DONATE NOW
+          </a>
+        </section>
+      </Modal>
+    );
+  },
   render: function() {
     var className = "signup net-neutrality-comments";
     if (this.props.test) {
       className += " " + this.props.test;
     }
 
-    var modal = null;
-    if (this.state.showModal) {
-      if (this.state.signupSuccess) {
-        modal = (
-          <Modal onClose={this.closeModal}>
-            <div className="signup-success">
-              <div className="form-copy">
-                <div><span className="white">Thanks!</span> <span className="light">Please check your inbox or your spam filter for an email from us to confirm your subscription.</span>
-                </div>
-              </div>
-              <button className="button" onClick={this.closeModal}>Yes, I got it</button>
-            </div>
-          </Modal>
-        );
-      } else {
-        modal = (
-          <Modal onClose={this.closeModal}>
-            <SignupForm onClose={this.closeModal} onSuccess={this.onSuccess}/>
-          </Modal>
-        );
-      }
-    }
-
     return (
       <div className={className}>
-        {modal}
+        { this.generateModal() }
         <div className="net-neutrality-page page">
           <div id="about" className="nav-anchor nav-offset"></div>
           <div className="signup-container">
