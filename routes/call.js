@@ -11,11 +11,6 @@ module.exports = function handleCallRequest(req, res) {
   var callInformation = req.body;
   let number = callInformation.number;
 
-  // Make sure the user didn't remove a country code.
-  if (number.indexOf('+') === -1) {
-    number = "+" + number;
-  }
-
   // Also make sure the number does not contain illegal characters.
   if ((/[^0-9+ ,\(\)\.\-]/).test(number)) {
     return res.status(409).send({
@@ -27,6 +22,12 @@ module.exports = function handleCallRequest(req, res) {
 
   // It does not: strip out inert characters and continue.
   number = number.replace(/[^0-9+]/g,'');
+
+  // Ensure we a country code, 1 way or another ;).
+  if (number.length === 10) {
+    number = "1" + number;
+  }
+
   const locale = callInformation.locale || '';
   const parsed = parseNumber(number);
 
