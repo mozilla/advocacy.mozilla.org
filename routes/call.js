@@ -10,6 +10,7 @@ const COPYRIGHT_CAMPAIGN_ID = process.env.COPYRIGHT_CAMPAIGN_ID;
 module.exports = function handleCallRequest(req, res) {
   var callInformation = req.body;
   let number = callInformation.number;
+  let zip = callInformation.zip;
 
   // Also make sure the number does not contain illegal characters.
   if ((/[^0-9+ ,\(\)\.\-]/).test(number)) {
@@ -43,6 +44,7 @@ module.exports = function handleCallRequest(req, res) {
 
   var form = new FormData();
   form.append('userPhone', number);
+  form.append('zip', zip);
   form.append('userCountry', parsed.country);
   form.append('campaignId', COPYRIGHT_CAMPAIGN_ID);
 

@@ -22,7 +22,8 @@ module.exports = React.createClass({
       '/api/call',
       {
         number: this.props.number,
-        locale: this.context.intl.locale
+        locale: this.context.intl.locale,
+        zip: "37097" // Just testing
       },
       (result) => this.callPlaced(result),
       (result) => this.callFailed(result)
