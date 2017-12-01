@@ -9,7 +9,11 @@ module.exports = React.createClass({
   getInitialState: function() {
     return { submitting: false };
   },
-  callMEP: function() {
+  makeCall: function() {
+    if (this.state.submitting) {
+      return;
+    }
+
     this.setState({
       submitting: true
     });
@@ -60,16 +64,16 @@ module.exports = React.createClass({
     };
     return (
       <div className={containerClass}>
-        <a {...buttonProps}>{this.context.intl.formatMessage({id: 'call_now_button'})}</a>
+        <a {...buttonProps}>Call Now</a>
       </div>
     );
   },
   renderCallButton: function() {
-    const classNames = classnames({
+    const classNames = classnames("call-tool-button", {
       "submitting": this.state.submitting
     });
     return (
-      <button className={classNames} onClick={() => this.callMEP()}>{this.context.intl.formatMessage({id: 'call_now_button'})}</button>
+      <button className={classNames} onClick={() => this.makeCall()}>Call Now</button>
     )
   }
 });

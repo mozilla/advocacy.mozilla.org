@@ -2,7 +2,6 @@ import React from 'react';
 import classnames from 'classnames';
 import CallButton from './call-button.js';
 import Social from './social.js';
-import { FormattedMessage } from 'react-intl';
 
 /**
  * This function is responsible for mapping HTTP status numbers to
@@ -11,13 +10,13 @@ import { FormattedMessage } from 'react-intl';
  */
 function getCustomError(status) {
   if (status === -1 || status >= 500) {
-    return ['unknown_problems', 'please_retry_later'];
+    return ['We’re sorry, we seem to be having some trouble.', 'Please try again later.'];
   }
   if (status === 400) {
-    return ['we_cannot_call'];
+    return ['We can’t call that number.'];
   }
   if (status === 429) {
-    return ['hourly_limit_reached'];
+    return ['Thanks for your calls! You’ve reached the hourly limit. Please try again in an hour.'];
   }
   return false;
 }
@@ -27,12 +26,9 @@ module.exports = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
   },
-  getInitialState: function(countryPrefix, number) {
-    var countryPrefix = "1";
-    var number = number || "(+" + countryPrefix + ") ";
+  getInitialState: function(number) {
     return {
-      countryPrefix,
-      number,
+      number: number || "",
       validNumber: true,
       calling: false,
       customError: false
@@ -45,13 +41,6 @@ module.exports = React.createClass({
     var number = this.textInput.value;
     this.setState({
       number
-    });
-  },
-  prefixChange: function(e) {
-    this.textInput.focus();
-    this.setState({
-      countryPrefix: e.target.value,
-      number: "(+" + e.target.value + ") "
     });
   },
   numberChange: function(e) {
@@ -72,12 +61,12 @@ module.exports = React.createClass({
     });
   },
   retry: function() {
-    var state = this.getInitialState(this.state.countryPrefix, this.state.number);
+    var state = this.getInitialState(this.state.number);
     this.setState(state);
   },
   isBusinessClosed: function() {
     var date = new Date();
-    date.setUTCHours(date.getUTCHours() + 2);
+    date.setUTCHours(date.getUTCHours() - 5);
     var day = date.getUTCDay();
     var hour = date.getUTCHours();
 
@@ -103,80 +92,34 @@ module.exports = React.createClass({
   renderCustomError: function() {
     return (
       <section>
-        { this.state.customError.map( id => <h2 className="bold" key={id}>{this.context.intl.formatMessage({id})}</h2> )}
-        <button onClick={() => this.retry()}>{this.context.intl.formatMessage({id: 'try_again'})}</button>
+        { this.state.customError.map( message => <h2 className="bold" key={message}>{message}</h2> )}
+        <button onClick={() => this.retry()}>TRY AGAIN</button>
       </section>
     );
   },
-  isAfterOct29: function() {
-    var date = new Date();
-    date.setUTCHours(date.getUTCHours() + 2);
-    var day = date.getUTCDate();
-    var month = date.getUTCMonth();
-    if (month >= 9 && day >= 29) {
-      return true;
-    }
-    return false;
-  },
   renderClosedSign: function() {
-    var hoursString = "business_hours_cest";
-    if (this.isAfterOct29()) {
-      hoursString = "business_hours_cet";
-    }
     return (
       <section>
         <h2>
-          {this.context.intl.formatMessage({id: 'closed_for_business'})}
+          Please visit this page during business hours to connect your call:
           <br/>
-          {this.context.intl.formatMessage({id: hoursString})}
+          Monday-Friday, 9:00-18:00 EST.
         </h2>
       </section>
     );
   },
   renderForm: function() {
 
-    // We need to ensure there is enough space in the
-    // input to show the placeholder in ultiple languages.
-    var placeholder = this.context.intl.formatMessage({id: 'enter_phone'});
-    var countryPrefix = "(+" + this.state.countryPrefix + ")";
+    var placeholder = "Enter your phone #";
 
-    // Default placeholder state is a fresh page load state.
-    // Example: "(+44) placeholder text"
-    var placeholderContainer = (
-      <span className="placeholder-container">
-        <span className="placeholder-width">{countryPrefix}&nbsp;</span>
-        <span className="placeholder">{placeholder}&nbsp;</span>
-      </span>
-    );
-
-    // This state is for when the input has been cleared,
-    // completely empty, so no county prefix.
-    if (!this.state.number) {
-      placeholderContainer = (
-        <span className="placeholder-container">
-          <span className="placeholder-width">{placeholder}&nbsp;</span>
-        </span>
-      );
-    }
-    // This state is for when the input is not empty and not default.
-    // Example: "(+44) 12345678"
-    else if (this.state.number !== "(+" + this.state.countryPrefix + ") ") {
-      placeholderContainer = (
-        <span className="placeholder-container">
-          <span className="placeholder-width">{this.state.number}&nbsp;</span>
-        </span>
-      );
-    }
-
-    const messageId = this.state.validNumber ? 'enter_phone_title' : 'whoops_phone_number';
+    const message = this.state.validNumber ? 'Enter your phone number and get a call back immediately' : 'Whoops! Make sure you enter your correct phone number.';
 
     return (
       <section>
-        <h2 className="bold">{this.context.intl.formatMessage({id: messageId})}</h2>
+        <h2 className="bold">{message}</h2>
         <div className={classnames("phone-number-input-container", { "valid": this.state.validNumber })}>
           <span className="input-container">
-            <input ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder={this.context.intl.formatMessage({id: 'enter_phone'})}/>
-            {placeholderContainer}
+            <input ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder={placeholder}/>
           </span>
         </div>
 
@@ -187,13 +130,7 @@ module.exports = React.createClass({
         />
 
         <div>
-          <FormattedMessage
-            id='cta_disclaimer'
-            values={{
-              ctaTosLink: (<a href="https://www.mozilla.org/about/legal/terms/mozilla/">{this.context.intl.formatMessage({id: 'cta_link_tos'})}</a>),
-              ctaPpLink: (<a href="https://www.mozilla.org/privacy/websites/">{this.context.intl.formatMessage({id: 'cta_link_pp'})}</a>)
-            }}
-          />
+          We will only use your phone number to make this call. Find out more about <a href="https://www.mozilla.org/about/legal/terms/mozilla/">Mozilla’s Terms of Service</a> and <a href="https://www.mozilla.org/privacy/websites/">Privacy Policy</a>
         </div>
       </section>
     );

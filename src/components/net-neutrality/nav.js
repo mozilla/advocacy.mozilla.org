@@ -33,28 +33,16 @@ var SimpleNav = React.createClass({
     if (!links) {
       links = this.props.links || [
         {
-          text: this.context.intl.formatMessage({id: `nav_fix_copyright`}),
+          text: "Stop Ajit Pai",
           item: `home`,
           href: `/${this.context.intl.locale}/net-neutrality/`
         },
         {
-          text: this.context.intl.formatMessage({id: `nav_impact`}),
-          item: `impact`,
-          href: `/${this.context.intl.locale}/net-neutrality/impact`
-        },
-        {
-          text: this.context.intl.formatMessage({id: `nav_call_now`}),
+          text: "Call Now",
           item: `call-now`,
           href: `/${this.context.intl.locale}/net-neutrality/call-now`
         }
       ];
-      if (/^(en)(\b|$)/.test(this.context.intl.locale)) {
-        links.splice(3, 0, {
-          text: `More Resources`,
-          item: `resources`,
-          href: `/en-US/net-neutrality/resources`
-        });
-      }
     }
 
     var navClassName = classnames(`nav`, {

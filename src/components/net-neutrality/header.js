@@ -8,11 +8,11 @@ module.exports = React.createClass({
   render: function() {
     return (
       <header className="header">
-        <h1>{this.context.intl.formatMessage({id: 'main_title_digital_age'})}</h1>
-        <p><span className="blue-highlight">{this.context.intl.formatMessage({id: 'epic_battle_tagline_mep'})}</span></p>
-        <p className="header-paragraph">{this.context.intl.formatMessage({id: 'main_title_desc'})}</p>
+        <h1>Stop Ajit Pai’s Plan to Kill Net Neutrality</h1>
+        <p><span className="blue-highlight">Congress Needs to Hear from You</span></p>
+        <p className="header-paragraph">Call your members of Congress and urge them to stop Pai’s plan</p>
         <CallButton shadow={true} />
-        <p className="italic"><a href={`/${this.context.intl.locale}/net-neutrality/call-now`}>{this.context.intl.formatMessage({id: 'cta_tagline_calling'})}</a></p>
+        <p className="italic"><a href={`/${this.context.intl.locale}/net-neutrality/call-now`}>We’ll provide a script to help you make the call</a></p>
       </header>
     );
   }

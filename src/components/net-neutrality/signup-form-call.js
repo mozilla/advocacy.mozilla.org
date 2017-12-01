@@ -104,7 +104,7 @@ var SignupCall = React.createClass({
           action: "Submitted the form",
           label: "Net Neutrality"
         });
-        this.props.onSuccess();
+        window.location = "/" + this.context.intl.locale + "/net-neutrality/share";
       }, () => {
         // signup error
         this.setState({
@@ -134,7 +134,7 @@ var SignupCall = React.createClass({
       "submitting": this.state.submitting,
       "arrow": !this.state.submitting
     });
-    var buttonText = this.context.intl.formatMessage({id: 'subscrib_button'});
+    var buttonText = "Subscribe";
     if (this.state.submitting) {
       buttonText = ``;
     }
@@ -145,17 +145,17 @@ var SignupCall = React.createClass({
           <div className="signup-form-container">
             <div>
               <h3>
-                {this.context.intl.formatMessage({id: 'join_newsletter'})}
+                Join our newsletter
               </h3>
               <p>
-                {this.context.intl.formatMessage({id: 'join_newsletter_desc'})}
+                Keep updated on copyright and other issues affecting Internet health
               </p>
             </div>
 
             <div>
               <div className="no-wrap">
 
-                <input autoComplete="off" ref={(input) => { this.emailInput = input; }} type='email' className={emailClassName} value={this.state.emailInput} onChange={this.onEmailChange} required placeholder={this.context.intl.formatMessage({id: 'newsletter_placeholder'})}/>
+                <input autoComplete="off" ref={(input) => { this.emailInput = input; }} type='email' className={emailClassName} value={this.state.emailInput} onChange={this.onEmailChange} required placeholder="Email address"/>
 
                 <button onClick={this.onSubmit} className={desktopButtonClassName}>
                   {buttonText}
@@ -166,19 +166,14 @@ var SignupCall = React.createClass({
               <p className="error-message">{this.state.submissionError}</p>
               <label>
                 <input className="checkbox" autoComplete="off" onChange={this.onSignupChange} value={this.state.signupCheckboxChecked} type="checkbox"></input>
-                {this.context.intl.formatMessage({id: 'signup_checkbox'})}
+                Yes, I want to receive email updates about Mozilla’s campaigns.
               </label>
               <p className="privacy-error error-message">
                 {this.state.signupCheckboxError}
               </p>
               <label>
                 <input className="checkbox" autoComplete="off" onChange={this.onPrivacyChange} value={this.state.privacyCheckboxChecked} type="checkbox"></input>
-                <FormattedMessage
-                  id='newsletter_notice'
-                  values={{
-                    linkPrivacyNoticeNewsletter: (<a href="https://www.mozilla.org/privacy/websites/">{this.context.intl.formatMessage({id: 'newsletter_link_pn'})}</a>)
-                  }}
-                />
+                I’m okay with Mozilla handling my info as explained in <a href="https://www.mozilla.org/privacy/websites/">this Privacy Notice</a>.
               </label>
               <p className="privacy-error error-message">
                 {this.state.privacyCheckboxError}

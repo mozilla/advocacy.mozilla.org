@@ -3,63 +3,44 @@ import Footer from '../../components/net-neutrality/footer.js';
 import CallTool from '../../components/net-neutrality/call-tool.js';
 import { SimpleNav } from '../../components/net-neutrality/nav.js';
 
-import { FormattedHTMLMessage } from 'react-intl';
-
 var Resources = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
-  },
-  isAfterOct29: function() {
-    var date = new Date();
-    date.setUTCHours(date.getUTCHours() + 2);
-    var day = date.getUTCDate();
-    var month = date.getUTCMonth();
-    if (month >= 9 && day >= 29) {
-      return true;
-    }
-    return false;
   },
   render: function() {
     var className = "call-now";
     if (this.props.test) {
       className += " " + this.props.test;
     }
-    var hoursString = "business_hours_cest";
-    var hoursString = "business_hours_cest";
-    if (this.isAfterOct29()) {
-      hoursString = "business_hours_cet";
-    }
     return (
       <div className={className}>
         <div className="page">
-          <SimpleNav active="call-now" useLangPicker={true}/>
+          <SimpleNav active="call-now"/>
           <section>
-            <h1>{this.context.intl.formatMessage({id: 'call_tool_headline'})}</h1>
+            <h1>Here’s how to make the call</h1>
 
             <ol>
               <li>
                 <p className="bold">
-                  {this.context.intl.formatMessage({id: 'closed_for_business'})}
-                  {" "}
-                  {this.context.intl.formatMessage({id: hoursString})}
+                  Please visit this page during business hours to connect your call: Monday-Friday, 9:00-18:00 EST.
                 </p>
               </li>
               <li>
-                <p className="bold">{this.context.intl.formatMessage({id: 'script_step_1'})}</p>
+                <p className="bold">Make sure you have your phone nearby.</p>
               </li>
               <li>
-                <p className="bold">{this.context.intl.formatMessage({id: 'script_step_2'})}</p>
+                <p className="bold">Enter your phone number in the box below and click the “call now” button.</p>
               </li>
               <li>
-                <p className="bold">{this.context.intl.formatMessage({id: 'script_step_3'})}</p>
+                <p className="bold">Answer your phone when it rings, and you’ll be connected to a Member of Congress.</p>
               </li>
               <li>
-                <p className="bold">{this.context.intl.formatMessage({id: 'script_step_4'})}</p>
+                <p className="bold">Read the script below:</p>
 
-                <p><FormattedHTMLMessage id='script_desc_1'/></p>
-                <p><FormattedHTMLMessage id='script_desc_2'/></p>
-                <p><FormattedHTMLMessage id='script_desc_3'/></p>
-                <p><FormattedHTMLMessage id='script_desc_4'/></p>
+                <p>“Hi, I’m <b>[first name, last name]</b> and I’m from <b>[city, country]</b>.”</p>
+                <p>“I want to discuss Net Neutrality. I am a <b>[technologist, creator, scientist, journalist, librarian, artist, etc.]</b> and I believe in keeping the web open and fair. I don’t believe ISPs should have the power to pick and choose our online content.”</p>
+                <p>“Please speak out against Chairman Pai’s proposed rules and do all you can to stop the vote that’s scheduled for Dec 14.”</p>
+                <p>“Thank you for your time”</p>
               </li>
             </ol>
           </section>

@@ -74,10 +74,8 @@ function buildRoutes() {
         </Route>
         <Route path="net-neutrality">
           <IndexRoute component={require(`./pages/net-neutrality/call-page.js`)}/>
-          <Route path='impact' component={require(`./pages/net-neutrality/impact.js`)}/>
           <Route path='call-now' component={require(`./pages/net-neutrality/call-now.js`)}/>
           <Route path='share' component={require(`./pages/net-neutrality/share.js`)}/>
-          <Route path='resources' component={require(`./pages/net-neutrality/resources.js`)}/>
           <Route path='petition' component={require(`./pages/net-neutrality/petition.js`)}/>
           <Redirect from="*" to={"/" + locale + "/net-neutrality/"} />
         </Route>

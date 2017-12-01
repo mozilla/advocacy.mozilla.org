@@ -11,19 +11,19 @@ var Footer = React.createClass({
         <div className="footer-contents">
           <div className="footer-links">
             <a href="https://www.mozilla.org/contact/" className="footer-link contact">
-              {this.context.intl.formatMessage({id: 'contact_us'})}
+              Contact Us
             </a>
             <a href="https://twitter.com/Mozilla" className="footer-link follow">
-              {this.context.intl.formatMessage({id: 'follow'})}
+              Follow
             </a>
             <a href="https://www.mozilla.org/about/legal/terms/mozilla/" className="footer-link legal">
-              {this.context.intl.formatMessage({id: 'legal'})}
+              Legal
             </a>
             <a href="https://www.mozilla.org/privacy/websites/" className="footer-link privacy">
-              {this.context.intl.formatMessage({id: 'privacy'})}
+              Privacy
             </a>
             <a href="https://donate.mozilla.org/" className="footer-link donate">
-              {this.context.intl.formatMessage({id: 'donate'})}
+              Donate
             </a>
           </div>
           <div className="org-info">
@@ -31,9 +31,7 @@ var Footer = React.createClass({
               <a className="logo" href="https://mozilla.org"></a>
             </div>
             <span className="org-info-container">
-              <FormattedHTMLMessage
-                id='footer_description'
-              />
+              Mozilla is a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href="https://www.mozilla.org/">mozilla.org</a>.
             </span>
           </div>
         </div>
