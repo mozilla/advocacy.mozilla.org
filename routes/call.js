@@ -5,7 +5,6 @@ var FormData = require('form-data');
 var parseNumber = require('libphonenumber-js').parse;
 
 const CALL_POWER_URL = process.env.CALL_POWER_URL;
-const getCopyrightCampaign = require('./campaign-ids');
 
 module.exports = function handleCallRequest(request, reply) {
   var callInformation = request.payload;
@@ -44,7 +43,7 @@ module.exports = function handleCallRequest(request, reply) {
   // If we get here, we know the phone number is legit.
   // Extract the country for this number and the cleaned
   // number, and process with invoking a campaign calll.
-  const cid = getCopyrightCampaign(locale);
+  const cid = 1;
 
   var form = new FormData();
   form.append('userPhone', number);
