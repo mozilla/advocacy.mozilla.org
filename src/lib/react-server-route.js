@@ -77,10 +77,10 @@ module.exports = function(req, res, next) {
     metaTitle = "Will they hand the internet over to the big cable companies? Not if we do something about it.";
     metaSiteName = "Join me in protecting net neutrality";
     metaUrl = "https://advocacy.mozilla.org/en-US/net-neutrality/";
-    metaDesc = "The FCC’s received more than 22 million comments on whether to water down existing Net Neutrality rules and wants to vote on it in a month. One month to read all 22 million comments? That’s crazy. Tell the FCC to slow it down.";
+    metaDesc = "Last week Federal Communications Commission Chairman Ajit Pai revealed the anti-net-neutrality proposal his agency is set to vote on December 14. Will you call Congress and ask them to stop the vote?";
     metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
     twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/net-neutrality/save-the-internet.jpg";
-    desc = "The FCC’s received more than 22 million comments on whether to water down existing Net Neutrality rules and wants to vote on it in a month. One month to read all 22 million comments? That’s crazy. Tell the FCC to slow it down.";
+    desc = "Last week Federal Communications Commission Chairman Ajit Pai revealed the anti-net-neutrality proposal his agency is set to vote on December 14. Will you call Congress and ask them to stop the vote?";
     title = "Will they hand the internet over to the big cable companies? Not if we do something about it.";
   }
   var shareProgress = "";
