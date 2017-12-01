@@ -39,11 +39,11 @@
       @bw: 2px;
       .select-container {
         border: @bw solid red;
-        border-width: @bw 0 @bw @bw;
+        border-width: @bw @bw @bw @bw;
       }
       .input-container {
         border: @bw solid red;
-        border-width: @bw @bw @bw 0;
+        border-width: @bw @bw @bw @bw;
       }
     }
   }
@@ -58,7 +58,6 @@
 
     select {
       outline: none;
-      user-select: none;
       position: absolute;
       left: 0;
       width: 100%;
@@ -81,7 +80,6 @@
     input {
       outline: none;
       padding: 0 8px;
-      user-select: none;
       position: absolute;
       border-radius: 0;
       width: 100%;

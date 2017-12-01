@@ -25,7 +25,7 @@ module.exports = React.createClass({
         locale: this.context.intl.locale
       },
       (result) => this.callPlaced(result),
-      (status, errorPromise) => this.callFailed(status, errorPromise)
+      (result) => this.callFailed(result)
     );
   },
   callPlaced: function(result) {
@@ -33,12 +33,10 @@ module.exports = React.createClass({
       this.props.onSuccess(result);
     }
   },
-  callFailed: function(status, errorPromise) {
-    errorPromise.then(error => {
-      if (this.props.onError) {
-        this.props.onError(status, error);
-      }
-    });
+  callFailed: function(result) {
+    if (this.props.onError) {
+      this.props.onError(result);
+    }
     this.setState({
       submitting: false
     });

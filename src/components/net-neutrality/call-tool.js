@@ -54,10 +54,10 @@ module.exports = React.createClass({
       calling: true
     })
   },
-  handleError: function(status, e) {
+  handleError: function(result) {
     this.setState({
-      validNumber: status !== 409,
-      customError: getCustomError(status)
+      validNumber: result.status !== 409,
+      customError: getCustomError(result.status)
     });
   },
   retry: function() {
@@ -138,16 +138,11 @@ module.exports = React.createClass({
   renderCalling: function() {
     return (
       <section>
-        <h2 className="bold">{this.context.intl.formatMessage({id: 'calling_headline'})}</h2>
-        <div>{this.context.intl.formatMessage({id: 'calling_tagline'})}</div>
+        <h2 className="bold">Calling your phone now!</h2>
+        <div>Thank you for calling! Multiply your impact by sharing after your call.</div>
         <Social/>
         <p className="try-again">
-          <FormattedMessage
-            id='call_again'
-            values={{
-              callAgain: (<a href={`/${this.context.intl.locale}/net-neutrality/call-now`}>{this.context.intl.formatMessage({id: 'call_again_link'})}</a>)
-            }}
-          />
+          Didn’t get through? <a href={`/${this.context.intl.locale}/net-neutrality/call-now`}>Try calling again</a>.
         </p>
       </section>
     );
