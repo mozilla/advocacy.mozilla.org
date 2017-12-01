@@ -22,12 +22,14 @@ module.exports = function handleCallRequest(req, res) {
   }
 
   // It does not: strip out inert characters and continue.
-  number = number.replace(/[^0-9+]/g,'');
+  number = number.replace(/[^0-9]/g,'');
 
   // Ensure we a country code, 1 way or another ;).
   if (number.length === 10) {
     number = "1" + number;
   }
+
+  number = "+" + number;
 
   const locale = callInformation.locale || '';
   const parsed = parseNumber(number);
