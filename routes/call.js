@@ -46,7 +46,7 @@ module.exports = function handleCallRequest(req, res) {
 
   var form = new FormData();
   form.append('userPhone', number);
-  form.append('zip', zip);
+  form.append('userLocation', zip);
   form.append('userCountry', parsed.country);
   form.append('campaignId', COPYRIGHT_CAMPAIGN_ID);
 
