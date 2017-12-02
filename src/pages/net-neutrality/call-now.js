@@ -21,11 +21,6 @@ var Resources = React.createClass({
 
             <ol>
               <li>
-                <p className="bold">
-                  Please visit this page during business hours to connect your call: Monday-Friday, 9:00-18:00 EST.
-                </p>
-              </li>
-              <li>
                 <p className="bold">Make sure you have your phone nearby.</p>
               </li>
               <li>
