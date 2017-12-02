@@ -17,7 +17,8 @@ module.exports = function handleCallRequest(req, res) {
     return res.status(409).send({
       'call_placed': false,
       error: 'Phone number contains illegal characters.',
-      status: 409
+      status: 409,
+      value: "phone"
     });
   }
 
@@ -40,7 +41,26 @@ module.exports = function handleCallRequest(req, res) {
     return res.status(409).send({
       'call_placed': false,
       error: 'Phone number does not match the format required based on country code.',
-      status: 409
+      status: 409,
+      value: "phone"
+    });
+  }
+
+  if ((/[^0-9]/).test(zip)) {
+    return res.status(409).send({
+      'call_placed': false,
+      error: 'Zip contains illegal characters.',
+      status: 409,
+      value: "zip"
+    });
+  }
+
+  if (zip.length !== 5) {
+    return res.status(409).send({
+      'call_placed': false,
+      error: 'Zip not proper length.',
+      status: 409,
+      value: "zip"
     });
   }
 

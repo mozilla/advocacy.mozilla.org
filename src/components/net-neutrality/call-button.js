@@ -23,7 +23,7 @@ module.exports = React.createClass({
       {
         number: this.props.number,
         locale: this.context.intl.locale,
-        zip: "37097" // Just testing
+        zip: this.props.zip
       },
       (result) => this.callPlaced(result),
       (result) => this.callFailed(result)

@@ -26,10 +26,12 @@ module.exports = React.createClass({
   contextTypes: {
     intl: React.PropTypes.object
   },
-  getInitialState: function(number) {
+  getInitialState: function(number, zip) {
     return {
       number: number || "",
+      zip: zip || "",
       validNumber: true,
+      validZip: true,
       calling: false,
       customError: false
     };
@@ -39,8 +41,10 @@ module.exports = React.createClass({
       return;
     }
     var number = this.textInput.value;
+    var zip = this.zipInput.value;
     this.setState({
-      number
+      number,
+      zip
     });
   },
   numberChange: function(e) {
@@ -49,37 +53,38 @@ module.exports = React.createClass({
       validNumber: true
     });
   },
+  zipChange: function(e) {
+    this.setState({
+      zip: e.target.value,
+      validZip: true
+    });
+  },
   handleSuccess: function(s) {
     this.setState({
       calling: true
     })
   },
   handleError: function(result) {
+    var validNumber = true;
+    var validZip = true;
+    if (result.value === "phone") {
+      validNumber = false;
+    } else if (result.value === "zip") {
+      validZip = false;
+    }
     this.setState({
-      validNumber: result.status !== 409,
+      validNumber,
+      validZip,
       customError: getCustomError(result.status)
     });
   },
   retry: function() {
-    var state = this.getInitialState(this.state.number);
+    var state = this.getInitialState(this.state.number, this.state.zip);
     this.setState(state);
-  },
-  isBusinessClosed: function() {
-    var date = new Date();
-    date.setUTCHours(date.getUTCHours() - 5);
-    var day = date.getUTCDay();
-    var hour = date.getUTCHours();
-
-    if (day > 0 && day < 6 && hour > 8 && hour < 18) {
-      return false;
-    }
-    return true;
   },
   render: function() {
     var content = null;
-    if (this.isBusinessClosed()) {
-      content = this.renderClosedSign();
-    } else if (this.state.customError) {
+    if (this.state.customError) {
       content = this.renderCustomError();
     } else if (this.state.calling) {
       content = this.renderCalling();
@@ -97,34 +102,31 @@ module.exports = React.createClass({
       </section>
     );
   },
-  renderClosedSign: function() {
-    return (
-      <section>
-        <h2>
-          Please visit this page during business hours to connect your call:
-          <br/>
-          Monday-Friday, 9:00-18:00 EST.
-        </h2>
-      </section>
-    );
-  },
   renderForm: function() {
-
-    var placeholder = "Enter your phone #";
-
-    const message = this.state.validNumber ? 'Enter your phone number and get a call back immediately' : 'Whoops! Make sure you enter your correct phone number.';
+    var message = 'Enter your phone number and get a call back immediately';
+    if (!this.state.validNumber) {
+      message = 'Whoops! Make sure you enter your correct phone number.';
+    }else if (!this.state.validZip ) {
+      message = 'Whoops! Make sure you enter your correct zip code.';
+    }
 
     return (
       <section>
         <h2 className="bold">{message}</h2>
         <div className={classnames("phone-number-input-container", { "valid": this.state.validNumber })}>
           <span className="input-container">
-            <input ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder={placeholder}/>
+            <input ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder="Enter your phone #"/>
+          </span>
+        </div>
+        <div className={classnames("zip-input-container", { "valid": this.state.validZip })}>
+          <span className="input-container">
+            <input ref={(input) => { this.zipInput = input; }} onChange={this.zipChange} value={this.state.zip} placeholder="Enter your zip"/>
           </span>
         </div>
 
         <CallButton
           number={this.state.number}
+          zip={this.state.zip}
           onSuccess={s => this.handleSuccess(s)}
           onError={e => this.handleError(e)}
         />
