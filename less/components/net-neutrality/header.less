@@ -1,0 +1,52 @@
+header {
+  &.header {
+    /* Reset some header nonsense used in older projects */
+    pointer-events: auto;
+    width: auto;
+    height: auto;
+    position: static;
+  }
+
+  background-image: url("/assets/images/06_Background.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 50% -50px;
+  text-align: center;
+  padding: 3.5rem 0 1.5rem 0;
+  h1, p {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1050px;
+    padding: 0 25px;
+  }
+
+  .header-paragraph {
+    max-width: 950px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 2.35rem;
+    margin-bottom: 16px;
+  }
+  .italic {
+    font-style: italic;
+    font-weight: 400;
+    font-size: .93rem;
+    margin-top: 28px;
+  }
+  .blue-highlight {
+    font-family: Open Sans;
+    font-weight: 300;
+    color: black;
+    font-size: 1.2rem;
+    background: #42FEFD;
+    box-decoration-break: clone;
+    padding: 0.15rem;
+  }
+  .shadow {
+    box-shadow: 10px 10px #42FEFD;
+  }
+}

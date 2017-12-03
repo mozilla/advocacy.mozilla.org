@@ -1,0 +1,42 @@
+.share-page-container {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  min-height: ~"calc(100vh - 146px - 190px)";
+  @media screen and (min-width: 992px) {
+    min-height: ~"calc(100vh - 65px - 190px)";
+  }
+  .share-page-content-container {
+    margin: auto;
+    .share-page-content {
+      margin: 76px 0;
+      text-align: center;
+    }
+  }
+  .share-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0 auto;
+    margin: 0 auto;
+    .share-button {
+      color: #FFFFFF;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 30px;
+      &.email-button {
+        background: #7DD226;
+      }
+      &.facebook-button {
+        background: #32529E;
+      }
+      &.twitter-button {
+        background: #50B2FF;
+      }
+    }
+  }
+}
