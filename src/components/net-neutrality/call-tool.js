@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import CallButton from './call-button.js';
 import Social from './social.js';
+import reactGA from 'react-ga';
 
 /**
  * This function is responsible for mapping HTTP status numbers to
@@ -60,6 +61,11 @@ module.exports = React.createClass({
     });
   },
   handleSuccess: function(s) {
+    reactGA.event({
+      category: "Call Tool",
+      action: "Form Call Success",
+      label: "Net Neutrality"
+    });
     this.setState({
       calling: true
     })
@@ -71,6 +77,19 @@ module.exports = React.createClass({
       validNumber = false;
     } else if (result.value === "zip") {
       validZip = false;
+    }
+    if (result.value) {
+      reactGA.event({
+        category: "Call Tool",
+        action: "Form Call Error " + result.value,
+        label: "Net Neutrality"
+      });
+    } else {
+      reactGA.event({
+        category: "Call Tool",
+        action: "Form Call Error " + result.status,
+        label: "Net Neutrality"
+      });
     }
     this.setState({
       validNumber,

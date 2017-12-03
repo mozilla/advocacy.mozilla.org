@@ -86,7 +86,7 @@ var SignupCall = React.createClass({
         label: "Invalid Email Error"
       });
     }
-// Make sure this works with two check boxes
+
     if (valid) {
       // submit
       this.setState({
@@ -107,6 +107,11 @@ var SignupCall = React.createClass({
         window.location = "/" + this.context.intl.locale + "/net-neutrality/share";
       }, () => {
         // signup error
+        reactGA.event({
+          category: "Signup",
+          action: "Form Signup Error",
+          label: "Net Neutrality"
+        });
         this.setState({
           submitting: false,
           submissionError: "try again later"
