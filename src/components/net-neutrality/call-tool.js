@@ -132,27 +132,29 @@ module.exports = React.createClass({
     return (
       <section>
         <h2 className="bold">{message}</h2>
-        <div className={classnames("phone-number-input-container", { "valid": this.state.validNumber })}>
-          <span className="input-container">
-            <input ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder="Enter your phone #"/>
-          </span>
+        <div className="input-wrapper">
+          <div className={classnames("phone-number-input-container", { "valid": this.state.validNumber })}>
+            <span className="input-container">
+              <input ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder="Enter your phone #"/>
+            </span>
+          </div>
+          <div className={classnames("zip-input-container", { "valid": this.state.validZip })}>
+            <span className="input-container">
+              <input ref={(input) => { this.zipInput = input; }} onChange={this.zipChange} value={this.state.zip} placeholder="Enter your zip"/>
+            </span>
+          </div>
+          <div style={{"display":"inline-block"}}>
+          <CallButton
+            number={this.state.number}
+            zip={this.state.zip}
+            onSuccess={s => this.handleSuccess(s)}
+            onError={e => this.handleError(e)}
+          />
+          </div>
         </div>
-        <div className={classnames("zip-input-container", { "valid": this.state.validZip })}>
-          <span className="input-container">
-            <input ref={(input) => { this.zipInput = input; }} onChange={this.zipChange} value={this.state.zip} placeholder="Enter your zip"/>
-          </span>
-        </div>
-
-        <CallButton
-          number={this.state.number}
-          zip={this.state.zip}
-          onSuccess={s => this.handleSuccess(s)}
-          onError={e => this.handleError(e)}
-        />
-
-        <div>
+        <p>
           We will only use your phone number to make this call. Find out more about <a href="https://www.mozilla.org/about/legal/terms/mozilla/">Mozilla’s Terms of Service</a> and <a href="https://www.mozilla.org/privacy/websites/">Privacy Policy</a>
-        </div>
+        </p>
       </section>
     );
   },
