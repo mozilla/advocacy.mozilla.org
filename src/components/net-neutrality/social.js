@@ -1,9 +1,17 @@
 import React from 'react';
+import reactGA from 'react-ga';
 
 var SocialButton = React.createClass({
+  onClick: function() {
+    reactGA.event({
+      category: "Social",
+      action: this.props.type + " share clicked",
+      label: "Net Neutrality"
+    });
+  },
   render: function() {
     return (
-      <a {...this.props} target="_blank">
+      <a onClick={e => this.onClick(e)} {...this.props} target="_blank">
         {this.props.children}
       </a>
     );
@@ -25,13 +33,13 @@ module.exports = React.createClass({
 
     return (
       <div className="social-container">
-        <SocialButton href={facebookShareURL}>
+        <SocialButton href={facebookShareURL} type="facebook">
           <i className="fa fa-facebook" aria-hidden="true"/>
         </SocialButton>
-        <SocialButton href={twitterShareURL}>
+        <SocialButton href={twitterShareURL} type="twitter">
           <i className="fa fa-twitter" aria-hidden="true"/>
         </SocialButton>
-        <SocialButton href={emailShareURL}>
+        <SocialButton href={emailShareURL} type="email">
           <i className="fa fa-envelope" aria-hidden="true"/>
         </SocialButton>
       </div>
