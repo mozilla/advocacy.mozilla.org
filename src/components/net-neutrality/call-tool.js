@@ -143,13 +143,13 @@ module.exports = React.createClass({
               <input ref={(input) => { this.zipInput = input; }} onChange={this.zipChange} value={this.state.zip} placeholder="Enter your zip"/>
             </span>
           </div>
-          <div style={{"display":"inline-block"}}>
-          <CallButton
-            number={this.state.number}
-            zip={this.state.zip}
-            onSuccess={s => this.handleSuccess(s)}
-            onError={e => this.handleError(e)}
-          />
+          <div className="button-wrapper">
+            <CallButton
+              number={this.state.number}
+              zip={this.state.zip}
+              onSuccess={s => this.handleSuccess(s)}
+              onError={e => this.handleError(e)}
+            />
           </div>
         </div>
         <p>
