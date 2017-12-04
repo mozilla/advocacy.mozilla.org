@@ -135,21 +135,21 @@ module.exports = React.createClass({
         <div className="input-wrapper">
           <div className={classnames("phone-number-input-container", { "valid": this.state.validNumber })}>
             <span className="input-container">
-              <input ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder="Enter your phone #"/>
+              <input type="tel" ref={(input) => { this.textInput = input; }} onChange={this.numberChange} value={this.state.number} placeholder="Enter your phone #"/>
             </span>
           </div>
           <div className={classnames("zip-input-container", { "valid": this.state.validZip })}>
             <span className="input-container">
-              <input ref={(input) => { this.zipInput = input; }} onChange={this.zipChange} value={this.state.zip} placeholder="Enter your zip"/>
+              <input type="number" ref={(input) => { this.zipInput = input; }} onChange={this.zipChange} value={this.state.zip} placeholder="Enter your zip"/>
             </span>
           </div>
-          <div style={{"display":"inline-block"}}>
-          <CallButton
-            number={this.state.number}
-            zip={this.state.zip}
-            onSuccess={s => this.handleSuccess(s)}
-            onError={e => this.handleError(e)}
-          />
+          <div className="button-wrapper">
+            <CallButton
+              number={this.state.number}
+              zip={this.state.zip}
+              onSuccess={s => this.handleSuccess(s)}
+              onError={e => this.handleError(e)}
+            />
           </div>
         </div>
         <p>
