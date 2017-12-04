@@ -27,7 +27,7 @@ var Resources = React.createClass({
                 <p className="bold">Enter your phone number in the box below and click the “call now” button.</p>
               </li>
               <li>
-                <p className="bold">Answer your phone when it rings, and you’ll be connected to a Member of Congress.</p>
+                <p className="bold">Answer your phone when it rings, and you’ll be connected to a Member of Congress.*</p>
               </li>
               <li>
                 <p className="bold">Read the script below:</p>
@@ -38,6 +38,7 @@ var Resources = React.createClass({
                 <p>“Thank you for your time”</p>
               </li>
             </ol>
+            <small style={{"margin-bottom":"1em","display":"block"}}>*Because of split zipcodes there's a chance you'll be put through to a different representative. No worries, have a conversation with the office and ask them to transfer you. Reaching more people on this issue helps!</small>
           </section>
           <CallTool/>
         </div>
