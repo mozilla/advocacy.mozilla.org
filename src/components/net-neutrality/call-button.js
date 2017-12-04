@@ -71,8 +71,12 @@ module.exports = React.createClass({
     const classNames = classnames("call-tool-button", {
       "submitting": this.state.submitting
     });
+    var buttonText = "Call Now";
+    if (this.state.submitting) {
+      buttonText = "";
+    }
     return (
-      <button className={classNames} onClick={() => this.makeCall()}>Call Now</button>
+      <button className={classNames} onClick={() => this.makeCall()}>{buttonText}</button>
     )
   }
 });
