@@ -1,44 +1,46 @@
-.donate-container {
-  padding: 40px 30px;
-  max-width: 90vw;
-  text-align: center;
+.modal {
+  .donate-container {
+    padding: 40px 30px;
+    max-width: 90vw;
+    text-align: center;
 
-  @media screen and (min-width: 768px) {
-    max-width: 60vw;
-  }
+    @media screen and (min-width: 768px) {
+      max-width: 60vw;
+    }
 
-  background-color: #ffffff;
-  animation: popupAppear .15s ease-out;
+    background-color: #ffffff;
+    animation: popupAppear .15s ease-out;
 
-  @keyframes popupAppear {
-    0% { transform: scale(.85) }
-  }
+    @keyframes popupAppear {
+      0% { transform: scale(.85) }
+    }
 
-  h2 {
-    margin-top: 0;
-  }
+    h2 {
+      margin-top: 0;
+    }
 
-  p {
-    margin: 0 auto 15px;
-    color: #000000;
+    p {
+      margin: 0 auto 15px;
+      color: #000000;
 
-    &.emphasized {
-      font-weight: bold;
+      &.emphasized {
+        font-weight: bold;
+      }
+    }
+
+    .blankSpace {
+      display: none;
+    }
+
+    .donate-button {
+      background: #f42c2c;
+      color: #FFFFFF;
+      height: 52px;
+      padding: 0 36px;
+      margin: 15px 0 0;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
     }
   }
-
-  .blankSpace {
-    display: none;
-  }
-
-  .donate-button {
-    background: #f42c2c;
-    color: #FFFFFF;
-    height: 52px;
-    padding: 0 36px;
-    margin: 15px 0 0;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-  }
- }
+}
