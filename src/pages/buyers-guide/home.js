@@ -115,6 +115,7 @@ var BuyersGuide = React.createClass({
               <p className="playfair">
                 {this.context.intl.formatMessage({id: 'hero_unit_paragraph'})}
               </p>
+              <a className="itallic playfair wwmt" href="/privacynotincluded/why-we-made">{this.context.intl.formatMessage({id: 'wwmt_main_title'})}</a>
             </div>
             <div className="more-arrow">
               <img className="more-arrow" src="/assets/arrow-icon-white.png"/>
