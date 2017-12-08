@@ -120,7 +120,7 @@ var Signup = React.createClass({
                 <div>
                   <h1>Protect Net Neutrality</h1>
                   <br/>
-                  <p>Ask Congress to act.</p>
+                  <p>Tell Congress to Act</p>
                 </div>
                 <a className="attribution" href="https://www.flickr.com/photos/josephgruber/15109096143/in/photolist-p294TD-pY1vRA">Image by Joseph Gruber, CC BY-NC-ND 2.0</a>
               </div>
@@ -150,7 +150,7 @@ var Signup = React.createClass({
             <FccFormSticky viewportPadding={0} ref={(input) => { this.stickyForm = input; }}>
               <h4>
                 Add your name to the petition.<br/>
-                Ask Congress to stand up for Net Neutrality.
+                Urge Congress to stand up for Net Neutrality.
               </h4>
               <div className="blue-paragraph">
                 <p>
