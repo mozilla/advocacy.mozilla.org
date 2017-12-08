@@ -118,45 +118,51 @@ var Signup = React.createClass({
             <div className="form-body-container">
               <div className="nn-comments-header">
                 <div>
-                  <h1>Slow It Down!*</h1>
+                  <h1>Protect Net Neutrality</h1>
                   <br/>
-                  <p>*Not the Internet. The FCC.</p>
+                  <p>Ask Congress to act.</p>
                 </div>
                 <a className="attribution" href="https://www.flickr.com/photos/josephgruber/15109096143/in/photolist-p294TD-pY1vRA">Image by Joseph Gruber, CC BY-NC-ND 2.0</a>
               </div>
               <div className="form-body-border">
                 <div className="form-body">
                   <p className="form-description fancy-letter">
-                    The FCC has received more than 22 million comments on the issue of whether to gut rules essential for free speech, innovation, and consumer freedom and choice.
-                  </p>
-                  <p className="form-description">
-                    Yet Ajit Pai has announced the Federal Communications Commission will be voting on Net Neutrality in just a few weeks.
+                    The FCC just passed Chairman Ajit Pai’s Net Neutrality-eradicating, Internet-killing rules on a hyperpartisan vote.
                   </p>
                   <p>
-                    <b>Pai’s timing is revealing — making the announcement while millions of Americans are traveling for Thanksgiving.</b>
+                    <b>But Congress can still act. Tell them to stop Pai’s rules before they’re started.</b>
                   </p>
                   <p>
-                    From the start, the FCC’s process around these rules failed to properly consider public input — and there’s no way that they’ve actually considered each of the 22 million comments they received.
+                    Here’s how it works: Congress can reverse recently-passed regulations under the terms of the “Congressional Review Act,” or CRA. Given the outcry from Republicans, Democrats, and everyone in between -- and the enormous danger Pai’s order poses to the Internet and its users -- we think it’s appropriate for Congress to invoke this tactic.
                   </p>
                   <p>
-                    That’s why they’re burying the news just days before one of our biggest holidays — they were hoping you and I wouldn’t notice. We can’t let them get away with this. We’re building a fighting fund for the open web, so we can send a clear message to the FCC: we see, we care — and we won’t go down without a fight.
+                    Earlier this year, Congress used this procedure to block rules to protect users’ privacy on broadband networks. In response, Internet users flooded Congress with complaints -- and Congress took notice. It’s time again to remind them that they need to protect us and Net Neutrality, not protect the big companies that want to control your Internet.
+                  </p>
+                  <p>
+                    The more members of Congress hear from you -- their constituent -- the more they’ll want to join the amazing wave of opposition that’s showing no signs of slowing.
+                  </p>
+                  <p>
+                    <b>Urge your member of Congress to oppose Pai’s rules now.</b>
                   </p>
                 </div>
               </div>
             </div>
             <FccFormSticky viewportPadding={0} ref={(input) => { this.stickyForm = input; }}>
               <h4>
-                Take action now and tell the FCC to Slow. It. Down.<br/>
-                The future of the Internet depends on it.
+                Add your name to the petition.<br/>
+                Ask Congress to stand up for Net Neutrality.
               </h4>
               <div className="blue-paragraph">
                 <p>
-                  Dear FCC Chairman Ajit Pai:</p>
+                  Dear Members of Congress:</p>
                 <p>
-                  The FCC has received more than 22 million comments on the issue of whether to water down existing Net Neutrality rules.
+                  The FCC just passed Chairman Ajit Pai’s Net Neutrality-eradicating, Internet-killing rules on a hyperpartisan vote.
                 </p>
                 <p>
-                  Given the enormity of this response, coming from private citizens, startups, and industry -- and the importance of this decision to the future of the Internet -- the FCC needs to slow things down and ensure it’s taking the volume and substance of the public’s response into account. Anything less would be an abdication of your responsibilities.
+                  Republicans, Democrats, and everyone in between -- from all around the country -- are outraged at the enormous danger Pai’s order poses to the Internet and its users.
+                </p>
+                <p>
+                  I urge you to utilize the Congressional Review Act to reverse these damaging rules and restore the Internet back to its rightful owners -- its users.
                 </p>
               </div>
               <FccFormContainer cta="Tell the FCC: Leave Net Neutrality Alone">
