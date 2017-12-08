@@ -32,7 +32,7 @@ var CallPage = React.createClass({
       <div className={className}>
         <div className="page">
           <div id="home" className="nav-anchor nav-offset"></div>
-          <SimpleNav active="home"/>
+          <SimpleNav active="call-home"/>
           <Header/>
           <section>
             <h1>

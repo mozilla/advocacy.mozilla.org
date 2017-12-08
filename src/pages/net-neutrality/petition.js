@@ -3,6 +3,7 @@ import storage from '../../lib/session-storage.js';
 
 import Footer from '../../components/signup-form/footer.js';
 import Header from '../../components/signup-form/header.js';
+import { SimpleNav } from '../../components/net-neutrality/nav.js';
 import Logo from '../../components/signup-form/logo.js';
 import FccFormSticky from '../../components/signup-form/signup-form-sticky.js';
 import FccForm from '../../components/net-neutrality/fcc-form.js';
@@ -112,12 +113,10 @@ var Signup = React.createClass({
         { this.generateModal() }
         <div className="net-neutrality-page page">
           <div id="about" className="nav-anchor nav-offset"></div>
+          <SimpleNav active="home"/>
           <div className="signup-container">
             <div className="form-body-container">
               <div className="nn-comments-header">
-                <div>
-                  <a href="https://mozilla.org/" className="moz-logo"></a>
-                </div>
                 <div>
                   <h1>Slow It Down!*</h1>
                   <br/>

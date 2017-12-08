@@ -33,9 +33,14 @@ var SimpleNav = React.createClass({
     if (!links) {
       links = this.props.links || [
         {
-          text: "Stop Ajit Pai",
+          text: "Take Action",
           item: `home`,
           href: `/${this.context.intl.locale}/net-neutrality/`
+        },
+        {
+          text: "Stop Ajit Pai",
+          item: `call-home`,
+          href: `/${this.context.intl.locale}/net-neutrality/call-home`
         },
         {
           text: "Call Now",
