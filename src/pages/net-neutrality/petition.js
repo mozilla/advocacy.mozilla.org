@@ -113,7 +113,7 @@ var Signup = React.createClass({
         { this.generateModal() }
         <div className="net-neutrality-page page">
           <div id="about" className="nav-anchor nav-offset"></div>
-          <SimpleNav active="home"/>
+          <SimpleNav active="take-action"/>
           <div className="signup-container">
             <div className="form-body-container">
               <div className="nn-comments-header">
