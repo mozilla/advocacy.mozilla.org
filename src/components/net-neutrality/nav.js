@@ -41,7 +41,12 @@ var SimpleNav = React.createClass({
           text: "Call Now",
           item: `call-now`,
           href: `/${this.context.intl.locale}/net-neutrality/call-now`
-        }
+        }/*,
+        {
+          text: "Take Action",
+          item: `take-action`,
+          href: `/${this.context.intl.locale}/net-neutrality/petition`
+        }*/
       ];
     }
 
