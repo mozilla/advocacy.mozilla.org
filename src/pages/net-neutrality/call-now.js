@@ -34,7 +34,7 @@ var Resources = React.createClass({
 
                 <p>“Hi, I’m <b>[first name, last name]</b> and I’m from <b>[city, state]</b>.”</p>
                 <p>“I want to discuss Net Neutrality. I am a <b>[technologist, creator, scientist, journalist, librarian, artist, etc.]</b> and I believe in keeping the web open and fair. I don’t believe ISPs should have the power to pick and choose our online content.”</p>
-                <p>“Please speak out against Chairman Pai’s adopted rules and do all you can to reverse effects of the vote that took place December 14.”</p>
+                <p>“Please speak out against Chairman Pai’s adopted rules and do all you can to reverse the effects of the vote that took place December 14.”</p>
                 <p>“Thank you for your time”</p>
               </li>
             </ol>
