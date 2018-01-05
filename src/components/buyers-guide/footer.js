@@ -11,6 +11,14 @@ var Footer = React.createClass({
     if (locale === "es") {
       defaultShare = "https://share.mozilla.org/352/184298";
     }
+    var methologyLink = null;
+    if (locale === "en-US") {
+      methologyLink = (
+        <a href="https://medium.com/@harraton/evaluating-the-products-in-privacy-not-included-b83f88691342" className="footer-link methodology">
+          Methodology
+        </a>
+      );
+    }
     var shareLink = this.props.shareLink || defaultShare;
     return (
       <footer className="generic-footer">
@@ -25,6 +33,7 @@ var Footer = React.createClass({
             <a href="https://twitter.com/Mozilla" className="footer-link follow">
               {this.context.intl.formatMessage({id: 'bg_footer_follow'})}
             </a>
+            {methologyLink}
             <a href="https://www.mozilla.org/about/legal/terms/mozilla/" className="footer-link legal">
               {this.context.intl.formatMessage({id: 'bg_footer_legal'})}
             </a>
