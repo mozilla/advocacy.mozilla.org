@@ -23,10 +23,11 @@ var Signup = React.createClass({
     };
   },
   componentDidMount: function() {
-    if (typeof window !== "undefined" && window.addEventListener) {
-      this._withScroll = e => this.handleScroll(e);
-      window.addEventListener('scroll', this._withScroll);
-    }
+  // We don't need a scroll triggered modal but it's likely this will come back
+  //   if (typeof window !== "undefined" && window.addEventListener) {
+  //     this._withScroll = e => this.handleScroll(e);
+  //     window.addEventListener('scroll', this._withScroll);
+  //   }
   },
   componentWillUnmount() {
     if (this._withScroll) {
