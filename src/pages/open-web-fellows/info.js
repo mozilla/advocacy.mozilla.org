@@ -4,6 +4,7 @@ var Header = require(`../../components/header.js`);
 var HeroUnit = require(`../../components/hero-unit.js`);
 var FellowsHeader = require(`../../components/fellows-header.js`);
 var ContentContainer = require(`../../components/content-container.js`);
+var ApplyBanner = require(`../../components/open-web-fellows/apply.js`);
 
 var Collapse = require(`rc-collapse`);
 
@@ -51,6 +52,10 @@ module.exports = React.createClass({
             </Collapse>
           </ContentContainer>
         </div>
+         <ApplyBanner 
+          title="Host-Org Application Open"
+          description="We are now soliciting applications for our 2018-2019 cohort of Host Organizations. We match these organizations to our Fellows, starting in August 2018. Host applications will remain open until February 16, 2018."
+          cta = {{label:'Apply Now to Host!', link:'https://mozilla.fluxx.io/apply/OWFHostOrg'}} />
         <Footer/>
       </div>
     );
