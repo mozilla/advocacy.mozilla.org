@@ -111,6 +111,10 @@ function buildRoutes() {
     );
   });
 
+  if (routes.length === 0) {
+    console.error("No locale routes were constructed!");
+  }
+
   ["en-US", "es"].forEach(function(locale) {
     routes.push(
       <Route key={locale + "-privacynotincluded"} path={locale}>
@@ -131,8 +135,4 @@ function buildRoutes() {
   return routes;
 }
 // just need to handle / redirect now
-module.exports = (
-  <Route path="/">
-    {buildRoutes()}
-  </Route>
-);
+module.exports = <Route path="/">{ buildRoutes() }</Route>;

@@ -1,4 +1,3 @@
-var defaultConfig = require('../intl-config.js');
 var propertiesParser = require('properties-parser');
 var path = require('path');
 var FS = require("q-io/fs");
@@ -13,12 +12,21 @@ var supportedLocales = env.get('SUPPORTED_LOCALES') || "*";
 function getDirectoryLocales(src) {
   return FS.listDirectoryTree(path.join(process.cwd(), src)).then(function(dirTree) {
     var list = [];
-    dirTree.forEach(function(i) {
-      var that = i.split(src + '/');
-      if (that[1]) {
-        list.push(that[1]);
+    dirTree.forEach(function(entry) {
+      var contituents = entry.split(src).map(v => v.trim());
+      var localeCode = contituents[1];
+      if (localeCode) {
+        // locales only consist of letters with an optional dash mixed
+        // in, so we remove everything else (like path delimiters):
+        list.push(localeCode.replace(/[^\w-]/g,''));
       }
     });
+
+    if (list.length === 0) {
+      console.error("No locale data was aggregated!");
+      process.exit(1);
+    }
+
     return list;
   });
 }
@@ -97,11 +105,4 @@ function applyConfig(config) {
   });
 }
 
-applyConfig(defaultConfig);
-applyConfig({
-  "dest": {
-    "dir": "public",
-    "file": "buyers-guide-locales.json"
-  },
-  "src": "buyers-guide-locales"
-});
+module.exports = applyConfig;

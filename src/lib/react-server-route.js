@@ -19,7 +19,6 @@ module.exports = function(req, res, next) {
   var location = url.parse(req.url).pathname;
   var search = url.parse(req.url).search || "";
   var locale = "";
-
   var metaTitle = "Mozilla’s Policy & Advocacy Program - Home";
   var metaSiteName = "Mozilla Advocacy";
   var metaUrl = "http://advocacy.mozilla.org/";
@@ -167,6 +166,7 @@ module.exports = function(req, res, next) {
       }
 
       let html = "";
+
       if (location.indexOf('/maker-party/') !== -1) {
         if (location.indexOf('/post-crimes/') !== -1) {
           title = "Maker Party | Postcrimes";
@@ -186,24 +186,27 @@ module.exports = function(req, res, next) {
             title={title}
           />
         );
-      } else {
-        html = ReactDOM.renderToStaticMarkup(
-          <HTML reactHTML={reactHTML}
-            locale={locale}
-            metaTitle={metaTitle}
-            metaSiteName={metaSiteName}
-            metaUrl={metaUrl}
-            metaDesc={metaDesc}
-            twitterDesc={twitterDesc}
-            metaImage={metaImage}
-            twitterImage={twitterImage}
-            desc={desc}
-            title={title}
-            htmlClassName={htmlClassName}
-            shareProgress={shareProgress}
-            buyersGuide={buyersGuide}
-          />
-        );
+      }
+
+      else {
+        let htmlProps = {
+          reactHTML: reactHTML,
+          locale: locale,
+          metaTitle: metaTitle,
+          metaSiteName: metaSiteName,
+          metaUrl: metaUrl,
+          metaDesc: metaDesc,
+          twitterDesc: twitterDesc,
+          metaImage: metaImage,
+          twitterImage: twitterImage,
+          desc: desc,
+          title: title,
+          htmlClassName: htmlClassName,
+          shareProgress: shareProgress,
+          buyersGuide: buyersGuide
+        };
+
+        html = ReactDOM.renderToStaticMarkup(<HTML {...htmlProps} />);
       }
 
       // And to be good citizens of the web, we need a doctype, which React
@@ -218,6 +221,8 @@ module.exports = function(req, res, next) {
     // and it didn't find any render properties with which to render
     // a (set of) React component(s), we should fall through to whatever
     // else our express server can try to do to serve up content.
-    else { next(); }
+    else {
+      next();
+    }
   });
 };
