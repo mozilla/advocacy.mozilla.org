@@ -38,9 +38,10 @@ var CallPage = React.createClass({
             <h1>
               How will this impact me?
             </h1>
-            <p>Last week Federal Communications Commission Chairman Ajit Pai revealed the anti-net-neutrality proposal his agency is set to vote on December 14th. <b>These rules are way, way, WAY worse than expected</b>.</p>
-            <p>If passed, this would eradicate crucial protections for free speech, competition, and innovation online. It would be legal for big cable companies to create fast lanes, to throttle the speeds of competing websites, or to filter out social media posts they don’t like. <b>This could mean that you pay more for less of the web</b>.</p>
-            <p>At this stage of political gamesmanship, Congress holds a powerful sway over this issue.  As constituent outrage grows, they can call on Pai to stall the vote on these awful rules, and to hold him accountable if he goes through with it. There’s already been a groundswell of opposition, but we need to raise the volume even higher so that every elected official knows how toxic Pai’s plan is.</p>
+
+            <p>Lawmakers are considering a resolution of disapproval that - if passed - will stop Pai’s Net Neutrality order from coming into effect. Ever. The Congressional Review Act (CRA) lets our representatives overturn decisions by agencies like the FCC - that’s why we need to push Congress to make it happen.</p>
+            <p>In the Senate, the resolution already has over 50 supporters - that’s all the Senate Democrats and Independents, along with Republican Susan Collins. Getting the CRA resolution through the House is going to be harder; 20 Republicans need to support the resolution for it to have a chance. But we know that net neutrality isn’t a partisan issue outside of DC.</p>
+            <p><strong>That’s where you come in. We know that public pressure can move Congress to do the right thing - the key is to show up.</strong></p>
           </section>
           <CallButton/>
           <SignupForm/>
