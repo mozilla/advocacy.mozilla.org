@@ -106,36 +106,6 @@ var BuyersGuide = React.createClass({
     return (
       <div className="buyers-guide buyers-guide-home">
         <Header title={false}/>
-        <section className={headerClassName}>
-          <header className="red header-image">
-            <div className="center-header">
-              <h1 className="asterix playfair">
-                {this.context.intl.formatMessage({id: 'privacy_not_included'})}
-              </h1>
-              <p className="playfair">
-                {this.context.intl.formatMessage({id: 'hero_unit_paragraph'})}
-              </p>
-              <a className="itallic playfair wwmt" href="/privacynotincluded/why-we-made">{this.context.intl.formatMessage({id: 'wwmt_main_title'})}</a>
-            </div>
-            <div className="more-arrow">
-              <img className="more-arrow" src="/assets/arrow-icon-white.png"/>
-            </div>
-          </header>
-          <div className="content-container">
-            <div className="content">
-              <p className="playfair fancy-letter">
-                <FormattedHTMLMessage id="thats_why"/>
-              </p>
-              <div className="start-show playfair">
-                <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
-                <p className="itallic playfair">
-                  {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
-                </p>
-                <div className="center-line"></div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <div ref={(input) => { this.categoriesContainer = input; }} className={categoriesContainerClassName}>
           <Category
