@@ -85,12 +85,14 @@ var Header = React.createClass({
       <div>
         <div className="buyers-guide-header-container">
           <div className="buyers-guide-header">
+            <div className="burger-basket">
+              {hamburger}
+              <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}></Link>
+              <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}></Link>
+            </div>
+
             {headerTitle}
-            {hamburger}
-            <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
-            </Link>
-            <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}>
-            </Link>
+
             <div className="social-buttons">
               <button onClick={this.shareFbClick} className="social-button">
                 <i className="fa fa-facebook fa-1x"></i>
@@ -102,6 +104,9 @@ var Header = React.createClass({
                 <i className="fa fa-envelope fa-1x"></i>
               </button>
             </div>
+          </div>
+          <div className="bg-subhead">
+            <p>A Guide to Make Shopping for Connected Gifts Safer, Easier, and Way More Fun</p>
           </div>
           <Menu open={this.state.menuOpen} onClick={this.onClick}/>
         </div>
