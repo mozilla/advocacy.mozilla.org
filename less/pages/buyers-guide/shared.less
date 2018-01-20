@@ -1,18 +1,19 @@
 .buyers-guide-header-container {
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  z-index: 3;
+
   .buyers-guide-header {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     letter-spacing: 0.25px;
-    background: #fff;
-    color: #000;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    padding: 10px 20px;
-    z-index: 3;
     display: flex;
     justify-content: space-between;
+    padding: 10px 20px;
 
     .burger-basket {
       display: flex;
@@ -24,6 +25,13 @@
         font-size: 12px;
       }
     }
+  }
+  .bg-subhead {
+    font-family: "Open Sans";
+    font-size: 16px;
+    letter-spacing: 0.24px;
+    max-width: 370px;
+    padding: 10px 20px;
   }
   .menu-container {
     position: fixed;
