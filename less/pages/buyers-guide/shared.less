@@ -8,13 +8,14 @@
   z-index: 3;
 
   .buyers-guide-header {
-    font-family: "Playfair Display", serif;
-    font-weight: 700;
-    letter-spacing: 0.25px;
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.56px;
+    line-height: 28px;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
-
+    padding: 20px;
     .burger-basket {
       display: flex;
       align-items: center;
@@ -23,6 +24,15 @@
     .header-title {
       @media screen and (max-width: 380px) {
         font-size: 12px;
+      }
+    }
+
+    .social-buttons {
+      display: flex;
+      align-items: center;
+
+      button {
+        padding: 10px;
       }
     }
   }
@@ -360,23 +370,15 @@
     }
     &.social-button {
       color: #000;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 10px;
-      height: 30px;
-      width: 10px;
-      @media screen and (min-width: 750px) {
-        width: 30px;
-      }
       font-size: 16px;
     }
   }
   a {
     &.moz-logo {
       @media screen and (min-width: 750px) {
-        height: 18.5px;
-        margin: 0 5px;
+        width: 111px;
+        height: 32px;
+        margin-right: 20px;
         background-image: url("/assets/moz-logo-one-color-white-rgb.svg");
         filter: invert();
         background-repeat: no-repeat;
@@ -390,11 +392,13 @@
       }
     }
     &.moz-logo-2 {
-      height: 17px;
-      width: 23px;
-      margin: 0 5px;
+      height: 28px;
+      width: 28px;
+      margin-right: 20px;
       background-image: url("/assets/moz-fav-bw-rgb-reverse.svg");
       background-size: contain;
+      background-repeat: no-repeat;
+      filter: invert();
       img {
         display: block;
         height: 100%;
