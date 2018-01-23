@@ -80,7 +80,7 @@ var Header = React.createClass({
           <div className="burger-basket">
             <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}></Link>
             <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}></Link>
-            <div className="header-title">{this.context.intl.formatMessage({id: 'privacy_not_included'})}</div>
+            <div className="header-title">*{this.context.intl.formatMessage({id: 'privacy_not_included'})}</div>
           </div>
 
           <div className="social-buttons">
