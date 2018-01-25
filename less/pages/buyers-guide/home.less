@@ -10,10 +10,14 @@
     max-width: 400px;
     font-family: "Open Sans";
     font-weight: 300;
-    font-size: 48px;
+    font-size: 24px;
     color: #000;
     letter-spacing: 0.3px;
-    line-height: 52px;
+
+    @media screen and (min-width: 668px) {
+      font-size: 48px;
+      line-height: 52px;
+    }
   }
   section {
     background: #FFFFFF;
