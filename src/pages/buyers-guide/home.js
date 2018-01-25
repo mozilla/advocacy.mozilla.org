@@ -172,32 +172,9 @@ var BuyersGuide = React.createClass({
 
         <div className={footerClassName}>
           <section className="donate-container">
-            <p className="playfair">
-              {this.context.intl.formatMessage({id: 'donate_cta'})}
-            </p>
-            <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
-              {this.context.intl.formatMessage({id: 'donate_now'})}
-            </a>
-          </section>
-          <section className="red footer-image">
-            <h2 className="playfair">
-              {this.context.intl.formatMessage({id: 'best_to_you_and_yours'})}
-            </h2>
-            <p className="page-width itallic info-blob playfair">
+            <p>
               <FormattedHTMLMessage id="info_blob"/>
             </p>
-            <p>{this.context.intl.formatMessage({id: 'share_this_page'})}</p>
-            <div className="social-buttons">
-              <button onClick={this.shareFbClick} className="social-button">
-                <i className="fa fa-facebook fa-1x"></i>
-              </button>
-              <button onClick={this.shareTwClick} className="social-button">
-                <i className="fa fa-twitter fa-1x"></i>
-              </button>
-              <button onClick={this.shareEmClick} className="social-button">
-                <i className="fa fa-envelope fa-1x"></i>
-              </button>
-            </div>
           </section>
           <Footer/>
         </div>
