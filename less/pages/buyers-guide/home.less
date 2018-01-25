@@ -7,7 +7,17 @@
     }
   }
   h2.playfair {
-    max-width: 450px;
+    max-width: 400px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 0.3px;
+
+    @media screen and (min-width: 668px) {
+      font-size: 48px;
+      line-height: 52px;
+    }
   }
   section {
     background: #FFFFFF;
@@ -54,9 +64,9 @@
       position: relative;
       .category-top {
         display: flex;
-        text-align: center;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        padding: 0 45px;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -77,15 +87,26 @@
           }
         }
         a {
-          color: #FFFFFF;
+          color: #000;
           @media screen and (min-width: 668px) {
             font-size: 30px;
           }
           text-decoration: none;
           font-weight: 900;
           p {
-            text-decoration: underline;
+            font-family: "Open Sans";
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2.33px;
             font-weight: 700;
+            background: #fff;
+            display: inline-block;
+            padding: 15px 20px;
+
+            &:hover {
+              background: #000;
+              color: #fff;
+            }
           }
         }
       }
@@ -94,7 +115,7 @@
         .image-container {
           height: 100%;
           @media screen and (min-width: 668px) {
-            background-attachment: fixed;
+            background-attachment: local;
           }
           background-position: center;
           background-repeat: no-repeat;
@@ -170,7 +191,6 @@
     }
     p, a {
       font-family: 'Open Sans', sans-serif;
-      letter-spacing: 1.5px;
     }
     p.playfair, p.playfair a {
       font-family: 'Playfair Display', serif;
@@ -201,6 +221,23 @@
     p {
       margin: 0 auto 15px;
       color: #000000;
+      padding: 40px 20px;
+      background: #F2F2F2;
+      max-width: 930px;
+      text-align: left;
+      font-size: 14px;
+
+      span {
+        display: block;
+        max-width: 500px;
+        margin: auto;
+        letter-spacing: 0;
+
+        a {
+          color: #000;
+          letter-spacing: 0;
+        }
+      }
     }
     .donate-button {
       background: #f42c2c;

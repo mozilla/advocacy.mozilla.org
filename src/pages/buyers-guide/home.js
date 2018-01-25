@@ -105,37 +105,7 @@ var BuyersGuide = React.createClass({
 
     return (
       <div className="buyers-guide buyers-guide-home">
-        <Header title={false}/>
-        <section className={headerClassName}>
-          <header className="red header-image">
-            <div className="center-header">
-              <h1 className="asterix playfair">
-                {this.context.intl.formatMessage({id: 'privacy_not_included'})}
-              </h1>
-              <p className="playfair">
-                {this.context.intl.formatMessage({id: 'hero_unit_paragraph'})}
-              </p>
-              <a className="itallic playfair wwmt" href="/privacynotincluded/why-we-made">{this.context.intl.formatMessage({id: 'wwmt_main_title'})}</a>
-            </div>
-            <div className="more-arrow">
-              <img className="more-arrow" src="/assets/arrow-icon-white.png"/>
-            </div>
-          </header>
-          <div className="content-container">
-            <div className="content">
-              <p className="playfair fancy-letter">
-                <FormattedHTMLMessage id="thats_why"/>
-              </p>
-              <div className="start-show playfair">
-                <h2>{this.context.intl.formatMessage({id: 'see_the_guide'})}</h2>
-                <p className="itallic playfair">
-                  {this.context.intl.formatMessage({id: 'swipe_or_scroll'})}
-                </p>
-                <div className="center-line"></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Header subhead="A Guide to Make Shopping for Connected Gifts Safer, Easier, and Way More Fun" title={false}/>
 
         <div ref={(input) => { this.categoriesContainer = input; }} className={categoriesContainerClassName}>
           <Category
@@ -202,32 +172,9 @@ var BuyersGuide = React.createClass({
 
         <div className={footerClassName}>
           <section className="donate-container">
-            <p className="playfair">
-              {this.context.intl.formatMessage({id: 'donate_cta'})}
-            </p>
-            <a onClick={this.donateClicked} href="https://donate.mozilla.org" className="donate-button">
-              {this.context.intl.formatMessage({id: 'donate_now'})}
-            </a>
-          </section>
-          <section className="red footer-image">
-            <h2 className="playfair">
-              {this.context.intl.formatMessage({id: 'best_to_you_and_yours'})}
-            </h2>
-            <p className="page-width itallic info-blob playfair">
+            <p>
               <FormattedHTMLMessage id="info_blob"/>
             </p>
-            <p>{this.context.intl.formatMessage({id: 'share_this_page'})}</p>
-            <div className="social-buttons">
-              <button onClick={this.shareFbClick} className="social-button">
-                <i className="fa fa-facebook fa-1x"></i>
-              </button>
-              <button onClick={this.shareTwClick} className="social-button">
-                <i className="fa fa-twitter fa-1x"></i>
-              </button>
-              <button onClick={this.shareEmClick} className="social-button">
-                <i className="fa fa-envelope fa-1x"></i>
-              </button>
-            </div>
           </section>
           <Footer/>
         </div>
