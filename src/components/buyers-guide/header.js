@@ -51,11 +51,7 @@ var Header = React.createClass({
 
     var headerTitle = null;
     var breadcrumb = null;
-    var hamburger = (
-      <button className="hamburger" onClick={this.toggleMenu}>
-        <i className="fa fa-bars fa-2x"></i>
-      </button>
-    );
+
     if (this.props.bradcrumb) {
       breadcrumb = (
         <Breadcrumb
@@ -64,13 +60,6 @@ var Header = React.createClass({
           openMenu={this.toggleMenu}
           onClick={this.onClick}
         />
-      );
-    }
-    if (this.state.menuOpen) {
-      hamburger = (
-        <button className="hamburger" onClick={this.toggleMenu}>
-          <i className="fa fa-times"></i>
-        </button>
       );
     }
 
@@ -93,7 +82,7 @@ var Header = React.createClass({
             <button onClick={this.shareEmClick} className="social-button">
               <i className="fa fa-envelope fa-1x"></i>
             </button>
-            {hamburger}
+            <button className="hamburger" onClick={this.toggleMenu}></button>
           </div>
         </div>
 

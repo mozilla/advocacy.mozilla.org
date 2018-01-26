@@ -47,7 +47,7 @@
     }
   }
   .menu-container {
-    padding: 40px;
+    padding: 20px 45px;
     display: none;
     position: fixed;
     width: 100vw;
@@ -61,6 +61,8 @@
       width: 29px;
       height: 29px;
       background: no-repeat url("/assets/buyers-guide/menu-close.svg") 0 0 / contain;
+      position: relative;
+      top: 5px;
     }
 
     .moz-logo {
@@ -78,11 +80,15 @@
     .link-container {
       a {
         font-family: "Open Sans";
-        font-size: 40px;
+        font-size: 20px;
         color: #fff;
         letter-spacing: 0.84px;
-        line-height: 54px;
+        line-height: 1.35;
         text-decoration: none;
+
+        @media screen and (min-width: 750px) {
+          font-size: 40px;
+        }
 
         *:hover {
           text-decoration: underline;
@@ -261,13 +267,14 @@
     padding: 0;
     margin: 0 5px;
     &.hamburger {
-      .fa-times {
-        font-size: 2.025rem;
-      }
+      background: url("/assets/buyers-guide/menu-burger.svg") no-repeat 0 0 / contain;
+      width: 33px;
+      height: 38px;
+      margin-left: 15px;
     }
     &.social-button {
       color: #000;
-      font-size: 16px;
+      font-size: 20px;
     }
   }
   a {
