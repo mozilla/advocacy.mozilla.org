@@ -47,151 +47,45 @@
     }
   }
   .menu-container {
+    padding: 40px;
+    display: none;
     position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    font-size: 0;
-    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+
+    .close-button {
+      width: 29px;
+      height: 29px;
+      background: no-repeat url("/assets/buyers-guide/menu-close.svg") 0 0 / contain;
+    }
+
+    .moz-logo {
+      margin-top: 30px;
+      display: block;
+      filter: invert();
+    }
+
+    &.show {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
     .link-container {
       a {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transition: height 0.3s;
-        height: 0;
-        color: #FFFFFF;
+        font-family: "Open Sans";
+        font-size: 40px;
+        color: #fff;
+        letter-spacing: 0.84px;
+        line-height: 54px;
         text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: #F44041;
-        padding: 0 20px;
-        font-size: 20px;
-        font-weight: 600;
-        overflow: hidden;
-      }
-      position: relative;
-      &:nth-child(4n+2) a,
-      &:nth-child(4n+3) a {
-        background-color: #E53939;
-      }
 
-      &:nth-child(1) a {
-        transition-delay: 0s;
-      }
-      &:nth-child(2) a {
-        transition-delay: 0.1s;
-      }
-      &:nth-child(3) a {
-        transition-delay: 0.1s;
-      }
-      &:nth-child(4) a {
-        transition-delay: 0.2s;
-      }
-      &:nth-child(5) a {
-        transition-delay: 0.2s;
-      }
-      &:nth-child(6) a {
-        transition-delay: 0.3s;
-      }
-      &:nth-child(7) a {
-        transition-delay: 0.3s;
-      }
-      &:nth-child(8) a {
-        transition-delay: 0.4s;
-      }
-
-      a {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      &.home-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/home-thumbnail.jpg);
-      }
-      &.toys-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/01-toys-thumbnail.jpg);
-      }
-      &.game-consoles-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/02-game-consoles-thumbnail.jpg);
-      }
-      &.home-hubs-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/03-home-hubs-thumbnail.jpg);
-      }
-      &.smart-home-accessories-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/04-smart-home-accessories-thumbnail.jpg);
-      }
-      &.gadgets-gizmos-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/05-gadgets-and-gizmos-thumbnail.jpg);
-      }
-      &.health-excercise-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/06-health-and-exercise-thumbnail.jpg);
-      }
-      &.why-link a {
-        background-image: url(/assets/buyers-guide/thumbnails/08-why-we-made-this-guide.jpg);
-      }
-
-      overflow: hidden;
-      width: 50%;
-      height: 25%;
-      display: inline-block;
-      @media (orientation: landscape) {
-        width: 25%;
-        height: 50%;
-        &:nth-child(2n+1) a {
-          background-color: #F44041;
-        }
-        &:nth-child(2n+2) a {
-          background-color: #E53939;
-        }
-        &:nth-child(2n+5) a {
-          background-color: #E53939;
-        }
-        &:nth-child(2n+6) a {
-          background-color: #F44041;
-        }
-
-        &:nth-child(1) a {
-          transition-delay: 0s;
-        }
-        &:nth-child(2) a {
-          transition-delay: 0.1s;
-        }
-        &:nth-child(3) a {
-          transition-delay: 0.2s;
-        }
-        &:nth-child(4) a {
-          transition-delay: 0.3s;
-        }
-        &:nth-child(5) a {
-          transition-delay: 0.1s;
-        }
-        &:nth-child(6) a {
-          transition-delay: 0.2s;
-        }
-        &:nth-child(7) a {
-          transition-delay: 0.3s;
-        }
-        &:nth-child(8) a {
-          transition-delay: 0.4s;
-        }
-      }
-    }
-    &.show {
-      pointer-events: auto;
-      .link-container {
-        a {
-          height: 100%;
-        }
-      }
-      .link-container {
-        @media (orientation: landscape) {
-          width: 25%;
-          height: 50%;
+        *:hover {
+          text-decoration: underline;
         }
       }
     }
