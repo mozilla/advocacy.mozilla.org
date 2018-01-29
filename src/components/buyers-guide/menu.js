@@ -22,7 +22,7 @@ var Menu = React.createClass({
           <button onClick={this.onClick} className="close-button"></button>
         </div>
 
-        <div>
+        <div className="menu-links">
           <div className="link-container home-link">
             <Link onClick={this.onClick} to={"/" + locale + "/privacynotincluded/"}>
               {this.context.intl.formatMessage({id: 'home_label'})}
