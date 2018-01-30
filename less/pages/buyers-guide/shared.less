@@ -25,9 +25,13 @@
     }
 
     .header-title {
+      display: flex;
       font-family: "Zilla Slab", sans-serif;
-      @media screen and (max-width: 500px) {
-        font-size: 12px;
+      font-size: 16px;
+      font-weight: 900;
+
+      @media screen and (min-width: 500px) {
+        font-size: 30px;
       }
     }
 
@@ -310,7 +314,7 @@
       background-image: url("/assets/moz-fav-bw-rgb-reverse.svg");
       background-size: contain;
       background-repeat: no-repeat;
-      filter: invert();
+      filter: invert(100%);
       img {
         display: block;
         height: 100%;
