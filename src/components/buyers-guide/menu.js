@@ -11,7 +11,7 @@ var Menu = React.createClass({
   },
   render: function() {
     const locale = this.context.intl.locale;
-    var menuClassName = "menu-container playfair";
+    var menuClassName = "menu-container zilla-slab";
     if (this.props.open) {
       menuClassName += " show";
     }
