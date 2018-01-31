@@ -6,8 +6,20 @@
       font-size: 70px;
     }
   }
-  h2.playfair {
-    max-width: 450px;
+  h2.zilla-slab {
+    max-width: 250px;
+    line-height: 28px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 0.3px;
+
+    @media screen and (min-width: 500px) {
+      max-width: 400px;
+      font-size: 48px;
+      line-height: 52px;
+    }
   }
   section {
     background: #FFFFFF;
@@ -52,11 +64,12 @@
         height: 100vh;
       }
       position: relative;
+
       .category-top {
         display: flex;
-        text-align: center;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        padding: 0 20px;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -64,7 +77,8 @@
         height: 100%;
         width: 50%;
         top: 0;
-        @media screen and (min-width: 750px) {
+        @media screen and (min-width: 500px) {
+          padding: 0 60px;
           pointer-events: none;
           opacity: 0;
           position: fixed;
@@ -77,15 +91,32 @@
           }
         }
         a {
-          color: #FFFFFF;
+          color: #000;
           @media screen and (min-width: 668px) {
             font-size: 30px;
           }
           text-decoration: none;
           font-weight: 900;
           p {
-            text-decoration: underline;
+            font-size: 11px;
+            letter-spacing: 1.75px;
+            padding: 10px 12px;
+            font-family: "Open Sans";
+            text-transform: uppercase;
             font-weight: 700;
+            background: #fff;
+            display: inline-block;
+
+            @media screen and (min-width: 500px) {
+              font-size: 14px;
+              letter-spacing: 2.33px;
+              padding: 15px 20px;
+            }
+
+            &:hover {
+              background: #000;
+              color: #fff;
+            }
           }
         }
       }
@@ -93,10 +124,11 @@
         height: 100%;
         .image-container {
           height: 100%;
-          @media screen and (min-width: 668px) {
-            background-attachment: fixed;
+          @media screen and (min-width: 500px) {
+            background-attachment: local;
+            background-position: center;
           }
-          background-position: center;
+          background-position: left;
           background-repeat: no-repeat;
           background-size: cover;
         }
@@ -137,7 +169,7 @@
           height: 40px;
         }
         max-width: 700px;
-        p.playfair.fancy-letter {
+        p.zilla-slab.fancy-letter {
           margin-top: 30px;
           margin-bottom: 30px;
           font-size: 22px;
@@ -170,9 +202,8 @@
     }
     p, a {
       font-family: 'Open Sans', sans-serif;
-      letter-spacing: 1.5px;
     }
-    p.playfair, p.playfair a {
+    p.zilla-slab, p.zilla-slab a {
       font-family: 'Playfair Display', serif;
       font-size: 16px;
       line-height: 23px;
@@ -201,6 +232,23 @@
     p {
       margin: 0 auto 15px;
       color: #000000;
+      padding: 40px 20px;
+      background: #F2F2F2;
+      max-width: 930px;
+      text-align: left;
+      font-size: 14px;
+
+      span {
+        display: block;
+        max-width: 500px;
+        margin: auto;
+        letter-spacing: 0;
+
+        a {
+          color: #000;
+          letter-spacing: 0;
+        }
+      }
     }
     .donate-button {
       background: #f42c2c;

@@ -90,10 +90,10 @@ var Signup = React.createClass({
       <Modal onClose={() => this.closeModal()}>
         <section className="donate-container">
         <h2>We all love the web.<br/> Join Mozilla in defending it.</h2>
-          <p className="playfair">
+          <p className="zilla-slab">
             The future of the Internet is at stake, with new threats to our online privacy and security almost every day. M<span className="blankSpace">&nbsp;</span>ozilla fights to save a healthy Internet, with grassroots advocacy work and software that enables the open web.
           </p>
-          <p className="playfair emphasized">
+          <p className="zilla-slab emphasized">
             As a non-profit we rely on your support, so please donate today.
           </p>
           <a href="https://donate.mozilla.org" className="donate-button">

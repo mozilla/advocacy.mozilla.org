@@ -240,7 +240,7 @@ var BuyersGuide = React.createClass({
           <Modal onClose={this.closeModal}>
             <div className="signup-form">
               <div>
-                <h2 className="playfair">
+                <h2 className="zilla-slab">
                   {this.context.intl.formatMessage({id: 'thank_you_sign_up'})}
                 </h2>
                 <p>
@@ -269,7 +269,7 @@ var BuyersGuide = React.createClass({
           <Modal onClose={this.closeModal}>
             <div className="signup-form">
               <div>
-                <h2 className="playfair">
+                <h2 className="zilla-slab">
                   {this.context.intl.formatMessage({id: 'next_time'})}
                 </h2>
                 <p>
@@ -298,7 +298,7 @@ var BuyersGuide = React.createClass({
           <Modal onClose={this.closeModal}>
             <div className="signup-form">
               <div>
-                <h2 className="playfair">
+                <h2 className="zilla-slab">
                   <FormattedHTMLMessage id='donate_modal_title'/>
                 </h2>
                 <p>
@@ -522,7 +522,7 @@ var BuyersGuide = React.createClass({
               {item.company}
             </h2>
             <a className="product-url" href={item.url}>
-              <h1 className="playfair">
+              <h1 className="zilla-slab">
                 {this.context.intl.formatMessage({id: item.product})}
               </h1>
             </a>

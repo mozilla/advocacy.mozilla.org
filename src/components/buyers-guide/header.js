@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import reactGA from 'react-ga';
 import Menu from './menu.js';
 import Breadcrumb from './breadcrumb.js';
+import { FormattedHTMLMessage } from 'react-intl';
 
 var Header = React.createClass({
   getInitialState: function() {
@@ -51,18 +52,7 @@ var Header = React.createClass({
 
     var headerTitle = null;
     var breadcrumb = null;
-    var hamburger = (
-      <button className="hamburger" onClick={this.toggleMenu}>
-        <i className="fa fa-bars fa-2x"></i>
-      </button>
-    );
-    if (this.props.title) {
-      headerTitle = (
-        <div className="asterix header-title">
-          {this.context.intl.formatMessage({id: 'privacy_not_included'})}
-        </div>
-      );
-    }
+
     if (this.props.bradcrumb) {
       breadcrumb = (
         <Breadcrumb
@@ -73,39 +63,39 @@ var Header = React.createClass({
         />
       );
     }
-    if (this.state.menuOpen) {
-      hamburger = (
-        <button className="hamburger" onClick={this.toggleMenu}>
-          <i className="fa fa-times"></i>
-        </button>
-      );
-    }
 
     return (
-      <div>
-        <div className="buyers-guide-header-container">
-          <div className="buyers-guide-header">
-            {headerTitle}
-            {hamburger}
-            <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}>
-            </Link>
-            <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}>
-            </Link>
-            <div className="social-buttons">
-              <button onClick={this.shareFbClick} className="social-button">
-                <i className="fa fa-facebook fa-1x"></i>
-              </button>
-              <button onClick={this.shareTwClick} className="social-button">
-                <i className="fa fa-twitter fa-1x"></i>
-              </button>
-              <button onClick={this.shareEmClick} className="social-button">
-                <i className="fa fa-envelope fa-1x"></i>
-              </button>
-            </div>
+      <div className="buyers-guide-header-container">
+        <div className="buyers-guide-header">
+          <div className="burger-basket">
+            <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}></Link>
+            <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}></Link>
+            <div className="header-title">*<FormattedHTMLMessage id='privacy_not_included_formatted'/></div>
           </div>
-          <Menu open={this.state.menuOpen} onClick={this.onClick}/>
+
+          <div className="social-buttons">
+            <button onClick={this.shareFbClick} className="social-button">
+              <i className="fa fa-facebook fa-1x"></i>
+            </button>
+            <button onClick={this.shareTwClick} className="social-button twitter">
+              <i className="fa fa-twitter fa-1x"></i>
+            </button>
+            <button onClick={this.shareEmClick} className="social-button">
+              <i className="fa fa-envelope fa-1x"></i>
+            </button>
+            <button className="hamburger" onClick={this.toggleMenu}></button>
+          </div>
         </div>
+
+        {this.props.subhead &&
+        <div className="bg-subhead">
+          <p>{this.props.subhead}</p>
+        </div>
+        }
+
         {breadcrumb}
+
+        <Menu open={this.state.menuOpen} onClick={this.onClick}/>
       </div>
     );
   }
