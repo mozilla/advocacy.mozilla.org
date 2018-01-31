@@ -105,7 +105,7 @@ var BuyersGuide = React.createClass({
 
     return (
       <div className="buyers-guide buyers-guide-home">
-        <Header subhead="A Guide to Make Shopping for Connected Gifts Safer, Easier, and Way More Fun" title={false}/>
+        <Header subhead={this.context.intl.formatMessage({id: 'hero_unit_paragraph'})} title={false}/>
 
         <div ref={(input) => { this.categoriesContainer = input; }} className={categoriesContainerClassName}>
           <Category
