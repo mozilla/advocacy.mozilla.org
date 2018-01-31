@@ -21,7 +21,7 @@ var Product = React.createClass({
             <img src={this.props.img}/>
           </div>
           <div className="category-item-label">{this.props.company}</div>
-          <div className="category-item-header playfair">
+          <div className="category-item-header zilla-slab">
             {this.context.intl.formatMessage({id: this.props.product})}
           </div>
         </Link>
@@ -43,10 +43,10 @@ var BuyersGuide = React.createClass({
         <Header title={true} bradcrumb={true} category={category}/>
         <section>
           <div className="page-width">
-            <h1 className="playfair">
+            <h1 className="zilla-slab">
               {this.context.intl.formatMessage({id: 'cat_title_' + category})}
             </h1>
-            <p className="itallic info-blob playfair">
+            <p className="itallic info-blob zilla-slab">
               {this.context.intl.formatMessage({id: 'info_provided'})}
             </p>
             <div className="categories-container">

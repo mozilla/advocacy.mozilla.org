@@ -18,25 +18,25 @@ var BuyersGuide = React.createClass({
         <div>
           <section>
             <div className="content">
-              <h1 className="playfair">
+              <h1 className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_main_title'})}
               </h1>
-              <h2 className="playfair">
+              <h2 className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_title_1'})}
               </h2>
-              <p className="playfair">
+              <p className="zilla-slab">
                 <FormattedHTMLMessage id='wwmt_1'/>
               </p>
-              <h2 className="playfair">
+              <h2 className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_title_2'})}
               </h2>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_2'})}
               </p>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_3'})}
               </p>
-              <h2 className="playfair">
+              <h2 className="zilla-slab">
                 <p>
                   {this.context.intl.formatMessage({id: 'wwmt_question'})}
                 </p>
@@ -50,33 +50,33 @@ var BuyersGuide = React.createClass({
                   {this.context.intl.formatMessage({id: 'wwmt_question_3'})}
                 </p>
               </h2>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_4'})}
               </p>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_5'})}
               </p>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_6'})}
               </p>
-              <h2 className="playfair">
+              <h2 className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_title_3'})}
               </h2>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_7'})}
               </p>
-              <p className="playfair">
+              <p className="zilla-slab">
                 <FormattedHTMLMessage id='wwmt_8'/>
               </p>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_9'})}
               </p>
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_10'})}
               </p>
 
-              <h2 className="playfair">
-                <p className="playfair">
+              <h2 className="zilla-slab">
+                <p className="zilla-slab">
                   {this.context.intl.formatMessage({id: 'wwmt_11'})}
                 </p>
                 <br/>
@@ -88,7 +88,7 @@ var BuyersGuide = React.createClass({
                 </p>
               </h2>
 
-              <p className="playfair">
+              <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_post_scriptum'})}
               </p>
             </div>

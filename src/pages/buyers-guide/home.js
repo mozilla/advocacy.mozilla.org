@@ -26,8 +26,8 @@ var Category = React.createClass({
       <div className="home-category-container">
         <div className={linkClassName}>
           <Link onClick={this.scrollToTop} to={this.props.href}>
-            <h2 className="playfair">{this.props.header}</h2>
-            <p className="playfair">{this.props.category}</p>
+            <h2 className="zilla-slab">{this.props.header}</h2>
+            <p className="zilla-slab">{this.props.category}</p>
           </Link>
         </div>
         <div className="category-bottom">

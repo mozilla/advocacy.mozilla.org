@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="36px" viewBox="0 0 30 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="LANDING-PAGE---BUTTON-HOVER-STATE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-945.000000, -23.000000)">
+        <g id="Group" transform="translate(944.000000, 23.000000)" fill="#000000">
+            <g id="Menu" transform="translate(2.000000, 0.000000)">
+                <g id="lines-copy">
+                    <polygon id="Rectangle-15" points="29 0 11.8460165 0.00246529159 11 2.99936385 29 3"></polygon>
+                    <polygon id="Rectangle-15-Copy-3" points="29 18 5.83961133 18.0024653 5 20.9993639 29 21"></polygon>
+                    <polygon id="Rectangle-15-Copy-2" points="29 9 0.838104339 9.00246529 1.79412041e-12 11.9993639 29 12"></polygon>
+                </g>
+            </g>
+            <text id="menu" font-family="OpenSans-Bold, Open Sans" font-size="10" font-weight="bold" letter-spacing="0.800000012">
+                <tspan x="0.46396482" y="35">menu</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

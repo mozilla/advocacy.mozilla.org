@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import reactGA from 'react-ga';
 import Menu from './menu.js';
 import Breadcrumb from './breadcrumb.js';
+import { FormattedHTMLMessage } from 'react-intl';
 
 var Header = React.createClass({
   getInitialState: function() {
@@ -51,11 +52,7 @@ var Header = React.createClass({
 
     var headerTitle = null;
     var breadcrumb = null;
-    var hamburger = (
-      <button className="hamburger" onClick={this.toggleMenu}>
-        <i className="fa fa-bars fa-2x"></i>
-      </button>
-    );
+
     if (this.props.bradcrumb) {
       breadcrumb = (
         <Breadcrumb
@@ -66,13 +63,6 @@ var Header = React.createClass({
         />
       );
     }
-    if (this.state.menuOpen) {
-      hamburger = (
-        <button className="hamburger" onClick={this.toggleMenu}>
-          <i className="fa fa-times"></i>
-        </button>
-      );
-    }
 
     return (
       <div className="buyers-guide-header-container">
@@ -80,20 +70,20 @@ var Header = React.createClass({
           <div className="burger-basket">
             <Link className="moz-logo" to={"/" + locale + "/privacynotincluded/"}></Link>
             <Link className="moz-logo-2" to={"/" + locale + "/privacynotincluded/"}></Link>
-            <div className="header-title">*{this.context.intl.formatMessage({id: 'privacy_not_included'})}</div>
+            <div className="header-title">*<FormattedHTMLMessage id='privacy_not_included_formatted'/></div>
           </div>
 
           <div className="social-buttons">
             <button onClick={this.shareFbClick} className="social-button">
               <i className="fa fa-facebook fa-1x"></i>
             </button>
-            <button onClick={this.shareTwClick} className="social-button">
+            <button onClick={this.shareTwClick} className="social-button twitter">
               <i className="fa fa-twitter fa-1x"></i>
             </button>
             <button onClick={this.shareEmClick} className="social-button">
               <i className="fa fa-envelope fa-1x"></i>
             </button>
-            {hamburger}
+            <button className="hamburger" onClick={this.toggleMenu}></button>
           </div>
         </div>
 
