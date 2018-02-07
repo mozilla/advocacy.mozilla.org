@@ -154,14 +154,14 @@ module.exports = function(req, res, next) {
         metaTitle = messages["privacy_not_included"];
         metaSiteName = messages["privacy_not_included"];
         metaUrl = "https://advocacy.mozilla.org/" + locale + "/privacynotincluded/";
-        metaDesc = messages["bg_sharing_facebook_body_1"];
+        metaDesc = messages["bg_sharing_facebook_body_evergreen1"];
         metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_facebook.jpg";
         twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_twitter.jpg";
         if (locale === "es") {
           metaImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_facebook-ES.jpg";
           twitterImage = "https://advocacy-mozilla-org-prod.herokuapp.com/assets/buyers-guide/social/social_twitter-ES.jpg";
         }
-        desc = messages["bg_sharing_facebook_body_1"];
+        desc = messages["bg_sharing_facebook_body_evergreen1"];
         title = messages["privacy_not_included"];
       }
 
