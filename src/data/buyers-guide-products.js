@@ -111,7 +111,7 @@ module.exports = {
     "img": "/assets/buyers-guide/products/iDevices-Switch.jpg",
     "company": "iDevices",
     "product": "product_7_title",
-    "blerb": "product_7_blurb",
+    "blerb": "product_7_blurb_evergreen",
     "url": "https://store.idevicesinc.com/idevices-switch/",
     "price": "$29.95",
     "camera": true,
