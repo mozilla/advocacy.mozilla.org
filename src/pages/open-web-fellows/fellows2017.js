@@ -191,7 +191,7 @@ module.exports = React.createClass({
             </FellowBlock>
           </ContentContainer>
         </div>
-         <ApplyBanner 
+         <ApplyBanner
           title="Host-Org Application Open"
           description="Are you a civil society and social justice organization interested in hosting an Open Web Fellow, apply here to join our 2018-2019 cohort of Host Organizations. Host applications close on February 16, 2018."
           cta = {{label:'Apply Now to Host!', link:'https://mozilla.fluxx.io/apply/OWFHostOrg'}} />
