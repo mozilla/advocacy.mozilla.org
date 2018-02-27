@@ -34,7 +34,7 @@ var BuyersGuide = React.createClass({
                 {this.context.intl.formatMessage({id: 'wwmt_2'})}
               </p>
               <p className="zilla-slab">
-                {this.context.intl.formatMessage({id: 'wwmt_3'})}
+                {this.context.intl.formatMessage({id: 'wwmt_evergreen3'})}
               </p>
               <h2 className="zilla-slab">
                 <p>
