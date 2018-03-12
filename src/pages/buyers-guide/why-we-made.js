@@ -21,13 +21,13 @@ var BuyersGuide = React.createClass({
               <h1 className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_main_title'})}
               </h1>
-              <h2 className="zilla-slab">
+              <h2>
                 {this.context.intl.formatMessage({id: 'wwmt_title_1'})}
               </h2>
               <p className="zilla-slab">
                 <FormattedHTMLMessage id='wwmt_1'/>
               </p>
-              <h2 className="zilla-slab">
+              <h2>
                 {this.context.intl.formatMessage({id: 'wwmt_title_2'})}
               </h2>
               <p className="zilla-slab">
@@ -36,7 +36,7 @@ var BuyersGuide = React.createClass({
               <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_evergreen3'})}
               </p>
-              <h2 className="zilla-slab">
+              <h2>
                 <p>
                   {this.context.intl.formatMessage({id: 'wwmt_question'})}
                 </p>
@@ -59,10 +59,10 @@ var BuyersGuide = React.createClass({
               <p className="zilla-slab">
                 {this.context.intl.formatMessage({id: 'wwmt_6'})}
               </p>
-              <h2 className="zilla-slab">
+              <h2>
                 {this.context.intl.formatMessage({id: 'wwmt_title_3'})}
               </h2>
-              <p className="zilla-slab">
+              <p>
                 {this.context.intl.formatMessage({id: 'wwmt_7'})}
               </p>
               <p className="zilla-slab">
@@ -75,7 +75,7 @@ var BuyersGuide = React.createClass({
                 {this.context.intl.formatMessage({id: 'wwmt_evergreen10'})}
               </p>
 
-              <h2 className="zilla-slab">
+              <h2>
                 <p className="zilla-slab">
                   {this.context.intl.formatMessage({id: 'wwmt_11'})}
                 </p>

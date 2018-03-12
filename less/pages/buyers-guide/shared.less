@@ -42,7 +42,6 @@
     .social-buttons {
       display: flex;
       align-items: center;
-
       button {
         padding: 10px;
       }
@@ -131,6 +130,10 @@
 }
 
 .buyers-guide-html {
+  background: #000000;
+  body {
+    color: #000000;
+  }
   .share-progress-button {
     display: none;
   }
@@ -256,7 +259,7 @@
       .donate-container {
         margin: 25px 0 15px 0;
         .donate-button {
-          background: #f42c2c;
+          background: #03a8a8;
           color: #FFFFFF;
           height: 52px;
           padding: 0 36px;
@@ -264,6 +267,9 @@
           display: inline-flex;
           align-items: center;
           text-decoration: none;
+          &:hover {
+            background: #007575;
+          }
         }
       }
 
@@ -307,6 +313,10 @@
       font-size: 16px;
       &.twitter {
         font-size: 19px;
+      }
+
+      &:hover {
+        opacity: 0.5;
       }
       @media screen and (min-width: 500px) {
         font-size: 20px;
@@ -383,7 +393,7 @@
       margin: 0;
     }
     .breadcrumb-item.last {
-      color: #FF0000;
+      color: #03a8a8;
     }
   }
   .page-width {
@@ -449,6 +459,7 @@
     font-family: "Zilla Slab";
   }
   .generic-footer {
+    font-family: "Open Sans";
     a {
       color: #FFFFFF;
     }

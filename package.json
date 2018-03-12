@@ -68,6 +68,7 @@
     "npm-run-all": "1.2.4",
     "object-assign": "4.1.0",
     "postcss-loader": "0.8.1",
+    "prop-types": "^15.6.1",
     "properties-parser": "0.3.1",
     "q-io": "1.13.2",
     "rc-collapse": "1.6.3",

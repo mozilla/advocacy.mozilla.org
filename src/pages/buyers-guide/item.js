@@ -527,7 +527,7 @@ var BuyersGuide = React.createClass({
               </h1>
             </a>
             <div>{item.price}</div>
-            <p>
+            <p className="item-paragraph">
               {this.context.intl.formatMessage({id: item.blerb})}
             </p>
             {/*<p className="age-range">{item.age}</p>*/}
