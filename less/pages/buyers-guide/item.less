@@ -17,7 +17,7 @@
     color: #F44040;
   }
   .green-result {
-    color: #67BA07;
+    color: #03a8a8;
   }
   .related-products-container {
     display: flex;
@@ -136,6 +136,10 @@
     h1 {
       margin: 0;
     }
+    .item-paragraph {
+      margin-bottom: 40px;
+      line-height: 1.6rem;
+    }
     .age-range {
       font-style: italic;
     }
@@ -143,13 +147,15 @@
       margin-bottom: 0;
     }
     .copy-link {
-      background: #383838;
+      background: #03a8a8;
       color: #FFFFFF;
       vertical-align: text-bottom;
       padding: 2px 12px;
       float: right;
-      opacity: 0.3;
       height: 33px;
+      &:hover {
+        background: #007575;
+      }
     }
     .copy-link-container {
       margin: 20px 0;
@@ -159,7 +165,7 @@
       width: 100%;
       left: 0;
       right: 0;
-      top: 45px;
+      top: 128px;
       opacity: 0;
       visibility: none;
       pointer-events: none;
