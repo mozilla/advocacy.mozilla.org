@@ -148,6 +148,11 @@ module.exports = React.createClass({
             </FellowBlock>
           </ContentContainer>
         </div>
+        <ApplyBanner 
+          title="Fellowship Application Open"
+          description="We are an inclusive program and seek Fellows that reflect the diversity of the communities we serve. We encourage unique contributors with varied backgrounds to apply; if you feel your perspective is under-represented in technology, we want to hear from you!"
+           cta = {{label:'Apply Now!', link:'https://foundation.mozilla.org/fellowships/apply/'}} />
+
         <Footer/>
       </div>
     );
