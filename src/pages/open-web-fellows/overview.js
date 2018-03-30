@@ -52,7 +52,7 @@ module.exports = React.createClass({
                 <li className="icon-flag">Be an active contributor to the work, culture and mission of the host organization</li>
                 <li className="icon-cubes">Participate in Mozilla-organized events, such as conferences, learning labs, and weekly calls, and community events (MozFest, etc.)</li>
                 <li className="icon-communicate">Communicate and share openly their work on an ongoing basis (e.g., blog posts)</li>
-                <li className="icon-time">Program Timeline: The 2016 fellowship year starts September 1st. Host organizations for 2017 will be selected this fall, and applications for 2017 fellows will open in early spring. </li>
+                <li className="icon-time">Program Timeline: The 2018 fellowship year starts September 1st. Host organizations for 2018 are selected in March, and applications for 2018 fellows are open until April 20th, 5:00PM ET. </li>
               </ul>
           </ContentContainer>
           <ContentContainer>
@@ -60,28 +60,28 @@ module.exports = React.createClass({
             <p>Host organizations are leading policy and advocacy organizations dedicated to safeguarding the open internet. Host organizations include:</p>
             <div className="organization-row">
               <Organization
-                imgSrc="/assets/logo-cipit.svg"
-                linkTitle="Nairobi, Kenya"
+                imgSrc="/assets/logo-cr.svg"
+                linkTitle="Washington D.C., USA"
                 width="155" height="80"
-                linkLocation="https://www.cipit.org/"
+                linkLocation="https://www.consumerreports.org/cro/index.htm"
               />
               <Organization
-                imgSrc="/assets/logo-citizenlab.svg"
-                linkTitle="Toronto, Canada"
+                imgSrc="/assets/logo-tor.svg"
+                linkTitle="Global"
                 width="180" height="80"
-                linkLocation="https://citizenlab.org/"
+                linkLocation="https://www.torproject.org/index.html.en"
               />
               <Organization
-                imgSrc="/assets/logo-colorofchange.svg"
+                imgSrc="/assets/logo-witness.png"
                 linkTitle="New York, NY"
-                width="200" height="80"
-                linkLocation="http://colorofchange.org/"
+                width="200" height="90"
+                linkLocation="https://witness.org/"
               />
               <Organization
-                imgSrc="/assets/logo-datasociety.svg"
-                linkTitle="New York, NY"
+                imgSrc="/assets/logo-cc.svg"
+                linkTitle="Global"
                 width="180" height="80"
-                linkLocation="http://www.datasociety.net/"
+                linkLocation="https://creativecommons.org/"
               />
               <Organization
                 imgSrc="/assets/logo-derechos.svg"
@@ -90,16 +90,34 @@ module.exports = React.createClass({
                 linkLocation="https://www.derechosdigitales.org/"
               />
               <Organization
-                imgSrc="/assets/logo-edri.svg"
-                linkTitle="Brussels, Belgium"
-                width="155" height="80"
-                linkLocation="https://edri.org/"
+                imgSrc="/assets/logo-css.png"
+                linkTitle="Portland, Oregon"
+                width="180" height="50"
+                linkLocation="https://codeforscience.org/"
               />
               <Organization
-                imgSrc="/assets/logo-freedomofthepress.svg"
-                linkTitle="San Francisco, CA"
+                imgSrc="/assets/logo-bof.svg"
+                linkTitle="Amsterdam, Netherlands"
                 width="155" height="80"
-                linkLocation="https://freedom.press/"
+                linkLocation="https://www.bof.nl/"
+              />
+              <Organization
+                imgSrc="/assets/logo-astraea.png"
+                linkTitle="New York, NY"
+                width="90" height="120"
+                linkLocation="https://www.astraeafoundation.org/"
+              />
+              <Organization
+                imgSrc="/assets/logo-wikimedia.png"
+                linkTitle="Global"
+                width="120" height="120"
+                linkLocation="https://policy.wikimedia.org/"
+              />
+              <Organization
+                imgSrc="/assets/logo-article19.png"
+                linkTitle="São Paolo, Brasil"
+                width="155" height="80"
+                linkLocation="http://artigo19.org/"
               />
               <Organization
                 imgSrc="/assets/logo-privacyinternational.svg"
