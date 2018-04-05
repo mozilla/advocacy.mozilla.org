@@ -108,9 +108,9 @@ module.exports = React.createClass({
                 linkLocation="https://www.astraeafoundation.org/"
               />
               <Organization
-                imgSrc="/assets/logo-wikimedia.png"
+                imgSrc="/assets/logo-wikimedia.svg"
                 linkTitle="Global"
-                width="120" height="120"
+                width="155" height="120"
                 linkLocation="https://policy.wikimedia.org/"
               />
               <Organization
