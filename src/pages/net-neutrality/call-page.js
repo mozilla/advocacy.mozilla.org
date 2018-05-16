@@ -38,13 +38,10 @@ var CallPage = React.createClass({
             <h1>
               How will this impact me?
             </h1>
-
             <p>Lawmakers are considering a resolution of disapproval that - if passed - will stop Pai’s Net Neutrality order from coming into effect. Ever. The Congressional Review Act (CRA) lets our representatives overturn decisions by agencies like the FCC - that’s why we need to push Congress to make it happen.
             </p>
-
             <p>The motion has passed the Senate. Getting the CRA resolution through the House is going to be harder; 20 Republicans need to support the resolution for it to have a chance. But we know that net neutrality isn’t a partisan issue outside of DC.
             </p>
-
             <p><strong>That’s where you come in. We know that public pressure can move Congress to do the right thing - the key is to show up.</strong>
             </p>
           </section>
