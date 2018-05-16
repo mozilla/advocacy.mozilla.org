@@ -128,7 +128,7 @@ var Signup = React.createClass({
               <div className="form-body-border">
                 <div className="form-body">
                   <p className="form-description fancy-letter">
-                    The FCC just passed Chairman Ajit Pai’s Net Neutrality-eradicating, Internet-killing rules on a hyperpartisan vote.
+                    The FCC passed Chairman Ajit Pai’s Net Neutrality-eradicating, Internet-killing rules on a hyperpartisan vote last year.
                   </p>
                   <p>
                     <b>But Congress can still act. Tell them to stop Pai’s rules before they’re started.</b>
@@ -137,7 +137,7 @@ var Signup = React.createClass({
                     Here’s how it works: Congress can reverse recently-passed regulations under the terms of the “Congressional Review Act,” or CRA. Given the outcry from Republicans, Democrats, and everyone in between -- and the enormous danger Pai’s order poses to the Internet and its users -- we think it’s appropriate for Congress to invoke this tactic.
                   </p>
                   <p>
-                    Earlier this year, Congress used this procedure to block rules to protect users’ privacy on broadband networks. In response, Internet users flooded Congress with complaints -- and Congress took notice. It’s time again to remind them that they need to protect us and Net Neutrality, not protect the big companies that want to control your Internet.
+                    The Senate just passed the CRA and now we need the House to do the same.
                   </p>
                   <p>
                     The more members of Congress hear from you -- their constituent -- the more they’ll want to join the amazing wave of opposition that’s showing no signs of slowing.
@@ -155,12 +155,10 @@ var Signup = React.createClass({
               </h4>
               <div className="blue-paragraph">
                 <p>
-                  Dear Members of Congress:</p>
-                <p>
-                  The FCC just passed Chairman Ajit Pai’s Net Neutrality-eradicating, Internet-killing rules on a hyperpartisan vote.
+                  Dear Members of Congress:
                 </p>
                 <p>
-                  Republicans, Democrats, and everyone in between -- from all around the country -- are outraged at the enormous danger Pai’s order poses to the Internet and its users.
+                  Republicans, Democrats, and everyone in between -- from all around the country -- are outraged at the enormous danger Pai’s Net Neutrality-eradicating order poses to the Internet and its users.
                 </p>
                 <p>
                   I urge you to utilize the Congressional Review Act to reverse these damaging rules and restore the Internet back to its rightful owners -- its users.
