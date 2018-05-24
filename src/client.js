@@ -29,7 +29,22 @@ function logPageView() {
   ga.pageview(window.location.pathname + window.location.search);
 }
 
-ga.initialize(process.env.GA_TRACKING_ID);
+var _dntStatus = navigator.doNotTrack || navigator.msDoNotTrack;
+var fxMatch = navigator.userAgent.match(/Firefox\/(\d+)/);
+var ie10Match = navigator.userAgent.match(/MSIE 10/i);
+var w8Match = navigator.appVersion.match(/Windows NT 6.2/);
+
+if (fxMatch && Number(fxMatch[1]) < 32) {
+  _dntStatus = `Unspecified`;
+} else if (ie10Match && w8Match) {
+  _dntStatus = `Unspecified`;
+} else {
+  _dntStatus = { '0': `Disabled`, '1': `Enabled` }[_dntStatus] || `Unspecified`;
+}
+
+if (_dntStatus !== `Enabled`){
+  ga.initialize(process.env.GA_TRACKING_ID);
+}
 
 //Polyfill Intl before starting app for browsers that don't support it *cough*Safari*cough*
 if (!window.Intl) {
