@@ -5,7 +5,8 @@ var HeroUnit = require(`../../components/hero-unit.js`);
 var FellowsHeader = require(`../../components/fellows-header.js`);
 var ImageTag = require(`../../components/imagetag.js`);
 var ContentContainer = require(`../../components/content-container.js`);
-var ApplyBanner = require(`../../components/open-web-fellows/apply.js`);
+// removed banner because applications are closed
+// var ApplyBanner = require(`../../components/open-web-fellows/apply.js`);
 
 var Organization = React.createClass({
   render: function() {
