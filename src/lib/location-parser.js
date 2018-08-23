@@ -7,7 +7,8 @@ var locales = defaultLocales;
 
 function getLocale(acceptLang) {
   var langHeader = Parser.parse(acceptLang);
-  var langArray = langHeader.map(l => l.code + (l.region ? "-" + l.region : ""));
+  //We must uppercase the region because Safari likes to make it lowercase and that sometimes breaks weird things
+  var langArray = langHeader.map(l => l.code + (l.region ? "-" + l.region.toUpperCase() : ""));
   return bestLang(langArray, Object.keys(locales), 'en-US');
 }
 
