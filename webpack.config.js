@@ -26,7 +26,10 @@ module.exports = {
         loaders: [`file-loader`] },
       {
         test: /\.(otf|eot|svg|ttf|woff|woff2)(\?.+)?$/,
-        loader: `url-loader?limit=8192`
+        loader: `url-loader`,
+        options: {
+          limit: 8192
+        }
       },
       {
         test: /\.less$/,
