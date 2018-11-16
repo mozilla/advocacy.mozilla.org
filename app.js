@@ -1,15 +1,15 @@
 var Habitat = require('habitat');
+
 Habitat.load();
 
 var express = require('express'),
-    path = require('path'),
     url = require('url'),
     compression = require('compression'),
     helmet = require('helmet'),
     frameguard = helmet.frameguard,
     reactRouted = require('./dist/lib/react-server-route.js'),
     locationParser = require('./dist/lib/location-parser.js'),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
     env = new Habitat(),
     routes = require('./routes'),
     app = express();
@@ -26,7 +26,7 @@ app.use(frameguard({
   domain: "https://pontoon.mozilla.org"
 }));
 
-app.use(helmet.csp(CSP_DIRECTIVES));
+app.use(helmet.contentSecurityPolicy(CSP_DIRECTIVES));
 
 app.use(helmet.hsts({
   maxAge: 90 * 24 * 60 * 60 * 1000 // 90 days
