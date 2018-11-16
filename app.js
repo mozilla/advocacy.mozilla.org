@@ -1,18 +1,18 @@
-let Habitat = require('habitat');
+var Habitat = require('habitat');
 
 Habitat.load();
 
-let express = require('express'),
-  url = require('url'),
-  compression = require('compression'),
-  helmet = require('helmet'),
-  frameguard = helmet.frameguard,
-  reactRouted = require('./dist/lib/react-server-route.js'),
-  locationParser = require('./dist/lib/location-parser.js'),
-  bodyParser = require('body-parser'),
-  env = new Habitat(),
-  routes = require('./routes'),
-  app = express();
+var express = require('express'),
+    url = require('url'),
+    compression = require('compression'),
+    helmet = require('helmet'),
+    frameguard = helmet.frameguard,
+    reactRouted = require('./dist/lib/react-server-route.js'),
+    locationParser = require('./dist/lib/location-parser.js'),
+    bodyParser = require('body-parser'),
+    env = new Habitat(),
+    routes = require('./routes'),
+    app = express();
 
 const CSP_DIRECTIVES = require('./scripts/csp-directives.js');
 
@@ -34,8 +34,8 @@ app.use(helmet.hsts({
 
 
 // Redirect to SSL if set
-app.use(function(req, resp, next) {
-  if (!req.secure && env.get('FORCE_SSL')) {
+app.use(function(req, resp, next){
+  if (!req.secure && env.get('FORCE_SSL')){
     if (req.method === "GET") {
       resp.redirect(301, `https://${req.headers.host}${req.originalUrl}`);
     }
@@ -98,6 +98,6 @@ function errorHandler(err, req, res, next) {
 
 app.use(errorHandler);
 
-app.listen(env.get('PORT'), function() {
+app.listen(env.get('PORT'), function () {
   console.log('Server listening ( http://localhost:%d )', env.get('PORT'));
 });
