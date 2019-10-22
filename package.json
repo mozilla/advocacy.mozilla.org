@@ -89,7 +89,7 @@
     "webpack": "1.12.12"
   },
   "devDependencies": {
-    "eslint": "1.10.3",
+    "eslint": "6.5.1",
     "mofo-style": "2.2.0"
   }
 }
